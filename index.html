@@ -543,7 +543,9 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
   background:var(--ink);
   display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
   position:sticky;top:0;height:100vh;overflow-y:auto;
+  scrollbar-width:none;
 }
+.modal-left::-webkit-scrollbar{display:none;}
 .modal-right{padding:100px 68px;background:var(--bg)}
 .modal-close{position:fixed;top:32px;right:44px;z-index:1001;background:none;border:1.5px solid var(--line2);width:40px;height:40px;cursor:none;display:flex;align-items:center;justify-content:center;transition:all .3s;color:var(--ink)}
 .modal-close:hover{background:var(--accent);border-color:var(--accent);color:white}
@@ -1425,7 +1427,7 @@ function openModal(i){
 
   /* 이미지: 상세 사진이 있으면 표시, 없으면 기존 SVG */
   const leftContent = p.detailImages && p.detailImages.length
-    ? `<div style="width:100%;display:flex;flex-direction:column;gap:4px;">`
+    ? `<div style="width:100%;display:flex;flex-direction:column;gap:0;">`
       + p.detailImages.map(url =>
         `<img src="${url}" alt="${p.titleEN}" style="width:100%;display:block;object-fit:cover;">`
       ).join('')
@@ -1434,9 +1436,10 @@ function openModal(i){
 
   document.getElementById('modal-left').innerHTML = leftContent;
 
-  const titleWords = p.titleEN.split(' ');
-  const titleHtml = titleWords.map((w,j,a)=>j===a.length-1?'<em>'+w+'</em>':w).join(' ');
+  /* 1. 제목 색상 통일 — 전부 검정색 */
+  const titleHtml = p.titleEN;
 
+  /* 2. 줄바꿈 처리 */
   const toHtml = (str) => str ? str.replace(/\n/g, '<br>') : '';
 
   document.getElementById('modal-right').innerHTML=`
@@ -1445,11 +1448,18 @@ function openModal(i){
     ${p.titleKR ? `<p style="font-family:var(--serif);font-size:18px;font-style:italic;color:var(--ink3);margin-bottom:16px;">${p.titleKR}</p>` : ''}
     <span class="modal-tag">${p.category}</span>
     <p class="modal-sec" style="margin-top:24px;">Description</p>
-    <p class="modal-p">${toHtml(p.descriptionEN)}</p>
-    ${p.descriptionKR ? `<p class="modal-p" style="margin-top:12px;color:var(--ink3);">${toHtml(p.descriptionKR)}</p>` : ''}
+    <p class="modal-p" style="white-space:pre-line;">${toHtml(p.descriptionEN)}</p>
+    ${p.descriptionKR ? `<p class="modal-p" style="margin-top:12px;color:var(--ink3);white-space:pre-line;">${toHtml(p.descriptionKR)}</p>` : ''}
   `;
+
+  /* 3. 모달 열릴 때 맨 위로 스크롤 */
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow='hidden';
+  setTimeout(()=>{
+    document.getElementById('modal').scrollTop = 0;
+    document.getElementById('modal-left').scrollTop = 0;
+    document.getElementById('modal-right').scrollTop = 0;
+  }, 10);
 }
 function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow=''}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
