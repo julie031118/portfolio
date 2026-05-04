@@ -30,9 +30,9 @@ html{scroll-behavior:smooth;overflow-x:hidden}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;cursor:none;overflow-x:hidden;-webkit-font-smoothing:antialiased;perspective:1200px}
 
 /* ── CURSOR ── */
-#cur{position:fixed;z-index:9999;pointer-events:none;top:0;left:0}
+#cur{position:fixed;z-index:9999;pointer-events:none;top:0;left:0;will-change:transform}
 #cur-dot{position:absolute;width:8px;height:8px;background:var(--accent);border-radius:50%;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
-#cur-ring{position:fixed;z-index:9998;pointer-events:none;width:36px;height:36px;border:1.5px solid var(--accent);border-radius:50%;transform:translate(-50%,-50%);transition:width .5s cubic-bezier(.16,1,.3,1),height .5s cubic-bezier(.16,1,.3,1),border-color .3s;top:0;left:0}
+#cur-ring{position:fixed;z-index:9998;pointer-events:none;width:36px;height:36px;border:1.5px solid var(--accent);border-radius:50%;top:0;left:0;will-change:transform;transition:width .5s cubic-bezier(.16,1,.3,1),height .5s cubic-bezier(.16,1,.3,1),border-color .3s;margin-left:-18px;margin-top:-18px}
 .hoverable:hover~#cur-ring{width:60px;height:60px}
 
 /* ── NAV ── */
@@ -536,26 +536,20 @@ footer{padding:26px 52px;display:flex;align-items:center;justify-content:space-b
 footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans)}
 
 /* ── MODAL ── */
-.modal{position:fixed;inset:0;z-index:1000;opacity:0;pointer-events:none;transition:opacity .6s cubic-bezier(.16,1,.3,1);overflow-y:auto;background:var(--bg2)}
+.modal{position:fixed;inset:0;z-index:1000;opacity:0;pointer-events:none;transition:opacity .6s cubic-bezier(.16,1,.3,1);overflow-y:auto;background:var(--bg)}
 .modal.open{opacity:1;pointer-events:all}
-.modal-inner{min-height:100vh;display:grid;grid-template-columns:1fr 1fr}
-.modal-left{
-  background:var(--ink);
-  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
-  position:sticky;top:0;height:100vh;overflow-y:auto;
-}
-.modal-right{padding:100px 68px;background:var(--bg)}
+.modal-inner{max-width:900px;margin:0 auto;padding:80px 52px 120px;}
 .modal-close{position:fixed;top:32px;right:44px;z-index:1001;background:none;border:1.5px solid var(--line2);width:40px;height:40px;cursor:none;display:flex;align-items:center;justify-content:center;transition:all .3s;color:var(--ink)}
 .modal-close:hover{background:var(--accent);border-color:var(--accent);color:white}
-.modal-eyebrow{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink3);margin-bottom:20px;margin-top:56px;font-family:var(--sans)}
-.modal-h{font-family:var(--serif);font-size:clamp(46px,6vw,90px);font-weight:200;line-height:.9;letter-spacing:-.015em;margin-bottom:40px}
-.modal-h em{font-style:italic;color:var(--accent)}
-.modal-sec{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-top:30px;margin-bottom:9px;font-family:var(--sans)}
-.modal-p{font-size:13.5px;font-weight:300;line-height:1.92;color:var(--ink2);letter-spacing:.01em;font-family:var(--sans)}
-.modal-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:14px}
-.modal-step{background:var(--bg);padding:14px 12px}
-.modal-step-n{font-family:var(--serif);font-size:26px;font-weight:200;color:rgba(26,23,18,.1);line-height:1;margin-bottom:5px}
-.modal-step-l{font-size:7.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);line-height:1.5;font-family:var(--sans)}
+.modal-eyebrow{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink3);margin-bottom:16px;font-family:var(--sans)}
+.modal-h{font-family:var(--serif);font-size:clamp(36px,5vw,72px);font-weight:200;line-height:1;letter-spacing:-.015em;margin-bottom:12px;color:var(--ink)}
+.modal-divider{border:none;border-top:1px solid var(--line);margin:32px 0;}
+.modal-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px;margin:28px 0;}
+.modal-gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;}
+.modal-gallery img.landscape{aspect-ratio:4/3;}
+.modal-desc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px;align-items:start;}
+.modal-sec{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-family:var(--sans)}
+.modal-p{font-size:13.5px;font-weight:300;line-height:1.92;color:var(--ink2);letter-spacing:.01em;font-family:var(--sans);white-space:pre-wrap;word-break:break-word;}
 .modal-tag{display:inline-block;font-size:8px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line2);padding:5px 10px;color:var(--ink3);margin:4px 4px 0 0;font-family:var(--sans)}
 
 /* ── RESPONSIVE ── */
@@ -578,6 +572,8 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
   .section-rule{margin:0 22px}
   .modal-left{display:none}
   .modal-right{padding:60px 22px}
+  .modal-inner{padding:60px 22px 80px;}
+  .modal-desc-grid{grid-template-columns:1fr;}
   footer{padding:20px 22px;flex-direction:column;gap:8px;text-align:center}
   #contact{padding:0 22px}
   .scroll-ind{left:22px}
@@ -1256,10 +1252,7 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
   <button class="modal-close" onclick="closeModal()">
     <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l11 11M12 1L1 12"/></svg>
   </button>
-  <div class="modal-inner">
-    <div class="modal-left" id="modal-left"></div>
-    <div class="modal-right" id="modal-right"></div>
-  </div>
+  <div class="modal-inner" id="modal-inner"></div>
 </div>
 
 <script>
@@ -1268,9 +1261,9 @@ const dot=document.getElementById('cur'),ring=document.getElementById('cur-ring'
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
 (function raf(){
-  dot.style.left=mx+'px';dot.style.top=my+'px';
+  dot.style.transform=`translate(${mx}px,${my}px)`;
   rx+=(mx-rx)*.1;ry+=(my-ry)*.1;
-  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  ring.style.transform=`translate(${rx}px,${ry}px)`;
   requestAnimationFrame(raf);
 })();
 
@@ -1423,33 +1416,34 @@ function openModal(i){
   const p=projects[i];
   if(!p) return;
 
-  /* 이미지: 상세 사진이 있으면 표시, 없으면 기존 SVG */
-  const leftContent = p.detailImages && p.detailImages.length
-    ? `<div style="width:100%;display:flex;flex-direction:column;gap:4px;">`
-      + p.detailImages.map(url =>
-        `<img src="${url}" alt="${p.titleEN}" style="width:100%;display:block;object-fit:cover;">`
-      ).join('')
-      + `</div>`
-    : `<svg width="100%" height="100%" viewBox="0 0 500 700" fill="none" style="position:absolute;inset:0"><rect width="500" height="700" fill="#1a1712"/><g opacity="0.5"><path d="M250 60Q175 165 185 340Q195 490 175 650" stroke="#f7f2ea" stroke-width="1.2"/><path d="M250 60Q310 155 305 330Q300 475 315 648" stroke="#f7f2ea" stroke-width="1.2"/><path d="M250 60Q360 140 390 310Q405 460 385 648" stroke="#f7f2ea" stroke-width="0.7" opacity="0.5"/><path d="M250 60Q140 148 110 310Q95 460 115 648" stroke="#f7f2ea" stroke-width="0.7" opacity="0.5"/><ellipse cx="250" cy="178" rx="84" ry="12" stroke="#f7f2ea" stroke-width="0.5" opacity="0.28"/><ellipse cx="250" cy="338" rx="100" ry="14" stroke="#f7f2ea" stroke-width="0.5" opacity="0.22"/><ellipse cx="250" cy="488" rx="94" ry="13" stroke="#f7f2ea" stroke-width="0.5" opacity="0.17"/><line x1="250" y1="60" x2="250" y2="648" stroke="#9b2020" stroke-width="0.9" stroke-dasharray="4,10" opacity="0.5"/><path d="M200 338Q250 322 300 338Q310 473 294 648L206 648Q184 473 200 338" fill="#9b2020" opacity="0.07"/></g><text x="250" y="678" text-anchor="middle" fill="rgba(247,242,234,0.14)" font-size="11" font-family="serif" letter-spacing="8">${p.titleEN.toUpperCase()}</text></svg>`;
-
-  document.getElementById('modal-left').innerHTML = leftContent;
-
-  const titleWords = p.titleEN.split(' ');
-  const titleHtml = titleWords.map((w,j,a)=>j===a.length-1?'<em>'+w+'</em>':w).join(' ');
-
   const toHtml = (str) => str ? str.replace(/\n/g, '<br>') : '';
 
-  document.getElementById('modal-right').innerHTML=`
+  const galleryHtml = p.detailImages && p.detailImages.length
+    ? `<div class="modal-gallery">${p.detailImages.map(url=>`<img src="${url}" alt="${p.titleEN}">`).join('')}</div>`
+    : p.thumbnail
+      ? `<div class="modal-gallery"><img src="${p.thumbnail}" alt="${p.titleEN}" style="grid-column:1/-1;aspect-ratio:16/9;"></div>`
+      : '';
+
+  const descHtml = (p.descriptionEN || p.descriptionKR)
+    ? `<hr class="modal-divider">
+       <div class="modal-desc-grid">
+         ${p.descriptionEN ? `<div><p class="modal-sec">Description</p><p class="modal-p">${toHtml(p.descriptionEN)}</p></div>` : ''}
+         ${p.descriptionKR ? `<div><p class="modal-sec">설명</p><p class="modal-p">${toHtml(p.descriptionKR)}</p></div>` : ''}
+       </div>`
+    : '';
+
+  document.getElementById('modal-inner').innerHTML=`
     <p class="modal-eyebrow">${p.category}${p.year ? ' · ' + p.year : ''}</p>
-    <h2 class="modal-h">${titleHtml}</h2>
-    ${p.titleKR ? `<p style="font-family:var(--serif);font-size:18px;font-style:italic;color:var(--ink3);margin-bottom:16px;">${p.titleKR}</p>` : ''}
+    <h2 class="modal-h">${p.titleEN}</h2>
+    ${p.titleKR ? `<p style="font-family:var(--serif);font-size:17px;font-style:italic;color:var(--ink3);margin-bottom:16px;">${p.titleKR}</p>` : ''}
     <span class="modal-tag">${p.category}</span>
-    <p class="modal-sec" style="margin-top:24px;">Description</p>
-    <p class="modal-p">${toHtml(p.descriptionEN)}</p>
-    ${p.descriptionKR ? `<p class="modal-p" style="margin-top:12px;color:var(--ink3);">${toHtml(p.descriptionKR)}</p>` : ''}
+    ${galleryHtml}
+    ${descHtml}
   `;
+
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow='hidden';
+  setTimeout(()=>{ document.getElementById('modal').scrollTop=0; }, 10);
 }
 function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow=''}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
