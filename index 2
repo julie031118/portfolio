@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yeonseo Lee — Fashion & Creative Direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,200;0,300;1,200;1,300&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#f7f2ea;
+  --bg2:#ede8de;
+  --bg3:#e4ddd1;
+  --ink:#1a1712;
+  --ink2:#3d3830;
+  --ink3:rgba(26,23,18,0.45);
+  --ink4:rgba(26,23,18,0.22);
+  --accent:#9b2020;
+  --accent2:#c94040;
+  --accent3:#e8c8a0;
+  --gold:#c9a96e;
+  --serif:'Cormorant','Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans','Helvetica Neue',sans-serif;
+  --line:rgba(26,23,18,0.1);
+  --line2:rgba(26,23,18,0.18);
+  --shadow:rgba(26,23,18,0.12);
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;cursor:none;overflow-x:hidden;-webkit-font-smoothing:antialiased;perspective:1200px}
+
+/* ── CURSOR ── */
+#cur{position:fixed;z-index:9999;pointer-events:none;top:0;left:0;will-change:transform}
+#cur-dot{position:absolute;width:8px;height:8px;background:var(--accent);border-radius:50%;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
+#cur-ring{position:fixed;z-index:9998;pointer-events:none;width:36px;height:36px;border:1.5px solid var(--accent);border-radius:50%;top:0;left:0;will-change:transform;transition:width .5s cubic-bezier(.16,1,.3,1),height .5s cubic-bezier(.16,1,.3,1),border-color .3s;margin-left:-18px;margin-top:-18px}
+.hoverable:hover~#cur-ring{width:60px;height:60px}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:center;justify-content:space-between;padding:28px 52px;transition:padding .4s,background .4s,backdrop-filter .4s}
+nav.solid{background:rgba(247,242,234,0.9);backdrop-filter:blur(20px);padding:16px 52px;border-bottom:1px solid var(--line)}
+.nav-logo{font-family:var(--serif);font-size:15px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;transition:color .3s}
+.nav-logo:hover{color:var(--accent)}
+.nav-right{display:flex;gap:32px}
+.nav-right a{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);text-decoration:none;transition:color .3s;font-family:var(--sans)}
+.nav-right a:hover{color:var(--accent)}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+  background:var(--bg);
+}
+/* Animated gradient mesh background */
+.hero-mesh{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;
+}
+.mesh-blob{
+  position:absolute;border-radius:50%;filter:blur(80px);opacity:0.35;
+  animation:blobFloat 12s ease-in-out infinite alternate;
+}
+.mesh-blob.b1{width:600px;height:500px;background:radial-gradient(circle,#e8c8a0,transparent 70%);top:-100px;right:-100px;animation-delay:0s}
+.mesh-blob.b2{width:500px;height:600px;background:radial-gradient(circle,rgba(155,32,32,0.15),transparent 70%);bottom:-80px;left:-80px;animation-delay:-4s}
+.mesh-blob.b3{width:400px;height:400px;background:radial-gradient(circle,#ede8de,transparent 70%);top:40%;left:30%;animation-delay:-8s}
+@keyframes blobFloat{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,30px) scale(1.08)}}
+
+/* Hero 3D scene */
+.hero-3d-scene{
+  position:absolute;right:0;top:0;bottom:0;width:55%;
+  perspective:900px;
+  display:flex;align-items:center;justify-content:center;
+  pointer-events:none;
+}
+.hero-hanging-stage{
+  position:relative;width:100%;height:100%;
+  display:flex;align-items:flex-start;justify-content:center;
+  padding-top:60px;
+  transform-style:preserve-3d;
+}
+/* The hero rod */
+.hero-rod-line{
+  position:absolute;top:80px;left:10%;right:10%;height:3px;
+  background:linear-gradient(to right,transparent,rgba(26,23,18,0.15) 15%,rgba(26,23,18,0.25) 50%,rgba(26,23,18,0.15) 85%,transparent);
+  z-index:2;
+}
+.hero-rod-line::before,.hero-rod-line::after{
+  content:'';position:absolute;top:50%;transform:translateY(-50%);
+  width:12px;height:12px;border-radius:50%;border:2px solid rgba(26,23,18,0.2);background:var(--bg);
+}
+.hero-rod-line::before{left:-6px}
+.hero-rod-line::after{right:-6px}
+
+/* Hero floating hangers */
+.hero-hanger-group{
+  position:absolute;top:60px;
+  display:flex;gap:0;
+  transform-style:preserve-3d;
+}
+.hero-hanger-item{
+  display:flex;flex-direction:column;align-items:center;
+  transform-style:preserve-3d;
+  animation:hangerEntrance 1.4s cubic-bezier(.34,1.56,.64,1) both;
+}
+.hero-hanger-item:nth-child(1){animation-delay:.2s;margin-right:-20px}
+.hero-hanger-item:nth-child(2){animation-delay:.45s;margin-right:-20px}
+.hero-hanger-item:nth-child(3){animation-delay:.7s;margin-right:-20px}
+.hero-hanger-item:nth-child(4){animation-delay:.95s}
+@keyframes hangerEntrance{
+  0%{opacity:0;transform:translateY(-120px) rotateZ(-25deg)}
+  60%{opacity:1}
+  80%{transform:translateY(8px) rotateZ(4deg)}
+  90%{transform:translateY(-4px) rotateZ(-2deg)}
+  100%{transform:translateY(0) rotateZ(0)}
+}
+/* Continuous gentle swing */
+.hero-hanger-item:nth-child(1) .h-hook-wrap{animation:heroSwing1 6s ease-in-out infinite;transform-origin:50% 0}
+.hero-hanger-item:nth-child(2) .h-hook-wrap{animation:heroSwing2 7s ease-in-out infinite;transform-origin:50% 0}
+.hero-hanger-item:nth-child(3) .h-hook-wrap{animation:heroSwing3 5.5s ease-in-out infinite;transform-origin:50% 0}
+.hero-hanger-item:nth-child(4) .h-hook-wrap{animation:heroSwing4 8s ease-in-out infinite;transform-origin:50% 0}
+@keyframes heroSwing1{0%,100%{transform:rotateZ(-4deg)}50%{transform:rotateZ(4deg)}}
+@keyframes heroSwing2{0%,100%{transform:rotateZ(5deg)}50%{transform:rotateZ(-3deg)}}
+@keyframes heroSwing3{0%,100%{transform:rotateZ(-3deg)}50%{transform:rotateZ(6deg)}}
+@keyframes heroSwing4{0%,100%{transform:rotateZ(3deg)}50%{transform:rotateZ(-5deg)}}
+.h-hook-wrap{display:flex;flex-direction:column;align-items:center}
+.h-garment-body{transform-style:preserve-3d}
+/* 3D depth on hero garments */
+.hero-hanger-item:nth-child(1) .h-garment-body{transform:rotateY(-8deg) rotateX(2deg) translateZ(10px)}
+.hero-hanger-item:nth-child(2) .h-garment-body{transform:rotateY(5deg) rotateX(-1deg) translateZ(20px)}
+.hero-hanger-item:nth-child(3) .h-garment-body{transform:rotateY(-6deg) rotateX(3deg) translateZ(5px)}
+.hero-hanger-item:nth-child(4) .h-garment-body{transform:rotateY(10deg) rotateX(-2deg) translateZ(15px)}
+
+/* Hero text */
+.hero-content{
+  position:relative;z-index:5;
+  padding:0 52px;
+  max-width:58%;
+}
+.hero-eyebrow{
+  font-size:10px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--ink3);margin-bottom:24px;
+  font-family:var(--sans);
+  animation:fadeUp .8s .1s both;
+}
+.hero-name{
+  font-family:var(--serif);
+  font-size:clamp(70px,12vw,188px);
+  font-weight:200;line-height:.88;
+  letter-spacing:-.02em;
+  color:var(--ink);
+  animation:fadeUp .9s .2s both;
+}
+.hero-name em{font-style:italic;color:var(--accent)}
+.hero-tagline{
+  font-family:var(--serif);
+  font-size:clamp(16px,2.2vw,28px);
+  font-weight:200;font-style:italic;
+  color:var(--ink3);margin-top:20px;
+  letter-spacing:.02em;
+  animation:fadeUp .9s .4s both;
+}
+.hero-sub-row{
+  display:flex;align-items:center;gap:32px;
+  margin-top:40px;
+  border-top:1px solid var(--line);
+  padding-top:28px;
+  animation:fadeUp .9s .55s both;
+}
+.hero-badge{
+  font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink3);font-family:var(--sans);
+}
+.hero-badge strong{color:var(--accent);font-weight:400}
+.hero-cta{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink);border-bottom:1.5px solid var(--ink);
+  padding-bottom:4px;text-decoration:none;
+  transition:color .3s,border-color .3s;
+  font-family:var(--sans);
+}
+.hero-cta:hover{color:var(--accent);border-color:var(--accent)}
+.hero-cta .arr{transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+.hero-cta:hover .arr{transform:translateX(5px)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* Scroll indicator */
+.scroll-ind{
+  position:absolute;bottom:36px;left:52px;
+  display:flex;align-items:center;gap:12px;
+  animation:fadeUp 1s .9s both;
+}
+.scroll-ind span{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans)}
+.scroll-ind-line{width:50px;height:1px;background:var(--line2);position:relative;overflow:hidden}
+.scroll-ind-line::after{content:'';position:absolute;inset:0;background:var(--accent);animation:sweepLine 2.4s ease-in-out infinite}
+@keyframes sweepLine{0%{transform:translateX(-100%)}100%{transform:translateX(200%)}})
+
+/* ── SECTION BASICS ── */
+.section-rule{height:1px;background:var(--line);margin:0 52px}
+.chapter{padding:112px 52px}
+.chapter-index{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3);margin-bottom:44px;display:flex;align-items:center;gap:20px;font-family:var(--sans)}
+.chapter-index::after{content:'';flex:1;height:1px;background:var(--line)}
+.chapter-heading{font-family:var(--serif);font-size:clamp(56px,9vw,138px);font-weight:200;line-height:.92;letter-spacing:-.02em}
+.chapter-heading em{font-style:italic;color:var(--accent)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.26s}.d3{transition-delay:.42s}.d4{transition-delay:.58s}.d5{transition-delay:.74s}
+
+/* ── ABOUT ── */
+#about{background:var(--bg2)}
+#about .about-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.about-col{padding:64px 52px}
+.about-col+.about-col{border-left:1px solid var(--line);background:var(--bg)}
+.about-label{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink3);margin-bottom:24px;font-family:var(--sans)}
+.about-quote{
+  font-family:var(--serif);font-size:clamp(18px,2.4vw,30px);font-style:italic;font-weight:200;
+  color:var(--ink);border-left:2px solid var(--accent);padding-left:24px;
+  margin:32px 0;line-height:1.5;letter-spacing:.01em;
+}
+.about-body{font-size:14.5px;font-weight:300;line-height:1.9;color:var(--ink2);letter-spacing:.01em;font-family:var(--sans)}
+.about-body+.about-body{margin-top:18px}
+.about-body strong{color:var(--ink);font-weight:400}
+.about-body em{font-style:italic;color:var(--accent)}
+.skills-grid{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.skill-cell{background:var(--bg2);padding:14px 18px;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);transition:all .3s;font-family:var(--sans)}
+.skill-cell:hover{background:var(--accent);color:white;letter-spacing:.2em}
+.edu-entry{padding:20px 0;border-bottom:1px solid var(--line)}
+.edu-entry:first-child{border-top:1px solid var(--line)}
+.edu-school{font-family:var(--serif);font-size:20px;font-weight:300;color:var(--ink);margin-bottom:4px}
+.edu-degree{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-bottom:5px;font-family:var(--sans)}
+.edu-gpa{font-family:var(--serif);font-size:15px;font-style:italic;color:var(--accent)}
+
+/* ── PROJECTS ── 3D card tilt grid ── */
+#projects{background:var(--bg);padding-bottom:120px}
+.projects-header{padding:112px 52px 0}
+.proj-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:2px;background:var(--line);
+  margin-top:64px;
+}
+.proj-card{
+  background:var(--bg2);
+  padding:48px 40px;
+  position:relative;overflow:hidden;
+  cursor:none;
+  transition:background .4s;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+.proj-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(201,160,110,0.08) 0%,transparent 60%);
+  opacity:0;transition:opacity .4s;
+}
+.proj-card:hover{background:var(--ink)}
+.proj-card:hover::before{opacity:1}
+.proj-card:hover .pc-num,.proj-card:hover .pc-meta{color:rgba(247,242,234,.35)}
+.proj-card:hover .pc-name{color:var(--bg)}
+.proj-card:hover .pc-desc{color:rgba(247,242,234,.55)}
+.proj-card:hover .pc-arrow{color:var(--accent2);transform:translate(4px,-4px) scale(1.1)}
+.pc-num{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink3);margin-bottom:32px;transition:color .4s;font-family:var(--sans)}
+.pc-name{font-family:var(--serif);font-size:clamp(22px,2.5vw,34px);font-weight:200;line-height:1.1;letter-spacing:-.01em;margin-bottom:16px;transition:color .4s}
+.pc-meta{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:20px;transition:color .4s;font-family:var(--sans)}
+.pc-desc{font-size:13px;line-height:1.85;color:var(--ink2);font-weight:300;transition:color .4s;font-family:var(--sans);max-width:280px}
+.pc-arrow{position:absolute;top:40px;right:40px;font-size:20px;color:var(--ink4);transition:all .4s cubic-bezier(.34,1.56,.64,1)}
+.pc-sketch{position:absolute;bottom:32px;right:32px;opacity:0.07;transition:opacity .4s,transform .4s}
+.proj-card:hover .pc-sketch{opacity:0.18;transform:scale(1.05) rotate(3deg)}
+.proj-tag-ip{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2);border:1px solid var(--accent);padding:3px 8px;margin-left:8px;vertical-align:middle;font-family:var(--sans)}
+
+/* ── CLOSET — THE SPECTACULAR SECTION ── */
+#closet{
+  background:var(--bg3);
+  padding:0;overflow:hidden;
+  position:relative;
+}
+.closet-chapter{padding:100px 52px 70px}
+.closet-heading{font-family:var(--serif);font-size:clamp(54px,8.5vw,132px);font-weight:200;line-height:.92;letter-spacing:-.02em}
+.closet-heading em{font-style:italic;color:var(--accent)}
+/* Giant decorative rod - full width */
+.closet-rod-full{
+  position:relative;margin:0 52px;
+  height:4px;
+  background:linear-gradient(to right,transparent,var(--ink4) 5%,var(--ink2) 30%,var(--ink) 50%,var(--ink2) 70%,var(--ink4) 95%,transparent);
+  border-radius:2px;
+  box-shadow:0 4px 20px var(--shadow),0 1px 0 rgba(255,255,255,0.6);
+}
+.closet-rod-full::before,.closet-rod-full::after{
+  content:'';position:absolute;top:50%;transform:translateY(-50%);
+  width:16px;height:16px;border-radius:50%;
+  background:var(--ink2);box-shadow:inset 0 2px 4px rgba(0,0,0,.3),0 2px 6px var(--shadow);
+}
+.closet-rod-full::before{left:-8px}
+.closet-rod-full::after{right:-8px}
+/* Ceiling wire */
+.rod-wire{
+  position:absolute;bottom:100%;left:50%;
+  width:1px;height:40px;background:var(--ink4);
+  transform:translateX(-50%);
+}
+/* Closet track */
+.closet-outer{overflow:hidden;position:relative}
+.closet-track-3d{
+  display:flex;
+  overflow-x:auto;scrollbar-width:none;
+  cursor:grab;
+  padding:0 52px 80px;
+  perspective:1200px;
+  gap:32px;
+}
+.closet-track-3d:active{cursor:grabbing}
+.closet-track-3d::-webkit-scrollbar{display:none}
+/* Each hanger with full 3D */
+.hanger3d{
+  flex:0 0 200px;
+  display:flex;flex-direction:column;align-items:center;
+  cursor:none;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+/* Entrance animation - drop from above */
+.hanger3d{
+  animation:dropIn 0.9s cubic-bezier(.34,1.3,.64,1) both;
+}
+.hanger3d:nth-child(1){animation-delay:.05s}
+.hanger3d:nth-child(2){animation-delay:.18s}
+.hanger3d:nth-child(3){animation-delay:.32s}
+.hanger3d:nth-child(4){animation-delay:.46s}
+.hanger3d:nth-child(5){animation-delay:.60s}
+@keyframes dropIn{
+  0%{opacity:0;transform:translateY(-180px) rotateZ(-30deg) scale(.7)}
+  70%{opacity:1}
+  85%{transform:translateY(10px) rotateZ(5deg) scale(1.02)}
+  95%{transform:translateY(-5px) rotateZ(-2deg) scale(.99)}
+  100%{transform:translateY(0) rotateZ(0) scale(1)}
+}
+.hanger3d-hook-wrap{
+  transform-style:preserve-3d;
+  transform-origin:50% 0;
+}
+/* Idle pendulum swing per hanger */
+.hanger3d:nth-child(1) .hanger3d-hook-wrap{animation:swing3d1 7s ease-in-out infinite;transform-origin:50% 2px}
+.hanger3d:nth-child(2) .hanger3d-hook-wrap{animation:swing3d2 8.5s ease-in-out infinite;transform-origin:50% 2px}
+.hanger3d:nth-child(3) .hanger3d-hook-wrap{animation:swing3d3 6s ease-in-out infinite;transform-origin:50% 2px}
+.hanger3d:nth-child(4) .hanger3d-hook-wrap{animation:swing3d4 9s ease-in-out infinite;transform-origin:50% 2px}
+.hanger3d:nth-child(5) .hanger3d-hook-wrap{animation:swing3d5 7.5s ease-in-out infinite;transform-origin:50% 2px}
+@keyframes swing3d1{0%,100%{transform:rotateZ(-6deg) rotateY(-5deg)}50%{transform:rotateZ(6deg) rotateY(4deg)}}
+@keyframes swing3d2{0%,100%{transform:rotateZ(7deg) rotateY(6deg)}50%{transform:rotateZ(-5deg) rotateY(-3deg)}}
+@keyframes swing3d3{0%,100%{transform:rotateZ(-4deg) rotateY(3deg)}50%{transform:rotateZ(8deg) rotateY(-6deg)}}
+@keyframes swing3d4{0%,100%{transform:rotateZ(5deg) rotateY(-4deg)}50%{transform:rotateZ(-7deg) rotateY(5deg)}}
+@keyframes swing3d5{0%,100%{transform:rotateZ(-8deg) rotateY(6deg)}50%{transform:rotateZ(4deg) rotateY(-3deg)}}
+/* Hover: freeze swing + big 3D tilt toward viewer */
+.hanger3d:hover .hanger3d-hook-wrap{
+  animation:none !important;
+  transform:rotateZ(0) rotateY(0) scale(1.06) translateZ(30px) !important;
+  transition:transform .5s cubic-bezier(.16,1,.3,1);
+}
+.hanger3d:hover{z-index:10}
+/* Garment card 3D */
+.hanger3d-garment{
+  width:170px;margin-top:-2px;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:box-shadow .4s;
+}
+.hanger3d:hover .hanger3d-garment{
+  box-shadow:0 24px 60px rgba(26,23,18,0.18),0 8px 20px rgba(26,23,18,0.1);
+}
+.garment-card3d{
+  width:170px;
+  background:var(--bg);
+  border:1px solid rgba(26,23,18,0.08);
+  position:relative;overflow:hidden;
+  transform-style:preserve-3d;
+}
+.garment-card3d::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:40%;
+  background:linear-gradient(to bottom,rgba(255,255,255,0.18),transparent);
+  pointer-events:none;
+}
+/* Shadow under garment */
+.garment-shadow{
+  width:130px;height:14px;
+  background:radial-gradient(ellipse,rgba(26,23,18,0.2),transparent 70%);
+  margin-top:6px;
+  transition:width .5s,opacity .5s;
+}
+.hanger3d:hover .garment-shadow{width:150px;opacity:0.7}
+.hanger3d-info{margin-top:18px;text-align:center;padding:0 8px}
+.hanger3d-name{font-family:var(--serif);font-size:16px;font-weight:300;color:var(--ink);display:block;margin-bottom:3px;letter-spacing:.04em}
+.hanger3d-sub{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans)}
+/* Price tag 3D effect */
+.price3d{
+  position:absolute;top:12px;right:-12px;
+  width:26px;height:40px;
+  background:var(--bg3);
+  border:1px solid rgba(26,23,18,0.12);
+  display:flex;align-items:center;justify-content:center;
+  transform:rotateY(-30deg) translateZ(5px);
+  box-shadow:3px 3px 8px rgba(26,23,18,.1);
+}
+.price3d span{writing-mode:vertical-rl;font-size:6px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans)}
+/* Drag hint */
+.drag-hint3d{
+  padding:0 52px 32px;
+  font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink3);display:flex;align-items:center;gap:12px;
+  font-family:var(--sans);
+}
+.drag-hint3d::before{content:'← →';letter-spacing:-.05em;font-size:14px;color:var(--accent)}
+
+/* ── CAREERS ── */
+#careers{background:var(--bg2)}
+.careers-list{border-top:1px solid var(--line)}
+.career-row{
+  display:grid;grid-template-columns:240px 1fr;
+  align-items:start;padding:44px 52px;
+  border-bottom:1px solid var(--line);
+  transition:background .4s;
+  position:relative;overflow:hidden;
+}
+.career-row::after{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--accent);transform:scaleY(0);transition:transform .4s cubic-bezier(.16,1,.3,1);transform-origin:bottom;
+}
+.career-row:hover{background:var(--bg)}
+.career-row:hover::after{transform:scaleY(1)}
+.career-period{font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);padding-top:5px;font-family:var(--sans);line-height:1.7}
+.career-loc{font-size:9px;color:var(--ink4);margin-top:6px;letter-spacing:.12em;text-transform:uppercase;font-family:var(--sans)}
+.career-company{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;font-family:var(--sans)}
+.career-role{font-family:var(--serif);font-size:clamp(22px,3vw,38px);font-weight:200;line-height:1;letter-spacing:-.01em;margin-bottom:14px}
+.career-desc{font-size:13px;font-weight:300;line-height:1.88;color:var(--ink2);max-width:520px;letter-spacing:.01em;font-family:var(--sans)}
+
+/* ── STRATEGY — 3D FLIP CARDS ── */
+#strategy{background:var(--bg);padding:0 0 120px}
+.strat-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:24px;padding:64px 52px 0;
+}
+.flip-card{
+  height:380px;perspective:800px;cursor:none;
+}
+.flip-inner{
+  width:100%;height:100%;
+  transform-style:preserve-3d;
+  transition:transform .8s cubic-bezier(.16,1,.3,1);
+  position:relative;
+}
+.flip-card:hover .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{
+  position:absolute;inset:0;
+  backface-visibility:hidden;
+  padding:44px 36px;
+  border:1px solid var(--line2);
+}
+.flip-front{
+  background:var(--bg2);
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.flip-back{
+  background:var(--ink);
+  transform:rotateY(180deg);
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.flip-num{font-family:var(--serif);font-size:80px;font-weight:200;line-height:.85;color:rgba(26,23,18,.07);letter-spacing:-.02em;margin-bottom:16px}
+.flip-cat{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-family:var(--sans)}
+.flip-title{font-family:var(--serif);font-size:clamp(20px,2.4vw,30px);font-weight:200;line-height:1.15;letter-spacing:-.01em}
+.flip-title em{font-style:italic}
+.flip-hint{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans);display:flex;align-items:center;gap:8px}
+.flip-hint::after{content:'↻';font-size:14px}
+/* Back */
+.flip-back-cat{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent2);font-family:var(--sans);margin-bottom:12px}
+.flip-back-title{font-family:var(--serif);font-size:24px;font-weight:200;color:var(--bg);line-height:1.15;margin-bottom:20px;letter-spacing:-.01em}
+.flip-back-title em{font-style:italic}
+.flip-desc{font-size:12.5px;line-height:1.88;color:rgba(247,242,234,.58);font-weight:300;font-family:var(--sans)}
+.flip-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.flip-tag{font-size:7.5px;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(247,242,234,.18);padding:5px 10px;color:rgba(247,242,234,.45);font-family:var(--sans)}
+
+/* ── AWARDS ── */
+#awards{background:var(--bg3)}
+.awards-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;background:var(--line);
+  border-top:1px solid var(--line);
+  margin-top:0;
+}
+.award-cell{
+  background:var(--bg2);padding:52px 44px;
+  transition:all .5s cubic-bezier(.16,1,.3,1);
+  position:relative;overflow:hidden;
+  transform-style:preserve-3d;
+}
+.award-cell::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--accent) 0%,rgba(155,32,32,0.85) 100%);
+  opacity:0;transition:opacity .5s;
+}
+.award-cell:hover::before{opacity:1}
+.award-cell:hover .award-prize,.award-cell:hover .award-title,.award-cell:hover .award-org,.award-cell:hover .award-year{color:var(--bg);position:relative;z-index:1}
+.award-cell:hover .award-cat{color:rgba(247,242,234,.6);position:relative;z-index:1}
+.award-cell:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 24px 60px rgba(155,32,32,.25)}
+.award-prize{font-family:var(--serif);font-size:clamp(32px,4.5vw,60px);font-weight:200;line-height:1;color:rgba(26,23,18,.1);margin-bottom:22px;letter-spacing:-.01em;position:relative;z-index:1;transition:color .5s}
+.award-cat{font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;font-family:var(--sans);position:relative;z-index:1;transition:color .5s}
+.award-title{font-family:var(--serif);font-size:20px;font-weight:300;line-height:1.25;margin-bottom:8px;position:relative;z-index:1;transition:color .5s}
+.award-org{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans);position:relative;z-index:1;transition:color .5s;line-height:1.6}
+.award-year{font-family:var(--serif);font-size:14px;font-style:italic;color:var(--ink3);margin-top:8px;position:relative;z-index:1;transition:color .5s}
+
+/* ── CONTACT ── */
+#contact{
+  background:var(--bg);min-height:85vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:0 52px;text-align:center;position:relative;overflow:hidden;
+}
+/* Animated background hangers */
+.contact-bg-hangers{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;
+  opacity:0.06;
+}
+.contact-heading{font-family:var(--serif);font-size:clamp(54px,9vw,128px);font-weight:200;line-height:.9;letter-spacing:-.02em;margin-bottom:52px;position:relative;z-index:2}
+.contact-heading em{font-style:italic;color:var(--accent)}
+.contact-eyebrow{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3);margin-bottom:32px;position:relative;z-index:2;font-family:var(--sans)}
+.contact-note{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--ink3);margin-bottom:32px;font-weight:200;position:relative;z-index:2}
+.contact-avail{
+  display:inline-block;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  border:1px solid var(--line2);padding:11px 22px;
+  color:var(--ink3);font-family:var(--sans);margin-top:40px;
+  position:relative;z-index:2;transition:all .3s;
+}
+.contact-avail:hover{background:var(--accent);border-color:var(--accent);color:white}
+.contact-link{font-family:var(--serif);font-size:clamp(16px,2.1vw,28px);font-weight:300;letter-spacing:.08em;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--line2);padding-bottom:5px;transition:all .3s;position:relative;z-index:2}
+.contact-link:hover{border-color:var(--accent);color:var(--accent)}
+.contact-socials{display:flex;gap:28px;justify-content:center;margin-top:40px;position:relative;z-index:2}
+.contact-socials a{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);text-decoration:none;transition:color .3s;font-family:var(--sans)}
+.contact-socials a:hover{color:var(--accent)}
+.contact-socials span{color:var(--line2)}
+
+/* ── FOOTER ── */
+footer{padding:26px 52px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);background:var(--bg2)}
+footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans)}
+
+/* ── MODAL ── */
+.modal{position:fixed;inset:0;z-index:1000;opacity:0;pointer-events:none;transition:opacity .6s cubic-bezier(.16,1,.3,1);overflow-y:auto;background:var(--bg)}
+.modal.open{opacity:1;pointer-events:all}
+.modal-inner{max-width:900px;margin:0 auto;padding:80px 52px 120px;}
+.modal-close{position:fixed;top:32px;right:44px;z-index:1001;background:none;border:1.5px solid var(--line2);width:40px;height:40px;cursor:none;display:flex;align-items:center;justify-content:center;transition:all .3s;color:var(--ink)}
+.modal-close:hover{background:var(--accent);border-color:var(--accent);color:white}
+.modal-eyebrow{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink3);margin-bottom:16px;font-family:var(--sans)}
+.modal-h{font-family:var(--serif);font-size:clamp(36px,5vw,72px);font-weight:200;line-height:1;letter-spacing:-.015em;margin-bottom:12px;color:var(--ink)}
+.modal-divider{border:none;border-top:1px solid var(--line);margin:32px 0;}
+.modal-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px;margin:28px 0;}
+.modal-gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;}
+.modal-gallery img.landscape{aspect-ratio:4/3;}
+.modal-desc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px;align-items:start;}
+.modal-sec{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-family:var(--sans)}
+.modal-p{font-size:13.5px;font-weight:300;line-height:1.92;color:var(--ink2);letter-spacing:.01em;font-family:var(--sans);white-space:pre-wrap;word-break:break-word;}
+.modal-tag{display:inline-block;font-size:8px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line2);padding:5px 10px;color:var(--ink3);margin:4px 4px 0 0;font-family:var(--sans)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  nav,nav.solid{padding:18px 22px}
+  .nav-right{display:none}
+  .hero-content{max-width:100%;padding:0 22px}
+  .hero-3d-scene{display:none}
+  .chapter,.closet-chapter{padding:64px 22px}
+  #about .about-grid,.modal-inner{grid-template-columns:1fr}
+  .about-col+.about-col{border-left:none;border-top:1px solid var(--line)}
+  .about-col{padding:40px 22px}
+  .proj-grid{grid-template-columns:1fr}
+  .strat-grid{grid-template-columns:1fr;padding:40px 22px 0}
+  .awards-row{grid-template-columns:1fr}
+  .career-row{grid-template-columns:1fr;padding:32px 22px}
+  .career-period{display:none}
+  .closet-rod-full,.drag-hint3d{margin-left:22px;margin-right:22px;padding-left:22px;padding-right:22px}
+  .closet-track-3d{padding:0 22px 60px}
+  .section-rule{margin:0 22px}
+  .modal-left{display:none}
+  .modal-right{padding:60px 22px}
+  .modal-inner{padding:60px 22px 80px;}
+  .modal-desc-grid{grid-template-columns:1fr;}
+  footer{padding:20px 22px;flex-direction:column;gap:8px;text-align:center}
+  #contact{padding:0 22px}
+  .scroll-ind{left:22px}
+}
+</style>
+</head>
+<body>
+
+<div id="cur"><div id="cur-dot"></div></div>
+<div id="cur-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">Yeonseo Lee</a>
+  <div class="nav-right">
+    <a href="#about">About</a>
+    <a href="#projects">Work</a>
+    <a href="#closet">Closet</a>
+    <a href="#careers">Experience</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="hero-mesh">
+    <div class="mesh-blob b1"></div>
+    <div class="mesh-blob b2"></div>
+    <div class="mesh-blob b3"></div>
+  </div>
+
+  <!-- 3D floating hangers on right side -->
+  <div class="hero-3d-scene" id="hero3dScene">
+    <div class="hero-hanging-stage">
+      <div class="hero-rod-line"><div class="rod-wire"></div></div>
+      <div class="hero-hanger-group" style="top:83px;left:8%">
+
+        <!-- Hanger 1: Tensed Symbiosis -->
+        <div class="hero-hanger-item">
+          <div class="h-hook-wrap">
+            <svg width="52" height="42" viewBox="0 0 52 42" fill="none">
+              <path d="M26 4 Q26 0 30 0 Q34 0 34 4 Q34 8 26 11 Q14 17 8 26 Q4 32 6 37 Q8 42 17 42 L35 42 Q44 42 46 37 Q48 32 44 26 Q38 17 26 11" stroke="rgba(26,23,18,0.3)" stroke-width="1.4" fill="none"/>
+              <circle cx="30" cy="3" r="2.5" stroke="rgba(26,23,18,0.35)" stroke-width="1" fill="white"/>
+            </svg>
+            <div class="h-garment-body">
+              <svg width="140" height="200" viewBox="0 0 140 200" fill="none">
+                <rect width="140" height="200" fill="#f7f2ea" rx="1"/>
+                <circle cx="70" cy="50" r="32" stroke="rgba(155,32,32,0.4)" stroke-width="1.2"/>
+                <circle cx="70" cy="50" r="18" stroke="rgba(26,23,18,0.15)" stroke-width="0.7"/>
+                <circle cx="70" cy="50" r="6" fill="rgba(155,32,32,0.2)"/>
+                <path d="M70 82 Q50 115 44 192" stroke="rgba(26,23,18,0.4)" stroke-width="0.9"/>
+                <path d="M70 82 Q78 112 82 192" stroke="rgba(26,23,18,0.4)" stroke-width="0.9"/>
+                <path d="M70 82 Q94 108 108 192" stroke="rgba(26,23,18,0.28)" stroke-width="0.6"/>
+                <path d="M70 82 Q46 100 34 192" stroke="rgba(26,23,18,0.28)" stroke-width="0.6"/>
+                <line x1="70" y1="82" x2="70" y2="192" stroke="#9b2020" stroke-width="0.6" stroke-dasharray="3,6" opacity="0.5"/>
+                <rect x="0" y="192" width="140" height="8" fill="rgba(155,32,32,0.08)"/>
+              </svg>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:10px">
+            <span style="font-family:var(--serif);font-size:13px;color:var(--ink);display:block">Tensed Symbiosis</span>
+            <span style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans)">Wearable Art</span>
+          </div>
+        </div>
+
+        <!-- Hanger 2: Fluid Forms -->
+        <div class="hero-hanger-item">
+          <div class="h-hook-wrap">
+            <svg width="52" height="42" viewBox="0 0 52 42" fill="none">
+              <path d="M26 4 Q26 0 30 0 Q34 0 34 4 Q34 8 26 11 Q14 17 8 26 Q4 32 6 37 Q8 42 17 42 L35 42 Q44 42 46 37 Q48 32 44 26 Q38 17 26 11" stroke="rgba(26,23,18,0.3)" stroke-width="1.4" fill="none"/>
+              <circle cx="30" cy="3" r="2.5" stroke="rgba(26,23,18,0.35)" stroke-width="1" fill="white"/>
+            </svg>
+            <div class="h-garment-body">
+              <svg width="140" height="200" viewBox="0 0 140 200" fill="none">
+                <rect width="140" height="200" fill="#fdf8f3" rx="1"/>
+                <path d="M70 12 Q48 36 46 82 Q42 128 40 192 L100 192 Q98 128 94 82 Q92 36 70 12Z" stroke="rgba(26,23,18,0.38)" stroke-width="0.9" fill="rgba(232,200,160,0.12)"/>
+                <path d="M46 58 Q70 52 94 58" stroke="rgba(26,23,18,0.18)" stroke-width="0.5"/>
+                <path d="M44 100 Q70 92 96 100" stroke="rgba(26,23,18,0.14)" stroke-width="0.5"/>
+                <path d="M42 144 Q70 134 98 144" stroke="rgba(26,23,18,0.12)" stroke-width="0.5"/>
+                <g opacity="0.25" transform="translate(52,72)">
+                  <polygon points="18,0 36,10 36,30 18,40 0,30 0,10" stroke="#9b2020" stroke-width="0.8" fill="none"/>
+                </g>
+                <line x1="70" y1="12" x2="70" y2="192" stroke="#9b2020" stroke-width="0.5" stroke-dasharray="2,7" opacity="0.4"/>
+                <line x1="58" y1="12" x2="48" y2="0" stroke="rgba(26,23,18,0.25)" stroke-width="0.7"/>
+                <line x1="82" y1="12" x2="92" y2="0" stroke="rgba(26,23,18,0.25)" stroke-width="0.7"/>
+              </svg>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:10px">
+            <span style="font-family:var(--serif);font-size:13px;color:var(--ink);display:block">Fluid Forms</span>
+            <span style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans)">SNU 2024</span>
+          </div>
+        </div>
+
+        <!-- Hanger 3: Senior Fit -->
+        <div class="hero-hanger-item">
+          <div class="h-hook-wrap">
+            <svg width="52" height="42" viewBox="0 0 52 42" fill="none">
+              <path d="M26 4 Q26 0 30 0 Q34 0 34 4 Q34 8 26 11 Q14 17 8 26 Q4 32 6 37 Q8 42 17 42 L35 42 Q44 42 46 37 Q48 32 44 26 Q38 17 26 11" stroke="rgba(26,23,18,0.3)" stroke-width="1.4" fill="none"/>
+              <circle cx="30" cy="3" r="2.5" stroke="rgba(26,23,18,0.35)" stroke-width="1" fill="white"/>
+            </svg>
+            <div class="h-garment-body">
+              <svg width="140" height="200" viewBox="0 0 140 200" fill="none">
+                <rect width="140" height="200" fill="#f7f2ea" rx="1"/>
+                <path d="M70 10 Q50 28 48 54 L38 84 Q48 88 54 84 L54 192 L86 192 L86 84 Q92 88 102 84 L92 54 Q90 28 70 10Z" stroke="rgba(26,23,18,0.38)" stroke-width="0.9" fill="none"/>
+                <line x1="70" y1="10" x2="70" y2="192" stroke="rgba(26,23,18,0.1)" stroke-dasharray="3,8"/>
+                <line x1="54" y1="84" x2="86" y2="84" stroke="rgba(26,23,18,0.16)" stroke-width="0.5"/>
+                <rect x="44" y="108" width="28" height="22" stroke="#9b2020" stroke-width="0.7" fill="rgba(155,32,32,0.05)"/>
+                <rect x="68" y="108" width="28" height="22" stroke="#9b2020" stroke-width="0.7" fill="rgba(155,32,32,0.05)"/>
+                <path d="M60 10 Q70 24 80 10" stroke="rgba(26,23,18,0.22)" stroke-width="0.7" fill="none"/>
+              </svg>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:10px">
+            <span style="font-family:var(--serif);font-size:13px;color:var(--ink);display:block">Senior-Fit</span>
+            <span style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans)">3D Custom</span>
+          </div>
+        </div>
+
+        <!-- Hanger 4: Kaftan -->
+        <div class="hero-hanger-item">
+          <div class="h-hook-wrap">
+            <svg width="52" height="42" viewBox="0 0 52 42" fill="none">
+              <path d="M26 4 Q26 0 30 0 Q34 0 34 4 Q34 8 26 11 Q14 17 8 26 Q4 32 6 37 Q8 42 17 42 L35 42 Q44 42 46 37 Q48 32 44 26 Q38 17 26 11" stroke="rgba(26,23,18,0.3)" stroke-width="1.4" fill="none"/>
+              <circle cx="30" cy="3" r="2.5" stroke="rgba(26,23,18,0.35)" stroke-width="1" fill="white"/>
+            </svg>
+            <div class="h-garment-body">
+              <svg width="140" height="200" viewBox="0 0 140 200" fill="none">
+                <rect width="140" height="200" fill="#fdf8f3" rx="1"/>
+                <path d="M70 8 Q28 32 16 78 L12 192 L128 192 L124 78 Q112 32 70 8Z" stroke="rgba(26,23,18,0.38)" stroke-width="0.9" fill="rgba(232,200,160,0.08)"/>
+                <g opacity="0.14">
+                  <line x1="16" y1="78" x2="124" y2="78" stroke="#1a1712" stroke-width="0.5"/>
+                  <line x1="18" y1="110" x2="122" y2="110" stroke="#1a1712" stroke-width="0.5"/>
+                  <line x1="20" y1="142" x2="120" y2="142" stroke="#1a1712" stroke-width="0.5"/>
+                  <line x1="14" y1="172" x2="126" y2="172" stroke="#1a1712" stroke-width="0.5"/>
+                </g>
+                <line x1="70" y1="8" x2="70" y2="192" stroke="#9b2020" stroke-width="0.7" stroke-dasharray="4,7" opacity="0.4"/>
+                <text x="74" y="46" fill="#9b2020" font-size="7" font-family="serif" opacity="0.5">54" max</text>
+                <path d="M58 10 Q70 30 82 10" stroke="rgba(26,23,18,0.22)" stroke-width="0.7" fill="none"/>
+              </svg>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:10px">
+            <span style="font-family:var(--serif);font-size:13px;color:var(--ink);display:block">Kaftan</span>
+            <span style="font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-family:var(--sans)">Digital Print</span>
+          </div>
+        </div>
+
+      </div><!-- hero-hanger-group -->
+    </div>
+  </div>
+
+  <!-- Hero text content -->
+  <div class="hero-content">
+    <p class="hero-eyebrow">Fashion Design · Textile · Creative Marketing</p>
+    <h1 class="hero-name">Yeonseo<br><em>Lee.</em></h1>
+    <p class="hero-tagline">"Turning raw concepts into fluid brand stories."</p>
+    <div class="hero-sub-row">
+      <span class="hero-badge">SNU × NC State</span>
+      <span class="hero-badge">GPA <strong>4.0</strong> · Exchange</span>
+      <span class="hero-badge">Seoul · Raleigh, NC</span>
+      <a href="#projects" class="hero-cta">View Work <span class="arr">→</span></a>
+    </div>
+  </div>
+
+  <div class="scroll-ind">
+    <span>Scroll</span>
+    <div class="scroll-ind-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<div class="section-rule"></div>
+<section class="panel" id="about">
+  <div class="chapter" style="padding-bottom:0">
+    <div class="chapter-index">01 — Profile</div>
+    <h2 class="chapter-heading reveal">Creator at the<br><em>intersection.</em></h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-col">
+      <p class="about-label">Philosophy</p>
+      <div class="about-quote reveal">"Turning raw concepts into fluid brand stories — from clothing to digital media."</div>
+      <p class="about-body reveal d1">I'm <strong>Yeonseo Lee</strong> — a creator at the intersection of <strong>fashion, marketing, and design</strong>. Rooted in Clothing &amp; Textiles at Seoul National University, I love exploring how fashion transforms into engaging digital content.</p>
+      <p class="about-body reveal d2">Currently an exchange student at <strong>NC State University</strong> (GPA 4.0), blending global trends with <em>AI-driven creativity</em> to help brands stand out. Seeking <strong>2026 Summer Internship</strong> in Creative Marketing &amp; Fashion Design.</p>
+      <div class="skills-grid reveal d3">
+        <div class="skill-cell">Adobe CC (Ps·Ai·Ae·Pr)</div><div class="skill-cell">AI Creative Content</div>
+        <div class="skill-cell">Fashion Design & Runway</div><div class="skill-cell">Textile Design</div>
+        <div class="skill-cell">Social Media Strategy</div><div class="skill-cell">Video Production</div>
+        <div class="skill-cell">NEDgraphics · DesignScope</div><div class="skill-cell">CLO 3D Fashion</div>
+        <div class="skill-cell">Brand Identity</div><div class="skill-cell">Motion Graphics</div>
+      </div>
+    </div>
+    <div class="about-col">
+      <p class="about-label">Education</p>
+      <div class="about-portrait reveal" style="margin-bottom:36px;display:flex;justify-content:center">
+        <svg width="280" height="380" viewBox="0 0 280 380" fill="none">
+          <rect x="28" y="28" width="224" height="324" fill="rgba(26,23,18,0.025)" stroke="rgba(26,23,18,0.1)" stroke-width="1"/>
+          <rect x="32" y="32" width="224" height="324" fill="rgba(155,32,32,0.04)"/>
+          <g opacity="0.65">
+            <ellipse cx="140" cy="95" rx="36" ry="42" stroke="var(--ink2)" stroke-width="0.8"/>
+            <path d="M104 85 Q128 44 166 50 Q190 58 184 92" fill="rgba(26,23,18,0.1)" stroke="var(--ink2)" stroke-width="0.5"/>
+            <rect x="127" y="135" width="26" height="26" fill="rgba(26,23,18,0.04)" stroke="var(--ink2)" stroke-width="0.5"/>
+            <path d="M62 170 Q140 150 218 170 L212 348 Q170 365 140 365 Q110 365 68 348Z" stroke="var(--ink2)" stroke-width="0.8" fill="none"/>
+            <line x1="140" y1="170" x2="140" y2="348" stroke="rgba(26,23,18,0.12)" stroke-dasharray="3,9"/>
+            <path d="M112 166 Q137 198 140 208 Q143 198 168 166" stroke="var(--ink2)" stroke-width="0.7" fill="none"/>
+            <line x1="90" y1="170" x2="88" y2="348" stroke="var(--ink2)" stroke-width="0.4"/>
+            <line x1="190" y1="170" x2="192" y2="348" stroke="var(--ink2)" stroke-width="0.4"/>
+            <path d="M62 170 Q40 252 50 332" stroke="var(--ink2)" stroke-width="0.9"/>
+            <path d="M218 170 Q240 252 230 332" stroke="var(--ink2)" stroke-width="0.9"/>
+          </g>
+          <line x1="28" y1="44" x2="28" y2="28" stroke="rgba(26,23,18,0.2)" stroke-width="1"/>
+          <line x1="28" y1="28" x2="44" y2="28" stroke="rgba(26,23,18,0.2)" stroke-width="1"/>
+          <line x1="236" y1="28" x2="252" y2="28" stroke="rgba(26,23,18,0.2)" stroke-width="1"/>
+          <line x1="252" y1="28" x2="252" y2="44" stroke="rgba(26,23,18,0.2)" stroke-width="1"/>
+          <line x1="28" y1="336" x2="28" y2="352" stroke="rgba(26,23,18,0.2)" stroke-width="1"/>
+          <line x1="28" y1="352" x2="44" y2="352" stroke="rgba(26,23,18,0.2)" stroke-width="1"/>
+          <line x1="236" y1="352" x2="252" y2="352" stroke="rgba(26,23,18,0.2)" stroke-width="1"/>
+          <line x1="252" y1="336" x2="252" y2="352" stroke="rgba(26,23,18,0.2)" stroke-width="1"/>
+          <rect x="28" y="352" width="224" height="22" fill="rgba(155,32,32,0.08)"/>
+          <text x="140" y="368" text-anchor="middle" fill="rgba(26,23,18,0.3)" font-size="7.5" font-family="serif" letter-spacing="5">YEONSEO LEE — 2026</text>
+          <path d="M28 248 Q140 232 252 252" stroke="#9b2020" stroke-width="0.8" opacity="0.35" fill="none"/>
+        </svg>
+      </div>
+      <div class="edu-block reveal d1">
+        <div class="edu-entry">
+          <div class="edu-school">Seoul National University</div>
+          <div class="edu-degree">B.S. Fashion &amp; Textile · 2022 – 2027</div>
+          <div class="edu-gpa">GPA 3.79 / 4.0</div>
+        </div>
+        <div class="edu-entry">
+          <div class="edu-school">NC State University</div>
+          <div class="edu-degree">Exchange · Textile Design · Fall 2025 – Spring 2026</div>
+          <div class="edu-gpa">GPA 4.0 / 4.0</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROJECTS ══════════════ -->
+<div class="section-rule"></div>
+<section class="panel" id="projects">
+  <div class="projects-header">
+    <div class="chapter-index reveal">02 — Selected Work</div>
+    <h2 class="chapter-heading reveal d1">The<br><em>collection.</em></h2>
+  </div>
+  <div class="proj-grid">
+
+    <div class="proj-card reveal" onclick="openModal(0)">
+      <div class="pc-num">01 / 2026</div>
+      <h3 class="pc-name">Art2Wear:<br>"Tensed Symbiosis" <span class="proj-tag-ip">In Progress</span></h3>
+      <div class="pc-meta">Wearable Art · Runway Show · NC State</div>
+      <p class="pc-desc">Exploring the visual coexistence of anxiety and focus — organic tension materialized through hand-stitching, magnet-inspired motion on the body.</p>
+      <div class="pc-arrow">↗</div>
+      <svg class="pc-sketch" width="80" height="100" viewBox="0 0 80 100" fill="none">
+        <circle cx="40" cy="28" r="20" stroke="#1a1712" stroke-width="1"/>
+        <circle cx="40" cy="28" r="10" stroke="#9b2020" stroke-width="0.8"/>
+        <path d="M40 48 Q28 68 24 95" stroke="#1a1712" stroke-width="1"/>
+        <path d="M40 48 Q52 68 56 95" stroke="#1a1712" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <div class="proj-card reveal d1" onclick="openModal(1)">
+      <div class="pc-num">02 / 2024</div>
+      <h3 class="pc-name">SNU Fashion Show<br><em>'형(形)' — Fluid Forms</em></h3>
+      <div class="pc-meta">Coral Chiffon · Hexagonal Mesh · Seoul</div>
+      <p class="pc-desc">Fluidity of form — curves vs. linear structures, scale, spatial balance. Oversized tailoring meets flowing silhouettes.</p>
+      <div class="pc-arrow">↗</div>
+      <svg class="pc-sketch" width="80" height="100" viewBox="0 0 80 100" fill="none">
+        <path d="M40 8 Q22 28 22 56 Q20 80 18 95 L62 95 Q60 80 58 56 Q58 28 40 8Z" stroke="#1a1712" stroke-width="1" fill="none"/>
+        <path d="M22 38 Q40 32 58 38" stroke="#1a1712" stroke-width="0.5"/>
+      </svg>
+    </div>
+
+    <div class="proj-card reveal d2" onclick="openModal(2)">
+      <div class="pc-num">03 / 2024</div>
+      <h3 class="pc-name">Senior-Fit:<br><em>Ergonomic 3D Custom</em></h3>
+      <div class="pc-meta">Adaptive Fashion · 3D Body Scan · Gwanak × SNU</div>
+      <p class="pc-desc">Bespoke garments for senior models — 3D-scanned bodies, posture-aware design, personalized through deep interviews.</p>
+      <div class="pc-arrow">↗</div>
+      <svg class="pc-sketch" width="80" height="100" viewBox="0 0 80 100" fill="none">
+        <ellipse cx="40" cy="20" rx="14" ry="16" stroke="#1a1712" stroke-width="1"/>
+        <path d="M26 36 L20 95 L60 95 L54 36Z" stroke="#1a1712" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="proj-card reveal d3" onclick="openModal(3)">
+      <div class="pc-num">04 / 2026</div>
+      <h3 class="pc-name">Engineered Kaftan:<br><em>Digital Textile Surface</em></h3>
+      <div class="pc-meta">Digital Print · 100" Kaftan · NC State</div>
+      <p class="pc-desc">Engineering segmented layouts for 100"+ Kaftans overcoming 54" digital printing width constraints.</p>
+      <div class="pc-arrow">↗</div>
+      <svg class="pc-sketch" width="80" height="100" viewBox="0 0 80 100" fill="none">
+        <path d="M40 5 Q12 24 8 54 L6 95 L74 95 L72 54 Q68 24 40 5Z" stroke="#1a1712" stroke-width="1" fill="none"/>
+        <line x1="40" y1="5" x2="40" y2="95" stroke="#9b2020" stroke-width="0.7" stroke-dasharray="3,5"/>
+      </svg>
+    </div>
+
+    <div class="proj-card reveal d4" onclick="openModal(4)">
+      <div class="pc-num">05 / 2025</div>
+      <h3 class="pc-name">AI Short Film:<br><em>"Happiness is Intelligence?"</em></h3>
+      <div class="pc-meta">AI Filmmaking · Grand Prize · SNU Library</div>
+      <p class="pc-desc">Directed & edited a short film using generative AI + Premiere Pro. Won Grand Prize at SNU Digital Literacy Academy.</p>
+      <div class="pc-arrow">↗</div>
+      <svg class="pc-sketch" width="80" height="100" viewBox="0 0 80 100" fill="none">
+        <rect x="8" y="18" width="64" height="44" stroke="#1a1712" stroke-width="1" fill="none"/>
+        <polygon points="28,26 28,54 56,40" stroke="#1a1712" stroke-width="1" fill="rgba(26,23,18,0.05)"/>
+      </svg>
+    </div>
+
+    <div class="proj-card reveal" style="transition-delay:.6s" onclick="openModal(5)">
+      <div class="pc-num">06 / 2024</div>
+      <h3 class="pc-name">SNUFESTIVAL:<br><em>Campus Branding</em></h3>
+      <div class="pc-meta">Visual Identity · Event Design · SNU</div>
+      <p class="pc-desc">Festival visual identity, sold-out AirPods case merch, social assets, live event execution — Busking &amp; Closing Ceremony.</p>
+      <div class="pc-arrow">↗</div>
+      <svg class="pc-sketch" width="80" height="100" viewBox="0 0 80 100" fill="none">
+        <rect x="8" y="10" width="64" height="48" stroke="#1a1712" stroke-width="1" fill="none"/>
+        <line x1="8" y1="28" x2="72" y2="28" stroke="#1a1712" stroke-width="0.5"/>
+        <rect x="16" y="16" width="20" height="10" fill="rgba(155,32,32,0.18)"/>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ CLOSET ══════════════ -->
+<div class="section-rule"></div>
+<section id="closet" class="panel">
+  <div class="closet-chapter">
+    <div class="chapter-index reveal">03 — The Closet</div>
+    <h2 class="closet-heading reveal d1">Browse<br>the <em>rack.</em></h2>
+  </div>
+  <div class="closet-outer">
+    <div class="drag-hint3d">Drag to browse · click to open · hover to feel the swing</div>
+    <div class="closet-rod-full"><div class="rod-wire"></div></div>
+    <div class="closet-track-3d" id="closetTrack">
+
+      <!-- Closet Hanger 1 -->
+      <div class="hanger3d" onclick="openModal(0)">
+        <div class="hanger3d-hook-wrap">
+          <svg width="54" height="44" viewBox="0 0 54 44" fill="none">
+            <path d="M27 4Q27 0 31 0Q35 0 35 4Q35 8 27 11Q15 17 8 27Q5 33 7 39Q9 44 18 44L36 44Q45 44 47 39Q49 33 46 27Q39 17 27 11" stroke="rgba(26,23,18,0.35)" stroke-width="1.4" fill="none"/>
+            <circle cx="31" cy="3" r="2.5" stroke="rgba(26,23,18,0.4)" stroke-width="1" fill="var(--bg)"/>
+          </svg>
+          <div class="hanger3d-garment">
+            <div class="garment-card3d">
+              <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
+                <rect width="170" height="240" fill="#f7f2ea"/>
+                <circle cx="85" cy="60" r="38" stroke="rgba(155,32,32,0.45)" stroke-width="1.2"/>
+                <circle cx="85" cy="60" r="20" stroke="rgba(26,23,18,0.2)" stroke-width="0.7"/>
+                <circle cx="85" cy="60" r="7" fill="rgba(155,32,32,0.25)"/>
+                <path d="M85 98Q62 138 56 232" stroke="rgba(26,23,18,0.42)" stroke-width="1"/>
+                <path d="M85 98Q96 135 100 232" stroke="rgba(26,23,18,0.42)" stroke-width="1"/>
+                <path d="M85 98Q114 124 132 232" stroke="rgba(26,23,18,0.28)" stroke-width="0.6"/>
+                <path d="M85 98Q56 118 40 232" stroke="rgba(26,23,18,0.28)" stroke-width="0.6"/>
+                <line x1="85" y1="98" x2="85" y2="232" stroke="#9b2020" stroke-width="0.7" stroke-dasharray="3,6" opacity="0.55"/>
+                <rect x="0" y="232" width="170" height="8" fill="rgba(155,32,32,0.07)"/>
+              </svg>
+              <div class="price3d"><span>ART</span></div>
+            </div>
+            <div class="garment-shadow"></div>
+          </div>
+        </div>
+        <div class="hanger3d-info"><span class="hanger3d-name">Tensed Symbiosis</span><span class="hanger3d-sub">Wearable Art · 2026</span></div>
+      </div>
+
+      <!-- Closet Hanger 2 -->
+      <div class="hanger3d" onclick="openModal(1)">
+        <div class="hanger3d-hook-wrap">
+          <svg width="54" height="44" viewBox="0 0 54 44" fill="none">
+            <path d="M27 4Q27 0 31 0Q35 0 35 4Q35 8 27 11Q15 17 8 27Q5 33 7 39Q9 44 18 44L36 44Q45 44 47 39Q49 33 46 27Q39 17 27 11" stroke="rgba(26,23,18,0.35)" stroke-width="1.4" fill="none"/>
+            <circle cx="31" cy="3" r="2.5" stroke="rgba(26,23,18,0.4)" stroke-width="1" fill="var(--bg)"/>
+          </svg>
+          <div class="hanger3d-garment">
+            <div class="garment-card3d">
+              <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
+                <rect width="170" height="240" fill="#fdf8f3"/>
+                <path d="M85 14Q58 42 56 96Q52 152 48 232L122 232Q118 152 114 96Q112 42 85 14Z" stroke="rgba(26,23,18,0.4)" stroke-width="1" fill="rgba(232,200,160,0.14)"/>
+                <path d="M56 70Q85 62 114 70" stroke="rgba(26,23,18,0.2)" stroke-width="0.5"/>
+                <path d="M54 118Q85 108 116 118" stroke="rgba(26,23,18,0.16)" stroke-width="0.5"/>
+                <path d="M52 164Q85 152 118 164" stroke="rgba(26,23,18,0.12)" stroke-width="0.5"/>
+                <g opacity="0.3" transform="translate(62,88)"><polygon points="23,0 46,13 46,39 23,52 0,39 0,13" stroke="#9b2020" stroke-width="1" fill="none"/></g>
+                <line x1="85" y1="14" x2="85" y2="232" stroke="#9b2020" stroke-width="0.5" stroke-dasharray="2,8" opacity="0.4"/>
+                <line x1="70" y1="14" x2="58" y2="0" stroke="rgba(26,23,18,0.28)" stroke-width="0.8"/>
+                <line x1="100" y1="14" x2="112" y2="0" stroke="rgba(26,23,18,0.28)" stroke-width="0.8"/>
+              </svg>
+              <div class="price3d"><span>형</span></div>
+            </div>
+            <div class="garment-shadow"></div>
+          </div>
+        </div>
+        <div class="hanger3d-info"><span class="hanger3d-name">Fluid Forms</span><span class="hanger3d-sub">Coral Chiffon · 2024</span></div>
+      </div>
+
+      <!-- Closet Hanger 3 -->
+      <div class="hanger3d" onclick="openModal(2)">
+        <div class="hanger3d-hook-wrap">
+          <svg width="54" height="44" viewBox="0 0 54 44" fill="none">
+            <path d="M27 4Q27 0 31 0Q35 0 35 4Q35 8 27 11Q15 17 8 27Q5 33 7 39Q9 44 18 44L36 44Q45 44 47 39Q49 33 46 27Q39 17 27 11" stroke="rgba(26,23,18,0.35)" stroke-width="1.4" fill="none"/>
+            <circle cx="31" cy="3" r="2.5" stroke="rgba(26,23,18,0.4)" stroke-width="1" fill="var(--bg)"/>
+          </svg>
+          <div class="hanger3d-garment">
+            <div class="garment-card3d">
+              <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
+                <rect width="170" height="240" fill="#f7f2ea"/>
+                <path d="M85 12Q62 32 60 66L46 104Q60 110 68 104L68 232L102 232L102 104Q110 110 124 104L110 66Q108 32 85 12Z" stroke="rgba(26,23,18,0.42)" stroke-width="1" fill="none"/>
+                <line x1="85" y1="12" x2="85" y2="232" stroke="rgba(26,23,18,0.1)" stroke-dasharray="3,9"/>
+                <line x1="68" y1="104" x2="102" y2="104" stroke="rgba(26,23,18,0.18)" stroke-width="0.6"/>
+                <rect x="54" y="132" width="34" height="26" stroke="#9b2020" stroke-width="0.8" fill="rgba(155,32,32,0.06)"/>
+                <rect x="82" y="132" width="34" height="26" stroke="#9b2020" stroke-width="0.8" fill="rgba(155,32,32,0.06)"/>
+                <path d="M72" y1="12" x2="72" y2="12"/>
+                <path d="M72 12Q85 30 98 12" stroke="rgba(26,23,18,0.25)" stroke-width="0.8" fill="none"/>
+                <path d="M82 28Q86 50 84 90" stroke="rgba(26,23,18,0.15)" stroke-width="0.5" stroke-dasharray="2,5"/>
+              </svg>
+              <div class="price3d"><span>FIT</span></div>
+            </div>
+            <div class="garment-shadow"></div>
+          </div>
+        </div>
+        <div class="hanger3d-info"><span class="hanger3d-name">Senior-Fit</span><span class="hanger3d-sub">3D Custom · 2024</span></div>
+      </div>
+
+      <!-- Closet Hanger 4 -->
+      <div class="hanger3d" onclick="openModal(3)">
+        <div class="hanger3d-hook-wrap">
+          <svg width="54" height="44" viewBox="0 0 54 44" fill="none">
+            <path d="M27 4Q27 0 31 0Q35 0 35 4Q35 8 27 11Q15 17 8 27Q5 33 7 39Q9 44 18 44L36 44Q45 44 47 39Q49 33 46 27Q39 17 27 11" stroke="rgba(26,23,18,0.35)" stroke-width="1.4" fill="none"/>
+            <circle cx="31" cy="3" r="2.5" stroke="rgba(26,23,18,0.4)" stroke-width="1" fill="var(--bg)"/>
+          </svg>
+          <div class="hanger3d-garment">
+            <div class="garment-card3d">
+              <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
+                <rect width="170" height="240" fill="#fdf8f3"/>
+                <path d="M85 10Q34 38 20 95L16 232L154 232L150 95Q136 38 85 10Z" stroke="rgba(26,23,18,0.4)" stroke-width="1" fill="rgba(232,200,160,0.1)"/>
+                <g opacity="0.16">
+                  <line x1="20" y1="95" x2="150" y2="95" stroke="#1a1712" stroke-width="0.5"/>
+                  <line x1="22" y1="133" x2="148" y2="133" stroke="#1a1712" stroke-width="0.5"/>
+                  <line x1="24" y1="172" x2="146" y2="172" stroke="#1a1712" stroke-width="0.5"/>
+                  <line x1="18" y1="210" x2="152" y2="210" stroke="#1a1712" stroke-width="0.5"/>
+                </g>
+                <line x1="85" y1="10" x2="85" y2="232" stroke="#9b2020" stroke-width="0.8" stroke-dasharray="4,7" opacity="0.45"/>
+                <text x="89" y="52" fill="#9b2020" font-size="8" font-family="serif" opacity="0.55">54" max</text>
+                <path x1="70" y1="12" x2="70" y2="12"/>
+                <path d="M70 12Q85 36 100 12" stroke="rgba(26,23,18,0.25)" stroke-width="0.8" fill="none"/>
+              </svg>
+              <div class="price3d"><span>DIG</span></div>
+            </div>
+            <div class="garment-shadow"></div>
+          </div>
+        </div>
+        <div class="hanger3d-info"><span class="hanger3d-name">Engineered Kaftan</span><span class="hanger3d-sub">Digital Print · 2026</span></div>
+      </div>
+
+      <!-- Closet Hanger 5 -->
+      <div class="hanger3d" onclick="openModal(5)">
+        <div class="hanger3d-hook-wrap">
+          <svg width="54" height="44" viewBox="0 0 54 44" fill="none">
+            <path d="M27 4Q27 0 31 0Q35 0 35 4Q35 8 27 11Q15 17 8 27Q5 33 7 39Q9 44 18 44L36 44Q45 44 47 39Q49 33 46 27Q39 17 27 11" stroke="rgba(26,23,18,0.35)" stroke-width="1.4" fill="none"/>
+            <circle cx="31" cy="3" r="2.5" stroke="rgba(26,23,18,0.4)" stroke-width="1" fill="var(--bg)"/>
+          </svg>
+          <div class="hanger3d-garment">
+            <div class="garment-card3d">
+              <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
+                <rect width="170" height="240" fill="#f7f2ea"/>
+                <rect x="18" y="10" width="134" height="58" stroke="rgba(26,23,18,0.38)" stroke-width="0.9" fill="none"/>
+                <line x1="18" y1="30" x2="152" y2="30" stroke="rgba(26,23,18,0.16)" stroke-width="0.5"/>
+                <rect x="26" y="17" width="42" height="13" fill="rgba(155,32,32,0.2)"/>
+                <path d="M18 68L34 68L34 232L18 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6" fill="rgba(26,23,18,0.02)"/>
+                <path d="M34 68L58 68L58 232L34 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6"/>
+                <path d="M58 68L82 68L82 232L58 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6" fill="rgba(26,23,18,0.02)"/>
+                <path d="M82 68L106 68L106 232L82 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6"/>
+                <path d="M106 68L130 68L130 232L106 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6" fill="rgba(26,23,18,0.02)"/>
+                <path d="M130 68L152 68L152 232L130 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6"/>
+              </svg>
+              <div class="price3d"><span>SNU</span></div>
+            </div>
+            <div class="garment-shadow"></div>
+          </div>
+        </div>
+        <div class="hanger3d-info"><span class="hanger3d-name">Festival Branding</span><span class="hanger3d-sub">Visual Design · 2024</span></div>
+      </div>
+
+    </div><!-- /closetTrack -->
+  </div>
+</section>
+
+<!-- ══════════════ CAREERS ══════════════ -->
+<div class="section-rule"></div>
+<section class="panel" id="careers">
+  <div class="chapter" style="padding-bottom:0">
+    <div class="chapter-index reveal">04 — Experience</div>
+    <h2 class="chapter-heading reveal d1">Where<br><em>I've worked.</em></h2>
+  </div>
+  <div class="careers-list">
+    <div class="career-row reveal">
+      <div class="career-period">Nov 2025 – Present<div class="career-loc">United States · Remote</div></div>
+      <div>
+        <div class="career-company">Missions with Monty</div>
+        <div class="career-role">Marketing &amp; Design Intern</div>
+        <p class="career-desc">Supported social media content planning for a research-based, game-based learning project in science education. Translated research insights into platform-appropriate content ideas through collaboration with faculty and design teams.</p>
+      </div>
+    </div>
+    <div class="career-row reveal d1">
+      <div class="career-period">Jan 2026<div class="career-loc">Miami, United States</div></div>
+      <div>
+        <div class="career-company">Bridge Showroom</div>
+        <div class="career-role">Trade Show Intern</div>
+        <p class="career-desc">Supported booth operations and merchandise preparation for a high-end fashion trade event. Assisted with visitor engagement and showroom team support during the event.</p>
+      </div>
+    </div>
+    <div class="career-row reveal d2">
+      <div class="career-period">Jan – Aug 2025<div class="career-loc">Seoul, Korea</div></div>
+      <div>
+        <div class="career-company">MiraeN Math (Franchise Branch)</div>
+        <div class="career-role">Designer &amp; Marketer</div>
+        <p class="career-desc">Led visual marketing across five regional branches — poster design, social media, promotional video. Managed official blog and Instagram. Grew the branch into one of its top-performing locations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ STRATEGY — FLIP CARDS ══════════════ -->
+<div class="section-rule"></div>
+<section class="panel" id="strategy">
+  <div class="chapter" style="padding-bottom:0">
+    <div class="chapter-index reveal">05 — Strategy &amp; Brand</div>
+    <h2 class="chapter-heading reveal d1">The brand<br><em>mind.</em></h2>
+  </div>
+  <div class="strat-grid">
+
+    <div class="flip-card reveal">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-num">01</div>
+            <div class="flip-cat">Social Media Strategy</div>
+            <div class="flip-title">MiraeN:<br><em>Multi-Branch Brand Expansion</em></div>
+          </div>
+          <div class="flip-hint">Hover to reveal</div>
+        </div>
+        <div class="flip-back">
+          <div>
+            <div class="flip-back-cat">Social Media Strategy</div>
+            <div class="flip-back-title">MiraeN:<br><em>Multi-Branch Brand</em></div>
+            <p class="flip-desc">Managed Instagram, YouTube, and Naver Blog for five regional branches. Set up SmartPlace on Naver Map and ran paid advertising across platforms — rapidly growing visibility into a top-performing franchise location.</p>
+          </div>
+          <div class="flip-tags">
+            <span class="flip-tag">Instagram</span>
+            <span class="flip-tag">YouTube</span>
+            <span class="flip-tag">Naver Blog</span>
+            <span class="flip-tag">Paid Ads</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card reveal d1">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-num">02</div>
+            <div class="flip-cat">Event Design &amp; Branding</div>
+            <div class="flip-title">SNUFESTIVAL:<br><em>Visual Identity System</em></div>
+          </div>
+          <div class="flip-hint">Hover to reveal</div>
+        </div>
+        <div class="flip-back">
+          <div>
+            <div class="flip-back-cat">Event Design</div>
+            <div class="flip-back-title">SNUFESTIVAL:<br><em>Visual Identity</em></div>
+            <p class="flip-desc">Conceptualized festival visuals and social media assets for SNU's annual festival. Designed limited-edition AirPods cases that sold out entirely. Executed live events: Busking and Closing Ceremony.</p>
+          </div>
+          <div class="flip-tags">
+            <span class="flip-tag">Visual Identity</span>
+            <span class="flip-tag">Merch Design</span>
+            <span class="flip-tag">Event Production</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card reveal d2">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div>
+            <div class="flip-num">03</div>
+            <div class="flip-cat">AI Creative Content</div>
+            <div class="flip-title">AI-Driven<br><em>Video Campaign</em></div>
+          </div>
+          <div class="flip-hint">Hover to reveal</div>
+        </div>
+        <div class="flip-back">
+          <div>
+            <div class="flip-back-cat">AI Filmmaking · Grand Prize</div>
+            <div class="flip-back-title">AI-Driven<br><em>Video Campaign</em></div>
+            <p class="flip-desc">Directed "Happiness is Intelligence?" and Gyeongju APEC 2025 promo using generative AI + Premiere Pro. Created Seoul Subway motion graphics in After Effects. Won Grand Prize, SNU Digital Literacy Academy.</p>
+          </div>
+          <div class="flip-tags">
+            <span class="flip-tag">AI Film</span>
+            <span class="flip-tag">Premiere Pro</span>
+            <span class="flip-tag">After Effects</span>
+            <span class="flip-tag">Grand Prize</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ AWARDS ══════════════ -->
+<div class="section-rule"></div>
+<section class="panel" id="awards">
+  <div class="chapter" style="padding-bottom:0">
+    <div class="chapter-index reveal">06 — Recognition</div>
+    <h2 class="chapter-heading reveal d1">Earned<br><em>distinctions.</em></h2>
+  </div>
+  <div class="awards-row">
+    <div class="award-cell reveal">
+      <div class="award-prize">Grand</div>
+      <div class="award-cat">AI Filmmaking</div>
+      <div class="award-title">AI Filmmaking Program Prize</div>
+      <div class="award-org">Digital Literacy Academy, SNU Library</div>
+      <div class="award-year">2025</div>
+    </div>
+    <div class="award-cell reveal d1">
+      <div class="award-prize">Honor</div>
+      <div class="award-cat">Digital Fashion</div>
+      <div class="award-title">Honorable Mention</div>
+      <div class="award-org">13th International Digital Fashion Contest — Society of Fashion &amp; Textile Industry</div>
+      <div class="award-year">2024</div>
+    </div>
+    <div class="award-cell reveal d2">
+      <div class="award-prize">Guild</div>
+      <div class="award-cat">AI Cinema</div>
+      <div class="award-title">Elected Member</div>
+      <div class="award-org">AI International Creator Guild — Global network of cinema innovators</div>
+      <div class="award-year">Dec 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<div class="section-rule"></div>
+<section class="panel" id="contact">
+  <!-- Animated background hangers -->
+  <div class="contact-bg-hangers" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+      <g opacity="0.6">
+        <text x="100" y="200" font-family="serif" font-size="180" font-weight="200" fill="currentColor" opacity="0.1">✦</text>
+        <text x="600" y="350" font-family="serif" font-size="240" font-weight="200" fill="currentColor" opacity="0.06">Contact</text>
+      </g>
+    </svg>
+  </div>
+  <p class="contact-eyebrow reveal">Get in touch</p>
+  <h2 class="contact-heading reveal d1">Let's build<br><em>something real.</em></h2>
+  <p class="contact-note reveal d2">Seeking 2026 Summer Internship · Creative Marketing &amp; Fashion Design</p>
+  <a href="mailto:yeonseolee03@snu.ac.kr" class="contact-link reveal d3">yeonseolee03@snu.ac.kr</a>
+  <div class="contact-socials reveal d4">
+    <a href="https://yeonseolee03en.myportfolio.com" target="_blank">Portfolio</a>
+    <span>·</span><a href="#">LinkedIn</a>
+    <span>·</span><a href="#">Instagram</a>
+  </div>
+  <div class="contact-avail reveal d5">Available Summer 2026 — Flexible through Jan 2027</div>
+</section>
+
+<footer>
+  <span>© 2026 Yeonseo Lee — Fashion Design · Textile · Creative Marketing</span>
+  <span>Seoul · Raleigh, NC</span>
+</footer>
+
+<!-- ══════════════ MODAL ══════════════ -->
+<div class="modal" id="modal">
+  <button class="modal-close" onclick="closeModal()">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l11 11M12 1L1 12"/></svg>
+  </button>
+  <div class="modal-inner" id="modal-inner"></div>
+</div>
+
+<script>
+/* ── CURSOR ── */
+const dot=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function raf(){
+  dot.style.transform=`translate(${mx}px,${my}px)`;
+  rx+=(mx-rx)*.1;ry+=(my-ry)*.1;
+  ring.style.transform=`translate(${rx}px,${ry}px)`;
+  requestAnimationFrame(raf);
+})();
+
+/* ── NAV ── */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>80),{passive:true});
+
+/* ── REVEAL OBSERVER ── */
+const rObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');rObs.unobserve(x.target)}}),{threshold:0.08});
+document.querySelectorAll('.panel,.reveal').forEach(el=>rObs.observe(el));
+
+/* ── 3D TILT on proj cards ── */
+document.querySelectorAll('.proj-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const cx=(e.clientX-r.left)/r.width-.5;
+    const cy=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`perspective(600px) rotateY(${cx*14}deg) rotateX(${-cy*10}deg) translateZ(8px)`;
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transition='transform .6s cubic-bezier(.16,1,.3,1),background .4s';
+    card.style.transform='perspective(600px) rotateY(0) rotateX(0) translateZ(0)';
+    setTimeout(()=>card.style.transition='',600);
+  });
+});
+
+/* ── 3D TILT on hero scene ── */
+const heroScene=document.getElementById('hero3dScene');
+if(heroScene){
+  document.getElementById('hero').addEventListener('mousemove',e=>{
+    const r=heroScene.getBoundingClientRect();
+    const cx=(e.clientX-r.left-r.width/2)/r.width;
+    const cy=(e.clientY-r.top-r.height/2)/r.height;
+    heroScene.querySelector('.hero-hanging-stage').style.transform=
+      `perspective(900px) rotateY(${cx*8}deg) rotateX(${-cy*5}deg)`;
+  });
+  document.getElementById('hero').addEventListener('mouseleave',()=>{
+    const stage=heroScene.querySelector('.hero-hanging-stage');
+    stage.style.transition='transform .8s cubic-bezier(.16,1,.3,1)';
+    stage.style.transform='perspective(900px) rotateY(0) rotateX(0)';
+  });
+}
+
+/* ── CLOSET DRAG ── */
+const track=document.getElementById('closetTrack');
+let down=false,sx=0,sl=0;
+track.addEventListener('mousedown',e=>{down=true;sx=e.pageX-track.offsetLeft;sl=track.scrollLeft;track.style.cursor='grabbing'});
+['mouseleave','mouseup'].forEach(ev=>track.addEventListener(ev,()=>{down=false;track.style.cursor='grab'}));
+track.addEventListener('mousemove',e=>{if(!down)return;e.preventDefault();track.scrollLeft=sl-(e.pageX-track.offsetLeft-sx)*1.5});
+let ts=0,tsl=0;
+track.addEventListener('touchstart',e=>{ts=e.touches[0].pageX;tsl=track.scrollLeft},{passive:true});
+track.addEventListener('touchmove',e=>{track.scrollLeft=tsl-(e.touches[0].pageX-ts)},{passive:true});
+
+/* ── CLOSET HANGER 3D TILT ── */
+document.querySelectorAll('.hanger3d').forEach(h=>{
+  h.addEventListener('mousemove',e=>{
+    const r=h.getBoundingClientRect();
+    const cx=(e.clientX-r.left)/r.width-.5;
+    const cy=(e.clientY-r.top)/r.height-.5;
+    const garment=h.querySelector('.garment-card3d');
+    if(garment){
+      garment.style.transform=`perspective(500px) rotateY(${cx*20}deg) rotateX(${-cy*12}deg) translateZ(16px)`;
+      garment.style.transition='transform .15s ease';
+    }
+  });
+  h.addEventListener('mouseleave',()=>{
+    const garment=h.querySelector('.garment-card3d');
+    if(garment){
+      garment.style.transition='transform .6s cubic-bezier(.16,1,.3,1)';
+      garment.style.transform='perspective(500px) rotateY(0) rotateX(0) translateZ(0)';
+    }
+  });
+});
+
+/* ── AWARD 3D TILT ── */
+document.querySelectorAll('.award-cell').forEach(cell=>{
+  cell.addEventListener('mousemove',e=>{
+    const r=cell.getBoundingClientRect();
+    const cx=(e.clientX-r.left)/r.width-.5;
+    const cy=(e.clientY-r.top)/r.height-.5;
+    cell.style.transform=`translateY(-8px) scale(1.02) perspective(400px) rotateY(${cx*8}deg) rotateX(${-cy*6}deg)`;
+  });
+  cell.addEventListener('mouseleave',()=>{
+    cell.style.transform='';
+  });
+});
+
+/* ── SCROLL PARALLAX on hero mesh blobs ── */
+window.addEventListener('scroll',()=>{
+  const y=scrollY;
+  const blobs=document.querySelectorAll('.mesh-blob');
+  if(blobs[0]) blobs[0].style.transform=`translate(${y*.04}px,${-y*.06}px) scale(1)`;
+  if(blobs[1]) blobs[1].style.transform=`translate(${-y*.03}px,${y*.05}px) scale(1)`;
+},{passive:true});
+
+/* ── PROJECT DATA (Notion에서 불러옴) ── */
+let projects = [];
+
+function renderProjects() {
+  const grid = document.querySelector('.proj-grid');
+  if (!grid) return;
+  if (projects.length === 0) {
+    grid.innerHTML = '<p style="padding:48px;color:var(--ink3);font-family:var(--sans);font-size:13px;letter-spacing:.1em;">Loading projects...</p>';
+    return;
+  }
+  grid.innerHTML = projects.map((p, i) => `
+    <div class="proj-card" onclick="openModal(${i})">
+      <p class="pc-num">0${i + 1}</p>
+      ${p.thumbnail ? `<img src="${p.thumbnail}" alt="${p.titleEN}" style="width:100%;height:180px;object-fit:cover;margin-bottom:20px;opacity:0.85;">` : ''}
+      <h3 class="pc-name">${p.titleEN}${p.titleKR ? `<br><span style="font-size:0.7em;opacity:0.6;">${p.titleKR}</span>` : ''}</h3>
+      <p class="pc-meta">${p.category}${p.year ? ' · ' + p.year : ''}</p>
+      <p class="pc-desc">${p.descriptionEN}</p>
+      <span class="pc-arrow">↗</span>
+    </div>
+  `).join('');
+
+  /* 3D tilt 재적용 */
+  document.querySelectorAll('.proj-card').forEach(card=>{
+    card.addEventListener('mousemove',e=>{
+      const r=card.getBoundingClientRect();
+      const cx=(e.clientX-r.left)/r.width-.5;
+      const cy=(e.clientY-r.top)/r.height-.5;
+      card.style.transform=`perspective(600px) rotateY(${cx*14}deg) rotateX(${-cy*10}deg) translateZ(8px)`;
+    });
+    card.addEventListener('mouseleave',()=>{
+      card.style.transition='transform .6s cubic-bezier(.16,1,.3,1),background .4s';
+      card.style.transform='perspective(600px) rotateY(0) rotateX(0) translateZ(0)';
+      setTimeout(()=>card.style.transition='',600);
+    });
+  });
+}
+
+async function loadProjects() {
+  try {
+    const res = await fetch('/api/projects');
+    const data = await res.json();
+    projects = data.projects || [];
+    renderProjects();
+  } catch(e) {
+    console.error('Notion 로드 실패:', e);
+    const grid = document.querySelector('.proj-grid');
+    if (grid) grid.innerHTML = '<p style="padding:48px;color:var(--ink3);font-family:var(--sans);font-size:13px;">프로젝트를 불러올 수 없습니다.</p>';
+  }
+}
+
+loadProjects();
+
+/* ── MODAL ── */
+function openModal(i){
+  const p=projects[i];
+  if(!p) return;
+
+  const toHtml = (str) => str ? str.replace(/\n/g, '<br>') : '';
+
+  const galleryHtml = p.detailImages && p.detailImages.length
+    ? `<div class="modal-gallery">${p.detailImages.map(url=>`<img src="${url}" alt="${p.titleEN}">`).join('')}</div>`
+    : p.thumbnail
+      ? `<div class="modal-gallery"><img src="${p.thumbnail}" alt="${p.titleEN}" style="grid-column:1/-1;aspect-ratio:16/9;"></div>`
+      : '';
+
+  const descHtml = (p.descriptionEN || p.descriptionKR)
+    ? `<hr class="modal-divider">
+       <div class="modal-desc-grid">
+         ${p.descriptionEN ? `<div><p class="modal-sec">Description</p><p class="modal-p">${toHtml(p.descriptionEN)}</p></div>` : ''}
+         ${p.descriptionKR ? `<div><p class="modal-sec">설명</p><p class="modal-p">${toHtml(p.descriptionKR)}</p></div>` : ''}
+       </div>`
+    : '';
+
+  document.getElementById('modal-inner').innerHTML=`
+    <p class="modal-eyebrow">${p.category}${p.year ? ' · ' + p.year : ''}</p>
+    <h2 class="modal-h">${p.titleEN}</h2>
+    ${p.titleKR ? `<p style="font-family:var(--serif);font-size:17px;font-style:italic;color:var(--ink3);margin-bottom:16px;">${p.titleKR}</p>` : ''}
+    <span class="modal-tag">${p.category}</span>
+    ${galleryHtml}
+    ${descHtml}
+  `;
+
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>{ document.getElementById('modal').scrollTop=0; }, 10);
+}
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+</body>
+</html>
