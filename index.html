@@ -26,14 +26,12 @@
   --line2:rgba(26,23,18,0.18);
   --shadow:rgba(26,23,18,0.12);
 }
-html{scroll-behavior:smooth;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden;cursor:none}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;cursor:none;overflow-x:hidden;-webkit-font-smoothing:antialiased;perspective:1200px}
 
 /* ── CURSOR ── */
-#cur{position:fixed;z-index:9999;pointer-events:none;top:0;left:0}
-#cur-dot{position:absolute;width:8px;height:8px;background:var(--accent);border-radius:50%;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
-#cur-ring{position:fixed;z-index:9998;pointer-events:none;width:36px;height:36px;border:1.5px solid var(--accent);border-radius:50%;transform:translate(-50%,-50%);transition:width .5s cubic-bezier(.16,1,.3,1),height .5s cubic-bezier(.16,1,.3,1),border-color .3s;top:0;left:0}
-.hoverable:hover~#cur-ring{width:60px;height:60px}
+#cur{position:fixed;z-index:2147483647;pointer-events:none;width:8px;height:8px;background:var(--accent);border-radius:50%;top:0;left:0;margin:-4px 0 0 -4px;transition:width .25s,height .25s,background .25s}
+#cur-ring{position:fixed;z-index:2147483647;pointer-events:none;width:36px;height:36px;border:1.5px solid var(--accent);border-radius:50%;top:0;left:0;margin:-18px 0 0 -18px;transition:width .5s cubic-bezier(.16,1,.3,1),height .5s cubic-bezier(.16,1,.3,1),border-color .3s}
 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:center;justify-content:space-between;padding:28px 52px;transition:padding .4s,background .4s,backdrop-filter .4s}
@@ -585,9 +583,6 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
 </style>
 </head>
 <body>
-
-<div id="cur"><div id="cur-dot"></div></div>
-<div id="cur-ring"></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -1264,8 +1259,13 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
 
 <script>
 /* ── CURSOR ── */
-const dot=document.getElementById('cur'),ring=document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
+/* Elements live on <html> (not <body>) so position:fixed is truly
+   viewport-locked — body{perspective:1200px} would otherwise make
+   fixed children scroll-relative, causing cursor to vanish on scroll */
+const dot=document.createElement('div');dot.id='cur';
+const ring=document.createElement('div');ring.id='cur-ring';
+document.documentElement.append(dot,ring);
+let mx=-100,my=-100,rx=-100,ry=-100;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
 (function raf(){
   dot.style.left=mx+'px';dot.style.top=my+'px';
