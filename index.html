@@ -1492,17 +1492,31 @@ function openModal(i){
   `;
   const modalEl = document.getElementById('modal');
   const leftEl = document.getElementById('modal-left');
-  leftEl.style.height = '';          // reset first
+  // Collapse left to 0 BEFORE layout so the grid track height is driven by
+  // the right column only. The modal is still opacity:0 during the 0.6s fade-in,
+  // so the user never sees the collapsed state.
+  leftEl.style.height = '0';
+  leftEl.style.overflow = 'hidden';
   modalEl.scrollTop = 0;
   modalEl.classList.add('open');
   document.body.style.overflow='hidden';
-  // match left column height to right column so page length = description length
+  // After one frame the grid has laid out with left=0, so rightH is accurate.
+  // Now expand left to exactly match the right column.
   requestAnimationFrame(()=>{
     const rightH = document.getElementById('modal-right').offsetHeight;
     leftEl.style.height = rightH + 'px';
+    leftEl.style.overflow = 'auto';
   });
 }
-function closeModal(){const m=document.getElementById('modal');m.classList.remove('open');m.scrollTop=0;document.body.style.overflow=''}
+function closeModal(){
+  const m=document.getElementById('modal');
+  const l=document.getElementById('modal-left');
+  m.classList.remove('open');
+  m.scrollTop=0;
+  l.style.height='';
+  l.style.overflow='';
+  document.body.style.overflow='';
+}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 </script>
 </body>
