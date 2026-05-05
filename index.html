@@ -541,8 +541,8 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
 .modal-inner{min-height:100vh;display:grid;grid-template-columns:1fr 1fr}
 .modal-left{
   background:var(--ink);
-  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
-  position:sticky;top:0;height:100vh;overflow-y:auto;
+  display:flex;align-items:center;justify-content:center;
+  position:sticky;top:0;height:100vh;overflow:hidden;
 }
 .modal-right{padding:100px 68px;background:var(--bg)}
 .modal-close{position:fixed;top:32px;right:44px;z-index:1001;background:none;border:1.5px solid var(--line2);width:40px;height:40px;cursor:none;display:flex;align-items:center;justify-content:center;transition:all .3s;color:var(--ink)}
@@ -1366,88 +1366,22 @@ window.addEventListener('scroll',()=>{
   if(blobs[1]) blobs[1].style.transform=`translate(${-y*.03}px,${y*.05}px) scale(1)`;
 },{passive:true});
 
-/* ── PROJECT DATA (Notion에서 불러옴) ── */
-let projects = [];
-
-function renderProjects() {
-  const grid = document.querySelector('.proj-grid');
-  if (!grid) return;
-  if (projects.length === 0) {
-    grid.innerHTML = '<p style="padding:48px;color:var(--ink3);font-family:var(--sans);font-size:13px;letter-spacing:.1em;">Loading projects...</p>';
-    return;
-  }
-  grid.innerHTML = projects.map((p, i) => `
-    <div class="proj-card" onclick="openModal(${i})">
-      <p class="pc-num">0${i + 1}</p>
-      ${p.thumbnail ? `<img src="${p.thumbnail}" alt="${p.titleEN}" style="width:100%;height:180px;object-fit:cover;margin-bottom:20px;opacity:0.85;">` : ''}
-      <h3 class="pc-name">${p.titleEN}${p.titleKR ? `<br><span style="font-size:0.7em;opacity:0.6;">${p.titleKR}</span>` : ''}</h3>
-      <p class="pc-meta">${p.category}${p.year ? ' · ' + p.year : ''}</p>
-      <p class="pc-desc">${p.descriptionEN}</p>
-      <span class="pc-arrow">↗</span>
-    </div>
-  `).join('');
-
-  /* 3D tilt 재적용 */
-  document.querySelectorAll('.proj-card').forEach(card=>{
-    card.addEventListener('mousemove',e=>{
-      const r=card.getBoundingClientRect();
-      const cx=(e.clientX-r.left)/r.width-.5;
-      const cy=(e.clientY-r.top)/r.height-.5;
-      card.style.transform=`perspective(600px) rotateY(${cx*14}deg) rotateX(${-cy*10}deg) translateZ(8px)`;
-    });
-    card.addEventListener('mouseleave',()=>{
-      card.style.transition='transform .6s cubic-bezier(.16,1,.3,1),background .4s';
-      card.style.transform='perspective(600px) rotateY(0) rotateX(0) translateZ(0)';
-      setTimeout(()=>card.style.transition='',600);
-    });
-  });
-}
-
-async function loadProjects() {
-  try {
-    const res = await fetch('/api/projects');
-    const data = await res.json();
-    projects = data.projects || [];
-    renderProjects();
-  } catch(e) {
-    console.error('Notion 로드 실패:', e);
-    const grid = document.querySelector('.proj-grid');
-    if (grid) grid.innerHTML = '<p style="padding:48px;color:var(--ink3);font-family:var(--sans);font-size:13px;">프로젝트를 불러올 수 없습니다.</p>';
-  }
-}
-
-loadProjects();
+/* ── PROJECT DATA ── */
+const projects=[
+  {title:'Tensed Symbiosis',sub:'Art2Wear 2026 — Gregg Museum, NC State [In Progress]',concept:"Symbiosis is not a peaceful or static balance — it is a dynamic, rigid structure maintained under extreme tension. Bridging two conflicting states: the interdependence of anxiety and focus. Anxiety without focus leads to chaos; focus without anxiety results in a lack of drive. Anxiety is the exact psychological pressure that fuels hyper-focus.",materials:'Alternative materials under research · Magnetic-inspired motion elements · Hand-stitching as structural negotiation',process:['Concept\n& Research','Material\nTesting','Construction\n& Tension','Runway\nPresentation'],outcome:'Currently in development for the Art2Wear 2026 runway show at the Gregg Museum of Art & Design, NC State University, April 2026.',tags:['Wearable Art','Runway','NC State','In Progress']},
+  {title:"Fluid Forms '형(形)'",sub:'2024 SNU Fashion Show — Seoul National University · Oct 23, 2024',concept:'Exploring the fluidity of form — how it moves with the body, merges with its surroundings, and shifts through perception. Contrasting curves and linear structures to investigate scale and spatial balance. Oversized tailoring meets flowing silhouettes, evoking transformation as movement itself.',materials:'Coral Chiffon · Hexagonal Mesh · Sheer Dotted Fabric · Layered Transparencies',process:['Concept\nDevelopment','Pattern &\nSampling','Garment\nConstruction','Runway\nShow'],outcome:'Presented at the 2024 SNU annual runway show. Led collection concept development, garment construction, short-form video production, Instagram management, and designer interviews.',tags:['Runway','SNU','Chiffon','Mesh']},
+  {title:'Senior-Fit',sub:'Ergonomic 3D Custom Design — Gwanak Senior Welfare Center × SNU · 2024',concept:'Designed garments for senior models by incorporating their unique physiques and personal styles, identified through in-depth interviews. Focused on enhancing comfort and mobility, addressing posture-related needs such as rounded backs and asymmetrical shoulders.',materials:'Thick Structured Fabric · Patterned Scarf · Cubic-detail Necktie · Wide Deep Pockets',process:['3D Body\nScan','Interview\n& Analysis','Pattern\nAdaptation','Fitting &\nFinal'],outcome:'3D-scanned the model\'s body to create a personalized half-body mannequin. Designed a structured long coat that balanced proportions and enhanced posture. Presented at the collaborative fashion show.',tags:['Adaptive Fashion','3D Scan','Ergonomic','SNU × Gwanak']},
+  {title:'Engineered Kaftan',sub:'Digital Textile Surface Design — NC State · 2026',concept:'Engineering segmented layouts for 100"+ Kaftans to overcome 54" digital printing width constraints. A technical and creative challenge requiring precise understanding of both digital printing technology and garment construction — transforming a hardware limitation into a design system.',materials:'Digital Print on Textile · Segmented Layout System · 100"+ Kaftan Construction',process:['Technical\nResearch','Layout\nEngineering','Print\nProduction','Assembly &\nFit'],outcome:'Developed as part of a team project to create a cohesive home interior collection by integrating various textile design techniques.',tags:['Digital Print','NC State','Surface Design','Technical Textile']},
+  {title:'AI Short Film',sub:'"Happiness is Intelligence?" — Grand Prize Winner · SNU Library · 2025',concept:'Directed and edited a short AI film exploring the philosophical question of whether happiness is a form of intelligence. Used generative AI tools alongside traditional editing in Premiere Pro to construct a narrative that blurs the line between human and machine-generated creative expression.',materials:'Generative AI Tools · Adobe Premiere Pro · After Effects · Motion Graphics',process:['Script &\nConcept','AI Generation\n& Sourcing','Edit &\nPost','Festival\nSubmission'],outcome:'Won the Grand Prize at the AI Filmmaking Program, SNU Digital Literacy Academy (2025). Also directed Gyeongju APEC 2025 promo and created motion graphics for Seoul Subway campaign. Elected Member of the AI International Creator Guild (Dec 2025).',tags:['Grand Prize','AI Film','Premiere Pro','After Effects']},
+  {title:'SNUFESTIVAL Branding',sub:'Campus Festival Visual Identity & Event Design — SNU · 2023–2024',concept:"Conceptualized the visual identity and social media assets for Seoul National University's annual festival. Designed limited-edition AirPods cases that sold out entirely — achieving high student resonance and becoming one of the festival's most talked-about merch items.",materials:'Illustrator · Photoshop · Canva · Physical Product Design · Social Media Assets',process:['Concept &\nMoodboard','Visual\nIdentity','Merchandise\nDesign','Event\nExecution'],outcome:'Designed sold-out limited-edition AirPods cases. Executed live events including Busking and Closing Ceremony. Coordinated stage rehearsals with performers across the festival year.',tags:['Visual Identity','Event Design','SNU','Merch Design']}
+];
 
 /* ── MODAL ── */
 function openModal(i){
   const p=projects[i];
-  if(!p) return;
-
-  /* 이미지: 상세 사진이 있으면 표시, 없으면 기존 SVG */
-  const leftContent = p.detailImages && p.detailImages.length
-    ? `<div style="width:100%;display:flex;flex-direction:column;gap:4px;">`
-      + p.detailImages.map(url =>
-        `<img src="${url}" alt="${p.titleEN}" style="width:100%;display:block;object-fit:cover;">`
-      ).join('')
-      + `</div>`
-    : `<svg width="100%" height="100%" viewBox="0 0 500 700" fill="none" style="position:absolute;inset:0"><rect width="500" height="700" fill="#1a1712"/><g opacity="0.5"><path d="M250 60Q175 165 185 340Q195 490 175 650" stroke="#f7f2ea" stroke-width="1.2"/><path d="M250 60Q310 155 305 330Q300 475 315 648" stroke="#f7f2ea" stroke-width="1.2"/><path d="M250 60Q360 140 390 310Q405 460 385 648" stroke="#f7f2ea" stroke-width="0.7" opacity="0.5"/><path d="M250 60Q140 148 110 310Q95 460 115 648" stroke="#f7f2ea" stroke-width="0.7" opacity="0.5"/><ellipse cx="250" cy="178" rx="84" ry="12" stroke="#f7f2ea" stroke-width="0.5" opacity="0.28"/><ellipse cx="250" cy="338" rx="100" ry="14" stroke="#f7f2ea" stroke-width="0.5" opacity="0.22"/><ellipse cx="250" cy="488" rx="94" ry="13" stroke="#f7f2ea" stroke-width="0.5" opacity="0.17"/><line x1="250" y1="60" x2="250" y2="648" stroke="#9b2020" stroke-width="0.9" stroke-dasharray="4,10" opacity="0.5"/><path d="M200 338Q250 322 300 338Q310 473 294 648L206 648Q184 473 200 338" fill="#9b2020" opacity="0.07"/></g><text x="250" y="678" text-anchor="middle" fill="rgba(247,242,234,0.14)" font-size="11" font-family="serif" letter-spacing="8">${p.titleEN.toUpperCase()}</text></svg>`;
-
-  document.getElementById('modal-left').innerHTML = leftContent;
-
-  const titleWords = p.titleEN.split(' ');
-  const titleHtml = titleWords.map((w,j,a)=>j===a.length-1?'<em>'+w+'</em>':w).join(' ');
-
-  const toHtml = (str) => str ? str.replace(/\n/g, '<br>') : '';
-
-  document.getElementById('modal-right').innerHTML=`
-    <p class="modal-eyebrow">${p.category}${p.year ? ' · ' + p.year : ''}</p>
-    <h2 class="modal-h">${titleHtml}</h2>
-    ${p.titleKR ? `<p style="font-family:var(--serif);font-size:18px;font-style:italic;color:var(--ink3);margin-bottom:16px;">${p.titleKR}</p>` : ''}
-    <span class="modal-tag">${p.category}</span>
-    <p class="modal-sec" style="margin-top:24px;">Description</p>
-    <p class="modal-p">${toHtml(p.descriptionEN)}</p>
-    ${p.descriptionKR ? `<p class="modal-p" style="margin-top:12px;color:var(--ink3);">${toHtml(p.descriptionKR)}</p>` : ''}
-  `;
+  document.getElementById('modal-left').innerHTML=`<svg width="100%" height="100%" viewBox="0 0 500 700" fill="none" style="position:absolute;inset:0"><rect width="500" height="700" fill="#1a1712"/><g opacity="0.5"><path d="M250 60Q175 165 185 340Q195 490 175 650" stroke="#f7f2ea" stroke-width="1.2"/><path d="M250 60Q310 155 305 330Q300 475 315 648" stroke="#f7f2ea" stroke-width="1.2"/><path d="M250 60Q360 140 390 310Q405 460 385 648" stroke="#f7f2ea" stroke-width="0.7" opacity="0.5"/><path d="M250 60Q140 148 110 310Q95 460 115 648" stroke="#f7f2ea" stroke-width="0.7" opacity="0.5"/><ellipse cx="250" cy="178" rx="84" ry="12" stroke="#f7f2ea" stroke-width="0.5" opacity="0.28"/><ellipse cx="250" cy="338" rx="100" ry="14" stroke="#f7f2ea" stroke-width="0.5" opacity="0.22"/><ellipse cx="250" cy="488" rx="94" ry="13" stroke="#f7f2ea" stroke-width="0.5" opacity="0.17"/><line x1="250" y1="60" x2="250" y2="648" stroke="#9b2020" stroke-width="0.9" stroke-dasharray="4,10" opacity="0.5"/><path d="M200 338Q250 322 300 338Q310 473 294 648L206 648Q184 473 200 338" fill="#9b2020" opacity="0.07"/></g><text x="250" y="678" text-anchor="middle" fill="rgba(247,242,234,0.14)" font-size="11" font-family="serif" letter-spacing="8">${p.title.toUpperCase()}</text></svg>`;
+  const tagsHtml=p.tags.map(t=>`<span class="modal-tag">${t}</span>`).join('');
+  document.getElementById('modal-right').innerHTML=`<p class="modal-eyebrow">${p.sub}</p><h2 class="modal-h">${p.title.split(' ').map((w,j,a)=>j===a.length-1?'<em>'+w+'</em>':w).join(' ')}</h2>${tagsHtml}<p class="modal-sec">Concept</p><p class="modal-p">${p.concept}</p><p class="modal-sec">Materials &amp; Tools</p><p class="modal-p">${p.materials}</p><p class="modal-sec">Process</p><div class="modal-steps">${p.process.map((s,j)=>`<div class="modal-step"><div class="modal-step-n">0${j+1}</div><div class="modal-step-l">${s.replace('\n','<br>')}</div></div>`).join('')}</div><p class="modal-sec" style="margin-top:28px">Outcome</p><p class="modal-p">${p.outcome}</p>`;
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow='hidden';
 }
