@@ -1492,21 +1492,27 @@ function openModal(i){
   `;
   const modalEl = document.getElementById('modal');
   const leftEl = document.getElementById('modal-left');
-  // Collapse left to 0 BEFORE layout so the grid track height is driven by
-  // the right column only. The modal is still opacity:0 during the 0.6s fade-in,
-  // so the user never sees the collapsed state.
+  // Collapse left so grid track height is driven by right column only.
+  // Modal is opacity:0 during the 0.6s fade-in — user never sees this.
   leftEl.style.height = '0';
   leftEl.style.overflow = 'hidden';
   modalEl.scrollTop = 0;
   modalEl.classList.add('open');
-  document.body.style.overflow='hidden';
-  // After one frame the grid has laid out with left=0, so rightH is accurate.
-  // Now expand left to exactly match the right column.
-  requestAnimationFrame(()=>{
-    const rightH = document.getElementById('modal-right').offsetHeight;
-    leftEl.style.height = rightH + 'px';
-    leftEl.style.overflow = 'auto';
-  });
+  document.body.style.overflow = 'hidden';
+
+  // Wait for custom fonts (Cormorant, DM Sans) to finish loading before
+  // measuring — avoids wrong height from fallback-font line-heights.
+  // Then use rAF so the measurement runs after the browser has reflowed
+  // with the correct fonts and left=0.
+  const measure = () => {
+    requestAnimationFrame(() => {
+      const rightH = document.getElementById('modal-right').offsetHeight;
+      leftEl.style.height = rightH + 'px';
+      leftEl.style.overflow = 'auto';
+    });
+  };
+  // document.fonts.ready resolves immediately if fonts are already cached
+  document.fonts.ready.then(measure);
 }
 function closeModal(){
   const m=document.getElementById('modal');
