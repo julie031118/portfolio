@@ -35,7 +35,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:3
 
 /* ── MANNEQUIN ── */
 .mannequin-wrap{display:flex;justify-content:center;align-items:center;position:relative;margin-bottom:36px}
-#about-video{width:100%;max-width:320px;border-radius:4px;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1);transform-origin:50% 50%;filter:drop-shadow(0 16px 40px rgba(26,23,18,0.12))}
+#about-video{width:100%;max-width:320px;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1);transform-origin:50% 50%;mix-blend-mode:multiply}
 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:center;justify-content:space-between;padding:28px 52px;transition:padding .4s,background .4s,backdrop-filter .4s}
@@ -875,16 +875,28 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
           <div class="hanger3d-garment">
             <div class="garment-card3d">
               <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
-                <rect width="170" height="240" fill="#f7f2ea"/>
-                <circle cx="85" cy="60" r="38" stroke="rgba(155,32,32,0.45)" stroke-width="1.2"/>
-                <circle cx="85" cy="60" r="20" stroke="rgba(26,23,18,0.2)" stroke-width="0.7"/>
-                <circle cx="85" cy="60" r="7" fill="rgba(155,32,32,0.25)"/>
-                <path d="M85 98Q62 138 56 232" stroke="rgba(26,23,18,0.42)" stroke-width="1"/>
-                <path d="M85 98Q96 135 100 232" stroke="rgba(26,23,18,0.42)" stroke-width="1"/>
-                <path d="M85 98Q114 124 132 232" stroke="rgba(26,23,18,0.28)" stroke-width="0.6"/>
-                <path d="M85 98Q56 118 40 232" stroke="rgba(26,23,18,0.28)" stroke-width="0.6"/>
-                <line x1="85" y1="98" x2="85" y2="232" stroke="#9b2020" stroke-width="0.7" stroke-dasharray="3,6" opacity="0.55"/>
-                <rect x="0" y="232" width="170" height="8" fill="rgba(155,32,32,0.07)"/>
+                <!-- Avant-garde wearable art: structured cage bodice + organic skirt -->
+                <!-- Wide shoulder cage -->
+                <path d="M18 34Q40 18 68 20Q85 18 102 20Q130 18 152 34Q160 46 150 60L132 56Q116 40 85 38Q54 40 38 56L20 60Q10 46 18 34Z" stroke="rgba(26,23,18,0.45)" stroke-width="1.1" fill="rgba(26,23,18,0.015)"/>
+                <!-- Wire shoulder extensions -->
+                <path d="M20 60Q6 54 3 42Q1 30 11 27" stroke="rgba(26,23,18,0.28)" stroke-width="0.8" fill="none"/>
+                <path d="M150 60Q164 54 167 42Q169 30 159 27" stroke="rgba(26,23,18,0.28)" stroke-width="0.8" fill="none"/>
+                <!-- Cage bodice -->
+                <path d="M38 56Q34 82 36 112L62 120L108 120L134 112Q136 82 132 56" stroke="rgba(26,23,18,0.42)" stroke-width="1.1" fill="none"/>
+                <!-- Cage vertical ribs -->
+                <line x1="62" y1="56" x2="60" y2="120" stroke="rgba(26,23,18,0.13)" stroke-width="0.5"/>
+                <line x1="108" y1="56" x2="110" y2="120" stroke="rgba(26,23,18,0.13)" stroke-width="0.5"/>
+                <line x1="85" y1="38" x2="85" y2="120" stroke="#9b2020" stroke-width="0.55" stroke-dasharray="2,7" opacity="0.45"/>
+                <!-- Ceramic flower motif at centre bodice -->
+                <circle cx="85" cy="86" r="13" stroke="rgba(155,32,32,0.3)" stroke-width="0.7" fill="none"/>
+                <circle cx="85" cy="86" r="4" fill="rgba(155,32,32,0.13)"/>
+                <!-- Organic flowing skirt -->
+                <path d="M62 120Q42 154 40 192Q38 216 52 230Q68 238 85 232Q102 238 118 230Q132 216 130 192Q128 154 108 120" stroke="rgba(26,23,18,0.42)" stroke-width="1.1" fill="none"/>
+                <!-- Hem organic waves -->
+                <path d="M52 230Q62 220 72 228Q80 236 88 228Q97 220 108 228" stroke="rgba(26,23,18,0.24)" stroke-width="0.7" fill="none"/>
+                <!-- Small ceramic circles at hem -->
+                <circle cx="44" cy="72" r="6" stroke="rgba(26,23,18,0.18)" stroke-width="0.6" fill="none"/>
+                <circle cx="140" cy="68" r="5" stroke="rgba(26,23,18,0.18)" stroke-width="0.6" fill="none"/>
               </svg>
               <div class="price3d"><span>ART</span></div>
             </div>
@@ -904,15 +916,30 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
           <div class="hanger3d-garment">
             <div class="garment-card3d">
               <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
-                <rect width="170" height="240" fill="#fdf8f3"/>
-                <path d="M85 14Q58 42 56 96Q52 152 48 232L122 232Q118 152 114 96Q112 42 85 14Z" stroke="rgba(26,23,18,0.4)" stroke-width="1" fill="rgba(232,200,160,0.14)"/>
-                <path d="M56 70Q85 62 114 70" stroke="rgba(26,23,18,0.2)" stroke-width="0.5"/>
-                <path d="M54 118Q85 108 116 118" stroke="rgba(26,23,18,0.16)" stroke-width="0.5"/>
-                <path d="M52 164Q85 152 118 164" stroke="rgba(26,23,18,0.12)" stroke-width="0.5"/>
-                <g opacity="0.3" transform="translate(62,88)"><polygon points="23,0 46,13 46,39 23,52 0,39 0,13" stroke="#9b2020" stroke-width="1" fill="none"/></g>
-                <line x1="85" y1="14" x2="85" y2="232" stroke="#9b2020" stroke-width="0.5" stroke-dasharray="2,8" opacity="0.4"/>
-                <line x1="70" y1="14" x2="58" y2="0" stroke="rgba(26,23,18,0.28)" stroke-width="0.8"/>
-                <line x1="100" y1="14" x2="112" y2="0" stroke="rgba(26,23,18,0.28)" stroke-width="0.8"/>
+                <!-- Fluid Forms — layered chiffon dress -->
+                <!-- Neckline -->
+                <path d="M74 10Q85 20 96 10" stroke="rgba(26,23,18,0.32)" stroke-width="0.8" fill="none"/>
+                <!-- Bodice -->
+                <path d="M64 16L54 44L116 44L106 16" stroke="rgba(26,23,18,0.36)" stroke-width="0.85" fill="none"/>
+                <path d="M54 44Q46 72 50 94L120 94Q124 72 116 44Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.85" fill="none"/>
+                <!-- First skirt layer -->
+                <path d="M50 94Q36 138 28 188Q56 178 85 182Q114 178 142 188Q134 138 120 94Z" stroke="rgba(26,23,18,0.3)" stroke-width="0.8" fill="none"/>
+                <!-- Second flowing layer -->
+                <path d="M42 120Q28 168 18 238L152 238Q142 168 128 120" stroke="rgba(26,23,18,0.2)" stroke-width="0.65" fill="none"/>
+                <!-- Waist seam -->
+                <path d="M50 94L120 94" stroke="rgba(26,23,18,0.18)" stroke-width="0.5"/>
+                <!-- Fluid drape lines -->
+                <path d="M58 98Q53 140 46 185" stroke="rgba(26,23,18,0.1)" stroke-width="0.45"/>
+                <path d="M76 95Q73 140 70 186" stroke="rgba(26,23,18,0.08)" stroke-width="0.4"/>
+                <path d="M94 95Q97 140 100 186" stroke="rgba(26,23,18,0.08)" stroke-width="0.4"/>
+                <path d="M112 98Q117 140 124 185" stroke="rgba(26,23,18,0.1)" stroke-width="0.45"/>
+                <!-- Layering texture lines -->
+                <path d="M46 118Q65 110 85 114Q105 110 124 118" stroke="rgba(26,23,18,0.1)" stroke-width="0.4"/>
+                <path d="M38 158Q62 148 85 152Q108 148 132 158" stroke="rgba(26,23,18,0.09)" stroke-width="0.4"/>
+                <!-- Hem wave -->
+                <path d="M18 232Q36 226 54 232Q71 238 88 232Q105 226 122 232Q139 238 152 232" stroke="rgba(26,23,18,0.2)" stroke-width="0.6" fill="none"/>
+                <!-- Center axis -->
+                <line x1="85" y1="10" x2="85" y2="238" stroke="#9b2020" stroke-width="0.5" stroke-dasharray="2,9" opacity="0.32"/>
               </svg>
               <div class="price3d"><span>형</span></div>
             </div>
@@ -932,15 +959,35 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
           <div class="hanger3d-garment">
             <div class="garment-card3d">
               <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
-                <rect width="170" height="240" fill="#f7f2ea"/>
-                <path d="M85 12Q62 32 60 66L46 104Q60 110 68 104L68 232L102 232L102 104Q110 110 124 104L110 66Q108 32 85 12Z" stroke="rgba(26,23,18,0.42)" stroke-width="1" fill="none"/>
-                <line x1="85" y1="12" x2="85" y2="232" stroke="rgba(26,23,18,0.1)" stroke-dasharray="3,9"/>
-                <line x1="68" y1="104" x2="102" y2="104" stroke="rgba(26,23,18,0.18)" stroke-width="0.6"/>
-                <rect x="54" y="132" width="34" height="26" stroke="#9b2020" stroke-width="0.8" fill="rgba(155,32,32,0.06)"/>
-                <rect x="82" y="132" width="34" height="26" stroke="#9b2020" stroke-width="0.8" fill="rgba(155,32,32,0.06)"/>
-                <path d="M72" y1="12" x2="72" y2="12"/>
-                <path d="M72 12Q85 30 98 12" stroke="rgba(26,23,18,0.25)" stroke-width="0.8" fill="none"/>
-                <path d="M82 28Q86 50 84 90" stroke="rgba(26,23,18,0.15)" stroke-width="0.5" stroke-dasharray="2,5"/>
+                <!-- Senior-Fit — tailored ergonomic coat -->
+                <!-- Collar notch left -->
+                <path d="M85 12L66 34L72 48L85 42" stroke="rgba(26,23,18,0.42)" stroke-width="0.9" fill="none"/>
+                <!-- Collar notch right -->
+                <path d="M85 12L104 34L98 48L85 42" stroke="rgba(26,23,18,0.42)" stroke-width="0.9" fill="none"/>
+                <!-- Left sleeve -->
+                <path d="M66 34L34 44L32 88L50 90L54 50L72 48" stroke="rgba(26,23,18,0.4)" stroke-width="0.9" fill="none"/>
+                <!-- Right sleeve -->
+                <path d="M104 34L136 44L138 88L120 90L116 50L98 48" stroke="rgba(26,23,18,0.4)" stroke-width="0.9" fill="none"/>
+                <!-- Coat body -->
+                <path d="M72 48L54 50L52 136L66 140L66 232L104 232L104 140L118 136L116 50L98 48" stroke="rgba(26,23,18,0.42)" stroke-width="0.9" fill="none"/>
+                <!-- Waist seam -->
+                <path d="M52 136Q68 132 85 133Q102 132 118 136" stroke="rgba(26,23,18,0.2)" stroke-width="0.5"/>
+                <!-- Front center opening -->
+                <line x1="85" y1="42" x2="85" y2="232" stroke="rgba(26,23,18,0.22)" stroke-width="0.65"/>
+                <!-- Buttons -->
+                <circle cx="85" cy="66" r="2.4" stroke="rgba(26,23,18,0.32)" stroke-width="0.7" fill="none"/>
+                <circle cx="85" cy="88" r="2.4" stroke="rgba(26,23,18,0.32)" stroke-width="0.7" fill="none"/>
+                <circle cx="85" cy="110" r="2.4" stroke="rgba(26,23,18,0.32)" stroke-width="0.7" fill="none"/>
+                <!-- 3D ergonomic scan lines -->
+                <path d="M54 78Q68 72 85 74Q102 72 116 78" stroke="rgba(26,23,18,0.1)" stroke-width="0.4" stroke-dasharray="2,4"/>
+                <path d="M53 102Q67 96 85 98Q103 96 117 102" stroke="rgba(26,23,18,0.09)" stroke-width="0.4" stroke-dasharray="2,4"/>
+                <!-- Pocket flap left -->
+                <path d="M55 158Q62 155 68 158L68 167Q62 170 55 167Z" stroke="rgba(26,23,18,0.24)" stroke-width="0.55" fill="none"/>
+                <!-- Pocket flap right -->
+                <path d="M102 158Q108 155 115 158L115 167Q108 170 102 167Z" stroke="rgba(26,23,18,0.24)" stroke-width="0.55" fill="none"/>
+                <!-- Red lapel accent -->
+                <path d="M85 12L66 34" stroke="#9b2020" stroke-width="0.55" opacity="0.38"/>
+                <path d="M85 12L104 34" stroke="#9b2020" stroke-width="0.55" opacity="0.38"/>
               </svg>
               <div class="price3d"><span>FIT</span></div>
             </div>
@@ -960,18 +1007,38 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
           <div class="hanger3d-garment">
             <div class="garment-card3d">
               <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
-                <rect width="170" height="240" fill="#fdf8f3"/>
-                <path d="M85 10Q34 38 20 95L16 232L154 232L150 95Q136 38 85 10Z" stroke="rgba(26,23,18,0.4)" stroke-width="1" fill="rgba(232,200,160,0.1)"/>
-                <g opacity="0.16">
-                  <line x1="20" y1="95" x2="150" y2="95" stroke="#1a1712" stroke-width="0.5"/>
-                  <line x1="22" y1="133" x2="148" y2="133" stroke="#1a1712" stroke-width="0.5"/>
-                  <line x1="24" y1="172" x2="146" y2="172" stroke="#1a1712" stroke-width="0.5"/>
-                  <line x1="18" y1="210" x2="152" y2="210" stroke="#1a1712" stroke-width="0.5"/>
-                </g>
-                <line x1="85" y1="10" x2="85" y2="232" stroke="#9b2020" stroke-width="0.8" stroke-dasharray="4,7" opacity="0.45"/>
-                <text x="89" y="52" fill="#9b2020" font-size="8" font-family="serif" opacity="0.55">54" max</text>
-                <path x1="70" y1="12" x2="70" y2="12"/>
-                <path d="M70 12Q85 36 100 12" stroke="rgba(26,23,18,0.25)" stroke-width="0.8" fill="none"/>
+                <!-- Engineered Kaftan — wide T-shape digital textile -->
+                <!-- Neck opening -->
+                <path d="M74 12Q85 22 96 12" stroke="rgba(26,23,18,0.32)" stroke-width="0.8" fill="none"/>
+                <!-- Left wide sleeve -->
+                <path d="M74 12L16 46L16 88L58 88" stroke="rgba(26,23,18,0.4)" stroke-width="0.9" fill="none"/>
+                <!-- Right wide sleeve -->
+                <path d="M96 12L154 46L154 88L112 88" stroke="rgba(26,23,18,0.4)" stroke-width="0.9" fill="none"/>
+                <!-- Body -->
+                <line x1="58" y1="88" x2="58" y2="234" stroke="rgba(26,23,18,0.4)" stroke-width="0.9"/>
+                <line x1="112" y1="88" x2="112" y2="234" stroke="rgba(26,23,18,0.4)" stroke-width="0.9"/>
+                <line x1="58" y1="234" x2="112" y2="234" stroke="rgba(26,23,18,0.4)" stroke-width="0.9"/>
+                <!-- Underarm join -->
+                <line x1="58" y1="88" x2="112" y2="88" stroke="rgba(26,23,18,0.22)" stroke-width="0.55"/>
+                <!-- Center axis -->
+                <line x1="85" y1="12" x2="85" y2="234" stroke="#9b2020" stroke-width="0.6" stroke-dasharray="3,8" opacity="0.4"/>
+                <!-- Digital print horizontal bands — body -->
+                <line x1="58" y1="114" x2="112" y2="114" stroke="rgba(26,23,18,0.2)" stroke-width="0.5"/>
+                <line x1="58" y1="138" x2="112" y2="138" stroke="rgba(26,23,18,0.14)" stroke-width="0.4"/>
+                <line x1="58" y1="162" x2="112" y2="162" stroke="rgba(26,23,18,0.2)" stroke-width="0.5"/>
+                <line x1="58" y1="186" x2="112" y2="186" stroke="rgba(26,23,18,0.14)" stroke-width="0.4"/>
+                <line x1="58" y1="210" x2="112" y2="210" stroke="rgba(26,23,18,0.2)" stroke-width="0.5"/>
+                <!-- Digital print bands — sleeves -->
+                <line x1="16" y1="58" x2="58" y2="58" stroke="rgba(26,23,18,0.12)" stroke-width="0.4"/>
+                <line x1="16" y1="72" x2="58" y2="72" stroke="rgba(26,23,18,0.09)" stroke-width="0.4"/>
+                <line x1="112" y1="58" x2="154" y2="58" stroke="rgba(26,23,18,0.12)" stroke-width="0.4"/>
+                <line x1="112" y1="72" x2="154" y2="72" stroke="rgba(26,23,18,0.09)" stroke-width="0.4"/>
+                <!-- Digital block motif -->
+                <rect x="67" y="122" width="36" height="28" stroke="rgba(155,32,32,0.28)" stroke-width="0.6" fill="rgba(155,32,32,0.04)"/>
+                <!-- Width annotation -->
+                <line x1="16" y1="96" x2="154" y2="96" stroke="rgba(26,23,18,0.12)" stroke-width="0.35"/>
+                <line x1="16" y1="93" x2="16" y2="99" stroke="rgba(26,23,18,0.12)" stroke-width="0.35"/>
+                <line x1="154" y1="93" x2="154" y2="99" stroke="rgba(26,23,18,0.12)" stroke-width="0.35"/>
               </svg>
               <div class="price3d"><span>DIG</span></div>
             </div>
@@ -991,16 +1058,37 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
           <div class="hanger3d-garment">
             <div class="garment-card3d">
               <svg width="170" height="240" viewBox="0 0 170 240" fill="none">
-                <rect width="170" height="240" fill="#f7f2ea"/>
-                <rect x="18" y="10" width="134" height="58" stroke="rgba(26,23,18,0.38)" stroke-width="0.9" fill="none"/>
-                <line x1="18" y1="30" x2="152" y2="30" stroke="rgba(26,23,18,0.16)" stroke-width="0.5"/>
-                <rect x="26" y="17" width="42" height="13" fill="rgba(155,32,32,0.2)"/>
-                <path d="M18 68L34 68L34 232L18 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6" fill="rgba(26,23,18,0.02)"/>
-                <path d="M34 68L58 68L58 232L34 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6"/>
-                <path d="M58 68L82 68L82 232L58 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6" fill="rgba(26,23,18,0.02)"/>
-                <path d="M82 68L106 68L106 232L82 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6"/>
-                <path d="M106 68L130 68L130 232L106 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6" fill="rgba(26,23,18,0.02)"/>
-                <path d="M130 68L152 68L152 232L130 232Z" stroke="rgba(26,23,18,0.36)" stroke-width="0.6"/>
+                <!-- Festival Branding — structured graphic jacket -->
+                <!-- Collar V left -->
+                <path d="M85 14L68 38L75 52L85 46" stroke="rgba(26,23,18,0.42)" stroke-width="0.9" fill="none"/>
+                <!-- Collar V right -->
+                <path d="M85 14L102 38L95 52L85 46" stroke="rgba(26,23,18,0.42)" stroke-width="0.9" fill="none"/>
+                <!-- Left sleeve -->
+                <path d="M68 38L36 50L34 106L54 108L56 54L75 52" stroke="rgba(26,23,18,0.4)" stroke-width="0.9" fill="none"/>
+                <!-- Right sleeve -->
+                <path d="M102 38L134 50L136 106L116 108L114 54L95 52" stroke="rgba(26,23,18,0.4)" stroke-width="0.9" fill="none"/>
+                <!-- Jacket body -->
+                <path d="M75 52L56 54L52 170L85 175L118 170L114 54L95 52" stroke="rgba(26,23,18,0.42)" stroke-width="0.9" fill="none"/>
+                <!-- Waistband hem -->
+                <path d="M52 170L52 182L118 182L118 170" stroke="rgba(26,23,18,0.3)" stroke-width="0.7" fill="none"/>
+                <!-- Center zip line -->
+                <line x1="85" y1="46" x2="85" y2="182" stroke="rgba(26,23,18,0.2)" stroke-width="0.6"/>
+                <!-- Zip teeth detail -->
+                <line x1="85" y1="46" x2="85" y2="182" stroke="rgba(26,23,18,0.08)" stroke-width="0.4" stroke-dasharray="1.5,3"/>
+                <!-- Graphic panel left breast -->
+                <rect x="56" y="62" width="26" height="32" stroke="rgba(26,23,18,0.16)" stroke-width="0.5" fill="rgba(26,23,18,0.025)"/>
+                <!-- Graphic panel right breast -->
+                <rect x="88" y="62" width="26" height="32" stroke="rgba(26,23,18,0.16)" stroke-width="0.5" fill="rgba(26,23,18,0.025)"/>
+                <!-- Red logo/branding circle -->
+                <circle cx="85" cy="118" r="16" stroke="#9b2020" stroke-width="0.7" opacity="0.45" fill="none"/>
+                <circle cx="85" cy="118" r="8" stroke="#9b2020" stroke-width="0.5" opacity="0.35" fill="none"/>
+                <!-- Sleeve stripe accent -->
+                <line x1="34" y1="72" x2="56" y2="68" stroke="rgba(155,32,32,0.3)" stroke-width="1.2"/>
+                <line x1="34" y1="80" x2="56" y2="76" stroke="rgba(155,32,32,0.18)" stroke-width="0.7"/>
+                <line x1="136" y1="72" x2="114" y2="68" stroke="rgba(155,32,32,0.3)" stroke-width="1.2"/>
+                <line x1="136" y1="80" x2="114" y2="76" stroke="rgba(155,32,32,0.18)" stroke-width="0.7"/>
+                <!-- Chest pocket left -->
+                <rect x="58" y="64" width="12" height="9" stroke="rgba(26,23,18,0.28)" stroke-width="0.5" fill="none"/>
               </svg>
               <div class="price3d"><span>SNU</span></div>
             </div>
@@ -1231,19 +1319,17 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
   requestAnimationFrame(raf);
 })();
 
-/* ── VIDEO cursor follow ── */
+/* ── VIDEO hover-only animation ── */
 const aboutVid=document.getElementById('about-video');
-const aboutSec=document.getElementById('about');
-if(aboutVid&&aboutSec){
-  document.addEventListener('mousemove',e=>{
-    const r=aboutSec.getBoundingClientRect();
-    if(r.top<window.innerHeight&&r.bottom>0){
-      const cx=(e.clientX/window.innerWidth-.5)*2;
-      const cy=((e.clientY-r.top)/r.height-.5)*2;
-      aboutVid.style.transform=`translate(${cx*12}px,${cy*8}px) rotate(${cx*3}deg) scale(1.03)`;
-    }
+const vidWrap=document.querySelector('.mannequin-wrap');
+if(aboutVid&&vidWrap){
+  vidWrap.addEventListener('mousemove',e=>{
+    const r=vidWrap.getBoundingClientRect();
+    const cx=(e.clientX-r.left)/r.width-.5;
+    const cy=(e.clientY-r.top)/r.height-.5;
+    aboutVid.style.transform=`translate(${cx*14}px,${cy*10}px) rotate(${cx*3}deg) scale(1.04)`;
   });
-  aboutSec.addEventListener('mouseleave',()=>{
+  vidWrap.addEventListener('mouseleave',()=>{
     aboutVid.style.transform='translate(0,0) rotate(0deg) scale(1)';
   });
 }
