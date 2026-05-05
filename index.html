@@ -540,12 +540,12 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
 /* ── MODAL ── */
 .modal{position:fixed;inset:0;z-index:1000;opacity:0;pointer-events:none;transition:opacity .6s cubic-bezier(.16,1,.3,1);overflow-y:auto;background:var(--bg2)}
 .modal.open{opacity:1;pointer-events:all}
-.modal-inner{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:start}
+.modal-inner{display:grid;grid-template-columns:1fr 1fr;align-items:start}
 .modal-left{background:var(--ink);position:sticky;top:0;height:100vh;overflow-y:auto;align-self:start}
-.modal-right{padding:100px 68px;background:var(--bg);min-height:100vh}
+.modal-right{padding:60px 68px 80px;background:var(--bg)}
 .modal-close{position:fixed;top:32px;right:44px;z-index:1001;background:none;border:1.5px solid var(--line2);width:40px;height:40px;cursor:none;display:flex;align-items:center;justify-content:center;transition:all .3s;color:var(--ink)}
 .modal-close:hover{background:var(--accent);border-color:var(--accent);color:white}
-.modal-eyebrow{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink3);margin-bottom:20px;margin-top:56px;font-family:var(--sans)}
+.modal-eyebrow{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink3);margin-bottom:16px;margin-top:28px;font-family:var(--sans)}
 .modal-h{font-family:var(--serif);font-size:clamp(46px,6vw,90px);font-weight:200;line-height:.9;letter-spacing:-.015em;margin-bottom:40px;color:var(--ink)}
 .modal-sec{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-top:30px;margin-bottom:9px;font-family:var(--sans)}
 .modal-p{font-size:13.5px;font-weight:300;line-height:1.92;color:var(--ink2);letter-spacing:.01em;font-family:var(--sans);white-space:pre-wrap;overflow-wrap:break-word}
@@ -1486,7 +1486,6 @@ function openModal(i){
     <p class="modal-eyebrow">${p.category}${p.year ? ' · ' + p.year : ''}</p>
     <h2 class="modal-h">${titleHtml}</h2>
     ${p.titleKR ? `<p style="font-family:var(--serif);font-size:18px;font-style:italic;color:var(--ink3);margin-bottom:16px;">${p.titleKR}</p>` : ''}
-    <span class="modal-tag">${p.category}</span>
     <p class="modal-sec" style="margin-top:24px;">Description</p>
     <p class="modal-p">${toHtml(p.descriptionEN)}</p>
     ${p.descriptionKR ? `<p class="modal-p" style="margin-top:12px;color:rgba(26,23,18,.65);">${toHtml(p.descriptionKR)}</p>` : ''}
