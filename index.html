@@ -263,7 +263,10 @@ nav.solid{background:rgba(247,242,234,0.9);backdrop-filter:blur(20px);padding:16
 .pc-num{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink3);margin-bottom:32px;transition:color .4s;font-family:var(--sans)}
 .pc-name{font-family:var(--serif);font-size:clamp(22px,2.5vw,34px);font-weight:200;line-height:1.1;letter-spacing:-.01em;margin-bottom:16px;transition:color .4s}
 .pc-meta{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:20px;transition:color .4s;font-family:var(--sans)}
-.pc-desc{display:none}
+.pc-desc{font-size:12.5px;line-height:1.75;color:var(--ink3);margin:0 0 26px;transition:color .4s;max-width:46ch}
+.pc-thumb{width:100%;aspect-ratio:4/3;object-fit:cover;margin:0 0 26px;background:var(--bg3);filter:saturate(.94);transition:filter .5s,transform .6s cubic-bezier(.16,1,.3,1)}
+.proj-card:hover .pc-thumb{filter:saturate(1.05) brightness(1.02);transform:scale(1.015)}
+.pc-sub{font-size:.62em;opacity:.55;font-style:italic;letter-spacing:.02em}
 .pc-arrow{position:absolute;top:40px;right:40px;font-size:20px;color:var(--ink4);transition:all .4s cubic-bezier(.34,1.56,.64,1)}
 .pc-sketch{position:absolute;bottom:32px;right:32px;opacity:0.07;transition:opacity .4s,transform .4s}
 .proj-card:hover .pc-sketch{opacity:0.18;transform:scale(1.05) rotate(3deg)}
@@ -1472,6 +1475,7 @@ footer span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:va
 </footer>
 
 
+<script src="/data/projects.js"></script>
 <script>
 /* ── CURSOR ── */
 /* <html>에 붙임 — body{perspective:1200px}가 fixed 요소의 containing block을
@@ -1525,7 +1529,8 @@ window.addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>80),{p
 
 /* ── REVEAL OBSERVER ── */
 const rObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');rObs.unobserve(x.target)}}),{threshold:0.08});
-document.querySelectorAll('.panel,.reveal').forEach(el=>rObs.observe(el));
+window.initReveal=()=>document.querySelectorAll('.panel,.reveal').forEach(el=>{if(!el.classList.contains('in'))rObs.observe(el)});
+window.initReveal();
 
 /* ── 3D TILT on proj cards ── */
 document.querySelectorAll('.proj-card').forEach(card=>{
@@ -1614,27 +1619,22 @@ window.addEventListener('scroll',()=>{
   if(blobs[1]) blobs[1].style.transform=`translate(${-y*.03}px,${y*.05}px) scale(1)`;
 },{passive:true});
 
-/* ── PROJECT DATA (Notion에서 불러옴) ── */
-let projects = [];
+/* ── PROJECT DATA (data/projects.js — no CMS) ── */
+const projects = window.PROJECTS || [];
 
 function renderProjects() {
   const grid = document.querySelector('.proj-grid');
-  if (!grid) return;
-  if (projects.length === 0) {
-    grid.innerHTML = '<p style="padding:48px;color:var(--ink3);font-family:var(--sans);font-size:13px;letter-spacing:.1em;">Loading projects...</p>';
-    return;
-  }
+  if (!grid || !projects.length) return;
   grid.innerHTML = projects.map((p, i) => `
-    <div class="proj-card" onclick="openProject(${i})">
-      <p class="pc-num">0${i + 1}</p>
-      ${p.thumbnail ? `<img src="${p.thumbnail}" alt="${p.titleEN}" style="width:100%;aspect-ratio:1/1;object-fit:cover;margin-bottom:20px;opacity:0.85;">` : ''}
-      <h3 class="pc-name">${p.titleEN}${p.titleKR ? `<br><span style="font-size:0.7em;opacity:0.6;">${p.titleKR}</span>` : ''}</h3>
-      <p class="pc-meta">${p.category}${p.year ? ' · ' + p.year : ''}</p>
-      <span class="pc-arrow">↗</span>
-    </div>
-  `).join('');
+    <div class="proj-card reveal" onclick="openProject(${i})">
+      <div class="pc-num">${String(i+1).padStart(2,'0')} / ${p.year || ''}</div>
+      ${p.thumb ? `<img class="pc-thumb" src="${p.thumb}" alt="${p.title}" loading="lazy">` : ''}
+      <h3 class="pc-name">${p.title}${p.subtitle ? `<br><span class="pc-sub">${p.subtitle}</span>` : ''}${p.status ? ` <span class="proj-tag-ip">${p.status}</span>` : ''}</h3>
+      <div class="pc-meta">${p.cat || ''}</div>
+      <p class="pc-desc">${p.desc || ''}</p>
+      <div class="pc-arrow">↗</div>
+    </div>`).join('');
 
-  /* 3D tilt 재적용 */
   document.querySelectorAll('.proj-card').forEach(card=>{
     card.addEventListener('mousemove',e=>{
       const r=card.getBoundingClientRect();
@@ -1648,22 +1648,11 @@ function renderProjects() {
       setTimeout(()=>card.style.transition='',600);
     });
   });
+  if (window.initReveal) window.initReveal();
+  else document.querySelectorAll('.proj-card.reveal').forEach(el=>el.classList.add('in'));
 }
 
-async function loadProjects() {
-  try {
-    const res = await fetch('/api/projects');
-    const data = await res.json();
-    projects = data.projects || [];
-    renderProjects();
-  } catch(e) {
-    console.error('Notion 로드 실패:', e);
-    const grid = document.querySelector('.proj-grid');
-    if (grid) grid.innerHTML = '<p style="padding:48px;color:var(--ink3);font-family:var(--sans);font-size:13px;">프로젝트를 불러올 수 없습니다.</p>';
-  }
-}
-
-loadProjects();
+renderProjects();
 
 /* ── OPEN PROJECT PAGE ── */
 function openProject(i){
