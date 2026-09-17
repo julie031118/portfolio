@@ -1,4 +1,22 @@
-<title>이연서 포트폴리오 시안 v5</title>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>이연서 Yeonseo Lee — Portfolio</title>
+<meta name="description" content="이연서 포트폴리오 — 패션·텍스타일 디자인, 콘텐츠 기획, 영상·AI 작업. Yeonseo Lee, fashion &amp; textile designer.">
+<meta name="author" content="Yeonseo Lee">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yeonseo Lee">
+<meta property="og:title" content="이연서 Yeonseo Lee — Portfolio">
+<meta property="og:description" content="패션·텍스타일 디자인, 콘텐츠 기획, 영상·AI 작업">
+<meta property="og:url" content="https://yeonseo.vercel.app/">
+<meta property="og:image" content="https://yeonseo.vercel.app/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
 <meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,8 +84,8 @@ h1,h2,h3,h4{font-weight:400;text-wrap:balance}
 
 /* ── hero: the film (room → corner) fills the screen — cover crop, mouse pans the wider scene ── */
 #corner{position:relative;height:100vh;height:100svh;overflow:hidden;background:var(--bg2);z-index:6;padding:0}
-.stage{position:absolute;inset:0;overflow:hidden;cursor:none}
-.stage.touch{cursor:auto}
+.stage{position:absolute;inset:0;overflow:hidden}
+.stage[data-hover]{cursor:pointer}
 .band{position:absolute;left:0;top:0;overflow:hidden;background:var(--bg2);will-change:transform}
 .scene{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
 .scene img.bgimg{position:absolute;left:0;top:0;width:100%;height:100%}
@@ -132,18 +150,13 @@ h1,h2,h3,h4{font-weight:400;text-wrap:balance}
 .doors button:hover::after,.doors button.on::after{right:0}
 .doors button.on,.doors button:hover{color:var(--ink)}
 .doors button .rn{color:var(--ink4);margin-right:6px;letter-spacing:.1em}
-/* custom cursor: porcelain-shard magnet + iron filings canvas */
-#filings{position:fixed;inset:0;width:100%;height:100%;z-index:955;pointer-events:none}
-.cur{position:fixed;left:0;top:0;z-index:960;pointer-events:none;opacity:0;transform:translate(-50%,-50%);transition:opacity .25s}
-.cur .mag{position:absolute;left:-18px;top:-26px;width:36px;max-width:none;height:auto;transform:rotate(-18deg);filter:drop-shadow(0 6px 10px rgba(29,29,31,.28));transition:transform .35s var(--ease)}
-.cur.hot .mag{transform:rotate(-6deg) scale(1.12)}
-.cur.tap .mag{transform:rotate(-10deg) scale(.92)}
-.cur .lb{position:absolute;left:30px;top:-12px;white-space:nowrap;background:var(--ink);color:var(--bg);font-family:var(--en);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+/* the pointer stays the system cursor — only a small label rides along on a hotspot */
+.cur{position:fixed;left:0;top:0;z-index:960;pointer-events:none;opacity:0;transition:opacity .25s}
+.cur .lb{position:absolute;left:18px;top:12px;white-space:nowrap;background:var(--ink);color:var(--bg);font-family:var(--en);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
   padding:5px 10px 4px;opacity:0;transform:translateX(-6px);transition:opacity .25s,transform .35s var(--ease)}
 .cur .lb b{font-weight:500;color:#fff}
 .cur .lb small{opacity:.65;margin-left:8px;letter-spacing:.14em}
 .cur.hot .lb{opacity:1;transform:translateX(0)}
-html.custom-cursor,html.custom-cursor *{cursor:none!important}
 
 /* invisible a11y hotspot buttons */
 .hsbtn{position:absolute;z-index:9;background:transparent;border:0;padding:0;pointer-events:none}
@@ -160,8 +173,8 @@ html.custom-cursor,html.custom-cursor *{cursor:none!important}
 
 /* ── scene bands: a photo that fills the width, its objects cut out and alive (studio stools / dried bouquet) ── */
 .sband{position:relative;z-index:5;height:74vh;min-height:440px;max-height:860px;overflow:hidden;background:var(--bg2)}
-.sb-stage{position:absolute;inset:0;overflow:hidden;cursor:none}
-.sb-stage.touch{cursor:auto}
+.sb-stage{position:absolute;inset:0;overflow:hidden}
+.sb-stage[data-hover]{cursor:pointer}
 .sb-band{position:absolute;left:0;top:0;will-change:transform}
 .sb-scene{position:absolute;left:0;top:0;transform-origin:0 0}
 .sb-scene img.bgimg{position:absolute;left:0;top:0;width:100%;height:100%}
@@ -182,7 +195,7 @@ html.custom-cursor,html.custom-cursor *{cursor:none!important}
 .sb-fade.t{top:0;height:14%;background:linear-gradient(to bottom,rgba(241,241,243,.35),rgba(241,241,243,0))}
 .sb-fade.b{bottom:0;height:16%;background:linear-gradient(to top,rgba(241,241,243,.45),rgba(241,241,243,0))}
 .sband .grain{opacity:.26}
-@media (max-width:760px){.sband{height:56vh;min-height:360px}.sb-stage{cursor:auto}}
+@media (max-width:760px){.sband{height:56vh;min-height:360px}}
 
 /* a chapter that stands on a photograph */
 #ai{position:relative;overflow:hidden;background:var(--bg2)}
@@ -216,15 +229,17 @@ html.custom-cursor,html.custom-cursor *{cursor:none!important}
 
 /* mobile: still corner scene, cover-fit, index box inside */
 @media (max-width:760px){
-  .stage{cursor:auto}
   .hudbar{padding:12px 16px}
-  .hudbar.top{align-items:center}
-  .hudbar nav{gap:10px 14px;justify-content:flex-end;max-width:62%}
+  .hudbar.top{flex-direction:column;align-items:flex-start;gap:8px;isolation:isolate}
+  .hudbar.top::before{content:"";position:absolute;left:0;right:0;top:0;bottom:-26px;z-index:-1;pointer-events:none;
+    background:linear-gradient(180deg,rgba(241,241,243,.94) 0%,rgba(241,241,243,.86) 58%,rgba(241,241,243,0) 100%)}
+  .hudbar nav{gap:8px 14px;justify-content:flex-start;width:100%;max-width:100%}
+  .hudbar.top .col{flex:0 0 auto}
   .hudbar nav a{font-size:10px;letter-spacing:.14em}
   .hudbar .col{white-space:nowrap}
   .hudbar.bot{display:flex}
   .doors,#door-lb{display:none}
-  .wordmark{width:min(78vw,360px);top:22%}
+  .wordmark{width:min(78vw,360px);top:30%}
 }
 
 /* ── after hero: gradient bridge ── */
@@ -473,8 +488,7 @@ html[lang="en"] .aichap .lead{font-family:var(--en);font-style:italic}
   </div>
   <div class="scrollhint hud on" id="scrollhint">Scroll<i></i></div>
 </header>
-<canvas id="filings" aria-hidden="true"></canvas>
-<div class="cur" id="cur"><img class="mag" src="img/shard.png" alt=""><div class="lb" id="curlb"></div></div>
+<div class="cur" id="cur"><div class="lb" id="curlb"></div></div>
 
 
 <main>
@@ -699,7 +713,7 @@ const UI = {
   nowEb:'Autumn 2026 — 21 credits · 2 competitions', nowSub:{ko:'지금 하고 있는 것', en:''},
   archEb:'Every project — filter by field', archSub:{ko:'전체 작업', en:''},
   profEb:'SNU Clothing & Textiles · NC State Wilson College', profSub:{ko:'프로필', en:''},
-  foot:'Mockup v5 — for review',
+  foot:'© 2026 Yeonseo Lee',
   blank:'Result — to be filled after confirmation',
   moreOn:'How the calls were made +', moreOff:'Close −', moreCat:'More in this field →',
   pair:{ko:'같은 일을 다른 방법으로 한 프로젝트', en:'The same job, done another way'},
@@ -1133,40 +1147,13 @@ function tapeWords(){
   $('#talk-word').innerHTML = halftone('#B9A2AE') + TAPE.tapeText("Let's\ntalk.", {h: Math.round(Math.min(120, w * .08)), seed: 4, tone:'dark'});
 }
 
-/* ── cursor: porcelain-shard magnet + iron filings ── */
+/* ── the label that rides beside the system cursor (no custom cursor art) ── */
 (function cursor(){
   if (isTouch || reduced) return;
-  document.documentElement.classList.add('custom-cursor');
-  const cv = $('#filings'), cx = cv.getContext('2d'); let W = 0, H = 0, dpr = 1;
-  function size(){ dpr = Math.min(2, devicePixelRatio || 1); W = cv.width = innerWidth * dpr; H = cv.height = innerHeight * dpr; }
-  size(); addEventListener('resize', size);
-  const mx = gsap.quickTo(cur, 'x', {duration:.12, ease:'power3'}), my = gsap.quickTo(cur, 'y', {duration:.12, ease:'power3'});
-  let tx = -1e4, ty = -1e4, px = -1e4, py = -1e4, vis = false;
-  const N = 420, P = [];
-  for (let i = 0; i < N; i++){
-    const ang = Math.random() * 6.283, r = 26 + Math.pow(Math.random(), 1.3) * 58;   // field ring around the magnet
-    P.push({x: 0, y: 0, vx: 0, vy: 0, ang, r, lag: .05 + Math.random() * .1, len: 1.4 + Math.random() * 2.2, a: .22 + Math.random() * .4, tang: Math.random() < .35});
-  }
-  addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; mx(tx); my(ty); if (!vis){ vis = true; cur.style.opacity = 1; P.forEach(p => { p.x = tx; p.y = ty; }); } });
-  addEventListener('pointerdown', () => cur.classList.add('tap')); addEventListener('pointerup', () => cur.classList.remove('tap'));
+  const mx = gsap.quickTo(cur, 'x', {duration:.08, ease:'power3'}), my = gsap.quickTo(cur, 'y', {duration:.08, ease:'power3'});
+  let vis = false;
+  addEventListener('pointermove', e => { mx(e.clientX); my(e.clientY); if (!vis){ vis = true; cur.style.opacity = 1; } });
   document.addEventListener('mouseleave', () => { vis = false; cur.style.opacity = 0; });
-  let hidden = false; document.addEventListener('visibilitychange', () => { hidden = document.hidden; });
-  function step(){
-    requestAnimationFrame(step); if (hidden) return;
-    cx.clearRect(0, 0, W, H); if (!vis) return;
-    const spd = Math.hypot(tx - px, ty - py); px += (tx - px) * .5; py += (ty - py) * .5;
-    const stretch = Math.min(1.8, 1 + spd / 40);
-    cx.strokeStyle = 'rgba(38,37,42,.85)'; cx.lineCap = 'round';
-    for (const p of P){
-      const gx = tx + Math.cos(p.ang) * p.r * stretch * (0.9 + 0.1 * Math.sin(p.ang * 3)), gy = ty + Math.sin(p.ang) * p.r * (0.7 + 0.3 * Math.cos(p.ang * 2));
-      p.vx += (gx - p.x) * p.lag; p.vy += (gy - p.y) * p.lag; p.vx *= .78; p.vy *= .78; p.x += p.vx; p.y += p.vy;
-      const dx = tx - p.x, dy = ty - p.y, d = Math.hypot(dx, dy) || 1; let ux = dx / d, uy = dy / d;   // filings align to the field
-      if (p.tang){ const t = ux; ux = -uy; uy = t; }
-      cx.globalAlpha = p.a * Math.max(.12, 1 - d / 140); cx.lineWidth = .9 * dpr;
-      cx.beginPath(); cx.moveTo((p.x - ux * p.len) * dpr, (p.y - uy * p.len) * dpr); cx.lineTo((p.x + ux * p.len) * dpr, (p.y + uy * p.len) * dpr); cx.stroke();
-    }
-  }
-  requestAnimationFrame(step);
 })();
 
 /* ── page-wide flying fish: 10 crossings, one each, from the first section to the end ── */
@@ -1267,3 +1254,6 @@ imgs.forEach(im => im.complete ? ready() : im.addEventListener('load', ready, {o
 preloader(intro_);
 })();
 </script>
+
+</body>
+</html>
