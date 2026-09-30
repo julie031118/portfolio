@@ -11,7 +11,9 @@ import { getSoundEnabled, setSoundEnabled, toggleSound } from './audio.js';
 import { storageGet, storageSet } from './sections/render-shell.js';
 
 const LANG_KEY = 'yeonseo-lang';
-let LANG = storageGet('localStorage', LANG_KEY) || 'ko';
+/* the site follows the visitor's browser language until they pick one (the intro paragraph opens in English either way) */
+const browserLang = /^ko\b/i.test(navigator.language || '') || (navigator.languages || []).slice(0, 1).some((l) => /^ko\b/i.test(l)) ? 'ko' : 'en';
+let LANG = storageGet('localStorage', LANG_KEY) || browserLang;
 let introController = null;
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const T = (value) => value && typeof value === 'object' && 'ko' in value ? (value[LANG] || value.ko) : value;
@@ -21,8 +23,7 @@ function toggleLanguage() {
   storageSet('localStorage', LANG_KEY, LANG);
   document.documentElement.lang = LANG;
   renderNav();
-  introController?.setLanguage(LANG);
-  renderLaterSections();
+  renderLaterSections(); /* the intro paragraph keeps its own en / ko */
   window.dispatchEvent(new CustomEvent('portfolio:languagechange', { detail: LANG }));
 }
 

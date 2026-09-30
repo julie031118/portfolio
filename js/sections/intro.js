@@ -52,7 +52,8 @@ function appendRichLine(row, line, lang, bindKeyword) {
   appendText(row, line.slice(cursor));
 }
 
-export function renderIntro(lang) {
+export function renderIntro(siteLang) {
+  const lang = SITE.intro.defaultLang || 'en'; /* the paragraph has its own en / ko, apart from the site toggle */
   const section = document.querySelector('#intro');
   section.innerHTML = `
     <div class="intro-stage">
@@ -60,7 +61,9 @@ export function renderIntro(lang) {
       <div class="intro-frame">
         <div class="section-heading"><span>${SITE.sections.intro.title}</span><span class="section-heading__index">${SITE.sections.intro.index}</span></div>
         <div class="intro-copy">
+          <div class="intro-lang" role="group" aria-label="${SITE.intro.ui.langAria}"><button type="button" data-lang="en">en</button><span aria-hidden="true">/</span><button type="button" data-lang="ko">ko</button></div>
           <div class="intro-lines" aria-live="polite"></div>
+          <p class="intro-hint" aria-hidden="true">${SITE.intro.ui.hint}</p>
         </div>
         <p class="intro-scroll-hint">${SITE.intro.ui.scroll}<span aria-hidden="true">_</span></p>
       </div>
@@ -110,6 +113,15 @@ export function renderIntro(lang) {
     document.fonts?.ready.then(() => hand.layout());
   }
 
+  /* the words keep a faint dotted underline, and the small "click a keyword" line stays under the
+     paragraph, until the reader has tried one */
+  const discover = (event) => {
+    if (!event.target.closest?.('.intro-keyword, .hand-hot')) return;
+    frame.classList.add('is-discovered');
+  };
+  frame.addEventListener('pointerenter', discover, true);
+  frame.addEventListener('click', discover, true);
+
   function renderStep(step, local) {
     if (mode === 'final') {
       rows.forEach((row) => { row.innerHTML = ''; });
@@ -130,14 +142,19 @@ export function renderIntro(lang) {
   }
 
   function update(progress) {
+    frame.classList.toggle('is-started', progress > .004);
     const scaled = Math.min(progress * STEPS, STEPS - .001);
     const step = Math.floor(scaled);
     if (step >= 6) renderFinal();
     else renderStep(step, scaled - step);
   }
 
+  const langButtons = [...section.querySelectorAll('.intro-lang button')];
+  langButtons.forEach((button) => button.addEventListener('click', () => { if (button.dataset.lang !== currentLang) setLanguage(button.dataset.lang); }));
+
   function setLanguage(nextLang) {
     currentLang = nextLang;
+    langButtons.forEach((button) => button.classList.toggle('is-current', button.dataset.lang === nextLang));
     mode = '';
     rows.forEach((row) => { row.innerHTML = ''; row.classList.remove('is-visible', 'is-active'); });
     solo.textContent = ''; solo.classList.remove('is-visible', 'is-active');

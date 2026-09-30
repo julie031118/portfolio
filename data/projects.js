@@ -11,8 +11,13 @@ window.PROJECTS = [
   ],
   "year": "2025",
   "period": "2025.01–08",
-  "thumb": "/images/projects/miraen/06.jpg",
+  "thumb": "/images/projects/miraen/a02.jpg",
   "images": [
+   "/images/projects/miraen/a02.jpg",
+   "/images/projects/miraen/a01.jpg",
+   "/images/projects/miraen/a03.jpg",
+   "/images/projects/miraen/a04.jpg",
+   "/images/projects/miraen/a05.jpg",
    "/images/projects/miraen/06.jpg",
    "/images/projects/miraen/07.jpg",
    "/images/projects/miraen/08.jpg",
@@ -25,11 +30,18 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "small": [
+   "/images/projects/miraen/06.jpg",
+   "/images/projects/miraen/07.jpg",
+   "/images/projects/miraen/08.jpg",
+   "/images/projects/miraen/09.jpg",
+   "/images/projects/miraen/10.jpg"
+  ],
   "nar": {
    "ko": {
     "title": "미래엔수학 디자이너 & 마케터",
     "cat": "브랜드 콘텐츠 · 실무 · 2025.01–08",
-    "headline": "타깃이 실제로 보는 것을 먼저 분석하고, 내 취향을 버렸다. 세 자리 수였던 조회수가 2.8만이 됐다.",
+    "headline": "타깃이 실제로 보는 것을 먼저 분석하고, 내 취향을 버렸다.",
     "metrics": [
      {
       "v": "2.9만",
@@ -46,36 +58,30 @@ window.PROJECTS = [
     ],
     "need": "신설 가맹 지사에는 아무것도 없었다. 인스타그램도 유튜브도 블로그도, 네이버 지도 등록조차 없는 상태. 학원은 검색에서 선택되는데 검색 결과에 브랜드가 존재하지 않았다.",
     "action": [
-     "주 타깃인 40–50대 여성이 실제로 소비하는 릴스와, 잘 되는 학원 계정·동종업계 브랜드를 먼저 분석해 제작 규칙을 세움",
-     "그 규칙대로 제작 — 큰 글씨, 느린 속도, 가독성 우선. 세련된 미감보다 \"잘 보이는 것\"을 택함",
+     "주 타깃인 40–50대 여성 학부모가 실제로 보는 릴스와, 잘 되는 학원 계정·동종업계 브랜드를 먼저 분석해 제작 규칙을 세움 — 큰 글씨, 느린 속도, 세련된 미감보다 \"잘 보이는 것\"",
      "브랜드 캐릭터 '미래'를 실존 인물처럼 연출하고, 2D 캐릭터를 AI로 3D화해 움직이는 형태로 릴스에 투입",
-     "학교 앞 오프라인 홍보를 직접 촬영해 시리즈물로 재구성 — 광고를 콘텐츠로 전환한 것이 전환점이 됨",
+     "학교 앞 오프라인 홍보를 직접 촬영해 \"나영지사장이 떴다 N탄 N초\" 시리즈로 포맷을 고정 — 광고를 콘텐츠로 전환한 것이 전환점이 됨",
      "인스타그램·유튜브·네이버 블로그를 0에서 개설하고, 스마트플레이스 세팅과 검색·유튜브 유료광고까지 직접 집행"
     ],
     "result": [
-     "릴스 최고 조회수 2.9만 · 차순위 2.8만 (오프라인 홍보 시리즈)",
-     "초반 릴스는 세 자리 수 — 시리즈 도입 후 2.8만으로 전환",
+     "릴스 최고 조회수 2.9만 · 차순위 2.8만 (오프라인 홍보 시리즈) — 초반 세 자리 수에서 시리즈 도입 후 전환",
      "사업설명회 릴스 2.2만",
      "채널이 하나도 없던 상태에서 시작해, 인스타그램 개설 3개월 만에 지사장 5월 우수지사장상 수상"
     ],
     "detail": {
      "title": "어떻게 판단했나",
      "body": [
-      "타깃을 40–50대 여성 학부모로 정의하고, 그 층이 실제로 보는 릴스와 인기 학원 계정, 동종업계에서 잘 나가는 브랜드를 레퍼런스로 분석했다.",
-      "거기서 뽑은 규칙: 글씨는 크고 잘 보여야 한다. 속도는 빠르면 안 된다. 음악은 최신 아이돌곡도 잘 먹히고 예전 인기곡을 섞어도 좋다. 무엇보다 미감이 세련될 필요는 없고, 잘 보이는 것이 우선이다.",
-      "사람 얼굴이 들어가야 신뢰가 생긴다는 판단으로 지사장을 최대한 노출시켰다. 동시에 학원은 결국 아이들을 대상으로 하는 사업이므로, 브랜드 캐릭터 '미래'의 지속 노출을 축으로 잡았다.",
-      "오프라인 홍보 시리즈에서는 '미래'를 실존 캐릭터처럼 다뤘다. \"미래야 힘들었지~\", \"미래야 수고했어\" 같은 대사를 지사장과 캐릭터의 대화 자막으로 연출해 인간미와 친근함을 동시에 만들었다.",
-      "아이들이 '미래' 앞에 모여드는 순간에는 싸이 노래를 얹어 극적으로 처리했다. 세련된 음악보다 친근한 음악이 이 타깃에게 훨씬 효과적이었다.",
-      "원래 2D인 캐릭터를 AI로 3D화해 움직이게 만들어 릴스에 넣었다.",
-      "시리즈는 \"나영지사장이 떴다 N탄 N초\" 형식으로 포맷을 고정해 반복 가능한 구조로 만들었다.",
-      "시리즈 5탄까지 이어가며 학교별로 회차를 나눴다 — 신현초, 장평초 등 각 회차를 독립 콘텐츠로 만들되 포맷은 고정했다."
+      "분석에서 뽑은 규칙: 글씨는 크고 잘 보여야 한다. 속도는 빠르면 안 된다. 음악은 최신 아이돌곡도 잘 먹히고 예전 인기곡을 섞어도 좋다. 미감이 세련될 필요는 없고, 잘 보이는 것이 우선이다.",
+      "사람 얼굴이 들어가야 신뢰가 생긴다고 보고 지사장을 최대한 노출시켰다. 동시에 학원은 결국 아이들을 대상으로 하는 사업이므로, 캐릭터 '미래'의 지속 노출을 두 번째 축으로 잡았다.",
+      "오프라인 홍보 시리즈에서는 \"미래야 힘들었지~\", \"미래야 수고했어\" 같은 지사장과 캐릭터의 대화를 자막으로 연출해 인간미와 친근함을 같이 만들었다. 아이들이 '미래' 앞에 모여드는 순간에는 싸이 노래를 얹었다 — 이 타깃에게는 세련된 음악보다 친근한 음악이 훨씬 효과적이었다.",
+      "시리즈는 5탄까지 이어가며 신현초, 장평초처럼 학교별로 회차를 나눴다 — 각 회차는 독립 콘텐츠로, 포맷은 고정."
      ]
     }
    },
    "en": {
     "title": "MiraeN Math — Designer & Marketer",
     "cat": "Brand Content · Professional · Jan–Aug 2025",
-    "headline": "I analysed what the audience actually watches, then set my own taste aside. Views went from three digits to 28,000.",
+    "headline": "I analysed what the audience actually watches, then set my own taste aside.",
     "metrics": [
      {
       "v": "29K",
@@ -92,28 +98,22 @@ window.PROJECTS = [
     ],
     "need": "The new franchise branch had nothing — no Instagram, no YouTube, no blog, not even a Naver Map listing. Parents choose an academy by searching, and in search the brand did not exist.",
     "action": [
-     "Started by analysing what women in their 40s–50s actually watch, plus the best-performing academy accounts and brands in the category, and turned that into production rules",
-     "Built to those rules — large type, slower pacing, legibility first. Chose \"clearly visible\" over \"beautifully designed\"",
+     "Started by analysing the Reels that the core audience — mothers in their 40s–50s — actually watch, plus the best-performing academy accounts and brands in the category, and turned that into production rules: large type, slower pacing, \"clearly visible\" over \"beautifully designed\"",
      "Treated the brand character Mirae as a real personality, and used AI to turn the 2D character into a moving 3D one for Reels",
-     "Filmed the street promotions outside schools myself and rebuilt them as a series — turning advertising into content, which became the turning point",
+     "Filmed the street promotions outside schools myself and locked them into a series format — \"Director Nayeong is here, part N, N seconds\". Turning advertising into content was the turning point",
      "Launched Instagram, YouTube and Naver Blog from zero, set up SmartPlace, and ran paid search and YouTube campaigns directly"
     ],
     "result": [
-     "Top Reel 29,000 views; second 28,000 (the offline-promotion series)",
-     "Early Reels sat in the hundreds — the series moved them to 28,000",
+     "Top Reel 29,000 views; second 28,000 (the offline-promotion series) — up from the hundreds before the series",
      "Business-briefing Reel: 22,000 views",
      "Starting with no channels at all, the branch director won the May Excellence Award three months after the Instagram launch"
     ],
     "detail": {
      "title": "How the calls were made",
      "body": [
-      "I defined the target as mothers in their 40s and 50s, then studied the Reels they actually watch, the academy accounts that perform, and the strongest brands in the category.",
-      "The rules that came out of it: type must be large and legible. Pacing must not be fast. Current idol tracks work, and older hits mixed in work too. Above all, the work does not need to look sophisticated — it needs to be readable.",
-      "A human face builds trust, so I put the branch director on camera as much as possible. And since an academy ultimately sells to children, I made continuous exposure of the character Mirae the second axis.",
-      "In the street-promotion series I treated Mirae as a real character, writing subtitle dialogue between her and the director so warmth and familiarity arrived together.",
-      "When children gathered around Mirae, I scored the moment with a PSY track. A familiar song outperformed a stylish one with this audience by a wide margin.",
-      "I used AI to convert the originally 2D character into a moving 3D version for the Reels.",
-      "The series was locked to a repeatable format: \"Director Nayeong is here — part N, N seconds.\"",
+      "The rules that came out of the analysis: type must be large and legible. Pacing must not be fast. Current idol tracks work, and older hits mixed in work too. The work does not need to look sophisticated — it needs to be readable.",
+      "A human face builds trust, so I put the branch director on camera as much as possible. And since an academy ultimately sells to children, continuous exposure of the character Mirae became the second axis.",
+      "In the street-promotion series, subtitle dialogue between the director and Mirae (\"Mirae, that was tough, wasn't it?\") brought warmth and familiarity together. When children gathered around Mirae I scored the moment with a PSY track — with this audience a familiar song beat a stylish one by a wide margin.",
       "The series ran to five parts, one per school — each episode standalone, the format fixed."
      ]
     }
@@ -136,10 +136,15 @@ window.PROJECTS = [
   "thumb": "/images/projects/directing-a-year/01.jpg",
   "images": [
    "/images/projects/directing-a-year/01.jpg",
+   "/images/projects/directing-a-year/a02.jpg",
    "/images/projects/directing-a-year/02.jpg",
    "/images/projects/directing-a-year/03.jpg",
+   "/images/projects/directing-a-year/a05.jpg",
    "/images/projects/directing-a-year/04.jpg",
-   "/images/projects/directing-a-year/05.jpg"
+   "/images/projects/directing-a-year/05.jpg",
+   "/images/projects/directing-a-year/a06.jpg",
+   "/images/projects/directing-a-year/a07.jpg",
+   "/images/projects/directing-a-year/a08.jpg"
   ],
   "role": {
    "ko": "기획 · 연출 · 편집 · 채널별 배포 설계 (단독)",
@@ -154,7 +159,8 @@ window.PROJECTS = [
     "cat": "콘텐츠 시스템 기획 · 영상 · 서울대 교환학생 국외수학후기 공모전 출품 · 2026.07–08",
     "need": "NC State 윌슨 텍스타일 대학 교환 1년치 영상과, 후배들이 실제로 필요로 하는 비자·비용·주거 정보가 동시에 있었다. 문제는 이 둘을 한 포맷에 담을 수 없다는 것이었다. 정보를 다 넣으면 볼 수 없는 영상이 되고, 빼면 정작 필요한 사람에게 쓸모없어진다.",
     "action": [
-     "분량이 아니라 기능으로 프로젝트를 쪼갬 — 감정선과 호흡 중심의 10분 내러티브 영상(공모전 규정 분량 9–11분에 맞춤, 유튜브) + 비자 절차·실제 비용·주거 단계를 담은 7페이지 문서(무료 배포)로 분리",
+     "분량이 아니라 기능으로 프로젝트를 쪼갬 — 보는 사람 입장에서 \"이게 재미있을까?\"를 기준으로 만든 10분 내러티브 영상(공모전 규정 분량 9–11분에 맞춤, 유튜브) + 비자 절차·실제 비용·주거 단계를 담은 7페이지 문서(무료 배포)로 분리",
+     "재미를 우선하되 영상에도 필요한 정보는 함께 담고, 정보가 나온다는 사실을 영상 맨 앞에 미리 공지",
      "긴 영상은 발견되지 않는다는 점을 전제로, 본편을 잘라낸 게 아니라 자체 훅과 호흡을 가진 30초 세로형 티저를 따로 제작해 숏폼에서 본편으로 유입되도록 설계",
      "1년간 만난 동기·교수·업계 관계자가 한국어 사용자만이 아니라는 점을 반영해 전편 영어 자막 제작",
      "같은 캡션을 복사하지 않고 채널별로 프레이밍을 다시 씀 — 맥락을 이미 아는 네트워크를 위한 링크드인용 전문가 서사와, 훅과 호흡이 다른 인스타그램·유튜브용 버전"
@@ -180,7 +186,8 @@ window.PROJECTS = [
     "cat": "Content System Design · Film · SNU Exchange Study-Abroad Review Contest entry · Jul–Aug 2026",
     "need": "After a year-long exchange at NC State's Wilson College of Textiles, I had a year of footage and a mountain of practical information juniors actually needed — and no single format that could hold both. Dense enough to cover visas, costs and housing, and it stops being watchable; skip all that, and it stops being useful to the people it's for.",
     "action": [
-     "Split the project by function, not length — a 10-minute narrative video for YouTube (cut to the contest’s 9–11 minute format) built on pacing and emotional arc, plus a separate 7-page document, free to share, holding everything reference-heavy",
+     "Split the project by function, not length — a 10-minute narrative video for YouTube (cut to the contest’s 9–11 minute format) built on one question from the viewer’s side, \"would this be fun to watch?\", plus a separate 7-page document, free to share, holding everything reference-heavy",
+     "Fun came first, but the film still carries the key information — and says so up front, in its opening",
      "Treated discovery as a design problem: cut a 30-second vertical teaser with its own hook and pacing rather than a trimmed copy of the long video, built to pull viewers back to the full story",
      "Added English subtitles throughout, since the classmates, professors and industry contacts this story was relevant to weren't only Korean speakers",
      "Rewrote the framing per channel instead of reposting one caption — a professional throughline for LinkedIn, a different hook and pacing for Instagram and YouTube"
@@ -215,7 +222,7 @@ window.PROJECTS = [
   ],
   "year": "2025",
   "period": "2025.06–07",
-  "thumb": "/images/projects/ai-short-film/05.jpg",
+  "thumb": "/images/projects/ai-short-film/11.jpg",
   "images": [
    "/images/projects/ai-short-film/01.jpg",
    "/images/projects/ai-short-film/02.jpg",
@@ -239,8 +246,8 @@ window.PROJECTS = [
    "/images/projects/ai-short-film/20.jpg"
   ],
   "role": {
-   "ko": "기획 · 연출 · 프롬프트 디렉팅 · 편집 (단독)",
-   "en": "Concept, direction, prompt direction, editing (solo)"
+   "ko": "기획 · 대사 · 컷 구성 · 연출 · 영상 · 음악 · 보이스 · 자막 (단독, 전 과정 AI)",
+   "en": "Concept, dialogue, shot list, direction, video, music, voice, subtitles (solo, all made with AI)"
   },
   "spotify": null,
   "spotifyNote": null,
@@ -249,44 +256,62 @@ window.PROJECTS = [
    "ko": {
     "title": "AI 단편영화 〈Happiness is Intelligence?〉",
     "cat": "AI 영상 · 연출 · 대상",
-    "need": "감정이 숫자로 관리되고 기분 조절 약으로 일정한 행복을 유지하는 사회를 그리려면, 현실 촬영으로는 만들 수 없는 세계관과 얼굴이 필요했다. 예산도 촬영 인력도 없는 조건에서 장편 규모의 비주얼을 혼자 만들어야 했다.",
+    "need": "감정을 숫자로 관리하는 사회라는 설정은 현실에서 촬영할 수 없었고, 배우도 없었다. AI로 본격적으로 작품을 만든 건 이 작업이 처음이었다.",
     "action": [
-     "약이 떨어진 주인공이 지워둔 감정과 마주하는 서사를 직접 쓰고 연출",
-     "Midjourney로 세계관과 캐릭터 비주얼을 설계하고, Kling AI로 컷을 영상화",
-     "Suno·Riffusion으로 음악을, ElevenLabs로 보이스를 제작해 사운드까지 한 사람이 통제",
-     "'괜찮다는 것'의 의미를 관객에게 되묻는 구조로 편집 — 무너지는 순간을 결말이 아니라 인간다움의 시작점에 배치"
+     "기분 조절 약으로 일정한 행복을 유지하고 감정을 숫자로 관리하는 사회, 약이 떨어진 주인공이 지워 둔 감정과 마주하는 이야기를 직접 씀",
+     "기획·대사·컷 구성·세부 연출부터 영상·음악·보이스·자막까지 전부 AI로 제작 — Midjourney(세계관·캐릭터), Kling AI(영상), Suno·Riffusion(음악), ElevenLabs(보이스)",
+     "컷이 바뀌어도 같은 인물, 같은 세계로 보이도록 일관성을 유지하는 데 가장 공을 들임",
+     "무너지는 순간을 결말이 아니라 인간다움의 시작점에 두고, '괜찮다는 것'의 의미를 관객에게 되묻는 구조로 편집"
     ],
     "result": [
-     "서울대 AI 영화제작 프로그램 대상 (2025)"
+     "서울대 AI 영화제작 프로그램 대상 (2025)",
+     "이 작업 이후 내 작업에 AI를 본격적으로 더하기 시작함"
     ],
-    "headline": "예산도 촬영 인력도 없이, 현실 촬영으로는 만들 수 없는 세계를 만들었다.",
+    "headline": "배우도 촬영도 없이, 처음부터 끝까지 AI로 만든 단편영화.",
     "metrics": [
      {
       "v": "대상",
       "l": "서울대 AI 영화제작 프로그램 2025"
      }
-    ]
+    ],
+    "note": "2025년 여름 당시의 Midjourney로 만든 영상이다. AI가 워낙 빠르게 발전해서, 지금 보면 AI 티가 나는 장면이 있다.",
+    "detail": {
+     "title": "무엇을 말하고 싶었나",
+     "body": [
+      "감정은 무너질 수 있고, 그것도 받아들여야 한다. 약으로 억제하고 숫자로 관리한다고 해서 감정이 지워지지는 않는다.",
+      "그런 메시지로, 보는 사람에게 위로를 건네고 싶었다."
+     ]
+    }
    },
    "en": {
     "title": "AI Short Film — “Happiness is Intelligence?”",
     "cat": "AI Film · Direction · Grand Prize",
-    "need": "A society where emotion is regulated by numbers and daily mood-control pills hold everyone at a constant happiness needed a world and faces that live-action couldn't produce — and it had to be built alone, with no budget and no crew.",
+    "need": "A society that manages feelings by numbers could not be filmed for real, and there were no actors. It was the first time I made a full piece with AI.",
     "action": [
-     "Wrote and directed the story: a protagonist who runs out of medication and meets the feelings she had erased",
-     "Designed the world and characters in Midjourney, then animated the cuts with Kling AI",
-     "Produced the score with Suno and Riffusion and the voices with ElevenLabs, keeping sound under the same single hand",
-     "Cut the film to turn the question back on the audience — placing the breakdown not as an ending but as the start of something human"
+     "Wrote the story: a society where daily mood-control pills hold everyone at a constant happiness and feelings are managed by numbers, and a protagonist who runs out of pills and meets the feelings she had erased",
+     "Made every part with AI — concept, dialogue, shot list, detailing, video, music, voice, subtitles: Midjourney (world and characters), Kling AI (video), Suno and Riffusion (music), ElevenLabs (voice)",
+     "Put the most effort into consistency, so the same person and the same world held from cut to cut",
+     "Cut it to turn the question of what \"being okay\" means back on the audience — the breakdown placed not as an ending but as the start of something human"
     ],
     "result": [
-     "Grand Prize, SNU AI Filmmaking Program (2025)"
+     "Grand Prize, SNU AI Filmmaking Program (2025)",
+     "The point from which I started building AI into my work in earnest"
     ],
-    "headline": "No budget, no crew — and a world live-action could not have produced.",
+    "headline": "A short film with no actors and no shoot, made with AI from start to finish.",
     "metrics": [
      {
       "v": "Grand Prize",
       "l": "SNU AI Filmmaking Program 2025"
      }
-    ]
+    ],
+    "note": "Made with Midjourney as it was in summer 2025. AI has moved so fast that some shots now read as AI.",
+    "detail": {
+     "title": "What I wanted to say",
+     "body": [
+      "Feelings can collapse, and that has to be accepted too. Suppressing them with pills and managing them by numbers does not erase them.",
+      "I wanted the film to offer that as comfort to whoever watches it."
+     ]
+    }
    }
   },
   "title": "AI Short Film",
@@ -304,53 +329,52 @@ window.PROJECTS = [
   "period": "2026.01–04",
   "thumb": "/images/projects/kaftan/21.jpg",
   "images": [
-   "/images/projects/kaftan/01.jpg",
-   "/images/projects/kaftan/02.jpg",
-   "/images/projects/kaftan/03.jpg",
-   "/images/projects/kaftan/04.jpg",
-   "/images/projects/kaftan/05.jpg",
-   "/images/projects/kaftan/06.jpg",
-   "/images/projects/kaftan/07.jpg",
-   "/images/projects/kaftan/08.jpg",
-   "/images/projects/kaftan/09.jpg",
-   "/images/projects/kaftan/10.jpg",
-   "/images/projects/kaftan/11.jpg",
-   "/images/projects/kaftan/12.jpg",
-   "/images/projects/kaftan/13.jpg",
-   "/images/projects/kaftan/14.jpg",
-   "/images/projects/kaftan/15.jpg",
-   "/images/projects/kaftan/16.jpg",
-   "/images/projects/kaftan/17.jpg",
-   "/images/projects/kaftan/18.jpg",
-   "/images/projects/kaftan/19.jpg",
-   "/images/projects/kaftan/20.jpg",
+   "/images/projects/kaftan/a05.jpg",
    "/images/projects/kaftan/21.jpg",
    "/images/projects/kaftan/22.jpg",
    "/images/projects/kaftan/23.jpg",
-   "/images/projects/kaftan/24.jpg"
+   "/images/projects/kaftan/24.jpg",
+   "/images/projects/kaftan/13.jpg",
+   "/images/projects/kaftan/08.jpg",
+   "/images/projects/kaftan/15.jpg",
+   "/images/projects/kaftan/16.jpg",
+   "/images/projects/kaftan/17.jpg",
+   "/images/projects/kaftan/09.jpg"
   ],
   "role": {
-   "ko": "텍스타일 디자인 · 엔지니어드 프린트 설계 · 제작",
-   "en": "Textile design, engineered print, construction"
+   "ko": "텍스타일 디자인 · 엔지니어드 프린트 설계 · AI 시뮬레이션 · 제작",
+   "en": "Textile design, engineered print, AI simulation, construction"
   },
   "spotify": null,
   "spotifyNote": null,
+  "process": [
+   "/images/projects/kaftan/01.jpg",
+   "/images/projects/kaftan/02.jpg",
+   "/images/projects/kaftan/06.jpg",
+   "/images/projects/kaftan/18.jpg",
+   "/images/projects/kaftan/07.jpg",
+   "/images/projects/kaftan/a06.jpg",
+   "/images/projects/kaftan/a16.jpg",
+   "/images/projects/kaftan/a18.jpg",
+   "/images/projects/kaftan/10.jpg",
+   "/images/projects/kaftan/12.jpg"
+  ],
   "nar": {
    "ko": {
     "title": "Engineered Kaftan",
-    "cat": "디지털 텍스타일 · 어패럴 · 2026.01–04",
+    "cat": "디지털 텍스타일 · AI 시뮬레이션 · 어패럴 · 2026.01–04",
     "need": "쇼팽 녹턴의 유동적인 구조를 실크 위의 시각적 움직임으로 옮기되, 프린트가 옷의 솔기와 트임에 정확히 맞아야 했다. 문제는 디지털 프린터의 인쇄 폭이 54인치인데 카프탄은 100인치가 넘는다는 것이었다. 한 장으로는 물리적으로 찍을 수 없었다.",
     "action": [
      "악보의 선 방향과 반복을 패턴의 구조로 삼고, 인체의 곡선과 겹쳐 '구조'와 '유동' 사이의 균형점을 설계",
      "악보 모티프를 세 개의 패널로 분할하고, 이음선이 소재의 흐름을 끊지 않도록 패턴을 다시 설계 — 실크 위에 인쇄된 조각들이 봉제선에서 정확히 이어지도록 좌표를 계산",
-     "패턴 제작 후, 실제 봉제에 들어가기 전에 실루엣과 드레이프를 AI로 먼저 시뮬레이션해 확인",
+     "AI 시뮬레이션: 패턴을 뜬 뒤 봉제에 들어가기 전에, 세 패널이 이어진 실루엣과 드레이프를 AI로 먼저 구현해 몸 위에서 어떻게 보일지 확인",
      "여러 차례 피팅을 거쳐 네크라인을 조정하고 길이를 줄여(앞 -3인치, 뒤 -1.5인치) 실크의 드레이프와 움직임을 최적화",
      "서사가 있는 예술적 의상을 원하는 소비자를 대상으로 한 '엘리베이티드 리조트웨어'로 포지셔닝"
     ],
     "result": [
      "교수 추천으로 수업 대표 출품 → NC State 윌슨 컬리지 컬렉션 영구 소장작 선정 (2026.04)"
     ],
-    "headline": "프린터 폭은 54인치, 옷은 100인치가 넘었다. 나눠 찍되 이어 보이게 해야 했다.",
+    "headline": "프린터 폭은 54인치, 옷은 100인치가 넘었다. 세 패널로 나눠 찍고, 자르기 전에 AI로 먼저 입혀 봤다.",
     "metrics": [
      {
       "v": "선정",
@@ -360,26 +384,25 @@ window.PROJECTS = [
     "detail": {
      "title": "이 작업에서 배운 것",
      "body": [
-      "좋은 비주얼은 예쁜 이미지 한 장이 아니라, 인쇄기와 재봉틀과 마감 시간이라는 물리적 제약 안에서 완성되는 결과물이라는 것.",
-      "제약을 피하지 않고 설계 조건으로 받아들이면, 오히려 그 제약이 형태를 결정한다."
+      "좋은 비주얼은 예쁜 이미지 한 장이 아니라, 인쇄기와 재봉틀과 마감 시간이라는 물리적 제약 안에서 완성되는 결과물이라는 것."
      ]
     }
    },
    "en": {
     "title": "Engineered Kaftan",
-    "cat": "Digital Textile & Apparel · Jan–Apr 2026",
+    "cat": "Digital Textile · AI Simulation · Apparel · Jan–Apr 2026",
     "need": "Translating the fluid structure of Chopin's Nocturne into visual movement across silk meant the print had to land exactly on the garment's seams and slits. The problem: the digital printer runs 54 inches wide and the kaftan is over 100. A single panel was physically impossible.",
     "action": [
      "Used the line direction and repetition of sheet music as the pattern's structure, layered against the curves of the body",
      "Split the motif across three panels and redrew the pattern so the joins would not break the flow of the material — calculating coordinates so the printed pieces meet exactly at the seams",
-     "After drafting the pattern and before any sewing, simulated the silhouette and drape with AI to check the result first",
+     "AI simulation: after drafting the pattern and before any sewing, rendered the joined three-panel silhouette and drape with AI to see how it would sit on a body",
      "Ran repeated fit trials, adjusting the neckline and shortening the garment (front −3\", back −1.5\") to optimise drape and movement",
      "Positioned the result as elevated resortwear for consumers who value narrative-driven garments"
     ],
     "result": [
      "Entered as the class representative on faculty recommendation, then selected for permanent inclusion in the Wilson College Collection, NC State (Apr 2026)"
     ],
-    "headline": "The printer was 54 inches wide. The garment was over 100. It had to print in pieces and read as one.",
+    "headline": "The printer was 54 inches wide; the garment was over 100. I printed it in three panels — and put it on a body with AI before cutting anything.",
     "metrics": [
      {
       "v": "Selected",
@@ -389,8 +412,7 @@ window.PROJECTS = [
     "detail": {
      "title": "What the project taught",
      "body": [
-      "A good visual is not one beautiful image; it is what survives the printer, the sewing machine and the deadline.",
-      "Taken as a design condition rather than an obstacle, the constraint is what decides the form."
+      "A good visual is not one beautiful image; it is what survives the printer, the sewing machine and the deadline."
      ]
     }
    }
@@ -408,35 +430,39 @@ window.PROJECTS = [
   ],
   "year": "2024",
   "period": "2024.03–10",
-  "thumb": "/images/projects/fashion-show-2024/05.jpg",
+  "thumb": "/images/projects/fashion-show-2024/a01.jpg",
   "images": [
-   "/images/projects/fashion-show-2024/01.jpg",
-   "/images/projects/fashion-show-2024/02.jpg",
-   "/images/projects/fashion-show-2024/03.jpg",
-   "/images/projects/fashion-show-2024/04.jpg",
-   "/images/projects/fashion-show-2024/05.jpg",
-   "/images/projects/fashion-show-2024/06.jpg",
-   "/images/projects/fashion-show-2024/07.jpg",
-   "/images/projects/fashion-show-2024/08.jpg",
-   "/images/projects/fashion-show-2024/09.jpg",
-   "/images/projects/fashion-show-2024/10.jpg",
-   "/images/projects/fashion-show-2024/11.jpg",
-   "/images/projects/fashion-show-2024/12.jpg",
-   "/images/projects/fashion-show-2024/13.jpg",
-   "/images/projects/fashion-show-2024/14.jpg",
-   "/images/projects/fashion-show-2024/15.jpg"
+   "/images/projects/fashion-show-2024/a01.jpg",
+   "/images/projects/fashion-show-2024/a02.jpg",
+   "/images/projects/fashion-show-2024/a03.jpg",
+   "/images/projects/fashion-show-2024/a04.jpg",
+   "/images/projects/fashion-show-2024/a05.jpg",
+   "/images/projects/fashion-show-2024/a06.jpg",
+   "/images/projects/fashion-show-2024/a07.jpg",
+   "/images/projects/fashion-show-2024/a08.jpg",
+   "/images/projects/fashion-show-2024/a09.jpg",
+   "/images/projects/fashion-show-2024/a10.jpg",
+   "/images/projects/fashion-show-2024/a11.jpg"
   ],
   "role": {
-   "ko": "디자이너 · 홍보 파트 전담 (팀 컬렉션)",
-   "en": "Designer; owned promotion — film, SNS, interviews (team collection)"
+   "ko": "디자이너 · 홍보팀 (팀 컬렉션)",
+   "en": "Designer; promotion team (team collection)"
   },
   "spotify": null,
   "spotifyNote": null,
+  "process": [
+   "/images/projects/fashion-show-2024/01.jpg",
+   "/images/projects/fashion-show-2024/02.jpg",
+   "/images/projects/fashion-show-2024/03.jpg",
+   "/images/projects/fashion-show-2024/a12.jpg",
+   "/images/projects/fashion-show-2024/04.jpg",
+   "/images/projects/fashion-show-2024/14.jpg"
+  ],
   "nar": {
    "ko": {
     "title": "2024 SNU 패션쇼 〈형(形)〉",
     "cat": "컬렉션 · 런웨이 · 팀 프로젝트 · 2024.03–10",
-    "headline": "옷을 만드는 일과 그 옷을 어떻게 보여줄지 정하는 일을 한 프로젝트 안에서 같이 맡았다.",
+    "headline": "디자이너로 컬렉션을 만들고, 홍보팀으로 그 컬렉션을 알렸다.",
     "need": "학과 패션쇼는 옷이 완성되면 끝난다. 하지만 완성된 컬렉션을 아무도 모르면 런웨이 하루로 끝나 버린다. 콘셉트를 세우는 일과 그것을 밖으로 알리는 일이 따로 놀고 있었다.",
     "action": [
      "컬렉션 콘셉트 '형(形)' 개발과 의상 제작을 주도",
@@ -445,20 +471,41 @@ window.PROJECTS = [
      "완성된 컬렉션을 알리는 숏폼 영상 제작과 인스타그램 운영을 직접 맡음",
      "디자이너 인터뷰를 기획·진행해 옷 뒤의 의도를 콘텐츠로 남김"
     ],
-    "note": "팀 컬렉션 — 콘셉트 개발과 의상 제작을 주도하고, 홍보 파트(영상·SNS·인터뷰)를 전담했다.",
-    "detail": {
-     "title": "어떻게 판단했나",
-     "body": [
-      "컬렉션 제목 '형(形)'은 형태 그 자체를 뜻한다. 딱딱한 테일러링과 흐르는 소재를 한 벌 안에 겹쳐서, 형태가 고정된 것이 아니라 움직임에 따라 계속 바뀌는 것이라는 점을 보여주려 했다.",
-      "런웨이는 하루지만 기록은 남는다. 그래서 옷이 완성되는 과정부터 촬영해 숏폼으로 편집했고, 인스타그램은 쇼 당일이 아니라 준비 기간부터 운영했다.",
-      "디자이너 인터뷰는 옷 설명이 아니라 '왜 이 형태였는지'를 묻는 방향으로 구성했다. 완성된 옷만 보면 알 수 없는 판단 과정이 컬렉션의 내용이라고 봤기 때문이다."
-     ]
-    }
+    "note": "팀 컬렉션 — 디자이너로 콘셉트와 의상 제작을 주도하고, 홍보팀으로 영상·SNS·인터뷰를 맡았다.",
+    "detail": null,
+    "roles": [
+     {
+      "label": "디자이너",
+      "need": "쇼의 주제는 '형(形)'이었다. 형태를 가장 잘 보여주려면 색을 줄여야 한다고 생각했다 — 한정된 색만으로 형태를 드러내는 것이 과제였다.",
+      "action": [
+       "색을 한정하고, 대신 실루엣의 대비와 '구' 형태의 레이어링으로 형태를 드러냄",
+       "컬렉션 콘셉트 '형(形)' 개발과 의상 제작을 주도",
+       "플랫 스케치 → 가봉 → 최종 런웨이 룩까지 제작 전 과정을 직접 진행",
+       "오버사이즈 테일러링을 흐르는 실루엣과 겹친 시스루로 풀어 '형태의 유동성'을 옷으로 번역"
+      ],
+      "result": [
+       "2024 SNU 패션쇼 〈형(形)〉 런웨이에서 발표"
+      ]
+     },
+     {
+      "label": "홍보팀",
+      "need": "학과 패션쇼는 옷이 완성되면 끝난다. 하지만 완성된 컬렉션을 아무도 모르면 런웨이 하루로 끝나 버린다.",
+      "action": [
+       "옷이 완성되는 과정부터 촬영해 숏폼 영상으로 편집 — 쇼 당일이 아니라 준비 기간부터 인스타그램 운영",
+       "인스타그램 피드를 매거진처럼 구성",
+       "디자이너 인터뷰를 기획·진행 — 옷 설명이 아니라 '왜 이 형태였는지'를 묻는 방향으로"
+      ],
+      "result": null,
+      "images": [
+       "/images/projects/fashion-show-2024/15.jpg"
+      ]
+     }
+    ]
    },
    "en": {
     "title": "2024 SNU Fashion Show — Form",
     "cat": "Collection · Runway · Team · 2024.03–10",
-    "headline": "Making the clothes and deciding how they would be seen were the same job on this project.",
+    "headline": "As a designer I made the collection; on the promotion team I made sure it was seen.",
     "need": "A school runway show ends when the garments are finished. If nobody hears about the collection, one evening is all it gets.",
     "action": [
      "Led concept development for the collection 'Form' and the garment construction",
@@ -467,7 +514,36 @@ window.PROJECTS = [
      "Produced the short-form promo video and ran the Instagram account",
      "Planned and conducted the designer interviews so the intent behind the clothes survived the show"
     ],
-    "note": "Team collection — led concept and construction, owned the promotion (video, social, interviews)."
+    "note": "Team collection — led concept and construction as a designer, and ran video, social and interviews on the promotion team.",
+    "roles": [
+     {
+      "label": "Designer",
+      "need": "The show's theme was 'Form'. I felt form reads best with less colour — the task was to let form show through a limited palette alone.",
+      "action": [
+       "Limited the palette and let form come through contrast of silhouette and layered round forms instead",
+       "Led concept development for the collection 'Form' and the garment construction",
+       "Ran the full build — flat sketch, muslin fitting, final runway look",
+       "Translated 'fluidity of form' into oversized tailoring softened by flowing silhouettes and layered sheers"
+      ],
+      "result": [
+       "Shown on the runway at the 2024 SNU Fashion Show 'Form'"
+      ]
+     },
+     {
+      "label": "Promotion team",
+      "need": "A school runway show ends when the garments are finished. If nobody hears about the collection, one evening is all it gets.",
+      "action": [
+       "Filmed the garments from the making stage and cut them into short-form video — Instagram ran from the preparation period, not just on show day",
+       "Laid the Instagram feed out like a magazine",
+       "Planned and ran the designer interviews — asking not what the clothes are but why this form"
+      ],
+      "result": null,
+      "images": [
+       "/images/projects/fashion-show-2024/15.jpg"
+      ]
+     }
+    ],
+    "detail": null
    }
   },
   "title": "2024 SNU Fashion Show",
@@ -483,7 +559,7 @@ window.PROJECTS = [
   ],
   "year": "2025",
   "period": "2023.07–2024.06",
-  "thumb": "/images/projects/campus-festival/02.jpg",
+  "thumb": "/images/projects/campus-festival/05.jpg",
   "images": [
    "/images/projects/campus-festival/01.jpg",
    "/images/projects/campus-festival/02.jpg",
@@ -493,14 +569,11 @@ window.PROJECTS = [
    "/images/projects/campus-festival/06.jpg",
    "/images/projects/campus-festival/07.jpg",
    "/images/projects/campus-festival/08.jpg",
-   "/images/projects/campus-festival/09.jpg",
-   "/images/projects/campus-festival/10.jpg",
-   "/images/projects/campus-festival/11.jpg",
-   "/images/projects/campus-festival/12.jpg"
+   "/images/projects/campus-festival/09.jpg"
   ],
   "role": {
-   "ko": "브랜딩 · 일러스트 · 굿즈 총괄 (디자인팀 6인)",
-   "en": "Branding, illustration, merchandise lead (design team of 6)"
+   "ko": "브랜딩 · 일러스트 · 굿즈 디자인 (디자인팀 6인 중 팀원)",
+   "en": "Branding, illustration, merchandise design (member of a six-person design team)"
   },
   "spotify": null,
   "spotifyNote": null,
@@ -562,58 +635,17 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026.01–04",
-  "thumb": "/images/projects/art2wear/01.jpg",
+  "thumb": "/images/projects/art2wear/a02.jpg",
   "images": [
-   "/images/projects/art2wear/01.jpg",
-   "/images/projects/art2wear/02.jpg",
-   "/images/projects/art2wear/03.jpg",
-   "/images/projects/art2wear/04.jpg",
-   "/images/projects/art2wear/05.jpg",
-   "/images/projects/art2wear/06.jpg",
-   "/images/projects/art2wear/07.jpg",
-   "/images/projects/art2wear/08.jpg",
-   "/images/projects/art2wear/09.jpg",
-   "/images/projects/art2wear/10.jpg",
-   "/images/projects/art2wear/11.jpg",
-   "/images/projects/art2wear/12.jpg",
-   "/images/projects/art2wear/13.jpg",
-   "/images/projects/art2wear/14.jpg",
-   "/images/projects/art2wear/15.jpg",
-   "/images/projects/art2wear/16.jpg",
-   "/images/projects/art2wear/17.jpg",
-   "/images/projects/art2wear/18.jpg",
-   "/images/projects/art2wear/19.jpg",
-   "/images/projects/art2wear/20.jpg",
-   "/images/projects/art2wear/21.jpg",
-   "/images/projects/art2wear/22.jpg",
-   "/images/projects/art2wear/23.jpg",
-   "/images/projects/art2wear/24.jpg",
-   "/images/projects/art2wear/25.jpg",
-   "/images/projects/art2wear/26.jpg",
-   "/images/projects/art2wear/27.jpg",
-   "/images/projects/art2wear/28.jpg",
-   "/images/projects/art2wear/29.jpg",
-   "/images/projects/art2wear/30.jpg",
-   "/images/projects/art2wear/31.jpg",
-   "/images/projects/art2wear/32.jpg",
-   "/images/projects/art2wear/33.jpg",
-   "/images/projects/art2wear/34.jpg",
-   "/images/projects/art2wear/35.jpg",
-   "/images/projects/art2wear/36.jpg",
-   "/images/projects/art2wear/37.jpg",
-   "/images/projects/art2wear/38.jpg",
-   "/images/projects/art2wear/39.jpg",
-   "/images/projects/art2wear/40.jpg",
-   "/images/projects/art2wear/41.jpg",
-   "/images/projects/art2wear/42.jpg",
-   "/images/projects/art2wear/43.jpg",
-   "/images/projects/art2wear/44.jpg",
-   "/images/projects/art2wear/45.jpg",
-   "/images/projects/art2wear/46.jpg",
-   "/images/projects/art2wear/47.jpg",
-   "/images/projects/art2wear/48.jpg",
-   "/images/projects/art2wear/49.jpg",
-   "/images/projects/art2wear/50.jpg"
+   "/images/projects/art2wear/a02.jpg",
+   "/images/projects/art2wear/a01.jpg",
+   "/images/projects/art2wear/a03.jpg",
+   "/images/projects/art2wear/a04.jpg",
+   "/images/projects/art2wear/a05.jpg",
+   "/images/projects/art2wear/a06.jpg",
+   "/images/projects/art2wear/a09.jpg",
+   "/images/projects/art2wear/a14.jpg",
+   "/images/projects/art2wear/43.jpg"
   ],
   "role": {
    "ko": "디자인 · 소재 개발 · 제작 · 런웨이 모델",
@@ -621,6 +653,18 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "process": [
+   "/images/projects/art2wear/41.jpg",
+   "/images/projects/art2wear/40.jpg",
+   "/images/projects/art2wear/19.jpg",
+   "/images/projects/art2wear/20.jpg",
+   "/images/projects/art2wear/22.jpg",
+   "/images/projects/art2wear/23.jpg",
+   "/images/projects/art2wear/24.jpg",
+   "/images/projects/art2wear/25.jpg",
+   "/images/projects/art2wear/30.jpg",
+   "/images/projects/art2wear/32.jpg"
+  ],
   "nar": {
    "ko": {
     "title": "Art2Wear 2026 — Tensed Symbiosis",
@@ -771,28 +815,16 @@ window.PROJECTS = [
   "period": "2024.07–2025.06",
   "thumb": "/images/14_music_video_teaser.jpg",
   "images": [
-   "/images/projects/music-video/01.jpg",
-   "/images/projects/music-video/02.jpg",
-   "/images/projects/music-video/03.jpg",
-   "/images/projects/music-video/04.jpg",
-   "/images/projects/music-video/05.jpg",
-   "/images/projects/music-video/06.jpg",
-   "/images/projects/music-video/07.jpg",
-   "/images/projects/music-video/08.jpg",
-   "/images/projects/music-video/09.jpg",
-   "/images/projects/music-video/10.jpg",
-   "/images/projects/music-video/11.jpg",
-   "/images/projects/music-video/12.jpg",
-   "/images/projects/music-video/13.jpg",
-   "/images/projects/music-video/14.jpg",
-   "/images/projects/typography-video/01.jpg",
-   "/images/projects/typography-video/02.jpg",
-   "/images/projects/typography-video/03.jpg",
-   "/images/projects/typography-video/04.jpg"
+   "/images/projects/sub-motion/mv01.jpg",
+   "/images/projects/sub-motion/mv02.jpg",
+   "/images/projects/sub-motion/ty01.jpg",
+   "/images/projects/sub-motion/ty02.jpg",
+   "/images/projects/sub-motion/ty03.jpg",
+   "/images/projects/sub-motion/ty04.jpg"
   ],
   "role": {
-   "ko": "모션그래픽 · 편집 (2–4인 팀에서 모션 파트 담당)",
-   "en": "Motion graphics and editing — owned the motion part in teams of 2–4"
+   "ko": "모션그래픽 · 편집 (2–4인 팀, 파트 분담 · '후라이의 꿈' 조장)",
+   "en": "Motion graphics and editing — teams of 2–4 splitting the work by part; team lead on \"Fry's Dream\""
   },
   "spotify": null,
   "spotifyNote": null,
@@ -800,59 +832,49 @@ window.PROJECTS = [
   "video2": "https://www.youtube.com/embed/9abbAMsJ7vo",
   "nar": {
    "ko": {
-    "title": "음악을 화면으로 옮기는 일",
+    "title": "모션그래픽",
     "cat": "모션그래픽 · After Effects · SUB 학생방송국",
-    "headline": "곡마다 화면 언어가 달라야 한다. 세 곡에 세 가지 방식을 썼다.",
-    "metrics": [
-     {
-      "v": "3편",
-      "l": "아티스트 음악 기반 영상"
-     }
-    ],
-    "need": "음악 기반 영상은 곡을 설명하면 안 되고, 곡이 이미 가진 톤을 화면으로 번역해야 한다. 곡마다 그 톤이 달라서 같은 편집 문법을 재사용할 수 없었다.",
+    "headline": "여럿이 파트를 나눠 만들어도 한 편처럼 보이게, 그리고 흔하지 않게.",
+    "metrics": [],
+    "need": "세 편 모두 2–4인 팀이 같은 모션 작업을 파트별로 나눠 만드는 구조였다. 나눠 만들수록 전체 영상의 일관성이 깨지기 쉬웠고, 아티스트 음악 기반 영상은 자칫 흔해 보이기 쉬웠다.",
     "action": [
-     "'Toxic Till the End'(로제) — 뮤직비디오가 하나의 서사로 흐른다는 점에 맞춰, 필름 릴 속 장면들이 살아나는 구성으로 티저를 설계. 원본의 시그니처 컬러와 체스판 이미지를 가져와 톤과 상징을 유지 (3인 팀)",
+     "'Toxic Till the End'(로제) — 뮤직비디오가 하나의 서사로 흐른다는 점에 맞춰, 필름 릴 속 장면들이 살아나는 구성으로 티저를 설계. 원본의 시그니처 컬러와 체스판 이미지를 가져와 톤과 상징을 유지 (4인 팀)",
      "'APT' — 지퍼 형태의 타이포그래피와 하트 이미지로 곡의 리듬을 글자 자체의 움직임으로 처리 (2인 팀)",
-     "'후라이의 꿈' — 손으로 그린 캐릭터 애니메이션으로, 곡의 따뜻한 정서를 정교한 그래픽 대신 손맛으로 옮김 (4인 팀)",
-     "세 작업 모두 여러 명이 함께 만드는 구조 안에서 타이포그래피·모션그래픽 파트를 맡아 그 파트의 완성도를 책임지는 방식으로 작업"
+     "'후라이의 꿈' — 손으로 그린 캐릭터 애니메이션으로, 곡의 따뜻한 정서를 정교한 그래픽 대신 손맛으로 옮김 (4인 팀, 조장) — 파트를 나누기 전에 에셋을 미리 정해 전체가 한 편으로 이어지도록 리드",
+     "세 편 모두 어떻게 하면 흔하지 않을지를 먼저 고민하고, 곡마다 다른 화면 문법을 정함"
     ],
     "result": null,
     "detail": {
      "title": "팀 안에서의 역할",
      "body": [
-      "세 편 모두 팀 작업이다. 내가 맡은 건 타이포그래피와 모션그래픽 파트였고, 전체 연출이 아니라 그 파트의 완성도를 끝까지 책임지는 자리였다.",
-      "혼자 만드는 작업과 다른 점은, 내 파트가 다른 사람의 파트와 붙었을 때 톤이 어긋나지 않아야 한다는 것이었다."
+      "세 편 모두 팀원 전원이 모션 작업을 했고, 같은 일을 파트별로 나눠 맡는 방식이었다.",
+      "나눠 만든 파트가 붙었을 때 한 편처럼 보여야 해서, 조장을 맡은 '후라이의 꿈'에서는 작업을 나누기 전에 에셋을 먼저 정해 두었다."
      ]
     }
    },
    "en": {
-    "title": "Putting Music on Screen",
+    "title": "Motion Graphics",
     "cat": "Motion Graphics · After Effects · SNU Student Broadcasting",
-    "headline": "Every track needs its own screen language. Three tracks, three approaches.",
-    "metrics": [
-     {
-      "v": "3",
-      "l": "artist music pieces"
-     }
-    ],
-    "need": "Music-led film should not explain the song; it should translate the tone the song already has. That tone changes per track, so the same editing grammar could not be reused.",
+    "headline": "Split between several people, but reading as one piece — and not like every other one.",
+    "metrics": [],
+    "need": "All three were made by teams of two to four splitting the same motion work by part. The more it is split, the easier the whole loses consistency — and music-led pieces for artists easily end up looking like everyone else’s.",
     "action": [
-     "'Toxic Till the End' (Rosé) — the music video runs as a single narrative, so the teaser was composed as scenes coming alive inside a roll of film, carrying over the original's signature palette and chessboard imagery (team of 3)",
+     "'Toxic Till the End' (Rosé) — the music video runs as a single narrative, so the teaser was composed as scenes coming alive inside a roll of film, carrying over the original's signature palette and chessboard imagery (team of 4)",
      "'APT' — zipper-formed typography and heart imagery, letting the letters themselves carry the rhythm (team of 2)",
-     "\"Fry's Dream\" — hand-drawn character animation, moving the track's warmth through hand feel rather than polish (team of 4)",
-     "In each, I owned the typography and motion-graphics part and carried that part to finish inside a larger collaborative build"
+     "\"Fry's Dream\" — hand-drawn character animation, moving the track's warmth through hand feel rather than polish (team of 4, team lead) — fixed the assets before the work was split, so the parts would join as one piece",
+     "For each, asked first how it could avoid looking like every other one, and set a different screen language per track"
     ],
     "result": null,
     "detail": {
      "title": "The role inside a team",
      "body": [
-      "All three were team projects. My part was typography and motion graphics — not overall direction, but full responsibility for that part.",
-      "What differs from working alone is that your part has to meet someone else's part without the tone breaking."
+      "Everyone on each team did motion work; the same job was divided by part.",
+      "The parts had to read as one piece once joined, so on \"Fry's Dream\", where I was team lead, the assets were fixed before the work was split."
      ]
     }
    }
   },
-  "title": "음악을 화면으로 옮기는 일",
+  "title": "Motion Graphics",
   "desc": "아티스트의 곡을 티저와 타이포그래피 영상으로 옮긴 세 편의 작업. 'Toxic Till the End'(로제), 'APT', '후라이의 꿈'."
  },
  {
@@ -867,30 +889,17 @@ window.PROJECTS = [
   "period": "2024.09–12",
   "thumb": "/images/04_senior_fit_ergonomic.jpg",
   "images": [
-   "/images/projects/senior-fit/01.jpg",
-   "/images/projects/senior-fit/02.jpg",
-   "/images/projects/senior-fit/03.jpg",
-   "/images/projects/senior-fit/04.jpg",
-   "/images/projects/senior-fit/05.jpg",
-   "/images/projects/senior-fit/06.jpg",
-   "/images/projects/senior-fit/07.jpg",
-   "/images/projects/senior-fit/08.jpg",
-   "/images/projects/senior-fit/09.jpg",
-   "/images/projects/senior-fit/10.jpg",
-   "/images/projects/senior-fit/11.jpg",
-   "/images/projects/senior-fit/12.jpg",
-   "/images/projects/senior-fit/13.jpg",
-   "/images/projects/senior-fit/14.jpg",
-   "/images/projects/senior-fit/15.jpg",
-   "/images/projects/senior-fit/16.jpg",
-   "/images/projects/senior-fit/17.jpg",
-   "/images/projects/senior-fit/18.jpg",
-   "/images/projects/senior-fit/19.jpg",
-   "/images/projects/senior-fit/20.jpg",
-   "/images/projects/senior-fit/21.jpg",
-   "/images/projects/senior-fit/22.jpg",
-   "/images/projects/senior-fit/23.jpg",
-   "/images/projects/senior-fit/24.jpg"
+   "/images/projects/senior-fit/a01.jpg",
+   "/images/projects/senior-fit/a02.jpg",
+   "/images/projects/senior-fit/a03.jpg",
+   "/images/projects/senior-fit/a04.jpg",
+   "/images/projects/senior-fit/a05.jpg",
+   "/images/projects/senior-fit/a07.jpg",
+   "/images/projects/senior-fit/a11.jpg",
+   "/images/projects/senior-fit/a12.jpg",
+   "/images/projects/senior-fit/a08.jpg",
+   "/images/projects/senior-fit/a09.jpg",
+   "/images/projects/senior-fit/a10.jpg"
   ],
   "role": {
    "ko": "사용자 인터뷰 · 패턴 · 제작 (어르신 한 분 전담)",
@@ -920,7 +929,7 @@ window.PROJECTS = [
   },
   "nar": {
    "ko": {
-    "title": "시니어핏",
+    "title": "인체공학적 의복디자인",
     "cat": "적응형 디자인 · 사용자 리서치 · 2024.09–12",
     "headline": "처음부터 원하는 옷을 묻지 않았다. 편해지신 뒤에야 나온 말들에 진짜 답이 있었다.",
     "metrics": [
@@ -954,9 +963,9 @@ window.PROJECTS = [
     }
    },
    "en": {
-    "title": "Senior-Fit",
+    "title": "Ergonomic Clothing Design",
     "cat": "Adaptive Design · User Research · Sep–Dec 2024",
-    "headline": "I never opened by asking what they wanted. The real answers came only once she was comfortable.",
+    "headline": "I never opened by asking what they wanted. The real answers came only once they were comfortable.",
     "metrics": [
      {
       "v": "1:1",
@@ -969,11 +978,11 @@ window.PROJECTS = [
     ],
     "need": "Clothing for seniors usually keeps the function and loses the desire. Design it on assumptions about what is uncomfortable and you get that result again. And one conversation is not enough — people give a safe answer to someone they have just met.",
     "action": [
-     "Took one resident as my model and met her repeatedly, including outside class hours",
-     "Opened not with clothing but with daily life and taste, building the relationship first — the real preferences surfaced only once she was at ease, and those became the design criteria",
-     "Let her choose the fabric herself, then built the design around that choice",
+     "Took one senior as my model and met them repeatedly, including outside class hours",
+     "Opened not with clothing but with daily life and taste, building the relationship first — the real preferences surfaced only once they were at ease, and those became the design criteria",
+     "Let them choose the fabric, then built the design around that choice",
      "Translated observation into specification — patterned the coat around a curved back and arms that swing backward when walking, and added a shoulder pad to compensate for asymmetry once worn",
-     "She wore the finished coat on the senior runway"
+     "The model wore the finished coat on the senior runway"
     ],
     "result": [
      "Chosen by the supervising professor as the class's interview subject for The SNU Newspaper (1 Dec 2024)"
@@ -982,13 +991,13 @@ window.PROJECTS = [
      "title": "What the project taught",
      "body": [
       "The best work can only be made by the person who knows the subject best — and knowing them best does not arrive in a single question.",
-      "It was also training in turning observation into specification. 'Her back is curved' has to become a pattern correction, and 'her shoulders are uneven' a decision about shoulder padding, before the garment is actually comfortable.",
-      "At MiraeN I understood the audience by reading metrics; here I understood her by meeting her repeatedly. Different methods, same starting point: the recipient's conditions, not the maker's taste."
+      "It was also training in turning observation into specification. 'A curved back' has to become a pattern correction, and 'uneven shoulders' a decision about shoulder padding, before the garment is actually comfortable.",
+      "At MiraeN I understood the audience by reading metrics; here I understood one person by meeting them repeatedly. Different methods, same starting point: the recipient’s conditions, not the maker’s taste."
      ]
     }
    }
   },
-  "title": "시니어핏",
+  "title": "Ergonomic Clothing Design",
   "desc": "관악노인종합복지관의 어르신 한 분을 담당해 수업 밖에서까지 여러 차례 만나 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 만든 코트. 완성작으로 시니어 런웨이까지 진행했다."
  },
  {
@@ -1482,7 +1491,7 @@ window.PROJECTS = [
   "spotifyNote": null,
   "nar": {
    "ko": {
-    "title": "Squeezed Motion",
+    "title": "데님 디자인 공모전",
     "cat": "데님 디자인 · 공모전 입선 · 2026",
     "headline": "만들기 전에 수십 번 먼저 만들어봤다. AI를 스케치북처럼 썼다.",
     "metrics": [
@@ -1495,7 +1504,7 @@ window.PROJECTS = [
     "action": [
      "'물감 튜브에서 흘러나온 물감이 데님의 풀린 실로 변한다'는 하나의 서사를 축으로 잡고, 프린트(그래픽)와 리얼 데미지(실)가 옆선에서 이어지도록 설계",
      "AI로 아이디어를 대량 시뮬레이션 — 일러스트, 인스퍼레이션, 그래픽이 프린트됐을 때의 모습, 실루엣 변주, 컬러웨이까지 실물 제작 전에 눈으로 확인",
-     "하프톤 점묘로 물감이 점점 흩어지는 그래디언트를 만들고, 그 점이 끝나는 지점에서 실제 프린지가 시작되도록 앞뒤를 연결",
+     "물감이 점점 흩어지는 그래디언트를 만들고, 그 그래디언트가 끝나는 지점에서 실제 프린지가 시작되도록 앞뒤를 연결",
      "물감 튜브 그래픽을 하프톤·ASCII·레트로·애시드·그레인·찢어진 종이·잉크브러시 등 여덟 가지 그래픽 언어로 전개해, 같은 오브젝트가 표현 방식에 따라 어디까지 달라지는지 실험",
      "로우 워시 raw indigo 데님과 아이보리 캔버스 백패치로 소재를 확정하고, 원단을 받아 실물 한 벌을 제작"
     ],
@@ -1512,7 +1521,7 @@ window.PROJECTS = [
     }
    },
    "en": {
-    "title": "Squeezed Motion",
+    "title": "D&J Korea Denim Design Challenge",
     "cat": "Denim Design · Competition · Honorable Mention · 2026",
     "headline": "I made it dozens of times before making it. AI was the sketchbook.",
     "metrics": [
@@ -1525,7 +1534,7 @@ window.PROJECTS = [
     "action": [
      "Built everything on one narrative — paint squeezed from a tube becomes the frayed threads of the denim — with print and real damage meeting at the side seam",
      "Simulated ideas in bulk with AI: illustration, inspiration, how the graphic would look once printed, silhouette variations, colorways — all seen before anything was cut",
-     "Used halftone dots to scatter the paint into a gradient, and started the real fringe exactly where the dots end, connecting front to back",
+     "Scattered the paint into a gradient, and started the real fringe exactly where the gradient ends, connecting front to back",
      "Ran the paint-tube graphic through eight treatments — halftone, ASCII, retro, acid, grain, torn paper, ink brush — to see how far the same object could travel by treatment alone",
      "Settled on low-wash raw indigo denim with an ivory canvas back patch, then built the single garment from the delivered fabric"
     ],
@@ -1542,7 +1551,7 @@ window.PROJECTS = [
     }
    }
   },
-  "title": "Squeezed Motion",
+  "title": "D&J Korea Denim Design Challenge",
   "desc": "물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 수십 개의 방향을 먼저 시뮬레이션한 뒤, 원단을 받아 실제 제작에 들어갔다."
  },
  {
@@ -1603,11 +1612,31 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026",
-  "thumb": "/images/projects/portfolio-site/01.jpg",
+  "thumb": "/images/projects/portfolio-site/00-thumb.jpg",
   "images": [
    "/images/projects/portfolio-site/01.jpg",
    "/images/projects/portfolio-site/02.jpg",
-   "/images/projects/portfolio-site/03.jpg"
+   "/images/projects/portfolio-site/03.jpg",
+   "/images/projects/portfolio-site/04.jpg",
+   "/images/projects/portfolio-site/05.jpg",
+   "/images/projects/portfolio-site/06.jpg",
+   "/images/projects/portfolio-site/07.jpg",
+   "/images/projects/portfolio-site/08.jpg",
+   "/images/projects/portfolio-site/09.jpg",
+   "/images/projects/portfolio-site/10.jpg",
+   "/images/projects/portfolio-site/11.jpg",
+   "/images/projects/portfolio-site/12.jpg",
+   "/images/projects/portfolio-site/13.jpg",
+   "/images/projects/portfolio-site/14.jpg",
+   "/images/projects/portfolio-site/15.jpg",
+   "/images/projects/portfolio-site/16.jpg",
+   "/images/projects/portfolio-site/17.jpg",
+   "/images/projects/portfolio-site/18.jpg",
+   "/images/projects/portfolio-site/19.jpg",
+   "/images/projects/portfolio-site/20.jpg",
+   "/images/projects/portfolio-site/21.jpg",
+   "/images/projects/portfolio-site/22.jpg",
+   "/images/projects/portfolio-site/23.jpg"
   ],
   "role": {
    "ko": "기획 · 아트 디렉션 · 콘텐츠 · AI 워크플로우 (단독)",
@@ -1618,7 +1647,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "이 포트폴리오를 만든 과정",
-    "cat": "웹사이트 · 브랜딩 · AI 워크플로우 · 2026",
+    "cat": "웹사이트 · 브랜딩 · AI 워크플로우 · 2026 — 진행 중",
     "headline": "사람들은 AI가 만든 번쩍이는 것에 이미 싫증이 났다. 그래서 반대로, 손때 묻은 공간을 만들었다.",
     "metrics": [
      {
@@ -1633,20 +1662,27 @@ window.PROJECTS = [
      "오브제를 누끼로 떼어내 배경과 분리하고, 스크롤에 따라 방에서 구석으로 걸어 들어가는 전환과 실루엣 단위의 호버를 구현. 카테고리 메뉴 대신 물건을 고르게 함",
      "시그니처로 날치를 골랐다. 물고기인데 난다 — 한 영역에 머물지 않고 옷·영상·마케팅·AI를 두려움 없이 넘나드는 내 방식. 직접 만든 날치 사진을 누끼로 떼어 화면을 천천히 가로지르게 하고, 파비콘·커서 정도에만 쓰고 도배하지 않음",
      "코딩을 모른 채 Claude와 대화로 설계·구현. 콘텐츠는 문제→실행→성과 구조로 쓰고, 수치가 없는 자리는 지어내지 않고 비워둠",
-     "v7에서 방향을 뒤집었다 — 미드저니 씬과 날치 대신 종이·타자기·필름 그레인. Manus로 UI 프로토타입을 만들고, Claude와 실제 데이터·인터랙션을 채워 지금 보는 사이트가 됐다"
+     "v7 (2026.09–): 손으로 그린 콘셉트를 그대로 옮기는 방식으로 바꿨다. 무드보드 = 사진 위에 반투명 종이. 인트로 문장을 타자기처럼 한 줄씩 치고, 문장 위에 내가 아이패드로 그린 메모(괄호·상자·연결선)를 벡터로 다시 그려 얹어 키워드에 마우스를 올리면 나타나게 했다",
+     "툴 분업: Manus에 무드보드와 글로 된 브리프를 주고 첫 UI 프로토타입(더미 프로젝트, 마인드맵 선)을 받았다. 그다음부터는 Claude와 대화로 실제 데이터를 붙이고 인터랙션을 하나씩 고쳤다 — 링이 잘리면 카메라 계산을 바꾸고, 종이가 어색하면 종이를 뺐다",
+     "Selected Work는 3D 링. 프로젝트 사진들이 타원 궤도로 돌고, 가운데에는 내 Art2Wear 작업(깨진 도자기 접시로 만든 꽃)을 사진 4장으로 Tripo에서 3D 스캔해 넣었다. 스크롤로 돌리고, 클릭하면 상세로",
+     "검토는 채팅이 아니라 리뷰 시트로: 프로젝트 26개의 제목·대표사진·본문·타임라인·스킬을 한 페이지에 펼쳐 놓고 바꿀 것만 표시하면 한 번에 반영되는 페이지를 만들어 썼다"
     ],
-    "result": null,
+    "result": [
+     "지금 상태 (2026.10): 인트로 · 3D 링 · 이름 · About · 아카이브 · 연락처 6개 섹션과 프로젝트 26개 상세 페이지가 돌아가는 상태. 코드는 전부 대화로 작성 — 직접 쓴 줄은 0",
+     "다음: 마인드맵을 프로젝트까지 확장(손으로 그린 스케치 기준), 어도비 포트폴리오의 사진 267장 정리해 프로젝트별 사진·본문 재편집, 배경 사운드, 개인 도메인 연결"
+    ],
     "detail": {
      "title": "왜 빈티지인가",
      "body": [
       "새로움은 더 새로운 기술에서 오지 않았다. 모두가 미래를 보여줄 때 과거의 질감을 보여주는 쪽이 오히려 눈에 띄었다. 편집샵과 잡지, 석고상은 패션이 오래 써온 언어이기도 해서, 내가 어디서 온 사람인지도 함께 말해준다.",
-      "AI는 이 사이트의 거의 모든 단계에 들어갔다. 씬 생성, 누끼, 문장 다듬기, 코드. 그런데 결과물에서 AI가 먼저 보이지 않게 하는 것이 이 프로젝트의 기준이었다. 도구가 보이면 사람이 안 보인다."
+      "AI는 이 사이트의 거의 모든 단계에 들어갔다. 씬 생성, 누끼, 문장 다듬기, 코드. 그런데 결과물에서 AI가 먼저 보이지 않게 하는 것이 이 프로젝트의 기준이었다. 도구가 보이면 사람이 안 보인다.",
+      "과정 사진(아래, 순서대로): 엎은 v6 화면 → 레퍼런스 무드보드 → Manus에 준 브리프와 첫 프로토타입 → 아이패드 스케치와 그것을 옮긴 인트로 → 3D 링, 도자기 꽃 스캔 사진과 렌더 → 무드보드 배경, 컨택트, 상세 페이지 인터랙션 → 코드 → 리뷰 시트 → 지금의 마인드맵."
      ]
     }
    },
    "en": {
     "title": "Making This Portfolio",
-    "cat": "Website · Branding · AI Workflow · 2026",
+    "cat": "Website · Branding · AI workflow · 2026 — in progress",
     "headline": "People are already tired of shiny AI-made things. So I went the other way and built a room with fingerprints on it.",
     "metrics": [
      {
@@ -1661,14 +1697,21 @@ window.PROJECTS = [
      "Cut every object out of its background, built a scroll-driven walk from the room into the corner, and made hover follow the silhouette rather than a box. No category menu — you pick up a thing",
      "Chose the flying fish as the signature. A fish that flies — refusing to stay in one lane, crossing garments, film, marketing and AI without fear. Cut out from photos I made, drifting slowly across the screen; used only in the favicon and cursor beyond that",
      "Designed and built entirely in conversation with Claude, with no coding background. Content follows problem → action → result, and where a number does not exist the space is left empty rather than invented",
-     "v7 reversed the direction — paper, typewriter and film grain instead of the Midjourney room and the flying fish. Manus built the UI prototype; the real data and interactions were filled in with Claude, and that is the site you are reading"
+     "v7 (Sep 2026–): the concept became \"carry the hand drawing over as it is\". Moodboard = a photo under translucent paper. The intro types itself one line at a time, and the notes I drew on the iPad (parentheses, boxes, connecting lines) were redrawn as vectors and appear when a keyword is hovered",
+     "Division of tools: Manus got the moodboards and a written brief and returned the first UI prototype (dummy projects, mind-map lines). From there, Claude and I attached the real data and fixed interactions one at a time in conversation — when the ring was clipped we changed the camera maths; when the paper felt wrong we removed the paper",
+     "Selected Work is a 3D ring. Project photos orbit on an ellipse; in the middle sits my Art2Wear piece (a flower made from broken porcelain plates), scanned into 3D in Tripo from four photos. Scroll to rotate, click to open",
+     "Review happened on a sheet, not in chat: all 26 projects' titles, cover images, copy, the timeline and skills laid out on one page where I mark only what changes, and it is applied in one pass"
     ],
-    "result": null,
+    "result": [
+     "Now (Oct 2026): six sections — intro, 3D ring, name, about, archive, contact — and 26 project pages are working. All code was written in conversation; lines typed by hand: 0",
+     "Next: extend the mind map down to projects (from the hand sketch), sort 267 photos from the Adobe portfolio and re-edit each project's images and copy, ambient sound, a personal domain"
+    ],
     "detail": {
      "title": "Why vintage",
      "body": [
       "Newness did not come from newer technology. When everyone shows the future, the texture of the past stands out. Concept stores, magazines and plaster busts are also the language fashion has always spoken, so they say where I come from.",
-      "AI touched nearly every step here — scenes, cut-outs, copy, code. The rule was that it should not be the first thing you see. When the tool shows, the person disappears."
+      "AI touched nearly every step here — scenes, cut-outs, copy, code. The rule was that it should not be the first thing you see. When the tool shows, the person disappears.",
+      "Process images (below, in order): the scrapped v6 screens → reference moodboard → the brief given to Manus and its first prototype → the iPad sketch and the intro built from it → the 3D ring, the porcelain-flower scan photos and render → moodboard ground, contact and detail-page interactions → code → the review sheet → the mind map as it stands."
      ]
     }
    }

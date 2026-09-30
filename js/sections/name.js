@@ -274,15 +274,31 @@ async function createRenderer(section, data) {
     idlePhase += .035;
     const u = .5 + Math.cos(idlePhase) * .34;
     const v = .5 + Math.sin(idlePhase * 1.37) * .22;
-    fluid.inject(u, v, Math.cos(idlePhase + 1.2) * 2.4, Math.sin(idlePhase * .8) * 1.8, 20, 1.0);
+    fluid.inject(u, v, Math.cos(idlePhase + 1.2) * 3.6, Math.sin(idlePhase * .8) * 2.6, 22, 1.3);
     needsRender = true;
+  }
+
+  /* entrance: the first time the name scrolls into view a hand sweeps across it, so even someone who
+     never moves the pointer sees the glass move */
+  let splashAt = 0;
+  let splashed = false;
+  function splash(now) {
+    if (!splashed) { splashed = true; splashAt = now; }
+    const t = (now - splashAt) / 1900;
+    if (t > 1) return false;
+    const u = .08 + t * .84;
+    const v = .5 + Math.sin(t * Math.PI * 2.2) * .16;
+    fluid.inject(u, v, 14, Math.cos(t * Math.PI * 2.2) * 6, 26, 1.5);
+    needsRender = true;
+    return true;
   }
 
   function render(now) {
     if (disposed) return;
     const rect = section.getBoundingClientRect();
     const visible = rect.bottom > 0 && rect.top < window.innerHeight;
-    if (visible && !reducedQuery.matches) idleStir(now);
+    const splashing = visible && !reducedQuery.matches && rect.top < window.innerHeight * .72 && (!splashed || now - splashAt < 1900) && splash(now);
+    if (visible && !reducedQuery.matches && !splashing) idleStir(now);
     if (visible && (needsRender || now < activeUntil || activity > .4)) {
       const delta = Math.min((now - (lastFluidTime || lastTime)) / 1000, .05);
       lastFluidTime = now;

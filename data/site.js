@@ -28,25 +28,35 @@ window.SITE = {
   },
 
   intro: {
+    /* the paragraph has its own language, apart from the site toggle — it opens in English */
+    defaultLang: 'en',
     lines: {
       ko: ['안녕하세요', '이연서입니다.', '저는 사람들의 눈길이 어디에 머무르는지', '마음이 어디서 움직이는지 읽고', '이를 비주얼 언어로 설계하여', '벅차오르는 순간을 만들고자 합니다.'],
-      en: ['Hello,', "I'm Yeonseo Lee.", 'I read where eyes linger,', 'where hearts move —', 'and design it into visual language', 'to make moments that stay.'],
+      en: ['Hello,', "I'm Yeonseo Lee.", 'I read where eyes linger,', 'where hearts move,', 'and design it into visual language', 'to make moments that stay.'],
     },
     /* the full paragraph at the end — same lines, with the commas the typed version leaves out */
     finalLines: {
       ko: ['안녕하세요', '이연서입니다.', '저는 사람들의 눈길이 어디에 머무르는지,', '마음이 어디서 움직이는지 읽고,', '이를 비주얼 언어로 설계하여', '벅차오르는 순간을 만들고자 합니다.'],
-      en: ['Hello,', "I'm Yeonseo Lee.", 'I read where eyes linger,', 'where hearts move —', 'and design it into visual language', 'to make moments that stay.'],
+      en: ['Hello,', "I'm Yeonseo Lee.", 'I read where eyes linger,', 'where hearts move,', 'and design it into visual language', 'to make moments that stay.'],
     },
     paragraph: {
       ko: '안녕하세요, 이연서입니다. 저는 사람들의 눈길이 어디에 머무르는지, 사람들의 마음이 어디서 움직이는지 읽고, 이를 비주얼 언어로 설계하여 벅차오르는 순간을 만들고자 합니다.',
       en: "Hello, I'm Yeonseo Lee. I read where eyes linger and where hearts move, and design it into visual language to make moments that stay.",
     },
     keywords: [
-      { key: 'insight', text: { ko: '사람들의 눈길이 어디에 머무르는지, 사람들의 마음이 어디서 움직이는지 읽고', en: 'read where eyes linger and where hearts move' }, fragments: { ko: ['저는 사람들의 눈길이 어디에 머무르는지,', '마음이 어디서 움직이는지 읽고,'], en: ['I read where eyes linger,', 'where hearts move —'] }, branch: 'INSIGHT', tag: 'INSIGHT' },
+      { key: 'insight', text: { ko: '사람들의 눈길이 어디에 머무르는지, 사람들의 마음이 어디서 움직이는지 읽고', en: 'read where eyes linger and where hearts move' }, fragments: { ko: ['저는 사람들의 눈길이 어디에 머무르는지,', '마음이 어디서 움직이는지 읽고,'], en: ['I read where eyes linger,', 'where hearts move,'] }, branch: 'INSIGHT', tag: 'INSIGHT' },
       { key: 'visual', text: { ko: '비주얼 언어', en: 'visual language' }, branch: ['FASHION', 'CONTENT'], tag: ['FASHION', 'CONTENT'] },
       { key: 'design', text: { ko: '설계', en: 'design' }, branch: 'AI WORKS', tag: 'AI' },
     ],
-    ui: { scroll: 'SCROLL', more: 'MORE →' },
+    ui: { scroll: 'SCROLL', more: 'MORE →', hint: 'click a keyword', langAria: 'intro language' },
+    /* the handwritten sub-notes around the hand-drawn labels (연서's mind map, 2026-10) */
+    notes: {
+      insight: ['research', 'interview', 'targeting', 'marketing', 'trend', 'audience'], /* the elbow line runs toward the 4th */
+      fashion: ['fashion design', 'textile design', 'digital fashion', 'wearable art', 'fashion show', 'adaptive design'],
+      contents: ['short film', 'design', 'motion graphics', 'website', 'video', 'promo'],
+      ai: ['moodboards', 'ideation', 'prototype', 'vibe coding', '3D assets', 'graphics', 'video'], /* in working order */
+      aiTag: 'also this portfolio!',
+    },
   },
 
   profile: {
@@ -75,17 +85,17 @@ window.SITE = {
         link: 'kaftan',
       },
       {
-        claim: { ko: '처음 보는 도구라도 결과까지 끌고 갑니다.', en: 'Unfamiliar tools included, I carry it through to the result.' },
-        keyword: { ko: '결과까지', en: 'through to the result' },
-        evidence: { ko: 'AI 단편영화를 혼자 연출해 대상, 코딩 없이 이 사이트를 직접 구현. 2025–2026', en: 'Directed an AI short film solo — grand prize; built this site with no coding background. 2025–2026' },
-        media: 'images/projects/ai-short-film/05.jpg',
+        claim: { ko: '머릿속 그림을 AI로 바로 눈에 보이는 결과물로 만듭니다.', en: 'I turn the picture in my head into something you can see, with AI.' },
+        keyword: { ko: '눈에 보이는 결과물', en: 'something you can see' },
+        evidence: { ko: 'AI 단편영화를 혼자 연출해 대상. 카프탄은 자르기 전에 AI로 먼저 입혀 봤고, 이 사이트는 코딩 없이 AI와 만들었다. 2025–2026', en: 'Directed an AI short film solo — grand prize. Put the kaftan on a body with AI before cutting it, and built this site with AI, no coding background. 2025–2026' },
+        media: 'images/projects/ai-short-film/11.jpg',
         link: 'ai-short-film',
       },
     ],
 
     stats: [
-      { v: '3.9 / 4.3', l: 'GPA · SNU' },
-      { v: '4.0 / 4.0', l: 'GPA · NC STATE EXCHANGE' },
+      { v: '3.9 / 4.3', l: 'GPA · Seoul National University' },
+      { v: '4.0 / 4.0', l: 'GPA · NC State University (Exchange)' },
       { v: '4', l: 'AWARDS' },
     ],
 
@@ -257,7 +267,43 @@ window.SITE = {
       { label: 'AI WORKS', tag: 'AI' }, { label: 'INSIGHT', tag: 'INSIGHT' }, { label: 'NOW', tag: 'NOW' },
     ],
   },
+  /* moodboard ground behind each project's detail page (photo under vellum). Keys are project slugs;
+     a project without an entry falls back to the pool below, picked by its position. */
+  detailGround: {
+    miraen: 'images/ground/d06-dog-ai.jpg',
+    kaftan: 'images/ground/01-intro.jpg',
+    'ai-short-film': 'images/ground/d14-ai-film-face.jpg',
+    'campus-festival': 'images/ground/04-about.jpg',
+    art2wear: 'images/ground/03-name.jpg',
+    'denim-2026': 'images/ground/02-work.jpg',
+    'fashion-show-2024': 'images/ground/d10-runway-wide.jpg',
+    'directing-a-year': 'images/ground/d16-wilson-collage.jpg',
+    'sub-motion': 'images/ground/d01-filmstrip.jpg',
+    'senior-fit': 'images/ground/d11-sewing-ruffles.jpg',
+    'promo-video-ai': 'images/ground/d15-bad-day-still.jpg',
+    'portfolio-site': 'images/projects/portfolio-site/01.jpg',
+    '3d-graphic-design': 'images/ground/05-archive.jpg',
+    'adaptive-textile': 'images/ground/d07-tufted-portrait.jpg',
+    'ai-art-practice': 'images/ground/d06-dog-ai.jpg',
+    'arts-week-2026': 'images/projects/arts-week-2026/06.jpg',
+    clo3d: 'images/ground/d09-runway-blur.jpg',
+    'engineered-surfaces': 'images/ground/d05-green-repeat.jpg',
+    'fashion-illustration': 'images/ground/d12-popart-face.jpg',
+    'korean-costume': 'images/ground/d04-rabbit-floral.jpg',
+    'seoul-metro': 'images/ground/d01-filmstrip.jpg',
+    'technical-design': 'images/ground/d11-sewing-ruffles.jpg',
+    'textile-knit': 'images/ground/02-work.jpg',
+    'textile-printed': 'images/ground/d02-fox-floral.jpg',
+    'textile-woven': 'images/ground/d13-woven-pink.jpg',
+    'unreal-engine': 'images/ground/d03-stripe-floral.jpg',
+  },
+  detailGroundPool: ['images/ground/d08-runway-stripes.jpg', 'images/ground/06-contact.jpg', 'images/ground/d03-stripe-floral.jpg', 'images/ground/d13-woven-pink.jpg'],
+
+  /* sound: the typewriter click is synthesised; an ambient track plays on loop once SOUND is on
+     (drop an mp3 at audio/ambient.mp3 — leave the path empty for no music) */
+  sound: { ambient: '' },
+
   contactUi: { title: "LET'S TALK.", linkedin: 'LINKEDIN ↗', imageSlot: 'IMAGE 16:9', caption: '05 / 06', footerLeft: '© 2026 YEONSEO LEE' },
   detail: { resultTbc: 'RESULT — TO BE CONFIRMED' },
-  detailUi: { heroSlot: 'IMAGE 16:9', gallerySlot: 'IMAGE', period: 'PERIOD', role: 'ROLE', need: 'NEED', action: 'ACTION', result: 'RESULT', gallery: 'GALLERY', film: 'FILM', press: 'PRESS', soundtrack: 'SOUNDTRACK', close: 'CLOSE', closeExpanded: 'CLOSE −' },
+  detailUi: { heroSlot: 'IMAGE 16:9', gallerySlot: 'IMAGE', period: 'PERIOD', role: 'ROLE', need: 'NEED', action: 'ACTION', result: 'RESULT', gallery: 'GALLERY', process: { ko: '작업과정', en: 'PROCESS' }, film: 'FILM', press: 'PRESS', soundtrack: 'SOUNDTRACK', close: 'CLOSE', closeExpanded: 'CLOSE −' },
 };

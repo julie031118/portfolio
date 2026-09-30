@@ -27,43 +27,6 @@ function loadMedia(frame, source, alt) {
   image.src = source;
 }
 
-async function createPhotoLens(figure, image) {
-  if (mobileQuery.matches || reducedQuery.matches || !image.complete || !image.naturalWidth) return null;
-  const THREE = await import('../vendor/three.module.min.js');
-  if (!figure.matches(':hover')) return null;
-  const canvas = document.createElement('canvas');
-  canvas.className = 'about-photo-lens-canvas'; canvas.setAttribute('aria-hidden', 'true');
-  const border = document.createElement('div'); border.className = 'about-photo-lens-border';
-  figure.append(canvas, border);
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
-  window.__webglLog?.push({ section: 'ABOUT LENS', action: 'create', time: performance.now() });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  const scene = new THREE.Scene();
-  const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-  const texture = new THREE.Texture(image); texture.colorSpace = THREE.SRGBColorSpace; texture.needsUpdate = true;
-  const uniforms = { uPhoto: { value: texture }, uPointer: { value: new THREE.Vector2(.5, .5) }, uResolution: { value: new THREE.Vector2(1, 1) }, uUvScale: { value: new THREE.Vector2(1, 1) }, uUvOffset: { value: new THREE.Vector2(0, 0) }, uLensPx: { value: 160 } };
-  const geometry = new THREE.PlaneGeometry(2, 2);
-  const material = new THREE.ShaderMaterial({
-    transparent: true, depthTest: false, depthWrite: false, uniforms,
-    vertexShader: 'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position,1.0);}',
-    fragmentShader: `precision highp float;uniform sampler2D uPhoto;uniform vec2 uPointer;uniform vec2 uResolution;uniform vec2 uUvScale;uniform vec2 uUvOffset;uniform float uLensPx;varying vec2 vUv;void main(){vec2 pixelDelta=(vUv-uPointer)*uResolution;float halfSize=uLensPx*.5;if(max(abs(pixelDelta.x),abs(pixelDelta.y))>halfSize)discard;vec2 local=pixelDelta/halfSize;float radius=clamp(dot(local,local)*.5,0.0,1.0);float bulge=1.0-.105*(1.0-radius);vec2 sampleUv=uPointer+(vUv-uPointer)*bulge;vec2 coverUv=sampleUv*uUvScale+uUvOffset;gl_FragColor=texture2D(uPhoto,clamp(coverUv,vec2(0.0),vec2(1.0)));}`,
-  });
-  scene.add(new THREE.Mesh(geometry, material));
-  let disposed = false;
-  let controller = null;
-  function resize() { if (disposed) return; const rect = figure.getBoundingClientRect(); renderer.setSize(rect.width, rect.height, false); uniforms.uResolution.value.set(rect.width, rect.height); const containerAspect = rect.width / rect.height; const imageAspect = image.naturalWidth / image.naturalHeight; uniforms.uUvScale.value.set(1, 1); uniforms.uUvOffset.value.set(0, 0); if (imageAspect > containerAspect) { const visibleWidth = containerAspect / imageAspect; uniforms.uUvScale.value.x = visibleWidth; uniforms.uUvOffset.value.x = (1 - visibleWidth) / 2; } else { const visibleHeight = imageAspect / containerAspect; uniforms.uUvScale.value.y = visibleHeight; uniforms.uUvOffset.value.y = (1 - visibleHeight) / 2; } }
-  function move(event) { const rect = figure.getBoundingClientRect(); const x = Math.max(80, Math.min(rect.width - 80, event.clientX - rect.left)); const y = Math.max(80, Math.min(rect.height - 80, event.clientY - rect.top)); uniforms.uPointer.value.set(x / rect.width, 1 - y / rect.height); border.style.transform = `translate3d(${x - 80}px,${y - 80}px,0)`; renderer.render(scene, camera); }
-  function dispose() { if (disposed) return; disposed = true; window.removeEventListener('resize', resize); texture.dispose(); geometry.dispose(); material.dispose(); renderer.dispose(); renderer.forceContextLoss(); window.__webglLog?.push({ section: 'ABOUT LENS', action: 'dispose', time: performance.now() }); canvas.remove(); border.remove(); releaseWebGL(controller); }
-  window.addEventListener('resize', resize, { passive: true });
-  resize();
-  const rect = figure.getBoundingClientRect();
-  border.style.transform = `translate3d(${rect.width / 2 - 80}px,${rect.height / 2 - 80}px,0)`;
-  renderer.render(scene, camera);
-  controller = { dispose, move };
-  window.__activeWebGLController = controller;
-  return controller;
-}
-
 function buildTimeline(track, lang) {
   track.innerHTML = SITE.timeline.map((segment) => {
     const grade = T(segment.grade, lang);
@@ -116,7 +79,6 @@ export function renderAbout(lang) {
   const panel = section.querySelector('.timeline-side-panel');
   const panelInner = panel.querySelector('.timeline-panel-inner');
   const skills = section.querySelector('.about-skill-groups');
-  let lens = null;
   let horizontalTween = null;
   let mobileObserver = null;
   let panelTimer = 0;
@@ -141,16 +103,9 @@ export function renderAbout(lang) {
     item.append(claim, evidence, inline); strengthsList.append(item);
   });
 
-  /* three overlapping photos; the colour lens works on whichever one the pointer is over */
+  /* three overlapping photos (the lens moved to the project cover — a magnified face looked wrong) */
   const photoSources = SITE.profile.photos || [SITE.profile.photo];
-  photoFrames.forEach((frame, index) => {
-    loadMedia(frame, photoSources[index], SITE.profile.photoAlt[lang] || SITE.profile.photoAlt.ko);
-    if (mobileQuery.matches || reducedQuery.matches) return;
-    const image = frame.querySelector('img');
-    frame.addEventListener('pointerenter', async () => { lens?.dispose(); lens = await createPhotoLens(frame, image); });
-    frame.addEventListener('pointermove', (event) => lens?.move(event));
-    frame.addEventListener('pointerleave', () => { lens?.dispose(); lens = null; });
-  });
+  photoFrames.forEach((frame, index) => { loadMedia(frame, photoSources[index], SITE.profile.photoAlt[lang] || SITE.profile.photoAlt.ko); });
 
   SITE.profile.stats.forEach((stat) => { const cell = document.createElement('div'); cell.className = 'about-stat'; const value = document.createElement('strong'); value.textContent = stat.v; const label = document.createElement('span'); label.textContent = stat.l; cell.append(value, label); stats.append(cell); });
   buildTimeline(track, lang);
@@ -206,6 +161,6 @@ export function renderAbout(lang) {
   if (window.__introReady) setupInteractions();
   else { pendingLoadHandler = () => requestAnimationFrame(setupInteractions); window.addEventListener('portfolio:intro-ready', pendingLoadHandler, { once: true }); }
 
-  instance = { destroy() { if (pendingLoadHandler) window.removeEventListener('portfolio:intro-ready', pendingLoadHandler); horizontalTween?.scrollTrigger?.kill(); horizontalTween?.kill(); mobileObserver?.disconnect(); lens?.dispose(); clearTimeout(panelTimer); } };
+  instance = { destroy() { if (pendingLoadHandler) window.removeEventListener('portfolio:intro-ready', pendingLoadHandler); horizontalTween?.scrollTrigger?.kill(); horizontalTween?.kill(); mobileObserver?.disconnect(); clearTimeout(panelTimer); } };
   return instance;
 }

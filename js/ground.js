@@ -3,12 +3,12 @@
    Sections themselves are transparent so the colour bleeds through everywhere. */
 
 export const GROUND = {
-  intro: 'images/projects/kaftan/18.jpg',          /* lavender + cream — the silk moodboard */
-  work: 'images/projects/denim-2026/03.jpg',       /* indigo, concrete */
-  name: 'images/projects/arts-week-2026/06.jpg',   /* lace over green */
-  about: 'images/projects/art2wear/02.jpg',        /* brick, warm */
-  archive: 'images/projects/kaftan/16.jpg',        /* purple silk outdoors */
-  contact: 'images/projects/ai-short-film/05.jpg', /* blue + pink */
+  intro: 'images/ground/01-intro.jpg',     /* lavender flowers on sheet music */
+  work: 'images/ground/02-work.jpg',       /* white wool, denim, red leaves */
+  name: 'images/ground/03-name.jpg',       /* porcelain flower on the form */
+  about: 'images/ground/04-about.jpg',     /* CHIC record, warm brown */
+  archive: 'images/ground/05-archive.jpg', /* silhouette triptych, black / white / green */
+  contact: 'images/ground/06-contact.jpg', /* fashion show, brick and white */
 };
 
 export function initGround() {

@@ -22,9 +22,30 @@ export async function unlockAudio() {
   return true;
 }
 
+/* ambient music: an mp3 named in SITE.sound.ambient, looped quietly while sound is on */
+let ambient = null;
+function ambientTrack() {
+  const source = window.SITE?.sound?.ambient;
+  if (!source) return null;
+  if (!ambient) {
+    ambient = new Audio(source);
+    ambient.loop = true;
+    ambient.preload = 'none';
+    ambient.volume = 0.35;
+  }
+  return ambient;
+}
+function syncAmbient() {
+  const track = ambientTrack();
+  if (!track) return;
+  if (enabled && !document.hidden) track.play().catch(() => { /* needs a gesture first — the SOUND button gives one */ });
+  else track.pause();
+}
+
 export function setSoundEnabled(next) {
   enabled = Boolean(next);
   storageSet('localStorage', SOUND_KEY, enabled ? 'on' : 'off');
+  syncAmbient();
   window.dispatchEvent(new CustomEvent('portfolio:soundchange', { detail: enabled }));
 }
 
@@ -54,6 +75,7 @@ export function typeClick() {
 }
 
 document.addEventListener('visibilitychange', () => {
+  syncAmbient();
   if (!context) return;
   if (document.hidden && context.state === 'running') context.suspend();
   if (!document.hidden && enabled && context.state === 'suspended') context.resume();
