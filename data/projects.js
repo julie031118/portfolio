@@ -1,14 +1,17 @@
-/* Portfolio project data — edit here, no CMS required. */
+/* Portfolio project data — edit here, no CMS required. tags ∈ FASHION|CONTENT|AI|INSIGHT|MOMENTS|NOW */
 window.PROJECTS = [
  {
   "slug": "miraen",
-  "title": "MiraeN Designer & Marketer",
-  "subtitle": "",
-  "cat": "Marketing · Social",
+  "featured": 1,
+  "archiveRank": null,
+  "tags": [
+   "CONTENT",
+   "INSIGHT",
+   "AI"
+  ],
   "year": "2025",
+  "period": "2025.01–08",
   "thumb": "/images/projects/miraen/06.jpg",
-  "desc": "Social media and promotional campaigns for a math education franchise across five Seoul districts.",
-  "role": "Design, marketing",
   "images": [
    "/images/projects/miraen/06.jpg",
    "/images/projects/miraen/07.jpg",
@@ -16,6 +19,12 @@ window.PROJECTS = [
    "/images/projects/miraen/09.jpg",
    "/images/projects/miraen/10.jpg"
   ],
+  "role": {
+   "ko": "디자인 · 콘텐츠 기획 · 채널 운영 · 유료광고 (단독)",
+   "en": "Design, content planning, channel ops, paid media (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
   "nar": {
    "ko": {
     "title": "미래엔수학 디자이너 & 마케터",
@@ -31,8 +40,8 @@ window.PROJECTS = [
       "l": "시리즈 도입 전후"
      },
      {
-      "v": "55명",
-      "l": "5월 재원생 순증"
+      "v": "우수지사장상",
+      "l": "채널 0에서 시작, 3개월 만에"
      }
     ],
     "need": "신설 가맹 지사에는 아무것도 없었다. 인스타그램도 유튜브도 블로그도, 네이버 지도 등록조차 없는 상태. 학원은 검색에서 선택되는데 검색 결과에 브랜드가 존재하지 않았다.",
@@ -47,7 +56,7 @@ window.PROJECTS = [
      "릴스 최고 조회수 2.9만 · 차순위 2.8만 (오프라인 홍보 시리즈)",
      "초반 릴스는 세 자리 수 — 시리즈 도입 후 2.8만으로 전환",
      "사업설명회 릴스 2.2만",
-     "인스타그램 운영 시작 3개월 만에 지사장 5월 우수지사장상 수상 (해당 월 재원생 55명 순증)"
+     "채널이 하나도 없던 상태에서 시작해, 인스타그램 개설 3개월 만에 지사장 5월 우수지사장상 수상"
     ],
     "detail": {
      "title": "어떻게 판단했나",
@@ -77,8 +86,8 @@ window.PROJECTS = [
       "l": "before / after the series"
      },
      {
-      "v": "+55",
-      "l": "net new enrolments in May"
+      "v": "Excellence Award",
+      "l": "3 months after starting from zero"
      }
     ],
     "need": "The new franchise branch had nothing — no Instagram, no YouTube, no blog, not even a Naver Map listing. Parents choose an academy by searching, and in search the brand did not exist.",
@@ -93,7 +102,7 @@ window.PROJECTS = [
      "Top Reel 29,000 views; second 28,000 (the offline-promotion series)",
      "Early Reels sat in the hundreds — the series moved them to 28,000",
      "Business-briefing Reel: 22,000 views",
-     "Branch director won the May Excellence Award three months after launch (+55 net enrolments that month)"
+     "Starting with no channels at all, the branch director won the May Excellence Award three months after the Instagram launch"
     ],
     "detail": {
      "title": "How the calls were made",
@@ -110,18 +119,21 @@ window.PROJECTS = [
     }
    }
   },
-  "featured": 1
+  "title": "MiraeN Designer & Marketer",
+  "desc": "Social media and promotional campaigns for a math education franchise across five Seoul districts."
  },
  {
   "slug": "directing-a-year",
-  "title": "Directing a Year Into Video",
-  "subtitle": "",
-  "cat": "Documentary · Narrative",
+  "featured": 8,
+  "archiveRank": null,
+  "tags": [
+   "CONTENT",
+   "INSIGHT",
+   "AI"
+  ],
   "year": "2026",
+  "period": "2026.07–08",
   "thumb": "/images/projects/directing-a-year/01.jpg",
-  "desc": "A ten-minute narrative video shaped from a year on exchange in NC State's textile program.",
-  "role": "Director, editor",
-  "video": "https://www.youtube.com/embed/GhNy8TXhi-0",
   "images": [
    "/images/projects/directing-a-year/01.jpg",
    "/images/projects/directing-a-year/02.jpg",
@@ -129,20 +141,27 @@ window.PROJECTS = [
    "/images/projects/directing-a-year/04.jpg",
    "/images/projects/directing-a-year/05.jpg"
   ],
+  "role": {
+   "ko": "기획 · 연출 · 편집 · 채널별 배포 설계 (단독)",
+   "en": "Planning, directing, editing, per-channel distribution (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "video": "https://www.youtube.com/embed/GhNy8TXhi-0",
   "nar": {
    "ko": {
-    "title": "1년을 영상으로 설계하다",
-    "cat": "콘텐츠 시스템 기획 · 영상",
-    "role": "기획, 촬영, 편집, 채널별 배포 설계",
+    "title": "교환학생 후기 영상 — 1년을 10분과 30초로",
+    "cat": "콘텐츠 시스템 기획 · 영상 · 서울대 교환학생 국외수학후기 공모전 출품 · 2026.07–08",
     "need": "NC State 윌슨 텍스타일 대학 교환 1년치 영상과, 후배들이 실제로 필요로 하는 비자·비용·주거 정보가 동시에 있었다. 문제는 이 둘을 한 포맷에 담을 수 없다는 것이었다. 정보를 다 넣으면 볼 수 없는 영상이 되고, 빼면 정작 필요한 사람에게 쓸모없어진다.",
     "action": [
-     "분량이 아니라 기능으로 프로젝트를 쪼갬 — 감정선과 호흡 중심의 10분 내러티브 영상(유튜브) + 비자 절차·실제 비용·주거 단계를 담은 7페이지 문서(무료 배포)로 분리",
+     "분량이 아니라 기능으로 프로젝트를 쪼갬 — 감정선과 호흡 중심의 10분 내러티브 영상(공모전 규정 분량 9–11분에 맞춤, 유튜브) + 비자 절차·실제 비용·주거 단계를 담은 7페이지 문서(무료 배포)로 분리",
      "긴 영상은 발견되지 않는다는 점을 전제로, 본편을 잘라낸 게 아니라 자체 훅과 호흡을 가진 30초 세로형 티저를 따로 제작해 숏폼에서 본편으로 유입되도록 설계",
      "1년간 만난 동기·교수·업계 관계자가 한국어 사용자만이 아니라는 점을 반영해 전편 영어 자막 제작",
      "같은 캡션을 복사하지 않고 채널별로 프레이밍을 다시 씀 — 맥락을 이미 아는 네트워크를 위한 링크드인용 전문가 서사와, 훅과 호흡이 다른 인스타그램·유튜브용 버전"
     ],
     "result": [
-     "숏폼 티저: 팔로워 28명 · 게시물 5개인 신규 계정에서 조회수 1,655회 — 팔로워 수의 59배 도달"
+     "숏폼 티저: 팔로워 28명 · 게시물 5개인 신규 계정에서 조회수 1,655회 — 팔로워 수의 59배 도달",
+     "서울대학교 교환학생 국외수학후기 공모전 출품 — 결과 발표 대기 중"
     ],
     "headline": "정보량과 시청성이 충돌했다. 분량이 아니라 기능으로 포맷을 쪼갰다.",
     "metrics": [
@@ -157,18 +176,18 @@ window.PROJECTS = [
     ]
    },
    "en": {
-    "title": "Directing a Year Into Video",
-    "cat": "Content System Design · Film",
-    "role": "Direction, filming, editing, distribution design",
+    "title": "Exchange Year Recap — a year in ten minutes and thirty seconds",
+    "cat": "Content System Design · Film · SNU Exchange Study-Abroad Review Contest entry · Jul–Aug 2026",
     "need": "After a year-long exchange at NC State's Wilson College of Textiles, I had a year of footage and a mountain of practical information juniors actually needed — and no single format that could hold both. Dense enough to cover visas, costs and housing, and it stops being watchable; skip all that, and it stops being useful to the people it's for.",
     "action": [
-     "Split the project by function, not length — a 10-minute narrative video for YouTube built on pacing and emotional arc, plus a separate 7-page document, free to share, holding everything reference-heavy",
+     "Split the project by function, not length — a 10-minute narrative video for YouTube (cut to the contest’s 9–11 minute format) built on pacing and emotional arc, plus a separate 7-page document, free to share, holding everything reference-heavy",
      "Treated discovery as a design problem: cut a 30-second vertical teaser with its own hook and pacing rather than a trimmed copy of the long video, built to pull viewers back to the full story",
      "Added English subtitles throughout, since the classmates, professors and industry contacts this story was relevant to weren't only Korean speakers",
      "Rewrote the framing per channel instead of reposting one caption — a professional throughline for LinkedIn, a different hook and pacing for Instagram and YouTube"
     ],
     "result": [
-     "Short-form teaser: 1,655 views from a new account with 28 followers and 5 posts — 59x its follower count"
+     "Short-form teaser: 1,655 views from a new account with 28 followers and 5 posts — 59x its follower count",
+     "Entered in the SNU Exchange Student Study-Abroad Review Contest — results pending"
     ],
     "headline": "Information and watchability were in conflict, so I split the project by function, not length.",
     "metrics": [
@@ -183,18 +202,20 @@ window.PROJECTS = [
     ]
    }
   },
-  "featured": 2
+  "title": "Exchange Year Recap",
+  "desc": "A ten-minute narrative video shaped from a year on exchange in NC State's textile program."
  },
  {
   "slug": "ai-short-film",
-  "title": "AI Short Film",
-  "subtitle": "Happiness is Intelligence",
-  "cat": "AI Film · Grand Prize",
+  "featured": 3,
+  "archiveRank": null,
+  "tags": [
+   "CONTENT",
+   "AI"
+  ],
   "year": "2025",
-  "thumb": "/images/16_ai_short_film.jpg",
-  "desc": "A speculative short about emotion regulated by numbers and mood-control pills. Grand Prize, SNU AI Filmmaking 2025.",
-  "role": "Director, AI production",
-  "video": "https://www.youtube.com/embed/utCOOrnRLZk",
+  "period": "2025.06–07",
+  "thumb": "/images/projects/ai-short-film/05.jpg",
   "images": [
    "/images/projects/ai-short-film/01.jpg",
    "/images/projects/ai-short-film/02.jpg",
@@ -217,11 +238,17 @@ window.PROJECTS = [
    "/images/projects/ai-short-film/19.jpg",
    "/images/projects/ai-short-film/20.jpg"
   ],
+  "role": {
+   "ko": "기획 · 연출 · 프롬프트 디렉팅 · 편집 (단독)",
+   "en": "Concept, direction, prompt direction, editing (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "video": "https://www.youtube.com/embed/utCOOrnRLZk",
   "nar": {
    "ko": {
     "title": "AI 단편영화 〈Happiness is Intelligence?〉",
     "cat": "AI 영상 · 연출 · 대상",
-    "role": "연출, AI 프로덕션 전 과정",
     "need": "감정이 숫자로 관리되고 기분 조절 약으로 일정한 행복을 유지하는 사회를 그리려면, 현실 촬영으로는 만들 수 없는 세계관과 얼굴이 필요했다. 예산도 촬영 인력도 없는 조건에서 장편 규모의 비주얼을 혼자 만들어야 했다.",
     "action": [
      "약이 떨어진 주인공이 지워둔 감정과 마주하는 서사를 직접 쓰고 연출",
@@ -236,18 +263,13 @@ window.PROJECTS = [
     "metrics": [
      {
       "v": "대상",
-      "l": "서울대 AI 영화제작 2025"
-     },
-     {
-      "v": "6분 44초",
-      "l": "단독 연출·제작"
+      "l": "서울대 AI 영화제작 프로그램 2025"
      }
     ]
    },
    "en": {
     "title": "AI Short Film — “Happiness is Intelligence?”",
     "cat": "AI Film · Direction · Grand Prize",
-    "role": "Director, full AI production",
     "need": "A society where emotion is regulated by numbers and daily mood-control pills hold everyone at a constant happiness needed a world and faces that live-action couldn't produce — and it had to be built alone, with no budget and no crew.",
     "action": [
      "Wrote and directed the story: a protagonist who runs out of medication and meets the feelings she had erased",
@@ -262,26 +284,25 @@ window.PROJECTS = [
     "metrics": [
      {
       "v": "Grand Prize",
-      "l": "SNU AI Filmmaking 2025"
-     },
-     {
-      "v": "6:44",
-      "l": "directed and produced solo"
+      "l": "SNU AI Filmmaking Program 2025"
      }
     ]
    }
   },
-  "featured": 3
+  "title": "AI Short Film",
+  "desc": "A speculative short about emotion regulated by numbers and mood-control pills. Grand Prize, SNU AI Filmmaking 2025."
  },
  {
   "slug": "kaftan",
-  "title": "Engineered Kaftan",
-  "subtitle": "Nocturne in Motion",
-  "cat": "Digital Textile & Apparel",
+  "featured": 2,
+  "archiveRank": null,
+  "tags": [
+   "FASHION",
+   "AI"
+  ],
   "year": "2026",
+  "period": "2026.01–04",
   "thumb": "/images/projects/kaftan/21.jpg",
-  "desc": "Chopin's Nocturne translated into visual movement across silk. Engineered placement prints carry the score through the garment; the finished kaftan was selected for the Wilson College Collection at NC State.",
-  "role": "Textile design, engineering, construction",
   "images": [
    "/images/projects/kaftan/01.jpg",
    "/images/projects/kaftan/02.jpg",
@@ -308,15 +329,21 @@ window.PROJECTS = [
    "/images/projects/kaftan/23.jpg",
    "/images/projects/kaftan/24.jpg"
   ],
+  "role": {
+   "ko": "텍스타일 디자인 · 엔지니어드 프린트 설계 · 제작",
+   "en": "Textile design, engineered print, construction"
+  },
+  "spotify": null,
+  "spotifyNote": null,
   "nar": {
    "ko": {
-    "title": "Engineered Kaftan — Nocturne in Motion",
+    "title": "Engineered Kaftan",
     "cat": "디지털 텍스타일 · 어패럴 · 2026.01–04",
-    "role": "텍스타일 디자인, 엔지니어드 프린트 설계, 제작",
     "need": "쇼팽 녹턴의 유동적인 구조를 실크 위의 시각적 움직임으로 옮기되, 프린트가 옷의 솔기와 트임에 정확히 맞아야 했다. 문제는 디지털 프린터의 인쇄 폭이 54인치인데 카프탄은 100인치가 넘는다는 것이었다. 한 장으로는 물리적으로 찍을 수 없었다.",
     "action": [
      "악보의 선 방향과 반복을 패턴의 구조로 삼고, 인체의 곡선과 겹쳐 '구조'와 '유동' 사이의 균형점을 설계",
      "악보 모티프를 세 개의 패널로 분할하고, 이음선이 소재의 흐름을 끊지 않도록 패턴을 다시 설계 — 실크 위에 인쇄된 조각들이 봉제선에서 정확히 이어지도록 좌표를 계산",
+     "패턴 제작 후, 실제 봉제에 들어가기 전에 실루엣과 드레이프를 AI로 먼저 시뮬레이션해 확인",
      "여러 차례 피팅을 거쳐 네크라인을 조정하고 길이를 줄여(앞 -3인치, 뒤 -1.5인치) 실크의 드레이프와 움직임을 최적화",
      "서사가 있는 예술적 의상을 원하는 소비자를 대상으로 한 '엘리베이티드 리조트웨어'로 포지셔닝"
     ],
@@ -339,13 +366,13 @@ window.PROJECTS = [
     }
    },
    "en": {
-    "title": "Engineered Kaftan — Nocturne in Motion",
+    "title": "Engineered Kaftan",
     "cat": "Digital Textile & Apparel · Jan–Apr 2026",
-    "role": "Textile design, engineered print, construction",
     "need": "Translating the fluid structure of Chopin's Nocturne into visual movement across silk meant the print had to land exactly on the garment's seams and slits. The problem: the digital printer runs 54 inches wide and the kaftan is over 100. A single panel was physically impossible.",
     "action": [
      "Used the line direction and repetition of sheet music as the pattern's structure, layered against the curves of the body",
      "Split the motif across three panels and redrew the pattern so the joins would not break the flow of the material — calculating coordinates so the printed pieces meet exactly at the seams",
+     "After drafting the pattern and before any sewing, simulated the silhouette and drape with AI to check the result first",
      "Ran repeated fit trials, adjusting the neckline and shortening the garment (front −3\", back −1.5\") to optimise drape and movement",
      "Positioned the result as elevated resortwear for consumers who value narrative-driven garments"
     ],
@@ -368,17 +395,20 @@ window.PROJECTS = [
     }
    }
   },
-  "featured": 4
+  "title": "Engineered Kaftan",
+  "desc": "Chopin's Nocturne translated into visual movement across silk. Engineered placement prints carry the score through the garment; the finished kaftan was selected for the Wilson College Collection at NC State."
  },
  {
   "slug": "fashion-show-2024",
-  "title": "2024 SNU Fashion Show",
-  "subtitle": "‘형(形)’",
-  "cat": "Collection · Runway · SNU",
+  "featured": 7,
+  "archiveRank": null,
+  "tags": [
+   "FASHION",
+   "CONTENT"
+  ],
   "year": "2024",
+  "period": "2024.03–10",
   "thumb": "/images/projects/fashion-show-2024/05.jpg",
-  "desc": "A collection on the fluidity of form — oversized tailoring softened by flowing silhouettes and layered sheer fabrics. Developed from flat sketch through muslin fitting to the final runway look.",
-  "role": "Designer",
   "images": [
    "/images/projects/fashion-show-2024/01.jpg",
    "/images/projects/fashion-show-2024/02.jpg",
@@ -396,17 +426,64 @@ window.PROJECTS = [
    "/images/projects/fashion-show-2024/14.jpg",
    "/images/projects/fashion-show-2024/15.jpg"
   ],
-  "featured": 5
+  "role": {
+   "ko": "디자이너 · 홍보 파트 전담 (팀 컬렉션)",
+   "en": "Designer; owned promotion — film, SNS, interviews (team collection)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "2024 SNU 패션쇼 〈형(形)〉",
+    "cat": "컬렉션 · 런웨이 · 팀 프로젝트 · 2024.03–10",
+    "headline": "옷을 만드는 일과 그 옷을 어떻게 보여줄지 정하는 일을 한 프로젝트 안에서 같이 맡았다.",
+    "need": "학과 패션쇼는 옷이 완성되면 끝난다. 하지만 완성된 컬렉션을 아무도 모르면 런웨이 하루로 끝나 버린다. 콘셉트를 세우는 일과 그것을 밖으로 알리는 일이 따로 놀고 있었다.",
+    "action": [
+     "컬렉션 콘셉트 '형(形)' 개발과 의상 제작을 주도",
+     "플랫 스케치 → 가봉 → 최종 런웨이 룩까지 제작 전 과정을 직접 진행",
+     "오버사이즈 테일러링을 흐르는 실루엣과 겹친 시스루로 풀어 '형태의 유동성'을 옷으로 번역",
+     "완성된 컬렉션을 알리는 숏폼 영상 제작과 인스타그램 운영을 직접 맡음",
+     "디자이너 인터뷰를 기획·진행해 옷 뒤의 의도를 콘텐츠로 남김"
+    ],
+    "note": "팀 컬렉션 — 콘셉트 개발과 의상 제작을 주도하고, 홍보 파트(영상·SNS·인터뷰)를 전담했다.",
+    "detail": {
+     "title": "어떻게 판단했나",
+     "body": [
+      "컬렉션 제목 '형(形)'은 형태 그 자체를 뜻한다. 딱딱한 테일러링과 흐르는 소재를 한 벌 안에 겹쳐서, 형태가 고정된 것이 아니라 움직임에 따라 계속 바뀌는 것이라는 점을 보여주려 했다.",
+      "런웨이는 하루지만 기록은 남는다. 그래서 옷이 완성되는 과정부터 촬영해 숏폼으로 편집했고, 인스타그램은 쇼 당일이 아니라 준비 기간부터 운영했다.",
+      "디자이너 인터뷰는 옷 설명이 아니라 '왜 이 형태였는지'를 묻는 방향으로 구성했다. 완성된 옷만 보면 알 수 없는 판단 과정이 컬렉션의 내용이라고 봤기 때문이다."
+     ]
+    }
+   },
+   "en": {
+    "title": "2024 SNU Fashion Show — Form",
+    "cat": "Collection · Runway · Team · 2024.03–10",
+    "headline": "Making the clothes and deciding how they would be seen were the same job on this project.",
+    "need": "A school runway show ends when the garments are finished. If nobody hears about the collection, one evening is all it gets.",
+    "action": [
+     "Led concept development for the collection 'Form' and the garment construction",
+     "Ran the full build — flat sketch, muslin fitting, final runway look",
+     "Translated 'fluidity of form' into oversized tailoring softened by flowing silhouettes and layered sheers",
+     "Produced the short-form promo video and ran the Instagram account",
+     "Planned and conducted the designer interviews so the intent behind the clothes survived the show"
+    ],
+    "note": "Team collection — led concept and construction, owned the promotion (video, social, interviews)."
+   }
+  },
+  "title": "2024 SNU Fashion Show",
+  "desc": "A collection on the fluidity of form — oversized tailoring softened by flowing silhouettes and layered sheer fabrics. Developed from flat sketch through muslin fitting to the final runway look."
  },
  {
   "slug": "campus-festival",
-  "title": "SNUFESTIVAL Branding",
-  "subtitle": "RIO",
-  "cat": "Branding · Visual Design",
+  "featured": 4,
+  "archiveRank": null,
+  "tags": [
+   "CONTENT",
+   "INSIGHT"
+  ],
   "year": "2025",
+  "period": "2023.07–2024.06",
   "thumb": "/images/projects/campus-festival/02.jpg",
-  "desc": "Promotional materials built around RIO, official character of the SNU Festival — photo-booth frames, card news, stamps and AirPods case illustrations.",
-  "role": "Branding, illustration",
   "images": [
    "/images/projects/campus-festival/01.jpg",
    "/images/projects/campus-festival/02.jpg",
@@ -421,11 +498,16 @@ window.PROJECTS = [
    "/images/projects/campus-festival/11.jpg",
    "/images/projects/campus-festival/12.jpg"
   ],
+  "role": {
+   "ko": "브랜딩 · 일러스트 · 굿즈 총괄 (디자인팀 6인)",
+   "en": "Branding, illustration, merchandise lead (design team of 6)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
   "nar": {
    "ko": {
     "title": "SNUFESTIVAL 브랜딩 — RIO",
     "cat": "브랜딩 · 비주얼 아이덴티티",
-    "role": "브랜딩, 일러스트, 굿즈·콘텐츠 디자인",
     "need": "축제 공식 캐릭터 RIO는 존재했지만, 참가자가 실제로 만지고 찍고 가져가는 접점이 없었다. 캐릭터가 포스터 안에만 머물면 아이덴티티는 기억되지 않는다.",
     "action": [
      "RIO를 단일 이미지가 아닌 확장 가능한 비주얼 시스템으로 재정의",
@@ -442,17 +524,12 @@ window.PROJECTS = [
      {
       "v": "매진",
       "l": "에어팟·버즈 케이스 굿즈"
-     },
-     {
-      "v": "4종",
-      "l": "전개 포맷"
      }
     ]
    },
    "en": {
     "title": "SNUFESTIVAL Branding — RIO",
     "cat": "Branding · Visual Identity",
-    "role": "Branding, illustration, merchandise & content design",
     "need": "RIO, the festival's official character, existed — but there was nothing for attendees to touch, photograph or take home. A character that stays inside a poster is never remembered.",
     "action": [
      "Redefined RIO as an extensible visual system rather than a single illustration",
@@ -469,26 +546,23 @@ window.PROJECTS = [
      {
       "v": "Sold out",
       "l": "AirPods & Buds cases"
-     },
-     {
-      "v": "4",
-      "l": "formats extended"
      }
     ]
    }
   },
-  "featured": 6
+  "title": "SNUFESTIVAL Branding",
+  "desc": "Promotional materials built around RIO, official character of the SNU Festival — photo-booth frames, card news, stamps and AirPods case illustrations."
  },
  {
   "slug": "art2wear",
-  "title": "Art2Wear 2026",
-  "subtitle": "“Tensed Symbiosis”",
-  "cat": "Wearable Art · Runway · NC State",
+  "featured": 5,
+  "archiveRank": null,
+  "tags": [
+   "FASHION"
+  ],
   "year": "2026",
+  "period": "2026.01–04",
   "thumb": "/images/projects/art2wear/01.jpg",
-  "status": "In Progress",
-  "desc": "불안과 집중의 공존을 이질적인 재료의 대비로 옮긴 웨어러블 아트. 직접 깨뜨린 도자기 접시 파편이 꽃이 되고, 마른 가지와 청키한 실이 한 벌 안에서 부딪힌다. Gregg Museum of Art & Design, Art2Wear 2026 런웨이에 직접 입고 올랐다.",
-  "role": "디자인, 소재 개발, 제작, 런웨이 모델",
   "images": [
    "/images/projects/art2wear/01.jpg",
    "/images/projects/art2wear/02.jpg",
@@ -541,11 +615,16 @@ window.PROJECTS = [
    "/images/projects/art2wear/49.jpg",
    "/images/projects/art2wear/50.jpg"
   ],
+  "role": {
+   "ko": "디자인 · 소재 개발 · 제작 · 런웨이 모델",
+   "en": "Design, material development, construction, runway model"
+  },
+  "spotify": null,
+  "spotifyNote": null,
   "nar": {
    "ko": {
     "title": "Art2Wear 2026 — Tensed Symbiosis",
     "cat": "웨어러블 아트 · 런웨이 · 2026.01–04",
-    "role": "디자인, 소재 개발, 제작",
     "need": "'공생'을 조화롭고 평화로운 상태로 그리는 통상적 해석을 거부하고, 극한의 긴장 아래 유지되는 구조로 다시 정의해야 했다. 불안과 집중이라는 상충하는 두 상태를 한 벌의 옷 안에 동시에 존재시키는 것이 과제였다.",
     "action": [
      "불안 없는 집중은 동력을 잃고 집중 없는 불안은 혼돈이 된다는 상호의존 구조를 개념의 축으로 설정",
@@ -555,7 +634,7 @@ window.PROJECTS = [
     ],
     "result": [
      "Gregg Museum of Art & Design, Art2Wear 2026 런웨이 발표 (2026년 4월)",
-     "2026 서울대 예술주간 야외 전시 예정 — 같은 개념을 가변설치로 재구성"
+     "2026 서울대 예술주간 야외 전시 〈공생 Tensed Symbiosis〉 — 같은 개념을 가변설치로 재구성 (2026.09.28–10.02)"
     ],
     "headline": "공생을 평화로운 균형이 아니라, 극한의 긴장 아래 유지되는 구조로 다시 정의했다.",
     "metrics": [
@@ -577,7 +656,6 @@ window.PROJECTS = [
    "en": {
     "title": "Art2Wear 2026 — “Tensed Symbiosis”",
     "cat": "Wearable Art · Runway · Jan–Apr 2026",
-    "role": "Design, textile development, construction",
     "need": "Symbiosis is usually read as harmony. This piece had to redefine it as a rigid structure held under extreme tension — putting anxiety and focus, two conflicting states, inside one garment at once.",
     "action": [
      "Built the concept on interdependence: focus without anxiety loses its drive, anxiety without focus becomes chaos",
@@ -587,7 +665,7 @@ window.PROJECTS = [
     ],
     "result": [
      "Shown at Art2Wear 2026, Gregg Museum of Art & Design (April 2026)",
-     "Selected for the 2026 SNU Arts Week outdoor exhibition — the same concept rebuilt as a site installation"
+     "Rebuilt as a site installation for the 2026 SNU Arts Week outdoor exhibition (28 Sep – 2 Oct 2026)"
     ],
     "headline": "Symbiosis redefined — not a peaceful balance, but a structure held under extreme tension.",
     "metrics": [
@@ -607,17 +685,19 @@ window.PROJECTS = [
     }
    }
   },
-  "featured": 7
+  "title": "Art2Wear 2026",
+  "desc": "불안과 집중의 공존을 이질적인 재료의 대비로 옮긴 웨어러블 아트. 직접 깨뜨린 도자기 접시 파편이 꽃이 되고, 마른 가지와 청키한 실이 한 벌 안에서 부딪힌다. Gregg Museum of Art & Design, Art2Wear 2026 런웨이에 직접 입고 올랐다."
  },
  {
   "slug": "clo3d",
-  "title": "CLO 3D Digital Fashion",
-  "subtitle": "‘Dopamine Dressing’",
-  "cat": "3D Digital Fashion · Competition",
+  "featured": null,
+  "archiveRank": 14,
+  "tags": [
+   "FASHION"
+  ],
   "year": "2024",
+  "period": "2024.09–10",
   "thumb": "/images/projects/clo3d/01.jpg",
-  "desc": "A digital collection built around MZ-generation running culture and dopamine dressing. Honorable Mention, 13th International Digital Fashion Contest.",
-  "role": "3D design, styling, rendering",
   "images": [
    "/images/projects/clo3d/01.jpg",
    "/images/projects/clo3d/02.jpg",
@@ -627,19 +707,69 @@ window.PROJECTS = [
    "/images/projects/clo3d/06.jpg",
    "/images/projects/clo3d/07.jpg"
   ],
-  "featured": 8
+  "role": {
+   "ko": "3D 디자인 · 스타일링 · 렌더링 (단독)",
+   "en": "3D design, styling, rendering (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "CLO 3D 디지털 패션 〈Dopamine Dressing〉",
+    "cat": "3D 디지털 패션 · 공모전 · 단독 · 2024",
+    "headline": "입을 사람을 먼저 좁게 정의하고 트렌드 리포트를 근거로 삼았더니, 실물 없이 3D로만 액티브웨어 한 벌이 끝까지 나왔다.",
+    "metrics": [
+     {
+      "v": "입선",
+      "l": "제13회 국제 디지털 패션 공모전"
+     }
+    ],
+    "need": "디지털 패션은 예쁜 렌더링을 뽑는 일로 오해되기 쉽다. 실제로 입을 사람을 정의하지 않으면 3D 안에서만 그럴듯한 옷이 나온다.",
+    "action": [
+     "러닝 크루 문화를 즐기는 20대 후반 직장인으로 페르소나를 좁게 설정",
+     "WGSN 트렌드 리포트를 근거로 원단 기능성·색상 조화·체온 조절·활동성을 핵심 변수로 정의",
+     "그 변수에 맞춰 액티브웨어 컬렉션 'Dopamine Dressing'을 설계",
+     "패턴 제작부터 3D 시뮬레이션·렌더링까지 CLO 3D로 단독 진행"
+    ],
+    "result": [
+     "제13회 국제 디지털 패션 공모전 입선 (한국의류산업학회, 2024.11)"
+    ]
+   },
+   "en": {
+    "title": "CLO 3D Digital Fashion — Dopamine Dressing",
+    "cat": "3D Digital Fashion · Competition · Solo · 2024",
+    "headline": "Define the wearer narrowly, back it with a trend report, and a full activewear look can be built in 3D alone.",
+    "metrics": [
+     {
+      "v": "Honorable Mention",
+      "l": "13th Int'l Digital Fashion Contest"
+     }
+    ],
+    "need": "Digital fashion is easily mistaken for rendering pretty pictures. Without a defined wearer you get clothes that only work inside the software.",
+    "action": [
+     "Set a narrow persona: a late-twenties office worker in running-crew culture",
+     "Used WGSN trend reporting to fix the working variables — fabric performance, color harmony, thermal regulation, range of motion",
+     "Designed the activewear collection 'Dopamine Dressing' against those variables",
+     "Built it solo in CLO 3D, from patterning through simulation and rendering"
+    ],
+    "result": [
+     "Honorable Mention, 13th International Digital Fashion Contest (KSCT, Nov 2024)"
+    ]
+   }
+  },
+  "title": "CLO 3D Digital Fashion",
+  "desc": "A digital collection built around MZ-generation running culture and dopamine dressing. Honorable Mention, 13th International Digital Fashion Contest."
  },
  {
   "slug": "sub-motion",
-  "title": "음악을 화면으로 옮기는 일",
-  "subtitle": "SUB 서울대학교 학생방송국 · 모션그래픽",
-  "cat": "모션그래픽 · After Effects · 2024–2025",
+  "featured": 9,
+  "archiveRank": null,
+  "tags": [
+   "CONTENT"
+  ],
   "year": "2025",
+  "period": "2024.07–2025.06",
   "thumb": "/images/14_music_video_teaser.jpg",
-  "desc": "아티스트의 곡을 티저와 타이포그래피 영상으로 옮긴 세 편의 작업. 'Toxic Till the End'(로제), 'APT', '후라이의 꿈'.",
-  "role": "모션그래픽, 편집",
-  "video": "https://www.youtube.com/embed/5P_bMBgHbfE",
-  "video2": "https://www.youtube.com/embed/9abbAMsJ7vo",
   "images": [
    "/images/projects/music-video/01.jpg",
    "/images/projects/music-video/02.jpg",
@@ -660,7 +790,14 @@ window.PROJECTS = [
    "/images/projects/typography-video/03.jpg",
    "/images/projects/typography-video/04.jpg"
   ],
-  "featured": 9,
+  "role": {
+   "ko": "모션그래픽 · 편집 (2–4인 팀에서 모션 파트 담당)",
+   "en": "Motion graphics and editing — owned the motion part in teams of 2–4"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "video": "https://www.youtube.com/embed/5P_bMBgHbfE",
+  "video2": "https://www.youtube.com/embed/9abbAMsJ7vo",
   "nar": {
    "ko": {
     "title": "음악을 화면으로 옮기는 일",
@@ -670,10 +807,6 @@ window.PROJECTS = [
      {
       "v": "3편",
       "l": "아티스트 음악 기반 영상"
-     },
-     {
-      "v": "2–4인",
-      "l": "팀 협업"
      }
     ],
     "need": "음악 기반 영상은 곡을 설명하면 안 되고, 곡이 이미 가진 톤을 화면으로 번역해야 한다. 곡마다 그 톤이 달라서 같은 편집 문법을 재사용할 수 없었다.",
@@ -700,10 +833,6 @@ window.PROJECTS = [
      {
       "v": "3",
       "l": "artist music pieces"
-     },
-     {
-      "v": "2–4",
-      "l": "person teams"
      }
     ],
     "need": "Music-led film should not explain the song; it should translate the tone the song already has. That tone changes per track, so the same editing grammar could not be reused.",
@@ -722,17 +851,21 @@ window.PROJECTS = [
      ]
     }
    }
-  }
+  },
+  "title": "음악을 화면으로 옮기는 일",
+  "desc": "아티스트의 곡을 티저와 타이포그래피 영상으로 옮긴 세 편의 작업. 'Toxic Till the End'(로제), 'APT', '후라이의 꿈'."
  },
  {
   "slug": "senior-fit",
-  "title": "시니어핏",
-  "subtitle": "입는 사람에게 맞춘 설계",
-  "cat": "적응형 디자인 · 사용자 리서치 · 관악노인종합복지관 협업",
+  "featured": 10,
+  "archiveRank": null,
+  "tags": [
+   "FASHION",
+   "INSIGHT"
+  ],
   "year": "2024",
+  "period": "2024.09–12",
   "thumb": "/images/04_senior_fit_ergonomic.jpg",
-  "desc": "관악노인종합복지관의 어르신 한 분을 담당해 수업 밖에서까지 여러 차례 만나 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 만든 코트. 완성작으로 시니어 런웨이까지 진행했다.",
-  "role": "사용자 인터뷰, 패턴, 제작",
   "images": [
    "/images/projects/senior-fit/01.jpg",
    "/images/projects/senior-fit/02.jpg",
@@ -759,10 +892,36 @@ window.PROJECTS = [
    "/images/projects/senior-fit/23.jpg",
    "/images/projects/senior-fit/24.jpg"
   ],
+  "role": {
+   "ko": "사용자 인터뷰 · 패턴 · 제작 (어르신 한 분 전담)",
+   "en": "User interviews, pattern, construction — one senior model, one-to-one"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "press": {
+   "outlet": {
+    "ko": "대학신문",
+    "en": "The SNU Newspaper"
+   },
+   "headline": {
+    "ko": "실버모델과 함께 한 특별한 런웨이",
+    "en": "A Special Runway with Silver Models"
+   },
+   "date": "2024.12.01",
+   "url": "https://www.snunews.com/news/articleView.html?idxno=33739",
+   "quote": {
+    "ko": "담당한 어르신의 취향과 신체적 특징을 미리 파악해 의복 디자인에 참고했다. 어르신의 등이 굽은 점, 걸을 때 팔이 뒤로 향한다는 점을 반영한 코트를 만들었고, 어르신이 옷을 착용하실 때 어깨의 비대칭을 보완할 수 있는 어깨 패드를 추가했다.",
+    "en": "I learned my model's taste and physical characteristics in advance and built the design from them. The coat accounts for a curved back and for arms that swing backward when walking, with a shoulder pad added to compensate for asymmetry in the shoulders."
+   },
+   "attribution": {
+    "ko": "이연서 (의류학과·22), 대학신문 2024.12.01",
+    "en": "Yeonseo Lee, quoted in The SNU Newspaper, 1 Dec 2024"
+   }
+  },
   "nar": {
    "ko": {
     "title": "시니어핏",
-    "cat": "적응형 디자인 · 사용자 리서치 · 2024",
+    "cat": "적응형 디자인 · 사용자 리서치 · 2024.09–12",
     "headline": "처음부터 원하는 옷을 묻지 않았다. 편해지신 뒤에야 나온 말들에 진짜 답이 있었다.",
     "metrics": [
      {
@@ -796,7 +955,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Senior-Fit",
-    "cat": "Adaptive Design · User Research · 2024",
+    "cat": "Adaptive Design · User Research · Sep–Dec 2024",
     "headline": "I never opened by asking what they wanted. The real answers came only once she was comfortable.",
     "metrics": [
      {
@@ -829,37 +988,19 @@ window.PROJECTS = [
     }
    }
   },
-  "featured": 10,
-  "press": {
-   "outlet": {
-    "ko": "대학신문",
-    "en": "The SNU Newspaper"
-   },
-   "headline": {
-    "ko": "실버모델과 함께 한 특별한 런웨이",
-    "en": "A Special Runway with Silver Models"
-   },
-   "date": "2024.12.01",
-   "url": "https://www.snunews.com/news/articleView.html?idxno=33739",
-   "quote": {
-    "ko": "담당한 어르신의 취향과 신체적 특징을 미리 파악해 의복 디자인에 참고했다. 어르신의 등이 굽은 점, 걸을 때 팔이 뒤로 향한다는 점을 반영한 코트를 만들었고, 어르신이 옷을 착용하실 때 어깨의 비대칭을 보완할 수 있는 어깨 패드를 추가했다.",
-    "en": "I learned my model's taste and physical characteristics in advance and built the design from them. The coat accounts for a curved back and for arms that swing backward when walking, with a shoulder pad added to compensate for asymmetry in the shoulders."
-   },
-   "attribution": {
-    "ko": "이연서 (의류학과·22), 대학신문 2024.12.01",
-    "en": "Yeonseo Lee, quoted in The SNU Newspaper, 1 Dec 2024"
-   }
-  }
+  "title": "시니어핏",
+  "desc": "관악노인종합복지관의 어르신 한 분을 담당해 수업 밖에서까지 여러 차례 만나 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 만든 코트. 완성작으로 시니어 런웨이까지 진행했다."
  },
  {
   "slug": "engineered-surfaces",
-  "title": "Engineered Surfaces",
-  "subtitle": "Interior Textile Collection",
-  "cat": "Textile Design · NC State",
+  "featured": null,
+  "archiveRank": 19,
+  "tags": [
+   "FASHION"
+  ],
   "year": "2026",
+  "period": "2026.01–04",
   "thumb": "/images/07_engineered_surfaces_interior.jpg",
-  "desc": "A collection tracing the transition from raw fiber to structural fabric — custom novelty yarns through spinning and dyeing, then punch needle, weaving and knitting to see how yarn geometry dictates drape and density.",
-  "role": "Yarn synthesis, weaving, punch needle",
   "images": [
    "/images/projects/engineered-surfaces/01.jpg",
    "/images/projects/engineered-surfaces/02.jpg",
@@ -908,17 +1049,59 @@ window.PROJECTS = [
    "/images/projects/engineered-surfaces/45.jpg",
    "/images/projects/engineered-surfaces/46.jpg"
   ],
-  "archiveRank": 1
+  "role": {
+   "ko": "원사 합성 · 직조 · 펀치니들 (단독)",
+   "en": "Yarn synthesis, weaving, punch needle (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "Engineered Surfaces",
+    "cat": "텍스타일 · NC State · 2026.01–04",
+    "headline": "실을 직접 만들어 보고 나서야 원사의 구조가 드레이프와 밀도를 어디까지 결정하는지 알았다.",
+    "need": "원단은 보통 완성된 상태로 주어진다. 어떤 실로 어떻게 짰는지 모르면 소재를 고를 때 결국 감에 의존하게 된다.",
+    "action": [
+     "방적·합사 워크숍에서 꼬임·광택·슬럽 같은 섬유의 물리적 특성을 직접 측정하고 분석",
+     "여러 기법을 조합해 노벨티 얀 샘플을 개발하고 염색까지 진행",
+     "같은 실을 펀치 니들·직조·편성 세 방식으로 각각 표면화해 비교",
+     "산업 표준 품질관리 프로세스를 그대로 적용해 샘플을 검수"
+    ],
+    "detail": {
+     "title": "무엇을 확인했나",
+     "body": [
+      "섬유 → 실 → 표면으로 이어지는 단계를 한 번씩 직접 거치면서, 같은 섬유라도 꼬임 수와 합사 방식에 따라 완성된 원단의 두께감과 떨어지는 성질이 완전히 달라진다는 것을 실물로 확인했다.",
+      "노벨티 얀은 의도적으로 균일하지 않게 만든 실이다. 슬럽의 간격과 크기를 조절하면 표면의 리듬이 바뀌는데, 이 리듬은 나중에 직조·편성 어느 쪽으로 가느냐에 따라 전혀 다르게 읽힌다.",
+      "품질관리 실습을 함께 한 이유는 샘플이 '예쁜가'가 아니라 '재현 가능한가'로 평가되는 기준을 익히기 위해서였다."
+     ]
+    }
+   },
+   "en": {
+    "title": "Engineered Surfaces",
+    "cat": "Textile Design · NC State · 2026.01–04",
+    "headline": "Only after spinning the yarn myself did I see how far yarn geometry decides drape and density.",
+    "need": "Fabric usually arrives finished. Without knowing how the yarn was made and worked, material choices come down to instinct.",
+    "action": [
+     "Measured and analysed fibre properties — twist, lustre, slub — in spinning and plying workshops",
+     "Developed custom novelty yarn samples through combined techniques, including dyeing",
+     "Worked the same yarn into three surfaces — punch needle, weaving, knitting — and compared them",
+     "Applied industry-standard quality-control process to inspect the samples"
+    ]
+   }
+  },
+  "title": "Engineered Surfaces",
+  "desc": "A collection tracing the transition from raw fiber to structural fabric — custom novelty yarns through spinning and dyeing, then punch needle, weaving and knitting to see how yarn geometry dictates drape and density."
  },
  {
   "slug": "textile-printed",
-  "title": "Textile Design I — Printed",
-  "subtitle": "Urban Botanica",
-  "cat": "Print Design",
+  "featured": null,
+  "archiveRank": 20,
+  "tags": [
+   "FASHION"
+  ],
   "year": "2025",
+  "period": "2025.08–12",
   "thumb": "/images/09_textile_design_printed.jpg",
-  "desc": "Korean tradition meeting street culture — roof-tile geometry and tiger symbolism worked into repeat prints for pet apparel and streetwear.",
-  "role": "Print design",
   "images": [
    "/images/projects/textile-printed/01.jpg",
    "/images/projects/textile-printed/02.jpg",
@@ -932,17 +1115,51 @@ window.PROJECTS = [
    "/images/projects/textile-printed/10.jpg",
    "/images/projects/textile-printed/11.jpg"
   ],
-  "archiveRank": 2
+  "role": {
+   "ko": "프린트 디자인 (단독)",
+   "en": "Print design (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "Textile Design I — Printed 〈Urban Botanica〉",
+    "cat": "프린트 텍스타일 · 개인 · 2025.08–12",
+    "headline": "전통 모티프를 스트리트웨어의 문법으로 옮기면 어디까지 읽히는지 리피트 프린트로 시험했다.",
+    "need": "전통 모티프는 그대로 쓰면 박물관 굿즈가 되고, 너무 비틀면 출처가 사라진다. 그 사이의 지점을 찾아야 했다.",
+    "action": [
+     "기와지붕의 기하와 호랑이 상징을 모티프로 잡고 NedGraphics로 리피트 프린트를 설계",
+     "펫 어패럴과 스트리트웨어 두 제품군을 상정해 같은 모티프의 스케일과 배색을 다르게 전개",
+     "스크린 프린팅과 디지털 프린팅을 함께 실습해 인쇄 방식에 따라 색과 디테일이 어떻게 달라지는지 실물로 비교"
+    ],
+    "note": "프린트·직조·편성 세 프로젝트를 하나의 텍스타일 시리즈로 함께 진행했다."
+   },
+   "en": {
+    "title": "Textile Design I — Printed (Urban Botanica)",
+    "cat": "Print Design · Solo · 2025.08–12",
+    "headline": "How far can a traditional motif travel into streetwear grammar and still be read? Tested in repeat print.",
+    "need": "Used literally, a traditional motif becomes museum merchandise; pushed too far, its origin disappears.",
+    "action": [
+     "Took roof-tile geometry and tiger symbolism as motifs and built the repeats in NedGraphics",
+     "Ran the same motif at different scales and colourways for two product types — pet apparel and streetwear",
+     "Printed by both screen and digital methods to compare how colour and detail shift with the process"
+    ],
+    "note": "Printed, woven and knit were run together as one textile series."
+   }
+  },
+  "title": "Textile Design I — Printed",
+  "desc": "Korean tradition meeting street culture — roof-tile geometry and tiger symbolism worked into repeat prints for pet apparel and streetwear."
  },
  {
   "slug": "textile-woven",
-  "title": "Textile Design II — Woven",
-  "subtitle": "Moonlit Thread",
-  "cat": "Woven Design",
+  "featured": null,
+  "archiveRank": 21,
+  "tags": [
+   "FASHION"
+  ],
   "year": "2025",
+  "period": "2025.08–12",
   "thumb": "/images/10_textile_design_woven.jpg",
-  "desc": "Korean folklore — the nine-tailed fox and the moon rabbit — reinterpreted as woven cotton textiles.",
-  "role": "Woven design",
   "images": [
    "/images/projects/textile-woven/01.jpg",
    "/images/projects/textile-woven/02.jpg",
@@ -959,17 +1176,51 @@ window.PROJECTS = [
    "/images/projects/textile-woven/13.jpg",
    "/images/projects/textile-woven/14.jpg"
   ],
-  "archiveRank": 3
+  "role": {
+   "ko": "직조 디자인 (단독)",
+   "en": "Woven design (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "Textile Design II — Woven 〈Moonlit Thread〉",
+    "cat": "직조 텍스타일 · 개인 · 2025.08–12",
+    "headline": "구미호와 달토끼라는 두 설화를 한 장의 면 직물 안에서 만나게 했다.",
+    "need": "프린트는 표면에 얹는 일이고 직조는 구조를 짜는 일이다. 같은 모티프를 직조로 옮기면 무엇이 남고 무엇이 사라지는지 확인하고 싶었다.",
+    "action": [
+     "한국 설화의 구미호와 달토끼를 주 모티프로 잡고 'Moonlit Thread'라는 이름으로 묶음",
+     "모란과 잎을 배경 층으로 깔고 달토끼를 상감 메달리온 위에 올려 시선의 중심을 만듦",
+     "면사로 직조해 색과 조직의 조합에 따라 같은 모티프가 어떻게 다르게 읽히는지 비교"
+    ],
+    "note": "프린트·직조·편성 세 프로젝트를 하나의 텍스타일 시리즈로 함께 진행했다."
+   },
+   "en": {
+    "title": "Textile Design II — Woven (Moonlit Thread)",
+    "cat": "Woven Design · Solo · 2025.08–12",
+    "headline": "Two Korean folk tales — the nine-tailed fox and the moon rabbit — brought together in one woven cotton cloth.",
+    "need": "Print sits on a surface; weaving builds the structure. I wanted to see what survives when the same motif is moved into cloth.",
+    "action": [
+     "Took the fox and the moon rabbit as the two motifs and tied them together as 'Moonlit Thread'",
+     "Layered peonies and foliage behind, with the rabbit set on an inlay medallion as the focal point",
+     "Wove in cotton to compare how colour and weave structure change the reading of the same motif"
+    ],
+    "note": "Printed, woven and knit were run together as one textile series."
+   }
+  },
+  "title": "Textile Design II — Woven",
+  "desc": "Korean folklore — the nine-tailed fox and the moon rabbit — reinterpreted as woven cotton textiles."
  },
  {
   "slug": "textile-knit",
-  "title": "Textile Design III — Knit",
-  "subtitle": "Celadon Reverie",
-  "cat": "Knit Design",
+  "featured": null,
+  "archiveRank": 22,
+  "tags": [
+   "FASHION"
+  ],
   "year": "2025",
+  "period": "2025.08–12",
   "thumb": "/images/11_textile_design_knit.jpg",
-  "desc": "Goryeo celadon aesthetics translated to knit — crane motifs and circular medallions, designed in EasyKnit.",
-  "role": "Knit design",
   "images": [
    "/images/projects/textile-knit/01.jpg",
    "/images/projects/textile-knit/02.jpg",
@@ -983,17 +1234,52 @@ window.PROJECTS = [
    "/images/projects/textile-knit/10.jpg",
    "/images/projects/textile-knit/11.jpg"
   ],
-  "archiveRank": 4
+  "role": {
+   "ko": "니트 디자인 (단독)",
+   "en": "Knit design (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "Textile Design III — Knit 〈Celadon Reverie〉",
+    "cat": "니트 텍스타일 · 개인 · 2025.08–12",
+    "headline": "고려청자의 상감 무늬를 편성 조직으로 다시 그렸다.",
+    "need": "청자의 상감은 표면을 파고들어 간 선이다. 실을 엮어 만드는 편성에서 그 깊이를 어떻게 만들 것인지가 문제였다.",
+    "action": [
+     "고려청자의 학 모티프와 원형 상감 메달리온을 편성 도안으로 재구성",
+     "EasyKnit으로 조직과 배색을 설계하고 도안을 실물 편성으로 전개",
+     "프린트·직조와 모티프 계열을 공유해 세 기법의 차이를 한 시리즈 안에서 비교 가능하게 구성"
+    ],
+    "note": "프린트·직조·편성 세 프로젝트를 하나의 텍스타일 시리즈로 함께 진행했다."
+   },
+   "en": {
+    "title": "Textile Design III — Knit (Celadon Reverie)",
+    "cat": "Knit Design · Solo · 2025.08–12",
+    "headline": "Goryeo celadon inlay, redrawn as knit structure.",
+    "need": "Celadon inlay is a line cut into the surface. The question was how to give that depth in a structure made by looping yarn.",
+    "action": [
+     "Rebuilt the celadon crane motif and circular inlay medallions as knit charts",
+     "Designed structure and colourway in EasyKnit and took the charts through to knitted samples",
+     "Shared the motif family with the printed and woven pieces so the three techniques could be compared in one series"
+    ],
+    "note": "Printed, woven and knit were run together as one textile series."
+   }
+  },
+  "title": "Textile Design III — Knit",
+  "desc": "Goryeo celadon aesthetics translated to knit — crane motifs and circular medallions, designed in EasyKnit."
  },
  {
   "slug": "adaptive-textile",
-  "title": "Adaptive Textile Systems",
-  "subtitle": "for Modern Interiors",
-  "cat": "Interior Textiles · Team of 4",
+  "featured": null,
+  "archiveRank": 13,
+  "tags": [
+   "FASHION",
+   "INSIGHT"
+  ],
   "year": "2026",
+  "period": "2026.01–04",
   "thumb": "/images/06_adaptive_textile_interiors.jpg",
-  "desc": "A luxury home-interior textile collection spanning window treatments, flooring and upholstery. Burn-out printing, laser-cutting and machine embroidery tested across interior-grade fibers.",
-  "role": "Textile development, room design",
   "images": [
    "/images/projects/adaptive-textile/01.jpg",
    "/images/projects/adaptive-textile/02.jpg",
@@ -1015,6 +1301,12 @@ window.PROJECTS = [
    "/images/projects/adaptive-textile/18.jpg",
    "/images/projects/adaptive-textile/19.jpg"
   ],
+  "role": {
+   "ko": "텍스타일 개발 · 룸 디자인 (4인 팀)",
+   "en": "Textile development, room design (team of 4)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
   "nar": {
    "ko": {
     "title": "적응형 텍스타일 시스템 — 현대적 실내를 위한",
@@ -1057,32 +1349,67 @@ window.PROJECTS = [
     }
    }
   },
-  "archiveRank": 5
+  "title": "Adaptive Textile Systems",
+  "desc": "A luxury home-interior textile collection spanning window treatments, flooring and upholstery. Burn-out printing, laser-cutting and machine embroidery tested across interior-grade fibers."
  },
  {
   "slug": "korean-costume",
-  "title": "Korean Costume Design",
-  "subtitle": "",
-  "cat": "Hanbok · Traditional Construction",
+  "featured": null,
+  "archiveRank": 23,
+  "tags": [
+   "FASHION"
+  ],
   "year": "2024",
+  "period": "2024.03–06",
   "thumb": "/images/projects/korean-costume/01.jpg",
-  "desc": "Modern hanbok blending traditional construction with contemporary lines — pattern-making, traditional hand-sewing, and organza experiments.",
-  "role": "Design, construction",
   "images": [
    "/images/projects/korean-costume/01.jpg"
   ],
-  "archiveRank": 6
+  "role": {
+   "ko": "디자인 · 제작 (단독)",
+   "en": "Design, construction (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "모던 한복",
+    "cat": "한복 · 전통 구성 · 개인 · 2024.03–06",
+    "headline": "한복의 재단·봉제 방식을 서양 의복과 하나씩 비교한 뒤, 구성은 남기고 선만 현대로 옮겼다.",
+    "need": "모던 한복은 실루엣만 바꾸고 구성은 양장 방식으로 가는 경우가 많다. 그러면 한복처럼 보이지만 한복의 구조는 아니다.",
+    "action": [
+     "한복 고유의 재단·봉제 기법을 서양 의복 제작 방식과 항목별로 비교 분석",
+     "깃·섶·배래 같은 전통 구성은 유지하고 선과 비례만 현대적으로 조정",
+     "오간자 등 한복 원단의 물성을 살리는 방향으로 소재를 실험",
+     "손바느질로 직접 제작해 기법을 손으로 익힘"
+    ]
+   },
+   "en": {
+    "title": "Modern Hanbok",
+    "cat": "Hanbok · Traditional Construction · Solo · 2024.03–06",
+    "headline": "Compared hanbok cutting and sewing against Western construction line by line, then kept the construction and moved only the lines.",
+    "need": "Modern hanbok often changes the silhouette but builds it the Western way — it looks like hanbok without being structured like one.",
+    "action": [
+     "Analysed hanbok cutting and sewing technique against Western garment construction, item by item",
+     "Kept the traditional components — git, seop, baerae — and adjusted only line and proportion",
+     "Experimented with organza and other hanbok fabrics to work with their behaviour rather than against it",
+     "Hand-sewed the garment to learn the technique by doing it"
+    ]
+   }
+  },
+  "title": "Korean Costume Design",
+  "desc": "Modern hanbok blending traditional construction with contemporary lines — pattern-making, traditional hand-sewing, and organza experiments."
  },
  {
   "slug": "seoul-metro",
-  "title": "Seoul Metro Promo Video",
-  "subtitle": "",
-  "cat": "Animation · Contest",
+  "featured": null,
+  "archiveRank": 24,
+  "tags": [
+   "CONTENT"
+  ],
   "year": "2025",
+  "period": "2025",
   "thumb": "/images/19_seoul_metro_promo_video.jpg",
-  "desc": "Hand-drawn subway line animations resolving into typography. Two-person collaboration for the 2025 Seoul Metro YouTube Video Contest.",
-  "role": "Illustration, animation",
-  "video": "https://www.youtube.com/embed/DMHkNnFztYY",
   "images": [
    "/images/projects/seoul-metro/01.jpg",
    "/images/projects/seoul-metro/02.jpg",
@@ -1091,30 +1418,77 @@ window.PROJECTS = [
    "/images/projects/seoul-metro/05.jpg",
    "/images/projects/seoul-metro/06.jpg"
   ],
-  "archiveRank": 7
+  "role": {
+   "ko": "일러스트 · 애니메이션 (2인 협업)",
+   "en": "Illustration, animation (two-person collaboration)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "video": "https://www.youtube.com/embed/DMHkNnFztYY",
+  "nar": {
+   "ko": {
+    "title": "서울교통공사 홍보영상",
+    "cat": "일러스트 · 모션그래픽 · 공모전 · 2인 · 2025",
+    "headline": "지하철 노선을 손으로 그려 움직이게 하고, 그 선이 마지막에 글자로 모이게 했다.",
+    "need": "노선도는 정보이지 이야기가 아니다. 공모전 영상에서 노선도를 그대로 보여주면 끝까지 보지 않는다.",
+    "action": [
+     "각 호선을 손그림으로 다시 그려 선 자체가 움직이는 애니메이션으로 전환",
+     "움직이던 선이 마지막에 타이포그래피로 수렴하도록 구성해 메시지를 한 번에 전달",
+     "After Effects로 모션그래픽 작업 — 2인 협업 중 일러스트·애니메이션 파트를 담당"
+    ],
+    "note": "2025 서울교통공사 유튜브 영상 공모전 출품작. 2인 협업."
+   },
+   "en": {
+    "title": "Seoul Metro Promo Video",
+    "cat": "Illustration · Motion · Contest · 2 people · 2025",
+    "headline": "Subway lines, hand-drawn and set moving, resolving at the end into type.",
+    "need": "A transit map is information, not a story. Show it as-is in a contest film and nobody watches to the end.",
+    "action": [
+     "Redrew each line by hand so the line itself became the animation",
+     "Let the moving lines resolve into typography at the end, delivering the message in one beat",
+     "Built the motion in After Effects — owned illustration and animation in a two-person team"
+    ],
+    "note": "Entry for the 2025 Seoul Metro YouTube Video Contest. Two-person collaboration."
+   }
+  },
+  "title": "Seoul Metro Promo Video",
+  "desc": "Hand-drawn subway line animations resolving into typography. Two-person collaboration for the 2025 Seoul Metro YouTube Video Contest."
  },
  {
   "slug": "denim-2026",
-  "title": "Squeezed Motion",
-  "subtitle": "D&J KOREA 데님 디자인 공모전 본선",
-  "cat": "데님 디자인 · 공모전 본선 · 2026",
-  "year": "2026",
-  "status": "제작 중",
-  "thumb": "/images/projects/denim-2026/01.jpg",
-  "desc": "물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 수십 개의 방향을 먼저 시뮬레이션한 뒤, 원단을 받아 실제 제작에 들어갔다.",
-  "role": "디자인, 그래픽, 소재 실험",
-  "images": [
-   "/images/projects/denim-2026/01.jpg"
+  "featured": 6,
+  "archiveRank": null,
+  "tags": [
+   "FASHION",
+   "AI"
   ],
+  "year": "2026",
+  "period": "2026",
+  "thumb": "/images/projects/denim-2026/01.jpg",
+  "images": [
+   "/images/projects/denim-2026/01.jpg",
+   "/images/projects/denim-2026/02.jpg",
+   "/images/projects/denim-2026/03.jpg",
+   "/images/projects/denim-2026/04.jpg",
+   "/images/projects/denim-2026/05.jpg",
+   "/images/projects/denim-2026/06.jpg",
+   "/images/projects/denim-2026/07.jpg"
+  ],
+  "role": {
+   "ko": "디자인 · 그래픽 · 소재 실험 · 제작 (단독)",
+   "en": "Design, graphics, material experiments, construction (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
   "nar": {
    "ko": {
     "title": "Squeezed Motion",
-    "cat": "데님 디자인 · 공모전 본선 · 제작 중",
+    "cat": "데님 디자인 · 공모전 입선 · 2026",
     "headline": "만들기 전에 수십 번 먼저 만들어봤다. AI를 스케치북처럼 썼다.",
     "metrics": [
      {
-      "v": "본선 진출",
-      "l": "D&J KOREA 데님 디자인 공모전"
+      "v": "입선",
+      "l": "코리아 데님 디자인 공모전 2026"
      }
     ],
     "need": "본선 작품은 한 벌만 만들 수 있고 원단은 되돌릴 수 없다. 프린트한 그래픽이 실제 데님 위에서 어떻게 보일지, 데미지를 어디까지 내야 물감이 흘러내리는 것처럼 읽힐지 — 이걸 원단을 자르기 전에 알아야 했다.",
@@ -1123,9 +1497,11 @@ window.PROJECTS = [
      "AI로 아이디어를 대량 시뮬레이션 — 일러스트, 인스퍼레이션, 그래픽이 프린트됐을 때의 모습, 실루엣 변주, 컬러웨이까지 실물 제작 전에 눈으로 확인",
      "하프톤 점묘로 물감이 점점 흩어지는 그래디언트를 만들고, 그 점이 끝나는 지점에서 실제 프린지가 시작되도록 앞뒤를 연결",
      "물감 튜브 그래픽을 하프톤·ASCII·레트로·애시드·그레인·찢어진 종이·잉크브러시 등 여덟 가지 그래픽 언어로 전개해, 같은 오브젝트가 표현 방식에 따라 어디까지 달라지는지 실험",
-     "로우 워시 raw indigo 데님과 아이보리 캔버스 백패치로 소재를 확정하고, 현재 원단을 받아 실제 제작 중"
+     "로우 워시 raw indigo 데님과 아이보리 캔버스 백패치로 소재를 확정하고, 원단을 받아 실물 한 벌을 제작"
     ],
-    "result": null,
+    "result": [
+     "입선 (Honorable Mention) — 코리아 데님 디자인 공모전 2026 (D&J DenimsandJeans Korea, COEX Seoul, 한국섬유신문·D&J)"
+    ],
     "detail": {
      "title": "AI를 어떻게 썼나",
      "body": [
@@ -1137,12 +1513,12 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Squeezed Motion",
-    "cat": "Denim Design · Competition Finals · In progress",
+    "cat": "Denim Design · Competition · Honorable Mention · 2026",
     "headline": "I made it dozens of times before making it. AI was the sketchbook.",
     "metrics": [
      {
-      "v": "Finalist",
-      "l": "D&J KOREA Denim Design Challenge"
+      "v": "Honorable Mention",
+      "l": "Korea Denim Design Contest 2026"
      }
     ],
     "need": "A finals entry is one garment, and fabric does not undo. How a printed graphic would sit on real denim, and how far the damage had to go before it read as paint bleeding into thread — all of it had to be known before the first cut.",
@@ -1151,9 +1527,11 @@ window.PROJECTS = [
      "Simulated ideas in bulk with AI: illustration, inspiration, how the graphic would look once printed, silhouette variations, colorways — all seen before anything was cut",
      "Used halftone dots to scatter the paint into a gradient, and started the real fringe exactly where the dots end, connecting front to back",
      "Ran the paint-tube graphic through eight treatments — halftone, ASCII, retro, acid, grain, torn paper, ink brush — to see how far the same object could travel by treatment alone",
-     "Settled on low-wash raw indigo denim with an ivory canvas back patch; the fabric has arrived and construction is underway"
+     "Settled on low-wash raw indigo denim with an ivory canvas back patch, then built the single garment from the delivered fabric"
     ],
-    "result": null,
+    "result": [
+     "Honorable Mention — Korea Denim Design Contest 2026 (D&J DenimsandJeans Korea, COEX Seoul)"
+    ],
     "detail": {
      "title": "How AI was used",
      "body": [
@@ -1163,36 +1541,80 @@ window.PROJECTS = [
      ]
     }
    }
-  }
+  },
+  "title": "Squeezed Motion",
+  "desc": "물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 수십 개의 방향을 먼저 시뮬레이션한 뒤, 원단을 받아 실제 제작에 들어갔다."
  },
  {
   "slug": "fashion-illustration",
-  "title": "Fashion Illustration & Flat Drawing",
-  "subtitle": "",
-  "cat": "Illustration",
+  "featured": null,
+  "archiveRank": 26,
+  "tags": [
+   "FASHION"
+  ],
   "year": "2024",
+  "period": "2024",
   "thumb": "/images/projects/fashion-illustration/01.jpg",
-  "desc": "Two sub-projects: ‘The Grace of Goryeo Celadon and the Metal Tree’, a three-person collaboration, and a Peggy Gou-inspired oceanic collection.",
-  "role": "Illustration",
   "images": [
    "/images/projects/fashion-illustration/01.jpg"
-  ]
+  ],
+  "role": {
+   "ko": "일러스트레이션 (3인 협업 1건 · 개인 1건)",
+   "en": "Illustration (one three-person collaboration, one solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "패션 일러스트레이션 & 도식화",
+    "cat": "일러스트레이션 · 2024",
+    "headline": "아직 없는 옷을 합의하기 위한 그림 — 두 개의 컬렉션을 손그림으로만 끝까지 설계했다.",
+    "need": "옷을 만들기 전에 옷을 설명할 수 있어야 한다. 일러스트는 장식이 아니라, 아직 존재하지 않는 옷을 두고 이야기하기 위한 도구다.",
+    "action": [
+     "〈고려청자의 우아함과 금속 나무〉 — 3인 협업으로 컬렉션 콘셉트와 일러스트를 함께 설계",
+     "Peggy Gou에게서 출발한 오셔닉 컬렉션을 개인 작업으로 전개",
+     "두 작업 모두 패션 일러스트와 도식화(플랫)를 한 세트로 그려 실제로 제작 가능한 형태까지 정리"
+    ],
+    "note": "〈고려청자의 우아함과 금속 나무〉는 3인 협업, 오셔닉 컬렉션은 개인 작업이다."
+   },
+   "en": {
+    "title": "Fashion Illustration & Flat Drawing",
+    "cat": "Illustration · 2024",
+    "headline": "Drawing as the way to agree on a garment that doesn't exist yet — two collections carried through on paper alone.",
+    "need": "You have to be able to explain a garment before you make it. Illustration isn't decoration; it's how people discuss something that isn't there yet.",
+    "action": [
+     "'The Grace of Goryeo Celadon and the Metal Tree' — concept and illustration developed with two collaborators",
+     "An oceanic collection starting from Peggy Gou, developed solo",
+     "Drew fashion illustration and technical flats as a pair for both, to the point where the garments could actually be made"
+    ],
+    "note": "'Goryeo Celadon' was a three-person collaboration; the oceanic collection was solo."
+   }
+  },
+  "title": "Fashion Illustration & Flat Drawing",
+  "desc": "Two sub-projects: ‘The Grace of Goryeo Celadon and the Metal Tree’, a three-person collaboration, and a Peggy Gou-inspired oceanic collection."
  },
  {
   "slug": "portfolio-site",
-  "title": "이 포트폴리오를 만든 과정",
-  "subtitle": "번쩍이는 AI 대신, 손때 묻은 공간",
-  "cat": "웹사이트 · 브랜딩 · AI 워크플로우 · 2026",
+  "featured": 12,
+  "archiveRank": null,
+  "tags": [
+   "CONTENT",
+   "AI"
+  ],
   "year": "2026",
-  "status": "진행 중",
+  "period": "2026",
   "thumb": "/images/projects/portfolio-site/01.jpg",
-  "desc": "이 사이트 자체를 하나의 프로젝트로 기록한다. 사람들이 AI 결과물에 느끼는 피로를 읽고, 반대로 빈티지한 공간을 만든 과정.",
-  "role": "기획, 아트 디렉션, 콘텐츠, AI 워크플로우",
   "images": [
    "/images/projects/portfolio-site/01.jpg",
    "/images/projects/portfolio-site/02.jpg",
    "/images/projects/portfolio-site/03.jpg"
   ],
+  "role": {
+   "ko": "기획 · 아트 디렉션 · 콘텐츠 · AI 워크플로우 (단독)",
+   "en": "Planning, art direction, content, AI workflow (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
   "nar": {
    "ko": {
     "title": "이 포트폴리오를 만든 과정",
@@ -1202,14 +1624,6 @@ window.PROJECTS = [
      {
       "v": "0",
       "l": "코딩 경험 (전부 대화로 구현)"
-     },
-     {
-      "v": "5",
-      "l": "오브제 = 프로젝트로 들어가는 문"
-     },
-     {
-      "v": "1",
-      "l": "시그니처 — 날치"
      }
     ],
     "need": "AI로 만든 사이트와 영상은 대개 같은 얼굴을 한다. 번쩍이는 애니메이션, 로봇 같은 미래 이미지, 어디서 본 듯한 매끈한 레이아웃. 그런 인위적인 결과물이 쏟아지면서 보는 사람들은 이미 피로해졌고, '이것도 AI가 만들었구나'에서 관심이 끝난다. AI를 가장 많이 쓴 포트폴리오일수록 AI처럼 보이면 안 됐다. 오래 쓴 편집샵 구석처럼, 빈티지하고 손때 묻은 공간이 필요했다.",
@@ -1218,7 +1632,8 @@ window.PROJECTS = [
      "메인 씬은 Midjourney로 직접 생성. 잡지 걸린 행거, 석고상과 스카프, 빈티지 노트북과 카메라, 스케치 액자 — 내 작업 분야를 뜻하는 오브제로 방을 채우고, 오브제 하나하나를 프로젝트로 들어가는 문으로 삼음",
      "오브제를 누끼로 떼어내 배경과 분리하고, 스크롤에 따라 방에서 구석으로 걸어 들어가는 전환과 실루엣 단위의 호버를 구현. 카테고리 메뉴 대신 물건을 고르게 함",
      "시그니처로 날치를 골랐다. 물고기인데 난다 — 한 영역에 머물지 않고 옷·영상·마케팅·AI를 두려움 없이 넘나드는 내 방식. 직접 만든 날치 사진을 누끼로 떼어 화면을 천천히 가로지르게 하고, 파비콘·커서 정도에만 쓰고 도배하지 않음",
-     "코딩을 모른 채 Claude와 대화로 설계·구현. 콘텐츠는 문제→실행→성과 구조로 쓰고, 수치가 없는 자리는 지어내지 않고 비워둠"
+     "코딩을 모른 채 Claude와 대화로 설계·구현. 콘텐츠는 문제→실행→성과 구조로 쓰고, 수치가 없는 자리는 지어내지 않고 비워둠",
+     "v7에서 방향을 뒤집었다 — 미드저니 씬과 날치 대신 종이·타자기·필름 그레인. Manus로 UI 프로토타입을 만들고, Claude와 실제 데이터·인터랙션을 채워 지금 보는 사이트가 됐다"
     ],
     "result": null,
     "detail": {
@@ -1237,14 +1652,6 @@ window.PROJECTS = [
      {
       "v": "0",
       "l": "lines of code written by hand"
-     },
-     {
-      "v": "5",
-      "l": "objects that act as doors"
-     },
-     {
-      "v": "1",
-      "l": "signature — the flying fish"
      }
     ],
     "need": "AI-made sites and films tend to wear the same face: glossy animation, robot-futurism, layouts you have seen before. As that output floods in, viewers grow numb, and interest ends at 'so this is AI too.' A portfolio that used AI this much could not afford to look like it. It needed the feel of a worn corner in a concept store — vintage, handled, real.",
@@ -1253,7 +1660,8 @@ window.PROJECTS = [
      "Generated the main scenes in Midjourney: magazines on a wire hanger, a plaster bust and scarf, a vintage laptop and camera, a framed sketch — objects that stand for my fields, each one a door into a project",
      "Cut every object out of its background, built a scroll-driven walk from the room into the corner, and made hover follow the silhouette rather than a box. No category menu — you pick up a thing",
      "Chose the flying fish as the signature. A fish that flies — refusing to stay in one lane, crossing garments, film, marketing and AI without fear. Cut out from photos I made, drifting slowly across the screen; used only in the favicon and cursor beyond that",
-     "Designed and built entirely in conversation with Claude, with no coding background. Content follows problem → action → result, and where a number does not exist the space is left empty rather than invented"
+     "Designed and built entirely in conversation with Claude, with no coding background. Content follows problem → action → result, and where a number does not exist the space is left empty rather than invented",
+     "v7 reversed the direction — paper, typewriter and film grain instead of the Midjourney room and the flying fish. Manus built the UI prototype; the real data and interactions were filled in with Claude, and that is the site you are reading"
     ],
     "result": null,
     "detail": {
@@ -1264,26 +1672,35 @@ window.PROJECTS = [
      ]
     }
    }
-  }
+  },
+  "title": "이 포트폴리오를 만든 과정",
+  "desc": "이 사이트 자체를 하나의 프로젝트로 기록한다. 사람들이 AI 결과물에 느끼는 피로를 읽고, 반대로 빈티지한 공간을 만든 과정."
  },
  {
   "slug": "promo-video-ai",
-  "title": "Gyeongju, A Thousand Years in Motion",
-  "subtitle": "Promotional Video with AI",
-  "cat": "AI Video · APEC 2025",
+  "featured": 11,
+  "archiveRank": null,
+  "tags": [
+   "CONTENT",
+   "AI"
+  ],
   "year": "2025",
+  "period": "2025",
   "thumb": "/images/projects/promo-video-ai/01.jpg",
-  "desc": "Promotional film for the 2025 APEC Special Exhibition in Gyeongju — nine traditional Korean dances staged across UNESCO World Heritage sites.",
-  "role": "AI production, editing",
-  "video": "https://www.youtube.com/embed/HZm8j22xs_s",
   "images": [
    "/images/projects/promo-video-ai/01.jpg"
   ],
+  "role": {
+   "ko": "AI 제작 · 편집 (단독)",
+   "en": "AI production, editing (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "video": "https://www.youtube.com/embed/HZm8j22xs_s",
   "nar": {
    "ko": {
     "title": "경주, 천년이 흐른다",
     "cat": "AI 영상 · 공모전 출품작",
-    "role": "AI 프로덕션, 편집",
     "need": "2025 APEC 경주 특별전시를 주제로 한 공모전 출품작으로, ‘전통은 보존된 과거’라는 통념을 벗어나야 했다. 유네스코 세계유산 공간에서 아홉 개의 전통 무용을 실제로 촬영하는 것은 개인 제작자에게 불가능했고, 그럼에도 국가 행사에 걸맞은 스케일이 요구됐다.",
     "action": [
      "신라 김현감호 설화를 시적 프롤로그로 시각화해 영상의 진입점을 설화에서 출발시킴",
@@ -1304,7 +1721,6 @@ window.PROJECTS = [
    "en": {
     "title": "Gyeongju, A Thousand Years in Motion",
     "cat": "AI Film · Competition Entry",
-    "role": "AI production, editing",
     "need": "An entry built on the brief of the 2025 APEC Special Exhibition in Gyeongju, which had to break the assumption that heritage is a preserved past. Filming nine traditional dances across UNESCO World Heritage sites was impossible for a solo maker — and the result still had to carry the scale of a national event.",
     "action": [
      "Opened on the Silla legend of Kim Hyun-gam-ho as a poetic prologue, entering the film through myth rather than description",
@@ -1322,33 +1738,271 @@ window.PROJECTS = [
      }
     ]
    }
-  }
- },
- {
-  "slug": "surrealism",
-  "title": "Painting the Bagel",
-  "subtitle": "Surrealism Art Project",
-  "cat": "Digital Art · Photoshop",
-  "year": "2024",
-  "thumb": "/images/projects/surrealism/01.jpg",
-  "desc": "Digital artwork of painting and graffiti on a cream cheese bagel — reality merged with imagination.",
-  "role": "Digital art",
-  "images": [
-   "/images/projects/surrealism/01.jpg",
-   "/images/projects/surrealism/02.jpg"
-  ]
+  },
+  "title": "Gyeongju, A Thousand Years in Motion",
+  "desc": "Promotional film for the 2025 APEC Special Exhibition in Gyeongju — nine traditional Korean dances staged across UNESCO World Heritage sites."
  },
  {
   "slug": "unreal-engine",
-  "title": "Unreal Engine",
-  "subtitle": "Virtual Fashion Studio",
-  "cat": "Real-time 3D",
+  "featured": null,
+  "archiveRank": 25,
+  "tags": [
+   "CONTENT"
+  ],
   "year": "2025",
+  "period": "2024.09–12",
   "thumb": "/images/18_unreal_engine.jpg",
-  "desc": "A virtual fashion studio built in Unreal Engine with interactive 3D characters, using MetaHuman for character creation.",
-  "role": "3D environment, character setup",
   "images": [
    "/images/projects/unreal-engine/01.jpg"
-  ]
+  ],
+  "role": {
+   "ko": "3D 환경 · 캐릭터 셋업 (단독)",
+   "en": "3D environment, character setup (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "가상 의류 제작실 (Unreal Engine)",
+    "cat": "실시간 3D · 개인",
+    "headline": "게임 엔진 안에 옷을 만드는 방을 짓고, 캐릭터가 그 안에서 움직이게 했다.",
+    "need": "3D 패션 툴은 옷 한 벌을 시뮬레이션하는 데서 멈춘다. 옷이 만들어지는 공간 자체를 다루면 무엇이 달라지는지 보고 싶었다.",
+    "action": [
+     "Unreal Engine으로 가상의 의류 제작 스튜디오 공간을 설계하고 구현",
+     "MetaHuman으로 캐릭터를 만들고 공간 안에서 이동·상호작용하도록 세팅",
+     "게임 엔진 기술을 패션·텍스타일 제작 환경에 접목하는 실험으로 진행"
+    ]
+   },
+   "en": {
+    "title": "Virtual Clothing Production Room (Unreal Engine)",
+    "cat": "Real-time 3D · Solo",
+    "headline": "Built the room where clothes get made inside a game engine, and put a character in it.",
+    "need": "3D fashion tools stop at simulating one garment. I wanted to see what changes when the space of making is the thing you model.",
+    "action": [
+     "Designed and built a virtual garment-production studio in Unreal Engine",
+     "Created the character with MetaHuman and set it up to move and interact within the space",
+     "Ran it as an experiment in bringing game-engine technique into a fashion and textile making environment"
+    ]
+   }
+  },
+  "title": "Unreal Engine",
+  "desc": "A virtual fashion studio built in Unreal Engine with interactive 3D characters, using MetaHuman for character creation."
+ },
+ {
+  "slug": "arts-week-2026",
+  "featured": null,
+  "archiveRank": 15,
+  "tags": [
+   "FASHION"
+  ],
+  "year": "2026",
+  "period": "2026.09.28–10.02",
+  "thumb": "/images/projects/arts-week-2026/01.jpg",
+  "images": [
+   "/images/projects/arts-week-2026/01.jpg",
+   "/images/projects/arts-week-2026/02.jpg",
+   "/images/projects/arts-week-2026/03.jpg",
+   "/images/projects/arts-week-2026/04.jpg",
+   "/images/projects/arts-week-2026/05.jpg",
+   "/images/projects/arts-week-2026/06.jpg",
+   "/images/projects/arts-week-2026/07.jpg",
+   "/images/projects/arts-week-2026/08.jpg",
+   "/images/projects/arts-week-2026/09.jpg"
+  ],
+  "role": {
+   "ko": "설치 재구성 · 제작 · 현장 설치 (단독)",
+   "en": "Installation redesign, construction, on-site setup (solo)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "2026 서울대 예술주간 — 〈공생 Tensed Symbiosis〉",
+    "cat": "야외 설치 · 예술주간 · 2026.09.28–10.02",
+    "headline": "런웨이 위에서 한 벌이던 것을, 잔디 위에 서 있는 구조로 다시 세웠다.",
+    "metrics": [],
+    "need": "Art2Wear에서 입고 걸었던 옷은 움직이는 사람이 전제였다. 예술주간은 관객이 다가와서 보는 야외 설치 — 같은 긴장을 몸 없이, 비와 바람 속에서 닷새 동안 유지시켜야 했다.",
+    "action": [
+     "깨진 도자기 파편, 마른 꽃, 나뭇가지, 인조진주를 마네킹 위에 가변설치로 재구성",
+     "런웨이용 핸드 스티치 결합을 야외 조건에 맞게 다시 설계",
+     "학생회관과 관정관 사이 잔디에 설치 — 지나가는 사람의 동선에서 읽히는 각도로 배치"
+    ],
+    "result": null,
+    "detail": {
+     "title": "왜 다시 만들었나",
+     "body": [
+      "같은 개념이 매체를 바꿔도 살아남는지 확인하고 싶었다. 런웨이의 긴장은 걸음에서 왔고, 설치의 긴장은 서 있는 시간에서 온다."
+     ]
+    }
+   },
+   "en": {
+    "title": "SNU Arts Week 2026 — “Tensed Symbiosis”",
+    "cat": "Outdoor Installation · Arts Week · 28 Sep – 2 Oct 2026",
+    "headline": "What was one garment on a runway, rebuilt as a structure standing on the lawn.",
+    "metrics": [],
+    "need": "The Art2Wear piece assumed a moving body. Arts Week is an outdoor installation people walk up to — the same tension had to hold without a body, in rain and wind, for five days.",
+    "action": [
+     "Reassembled the ceramic shards, dried flowers, branches and faux pearls on a mannequin as a site-specific installation",
+     "Redesigned the runway hand-stitch joins for outdoor conditions",
+     "Sited on the lawn between the Student Union and Kwanjeong Library, angled to read from the path people actually take"
+    ],
+    "result": null,
+    "detail": {
+     "title": "Why rebuild it",
+     "body": [
+      "I wanted to know whether the concept survives a change of medium. On the runway the tension came from walking; in the installation it comes from standing still."
+     ]
+    }
+   }
+  },
+  "title": "SNU Arts Week 2026 — Tensed Symbiosis",
+  "desc": "The Art2Wear piece rebuilt as an outdoor site installation for SNU Arts Week 2026."
+ },
+ {
+  "slug": "technical-design",
+  "featured": null,
+  "archiveRank": 16,
+  "tags": [
+   "FASHION",
+   "NOW"
+  ],
+  "year": "2026",
+  "period": "2026.09–12",
+  "thumb": "/images/x.jpg",
+  "images": [],
+  "role": {
+   "ko": "테크니컬 패키지 개발 (수강 중)",
+   "en": "Technical package development (in progress)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "테크니컬 디자인 — 작업지시서 개발",
+    "cat": "테크니컬 패키지 · 수강 중 · 2026.09–12",
+    "headline": "본사와 생산 현장을 잇는 문서를 만든다. 예쁜 것이 아니라 틀리지 않는 것이 기준이다.",
+    "metrics": [],
+    "need": "디자인이 공장에서 그대로 재현되려면 측정·사이즈·그레이딩, 원단과 재단, 부자재, 라벨·패키징까지 한 장의 언어로 정리돼야 한다. 감각이 아니라 스펙으로 옷을 설명하는 훈련.",
+    "action": [
+     "실루엣·디테일 용어와 스티치·SPI부터 치수·그레이딩, 원단·재단, 부자재·여밈, 레이블·패키징, 프로토타입 평가까지 순서대로 이수",
+     "기말 프로젝트로 실물 테크니컬 패키지를 개발 — 최종 발표 12월",
+     "테크니컬 디자이너 3급 자격 시험과 범위가 같아, 학기 후 응시를 검토 중"
+    ],
+    "result": null
+   },
+   "en": {
+    "title": "Technical Design — Building a Tech Pack",
+    "cat": "Technical Package · In progress · Sep–Dec 2026",
+    "headline": "A document that connects HQ and the factory floor. The standard is not beautiful; it is not wrong.",
+    "metrics": [],
+    "need": "For a design to be reproduced exactly in a factory, measuring, sizing and grading, fabric and cutting, trims, labels and packaging all have to live in one shared language. Training in explaining a garment by spec, not by feel.",
+    "action": [
+     "Working through silhouette and detail terminology, stitches and SPI, measurements and grading, fabric and cutting, trims and closures, labels and packaging, prototype evaluation",
+     "Final project: a complete technical package — presented in December",
+     "Same scope as the Level 3 Technical Designer certification; considering the exam after term"
+    ],
+    "result": null
+   }
+  },
+  "title": "Technical Design",
+  "desc": "Building a technical package that connects headquarters and the factory floor."
+ },
+ {
+  "slug": "ai-art-practice",
+  "featured": null,
+  "archiveRank": 17,
+  "tags": [
+   "CONTENT",
+   "AI",
+   "NOW"
+  ],
+  "year": "2026",
+  "period": "2026.09–12",
+  "thumb": "/images/x.jpg",
+  "images": [],
+  "role": {
+   "ko": "모델 학습 · 워크플로우 설계 · 작품 제작 (수강 중)",
+   "en": "Model training, workflow design, artwork (in progress)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "인공지능예술실습",
+    "cat": "미디어아트 · 생성 모델 · 수강 중 · 2026.09–12",
+    "headline": "지금 하는 AI 작업을 더 깊이 이해하고, 더 세심하게 조절하기 위해 밑에서부터 배운다.",
+    "metrics": [],
+    "need": "단편영화, 뮤직비디오, 카프탄 시뮬레이션까지 AI로 만들어 왔지만, 결과를 프롬프트와 우연에 맡기는 부분이 남아 있었다. 지금 하고 있는 AI 작업을 더 깊이 이해하고 더 세심하게 조절·통제하려면, 모델이 이미지를 만드는 과정 자체를 알아야 했다. 그래서 코딩 경험 없이 밑에서부터 시작했다.",
+    "action": [
+     "직접 수집한 데이터로 CNN과 생성 모델을 학습시키며 데이터 전처리·행렬 연산 같은 원리를 따라감",
+     "ComfyUI 노드 워크플로우로 이미지 생성 과정을 단계별로 해체",
+     "학기 말 과제전(12월) 출품을 목표로 미디어아트·영상매체 작품 제작"
+    ],
+    "result": null
+   },
+   "en": {
+    "title": "AI Art Practice",
+    "cat": "Media Art · Generative Models · In progress · Sep–Dec 2026",
+    "headline": "Learning it from the bottom up, to understand the AI work I already do more deeply and control it more finely.",
+    "metrics": [],
+    "need": "I had already made a short film, a music video and a kaftan simulation with AI, but part of every result was still left to the prompt and to chance. To understand the work I am doing more deeply and to control and fine-tune it more precisely, I needed to know how the model actually builds an image. So I started from the bottom, with no coding background.",
+    "action": [
+     "Training CNNs and generative models on self-collected data, following the underlying maths — preprocessing, matrix operations",
+     "Dissecting image generation as a ComfyUI node workflow",
+     "Building a media-art / moving-image piece for the end-of-term exhibition in December"
+    ],
+    "result": null
+   }
+  },
+  "title": "AI Art Practice",
+  "desc": "Media art and moving image made with AI — from prompting to training the model."
+ },
+ {
+  "slug": "3d-graphic-design",
+  "featured": null,
+  "archiveRank": 18,
+  "tags": [
+   "CONTENT",
+   "AI",
+   "NOW"
+  ],
+  "year": "2026",
+  "period": "2026.09–12",
+  "thumb": "/images/x.jpg",
+  "images": [],
+  "role": {
+   "ko": "Blender + AI 3D 제작 (수강 중)",
+   "en": "Blender + AI 3D production (in progress)"
+  },
+  "spotify": null,
+  "spotifyNote": null,
+  "nar": {
+   "ko": {
+    "title": "3D 그래픽 디자인",
+    "cat": "Blender · AI · 수강 중 · 2026.09–12",
+    "headline": "CLO 3D와 Unreal 위에 한 겹 더 — AI와 Blender를 같이 쓰는 3D.",
+    "metrics": [],
+    "need": "옷을 짓는 손과 3D 툴을 다루는 손이 같은 사람 안에 있어야 한다고 믿는다. 이 수업은 그 두 번째 손을 한 단계 올리는 자리.",
+    "action": [
+     "Blender 모델링·머티리얼·라이팅을 AI 생성 파이프라인과 결합",
+     "수업 결과물은 학기 진행에 따라 이 페이지에 추가"
+    ],
+    "result": null
+   },
+   "en": {
+    "title": "3D Graphic Design",
+    "cat": "Blender · AI · In progress · Sep–Dec 2026",
+    "headline": "One more layer on top of CLO 3D and Unreal — 3D made with AI and Blender together.",
+    "metrics": [],
+    "need": "I believe the hand that builds a garment and the hand that drives a 3D tool should belong to the same person. This course levels up the second hand.",
+    "action": [
+     "Combining Blender modelling, materials and lighting with an AI generation pipeline",
+     "Outputs will be added to this page as the term progresses"
+    ],
+    "result": null
+   }
+  },
+  "title": "3D Graphic Design",
+  "desc": "3D production combining AI tools and Blender."
  }
 ];
