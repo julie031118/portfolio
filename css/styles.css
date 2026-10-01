@@ -595,16 +595,17 @@ html[lang="en"] .archive-card-title { font-family: var(--font-serif-en); }
 .detail-gallery-item.has-image img { position: static; height: auto; }
 .detail-media-slot { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-2); font: 11px/1 var(--font-mono); letter-spacing: .1em; }
 .detail-hero.has-image .detail-media-slot, .detail-gallery-item.has-image .detail-media-slot { display: none; }
-.detail-header { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(280px,.85fr); gap: 40px 72px; padding: 64px 0 78px; border-bottom: 1px solid var(--hairline); }
+.detail-header { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(280px,.85fr); gap: 32px 72px; padding: 56px 0 64px; border-bottom: 1px solid var(--hairline); }
 .detail-meta { grid-column: 1/-1; margin: 0; color: var(--ink-2); font: 12px/1.5 var(--font-mono); letter-spacing: .06em; }
-.detail-title { max-width: 15ch; margin: 0; font: 400 clamp(48px,7vw,104px)/.95 var(--font-serif-ko); letter-spacing: -.035em; }
-html[lang="en"] .detail-title { font-family: var(--font-serif-en); }
-.detail-headline { align-self: end; max-width: 42ch; margin: 0; font: 400 clamp(20px,2.1vw,30px)/1.45 var(--font-serif-ko); }
-html[lang="en"] .detail-headline { font-family: var(--font-serif-en); }
+/* title, key line and numbers speak in the intro's typewriter voice (Special Elite, Korean in Nanum Gothic Coding), kept modest */
+.detail-title { max-width: 24ch; margin: 0; font: 400 clamp(26px,2.6vw,38px)/1.35 var(--font-mono); letter-spacing: .04em; }
+.detail-headline { align-self: end; max-width: 42ch; margin: 0; font: 400 clamp(15px,1.25vw,18px)/1.75 var(--font-mono); letter-spacing: .04em; }
+/* in Korean the typewriter face would only catch the full stops and Latin letters, too heavy next to Hangul (the intro sets those in the Korean face too) */
+html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"] .detail-metrics strong { font-family: "Nanum Gothic Coding", "Special Elite", monospace; }
 .detail-metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-bottom: 1px solid var(--hairline); }
-.detail-metrics > div { min-height: 170px; display: flex; flex-direction: column; justify-content: center; gap: 13px; padding: 28px clamp(12px,3vw,42px); }
+.detail-metrics > div { min-height: 128px; display: flex; flex-direction: column; justify-content: center; gap: 13px; padding: 28px clamp(12px,3vw,42px); }
 .detail-metrics > div + div { border-left: 1px solid var(--hairline); }
-.detail-metrics strong { font: 400 clamp(38px,5vw,68px)/1 var(--font-serif-en); }
+.detail-metrics strong { font: 400 clamp(22px,2.2vw,30px)/1.2 var(--font-mono); letter-spacing: .03em; }
 .detail-metrics span { color: var(--ink-2); font: 11px/1.45 var(--font-mono); letter-spacing: .05em; }
 .detail-role { display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 24px; margin: 0; padding: 34px 0; border-bottom: 1px solid var(--hairline); font: 14px/1.75 var(--font-body-ko); }
 .detail-role span, .detail-story-block h3, .detail-gallery-section > h3, .detail-soundtrack > h3, .detail-films > h3, .detail-press > h3 { color: var(--ink-2); font: 11px/1.4 var(--font-mono); letter-spacing: .1em; }
@@ -700,10 +701,10 @@ html[lang="en"] .detail-headline { font-family: var(--font-serif-en); }
   .detail-content { width: calc(100% - 32px); padding: calc(var(--nav-height) + 48px) 0 80px; }
   .detail-header { grid-template-columns: 1fr; gap: 26px; padding: 40px 0 54px; }
   .detail-meta { grid-column: auto; }
-  .detail-title { font-size: clamp(42px,14vw,68px); }
-  .detail-headline { font-size: 20px; }
+  .detail-title { font-size: clamp(22px,6.4vw,28px); }
+  .detail-headline { font-size: 15px; }
   .detail-metrics { grid-template-columns: 1fr; }
-  .detail-metrics > div { min-height: 110px; padding: 24px 0; }
+  .detail-metrics > div { min-height: 88px; padding: 20px 0; }
   .detail-metrics > div + div { border-left: 0; border-top: 1px solid var(--hairline); }
   .detail-role, .detail-story-block { grid-template-columns: 1fr; gap: 12px; }
   .detail-roles { grid-template-columns: 1fr; gap: 48px; }
