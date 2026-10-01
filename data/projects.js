@@ -655,10 +655,7 @@ window.PROJECTS = [
    "en": "Design, material development, construction, runway model"
   },
   "spotify": "6QGCdRsqlovtzy0ulHNIsD",
-  "spotifyNote": {
-   "ko": "고른 이유 한 줄이 들어갈 자리.",
-   "en": "One line on why this song goes here."
-  },
+  "spotifyNote": null,
   "process": [
    "/images/projects/art2wear/41.jpg",
    "/images/projects/art2wear/40.jpg",
@@ -1858,7 +1855,9 @@ window.PROJECTS = [
   "period": "2025",
   "thumb": "/images/projects/promo-video-ai/01.jpg",
   "images": [
-   "/images/projects/promo-video-ai/01.jpg"
+   "/images/projects/promo-video-ai/01.jpg",
+   "/images/projects/promo-video-ai/a02.jpg",
+   "/images/projects/promo-video-ai/a03.jpg"
   ],
   "role": {
    "ko": "AI 제작 · 편집 (단독)",
@@ -1869,14 +1868,14 @@ window.PROJECTS = [
   "video": "https://www.youtube.com/embed/HZm8j22xs_s",
   "nar": {
    "ko": {
-    "title": "경주, 천년이 흐른다",
-    "cat": "AI 영상 · 공모전 출품작",
+    "title": "경주 APEC 홍보 영상",
+    "cat": "AI 영상",
     "need": "2025 APEC 경주 특별전시를 주제로 한 공모전 출품작으로, ‘전통은 보존된 과거’라는 통념을 벗어나야 했다. 유네스코 세계유산 공간에서 아홉 개의 전통 무용을 실제로 촬영하는 것은 개인 제작자에게 불가능했고, 그럼에도 국가 행사에 걸맞은 스케일이 요구됐다.",
     "action": [
      "신라 김현감호 설화를 시적 프롤로그로 시각화해 영상의 진입점을 설화에서 출발시킴",
      "신라 수막새 기와 문양이 APEC 로고로 전환되는 모티프를 설계해 과거와 현재를 하나의 형태로 연결",
      "아홉 개의 전통 무용을 각기 다른 유네스코 세계유산 공간에 배치하고, 아침에서 밤으로 흐르는 시간 순으로 배열해 시간의 흐름과 전통의 연속성을 구조화",
-     "마지막 시퀀스를 황리단길에 두고 전통 리듬과 현대 안무를 겹쳐, 유산이 박제가 아니라 새로운 형태로 살아있음을 결론으로 제시"
+     "마지막 시퀀스를 황리단길에 두고 전통 리듬과 현대 안무를 겹쳐, 유산이 새로운 형태로 살아있음을 결론으로 제시"
     ],
     "result": null,
     "note": "2025 경북 국제 AI 메타버스 영상 공모전 출품작 · 생성형 AI 기반 제작",
@@ -1889,14 +1888,14 @@ window.PROJECTS = [
     ]
    },
    "en": {
-    "title": "Gyeongju, A Thousand Years in Motion",
-    "cat": "AI Film · Competition Entry",
+    "title": "Gyeongju APEC Promo Film",
+    "cat": "AI Film",
     "need": "An entry built on the brief of the 2025 APEC Special Exhibition in Gyeongju, which had to break the assumption that heritage is a preserved past. Filming nine traditional dances across UNESCO World Heritage sites was impossible for a solo maker, and the result still had to carry the scale of a national event.",
     "action": [
      "Opened on the Silla legend of Kim Hyun-gam-ho as a poetic prologue, entering the film through myth rather than description",
      "Designed the Silla roof tile “Sumaksae” to transform into the APEC logo, binding past and present into one shape",
      "Placed nine traditional dances in nine different World Heritage sites and ordered them from morning to night, so time itself carried the continuity of tradition",
-     "Closed in Hwangnidan-gil, layering modern choreography over traditional rhythm to argue that heritage is not static but alive in new forms"
+     "Closed in Hwangnidan-gil, layering modern choreography over traditional rhythm to show heritage living on in new forms"
     ],
     "result": null,
     "note": "Entry for the 2025 Gyeongbuk International AI Metaverse Video Competition, produced with generative AI",

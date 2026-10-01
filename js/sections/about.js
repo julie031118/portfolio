@@ -27,10 +27,25 @@ function loadMedia(frame, source, alt) {
   image.src = source;
 }
 
+/* '2024.07 ~ 2025.06', or '2024.09 ~ 12' inside one year */
+function dateRange(item) {
+  if (!item.until) return item.date;
+  const [startYear] = item.date.split('.'); const [endYear, endMonth] = item.until.split('.');
+  return `${item.date} ~ ${startYear === endYear ? endMonth : item.until}`;
+}
+
+/* which semester column a month falls in: '2024-1' (Jan to Jun) or '2024-2', else the whole-year column */
+function semesterOf(month) {
+  const [year, value] = month.split('.').map(Number); const half = value <= 6 ? 1 : 2;
+  let index = SITE.timeline.findIndex((segment) => segment.segment === `${year}-${half}`);
+  if (index < 0) index = SITE.timeline.findIndex((segment) => String(segment.segment).startsWith(String(year)));
+  return { index, half, value };
+}
+
 function buildTimeline(track, lang) {
   track.innerHTML = SITE.timeline.map((segment) => {
     const grade = T(segment.grade, lang);
-    const items = segment.items.map((item, index) => `<button class="timeline-item${item.major ? ' is-major' : ''}" type="button" data-item-index="${index}"><span class="timeline-item-date">${item.date}</span><span class="timeline-item-title">${T(item.title, lang)}</span></button>`).join('');
+    const items = segment.items.map((item, index) => `<button class="timeline-item${item.major ? ' is-major' : ''}" type="button" data-item-index="${index}"><span class="timeline-item-date">${dateRange(item)}</span><span class="timeline-item-title">${T(item.title, lang)}</span></button>`).join('');
     return `<section class="timeline-segment timeline-segment--count-${segment.items.length}"><div class="timeline-segment-marker"><span class="timeline-year">${segment.segment}</span><span class="timeline-grade">${grade}</span></div><div class="timeline-items">${items}</div></section>`;
   }).join('');
 }
@@ -47,7 +62,7 @@ export function renderAbout(lang) {
         <figure class="about-photo about-photo--stack">${(SITE.profile.photos || [SITE.profile.photo]).map((_, index) => mediaMarkup(`about-photo-frame about-photo-frame--${index + 1}`, SITE.aboutUi.photoSlot)).join('')}<figcaption>${SITE.aboutUi.profile}</figcaption></figure>
       </section>
       <section class="about-stats" aria-label="${SITE.aboutUi.stats}"></section>
-      <section class="about-timeline" aria-labelledby="about-timeline-title"><div class="timeline-pin"><div class="timeline-topline"><h2 id="about-timeline-title">${SITE.aboutUi.timeline}</h2><span>${SITE.timeline.length} ${SITE.aboutUi.segments}</span></div><div class="timeline-viewport"><div class="timeline-track"></div></div></div></section>
+      <section class="about-timeline" aria-labelledby="about-timeline-title"><div class="timeline-pin"><div class="timeline-topline"><h2 id="about-timeline-title">${SITE.aboutUi.timeline}</h2><span>${String(SITE.timeline[0].segment).slice(0, 4)} <span class="timeline-topline-arrow">→</span> ${String(SITE.timeline[SITE.timeline.length - 1].segment).slice(0, 4)}</span></div><div class="timeline-viewport"><div class="timeline-track"></div></div></div></section>
       <section class="about-skills" aria-labelledby="about-skills-title"><h2 id="about-skills-title">${SITE.aboutUi.skills}</h2><div class="about-skill-groups"></div></section>
     </div>
     <div class="strength-media-popup" aria-hidden="true">${mediaMarkup('strength-media-frame', SITE.aboutUi.mediaSlot)}</div>
@@ -114,7 +129,7 @@ export function renderAbout(lang) {
   function closePanel() { clearTimeout(panelTimer); panelTimer = window.setTimeout(() => { panel.classList.remove('is-open'); panel.setAttribute('aria-hidden', 'true'); }, 250); }
   function openPanel(item, segment, grade) {
     clearTimeout(panelTimer); panelInner.innerHTML = '';
-    const date = document.createElement('p'); date.className = 'timeline-panel-date'; date.textContent = item.date;
+    const date = document.createElement('p'); date.className = 'timeline-panel-date'; date.textContent = dateRange(item);
     const title = document.createElement('h3'); title.className = 'timeline-panel-title'; title.textContent = T(item.title, lang);
     const meta = document.createElement('p'); meta.className = 'timeline-panel-grade'; meta.textContent = [segment, grade].filter(Boolean).join(' · ');
     const desc = document.createElement('p'); desc.className = 'timeline-panel-desc'; desc.textContent = T(item.desc, lang);
@@ -129,8 +144,8 @@ export function renderAbout(lang) {
     const segment = SITE.timeline[segmentIndex]; const grade = T(segment.grade, lang);
     segmentElement.querySelectorAll('.timeline-item').forEach((button, itemIndex) => {
       const item = segment.items[itemIndex];
-      button.addEventListener('pointerenter', () => openPanel(item, segment.segment, grade));
-      button.addEventListener('pointerleave', closePanel);
+      button.addEventListener('pointerenter', () => { openPanel(item, segment.segment, grade); button.timelineSpan?.classList.add('is-hot'); });
+      button.addEventListener('pointerleave', () => { closePanel(); button.timelineSpan?.classList.remove('is-hot'); });
       button.addEventListener('focus', () => openPanel(item, segment.segment, grade));
       button.addEventListener('blur', closePanel);
       if (mobileQuery.matches) { const desc = document.createElement('span'); desc.className = 'timeline-item-desc'; desc.textContent = T(item.desc, lang); button.append(desc); if (item.link) button.addEventListener('click', () => openDetail(item.link, lang)); }
@@ -146,7 +161,42 @@ export function renderAbout(lang) {
     });
   }
 
+  function drawSpans() {
+    track.querySelectorAll('.timeline-span').forEach((node) => node.remove());
+    if (!SITE.timelineSpans || mobileQuery.matches) return;
+    const segments = [...track.querySelectorAll('.timeline-segment')];
+    const spans = [];
+    segments.forEach((segmentElement, segmentIndex) => {
+      const buttons = segmentElement.querySelectorAll('.timeline-item');
+      SITE.timeline[segmentIndex].items.forEach((item, itemIndex) => {
+        const button = buttons[itemIndex]; if (button) button.timelineSpan = null;
+        if (!item.until || !button) return;
+        const end = semesterOf(item.until);
+        if (end.index < 0 || end.index === segmentIndex) return;
+        const endElement = segments[end.index];
+        const halfYear = /-\d$/.test(SITE.timeline[end.index].segment);
+        const fraction = halfYear ? ((end.half === 1 ? end.value - 1 : end.value - 7) + .5) / 6 : end.value / 12;
+        const x0 = segmentElement.offsetLeft + button.offsetLeft;
+        const x1 = endElement.offsetLeft + endElement.offsetWidth * Math.min(.95, Math.max(.08, fraction));
+        if (x1 - x0 > 40) spans.push({ x0, x1, button });
+      });
+    });
+    const lanes = [];
+    spans.sort((a, b) => a.x0 - b.x0).forEach((span) => {
+      let lane = lanes.findIndex((laneEnd) => laneEnd < span.x0 - 4);
+      if (lane < 0) { lane = lanes.length; lanes.push(0); }
+      lanes[lane] = span.x1;
+      const line = document.createElement('span');
+      line.className = 'timeline-span'; line.setAttribute('aria-hidden', 'true');
+      line.style.left = `${span.x0}px`; line.style.width = `${span.x1 - span.x0}px`; line.style.setProperty('--lane', lane);
+      track.append(line); span.button.timelineSpan = line;
+    });
+  }
+  let spanTimer = 0;
+  const onSpanResize = () => { clearTimeout(spanTimer); spanTimer = window.setTimeout(drawSpans, 150); };
+
   function setupInteractions() {
+    drawSpans(); window.addEventListener('resize', onSpanResize);
     if (mobileQuery.matches) {
       mobileObserver = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('is-in-view'); }), { threshold: .12 });
       section.querySelectorAll('.timeline-item').forEach((item) => mobileObserver.observe(item));
@@ -161,6 +211,6 @@ export function renderAbout(lang) {
   if (window.__introReady) setupInteractions();
   else { pendingLoadHandler = () => requestAnimationFrame(setupInteractions); window.addEventListener('portfolio:intro-ready', pendingLoadHandler, { once: true }); }
 
-  instance = { destroy() { if (pendingLoadHandler) window.removeEventListener('portfolio:intro-ready', pendingLoadHandler); horizontalTween?.scrollTrigger?.kill(); horizontalTween?.kill(); mobileObserver?.disconnect(); clearTimeout(panelTimer); } };
+  instance = { destroy() { if (pendingLoadHandler) window.removeEventListener('portfolio:intro-ready', pendingLoadHandler); horizontalTween?.scrollTrigger?.kill(); horizontalTween?.kill(); mobileObserver?.disconnect(); clearTimeout(panelTimer); clearTimeout(spanTimer); window.removeEventListener('resize', onSpanResize); } };
   return instance;
 }

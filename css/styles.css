@@ -350,6 +350,7 @@ html[lang="en"] .about-strength-claim { font-family: var(--font-serif-en); }
 .timeline-pin { position: relative; height: 100vh; min-height: 680px; overflow: hidden; background: transparent; }
 .timeline-topline { position: absolute; top: calc(var(--nav-height) + 28px); left: 28px; right: 28px; z-index: 4; display: flex; justify-content: space-between; align-items: center; }
 .timeline-topline h2 { margin: 0; font: inherit; }
+.timeline-topline-arrow { font-family: var(--font-body-ko); } /* the typewriter face has no arrow glyph */
 .timeline-viewport { position: absolute; inset: calc(var(--nav-height) + 68px) 0 0; overflow: hidden; perspective: 900px; }
 .timeline-track { position: relative; height: 100%; display: flex; width: max-content; padding: 0 38vw; transform-style: preserve-3d; }
 .timeline-track::before { content: ''; position: absolute; top: 46%; left: 0; right: 0; border-top: 1px solid var(--ink-2); }
@@ -429,7 +430,7 @@ html[lang="en"] .timeline-panel-title { font-family: var(--font-serif-en); }
   .timeline-item-date { font-size: 10px; }
   .timeline-item-title { color: var(--ink-2); font-size: 12px; }
   .timeline-item.is-major .timeline-item-title { color: var(--ink); font-size: 18px; }
-  .timeline-item-desc { display: block; margin-top: 9px; color: var(--ink-2); font: 12px/1.65 var(--font-body-ko); }
+  .timeline-item-desc { display: block; margin-top: 9px; color: #4A4D55; font: 12px/1.65 var(--font-body-ko); }
   .about-skills { grid-template-columns: 1fr; gap: 20px; padding-top: 48px; }
   .about-skill-groups { grid-template-columns: 1fr 1fr; gap: 24px 18px; }
 }
@@ -587,6 +588,15 @@ html[lang="ko"] .now-next, html[lang="ko"] .now-lead { word-break: keep-all; ove
 .timeline-segment--count-6 { flex-basis: 1480px; }
 .timeline-segment--count-7 { flex-basis: 1700px; }
 .timeline-segment-marker { z-index: 3; }
+/* the semester on the spine, in the typewriter's red ribbon so it reads apart from the items */
+.timeline-segment-marker .timeline-year { color: #B0352B; font-size: 14px; letter-spacing: .06em; text-shadow: 0 0 10px rgba(246,245,242,.85); }
+.timeline-segment-marker .timeline-grade { color: #383B42; text-shadow: 0 0 10px rgba(246,245,242,.85); }
+/* things that ran across semesters: a thin line under the spine from the item's stem to the month it ended,
+   stacked in lanes 5px apart; hovering the item turns its line red */
+.timeline-span { position: absolute; top: calc(46% + 5px + var(--lane, 0) * 5px); height: 0; border-top: 1px solid rgba(29,29,31,.32); z-index: 2; pointer-events: none; transition: border-color .2s ease; }
+.timeline-span::after { content: ''; position: absolute; right: -2px; top: -2.5px; width: 4px; height: 4px; border-radius: 50%; background: rgba(29,29,31,.45); transition: background-color .2s ease; }
+.timeline-span.is-hot { border-top-color: #B0352B; }
+.timeline-span.is-hot::after { background: #B0352B; }
 .timeline-item { z-index: 3; width: 220px; min-width: 220px; }
 .timeline-item:nth-child(1) { left: 100px; }
 .timeline-item:nth-child(2) { left: 320px; }
@@ -729,7 +739,8 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
 @media (max-width: 768px), (hover: none) {
   .mindmap-graph { display: none; }
   .timeline-segment, .timeline-segment--count-2, .timeline-segment--count-3, .timeline-segment--count-4, .timeline-segment--count-5, .timeline-segment--count-6, .timeline-segment--count-7 { width: 100%; min-width: 0; }
-  .timeline-item, .timeline-item:nth-child(n) { width: 100%; min-width: 0; }
+  .timeline-segment-marker .timeline-year { font-size: 13px; }
+  .timeline-item, .timeline-item:nth-child(n) { width: 100%; min-width: 0; left: auto; top: auto; bottom: auto; } /* the desktop 100/320/540px slots pushed phone items off screen */
   .detail-close { top: 12px; right: 16px; }
   .detail-content { width: calc(100% - 32px); padding: calc(var(--nav-height) + 48px) 0 80px; }
   .detail-header { grid-template-columns: 1fr; gap: 26px; padding: 40px 0 54px; }
