@@ -109,62 +109,6 @@ function spotifyUrl(value) {
   return `https://open.spotify.com/embed/track/${encodeURIComponent(value)}?utm_source=generator`;
 }
 
-/* ---- Spotify: one controller at a time, started on open and destroyed on close / project change ---- */
-let spotifyController = null;
-let spotifyApi = null;
-let spotifyApiPromise = null;
-let spotifyToken = 0;
-function spotifyTrackId(value) {
-  const match = String(value).match(/track[/:]([A-Za-z0-9]{22})/);
-  return match ? match[1] : (/^[A-Za-z0-9]{22}$/.test(value) ? value : null);
-}
-function loadSpotifyApi() {
-  if (spotifyApi) return Promise.resolve(spotifyApi);
-  if (spotifyApiPromise) return spotifyApiPromise;
-  spotifyApiPromise = new Promise((resolve, reject) => {
-    const previous = window.onSpotifyIframeApiReady;
-    window.onSpotifyIframeApiReady = (api) => { spotifyApi = api; previous?.(api); resolve(api); };
-    const script = document.createElement('script');
-    script.src = 'https://open.spotify.com/embed/iframe-api/v1';
-    script.async = true;
-    script.onerror = () => { spotifyApiPromise = null; reject(new Error('spotify api blocked')); };
-    document.head.append(script);
-    window.setTimeout(() => { if (!spotifyApi) reject(new Error('spotify api timeout')); }, 8000);
-  });
-  return spotifyApiPromise;
-}
-function stopSpotify() {
-  spotifyToken += 1;
-  try { spotifyController?.destroy(); } catch (error) { /* already gone */ }
-  spotifyController = null;
-}
-function plainSpotify(slot, value, title) {
-  const iframe = document.createElement('iframe');
-  iframe.className = 'detail-spotify';
-  iframe.title = title;
-  iframe.src = spotifyUrl(value);
-  iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-  slot.replaceWith(iframe);
-}
-function mountSpotify(slot, value, title) {
-  stopSpotify();
-  const id = spotifyTrackId(value);
-  if (!id) { plainSpotify(slot, value, title); return; }
-  const mine = spotifyToken;
-  loadSpotifyApi().then((api) => {
-    if (mine !== spotifyToken || !slot.isConnected) return;
-    const holder = document.createElement('div');
-    slot.append(holder);
-    api.createController(holder, { uri: `spotify:track:${id}`, width: '100%', height: 80 }, (controller) => {
-      if (mine !== spotifyToken) { controller.destroy(); return; }
-      spotifyController = controller;
-      const frame = slot.querySelector('iframe');
-      if (frame) frame.title = title;
-      controller.addListener('ready', () => { if (mine === spotifyToken) controller.play(); });
-    });
-  }).catch(() => { if (mine === spotifyToken && slot.isConnected) plainSpotify(slot, value, title); });
-}
-
 export function renderDetailShell() {
   const detail = document.querySelector('#detail');
   if (!detail) return;
@@ -207,7 +151,6 @@ function groundFor(project) {
 function renderProject(detail, project, lang) {
   const copy = project.nar[lang] || project.nar.ko;
   const content = detail.querySelector('.detail-content');
-  stopSpotify(); /* the previous project's song stops with its page */
   content.innerHTML = '';
   /* the moodboard ground: the project's photo, blurred, under translucent paper */
   const ground = detail.querySelector('.detail-ground-photo');
@@ -389,13 +332,14 @@ function renderProject(detail, project, lang) {
     const soundtrack = document.createElement('section');
     soundtrack.className = 'detail-soundtrack';
     const soundtrackTitle = document.createElement('h3'); soundtrackTitle.textContent = SITE.detailUi.soundtrack;
-    /* the song starts by itself when the page opens (Spotify iFrame API, play() once the player is ready).
-       Opening a project is a click, so Chrome lets the sound through; Safari blocks autoplay without a
-       click inside the player, so there the play button stays. Falls back to the plain embed. */
-    const slot = document.createElement('div');
-    slot.className = 'detail-spotify';
-    soundtrack.append(soundtrackTitle, slot);
-    mountSpotify(slot, project.spotify, `${SITE.detailUi.soundtrack} · ${copy.title}`);
+    /* no autoplay (연서, 2026-10-01): the song plays only when the play button is pressed, in every browser */
+    const iframe = document.createElement('iframe');
+    iframe.className = 'detail-spotify';
+    iframe.title = `${SITE.detailUi.soundtrack} · ${copy.title}`;
+    iframe.loading = 'lazy';
+    iframe.src = spotifyUrl(project.spotify);
+    iframe.allow = 'clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+    soundtrack.append(soundtrackTitle, iframe);
     const noteText = translated(project.spotifyNote, lang);
     if (noteText) { const note = document.createElement('p'); note.textContent = noteText; soundtrack.append(note); }
     /* one tiny line under the player: "30s preview · full song on YouTube ↗". The Spotify embed plays a 30 s
@@ -441,8 +385,7 @@ export function closeDetail(options = {}) {
   const detail = document.querySelector('#detail');
   if (!detail || detail.hidden) return;
   detail.hidden = true;
-  stopSpotify(); /* closing the project stops its song */
-  /* and any embed still playing (a film, or the plain Spotify fallback) goes silent too */
+  /* closing the project silences anything still playing in it (the song, a film) */
   detail.querySelectorAll('iframe').forEach((frame) => { frame.src = 'about:blank'; });
   document.body.classList.remove('detail-open');
   window.__lenis?.start?.();

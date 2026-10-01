@@ -625,7 +625,9 @@ html[lang="en"] .detail-headline { font-family: var(--font-serif-en); }
 .detail-soundtrack { margin-top: 48px !important; }
 .detail-soundtrack > h3 { margin: 20px 0 10px !important; }
 .detail-soundtrack .detail-spotify { display: block; width: min(100%, 380px); height: 80px; }
-.detail-soundtrack .detail-spotify iframe { display: block; width: 100% !important; height: 80px !important; border: 0; }
+/* the player's own colours can't be restyled (it is Spotify's page), but the whole frame can be toned down */
+.detail-soundtrack .detail-spotify { border: 0; filter: saturate(.55) contrast(.94); transition: filter .4s ease; }
+.detail-soundtrack .detail-spotify:hover { filter: saturate(.8) contrast(.97); }
 .detail-soundtrack > p:not(.detail-song-meta) { margin-top: 8px; }
 .detail-song-meta { margin: 6px 0 0 !important; color: var(--ink-2); opacity: .7; font: 9.5px/1.4 var(--font-mono) !important; letter-spacing: .06em; }
 .detail-song-meta a { color: inherit; text-decoration: underline; text-underline-offset: .28em; }
