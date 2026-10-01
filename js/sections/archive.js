@@ -34,6 +34,27 @@ function projectMatches(project, filter) {
   return target ? project.tags.includes(target) : true;
 }
 
+/* NOW: this term's courses, as three short lines under the grid (they used to be placeholder cards) */
+function nowMarkup(lang) {
+  const items = SITE.now || [];
+  if (!items.length) return '';
+  const list = items.map((item) => `
+        <li class="now-item">
+          <p class="now-label">${T(item.label, lang)}</p>
+          <p class="now-claim">${T(item.claim, lang)}</p>
+          <p class="now-evidence">${T(item.evidence, lang)}</p>
+          ${item.media?.video ? `<figure class="now-media"><video poster="${item.media.poster || ''}" muted loop playsinline preload="none" aria-label="${T(item.media.caption, lang) || ''}">${item.media.webm ? `<source src="${item.media.webm}" type="video/webm">` : ''}<source src="${item.media.video}" type="video/mp4"></video><figcaption>${T(item.media.caption, lang) || ''}</figcaption></figure>` : ''}
+          ${item.next ? `<p class="now-next"><span>${T(SITE.nowUi.next, lang)}</span>${T(item.next, lang)}</p>` : ''}
+        </li>`).join('');
+  return `
+      <section class="now-block" id="now" aria-labelledby="now-title">
+        <div class="now-head"><h2 id="now-title">${SITE.nowUi.title}</h2><span>${SITE.nowUi.index}</span></div>
+        ${SITE.nowUi.lead ? `<p class="now-lead">${T(SITE.nowUi.lead, lang)}</p>` : ''}
+        <ol class="now-list">${list}
+        </ol>
+      </section>`;
+}
+
 export function renderArchive(lang) {
   instance?.destroy();
   const section = document.querySelector('#archive');
@@ -43,6 +64,7 @@ export function renderArchive(lang) {
       <div class="section-heading"><span>${SITE.sections.archive.title}</span><span class="section-heading__index">${SITE.sections.archive.index}</span></div>
       <nav class="archive-filters" aria-label="${SITE.archiveUi.filterLabel}"></nav>
       <div class="archive-grid" aria-live="polite"></div>
+      ${nowMarkup(lang)}
     </div>`;
 
   const filtersRoot = section.querySelector('.archive-filters');
@@ -177,6 +199,17 @@ export function renderArchive(lang) {
     scrollToArchive();
   }
 
+  const nowVideos = [...section.querySelectorAll('.now-media video')];
+  let nowObserver = null;
+  if (nowVideos.length && !reducedQuery.matches && 'IntersectionObserver' in window) {
+    nowObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      const video = entry.target;
+      if (entry.isIntersecting) { const playing = video.play(); if (playing?.catch) playing.catch(() => {}); }
+      else video.pause();
+    }), { rootMargin: '120px 0px' });
+    nowVideos.forEach((video) => nowObserver.observe(video));
+  }
+
   function onHistory() { syncFromLocation(); }
   window.addEventListener('hashchange', onHistory);
   window.addEventListener('popstate', onHistory);
@@ -194,6 +227,7 @@ export function renderArchive(lang) {
   instance = {
     destroy() {
       finishFlip();
+      nowObserver?.disconnect();
       window.removeEventListener('hashchange', onHistory);
       window.removeEventListener('popstate', onHistory);
       if (readyHandler) window.removeEventListener('portfolio:intro-ready', readyHandler);

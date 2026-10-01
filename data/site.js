@@ -8,6 +8,7 @@ window.SITE = {
       { label: 'WORK', target: '#work' },
       { label: 'ABOUT', target: '#about' },
       { label: 'ARCHIVE', target: '#archive' },
+      { label: 'NOW', target: '#now' },
       { label: 'CONTACT', target: '#contact' },
     ],
     language: { ko: 'KO/EN', en: 'EN/KO' },
@@ -88,7 +89,7 @@ window.SITE = {
       {
         claim: { ko: '머릿속 그림을 AI로 바로 눈에 보이는 결과물로 만듭니다.', en: 'I turn the picture in my head into something you can see, with AI.' },
         keyword: { ko: '눈에 보이는 결과물', en: 'something you can see' },
-        evidence: { ko: 'AI 단편영화를 혼자 연출해 대상. 카프탄과 데님은 자르기 전에 AI로 먼저 입혀 봤다. 지금 보고 있는 이 포트폴리오도 코딩 없이 AI와 함께 기획부터 구현까지 직접 만들었다. 2025~2026', en: 'Directed an AI short film solo and won the grand prize. Tried the kaftan and the denim on a body with AI before cutting. And this portfolio you are looking at: planned and built with AI from concept to code, with no coding background. 2025 to 2026' },
+        evidence: { ko: 'AI 단편영화를 혼자 연출해 대상. 카프탄과 데님은 자르기 전에 AI로 먼저 입혀 봤다. 지금 보고 있는 이 포트폴리오도 코딩 없이 AI와 함께 기획부터 구현까지 직접 만들었다. 더 섬세하게 다루고 싶어서, 인공지능예술실습에서 생성 모델을 직접 학습시키며 원리부터 배우는 중. 2025~2026', en: 'Directed an AI short film solo and won the grand prize. Tried the kaftan and the denim on a body with AI before cutting. And this portfolio you are looking at: planned and built with AI from concept to code, with no coding background. To get finer control, I am now training generative models myself in Deep Learning for Artists. 2025 to 2026' },
         media: 'images/projects/ai-short-film/11.jpg',
         link: 'ai-short-film',
       },
@@ -108,7 +109,7 @@ window.SITE = {
     ],
   },
 
-  /* Timeline — 9 segments · 33 items. item: { date, title{ko,en}, major, desc{ko,en}, link: slug|null } */
+  /* Timeline — 9 segments · 28 items (courses moved to NOW, 2026-10-01). item: { date, title{ko,en}, major, desc{ko,en}, link: slug|null } */
   timeline: [
     {
       segment: '2022', grade: { ko: '1학년', en: 'Year 1' },
@@ -147,15 +148,12 @@ window.SITE = {
         { date: '2024.09', major: true, link: 'senior-fit',
           title: { ko: '관악노인종합복지관 × 서울대 협업 패션쇼: 시니어핏', en: 'Gwanak Senior Welfare Center × SNU Fashion Show: Senior Fit' },
           desc: { ko: '어르신 한 분을 전담해 수업 밖에서까지 여러 차례 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 코트를 제작. 완성작으로 시니어 런웨이까지 진행했고, 대학신문 인터뷰 대상자로 선정. 2024.09~12', en: 'Paired one-to-one with a senior model, interviewed him repeatedly beyond class hours and built a coat from his taste and body. Shown on the senior runway; interviewed by The SNU Newspaper. Sep to Dec 2024' } },
-        { date: '2024.09', major: false, link: 'clo3d',
-          title: { ko: "CLO 3D 액티브웨어 컬렉션 'Dopamine Dressing'", en: "CLO 3D activewear collection 'Dopamine Dressing'" },
-          desc: { ko: '러닝 크루 문화를 즐기는 20대 후반 직장인 페르소나를 설계하고 WGSN 트렌드 리포트를 근거로 삼아 CLO 3D로 디자인부터 3D 시뮬레이션까지 단독 제작. 2024.09~10', en: 'A persona in late-20s running-crew culture, grounded in WGSN trend reports; designed and simulated entirely in CLO 3D, solo. Sep to Oct 2024' } },
         { date: '2024.09', major: false, link: 'unreal-engine',
           title: { ko: 'Unreal Engine 가상 패션 스튜디오', en: 'Unreal Engine virtual fashion studio' },
           desc: { ko: '캐릭터가 3D 공간 안에서 움직이고 상호작용하는 가상 패션 제작 스튜디오를 Unreal Engine으로 직접 구현. MetaHuman으로 캐릭터 생성. 2024.09~12', en: 'A virtual fashion studio in Unreal Engine with interactive 3D characters built in MetaHuman. Sep to Dec 2024' } },
         { date: '2024.11', major: true, link: 'clo3d',
           title: { ko: '입선: 제13회 국제 디지털 패션 공모전', en: 'Selected Entry: 13th International Digital Fashion Contest' },
-          desc: { ko: "한국의류산업학회 주최. CLO 3D 액티브웨어 컬렉션 'Dopamine Dressing'으로 입선. 2024.11.02", en: "Hosted by the Korean Society for Clothing Industry. Selected for the CLO 3D collection 'Dopamine Dressing'. 2 Nov 2024" } },
+          desc: { ko: "한국의류산업학회 주최. 러닝 크루 문화를 즐기는 20대 후반 직장인 페르소나를 WGSN 트렌드 리포트로 설계하고, CLO 3D로 디자인부터 3D 시뮬레이션까지 단독 제작한 액티브웨어 컬렉션 'Dopamine Dressing'으로 입선. 2024.09~11", en: "Hosted by the Korean Society for Clothing Industry. 'Dopamine Dressing', an activewear collection for a late-20s running-crew persona grounded in WGSN trend reports, designed and simulated solo in CLO 3D. Sep to Nov 2024" } },
       ],
     },
     {
@@ -164,12 +162,9 @@ window.SITE = {
         { date: '2025.01', major: true, link: 'miraen',
           title: { ko: '미래엔수학 5개 지사: 디자이너 & 마케터', en: 'MiraeN Math (5-district branch): Designer & Marketer' },
           desc: { ko: 'SNS 3개 채널을 0에서 개설·운영하며 누적 50여 편의 브랜드 콘텐츠 제작. 브랜드 2D 캐릭터를 3D로 리빌드해 숏폼으로 확장. 유료광고와 네이버 스마트플레이스 SEO 병행. 릴스 최고 조회수 2.9만. 2025.01~08', en: 'Built and ran three channels from zero: 50+ pieces of brand content, the 2D brand character rebuilt in 3D for short-form, paid media alongside Naver SmartPlace SEO. Top Reel 29,000 views. Jan to Aug 2025' } },
-        { date: '2025.06', major: false, link: null,
-          title: { ko: "서울대 중앙도서관 디지털 리터러시 아카데미: 'AI로 만드는 영화' 클래스", en: "SNU Central Library Digital Literacy Academy: 'Filmmaking with AI'" },
-          desc: { ko: '생성형 AI를 활용한 초단편 영화 기획·제작, 프롬프트 활용, AI 영상 콘텐츠 제작 및 상영 프로젝트. 2025.06.25~27', en: 'Planning and producing a micro short film with generative AI, prompting, AI video production and a screening project. 25 to 27 Jun 2025' } },
         { date: '2025.07', major: true, link: 'ai-short-film',
           title: { ko: '대상: 서울대학교 중앙도서관 AI Filmmaking Program', en: 'Grand Prize: SNU Central Library AI Filmmaking Program' },
-          desc: { ko: "단편영화 'Happiness is Intelligence?': 기획·연출·프롬프트 디렉팅·편집까지 단독 제작. 2025.07.10", en: "Short film 'Happiness is Intelligence?': concept, direction, prompt direction and editing, all solo. 10 Jul 2025" } },
+          desc: { ko: "디지털 리터러시 아카데미 'AI로 만드는 영화' 클래스(2025.06)를 들은 뒤, 단편영화 'Happiness is Intelligence?'를 기획·연출·프롬프트 디렉팅·편집까지 단독 제작. 2025.07.10", en: "After the Digital Literacy Academy class 'Filmmaking with AI' (Jun 2025), made the short film 'Happiness is Intelligence?' solo: concept, direction, prompt direction and editing. 10 Jul 2025" } },
         { date: '2025.08', major: false, link: 'promo-video-ai',
           title: { ko: 'AI 영상 프로젝트: 경주 APEC 홍보 영상 · 서울교통공사 공모전', en: 'AI video projects: Gyeongju APEC promo · Seoul Metro contest' },
           desc: { ko: '같은 AI 워크플로우로 2025 경주 APEC 특별전 홍보 영상을 제작해 경북 국제 AI 메타버스 영상 공모전에 출품. 서울교통공사 유튜브 영상 공모전에는 손그림 지하철 노선 애니메이션으로 2인 협업 출품. 2025.06~08', en: 'With the same AI workflow, made a promotional film for the 2025 APEC Special Exhibition in Gyeongju (entered in the Gyeongbuk AI/Metaverse video contest), and a two-person hand-drawn subway animation for the Seoul Metro YouTube contest. Jun to Aug 2025' } },
@@ -228,22 +223,13 @@ window.SITE = {
       items: [
         { date: '2026.09', major: false, link: null,
           title: { ko: '서울대 복귀: 졸업 전 마지막 학기', en: 'Back at SNU: final term before graduation' },
-          desc: { ko: '교환 1년을 마치고 복귀. 테크니컬 디자인 · 인공지능예술실습 · 3D 그래픽 디자인을 수강하며 졸업 전까지 쌓는 중.', en: 'Back from the exchange year, taking Technical Design, AI Art Practice and 3D Graphic Design in the last term before graduation.' } },
+          desc: { ko: '교환 1년을 마치고 복귀. 이번 학기에 배우는 테크니컬 디자인, 인공지능예술실습, 3D 그래픽 디자인은 아카이브 아래 NOW에.', en: 'Back from the exchange year. What I am learning this term (Technical Design, Deep Learning for Artists, 3D Graphic Design) is under NOW, below the archive.' } },
         { date: '2026.09', major: true, link: 'denim-2026',
           title: { ko: "입선: 코리아 데님 디자인 공모전 2026 'Squeezed Motion'", en: "Honorable Mention: Korea Denim Design Contest 2026, 'Squeezed Motion'" },
           desc: { ko: '물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 수십 개의 방향을 먼저 시뮬레이션한 뒤 원단을 받아 실물 한 벌을 제작. 본선을 거쳐 입선. 2026.09.23 발표', en: 'Paint becoming thread, on denim. Dozens of directions simulated with AI before one garment was built from the delivered fabric. Finalist, then Honorable Mention. Announced 23 Sep 2026' } },
         { date: '2026.09', major: true, link: 'arts-week-2026',
           title: { ko: '2026 서울대 예술주간 〈공생 Tensed Symbiosis〉: 야외 설치', en: "SNU Arts Week 2026 'Tensed Symbiosis': outdoor installation" },
           desc: { ko: 'Art2Wear 작업을 야외 가변설치로 재구성. 깨진 도자기 파편, 마른 꽃, 나뭇가지, 인조진주, 마네킹. 학생회관과 관정관 사이 잔디. 2026.09.28~10.02', en: 'The Art2Wear piece rebuilt as an outdoor site installation (ceramic shards, dried flowers, branches, faux pearls, a mannequin) on the lawn between the Student Union and Kwanjeong Library. 28 Sep to 2 Oct 2026' } },
-        { date: '2026.09', major: false, link: 'technical-design',
-          title: { ko: '테크니컬 디자인: 테크니컬 패키지 개발', en: 'Technical Design: building a tech pack' },
-          desc: { ko: '본사와 생산 현장을 잇는 작업지시서 개발. 측정·사이즈·그레이딩, 원단·재단, 부자재, 라벨·패키징, 프로토타입 평가까지. 최종 발표 12월.', en: 'Building the technical package that connects HQ and the factory floor: measuring, sizing and grading, fabric, trims, labels and packaging, prototype evaluation. Final presentation in December.' } },
-        { date: '2026.09', major: false, link: 'ai-art-practice',
-          title: { ko: '인공지능예술실습: 생성 모델 학습 · 12월 과제전', en: 'AI Art Practice: training generative models · December show' },
-          desc: { ko: '코딩 경험 없이 시작해 직접 모은 데이터로 CNN과 생성 모델을 학습시키고, ComfyUI 노드 워크플로우로 이미지 생성 과정을 단계별로 해체. 12월 과제전 출품 목표.', en: 'Starting with no coding background, training CNNs and generative models on self-collected data and taking image generation apart as a ComfyUI node workflow. Aiming for the December show.' } },
-        { date: '2026.09', major: false, link: '3d-graphic-design',
-          title: { ko: '3D 그래픽 디자인: Blender + AI', en: '3D Graphic Design: Blender + AI' },
-          desc: { ko: 'AI와 Blender를 함께 쓰는 3D 제작. CLO 3D·Unreal Engine 경험 위에 3D 역량을 한 겹 더 쌓는 중.', en: '3D production combining AI tools and Blender, another layer on top of CLO 3D and Unreal Engine.' } },
       ],
     },
     {
@@ -265,9 +251,35 @@ window.SITE = {
     filterLabel: 'ARCHIVE FILTERS', imageSlot: 'IMAGE 3:4', inProgress: 'IN PROGRESS',
     filters: [
       { label: 'ALL', tag: null }, { label: 'FASHION', tag: 'FASHION' }, { label: 'CONTENT', tag: 'CONTENT' },
-      { label: 'AI WORKS', tag: 'AI' }, { label: 'INSIGHT', tag: 'INSIGHT' }, { label: 'NOW', tag: 'NOW' },
+      { label: 'AI WORKS', tag: 'AI' }, { label: 'INSIGHT', tag: 'INSIGHT' },
     ],
   },
+  /* NOW: what I am learning this term. Sits under the archive grid (#now), same weight as the 3 strengths.
+     Facts from 연서's class notes (Notion, weeks 1 to 5). The class show was cancelled by vote: do not mention it. */
+  nowUi: { title: 'NOW', index: 'FALL 2026', lead: { ko: '졸업 전 마지막 학기에 배우는 것들과, 12월 종강까지 해낼 것.', en: 'What I am learning in my final term, and what I will have done by December.' }, next: { ko: '12월까지', en: 'By December' } },
+  now: [
+    {
+      label: { ko: '인공지능예술실습 · 2026 가을학기', en: 'Deep Learning for Artists · Fall 2026' },
+      claim: { ko: 'AI를 툴로만 쓰지 않고, 이미지 AI가 작동하는 원리부터 배우고 있습니다.', en: 'Learning how image AI works underneath, not just how to use the tools.' },
+      evidence: { ko: 'AI로 창작하며 더 섬세하게 다루고 싶어 들은 수업. 미드저니로 만든 얼굴 이미지로 Codex와 함께 PyTorch에서 생성 모델(GAN)을 직접 학습시켜, 얼굴 사이를 걷는 latent travel 영상을 만들었다. 다음은 ComfyUI와 클라우드 GPU(RunPod).', en: 'I make things with AI and wanted finer control. I generated face images in Midjourney, trained a generative model (GAN) on them in PyTorch with Codex, and made a latent travel video that walks from face to face. Next: ComfyUI and cloud GPUs (RunPod).' },
+      /* 연서's own run (week 4): every training image was made in Midjourney, so no real faces */
+      media: { webm: 'images/now/latent-travel.webm', video: 'images/now/latent-travel.mp4', poster: 'images/now/latent-travel.jpg', caption: { ko: 'latent travel · 직접 학습시킨 모델', en: 'latent travel · the model I trained' } },
+      next: { ko: '내 데이터로 모델을 조정해 최종 프로젝트를 완성합니다.', en: 'Tune a model with my own data and finish the final project.' },
+    },
+    {
+      label: { ko: '테크니컬 디자인 · 2026 가을학기', en: 'Technical Design · Fall 2026' },
+      claim: { ko: '디자인을 공장이 읽을 수 있는 언어로 옮기는 법을 배우고 있습니다.', en: 'Learning to translate a design into the language a factory can read.' },
+      evidence: { ko: '디자이너는 실루엣으로, 공장은 치수와 봉제 사양으로 말한다. 그 사이를 잇는 테크니컬 패키지(작업지시서)를 매주 과제로 쌓는 중.', en: 'A designer talks in silhouettes; a factory, in measurements and construction specs. Building the tech pack that connects the two, one weekly assignment at a time.' },
+      next: { ko: '치수와 그레이딩, 원단, 부자재, 라벨, 샘플 평가까지 마치고 최종 발표. 같은 범위인 테크니컬디자이너 3급 응시도 검토 중입니다.', en: 'Grading, fabric, trims, labels and prototype evaluation, then the final presentation. Considering the Technical Designer Level 3 exam, which covers the same ground.' },
+    },
+    {
+      label: { ko: '3D 그래픽 디자인 · 2026 가을학기', en: '3D Graphic Design · Fall 2026' },
+      claim: { ko: 'Blender와 AI를 함께 쓰는 3D 그래픽디자인을 배우고 있습니다.', en: 'Learning 3D graphic design with Blender and AI together.' },
+      evidence: { ko: 'AI가 만든 3D를 디자이너의 눈으로 가려내고 완성하는 법을 배우는 수업. Blender로 조형, 라이팅과 렌더링, 질감을 익히는 중.', en: 'A class on judging the 3D that AI makes and finishing it with a designer’s eye. Working through form, lighting, rendering and materials in Blender.' },
+      next: { ko: '3D 타이포 포스터와 아이콘 세트를 거쳐, 톤앤매너가 통일된 3D 그래픽 시리즈를 완성합니다.', en: 'A 3D type poster and an icon set, then a 3D graphic series in one tone and manner.' },
+    },
+  ],
+
   /* moodboard ground behind each project's detail page (photo under vellum). Keys are project slugs;
      a project without an entry falls back to the pool below, picked by its position. */
   detailGround: {

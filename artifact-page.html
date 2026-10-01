@@ -1,3 +1,8 @@
+<title>이연서 포트폴리오 시안 v7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;1,400&family=Nanum+Gothic+Coding:wght@400;700&family=Song+Myung&family=Special+Elite&family=Gaegu:wght@300&display=swap" rel="stylesheet">
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600&display=swap');
 
 :root {
@@ -763,3 +768,49 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
 
 /* Korean line breaking: keep words whole in headings. */
 html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"] .archive-card-title, html[lang="ko"] .timeline-item-title, html[lang="ko"] .timeline-panel-title, html[lang="ko"] .about-strength-claim, html[lang="ko"] .work-tooltip, html[lang="ko"] .work-card-title { word-break: keep-all; overflow-wrap: anywhere; }
+
+</style>
+<script>window.REVIEW_LABELS = location.hash === '#review'; if (window.REVIEW_LABELS) document.documentElement.classList.add('is-review'); window.REVIEW_MODEL = 'models/review/plate-flower.gltf.json'; /* review build: open with #review for image ids and GL badges; the model is split into .json/.wasm/.jpg because the artifact host serves only listed extensions and blocks blob: textures */</script>
+<script src="js/vendor/gsap.min.js" defer></script>
+<script src="js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/vendor/Flip.min.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
+<script src="data/site.js"></script>
+<script src="data/projects.js"></script>
+<script type="module" src="js/main.js"></script>
+<svg class="svg-filter-defs" aria-hidden="true"><defs>
+    <!-- typewriter ink: ragged edges + slightly uneven ink density -->
+    <filter id="ink-bleed" x="-4%" y="-12%" width="108%" height="124%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="2" seed="11" result="ink-noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="ink-noise" scale="1.5" xChannelSelector="R" yChannelSelector="G" result="ink-edge"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".32" numOctaves="3" seed="5" result="ink-grain"/>
+      <feComponentTransfer in="ink-grain" result="ink-mask"><feFuncA type="linear" slope="1.5" intercept=".3"/></feComponentTransfer>
+      <feComposite in="ink-edge" in2="ink-mask" operator="in" result="ink-worn"/>
+      <feGaussianBlur in="ink-worn" stdDeviation=".18"/>
+    </filter>
+    <!-- pen lines of the hand notes: a little wobble and dry-ink grain -->
+    <filter id="hand-rough" x="-6%" y="-10%" width="112%" height="120%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="3" result="pen-noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="pen-noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" result="pen-edge"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".5" numOctaves="2" seed="9" result="pen-grain"/>
+      <feComponentTransfer in="pen-grain" result="pen-mask"><feFuncA type="linear" slope="1.3" intercept=".4"/></feComponentTransfer>
+      <feComposite in="pen-edge" in2="pen-mask" operator="in"/>
+    </filter>
+    <!-- the first look at the whole mind map: the pen lines bend like a reflection on water (the motion itself is a CSS transform) -->
+    <filter id="hand-wave" x="-10%" y="-20%" width="120%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".006 .03" numOctaves="1" seed="4" result="wave-noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="wave-noise" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs></svg>
+  <div class="site-grain" aria-hidden="true"></div>
+  <div id="loader" class="loader" aria-hidden="true"></div>
+  <header id="nav" class="site-nav"></header>
+  <main>
+    <section id="intro" class="site-section" data-section="intro"></section>
+    <section id="work" class="site-section" data-section="work"></section>
+    <section id="name" class="site-section" data-section="name"></section>
+    <section id="about" class="site-section" data-section="about"></section>
+    <section id="archive" class="site-section" data-section="archive"></section>
+    <section id="contact" class="site-section" data-section="contact"></section>
+  </main>
+  <div id="detail" class="detail-overlay" data-lenis-prevent hidden></div>

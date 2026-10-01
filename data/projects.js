@@ -1,4 +1,4 @@
-/* Portfolio project data — edit here, no CMS required. tags ∈ FASHION|CONTENT|AI|INSIGHT|MOMENTS|NOW */
+/* Portfolio project data — edit here, no CMS required. tags ∈ FASHION|CONTENT|AI|INSIGHT|MOMENTS */
 window.PROJECTS = [
  {
   "slug": "miraen",
@@ -1688,7 +1688,7 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026",
-  "thumb": "/images/projects/portfolio-site/cover.jpg",
+  "thumb": "/images/projects/portfolio-site/thumb.jpg",
   "images": [],
   "role": {
    "ko": "기획 · 웹디자인 · AI 워크플로우 · 콘텐츠 (단독, 독학)",
@@ -1757,7 +1757,7 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "AI로 만든 이 포트폴리오",
+    "title": "AI와 독학으로 만든 포트폴리오",
     "cat": "웹사이트 기획·디자인 · AI 워크플로우 · 독학 · 2026",
     "headline": "프롬프트 몇 줄로 나오는 포트폴리오는 화려하지만 뻔하다. 그래서 하나하나 기획하고, 하나하나 지시했다.",
     "metrics": [
@@ -1788,7 +1788,7 @@ window.PROJECTS = [
     ],
     "result": [
      "인트로 · Selected Work · About · 아카이브 · 연락처와 프로젝트 26개 상세 페이지를 한국어 · 영어로 구현 (2026.10, 계속 다듬는 중)",
-     "AI 도구 4종을 교차로 써서 기획부터 배포까지 혼자 진행"
+     "AI 도구 4종을 교차로 쓰고 배포는 터미널로 직접 실행하며, 기획부터 배포까지 혼자 진행"
     ],
     "detail": {
      "title": "AI가 발전해도 사람이 하는 일",
@@ -1831,7 +1831,7 @@ window.PROJECTS = [
     ],
     "result": [
      "Intro, Selected Work, About, Archive and Contact plus 26 project pages, in Korean and English (Oct 2026, still being refined)",
-     "Planned, built and deployed alone, using four AI tools together"
+     "Planned, built and deployed alone: four AI tools used together, and the deploy run from the terminal myself"
     ],
     "detail": {
      "title": "What people still do as AI improves",
@@ -2027,152 +2027,5 @@ window.PROJECTS = [
   },
   "title": "SNU Arts Week 2026: Tensed Symbiosis",
   "desc": "The Art2Wear piece rebuilt as an outdoor site installation for SNU Arts Week 2026."
- },
- {
-  "slug": "technical-design",
-  "featured": null,
-  "archiveRank": 16,
-  "tags": [
-   "FASHION",
-   "NOW"
-  ],
-  "year": "2026",
-  "period": "2026.09~12",
-  "thumb": "/images/x.jpg",
-  "images": [],
-  "role": {
-   "ko": "테크니컬 패키지 개발 (수강 중)",
-   "en": "Technical package development (in progress)"
-  },
-  "spotify": null,
-  "spotifyNote": null,
-  "nar": {
-   "ko": {
-    "title": "테크니컬 디자인: 작업지시서 개발",
-    "cat": "테크니컬 패키지 · 수강 중 · 2026.09~12",
-    "headline": "본사와 생산 현장을 잇는 문서를 만든다. 예쁜 것이 아니라 틀리지 않는 것이 기준이다.",
-    "metrics": [],
-    "need": "디자인이 공장에서 그대로 재현되려면 측정·사이즈·그레이딩, 원단과 재단, 부자재, 라벨·패키징까지 한 장의 언어로 정리돼야 한다. 감각이 아니라 스펙으로 옷을 설명하는 훈련.",
-    "action": [
-     "실루엣·디테일 용어와 스티치·SPI부터 치수·그레이딩, 원단·재단, 부자재·여밈, 레이블·패키징, 프로토타입 평가까지 순서대로 이수",
-     "기말 프로젝트로 실물 테크니컬 패키지를 개발 (최종 발표 12월)",
-     "테크니컬 디자이너 3급 자격 시험과 범위가 같아, 학기 후 응시를 검토 중"
-    ],
-    "result": null
-   },
-   "en": {
-    "title": "Technical Design: Building a Tech Pack",
-    "cat": "Technical Package · In progress · Sep to Dec 2026",
-    "headline": "A document that connects HQ and the factory floor. The standard is not beautiful; it is not wrong.",
-    "metrics": [],
-    "need": "For a design to be reproduced exactly in a factory, measuring, sizing and grading, fabric and cutting, trims, labels and packaging all have to live in one shared language. Training in explaining a garment by spec, not by feel.",
-    "action": [
-     "Working through silhouette and detail terminology, stitches and SPI, measurements and grading, fabric and cutting, trims and closures, labels and packaging, prototype evaluation",
-     "Final project: a complete technical package, presented in December",
-     "Same scope as the Level 3 Technical Designer certification; considering the exam after term"
-    ],
-    "result": null
-   }
-  },
-  "title": "Technical Design",
-  "desc": "Building a technical package that connects headquarters and the factory floor."
- },
- {
-  "slug": "ai-art-practice",
-  "featured": null,
-  "archiveRank": 17,
-  "tags": [
-   "CONTENT",
-   "AI",
-   "NOW"
-  ],
-  "year": "2026",
-  "period": "2026.09~12",
-  "thumb": "/images/x.jpg",
-  "images": [],
-  "role": {
-   "ko": "모델 학습 · 워크플로우 설계 · 작품 제작 (수강 중)",
-   "en": "Model training, workflow design, artwork (in progress)"
-  },
-  "spotify": null,
-  "spotifyNote": null,
-  "nar": {
-   "ko": {
-    "title": "인공지능예술실습",
-    "cat": "미디어아트 · 생성 모델 · 수강 중 · 2026.09~12",
-    "headline": "지금 하는 AI 작업을 더 깊이 이해하고, 더 세심하게 조절하기 위해 밑에서부터 배운다.",
-    "metrics": [],
-    "need": "단편영화, 뮤직비디오, 카프탄 시뮬레이션까지 AI로 만들어 왔지만, 결과를 프롬프트와 우연에 맡기는 부분이 남아 있었다. 지금 하고 있는 AI 작업을 더 깊이 이해하고 더 세심하게 조절·통제하려면, 모델이 이미지를 만드는 과정 자체를 알아야 했다. 그래서 코딩 경험 없이 밑에서부터 시작했다.",
-    "action": [
-     "직접 수집한 데이터로 CNN과 생성 모델을 학습시키며 데이터 전처리·행렬 연산 같은 원리를 따라감",
-     "ComfyUI 노드 워크플로우로 이미지 생성 과정을 단계별로 해체",
-     "학기 말 과제전(12월) 출품을 목표로 미디어아트·영상매체 작품 제작"
-    ],
-    "result": null
-   },
-   "en": {
-    "title": "AI Art Practice",
-    "cat": "Media Art · Generative Models · In progress · Sep to Dec 2026",
-    "headline": "Learning it from the bottom up, to understand the AI work I already do more deeply and control it more finely.",
-    "metrics": [],
-    "need": "I had already made a short film, a music video and a kaftan simulation with AI, but part of every result was still left to the prompt and to chance. To understand the work I am doing more deeply and to control and fine-tune it more precisely, I needed to know how the model actually builds an image. So I started from the bottom, with no coding background.",
-    "action": [
-     "Training CNNs and generative models on self-collected data, following the underlying maths (preprocessing, matrix operations)",
-     "Dissecting image generation as a ComfyUI node workflow",
-     "Building a media-art / moving-image piece for the end-of-term exhibition in December"
-    ],
-    "result": null
-   }
-  },
-  "title": "AI Art Practice",
-  "desc": "Media art and moving image made with AI, from prompting to training the model."
- },
- {
-  "slug": "3d-graphic-design",
-  "featured": null,
-  "archiveRank": 18,
-  "tags": [
-   "CONTENT",
-   "AI",
-   "NOW"
-  ],
-  "year": "2026",
-  "period": "2026.09~12",
-  "thumb": "/images/x.jpg",
-  "images": [],
-  "role": {
-   "ko": "Blender + AI 3D 제작 (수강 중)",
-   "en": "Blender + AI 3D production (in progress)"
-  },
-  "spotify": null,
-  "spotifyNote": null,
-  "nar": {
-   "ko": {
-    "title": "3D 그래픽 디자인",
-    "cat": "Blender · AI · 수강 중 · 2026.09~12",
-    "headline": "CLO 3D와 Unreal 위에 한 겹 더, AI와 Blender를 같이 쓰는 3D.",
-    "metrics": [],
-    "need": "옷을 짓는 손과 3D 툴을 다루는 손이 같은 사람 안에 있어야 한다고 믿는다. 이 수업은 그 두 번째 손을 한 단계 올리는 자리.",
-    "action": [
-     "Blender 모델링·머티리얼·라이팅을 AI 생성 파이프라인과 결합",
-     "수업 결과물은 학기 진행에 따라 이 페이지에 추가"
-    ],
-    "result": null
-   },
-   "en": {
-    "title": "3D Graphic Design",
-    "cat": "Blender · AI · In progress · Sep to Dec 2026",
-    "headline": "One more layer on top of CLO 3D and Unreal, 3D made with AI and Blender together.",
-    "metrics": [],
-    "need": "I believe the hand that builds a garment and the hand that drives a 3D tool should belong to the same person. This course levels up the second hand.",
-    "action": [
-     "Combining Blender modelling, materials and lighting with an AI generation pipeline",
-     "Outputs will be added to this page as the term progresses"
-    ],
-    "result": null
-   }
-  },
-  "title": "3D Graphic Design",
-  "desc": "3D production combining AI tools and Blender."
  }
 ];
