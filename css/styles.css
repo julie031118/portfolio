@@ -305,7 +305,7 @@ html[lang="en"] .about-strength-claim { font-family: var(--font-serif-en); }
 /* stacked collage: three photos, uneven sizes and gaps, overlapping */
 .about-photo--stack { width: min(100%, 560px); aspect-ratio: 1 / 1.08; }
 .about-photo--stack .about-photo-frame { position: absolute; margin: 0; box-shadow: 0 10px 28px rgba(29,29,31,.14); }
-.about-photo--stack .about-photo-frame--1 { left: 0; top: 7%; width: 58%; aspect-ratio: 3/4; z-index: 1; }
+.about-photo--stack .about-photo-frame--1 { left: 0; top: 6%; width: 63%; aspect-ratio: 3/4; z-index: 1; } /* the portrait, a touch bigger (2026-10-01) */
 .about-photo--stack .about-photo-frame--2 { right: 0; top: 0; width: 55%; aspect-ratio: 4/3; z-index: 2; }
 .about-photo--stack .about-photo-frame--3 { right: 6%; bottom: 0; width: 47%; aspect-ratio: 4/3; z-index: 3; }
 .about-photo--stack figcaption { position: absolute; right: 0; bottom: -22px; }
@@ -313,7 +313,7 @@ html[lang="en"] .about-strength-claim { font-family: var(--font-serif-en); }
 .about-photo-frame.has-image img, .strength-media-frame.has-image img, .strength-inline-frame.has-image img { display: block; }
 .about-photo-frame > span, .strength-media-frame > span, .strength-inline-frame > span { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-2); font: 11px/1 var(--font-mono); letter-spacing: .1em; }
 .about-photo-frame.has-image > span, .strength-media-frame.has-image > span, .strength-inline-frame.has-image > span { display: none; }
-.about-photo-frame img { filter: none; } /* brightness is baked into the files (a live filter under the WebGL lens banded on some GPUs) */
+.about-photo-frame img { filter: saturate(.84) contrast(.92); } /* brightness is baked into the files; a little less colour and contrast on top (the lens that banded with live filters is gone) */
 .about-photo figcaption { margin-top: 10px; text-align: right; }
 /* the Codrops square lens on the project cover — a full-cover canvas, no frame (the mask's hard edge is the border) */
 .photo-lens-canvas { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; display: block; pointer-events: none; }
@@ -619,6 +619,17 @@ html[lang="en"] .detail-headline { font-family: var(--font-serif-en); }
 .detail-expand-body[hidden] { display: none; }
 .detail-expand-body p { margin: 0; font: 14px/1.8 var(--font-body-ko); }
 .detail-gallery-section, .detail-soundtrack { padding-top: 20px; }
+.detail-film-link { display: inline-block; margin: 10px 0 18px; color: var(--ink-2); font: 11px/1.4 var(--font-mono); letter-spacing: .08em; text-decoration: underline; text-underline-offset: .3em; }
+.detail-film-link:hover { color: var(--ink); }
+/* the soundtrack, as small as it goes: the 80px Spotify bar, a reason line, and one tiny meta line */
+.detail-soundtrack { margin-top: 48px !important; }
+.detail-soundtrack > h3 { margin: 20px 0 10px !important; }
+.detail-soundtrack .detail-spotify { display: block; width: min(100%, 380px); height: 80px; }
+.detail-soundtrack > p:not(.detail-song-meta) { margin-top: 8px; }
+.detail-song-meta { margin: 6px 0 0 !important; color: var(--ink-2); opacity: .7; font: 9.5px/1.4 var(--font-mono) !important; letter-spacing: .06em; }
+.detail-song-meta a { color: inherit; text-decoration: underline; text-underline-offset: .28em; }
+.detail-song-meta a:hover { color: var(--ink); }
+.detail-song-meta:hover { opacity: 1; }
 /* 작업과정: a small label and smaller rows under the finished work */
 .detail-process { padding-top: 64px; }
 .detail-process > h3 { font-family: var(--font-body-ko); letter-spacing: .04em; }

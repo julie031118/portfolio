@@ -214,13 +214,24 @@ function renderProject(detail, project, lang) {
       frame.className = 'detail-film';
       const iframe = document.createElement('iframe');
       iframe.src = source;
-      iframe.title = `${copy.title} — ${SITE.detailUi.film} ${index + 1}`;
+      iframe.title = `${copy.title} · ${SITE.detailUi.film} ${index + 1}`;
       iframe.loading = 'lazy';
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
       frame.append(iframe);
       filmSection.append(frame);
+      /* a plain link under every film: the embed can be blocked (the review preview blocks all outside
+         frames, some browsers block YouTube cookies), and then this is the way to the video */
+      const id = (source.match(/(?:embed\/|youtu\.be\/|[?&]v=)([A-Za-z0-9_-]{6,})/) || [])[1];
+      if (id) {
+        const link = document.createElement('a');
+        link.className = 'detail-film-link';
+        link.href = `https://www.youtube.com/watch?v=${id}`;
+        link.target = '_blank'; link.rel = 'noopener noreferrer';
+        link.textContent = translated(SITE.detailUi.watch, lang) || 'Watch on YouTube ↗';
+        filmSection.append(link);
+      }
     });
     content.append(filmSection);
   }
@@ -238,7 +249,7 @@ function renderProject(detail, project, lang) {
       appendLabelledBlock(column, SITE.detailUi.need, part.need || '');
       appendLabelledBlock(column, SITE.detailUi.action, Array.isArray(part.action) ? part.action : [], true);
       if (Array.isArray(part.result) && part.result.length) appendLabelledBlock(column, SITE.detailUi.result, part.result, true);
-      (part.images || []).forEach((source) => column.append(createMedia(source, SITE.detailUi.gallerySlot, 'detail-role-image', `${copy.title} — ${part.label}`)));
+      (part.images || []).forEach((source) => column.append(createMedia(source, SITE.detailUi.gallerySlot, 'detail-role-image', `${copy.title} · ${part.label}`)));
       roles.append(column);
     });
     content.append(roles);
@@ -323,7 +334,7 @@ function renderProject(detail, project, lang) {
     const soundtrackTitle = document.createElement('h3'); soundtrackTitle.textContent = SITE.detailUi.soundtrack;
     const iframe = document.createElement('iframe');
     iframe.className = 'detail-spotify';
-    iframe.title = `${SITE.detailUi.soundtrack} — ${copy.title}`;
+    iframe.title = `${SITE.detailUi.soundtrack} · ${copy.title}`;
     iframe.loading = 'lazy';
     iframe.src = spotifyUrl(project.spotify);
     iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
@@ -331,6 +342,22 @@ function renderProject(detail, project, lang) {
     soundtrack.append(soundtrackTitle, iframe);
     const noteText = translated(project.spotifyNote, lang);
     if (noteText) { const note = document.createElement('p'); note.textContent = noteText; soundtrack.append(note); }
+    /* one tiny line under the player: "30s preview · full song on YouTube ↗". The Spotify embed plays a 30 s
+       preview to anyone not logged in and stops dead (its API has no volume, so no fade); saying so up front
+       makes the stop expected rather than broken */
+    const youtube = project.songYoutube || (project.song ? `https://www.youtube.com/results?search_query=${encodeURIComponent(project.song)}` : null);
+    const meta = document.createElement('p');
+    meta.className = 'detail-song-meta';
+    const preview = document.createElement('span'); preview.textContent = translated(SITE.detailUi.preview, lang) || '30s preview';
+    meta.append(preview);
+    if (youtube) {
+      const listen = document.createElement('a');
+      listen.href = youtube;
+      listen.target = '_blank'; listen.rel = 'noopener noreferrer';
+      listen.textContent = translated(SITE.detailUi.fullSong, lang) || 'Full song on YouTube ↗';
+      meta.append(document.createTextNode(' · '), listen);
+    }
+    soundtrack.append(meta);
     content.append(soundtrack);
   }
 }

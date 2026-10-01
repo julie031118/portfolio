@@ -70,7 +70,7 @@ export function renderArchive(lang) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'archive-card-button';
-    button.setAttribute('aria-label', `${copy.title} — ${copy.cat}`);
+    button.setAttribute('aria-label', `${copy.title} · ${copy.cat}`);
     const image = document.createElement('div');
     image.className = 'card-img';
     const slot = document.createElement('span');

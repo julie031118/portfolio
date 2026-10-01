@@ -11,7 +11,7 @@ export function renderSectionShell(section, meta, index, total, lang) {
   heading.innerHTML = `<span>${meta.title}</span><span class="section-heading__index">${String(index).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span>`;
   const empty = document.createElement('div');
   empty.className = 'section-empty';
-  empty.innerHTML = `<div><div class="section-empty__mark">${meta.stage} — ${meta.title}</div><p class="section-empty__note">${T(meta.note, lang)}</p></div>`;
+  empty.innerHTML = `<div><div class="section-empty__mark">${meta.stage} · ${meta.title}</div><p class="section-empty__note">${T(meta.note, lang)}</p></div>`;
   shell.append(heading, empty);
   section.append(shell);
 }
