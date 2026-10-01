@@ -149,7 +149,6 @@ function elbow(rise) {
   return `M300 330 C${300 + rise * .33} 331 ${300 + rise * .66} 329 ${x} 330 C${x + .6} 292 ${x + .4} 254 ${x} 216 C${x + (534 - x) * .33} 215 ${x + (534 - x) * .66} 217 534 216`;
 }
 
-function href(label) { return `#archive/${encodeURIComponent(label)}`; }
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
 export function createHandNotes({ frame, linesRoot, isCompact }) {
@@ -170,7 +169,8 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     svg.innerHTML = DRAW[name](...args);
     return svg;
   };
-  const hot = (label, className) => { const a = make('a', `hand-hot ${className}`, { href: href(label) }); a.setAttribute('aria-label', label); return a; };
+  /* the labels keep a note open under the pointer; nothing on the paper navigates anywhere */
+  const hot = (label, className) => { const a = make('span', `hand-hot ${className}`); a.setAttribute('aria-hidden', 'true'); a.dataset.label = label; return a; };
 
   const groups = {
     insight: make('div', 'hand-group hand-group--insight'),
@@ -322,7 +322,30 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     }
   }
 
+  /* the first time the paragraph settles, every note shows at once, faint and rippling, then fades away,
+     so nobody leaves without knowing the words open something */
+  let previewTimer = 0;
+  let previewing = false;
+  function endPreview() {
+    clearTimeout(previewTimer);
+    if (!previewing) return;
+    previewing = false;
+    Object.entries(groups).forEach(([key, group]) => { group.classList.remove('is-ghost'); if (key !== active) group.classList.remove('is-on'); });
+  }
+  function preview(tries = 6) {
+    if (isCompact() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    /* a note is open under the pointer right now: wait for it to close, then play */
+    if (active || pinned) { if (tries > 0) previewTimer = window.setTimeout(() => preview(tries - 1), 900); return; }
+    layout();
+    previewing = true;
+    Object.values(groups).forEach((group) => group.classList.add('is-on', 'is-ghost'));
+    /* the last note to fade decides the end; the timer is only a safety net */
+    groups.design.addEventListener('animationend', endPreview, { once: true });
+    previewTimer = window.setTimeout(endPreview, 9000);
+  }
+
   function show(key) {
+    endPreview();
     clearTimeout(hideTimer);
     if (!groups[key]) return;
     if (active && active !== key) groups[active].classList.remove('is-on');
@@ -354,6 +377,7 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     group.querySelectorAll('.hand-hot').forEach((link) => {
       link.addEventListener('pointerenter', () => { clearTimeout(hideTimer); if (active !== key) show(key); });
       link.addEventListener('pointerleave', hide);
+      link.addEventListener('click', () => pin(key));
     });
   });
   /* a click anywhere else on the paper lets a pinned note go */
@@ -363,12 +387,7 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
   function bind(word, keyword) {
     const key = keyword.key;
     if (!groups[key]) return;
-    if (isCompact()) {
-      /* no room for the drawing on a phone — the word itself goes to its category */
-      const target = { insight: 'INSIGHT', visual: 'FASHION', design: 'AI WORKS' }[key];
-      word.addEventListener('click', () => { window.location.hash = href(target).slice(1); });
-      return;
-    }
+    if (isCompact()) return; /* no room for the drawing on a phone: the words stay plain text */
     word.addEventListener('pointerenter', () => show(key));
     word.addEventListener('focus', () => show(key));
     word.addEventListener('pointerleave', hide);
@@ -376,7 +395,7 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     word.addEventListener('click', () => pin(key));
   }
 
-  function reset() { clearTimeout(hideTimer); pinned = null; hideNow(); }
+  function reset() { clearTimeout(hideTimer); endPreview(); pinned = null; hideNow(); }
 
-  return { layer, bind, show, hide: hideNow, toggle, layout, reset, get active() { return active; }, get pinned() { return pinned; } };
+  return { layer, bind, show, hide: hideNow, toggle, layout, reset, preview, get active() { return active; }, get pinned() { return pinned; } };
 }

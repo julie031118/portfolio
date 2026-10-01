@@ -112,7 +112,21 @@ main { overflow: clip; }
 .hand-group.is-on .hand-sub path { stroke-dashoffset: 0; }
 .hand-group.is-on .hand-sub text, .hand-group.is-on .hand-sub .hand-dots { opacity: 1; clip-path: inset(-30% -6% -30% -6%); }
 .hand-group:not(.is-on) .hand-sub text, .hand-group:not(.is-on) .hand-sub .hand-dots, .hand-group:not(.is-on) .hand-sub path { transition-delay: 0s; transition-duration: 0s; }
-.hand-hot { position: absolute; display: block; cursor: pointer; }
+.hand-hot { position: absolute; display: block; cursor: default; }
+/* the first look: every note at once, faint, rippling like water, then gone */
+.hand-group.is-ghost { visibility: visible; animation: hand-ghost 4.4s ease-in-out both; will-change: opacity, transform; transform-origin: 50% 50%; }
+.hand-group--visual.is-ghost { animation-delay: .3s; }
+.hand-group--design.is-ghost { animation-delay: .6s; }
+.hand-group.is-ghost .hand-svg { filter: url("#hand-wave"); }
+.hand-group.is-ghost .hand-hot { pointer-events: none; }
+@keyframes hand-ghost {
+  0% { opacity: 0; transform: translateY(10px) skewX(1.2deg) scaleY(.985); }
+  20% { opacity: .5; transform: translateY(0) skewX(-.8deg) scaleY(1.01); }
+  40% { opacity: .42; transform: translateY(-4px) skewX(.9deg) scaleY(.99); }
+  60% { opacity: .46; transform: translateY(2px) skewX(-.7deg) scaleY(1.008); }
+  80% { opacity: .3; transform: translateY(-3px) skewX(.5deg) scaleY(.995); }
+  100% { opacity: 0; transform: translateY(-8px) skewX(0) scaleY(1); }
+}
 .hand-hot:hover { outline: 0; }
 .intro-frame.is-hand-insight .intro-keyword[data-keyword="insight"] { color: transparent; text-shadow: none; }
 @media (max-width: 760px), (hover: none) { .hand-layer { display: none; } }
@@ -121,9 +135,9 @@ main { overflow: clip; }
 .intro-keyword { display: inline; border: 0; padding: 0; background: transparent; color: var(--ink); font: inherit; letter-spacing: inherit; text-align: left; cursor: pointer; }
 /* hover: a soft white neon halo around the letters instead of an underline */
 .intro-keyword { transition: text-shadow .25s ease, text-decoration-color .4s ease; }
-/* the cue: a faint dotted underline until the reader has hovered one of the words */
+/* the cue: a faint dotted underline that stays, so the hint under the paragraph always has something to point at */
 .intro-lines.is-final .intro-keyword { text-decoration: underline dotted rgba(29,29,31,.45); text-decoration-thickness: 1px; text-underline-offset: .26em; }
-.intro-frame.is-discovered .intro-keyword, .intro-frame.is-hand-insight .intro-keyword[data-keyword="insight"] { text-decoration-color: transparent; }
+.intro-frame.is-hand-insight .intro-keyword[data-keyword="insight"] { text-decoration-color: transparent; }
 .intro-keyword:hover, .intro-keyword:focus-visible, .intro-keyword.is-lit { text-decoration: none; text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 16px #fff, 0 0 22px rgba(29,29,31,.55), 0 0 30px rgba(29,29,31,.35); }
 /* above the vellum block so a line reaches the word itself, not the block edge */
 .intro-map-svg { position: absolute; inset: 0; z-index: 6; pointer-events: none; opacity: 0; transition: opacity .2s ease; }
@@ -147,11 +161,11 @@ main { overflow: clip; }
 .intro-lang button { border: 0; padding: 4px 3px; background: transparent; color: rgba(29,29,31,.36); font: inherit; letter-spacing: inherit; cursor: pointer; transition: color .25s ease; }
 .intro-lang button:hover, .intro-lang button.is-current { color: var(--ink); }
 .intro-frame.is-started .intro-lang { opacity: 1; }
-/* the hover hint: types itself under the settled paragraph with a blinking cursor, gone once a word has been tried */
-.intro-hint { position: absolute; left: 0; right: 0; top: 100%; margin: 22px 0 0; text-align: center; font: 400 .64em/1 var(--font-mono); letter-spacing: .12em; color: var(--ink); opacity: 0; transition: opacity .4s ease; pointer-events: none; }
-.intro-hint.is-typing { opacity: .78; }
+/* the hover hint: a small paper tag under the settled paragraph that types itself in with a blinking cursor and stays */
+.intro-hint { position: absolute; left: 0; right: 0; top: 100%; margin: 26px 0 0; text-align: center; opacity: 0; transition: opacity .4s ease; pointer-events: none; }
+.intro-hint-pill { display: inline-block; padding: .62em 1.1em .58em; border: 1px solid rgba(29,29,31,.16); border-radius: 999px; background: rgba(247,246,243,.72); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: var(--ink); font: 400 .74em/1 var(--font-mono); letter-spacing: .1em; white-space: nowrap; }
+.intro-hint.is-typing { opacity: 1; }
 .intro-hint-cursor { display: inline-block; margin-left: .1em; animation: cursor-blink .72s steps(1,end) infinite; }
-.intro-frame.is-discovered .intro-hint { opacity: 0; transition: opacity .5s ease; }
 /* until then, the dotted underlines darken one after another in a slow wave */
 @keyframes keyword-cue { 0%, 60%, 100% { text-decoration-color: rgba(29,29,31,.45); } 28% { text-decoration-color: rgba(29,29,31,1); } }
 .intro-lines.is-final .intro-keyword { animation: keyword-cue 3.4s ease-in-out 1.4s infinite; }
@@ -193,6 +207,7 @@ main { overflow: clip; }
   .mindmap-panel { width: 100%; max-height: 30vh; margin: 16px 0 0; gap: 14px 16px; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
   .intro-map-svg { display: none; }
   .intro-hint { display: none; }
+  .intro-lines.is-final .intro-keyword { text-decoration: none; animation: none; cursor: default; }
   .intro-lang { width: 100%; }
   .intro-scroll-hint { bottom: 18px; }
   .detail-overlay { padding: calc(var(--nav-height) + 16px) 16px 32px; }
@@ -229,11 +244,15 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .work-tooltip span { color: var(--ink-2); font: 10px/1.4 var(--font-mono); letter-spacing: .06em; }
 .work-hint { display: none; }
 .work-list { display: none; }
+.work-mobile-object { display: none; }
 
 @media (max-width: 768px), (hover: none) {
   .work-section { padding: calc(var(--nav-height) + 28px) 16px 72px; }
   .work-stage { height: auto; min-height: 0; padding: 0; }
   .work-body, .work-hint { display: none; }
+  .work-mobile-object { display: block; position: relative; width: 100%; height: min(92vw, 420px); margin: 8px 0 0; }
+  .work-mobile-canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: pan-y; opacity: 0; transition: opacity .6s ease; }
+  .work-mobile-object.is-loaded .work-mobile-canvas { opacity: 1; }
   .work-list { display: grid; grid-template-columns: 1fr; gap: 34px; padding-top: 28px; }
   .work-card-button { width: 100%; border: 0; padding: 0; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
   .work-card .card-img { aspect-ratio: 3/4; }
@@ -600,6 +619,10 @@ html[lang="en"] .detail-headline { font-family: var(--font-serif-en); }
 .detail-press > h3 { margin: 0 0 18px; }
 .detail-press blockquote { margin: 0; padding: 0 0 0 24px; border-left: 1px solid var(--ink-2); }
 .detail-press blockquote p { margin: 0; font: 15px/1.85 var(--font-body-ko); }
+.detail-press-link { margin: 0 0 10px; }
+.detail-press .detail-press-link cite { margin-top: 0; font: normal 13px/1.6 var(--font-body-ko); letter-spacing: 0; color: var(--ink); }
+.detail-press .detail-press-link a { color: inherit; text-decoration: underline; text-decoration-color: var(--hairline); text-underline-offset: .2em; }
+.detail-press .detail-press-link a:hover { text-decoration-color: currentColor; }
 .detail-press cite { display: block; margin-top: 12px; color: var(--ink-2); font: 11px/1.6 var(--font-mono); font-style: normal; letter-spacing: .04em; }
 .detail-press cite a { color: inherit; text-decoration: none; }
 .detail-press cite a:hover, .detail-press cite a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }

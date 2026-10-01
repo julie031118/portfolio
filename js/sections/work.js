@@ -72,6 +72,91 @@ function coverTexture(THREE, texture, aspect) {
 }
 
 let modelPromise = null;
+/* parsed once per page; every view clones it */
+function loadModel() {
+  const url = window.REVIEW_MODEL || SITE.workUi?.objectModel || 'models/plate-flower.glb';
+  modelPromise ||= (async () => {
+    const { GLTFLoader } = await import('../vendor/GLTFLoader.js');
+    const gltf = await new GLTFLoader().loadAsync(url);
+    return gltf.scene;
+  })();
+  return modelPromise;
+}
+
+/* Phone: no ring and no motion, but the object stays. One still render, redrawn only while a finger turns it. */
+async function createMobileObject(host) {
+  const THREE = await import('../vendor/three.module.min.js');
+  if (!host.isConnected) return null;
+  const canvas = document.createElement('canvas');
+  canvas.className = 'work-mobile-canvas';
+  host.append(canvas);
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'low-power' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setClearColor(0x000000, 0);
+  renderer.toneMapping = THREE.NoToneMapping;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
+  camera.position.set(0, 0, 13);
+  const pivot = new THREE.Group();
+  pivot.rotation.set(-0.08, 0.35, 0);
+  scene.add(pivot);
+  let disposed = false;
+  let queued = 0;
+  let pmrem = null;
+  let object = null;
+  const render = () => { queued = 0; if (!disposed) renderer.render(scene, camera); };
+  const requestRender = () => { if (!queued) queued = requestAnimationFrame(render); };
+  function resize() {
+    const width = Math.max(1, Math.round(host.clientWidth));
+    const height = Math.max(1, Math.round(host.clientHeight));
+    renderer.setSize(width, height, false);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    requestRender();
+  }
+  const [source, { RoomEnvironment }] = await Promise.all([loadModel(), import('../vendor/RoomEnvironment.js')]);
+  if (!host.isConnected) { renderer.dispose(); renderer.forceContextLoss(); return null; }
+  pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  scene.add(new THREE.HemisphereLight(0xffffff, 0xd8d6e0, 0.45));
+  object = source.clone();
+  object.traverse((node) => { if (node.isMesh) { node.material = node.material.clone(); node.material.envMapIntensity = 0.8; } });
+  const box = new THREE.Box3().setFromObject(object);
+  const size = box.getSize(new THREE.Vector3());
+  const k = 6.0 / Math.max(size.x, size.y, size.z);
+  object.position.copy(box.getCenter(new THREE.Vector3())).multiplyScalar(-k);
+  object.scale.setScalar(k);
+  pivot.add(object);
+  host.classList.add('is-loaded');
+  /* a sideways drag turns it; vertical swipes still scroll the page (touch-action: pan-y) */
+  let dragX = null;
+  const onDown = (event) => { dragX = event.clientX; };
+  const onMove = (event) => { if (dragX === null) return; pivot.rotation.y += (event.clientX - dragX) * 0.012; dragX = event.clientX; requestRender(); };
+  const onUp = () => { dragX = null; };
+  canvas.addEventListener('pointerdown', onDown);
+  canvas.addEventListener('pointermove', onMove);
+  window.addEventListener('pointerup', onUp);
+  window.addEventListener('pointercancel', onUp);
+  window.addEventListener('resize', resize);
+  resize();
+  return {
+    dispose() {
+      if (disposed) return;
+      disposed = true;
+      cancelAnimationFrame(queued);
+      canvas.removeEventListener('pointerdown', onDown);
+      canvas.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointerup', onUp);
+      window.removeEventListener('pointercancel', onUp);
+      window.removeEventListener('resize', resize);
+      object?.traverse((node) => { if (node.isMesh) node.material.dispose(); });
+      scene.environment?.dispose(); pmrem?.dispose();
+      renderer.dispose(); renderer.forceContextLoss();
+      canvas.remove();
+      host.classList.remove('is-loaded');
+    },
+  };
+}
 
 async function createRing(section, projects, lang, onDispose) {
   /* contexts coexist now — the ring, the NAME glass and the photo lens each own their own; disposing one another caused ping-pong */
@@ -106,13 +191,6 @@ async function createRing(section, projects, lang, onDispose) {
   /* the object in the middle of the ring — 연서's broken-plate flower (Tripo GLB). It sits at the
      ring's centre, lit by a room environment, turning gently with the pointer; the ring's near cards
      pass in front of it and the far cards behind (painter's order by depth, like the cards). */
-  const OBJECT_URL = window.REVIEW_MODEL || SITE.workUi?.objectModel || 'models/plate-flower.glb';
-  /* parsed once per page; every ring instance clones it */
-  modelPromise ||= (async () => {
-    const { GLTFLoader } = await import('../vendor/GLTFLoader.js');
-    const gltf = await new GLTFLoader().loadAsync(OBJECT_URL);
-    return gltf.scene;
-  })();
   const OBJECT_SIZE = 6.0; /* world units, longest side — the centrepiece, larger than a card */
   const pivot = new THREE.Group();
   scene.add(pivot);
@@ -121,7 +199,7 @@ async function createRing(section, projects, lang, onDispose) {
   const slotEl = wrap.querySelector('.work-object-slot');
   (async () => {
     try {
-      const [source, { RoomEnvironment }] = await Promise.all([modelPromise, import('../vendor/RoomEnvironment.js')]);
+      const [source, { RoomEnvironment }] = await Promise.all([loadModel(), import('../vendor/RoomEnvironment.js')]);
       if (disposed) return;
       pmrem = new THREE.PMREMGenerator(renderer);
       scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
@@ -460,6 +538,7 @@ export function renderWork(lang) {
         </div>
         <div class="work-hint">${SITE.workUi?.hint || 'SCROLL TO ROTATE · CLICK TO OPEN'}</div>
       </div>
+      <div class="work-mobile-object" aria-hidden="true"></div>
       <div class="work-list"></div>
     </div>`;
 
@@ -548,9 +627,27 @@ export function renderWork(lang) {
     heartbeat = window.setInterval(() => { if (visible && !ring && !creating) ensureRing(); }, 1200);
   }
 
+  /* phone: the object is built once it comes near the screen and let go when it is far away */
+  let mobileObject = null;
+  let mobileCreating = false;
+  let mobileObserver = null;
+  function setupMobileObject() {
+    const host = section.querySelector('.work-mobile-object');
+    mobileObserver = new IntersectionObserver((entries) => {
+      entries.forEach(async (entry) => {
+        if (entry.isIntersecting && !mobileObject && !mobileCreating) {
+          mobileCreating = true;
+          try { mobileObject = await createMobileObject(host); } catch (error) { console.warn('work object failed', error); }
+          mobileCreating = false;
+        } else if (!entry.isIntersecting && mobileObject) { mobileObject.dispose(); mobileObject = null; }
+      });
+    }, { rootMargin: '60% 0px 60% 0px' });
+    mobileObserver.observe(host);
+  }
+
   function mount() {
     renderIndex(lang);
-    if (mobileQuery.matches) { renderMobileList(listRoot, projects, lang); return; }
+    if (mobileQuery.matches) { renderMobileList(listRoot, projects, lang); setupMobileObject(); return; }
     setupScroll();
     setupObserver();
   }
@@ -559,7 +656,7 @@ export function renderWork(lang) {
   instance = {
     section,
     setLanguage(nextLang) { renderIndex(nextLang); if (mobileQuery.matches) renderMobileList(listRoot, projects, nextLang); ring?.setLanguage(nextLang); },
-    destroy() { window.removeEventListener('portfolio:webgl-free', onWebGLFree); observer?.disconnect(); clearTimeout(dropTimer); clearInterval(heartbeat); trigger?.kill(); dropRing(); instance = null; },
+    destroy() { window.removeEventListener('portfolio:webgl-free', onWebGLFree); observer?.disconnect(); mobileObserver?.disconnect(); mobileObject?.dispose(); clearTimeout(dropTimer); clearInterval(heartbeat); trigger?.kill(); dropRing(); instance = null; },
   };
   return instance;
 }

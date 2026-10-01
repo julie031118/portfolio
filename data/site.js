@@ -4,6 +4,7 @@ window.SITE = {
   nav: {
     wordmark: 'YEONSEO LEE',
     links: [
+      { label: 'INTRO', target: '#intro' },
       { label: 'WORK', target: '#work' },
       { label: 'ABOUT', target: '#about' },
       { label: 'ARCHIVE', target: '#archive' },
@@ -71,23 +72,23 @@ window.SITE = {
        hovering it pops `media` (4:5), clicking opens `link`. */
     strengths: [
       {
-        claim: { ko: '만드는 사람의 취향이 아니라 받는 사람의 조건에서 시작합니다.', en: 'I start from the receiver’s conditions, not the maker’s taste.' },
-        keyword: { ko: '받는 사람의 조건', en: 'receiver’s conditions' },
-        evidence: { ko: '40~50대가 실제로 보는 릴스를 먼저 분석하고 내 취향을 버렸다. 세 자리 조회수가 2.8만이 됐다. 미래엔수학, 2025', en: 'Analysed what women in their 40s to 50s actually watch and set my taste aside. Reels went from three digits to 28K. MiraeN Math, 2025' },
+        claim: { ko: '제 취향을 고집하지 않고, 보는 사람과 콘셉트에 맞춰 비주얼을 바꿉니다.', en: 'I don’t hold on to my own taste. I shape the visuals around the audience and the concept.' },
+        keyword: { ko: '보는 사람과 콘셉트', en: 'the audience and the concept' },
+        evidence: { ko: '40~50대가 실제로 보는 릴스를 먼저 분석해 세 자리 조회수를 2.8만으로 올렸다. 미래엔수학, 2025 · 어르신 한 분을 여러 번 만나 굽은 등과 어깨 비대칭에 맞춰 코트를 설계했다. 인체공학적 의복디자인, 2024', en: 'Studied the Reels women in their 40s and 50s actually watch; views went from three digits to 28K. MiraeN Math, 2025 · Met one senior model several times and cut his coat around a curved back and uneven shoulders. Ergonomic Clothing Design, 2024' },
         media: 'img/strength-1-miraen.jpg',
         link: 'miraen',
       },
       {
-        claim: { ko: '제약을 피하지 않고 설계 조건으로 받아들입니다.', en: 'I take constraints as design conditions, not obstacles.' },
-        keyword: { ko: '설계 조건', en: 'design conditions' },
-        evidence: { ko: '54인치 프린터, 100인치 카프탄. 세 패널로 나눠 찍고 봉제선에서 잇다. Wilson College Collection 영구 소장, 2026', en: 'A 54-inch printer, a 100-inch kaftan: printed in three panels that meet at the seams. Wilson College Collection, 2026' },
+        claim: { ko: '머리로 기획하고, 몸으로 끝까지 만듭니다.', en: 'I plan it in my head and build it all the way through with my hands.' },
+        keyword: { ko: '몸으로 끝까지', en: 'all the way through' },
+        evidence: { ko: '54인치 프린터로 100인치 카프탄을 세 패널로 나눠 찍어 Wilson College Collection 영구 소장. Art2Wear 〈공생〉은 디자인과 제작부터 런웨이 모델까지 맡았다. 교환학생 1년 동안 인턴과 아르바이트를 병행하며 GPA 4.0. 2025~2026', en: 'Printed a 100-inch kaftan on a 54-inch printer in three panels; it is now in the Wilson College Collection. Took Art2Wear’s Tensed Symbiosis from design and construction to walking it on the runway. One exchange year with internships and a part-time job alongside, GPA 4.0. 2025 to 2026' },
         media: 'img/strength-2-kaftan.jpg',
         link: 'kaftan',
       },
       {
         claim: { ko: '머릿속 그림을 AI로 바로 눈에 보이는 결과물로 만듭니다.', en: 'I turn the picture in my head into something you can see, with AI.' },
         keyword: { ko: '눈에 보이는 결과물', en: 'something you can see' },
-        evidence: { ko: 'AI 단편영화를 혼자 연출해 대상. 카프탄은 자르기 전에 AI로 먼저 입혀 봤고, 이 사이트는 코딩 없이 AI와 만들었다. 2025~2026', en: 'Directed an AI short film solo and won the grand prize. Put the kaftan on a body with AI before cutting it, and built this site with AI, no coding background. 2025 to 2026' },
+        evidence: { ko: 'AI 단편영화를 혼자 연출해 대상. 카프탄과 데님은 자르기 전에 AI로 먼저 입혀 봤다. 지금 보고 있는 이 포트폴리오도 코딩 없이 AI와 함께 기획부터 구현까지 직접 만들었다. 2025~2026', en: 'Directed an AI short film solo and won the grand prize. Tried the kaftan and the denim on a body with AI before cutting. And this portfolio you are looking at: planned and built with AI from concept to code, with no coding background. 2025 to 2026' },
         media: 'images/projects/ai-short-film/11.jpg',
         link: 'ai-short-film',
       },
@@ -281,7 +282,7 @@ window.SITE = {
     'sub-motion': 'images/ground/d01-filmstrip.jpg',
     'senior-fit': 'images/ground/d11-sewing-ruffles.jpg',
     'promo-video-ai': 'images/ground/d15-bad-day-still.jpg',
-    'portfolio-site': 'images/projects/portfolio-site/01.jpg',
+    'portfolio-site': 'images/projects/portfolio-site/14.jpg',
     '3d-graphic-design': 'images/ground/05-archive.jpg',
     'adaptive-textile': 'images/ground/d07-tufted-portrait.jpg',
     'ai-art-practice': 'images/ground/d06-dog-ai.jpg',

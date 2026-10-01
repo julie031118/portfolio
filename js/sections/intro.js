@@ -24,6 +24,8 @@ function appendText(target, text) {
 /* how far the pinned intro scrolls per sentence, in viewport heights */
 const STEP_VH = .7;
 const STEPS = 7; /* six typed lines + the full paragraph */
+/* once the paragraph has been read in full it stays: the pin then only holds it this long */
+const HOLD_VH = .5;
 
 function appendRichLine(row, line, lang, bindKeyword) {
   const matches = [];
@@ -63,7 +65,7 @@ export function renderIntro(siteLang) {
         <div class="intro-copy">
           <div class="intro-lang" role="group" aria-label="${SITE.intro.ui.langAria}"><button type="button" data-lang="en">en</button><span aria-hidden="true">/</span><button type="button" data-lang="ko">ko</button></div>
           <div class="intro-lines" aria-live="polite"></div>
-          <p class="intro-hint" aria-hidden="true"><span class="intro-hint-text"></span><span class="intro-hint-cursor">_</span></p>
+          <p class="intro-hint" aria-hidden="true"><span class="intro-hint-pill"><span class="intro-hint-text"></span><span class="intro-hint-cursor">_</span></span></p>
         </div>
         <p class="intro-scroll-hint">${SITE.intro.ui.scroll}<span aria-hidden="true">_</span></p>
       </div>
@@ -95,6 +97,9 @@ export function renderIntro(siteLang) {
   let mode = '';
   let resizeTimer = 0;
   let hintTimer = 0;
+  let locked = false;    /* the full paragraph has been shown once: no more line-by-line typing */
+  let shrunk = false;    /* …and the pinned stretch has been cut down to a short hold */
+  let previewed = false; /* the faint whole-mind-map preview plays once per visit */
 
   /* the hint follows the paragraph's own language and types itself in once the paragraph has settled */
   function resetHint() {
@@ -104,7 +109,8 @@ export function renderIntro(siteLang) {
   }
   function typeHint() {
     resetHint();
-    if (compactQuery.matches || frame.classList.contains('is-discovered')) return;
+    /* it stays for good; a phone has no notes to open, so no hint there */
+    if (compactQuery.matches) return;
     const source = SITE.intro.ui.hint;
     const copy = typeof source === 'string' ? source : (source[currentLang] || source.en);
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { hintText.textContent = copy; hintEl.classList.add('is-typing'); return; }
@@ -137,10 +143,14 @@ export function renderIntro(siteLang) {
     requestAnimationFrame(() => hand.layout());
     document.fonts?.ready.then(() => hand.layout());
     typeHint();
+    locked = true;
+    if (!previewed) {
+      previewed = true;
+      window.setTimeout(() => { if (mode === 'final') hand.preview(); }, 1500);
+    }
   }
 
-  /* the words keep a faint dotted underline, and the small hover hint stays under the paragraph,
-     until the reader has tried one */
+  /* the dotted underlines pulse until the reader has tried one word; the hint under the paragraph stays */
   const discover = (event) => {
     if (!event.target.closest?.('.intro-keyword, .hand-hot')) return;
     frame.classList.add('is-discovered');
@@ -170,6 +180,7 @@ export function renderIntro(siteLang) {
 
   function update(progress) {
     frame.classList.toggle('is-started', progress > .004);
+    if (locked) { renderFinal(); return; }
     const scaled = Math.min(progress * STEPS, STEPS - .001);
     const step = Math.floor(scaled);
     if (step >= 6) renderFinal();
@@ -196,14 +207,32 @@ export function renderIntro(siteLang) {
     trigger = ScrollTrigger.create({
       trigger: section,
       start: 'top top',
-      end: () => `+=${window.innerHeight * STEPS * STEP_VH}`,
+      end: () => `+=${window.innerHeight * (shrunk ? HOLD_VH : STEPS * STEP_VH)}`,
       pin: stage,
       scrub: .18,
       anticipatePin: 1,
       onUpdate: (self) => update(self.progress),
       onRefresh: (self) => update(self.progress),
+      onLeave: () => { if (locked) window.requestAnimationFrame(shrink); },
+      onLeaveBack: () => { if (locked) window.requestAnimationFrame(shrink); },
     });
     update(0); /* nothing on the paper until the first scroll */
+  }
+
+  /* After the paragraph has been read, scrolling back up should not walk through five screens of a still
+     page. The pin is cut to a short hold once the reader is out of it, and the scroll position moves by the
+     same amount so nothing on screen jumps. */
+  function shrink() {
+    if (shrunk || !trigger) return;
+    const before = trigger.end - trigger.start;
+    const below = window.scrollY >= trigger.end - 1;
+    shrunk = true;
+    ScrollTrigger.refresh();
+    const delta = before - (trigger.end - trigger.start);
+    if (!below || delta <= 0) return;
+    const target = Math.max(0, window.scrollY - delta);
+    if (window.__lenis) { window.__lenis.resize?.(); window.__lenis.scrollTo(target, { immediate: true, force: true }); }
+    else window.scrollTo(0, target);
   }
 
   window.addEventListener('resize', () => {

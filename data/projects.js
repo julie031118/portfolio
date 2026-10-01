@@ -329,6 +329,7 @@ window.PROJECTS = [
   "thumb": "/images/projects/kaftan/21.jpg",
   "images": [
    "/images/projects/kaftan/a05.jpg",
+   "/images/projects/kaftan/ai01.jpg",
    "/images/projects/kaftan/21.jpg",
    "/images/projects/kaftan/22.jpg",
    "/images/projects/kaftan/23.jpg",
@@ -637,6 +638,7 @@ window.PROJECTS = [
   "thumb": "/images/projects/art2wear/a02.jpg",
   "images": [
    "/images/projects/art2wear/a02.jpg",
+   "/images/projects/art2wear/s01.jpg",
    "/images/projects/art2wear/a01.jpg",
    "/images/projects/art2wear/a03.jpg",
    "/images/projects/art2wear/a04.jpg",
@@ -644,7 +646,9 @@ window.PROJECTS = [
    "/images/projects/art2wear/a06.jpg",
    "/images/projects/art2wear/a09.jpg",
    "/images/projects/art2wear/a14.jpg",
-   "/images/projects/art2wear/43.jpg"
+   "/images/projects/art2wear/43.jpg",
+   "/images/projects/art2wear/s02.jpg",
+   "/images/projects/art2wear/s03.jpg"
   ],
   "role": {
    "ko": "디자인 · 소재 개발 · 제작 · 런웨이 모델",
@@ -843,8 +847,7 @@ window.PROJECTS = [
     "action": [
      "'Toxic Till the End'(로제): 뮤직비디오가 하나의 서사로 흐른다는 점에 맞춰, 필름 릴 속 장면들이 살아나는 구성으로 티저를 설계. 원본의 시그니처 컬러와 체스판 이미지를 가져와 톤과 상징을 유지 (4인 팀)",
      "'APT': 지퍼 형태의 타이포그래피와 하트 이미지로 곡의 리듬을 글자 자체의 움직임으로 처리 (2인 팀)",
-     "'후라이의 꿈': 손으로 그린 캐릭터 애니메이션으로, 곡의 따뜻한 정서를 정교한 그래픽 대신 손맛으로 옮김 (4인 팀, 조장). 파트를 나누기 전에 에셋을 미리 정해 전체가 한 편으로 이어지도록 리드",
-     "세 편 모두 어떻게 하면 흔하지 않을지를 먼저 고민하고, 곡마다 다른 화면 문법을 정함"
+     "'후라이의 꿈': 손으로 그린 캐릭터 애니메이션으로, 곡의 따뜻한 정서를 정교한 그래픽 대신 손맛으로 옮김 (4인 팀, 조장). 파트를 나누기 전에 에셋을 미리 정해 전체가 한 편으로 이어지도록 리드"
     ],
     "result": null,
     "detail": {
@@ -864,8 +867,7 @@ window.PROJECTS = [
     "action": [
      "'Toxic Till the End' (Rosé): the music video runs as a single narrative, so the teaser was composed as scenes coming alive inside a roll of film, carrying over the original's signature palette and chessboard imagery (team of 4)",
      "'APT': zipper-formed typography and heart imagery, letting the letters themselves carry the rhythm (team of 2)",
-     "\"Fry's Dream\": hand-drawn character animation, moving the track's warmth through hand feel rather than polish (team of 4, team lead); fixed the assets before the work was split, so the parts would join as one piece",
-     "For each, asked first how it could avoid looking like every other one, and set a different screen language per track"
+     "\"Fry's Dream\": hand-drawn character animation, moving the track's warmth through hand feel rather than polish (team of 4, team lead); fixed the assets before the work was split, so the parts would join as one piece"
     ],
     "result": null,
     "detail": {
@@ -1479,12 +1481,16 @@ window.PROJECTS = [
   "thumb": "/images/projects/denim-2026/01.jpg",
   "images": [
    "/images/projects/denim-2026/01.jpg",
-   "/images/projects/denim-2026/02.jpg",
+   "/images/projects/denim-2026/ai13.jpg",
    "/images/projects/denim-2026/03.jpg",
    "/images/projects/denim-2026/04.jpg",
    "/images/projects/denim-2026/05.jpg",
    "/images/projects/denim-2026/06.jpg",
-   "/images/projects/denim-2026/07.jpg"
+   "/images/projects/denim-2026/07.jpg",
+   "/images/projects/denim-2026/aw01.jpg",
+   "/images/projects/denim-2026/aw02.jpg",
+   "/images/projects/denim-2026/aw03.jpg",
+   "/images/projects/denim-2026/aw04.jpg"
   ],
   "role": {
    "ko": "디자인 · 그래픽 · 소재 실험 · 제작 (단독)",
@@ -1492,6 +1498,61 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "press": [
+   {
+    "outlet": {
+     "ko": "한국섬유신문",
+     "en": "Korea Textile News"
+    },
+    "headline": {
+     "ko": "데님에 담은 젊은 감각, 새로운 가능성 보여줬다",
+     "en": "Young ideas in denim (in Korean)"
+    },
+    "date": "2026.09.29",
+    "url": "https://www.ktnews.com/news/articleView.html?idxno=148925"
+   },
+   {
+    "outlet": {
+     "ko": "한국섬유신문",
+     "en": "Korea Textile News"
+    },
+    "headline": {
+     "ko": "한국 데님시장, 새로운 활력 첫 전문 전시회 성료",
+     "en": "Korea’s first denim trade show (in Korean)"
+    },
+    "date": "2026.09.29",
+    "url": "https://www.ktnews.com/news/articleView.html?idxno=148924"
+   }
+  ],
+  "process": [
+   "/images/projects/denim-2026/ai01.jpg",
+   "/images/projects/denim-2026/ai02.jpg",
+   "/images/projects/denim-2026/ai03.jpg",
+   "/images/projects/denim-2026/ai04.jpg",
+   "/images/projects/denim-2026/ai05.jpg",
+   "/images/projects/denim-2026/ai06.jpg",
+   "/images/projects/denim-2026/ai07.jpg",
+   "/images/projects/denim-2026/ai08.jpg",
+   "/images/projects/denim-2026/ai09.jpg",
+   "/images/projects/denim-2026/ai10.jpg",
+   "/images/projects/denim-2026/ai11.jpg",
+   "/images/projects/denim-2026/ai12.jpg",
+   "/images/projects/denim-2026/ai14.jpg",
+   "/images/projects/denim-2026/ai15.jpg",
+   "/images/projects/denim-2026/ai16.jpg",
+   "/images/projects/denim-2026/ai17.jpg",
+   "/images/projects/denim-2026/ai18.jpg",
+   "/images/projects/denim-2026/ai19.jpg",
+   "/images/projects/denim-2026/ai20.jpg",
+   "/images/projects/denim-2026/ai21.jpg",
+   "/images/projects/denim-2026/ai22.jpg",
+   "/images/projects/denim-2026/ai23.jpg",
+   "/images/projects/denim-2026/ai24.jpg",
+   "/images/projects/denim-2026/ai25.jpg",
+   "/images/projects/denim-2026/ai26.jpg",
+   "/images/projects/denim-2026/ai27.jpg",
+   "/images/projects/denim-2026/ai28.jpg"
+  ],
   "nar": {
    "ko": {
     "title": "데님 디자인 공모전",
@@ -1501,18 +1562,24 @@ window.PROJECTS = [
      {
       "v": "입선",
       "l": "코리아 데님 디자인 공모전 2026"
+     },
+     {
+      "v": "D&J INDIA",
+      "l": "2027년 4월 방갈로르 전시 예정"
      }
     ],
     "need": "본선 작품은 한 벌만 만들 수 있고 원단은 되돌릴 수 없다. 프린트한 그래픽이 실제 데님 위에서 어떻게 보일지, 데미지를 어디까지 내야 물감이 흘러내리는 것처럼 읽힐지, 이걸 원단을 자르기 전에 알아야 했다.",
     "action": [
      "'물감 튜브에서 흘러나온 물감이 데님의 풀린 실로 변한다'는 하나의 서사를 축으로 잡고, 프린트(그래픽)와 리얼 데미지(실)가 옆선에서 이어지도록 설계",
-     "AI로 아이디어를 대량 시뮬레이션: 일러스트, 인스퍼레이션, 그래픽이 프린트됐을 때의 모습, 실루엣 변주, 컬러웨이까지 실물 제작 전에 눈으로 확인",
+     "AI로 방향을 먼저 대량으로 만들어 비교: 예선 이미지, 디자인 보드, 룩북 변주, 패치 컬러웨이, 백패치 텍스타일 클로즈업까지 원단을 자르기 전에 눈으로 확인",
+     "기존 브랜드 디자인과 겹쳐 보이는 결과물은 표절 위험으로 따로 걸러내고 진행",
      "물감이 점점 흩어지는 그래디언트를 만들고, 그 그래디언트가 끝나는 지점에서 실제 프린지가 시작되도록 앞뒤를 연결",
      "물감 튜브 그래픽을 하프톤·ASCII·레트로·애시드·그레인·찢어진 종이·잉크브러시 등 여덟 가지 그래픽 언어로 전개해, 같은 오브젝트가 표현 방식에 따라 어디까지 달라지는지 실험",
      "로우 워시 raw indigo 데님과 아이보리 캔버스 백패치로 소재를 확정하고, 원단을 받아 실물 한 벌을 제작"
     ],
     "result": [
-     "입선 (Honorable Mention): 코리아 데님 디자인 공모전 2026 (D&J DenimsandJeans Korea, COEX Seoul, 한국섬유신문·D&J)"
+     "입선 (Honorable Mention): 코리아 데님 디자인 공모전 2026 (D&J DenimsandJeans Korea, COEX Seoul)",
+     "시상작은 2027년 4월 인도 방갈로르에서 열리는 9차 D&J INDIA에서 한국 학생 작품으로 전시될 예정"
     ],
     "detail": {
      "title": "AI를 어떻게 썼나",
@@ -1531,18 +1598,24 @@ window.PROJECTS = [
      {
       "v": "Honorable Mention",
       "l": "Korea Denim Design Contest 2026"
+     },
+     {
+      "v": "D&J INDIA",
+      "l": "To be exhibited in Bengaluru, April 2027"
      }
     ],
     "need": "A finals entry is one garment, and fabric does not undo. How a printed graphic would sit on real denim, and how far the damage had to go before it read as paint bleeding into thread: all of it had to be known before the first cut.",
     "action": [
      "Built everything on one narrative: paint squeezed from a tube becomes the frayed threads of the denim, with print and real damage meeting at the side seam",
-     "Simulated ideas in bulk with AI: illustration, inspiration, how the graphic would look once printed, silhouette variations, colorways, all seen before anything was cut",
+     "Generated directions in bulk with AI and compared them: the preliminary image, design boards, lookbook variations, patch colorways and back-patch textile close-ups, all seen before the fabric was cut",
+     "Set aside any output that looked too close to an existing brand’s design",
      "Scattered the paint into a gradient, and started the real fringe exactly where the gradient ends, connecting front to back",
      "Ran the paint-tube graphic through eight treatments (halftone, ASCII, retro, acid, grain, torn paper, ink brush) to see how far the same object could travel by treatment alone",
      "Settled on low-wash raw indigo denim with an ivory canvas back patch, then built the single garment from the delivered fabric"
     ],
     "result": [
-     "Honorable Mention: Korea Denim Design Contest 2026 (D&J DenimsandJeans Korea, COEX Seoul)"
+     "Honorable Mention: Korea Denim Design Contest 2026 (D&J DenimsandJeans Korea, COEX Seoul)",
+     "Awarded works are scheduled to be shown as Korean student work at the 9th D&J INDIA, Bengaluru, April 2027"
     ],
     "detail": {
      "title": "How AI was used",
@@ -1615,111 +1688,162 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026",
-  "thumb": "/images/projects/portfolio-site/00-thumb.jpg",
-  "images": [
-   "/images/projects/portfolio-site/01.jpg",
-   "/images/projects/portfolio-site/02.jpg",
-   "/images/projects/portfolio-site/03.jpg",
-   "/images/projects/portfolio-site/04.jpg",
-   "/images/projects/portfolio-site/05.jpg",
-   "/images/projects/portfolio-site/06.jpg",
-   "/images/projects/portfolio-site/07.jpg",
-   "/images/projects/portfolio-site/08.jpg",
-   "/images/projects/portfolio-site/09.jpg",
-   "/images/projects/portfolio-site/10.jpg",
-   "/images/projects/portfolio-site/11.jpg",
-   "/images/projects/portfolio-site/12.jpg",
-   "/images/projects/portfolio-site/13.jpg",
-   "/images/projects/portfolio-site/14.jpg",
-   "/images/projects/portfolio-site/15.jpg",
-   "/images/projects/portfolio-site/16.jpg",
-   "/images/projects/portfolio-site/17.jpg",
-   "/images/projects/portfolio-site/18.jpg",
-   "/images/projects/portfolio-site/19.jpg",
-   "/images/projects/portfolio-site/20.jpg",
-   "/images/projects/portfolio-site/21.jpg",
-   "/images/projects/portfolio-site/22.jpg",
-   "/images/projects/portfolio-site/23.jpg"
-  ],
+  "thumb": "/images/projects/portfolio-site/cover.jpg",
+  "images": [],
   "role": {
-   "ko": "기획 · 아트 디렉션 · 콘텐츠 · AI 워크플로우 (단독)",
-   "en": "Planning, art direction, content, AI workflow (solo)"
+   "ko": "기획 · 웹디자인 · AI 워크플로우 · 콘텐츠 (단독, 독학)",
+   "en": "Planning, web design, AI workflow, content (solo, self-taught)"
   },
   "spotify": null,
   "spotifyNote": null,
+  "process": [
+   "/images/projects/portfolio-site/05.jpg",
+   "/images/projects/portfolio-site/08.jpg",
+   "/images/projects/portfolio-site/09.jpg",
+   "/images/projects/portfolio-site/11.jpg",
+   "/images/projects/portfolio-site/13.jpg",
+   "/images/projects/portfolio-site/14.jpg",
+   "/images/projects/portfolio-site/15.jpg",
+   "/images/projects/portfolio-site/cd01.jpg",
+   "/images/projects/portfolio-site/cd02.jpg",
+   "/images/projects/portfolio-site/22.jpg"
+  ],
+  "galleries": [
+   {
+    "title": {
+     "ko": "워크플로우",
+     "en": "WORKFLOW"
+    },
+    "images": [
+     "/images/projects/portfolio-site/wf.jpg"
+    ],
+    "rowTarget": 2000
+   },
+   {
+    "title": {
+     "ko": "실제로 보낸 지시",
+     "en": "PROMPTS I SENT"
+    },
+    "images": [
+     "/images/projects/portfolio-site/pr01.jpg",
+     "/images/projects/portfolio-site/pr02.jpg",
+     "/images/projects/portfolio-site/pr03.jpg",
+     "/images/projects/portfolio-site/pr04.jpg",
+     "/images/projects/portfolio-site/pr05.jpg",
+     "/images/projects/portfolio-site/04.jpg"
+    ],
+    "rowTarget": 440
+   },
+   {
+    "title": {
+     "ko": "마인드맵 발전 과정",
+     "en": "MIND MAP, STEP BY STEP"
+    },
+    "images": [
+     "/images/projects/portfolio-site/mm01.jpg",
+     "/images/projects/portfolio-site/mm02.jpg",
+     "/images/projects/portfolio-site/mm03.jpg",
+     "/images/projects/portfolio-site/mm04.jpg",
+     "/images/projects/portfolio-site/mm05.jpg",
+     "/images/projects/portfolio-site/mm06.jpg",
+     "/images/projects/portfolio-site/mm07.jpg",
+     "/images/projects/portfolio-site/mm08.jpg",
+     "/images/projects/portfolio-site/mm09.jpg",
+     "/images/projects/portfolio-site/mm10.jpg",
+     "/images/projects/portfolio-site/mm11.jpg",
+     "/images/projects/portfolio-site/mm12.jpg"
+    ]
+   }
+  ],
   "nar": {
    "ko": {
-    "title": "이 포트폴리오를 만든 과정",
-    "cat": "웹사이트 · 브랜딩 · AI 워크플로우 · 2026 · 진행 중",
-    "headline": "사람들은 AI가 만든 번쩍이는 것에 이미 싫증이 났다. 그래서 반대로, 손때 묻은 공간을 만들었다.",
+    "title": "AI로 만든 이 포트폴리오",
+    "cat": "웹사이트 기획·디자인 · AI 워크플로우 · 독학 · 2026",
+    "headline": "프롬프트 몇 줄로 나오는 포트폴리오는 화려하지만 뻔하다. 그래서 하나하나 기획하고, 하나하나 지시했다.",
     "metrics": [
      {
-      "v": "0",
-      "l": "코딩 경험 (전부 대화로 구현)"
+      "v": "독학",
+      "l": "디자인·코딩 비전공"
+     },
+     {
+      "v": "4",
+      "l": "교차로 쓴 AI 도구"
+     },
+     {
+      "v": "2",
+      "l": "언어 (한국어 · 영어)"
      }
     ],
-    "need": "AI로 만든 사이트와 영상은 대개 같은 얼굴을 한다. 번쩍이는 애니메이션, 로봇 같은 미래 이미지, 어디서 본 듯한 매끈한 레이아웃. 그런 인위적인 결과물이 쏟아지면서 보는 사람들은 이미 피로해졌고, '이것도 AI가 만들었구나'에서 관심이 끝난다. AI를 가장 많이 쓴 포트폴리오일수록 AI처럼 보이면 안 됐다. 오래 쓴 편집샵 구석처럼, 빈티지하고 손때 묻은 공간이 필요했다.",
+    "need": "Manus 같은 도구에 프롬프트 몇 줄만 넣어도 화려한 포트폴리오가 나오는 시대다. 그래서 오히려 다 비슷해 보인다. 매끈하고 번쩍이는, 신세계 같은 사이트는 지루하고 뻔하다고 생각했다. 수만 개의 포트폴리오를 보는 사람이 내 것을 기억하고 좋은 기억으로 가져가게 하려면, 처음부터 끝까지 내가 직접 기획해야 했다. 디자인도 코딩도 전공하지 않았기 때문에, 그 기획을 AI에게 정확히 전달하는 방법부터 혼자 익혀야 했다.",
     "action": [
-     "레퍼런스를 톤과 구조로 나눠 수집: 톤은 필름 그레인·본·에크루의 아틀리에 사진, 구조와 움직임은 Bécane Paris와 Shopify Editions의 누끼 콜라주·페이지 전환",
-     "메인 씬은 Midjourney로 직접 생성. 잡지 걸린 행거, 석고상과 스카프, 빈티지 노트북과 카메라, 스케치 액자: 내 작업 분야를 뜻하는 오브제로 방을 채우고, 오브제 하나하나를 프로젝트로 들어가는 문으로 삼음",
-     "오브제를 누끼로 떼어내 배경과 분리하고, 스크롤에 따라 방에서 구석으로 걸어 들어가는 전환과 실루엣 단위의 호버를 구현. 카테고리 메뉴 대신 물건을 고르게 함",
-     "시그니처로 날치를 골랐다. 물고기인데 난다. 한 영역에 머물지 않고 옷·영상·마케팅·AI를 두려움 없이 넘나드는 내 방식. 직접 만든 날치 사진을 누끼로 떼어 화면을 천천히 가로지르게 하고, 파비콘·커서 정도에만 쓰고 도배하지 않음",
-     "코딩을 모른 채 Claude와 대화로 설계·구현. 콘텐츠는 문제→실행→성과 구조로 쓰고, 수치가 없는 자리는 지어내지 않고 비워둠",
-     "v7 (2026.09~): 손으로 그린 콘셉트를 그대로 옮기는 방식으로 바꿨다. 무드보드 = 사진 위에 반투명 종이. 인트로 문장을 타자기처럼 한 줄씩 치고, 문장 위에 내가 아이패드로 그린 메모(괄호·상자·연결선)를 벡터로 다시 그려 얹어 키워드에 마우스를 올리면 나타나게 했다",
-     "툴 분업: Manus에 무드보드와 글로 된 브리프를 주고 첫 UI 프로토타입(더미 프로젝트, 마인드맵 선)을 받았다. 그다음부터는 Claude와 대화로 실제 데이터를 붙이고 인터랙션을 하나씩 고쳤다. 링이 잘리면 카메라 계산을 바꾸고, 종이가 어색하면 종이를 뺐다",
-     "Selected Work는 3D 링. 프로젝트 사진들이 타원 궤도로 돌고, 가운데에는 내 Art2Wear 작업(깨진 도자기 접시로 만든 꽃)을 사진 4장으로 Tripo에서 3D 스캔해 넣었다. 스크롤로 돌리고, 클릭하면 상세로",
-     "검토는 채팅이 아니라 리뷰 시트로: 프로젝트 26개의 제목·대표사진·본문·타임라인·스킬을 한 페이지에 펼쳐 놓고 바꿀 것만 표시하면 한 번에 반영되는 페이지를 만들어 썼다"
+     "디자인·코딩 비전공으로 전 과정을 독학: 코드를 직접 치지 않고 AI와 대화하며 설계하고 고침. 판단과 지시는 끝까지 내가 함",
+     "AI를 하나만 쓰지 않고 교차 활용: Manus로 첫 UI 시안, Claude로 실제 구현과 인터랙션, ChatGPT로 이미지, Tripo로 3D",
+     "직접 만든 웨어러블 아트(깨진 도자기 조각으로 만든 꽃)를 3D로 구현: ChatGPT로 여러 각도의 이미지를 먼저 만든 뒤 Tripo에 넣어 3D 모델로 만들고, Selected Work 한가운데에 배치",
+     "마인드맵은 아이패드로 직접 그려서 지시: 화면 캡처 위에 손으로 그린 스케치를 그대로 보내고, 그 선과 글씨를 옮겨 키워드에 마우스를 올리면 나타나게 함",
+     "첫인상은 일부러 반대로: 세련되고 번쩍이는 대신 타자기 효과와 빈티지한 무드로 시작. 나를 전달하는 문장을 맨 앞에 두고, 작업의 방향성은 마인드맵으로 보여줌",
+     "사이트의 이미지도 내 작업으로: 작품 사진을 배경에 깔고 그 위에 반투명한 종이 질감을 덮음. 곳곳에 마우스 인터랙션을 넣음",
+     "보는 사람의 경험까지 설계: 프로젝트마다 어울리는 곡을 Spotify 플레이어로 넣어 음악에 대한 관심을 보여주고, 그 분위기 속에서 작업을 보게 함. 아카이브는 필터별로 볼 수 있게 함",
+     "한국어와 영어 두 버전을 모두 제작",
+     "검토는 리뷰 시트로: 프로젝트, 타임라인, 스킬을 한 페이지에 펼쳐 두고 바꿀 것만 표시해 한 번에 반영"
     ],
     "result": [
-     "지금 상태 (2026.10): 인트로 · 3D 링 · 이름 · About · 아카이브 · 연락처 6개 섹션과 프로젝트 26개 상세 페이지가 돌아가는 상태. 코드는 전부 대화로 작성. 직접 쓴 줄은 0",
-     "다음: 마인드맵을 프로젝트까지 확장(손으로 그린 스케치 기준), 어도비 포트폴리오의 사진 267장 정리해 프로젝트별 사진·본문 재편집, 배경 사운드, 개인 도메인 연결"
+     "인트로 · Selected Work · About · 아카이브 · 연락처와 프로젝트 26개 상세 페이지를 한국어 · 영어로 구현 (2026.10, 계속 다듬는 중)",
+     "AI 도구 4종을 교차로 써서 기획부터 배포까지 혼자 진행"
     ],
     "detail": {
-     "title": "왜 빈티지인가",
+     "title": "AI가 발전해도 사람이 하는 일",
      "body": [
-      "새로움은 더 새로운 기술에서 오지 않았다. 모두가 미래를 보여줄 때 과거의 질감을 보여주는 쪽이 오히려 눈에 띄었다. 편집샵과 잡지, 석고상은 패션이 오래 써온 언어이기도 해서, 내가 어디서 온 사람인지도 함께 말해준다.",
-      "AI는 이 사이트의 거의 모든 단계에 들어갔다. 씬 생성, 누끼, 문장 다듬기, 코드. 그런데 결과물에서 AI가 먼저 보이지 않게 하는 것이 이 프로젝트의 기준이었다. 도구가 보이면 사람이 안 보인다.",
-      "과정 사진(아래, 순서대로): 엎은 v6 화면 → 레퍼런스 무드보드 → Manus에 준 브리프와 첫 프로토타입 → 아이패드 스케치와 그것을 옮긴 인트로 → 3D 링, 도자기 꽃 스캔 사진과 렌더 → 무드보드 배경, 컨택트, 상세 페이지 인터랙션 → 코드 → 리뷰 시트 → 지금의 마인드맵."
+      "\"예쁘게 해줘\", \"멋지게 해줘\"로는 좋은 결과가 나오지 않았다. 원하는 결과가 나온 건 늘 내가 먼저 자세히 기획하고, 선 하나와 글씨 크기 하나까지 세세하게 지시했을 때였다.",
+      "그래서 AI가 발전할수록 사람의 역할은 더 분명해진다고 생각한다. 무엇을 왜 만들지 정하고, 결과를 보고 판단하고, 다시 지시하는 일이다.",
+      "아래 이미지: 전체 워크플로우와 실제로 보낸 지시 → 마인드맵이 손 스케치에서 지금의 모습이 되기까지 → 작업 과정 (첫 시안, 3D, 코드, 리뷰 시트)."
      ]
     }
    },
    "en": {
-    "title": "Making This Portfolio",
-    "cat": "Website · Branding · AI workflow · 2026 · in progress",
-    "headline": "People are already tired of shiny AI-made things. So I went the other way and built a room with fingerprints on it.",
+    "title": "Making this Portfolio with AI",
+    "cat": "Website Planning & Design · AI Workflow · Self-taught · 2026",
+    "headline": "A portfolio from a few lines of prompt can be flashy, but it is predictable. So I planned every part and directed every detail.",
     "metrics": [
      {
-      "v": "0",
-      "l": "lines of code written by hand"
+      "v": "Self-taught",
+      "l": "No design or coding degree"
+     },
+     {
+      "v": "4",
+      "l": "AI tools used together"
+     },
+     {
+      "v": "2",
+      "l": "Languages (Korean, English)"
      }
     ],
-    "need": "AI-made sites and films tend to wear the same face: glossy animation, robot-futurism, layouts you have seen before. As that output floods in, viewers grow numb, and interest ends at 'so this is AI too.' A portfolio that used AI this much could not afford to look like it. It needed the feel of a worn corner in a concept store: vintage, handled, real.",
+    "need": "Today a few lines of prompt in a tool like Manus can produce a flashy portfolio, which is exactly why they all look alike. Sleek, glittering, futuristic sites felt boring and predictable to me. For someone who looks through thousands of portfolios to remember mine and leave with a good memory of it, I had to plan it myself from start to finish. With no background in design or coding, I first had to teach myself how to hand that plan to AI precisely.",
     "action": [
-     "Split references into tone and structure: tone from film-grain, bone-and-ecru atelier photography; structure and motion from Bécane Paris and Shopify Editions (cut-out collage, page transitions)",
-     "Generated the main scenes in Midjourney: magazines on a wire hanger, a plaster bust and scarf, a vintage laptop and camera, a framed sketch: objects that stand for my fields, each one a door into a project",
-     "Cut every object out of its background, built a scroll-driven walk from the room into the corner, and made hover follow the silhouette rather than a box. No category menu: you pick up a thing",
-     "Chose the flying fish as the signature. A fish that flies, refusing to stay in one lane, crossing garments, film, marketing and AI without fear. Cut out from photos I made, drifting slowly across the screen; used only in the favicon and cursor beyond that",
-     "Designed and built entirely in conversation with Claude, with no coding background. Content follows problem → action → result, and where a number does not exist the space is left empty rather than invented",
-     "v7 (Sep 2026 onward): the concept became \"carry the hand drawing over as it is\". Moodboard = a photo under translucent paper. The intro types itself one line at a time, and the notes I drew on the iPad (parentheses, boxes, connecting lines) were redrawn as vectors and appear when a keyword is hovered",
-     "Division of tools: Manus got the moodboards and a written brief and returned the first UI prototype (dummy projects, mind-map lines). From there, Claude and I attached the real data and fixed interactions one at a time in conversation: when the ring was clipped we changed the camera maths; when the paper felt wrong we removed the paper",
-     "Selected Work is a 3D ring. Project photos orbit on an ellipse; in the middle sits my Art2Wear piece (a flower made from broken porcelain plates), scanned into 3D in Tripo from four photos. Scroll to rotate, click to open",
-     "Review happened on a sheet, not in chat: all 26 projects' titles, cover images, copy, the timeline and skills laid out on one page where I mark only what changes, and it is applied in one pass"
+     "Self-taught end to end, with no design or coding degree: no code typed by hand, everything designed and fixed in conversation with AI, while every judgement and instruction stayed mine",
+     "Used several AIs together rather than one: Manus for the first UI draft, Claude for the real build and interactions, ChatGPT for images, Tripo for 3D",
+     "Brought my own wearable art piece, a flower made of broken porcelain, into 3D: generated views from several angles in ChatGPT, fed them to Tripo for a 3D model, and set it at the centre of Selected Work",
+     "Drew the mind map by hand on an iPad and sent the sketch over a screenshot; its lines and handwriting were carried over so they appear when a keyword is hovered",
+     "Opened against the grain: instead of sleek and shiny, a typewriter effect and a vintage mood. A sentence that introduces me comes first, and the mind map shows where my work is heading",
+     "Made the site’s imagery out of my own work: project photos as the background under a layer of translucent paper, with mouse interactions throughout",
+     "Designed the viewer’s experience too: each project has a song in a Spotify player, showing my interest in music and letting the work be seen inside a mood. The archive can be filtered",
+     "Built in both Korean and English",
+     "Reviewed on a sheet, not in chat: projects, timeline and skills on one page; I mark only what changes and it is applied in one pass"
     ],
     "result": [
-     "Now (Oct 2026): six sections (intro, 3D ring, name, about, archive, contact) and 26 project pages are working. All code was written in conversation; lines typed by hand: 0",
-     "Next: extend the mind map down to projects (from the hand sketch), sort 267 photos from the Adobe portfolio and re-edit each project's images and copy, ambient sound, a personal domain"
+     "Intro, Selected Work, About, Archive and Contact plus 26 project pages, in Korean and English (Oct 2026, still being refined)",
+     "Planned, built and deployed alone, using four AI tools together"
     ],
     "detail": {
-     "title": "Why vintage",
+     "title": "What people still do as AI improves",
      "body": [
-      "Newness did not come from newer technology. When everyone shows the future, the texture of the past stands out. Concept stores, magazines and plaster busts are also the language fashion has always spoken, so they say where I come from.",
-      "AI touched nearly every step here: scenes, cut-outs, copy, code. The rule was that it should not be the first thing you see. When the tool shows, the person disappears.",
-      "Process images (below, in order): the scrapped v6 screens → reference moodboard → the brief given to Manus and its first prototype → the iPad sketch and the intro built from it → the 3D ring, the porcelain-flower scan photos and render → moodboard ground, contact and detail-page interactions → code → the review sheet → the mind map as it stands."
+      "\"Make it pretty\" and \"make it cool\" never produced anything good. The results I wanted came every time I had planned in detail first and directed down to a single line or a font size.",
+      "So the better AI gets, the clearer the human part becomes: deciding what to make and why, judging what comes back, and directing again.",
+      "Below: the whole workflow and prompts I actually sent → how the mind map grew from a hand sketch → the making (first draft, 3D, code, review sheet)."
      ]
     }
    }
   },
-  "title": "이 포트폴리오를 만든 과정",
+  "title": "Making this Portfolio with AI",
   "desc": "이 사이트 자체를 하나의 프로젝트로 기록한다. 사람들이 AI 결과물에 느끼는 피로를 읽고, 반대로 빈티지한 공간을 만든 과정."
  },
  {

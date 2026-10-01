@@ -315,24 +315,34 @@ function renderProject(detail, project, lang) {
   }
 
   if (project.press) {
-    const press = project.press;
+    /* one quoted article (an object), or a list of articles; an entry without a quote is just a link line */
+    const items = Array.isArray(project.press) ? project.press : [project.press];
     const pressSection = document.createElement('section');
     pressSection.className = 'detail-press';
     const pressTitle = document.createElement('h3'); pressTitle.textContent = SITE.detailUi.press;
-    const quote = document.createElement('blockquote');
-    const quoteText = document.createElement('p'); quoteText.textContent = translated(press.quote, lang) || '';
-    const cite = document.createElement('cite');
-    const outlet = translated(press.outlet, lang) || '';
-    const headline = translated(press.headline, lang) || '';
-    if (press.url) {
-      const link = document.createElement('a');
-      link.href = press.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
-      link.textContent = `${outlet} · ${headline}`;
-      cite.append(link);
-    } else cite.textContent = `${outlet} · ${headline}`;
-    if (press.date) cite.append(document.createTextNode(` · ${press.date}`));
-    quote.append(quoteText, cite);
-    pressSection.append(pressTitle, quote);
+    pressSection.append(pressTitle);
+    items.forEach((press) => {
+      const outlet = translated(press.outlet, lang) || '';
+      const headline = translated(press.headline, lang) || '';
+      const cite = document.createElement('cite');
+      if (press.url) {
+        const link = document.createElement('a');
+        link.href = press.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+        link.textContent = `${outlet} · ${headline}${press.quote ? '' : ' ↗'}`;
+        cite.append(link);
+      } else cite.textContent = `${outlet} · ${headline}`;
+      if (press.date) cite.append(document.createTextNode(` · ${press.date}`));
+      if (press.quote) {
+        const quote = document.createElement('blockquote');
+        const quoteText = document.createElement('p'); quoteText.textContent = translated(press.quote, lang) || '';
+        quote.append(quoteText, cite);
+        pressSection.append(quote);
+      } else {
+        const line = document.createElement('p'); line.className = 'detail-press-link';
+        line.append(cite);
+        pressSection.append(line);
+      }
+    });
     content.append(pressSection);
   }
 
@@ -353,6 +363,8 @@ function renderProject(detail, project, lang) {
   /* the hero already shows the thumb — don't repeat it as the first gallery item */
   const gallerySources = (project.images || []).filter((source) => normalizeSource(source) !== normalizeSource(project.thumb));
   if (gallerySources.length) addGallery(gallerySources, SITE.detailUi.gallery);
+  /* extra titled sets in a fixed order, e.g. how the mind map grew from a sketch */
+  (project.galleries || []).forEach((set) => { if (set.images?.length) addGallery(set.images, translated(set.title, lang) || '', 'detail-extra', set.rowTarget || 340); });
   /* 작업과정 — the making-of pictures, gathered under the finished work with a small label */
   if (Array.isArray(project.process) && project.process.length) addGallery(project.process, translated(SITE.detailUi.process, lang) || 'PROCESS', 'detail-process', 300);
 
