@@ -162,6 +162,34 @@ function renderProject(detail, project, lang) {
     if (ground.complete && ground.naturalWidth) ground.classList.add('is-on');
   }
 
+  /* the project's song: top right of the page, as small as it goes — three tiny lines (SOUNDTRACK, why this
+     song, the full song on YouTube) to the left of the 80px Spotify bar. No autoplay; the player is toned down
+     and comes back to full colour under the pointer */
+  if (project.spotify) {
+    const track = document.createElement('aside');
+    track.className = 'detail-track';
+    const text = document.createElement('div');
+    text.className = 'detail-track-text';
+    const label = document.createElement('span'); label.className = 'detail-track-label'; label.textContent = SITE.detailUi.soundtrack;
+    text.append(label);
+    const noteText = translated(project.spotifyNote, lang);
+    if (noteText) { const note = document.createElement('span'); note.textContent = noteText; text.append(note); }
+    const youtube = project.songYoutube || (project.song ? `https://www.youtube.com/results?search_query=${encodeURIComponent(project.song)}` : null);
+    if (youtube) {
+      const listen = document.createElement('a');
+      listen.href = youtube; listen.target = '_blank'; listen.rel = 'noopener noreferrer';
+      listen.textContent = translated(SITE.detailUi.fullSong, lang) || 'Full song on YouTube ↗';
+      text.append(listen);
+    }
+    const iframe = document.createElement('iframe');
+    iframe.className = 'detail-spotify';
+    iframe.title = `${SITE.detailUi.soundtrack} · ${copy.title}`;
+    iframe.src = spotifyUrl(project.spotify);
+    iframe.allow = 'clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+    track.append(text, iframe);
+    content.append(track);
+  }
+
   const hero = createMedia(project.thumb, SITE.detailUi.heroSlot, 'detail-hero', copy.title, true);
   detachLens?.(); detachLens = attachLens(hero); /* the magnifier lives on the cover photo */
   const header = document.createElement('header');
@@ -328,38 +356,6 @@ function renderProject(detail, project, lang) {
   /* 작업과정 — the making-of pictures, gathered under the finished work with a small label */
   if (Array.isArray(project.process) && project.process.length) addGallery(project.process, translated(SITE.detailUi.process, lang) || 'PROCESS', 'detail-process', 300);
 
-  if (project.spotify) {
-    const soundtrack = document.createElement('section');
-    soundtrack.className = 'detail-soundtrack';
-    const soundtrackTitle = document.createElement('h3'); soundtrackTitle.textContent = SITE.detailUi.soundtrack;
-    /* no autoplay (연서, 2026-10-01): the song plays only when the play button is pressed, in every browser */
-    const iframe = document.createElement('iframe');
-    iframe.className = 'detail-spotify';
-    iframe.title = `${SITE.detailUi.soundtrack} · ${copy.title}`;
-    iframe.loading = 'lazy';
-    iframe.src = spotifyUrl(project.spotify);
-    iframe.allow = 'clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-    soundtrack.append(soundtrackTitle, iframe);
-    const noteText = translated(project.spotifyNote, lang);
-    if (noteText) { const note = document.createElement('p'); note.textContent = noteText; soundtrack.append(note); }
-    /* one tiny line under the player: "30s preview · full song on YouTube ↗". The Spotify embed plays a 30 s
-       preview to anyone not logged in and stops dead (its API has no volume, so no fade); saying so up front
-       makes the stop expected rather than broken */
-    const youtube = project.songYoutube || (project.song ? `https://www.youtube.com/results?search_query=${encodeURIComponent(project.song)}` : null);
-    const meta = document.createElement('p');
-    meta.className = 'detail-song-meta';
-    const preview = document.createElement('span'); preview.textContent = translated(SITE.detailUi.preview, lang) || '30s preview';
-    meta.append(preview);
-    if (youtube) {
-      const listen = document.createElement('a');
-      listen.href = youtube;
-      listen.target = '_blank'; listen.rel = 'noopener noreferrer';
-      listen.textContent = translated(SITE.detailUi.fullSong, lang) || 'Full song on YouTube ↗';
-      meta.append(document.createTextNode(' · '), listen);
-    }
-    soundtrack.append(meta);
-    content.append(soundtrack);
-  }
 }
 
 export function openDetail(slug, lang = document.documentElement.lang, options = {}) {

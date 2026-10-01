@@ -128,12 +128,22 @@ export function renderArchive(lang) {
     cards.forEach((card, index) => { card.hidden = !projectMatches(projects[index], activeFilter); });
   }
 
+  /* a Flip stopped halfway leaves the cards absolutely positioned on top of each other: always run it to the
+     end and wipe the inline styles before starting another */
+  function finishFlip() {
+    const running = flipAnimation;
+    flipAnimation = null;
+    if (running) { running.progress(1); running.kill(); }
+    if (window.gsap) gsap.set(cards, { clearProps: 'all' });
+  }
+
   function applyFilter(nextFilter, animate = true, updateUrl = false) {
     if (!SITE.archiveUi.filters.some((filter) => filter.label === nextFilter)) nextFilter = 'ALL';
     const changed = nextFilter !== activeFilter;
+    /* a link click fires both hashchange and popstate: the second call must not touch a running Flip */
+    if (!changed && flipAnimation) { updateFilterButtons(); return; }
     activeFilter = nextFilter;
-    flipAnimation?.kill?.();
-    if (window.gsap) gsap.set(cards, { clearProps: 'opacity,scale' });
+    finishFlip();
     if (changed && animate && !reducedQuery.matches && window.Flip && window.gsap) {
       const state = Flip.getState(cards);
       toggleCards();
@@ -144,7 +154,7 @@ export function renderArchive(lang) {
         stagger: .02,
         onEnter: (elements) => gsap.fromTo(elements, { opacity: 0, scale: .96 }, { opacity: 1, scale: 1, duration: .35, overwrite: true }),
         onLeave: (elements) => gsap.to(elements, { opacity: 0, scale: .96, duration: .25, overwrite: true }),
-        onComplete: () => gsap.set(cards, { clearProps: 'opacity,scale' }),
+        onComplete: () => { flipAnimation = null; gsap.set(cards, { clearProps: 'all' }); },
       });
     } else toggleCards();
     updateFilterButtons();
@@ -160,7 +170,10 @@ export function renderArchive(lang) {
 
   function syncFromLocation() {
     if (!window.location.hash.startsWith('#archive/')) return;
-    applyFilter(filterFromHash(), true, false);
+    /* coming from far away (an intro label), the grid just switches: nobody is watching it move */
+    const bounds = section.getBoundingClientRect();
+    const inView = bounds.top < window.innerHeight && bounds.bottom > 0;
+    applyFilter(filterFromHash(), inView, false);
     scrollToArchive();
   }
 
@@ -180,7 +193,7 @@ export function renderArchive(lang) {
 
   instance = {
     destroy() {
-      flipAnimation?.kill?.();
+      finishFlip();
       window.removeEventListener('hashchange', onHistory);
       window.removeEventListener('popstate', onHistory);
       if (readyHandler) window.removeEventListener('portfolio:intro-ready', readyHandler);

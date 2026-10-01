@@ -91,7 +91,7 @@ main { overflow: clip; }
 .intro-lines.is-final .intro-line[data-row="4"] { transition-delay: .42s; }
 .intro-lines.is-final .intro-line[data-row="5"] { transition-delay: .6s; }
 .intro-lines.is-final .intro-line[data-row="6"] { transition-delay: .72s; }
-.intro-line--solo { position: absolute; left: 18px; right: 18px; top: 50%; height: auto; transform: translateY(-50%); }
+.intro-line--solo { position: absolute; left: 18px; right: 18px; top: 50%; height: auto; transform: translateY(-50%); pointer-events: none; }
 .intro-lines.is-final .intro-line[data-row="3"], .intro-lines.is-final .intro-line[data-row="5"] { margin-top: 1.55em; }
 /* ---- hand-drawn notes (연서's strokes) ---- */
 .hand-layer { position: absolute; inset: 0; z-index: 7; pointer-events: none; }
@@ -122,7 +122,7 @@ main { overflow: clip; }
 /* hover: a soft white neon halo around the letters instead of an underline */
 .intro-keyword { transition: text-shadow .25s ease, text-decoration-color .4s ease; }
 /* the cue: a faint dotted underline until the reader has hovered one of the words */
-.intro-lines.is-final .intro-keyword { text-decoration: underline dotted rgba(29,29,31,.42); text-decoration-thickness: 1px; text-underline-offset: .26em; }
+.intro-lines.is-final .intro-keyword { text-decoration: underline dotted rgba(29,29,31,.45); text-decoration-thickness: 1px; text-underline-offset: .26em; }
 .intro-frame.is-discovered .intro-keyword, .intro-frame.is-hand-insight .intro-keyword[data-keyword="insight"] { text-decoration-color: transparent; }
 .intro-keyword:hover, .intro-keyword:focus-visible, .intro-keyword.is-lit { text-decoration: none; text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 16px #fff, 0 0 22px rgba(29,29,31,.55), 0 0 30px rgba(29,29,31,.35); }
 /* above the vellum block so a line reaches the word itself, not the block edge */
@@ -147,10 +147,17 @@ main { overflow: clip; }
 .intro-lang button { border: 0; padding: 4px 3px; background: transparent; color: rgba(29,29,31,.36); font: inherit; letter-spacing: inherit; cursor: pointer; transition: color .25s ease; }
 .intro-lang button:hover, .intro-lang button.is-current { color: var(--ink); }
 .intro-frame.is-started .intro-lang { opacity: 1; }
-/* "click a keyword" — half the type size, thin and faint, under the settled paragraph; gone once a word has been tried */
-.intro-hint { position: absolute; left: 0; right: 0; top: 100%; margin: 12px 0 0; text-align: center; font: 400 .5em/1 var(--font-mono); letter-spacing: .16em; color: var(--ink); opacity: 0; transition: opacity 1s ease; pointer-events: none; }
-.intro-lines.is-final + .intro-hint { opacity: .48; transition-delay: 1.2s; }
+/* the hover hint: types itself under the settled paragraph with a blinking cursor, gone once a word has been tried */
+.intro-hint { position: absolute; left: 0; right: 0; top: 100%; margin: 22px 0 0; text-align: center; font: 400 .64em/1 var(--font-mono); letter-spacing: .12em; color: var(--ink); opacity: 0; transition: opacity .4s ease; pointer-events: none; }
+.intro-hint.is-typing { opacity: .78; }
+.intro-hint-cursor { display: inline-block; margin-left: .1em; animation: cursor-blink .72s steps(1,end) infinite; }
 .intro-frame.is-discovered .intro-hint { opacity: 0; transition: opacity .5s ease; }
+/* until then, the dotted underlines darken one after another in a slow wave */
+@keyframes keyword-cue { 0%, 60%, 100% { text-decoration-color: rgba(29,29,31,.45); } 28% { text-decoration-color: rgba(29,29,31,1); } }
+.intro-lines.is-final .intro-keyword { animation: keyword-cue 3.4s ease-in-out 1.4s infinite; }
+.intro-lines.is-final .intro-keyword[data-keyword="visual"] { animation-delay: 1.85s; }
+.intro-lines.is-final .intro-keyword[data-keyword="design"] { animation-delay: 2.3s; }
+.intro-frame.is-discovered .intro-keyword { animation: none; }
 .intro-scroll-hint span { display: inline-block; margin-left: 4px; animation: cursor-blink .72s steps(1,end) infinite; }
 
 .detail-overlay { position: fixed; inset: 0; z-index: 65; overflow: auto; padding: calc(var(--nav-height) + 24px) 28px 48px; background: var(--vellum); backdrop-filter: blur(14px) saturate(.9); }
@@ -195,17 +202,6 @@ main { overflow: clip; }
   *, *::before, *::after { animation-duration: .001ms; transition-duration: .001ms; scroll-behavior: auto; }
   .intro-stage { min-height: 100vh; }
   .intro-scroll-hint { display: none; }
-/* the paragraph's own en / ko — tiny, top-right of the block, from the first typed line */
-.intro-lang { position: relative; z-index: 6; width: min(54vw, 680px); height: 0; margin: 0 auto; text-align: right; font: 10px/1 var(--font-mono); letter-spacing: .14em; opacity: 0; transition: opacity .6s ease; }
-.intro-lang > * { position: relative; top: -6px; }
-.intro-lang span { margin: 0 2px; color: rgba(29,29,31,.32); }
-.intro-lang button { border: 0; padding: 4px 3px; background: transparent; color: rgba(29,29,31,.36); font: inherit; letter-spacing: inherit; cursor: pointer; transition: color .25s ease; }
-.intro-lang button:hover, .intro-lang button.is-current { color: var(--ink); }
-.intro-frame.is-started .intro-lang { opacity: 1; }
-/* "click a keyword" — half the type size, thin and faint, under the settled paragraph; gone once a word has been tried */
-.intro-hint { position: absolute; left: 0; right: 0; top: 100%; margin: 12px 0 0; text-align: center; font: 400 .5em/1 var(--font-mono); letter-spacing: .16em; color: var(--ink); opacity: 0; transition: opacity 1s ease; pointer-events: none; }
-.intro-lines.is-final + .intro-hint { opacity: .48; transition-delay: 1.2s; }
-.intro-frame.is-discovered .intro-hint { opacity: 0; transition: opacity .5s ease; }
 }
 
 
@@ -337,7 +333,7 @@ html[lang="en"] .about-strength-claim { font-family: var(--font-serif-en); }
 .timeline-segment-marker { position: absolute; top: calc(46% - 24px); left: 0; display: flex; flex-direction: column; gap: 30px; }
 .timeline-segment-marker::before { content: ''; position: absolute; top: 24px; left: 0; height: 16px; border-left: 1px solid var(--ink-2); }
 .timeline-year { font: 12px/1 var(--font-mono); letter-spacing: .08em; }
-.timeline-grade { color: var(--ink-2); font: 11px/1.3 var(--font-mono); letter-spacing: .06em; }
+.timeline-grade { color: #5F636C; font: 11px/1.3 var(--font-mono); letter-spacing: .06em; }
 .timeline-items { position: absolute; inset: 0; }
 .timeline-item { position: absolute; top: calc(46% + 58px); width: 98px; border: 0; padding: 0; background: transparent; color: var(--ink-2); text-align: left; transform-origin: left center; transform-style: preserve-3d; cursor: pointer; }
 .timeline-item::before { content: ''; position: absolute; left: 0; bottom: calc(100% + 8px); height: 42px; border-left: 1px solid var(--hairline); }
@@ -352,7 +348,11 @@ html[lang="en"] .about-strength-claim { font-family: var(--font-serif-en); }
 .timeline-item:nth-child(6)::before { height: 152px; }
 .timeline-item:nth-child(7) { left: 89%; }
 .timeline-item-date { display: block; margin-bottom: 6px; font: 10px/1.3 var(--font-mono); letter-spacing: .04em; }
-.timeline-item-title { display: block; font: 12px/1.45 var(--font-mono); }
+.timeline-item-title { display: block; font: 12.5px/1.45 var(--font-mono); }
+/* the minor items stay smaller and in mono, but dark enough to read at a glance */
+.timeline-item:not(.is-major) { color: #383B42; }
+.timeline-item-date { color: #555861; }
+.timeline-item { text-shadow: 0 0 14px rgba(246,245,242,.55); }
 .timeline-item.is-major { color: var(--ink); }
 .timeline-item.is-major .timeline-item-title { font: 400 18px/1.25 var(--font-serif-ko); }
 html[lang="en"] .timeline-item.is-major .timeline-item-title { font-family: var(--font-serif-en); }
@@ -621,13 +621,15 @@ html[lang="en"] .detail-headline { font-family: var(--font-serif-en); }
 .detail-gallery-section, .detail-soundtrack { padding-top: 20px; }
 .detail-film-link { display: inline-block; margin: 10px 0 18px; color: var(--ink-2); font: 11px/1.4 var(--font-mono); letter-spacing: .08em; text-decoration: underline; text-underline-offset: .3em; }
 .detail-film-link:hover { color: var(--ink); }
-/* the soundtrack, as small as it goes: the 80px Spotify bar, a reason line, and one tiny meta line */
-.detail-soundtrack { margin-top: 48px !important; }
-.detail-soundtrack > h3 { margin: 20px 0 10px !important; }
-.detail-soundtrack .detail-spotify { display: block; width: min(100%, 380px); height: 80px; }
-/* the player's own colours can't be restyled (it is Spotify's page), but the whole frame can be toned down */
-.detail-soundtrack .detail-spotify { border: 0; filter: saturate(.55) contrast(.94); transition: filter .4s ease; }
-.detail-soundtrack .detail-spotify:hover { filter: saturate(.8) contrast(.97); }
+/* the project's song, top right: three tiny lines, then the 80px Spotify bar. The player's own colours can't
+   be restyled (it is Spotify's page), so the whole frame is toned down and returns to full colour on hover */
+.detail-track { display: flex; justify-content: flex-end; align-items: center; gap: 14px; margin: -40px 0 16px; }
+.detail-track-text { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; max-width: 260px; text-align: right; color: var(--ink-2); font: 9.5px/1.45 var(--font-mono); letter-spacing: .04em; }
+.detail-track-label { color: var(--ink); letter-spacing: .14em; }
+.detail-track-text a { color: inherit; opacity: .8; text-decoration: underline; text-underline-offset: .28em; }
+.detail-track-text a:hover { opacity: 1; color: var(--ink); }
+.detail-track .detail-spotify { flex: 0 0 auto; display: block; width: 250px; height: 80px; border: 0; border-radius: 12px; filter: saturate(.55) contrast(.94); transition: filter .4s ease; }
+.detail-track .detail-spotify:hover { filter: none; }
 .detail-soundtrack > p:not(.detail-song-meta) { margin-top: 8px; }
 .detail-song-meta { margin: 6px 0 0 !important; color: var(--ink-2); opacity: .7; font: 9.5px/1.4 var(--font-mono) !important; letter-spacing: .06em; }
 .detail-song-meta a { color: inherit; text-decoration: underline; text-underline-offset: .28em; }
@@ -682,6 +684,9 @@ html[lang="en"] .detail-headline { font-family: var(--font-serif-en); }
   .detail-metrics > div + div { border-left: 0; border-top: 1px solid var(--hairline); }
   .detail-role, .detail-story-block { grid-template-columns: 1fr; gap: 12px; }
   .detail-roles { grid-template-columns: 1fr; gap: 48px; }
+  .detail-track { margin: -24px 0 12px; gap: 10px; }
+  .detail-track-text { max-width: 46%; }
+  .detail-track .detail-spotify { width: min(54%, 250px); }
   .detail-roles .detail-story-block { grid-template-columns: 1fr; }
   .detail-note { padding-left: 0; }
   .detail-expand-body { grid-template-columns: 1fr; gap: 22px; }

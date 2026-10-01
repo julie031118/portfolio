@@ -124,7 +124,7 @@ window.PROJECTS = [
  },
  {
   "slug": "directing-a-year",
-  "featured": 8,
+  "featured": 9,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -421,7 +421,7 @@ window.PROJECTS = [
  },
  {
   "slug": "fashion-show-2024",
-  "featured": 7,
+  "featured": 8,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -809,7 +809,7 @@ window.PROJECTS = [
  },
  {
   "slug": "sub-motion",
-  "featured": 9,
+  "featured": 10,
   "archiveRank": null,
   "tags": [
    "CONTENT"
@@ -882,7 +882,7 @@ window.PROJECTS = [
  },
  {
   "slug": "senior-fit",
-  "featured": 10,
+  "featured": 11,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -1468,7 +1468,7 @@ window.PROJECTS = [
  },
  {
   "slug": "denim-2026",
-  "featured": 6,
+  "featured": 7,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -1724,8 +1724,8 @@ window.PROJECTS = [
  },
  {
   "slug": "promo-video-ai",
-  "featured": 11,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 15,
   "tags": [
    "CONTENT",
    "AI"
@@ -1836,8 +1836,8 @@ window.PROJECTS = [
  },
  {
   "slug": "arts-week-2026",
-  "featured": null,
-  "archiveRank": 15,
+  "featured": 6,
+  "archiveRank": null,
   "tags": [
    "FASHION"
   ],

@@ -142,7 +142,7 @@ export function renderAbout(lang) {
     section.querySelectorAll('.timeline-item').forEach((item) => {
       const rect = item.getBoundingClientRect(); const ratio = (rect.left + rect.width / 2) / window.innerWidth;
       if (ratio >= .2 && ratio <= .8) gsap.set(item, { rotationY: 0, z: 0, opacity: 1 });
-      else { const distance = ratio < .2 ? .2 - ratio : ratio - .8; const direction = ratio < .2 ? -1 : 1; gsap.set(item, { rotationY: direction * Math.min(28, distance * 80), z: -Math.min(56, distance * 130), opacity: Math.max(.38, 1 - distance * 1.7) }); }
+      else { const distance = ratio < .2 ? .2 - ratio : ratio - .8; const direction = ratio < .2 ? -1 : 1; gsap.set(item, { rotationY: direction * Math.min(28, distance * 80), z: -Math.min(56, distance * 130), opacity: Math.max(.5, 1 - distance * 1.4) }); }
     });
   }
 

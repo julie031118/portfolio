@@ -63,7 +63,7 @@ export function renderIntro(siteLang) {
         <div class="intro-copy">
           <div class="intro-lang" role="group" aria-label="${SITE.intro.ui.langAria}"><button type="button" data-lang="en">en</button><span aria-hidden="true">/</span><button type="button" data-lang="ko">ko</button></div>
           <div class="intro-lines" aria-live="polite"></div>
-          <p class="intro-hint" aria-hidden="true">${SITE.intro.ui.hint}</p>
+          <p class="intro-hint" aria-hidden="true"><span class="intro-hint-text"></span><span class="intro-hint-cursor">_</span></p>
         </div>
         <p class="intro-scroll-hint">${SITE.intro.ui.scroll}<span aria-hidden="true">_</span></p>
       </div>
@@ -72,6 +72,8 @@ export function renderIntro(siteLang) {
   const stage = section.querySelector('.intro-stage');
   const frame = section.querySelector('.intro-frame');
   const linesRoot = section.querySelector('.intro-lines');
+  const hintEl = section.querySelector('.intro-hint');
+  const hintText = section.querySelector('.intro-hint-text');
   const hand = createHandNotes({ frame, linesRoot, isCompact: () => compactQuery.matches });
   const rows = Array.from({ length: 6 }, (_, index) => {
     const row = document.createElement('div');
@@ -92,6 +94,29 @@ export function renderIntro(siteLang) {
   let activeStep = -1;
   let mode = '';
   let resizeTimer = 0;
+  let hintTimer = 0;
+
+  /* the hint follows the paragraph's own language and types itself in once the paragraph has settled */
+  function resetHint() {
+    clearTimeout(hintTimer);
+    hintText.textContent = '';
+    hintEl.classList.remove('is-typing');
+  }
+  function typeHint() {
+    resetHint();
+    if (compactQuery.matches || frame.classList.contains('is-discovered')) return;
+    const source = SITE.intro.ui.hint;
+    const copy = typeof source === 'string' ? source : (source[currentLang] || source.en);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { hintText.textContent = copy; hintEl.classList.add('is-typing'); return; }
+    let count = 0;
+    const step = () => {
+      if (mode !== 'final') return;
+      count += 1;
+      hintText.textContent = copy.slice(0, count);
+      if (count < copy.length) hintTimer = window.setTimeout(step, 42);
+    };
+    hintTimer = window.setTimeout(() => { hintEl.classList.add('is-typing'); hintTimer = window.setTimeout(step, 700); }, 900);
+  }
 
   function bindKeyword(word, keyword) { hand.bind(word, keyword); }
 
@@ -111,10 +136,11 @@ export function renderIntro(siteLang) {
     previousCount = lines.reduce((sum, line) => sum + line.length, 0);
     requestAnimationFrame(() => hand.layout());
     document.fonts?.ready.then(() => hand.layout());
+    typeHint();
   }
 
-  /* the words keep a faint dotted underline, and the small "click a keyword" line stays under the
-     paragraph, until the reader has tried one */
+  /* the words keep a faint dotted underline, and the small hover hint stays under the paragraph,
+     until the reader has tried one */
   const discover = (event) => {
     if (!event.target.closest?.('.intro-keyword, .hand-hot')) return;
     frame.classList.add('is-discovered');
@@ -126,6 +152,7 @@ export function renderIntro(siteLang) {
     if (mode === 'final') {
       rows.forEach((row) => { row.innerHTML = ''; });
       hand.reset();
+      resetHint();
     }
     if (activeStep !== step) { activeStep = step; previousCount = 0; }
     mode = `step-${step}`;
@@ -159,6 +186,7 @@ export function renderIntro(siteLang) {
     rows.forEach((row) => { row.innerHTML = ''; row.classList.remove('is-visible', 'is-active'); });
     solo.textContent = ''; solo.classList.remove('is-visible', 'is-active');
     hand.reset();
+    resetHint();
     update(trigger ? trigger.progress : 0);
   }
 
