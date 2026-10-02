@@ -738,6 +738,19 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
 .detail-gallery.is-justified .detail-gallery-item.has-image img { position: static; display: block; width: 100%; height: 100%; object-fit: cover; }
 .detail-gallery.is-justified .detail-gallery-item:not(.has-image) { display: none; }
 .detail-gallery-item.has-image img { vertical-align: top; }
+/* sections (2026-10-02): a title, an optional one-line note, short captions under the making-of pictures */
+.detail-section + .detail-section, .detail-section + .detail-stack-section, .detail-stack-section + .detail-section { padding-top: 56px; }
+.detail-section-note { margin: -12px 0 20px; color: var(--ink-2); font: 12px/1.55 var(--font-mono); }
+.detail-gallery-item.has-image { background: transparent; }
+.detail-gallery-item .detail-caption { margin: 0; padding: 7px 14px 16px 0; color: var(--ink-2); font: 11px/1.45 var(--font-mono); }
+/* the mind map as a pile of small overlapping cards, in order; the one under the pointer comes forward */
+.detail-stack { display: flex; flex-direction: column; gap: 22px; padding: 12px 0 34px; }
+.detail-stack-row { display: flex; flex-wrap: nowrap; align-items: flex-start; }
+.detail-stack-item { position: relative; flex: 0 0 auto; margin: 0; background: #fff; box-shadow: 0 4px 16px rgba(20, 20, 30, .16); transform: rotate(var(--tilt, 0deg)); transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s; outline: none; }
+.detail-stack-item img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.detail-stack-item .detail-media-slot { display: none; }
+.detail-stack-item:hover, .detail-stack-item:focus { z-index: 60 !important; transform: rotate(0deg) translateY(-10px) scale(1.6); box-shadow: 0 16px 40px rgba(20, 20, 30, .28); }
+.detail-stack-num { position: absolute; left: 6px; top: 5px; padding: 1px 4px; background: rgba(255, 255, 255, .86); color: var(--ink-2); font: 10px/1.2 var(--font-mono); }
 .detail-film { margin: 0; }
 .detail-film + .detail-film { margin-top: 0; }
 .detail-review-tag { position: absolute; left: 0; top: 0; z-index: 2; padding: 3px 6px; background: rgba(29,29,31,.72); color: #fff; font: 10px/1.2 var(--font-mono); letter-spacing: .06em; pointer-events: none; }
@@ -797,7 +810,8 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
    project pages read (Special Elite only has Latin, and its full stops and commas sat heavy next to Hangul) */
 html[lang="ko"] :is(.about-strength-claim, .about-strength-evidence, .now-label, .now-claim, .now-evidence, .now-next, .now-lead, .now-media figcaption,
   .timeline-item-title, .timeline-grade, .timeline-item-desc, .timeline-panel-title, .timeline-panel-desc, .timeline-panel-grade,
-  .work-index-title, .archive-card-details span, .detail-meta, .detail-metrics span, .detail-note, .detail-film-label, .about-strength-hint, .desktop-note span),
+  .work-index-title, .archive-card-details span, .detail-meta, .detail-metrics span, .detail-note, .detail-film-label, .about-strength-hint, .desktop-note span,
+  .detail-caption, .detail-section-note, .detail-section > h3, .detail-stack-section > h3),
 html[lang="ko"] .timeline-item.is-major .timeline-item-title {
   font-family: "Nanum Gothic Coding", "Special Elite", monospace;
 }

@@ -37,6 +37,118 @@ window.PROJECTS = [
    "/images/projects/miraen/09.jpg",
    "/images/projects/miraen/10.jpg"
   ],
+  "sections": [
+   {
+    "title": {
+     "ko": "0에서 연 채널",
+     "en": "CHANNELS FROM ZERO"
+    },
+    "images": [
+     {
+      "src": "/images/projects/miraen/a01.jpg",
+      "cap": {
+       "ko": "인스타그램 계정",
+       "en": "Instagram account"
+      }
+     },
+     {
+      "src": "/images/projects/miraen/a02.jpg",
+      "cap": {
+       "ko": "네이버 블로그",
+       "en": "Naver Blog"
+      }
+     },
+     {
+      "src": "/images/projects/miraen/a03.jpg",
+      "cap": {
+       "ko": "유튜브 채널",
+       "en": "YouTube channel"
+      }
+     },
+     {
+      "src": "/images/projects/miraen/a04.jpg",
+      "cap": {
+       "ko": "네이버 지도 스마트플레이스",
+       "en": "SmartPlace on Naver Map"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "홍보물 디자인",
+     "en": "PROMO DESIGNS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/miraen/a05.jpg",
+      "cap": {
+       "ko": "지사 홍보 포스터",
+       "en": "Branch promo poster"
+      }
+     },
+     {
+      "src": "/images/projects/miraen/08.jpg",
+      "cap": {
+       "ko": "브랜드 소개 시리즈 숏폼",
+       "en": "Short video for the brand series"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "AI로 3D화한 '미래'",
+     "en": "MIRAE IN 3D WITH AI"
+    },
+    "images": [
+     {
+      "src": "/images/projects/miraen/06.jpg",
+      "cap": {
+       "ko": "3D로 옮긴 캐릭터 '미래'",
+       "en": "Mirae, rebuilt in 3D"
+      }
+     },
+     {
+      "src": "/images/projects/miraen/07.jpg",
+      "cap": {
+       "ko": "3D 미래를 쓴 홍보물",
+       "en": "Promo featuring 3D Mirae"
+      }
+     }
+    ],
+    "note": {
+     "ko": "2D 캐릭터를 AI로 3D화해 릴스에 투입",
+     "en": "2D character turned 3D with AI for Reels"
+    }
+   },
+   {
+    "title": {
+     "ko": "나영지사장이 떴다 시리즈",
+     "en": "THE STREET PROMO SERIES"
+    },
+    "images": [
+     {
+      "src": "/images/projects/miraen/09.jpg",
+      "cap": {
+       "ko": "시리즈 3탄 신현초 편",
+       "en": "Series part 3, Sinhyeon Elementary"
+      }
+     },
+     {
+      "src": "/images/projects/miraen/10.jpg",
+      "cap": {
+       "ko": "'미래' 앞에 모인 아이들",
+       "en": "Kids gathering around Mirae"
+      }
+     }
+    ],
+    "note": {
+     "ko": "학교 앞 홍보를 찍어 포맷을 고정한 릴스",
+     "en": "School gate promos filmed in one fixed format"
+    }
+   }
+  ],
   "nar": {
    "ko": {
     "title": "미래엔수학 디자이너 & 마케터",
@@ -151,6 +263,83 @@ window.PROJECTS = [
   "spotify": null,
   "spotifyNote": null,
   "video": "https://www.youtube.com/embed/GhNy8TXhi-0",
+  "sections": [
+   {
+    "title": {
+     "ko": "10분 본편",
+     "en": "THE 10 MINUTE FILM"
+    },
+    "images": [
+     {
+      "src": "/images/projects/directing-a-year/01.jpg"
+     },
+     {
+      "src": "/images/projects/directing-a-year/a02.jpg",
+      "cap": {
+       "ko": "윌슨 텍스타일 대학",
+       "en": "Wilson College of Textiles"
+      }
+     },
+     {
+      "src": "/images/projects/directing-a-year/02.jpg",
+      "cap": {
+       "ko": "여행지 장면 모음",
+       "en": "Moments from trips"
+      }
+     },
+     {
+      "src": "/images/projects/directing-a-year/04.jpg",
+      "cap": {
+       "ko": "포스터 발표 행사 현장",
+       "en": "At a poster presentation event"
+      }
+     },
+     {
+      "src": "/images/projects/directing-a-year/05.jpg",
+      "cap": {
+       "ko": "뉴올리언스",
+       "en": "New Orleans"
+      }
+     },
+     {
+      "src": "/images/projects/directing-a-year/a06.jpg",
+      "cap": {
+       "ko": "알래스카",
+       "en": "Alaska"
+      }
+     },
+     {
+      "src": "/images/projects/directing-a-year/a07.jpg",
+      "cap": {
+       "ko": "섬유 작업과 일상",
+       "en": "Textile work and everyday life"
+      }
+     }
+    ],
+    "note": {
+     "ko": "유튜브에 올린 10분 내러티브 영상",
+     "en": "Stills from the 10 minute YouTube film"
+    }
+   },
+   {
+    "title": {
+     "ko": "30초 세로형 티저",
+     "en": "THE 30 SECOND TEASER"
+    },
+    "images": [
+     {
+      "src": "/images/projects/directing-a-year/a05.jpg"
+     },
+     {
+      "src": "/images/projects/directing-a-year/a08.jpg"
+     }
+    ],
+    "note": {
+     "ko": "본편을 자르지 않고 따로 만든 숏폼",
+     "en": "Cut on its own, not trimmed from the film"
+    }
+   }
+  ],
   "nar": {
    "ko": {
     "title": "교환학생 후기 영상: 1년을 10분과 30초로",
@@ -250,6 +439,144 @@ window.PROJECTS = [
   "spotify": null,
   "spotifyNote": null,
   "video": "https://www.youtube.com/embed/utCOOrnRLZk",
+  "sections": [
+   {
+    "title": {
+     "ko": "행복을 숫자로 재는 세계",
+     "en": "A WORLD THAT SCORES HAPPINESS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/ai-short-film/01.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/02.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/03.jpg",
+      "cap": {
+       "ko": "행복 지수 97%",
+       "en": "Happiness score at 97%"
+      }
+     },
+     {
+      "src": "/images/projects/ai-short-film/04.jpg",
+      "cap": {
+       "ko": "'행복은 지능' 광고판",
+       "en": "“Happiness is intelligence” billboard"
+      }
+     },
+     {
+      "src": "/images/projects/ai-short-film/05.jpg",
+      "cap": {
+       "ko": "100% 행복 보장 약 광고",
+       "en": "Pill ad promising 100% happiness"
+      }
+     }
+    ],
+    "note": {
+     "ko": "기분 조절 약으로 늘 행복을 유지하는 사회",
+     "en": "Mood pills keep everyone constantly happy"
+    }
+   },
+   {
+    "title": {
+     "ko": "약이 떨어진 뒤",
+     "en": "WHEN THE PILLS RUN OUT"
+    },
+    "images": [
+     {
+      "src": "/images/projects/ai-short-film/06.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/07.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/08.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/09.jpg",
+      "cap": {
+       "ko": "캠코더 화면처럼 연출한 새벽",
+       "en": "Small hours, shot like camcorder footage"
+      }
+     },
+     {
+      "src": "/images/projects/ai-short-film/10.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/11.jpg",
+      "cap": {
+       "ko": "빈 약병, 행복 지수 52%",
+       "en": "Empty pill jar, score at 52%"
+      }
+     },
+     {
+      "src": "/images/projects/ai-short-film/12.jpg",
+      "cap": {
+       "ko": "Error가 뜬 기기",
+       "en": "A device reading Error"
+      }
+     },
+     {
+      "src": "/images/projects/ai-short-film/13.jpg"
+     }
+    ],
+    "note": {
+     "ko": "감정이 무너지기 시작하는 순간들",
+     "en": "The moments her feelings start to break"
+    }
+   },
+   {
+    "title": {
+     "ko": "지워 둔 감정과 마주하다",
+     "en": "FACING ERASED FEELINGS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/ai-short-film/14.jpg",
+      "cap": {
+       "ko": "바닥에 흩어진 사진들",
+       "en": "Photos scattered on the floor"
+      }
+     },
+     {
+      "src": "/images/projects/ai-short-film/15.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/16.jpg",
+      "cap": {
+       "ko": "약병과 ERROR 표시",
+       "en": "Pill jar and ERROR display"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "제목이 등장하는 장면",
+     "en": "WHERE THE TITLE APPEARS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/ai-short-film/17.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/18.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/19.jpg"
+     },
+     {
+      "src": "/images/projects/ai-short-film/20.jpg"
+     }
+    ],
+    "note": {
+     "ko": "광고 문구 뒤에 붙은 물음표",
+     "en": "The ad slogan, with a question mark"
+    }
+   }
+  ],
   "nar": {
    "ko": {
     "title": "AI 단편영화 〈Happiness is Intelligence?〉",
@@ -358,6 +685,170 @@ window.PROJECTS = [
    "/images/projects/kaftan/10.jpg",
    "/images/projects/kaftan/12.jpg"
   ],
+  "sections": [
+   {
+    "title": {
+     "ko": "완성된 카프탄",
+     "en": "THE FINISHED KAFTAN"
+    },
+    "images": [
+     {
+      "src": "/images/projects/kaftan/a05.jpg",
+      "cap": {
+       "ko": "솔기에 맞춰 짠 프린트 배치",
+       "en": "Print layout engineered to the seams"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/ai01.jpg",
+      "cap": {
+       "ko": "자르기 전 AI로 입혀 본 모습",
+       "en": "Tried on with AI before cutting"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/21.jpg"
+     },
+     {
+      "src": "/images/projects/kaftan/22.jpg"
+     },
+     {
+      "src": "/images/projects/kaftan/23.jpg"
+     },
+     {
+      "src": "/images/projects/kaftan/24.jpg"
+     },
+     {
+      "src": "/images/projects/kaftan/08.jpg",
+      "cap": {
+       "ko": "착용 컷과 프린트 모음",
+       "en": "Worn looks with the prints"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/15.jpg"
+     },
+     {
+      "src": "/images/projects/kaftan/16.jpg"
+     },
+     {
+      "src": "/images/projects/kaftan/17.jpg"
+     }
+    ],
+    "note": {
+     "ko": "윌슨 컬리지 컬렉션 소장작 · 착용 컷",
+     "en": "Wilson College Collection piece · worn outdoors"
+    }
+   },
+   {
+    "title": {
+     "ko": "리서치와 아이디어",
+     "en": "RESEARCH AND IDEAS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/kaftan/01.jpg",
+      "cap": {
+       "ko": "접은 첫 안 · 한국 전통 미감",
+       "en": "Dropped first idea · Korean tradition"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/02.jpg",
+      "cap": {
+       "ko": "녹턴에서 출발한 테마 리서치",
+       "en": "Theme research from the Nocturne"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/06.jpg",
+      "cap": {
+       "ko": "런웨이 레퍼런스 분석",
+       "en": "Runway references, annotated"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/18.jpg",
+      "cap": {
+       "ko": "꽃과 악보 무드 콜라주",
+       "en": "Flower and sheet music collage"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "프린트 개발",
+     "en": "PRINT DEVELOPMENT"
+    },
+    "images": [
+     {
+      "src": "/images/projects/kaftan/10.jpg",
+      "cap": {
+       "ko": "꽃 모티프 반복 패턴 실험",
+       "en": "Floral motif repeat tests"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/13.jpg",
+      "cap": {
+       "ko": "악보·밝은 꽃·어두운 꽃 패턴",
+       "en": "Music, light and dark floral repeats"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/12.jpg",
+      "cap": {
+       "ko": "세 프린트 나란히 비교",
+       "en": "The three prints side by side"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "패턴에서 봉제까지",
+     "en": "PATTERN TO SEWING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/kaftan/07.jpg",
+      "cap": {
+       "ko": "첫 프로토타입 피팅",
+       "en": "First prototype fitting"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/a16.jpg",
+      "cap": {
+       "ko": "네크라인과 트임 패턴 스케치",
+       "en": "Pattern sketch, neckline and slit"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/a18.jpg",
+      "cap": {
+       "ko": "패턴 위에 얹어 본 프린트",
+       "en": "Print laid over the pattern"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/a06.jpg",
+      "cap": {
+       "ko": "화면에서 프린트 배치 작업",
+       "en": "Placing the print on screen"
+      }
+     },
+     {
+      "src": "/images/projects/kaftan/09.jpg",
+      "cap": {
+       "ko": "프린트 원단 끈 봉제",
+       "en": "Sewing the printed fabric strips"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
     "title": "Engineered Kaftan",
@@ -459,6 +950,123 @@ window.PROJECTS = [
    "/images/projects/fashion-show-2024/a12.jpg",
    "/images/projects/fashion-show-2024/04.jpg",
    "/images/projects/fashion-show-2024/14.jpg"
+  ],
+  "sections": [
+   {
+    "title": {
+     "ko": "런웨이 룩",
+     "en": "RUNWAY LOOKS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/fashion-show-2024/a01.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/a02.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/a03.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/a04.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/a06.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/a08.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/a09.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/a10.jpg"
+     }
+    ],
+    "note": {
+     "ko": "한정된 색, 실루엣 대비와 레이어링",
+     "en": "Limited palette, silhouette contrast, layering"
+    }
+   },
+   {
+    "title": {
+     "ko": "쇼 현장",
+     "en": "AT THE SHOW"
+    },
+    "images": [
+     {
+      "src": "/images/projects/fashion-show-2024/a05.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/a07.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/a11.jpg"
+     }
+    ],
+    "note": {
+     "ko": "2024 SNU 패션쇼 〈형(形)〉 런웨이",
+     "en": "Runway of the 2024 SNU Fashion Show 'Form'"
+    }
+   },
+   {
+    "title": {
+     "ko": "디자인 개발",
+     "en": "DESIGN DEVELOPMENT"
+    },
+    "images": [
+     {
+      "src": "/images/projects/fashion-show-2024/a12.jpg",
+      "cap": {
+       "ko": "무드보드와 디자인 스케치",
+       "en": "Mood board and design sketches"
+      }
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/02.jpg",
+      "cap": {
+       "ko": "물방울 재킷 룩 디자인 시트",
+       "en": "Polka dot jacket design sheet"
+      }
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/03.jpg",
+      "cap": {
+       "ko": "원단 스와치를 붙인 디자인 시트",
+       "en": "Design sheet with fabric swatches"
+      }
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/01.jpg",
+      "cap": {
+       "ko": "메모를 더한 러플 원피스 시트",
+       "en": "Ruffle dress sheet with handwritten notes"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "가봉에서 완성까지",
+     "en": "FROM MUSLIN TO FINISH"
+    },
+    "images": [
+     {
+      "src": "/images/projects/fashion-show-2024/14.jpg",
+      "cap": {
+       "ko": "가봉 원단에 잡은 러플",
+       "en": "Ruffles gathered on muslin"
+      }
+     },
+     {
+      "src": "/images/projects/fashion-show-2024/04.jpg",
+      "cap": {
+       "ko": "물방울 퍼프 소매 디테일",
+       "en": "Polka dot puff sleeve detail"
+      }
+     }
+    ]
+   }
   ],
   "nar": {
    "ko": {
@@ -579,6 +1187,107 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "sections": [
+   {
+    "title": {
+     "ko": "포토부스 프레임",
+     "en": "PHOTO BOOTH FRAME"
+    },
+    "images": [
+     {
+      "src": "/images/projects/campus-festival/01.jpg"
+     }
+    ],
+    "note": {
+     "ko": "행사 내내 대기줄이 이어진 포토부스",
+     "en": "Queues ran all festival long"
+    }
+   },
+   {
+    "title": {
+     "ko": "에어팟·버즈 케이스",
+     "en": "AIRPODS AND BUDS CASES"
+    },
+    "images": [
+     {
+      "src": "/images/projects/campus-festival/02.jpg",
+      "cap": {
+       "ko": "가격이 적힌 판매 이미지",
+       "en": "Sales image with price"
+      }
+     },
+     {
+      "src": "/images/projects/campus-festival/04.jpg",
+      "cap": {
+       "ko": "케이스 앞·뒤 도안",
+       "en": "Case art, front and back"
+      }
+     },
+     {
+      "src": "/images/projects/campus-festival/05.jpg",
+      "cap": {
+       "ko": "패턴 버전 앞·뒤 도안",
+       "en": "Patterned version, front and back"
+      }
+     }
+    ],
+    "note": {
+     "ko": "직접 디자인해 매진된 굿즈",
+     "en": "Designed by me, sold out"
+    }
+   },
+   {
+    "title": {
+     "ko": "이벤트 스탬프",
+     "en": "EVENT STAMPS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/campus-festival/03.jpg",
+      "cap": {
+       "ko": "스탬프를 모으는 여권 이벤트",
+       "en": "Passport event for collecting stamps"
+      }
+     },
+     {
+      "src": "/images/projects/campus-festival/06.jpg",
+      "cap": {
+       "ko": "부스별 스탬프 디자인",
+       "en": "Stamp designs for each booth"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "인스타그램 카드뉴스",
+     "en": "INSTAGRAM CAROUSELS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/campus-festival/08.jpg",
+      "cap": {
+       "ko": "참가자·공연진 모집 게시물",
+       "en": "Calls for participants and performers"
+      }
+     },
+     {
+      "src": "/images/projects/campus-festival/09.jpg",
+      "cap": {
+       "ko": "축제 안내 카드 레이아웃",
+       "en": "Festival notice card layouts"
+      }
+     },
+     {
+      "src": "/images/projects/campus-festival/07.jpg",
+      "cap": {
+       "ko": "패션쇼 2024 인스타그램 계정",
+       "en": "Fashion Show 2024 Instagram account"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
     "title": "SNUFESTIVAL 브랜딩: RIO",
@@ -669,6 +1378,182 @@ window.PROJECTS = [
    "/images/projects/art2wear/25.jpg",
    "/images/projects/art2wear/30.jpg",
    "/images/projects/art2wear/32.jpg"
+  ],
+  "sections": [
+   {
+    "title": {
+     "ko": "완성 작품",
+     "en": "FINAL PIECE"
+    },
+    "images": [
+     {
+      "src": "/images/projects/art2wear/a02.jpg"
+     },
+     {
+      "src": "/images/projects/art2wear/s01.jpg"
+     },
+     {
+      "src": "/images/projects/art2wear/a01.jpg"
+     },
+     {
+      "src": "/images/projects/art2wear/a03.jpg",
+      "cap": {
+       "ko": "청키한 실과 마른 가지",
+       "en": "Chunky yarn and dried branches"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/a04.jpg",
+      "cap": {
+       "ko": "작은 흰 꽃을 단 구두",
+       "en": "Heels dotted with small white flowers"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/a05.jpg"
+     },
+     {
+      "src": "/images/projects/art2wear/a06.jpg"
+     },
+     {
+      "src": "/images/projects/art2wear/a09.jpg"
+     },
+     {
+      "src": "/images/projects/art2wear/a14.jpg"
+     }
+    ],
+    "note": {
+     "ko": "깨진 도자기 꽃, 마른 가지, 청키한 실, 인조진주",
+     "en": "Ceramic shard flowers, dried branches, chunky yarn, faux pearls"
+    }
+   },
+   {
+    "title": {
+     "ko": "Art2Wear 쇼 현장",
+     "en": "AT THE ART2WEAR SHOW"
+    },
+    "images": [
+     {
+      "src": "/images/projects/art2wear/43.jpg",
+      "cap": {
+       "ko": "야외 정원의 행사 현장",
+       "en": "The event in the garden"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/s02.jpg",
+      "cap": {
+       "ko": "갤러리 안, 다른 참가작들과",
+       "en": "Inside the gallery with other pieces"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/s03.jpg",
+      "cap": {
+       "ko": "디자이너이자 착용자로",
+       "en": "As both designer and wearer"
+      }
+     }
+    ],
+    "note": {
+     "ko": "Gregg Museum of Art & Design, 2026년 4월",
+     "en": "Gregg Museum of Art & Design, April 2026"
+    }
+   },
+   {
+    "title": {
+     "ko": "콘셉트와 디자인",
+     "en": "CONCEPT AND DESIGN"
+    },
+    "images": [
+     {
+      "src": "/images/projects/art2wear/41.jpg",
+      "cap": {
+       "ko": "불안과 집중의 무드보드",
+       "en": "Mood board: anxiety and focus"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/40.jpg",
+      "cap": {
+       "ko": "디자인 일러스트",
+       "en": "Design illustration"
+      }
+     }
+    ],
+    "note": {
+     "ko": "처음엔 철가루와 자석으로 구상",
+     "en": "First planned with iron filings and magnets"
+    }
+   },
+   {
+    "title": {
+     "ko": "핸드 스티치 제작",
+     "en": "BUILT BY HAND"
+    },
+    "images": [
+     {
+      "src": "/images/projects/art2wear/19.jpg",
+      "cap": {
+       "ko": "작업 중인 전체 모습",
+       "en": "The full piece in progress"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/20.jpg",
+      "cap": {
+       "ko": "스커트 위 꽃과 철사",
+       "en": "Flowers and wire on the skirt"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/22.jpg",
+      "cap": {
+       "ko": "지퍼와 철사 스티치",
+       "en": "Zipper and wire stitches"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/23.jpg",
+      "cap": {
+       "ko": "찢긴 구멍을 철사로 엮기",
+       "en": "Torn holes laced with wire"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/24.jpg",
+      "cap": {
+       "ko": "허리에 덧댄 데님 조각",
+       "en": "Denim scraps at the waist"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/25.jpg",
+      "cap": {
+       "ko": "철사로 감은 접시 조각",
+       "en": "Plate shard wrapped in wire"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/30.jpg",
+      "cap": {
+       "ko": "드레스폼 위에서 작업 중",
+       "en": "Working on the dress form"
+      }
+     },
+     {
+      "src": "/images/projects/art2wear/32.jpg",
+      "cap": {
+       "ko": "시스루 트레인을 단 뒷모습",
+       "en": "Back view with a sheer train"
+      }
+     }
+    ],
+    "note": {
+     "ko": "이질적인 소재를 손바느질로 결합",
+     "en": "Contrasting materials joined by hand stitching"
+    }
+   }
   ],
   "nar": {
    "ko": {
@@ -764,6 +1649,60 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "sections": [
+   {
+    "title": {
+     "ko": "완성 렌더링",
+     "en": "FINAL RENDERS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/clo3d/01.jpg"
+     },
+     {
+      "src": "/images/projects/clo3d/02.jpg"
+     },
+     {
+      "src": "/images/projects/clo3d/03.jpg"
+     },
+     {
+      "src": "/images/projects/clo3d/04.jpg"
+     },
+     {
+      "src": "/images/projects/clo3d/05.jpg"
+     },
+     {
+      "src": "/images/projects/clo3d/06.jpg"
+     }
+    ],
+    "note": {
+     "ko": "CLO 3D로 렌더링한 액티브웨어 룩",
+     "en": "Activewear looks rendered in CLO 3D"
+    }
+   },
+   {
+    "title": {
+     "ko": "CLO 3D 작업과 발표 자료",
+     "en": "CLO 3D BUILD AND DECK"
+    },
+    "images": [
+     {
+      "src": "/images/projects/clo3d/a01.jpg",
+      "cap": {
+       "ko": "CLO 3D 속 메시 재킷 디테일",
+       "en": "Mesh jacket detail in CLO 3D"
+      }
+     },
+     {
+      "src": "/images/projects/clo3d/07.jpg",
+      "cap": {
+       "ko": "렌더 컷을 정리한 발표 자료",
+       "en": "Renders laid out in the deck"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
     "title": "CLO 3D 디지털 패션 〈Dopamine Dressing〉",
@@ -850,6 +1789,62 @@ window.PROJECTS = [
     "'Fry's Dream' character animation (team of 4, team lead)"
    ]
   },
+  "sections": [
+   {
+    "title": {
+     "ko": "'Toxic Till the End' 티저",
+     "en": "'TOXIC TILL THE END' TEASER"
+    },
+    "images": [
+     {
+      "src": "/images/projects/sub-motion/mv01.jpg"
+     },
+     {
+      "src": "/images/projects/sub-motion/mv02.jpg"
+     }
+    ],
+    "note": {
+     "ko": "필름 릴 속 장면이 살아나는 구성 · 4인 팀",
+     "en": "Scenes coming alive in a film roll · team of 4"
+    }
+   },
+   {
+    "title": {
+     "ko": "'후라이의 꿈' 손그림 애니메이션",
+     "en": "FRY'S DREAM ANIMATION"
+    },
+    "images": [
+     {
+      "src": "/images/projects/sub-motion/ty01.jpg"
+     },
+     {
+      "src": "/images/projects/sub-motion/ty02.jpg"
+     }
+    ],
+    "note": {
+     "ko": "손으로 그린 캐릭터 · 4인 팀 조장",
+     "en": "Hand drawn characters · team of 4, as lead"
+    }
+   },
+   {
+    "title": {
+     "ko": "'APT' 타이포그래피 모션",
+     "en": "'APT' TYPE IN MOTION"
+    },
+    "images": [
+     {
+      "src": "/images/projects/sub-motion/ty03.jpg"
+     },
+     {
+      "src": "/images/projects/sub-motion/ty04.jpg"
+     }
+    ],
+    "note": {
+     "ko": "지퍼 형태 글자와 하트 · 2인 팀",
+     "en": "Zipper shaped letters and hearts · team of 2"
+    }
+   }
+  ],
   "nar": {
    "ko": {
     "title": "모션그래픽",
@@ -945,6 +1940,105 @@ window.PROJECTS = [
     "en": "Yeonseo Lee, quoted in The SNU Newspaper, 1 Dec 2024"
    }
   },
+  "sections": [
+   {
+    "title": {
+     "ko": "시니어 런웨이",
+     "en": "ON THE SENIOR RUNWAY"
+    },
+    "images": [
+     {
+      "src": "/images/projects/senior-fit/a01.jpg",
+      "cap": {
+       "ko": "무대 위 전체 인사",
+       "en": "Curtain call on stage"
+      }
+     },
+     {
+      "src": "/images/projects/senior-fit/a02.jpg"
+     },
+     {
+      "src": "/images/projects/senior-fit/a03.jpg"
+     },
+     {
+      "src": "/images/projects/senior-fit/a04.jpg"
+     }
+    ],
+    "note": {
+     "ko": "완성한 코트를 어르신이 직접 입고 오른 무대",
+     "en": "He wore the finished coat on stage"
+    }
+   },
+   {
+    "title": {
+     "ko": "디자인과 바디폼 제작",
+     "en": "DESIGN AND BODY FORM"
+    },
+    "images": [
+     {
+      "src": "/images/projects/senior-fit/a05.jpg",
+      "cap": {
+       "ko": "코트 디자인 일러스트",
+       "en": "Coat design illustration"
+      }
+     },
+     {
+      "src": "/images/projects/senior-fit/a07.jpg",
+      "cap": {
+       "ko": "번호를 매긴 단면 도안",
+       "en": "Numbered cross section templates"
+      }
+     },
+     {
+      "src": "/images/projects/senior-fit/a11.jpg",
+      "cap": {
+       "ko": "폼을 층층이 쌓은 몸통",
+       "en": "Torso built from stacked foam"
+      }
+     },
+     {
+      "src": "/images/projects/senior-fit/a12.jpg",
+      "cap": {
+       "ko": "여러 각도에서 본 바디폼",
+       "en": "Body form from several angles"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "광목 가봉",
+     "en": "MUSLIN FITTING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/senior-fit/a08.jpg",
+      "cap": {
+       "ko": "광목 가봉, 정면",
+       "en": "Muslin fitting, front"
+      }
+     },
+     {
+      "src": "/images/projects/senior-fit/a09.jpg",
+      "cap": {
+       "ko": "광목 가봉, 뒷면",
+       "en": "Muslin fitting, back"
+      }
+     },
+     {
+      "src": "/images/projects/senior-fit/a10.jpg",
+      "cap": {
+       "ko": "광목 가봉, 옆면",
+       "en": "Muslin fitting, side"
+      }
+     }
+    ],
+    "note": {
+     "ko": "굽은 등과 뒤로 향하는 팔을 패턴에 반영",
+     "en": "Curved back and backward arm swing built into the pattern"
+    }
+   }
+  ],
   "nar": {
    "ko": {
     "title": "인체공학적 의복디자인",
@@ -1082,6 +2176,199 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "sections": [
+   {
+    "title": {
+     "ko": "완성 작품",
+     "en": "FINISHED PIECES"
+    },
+    "images": [
+     {
+      "src": "/images/projects/engineered-surfaces/44.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/04.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/05.jpg"
+     }
+    ],
+    "note": {
+     "ko": "펀치 니들과 직조로 완성한 표면",
+     "en": "Surfaces finished in punch needle and weaving"
+    }
+   },
+   {
+    "title": {
+     "ko": "실 만들기",
+     "en": "MAKING THE YARN"
+    },
+    "images": [
+     {
+      "src": "/images/projects/engineered-surfaces/07.jpg",
+      "cap": {
+       "ko": "직접 방적한 노벨티 얀",
+       "en": "Novelty yarns I spun"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/19.jpg",
+      "cap": {
+       "ko": "실 염색 과정",
+       "en": "Dyeing the yarn"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/20.jpg",
+      "cap": {
+       "ko": "염색을 마친 실",
+       "en": "Yarn after dyeing"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/24.jpg",
+      "cap": {
+       "ko": "색과 질감을 본 실 감기 샘플",
+       "en": "Yarn wrap for color and texture"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "펀치 니들 과정",
+     "en": "PUNCH NEEDLE PROCESS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/engineered-surfaces/03.jpg",
+      "cap": {
+       "ko": "펀치 니들 도안",
+       "en": "Punch needle design drawing"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/01.jpg",
+      "cap": {
+       "ko": "펀치 니들 작업 중",
+       "en": "Punch needle in progress"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/46.jpg",
+      "cap": {
+       "ko": "틀에 걸린 펀치 니들 작업",
+       "en": "Punch needle piece on its frame"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/43.jpg",
+      "cap": {
+       "ko": "다른 도안의 펀치 니들 작업",
+       "en": "Punch needle on another design"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "직조와 편성",
+     "en": "WEAVING AND KNITTING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/engineered-surfaces/23.jpg",
+      "cap": {
+       "ko": "직조기에서 짜는 중",
+       "en": "Weaving on the loom"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/06.jpg",
+      "cap": {
+       "ko": "직조 샘플과 셔틀",
+       "en": "Woven sample and shuttles"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/45.jpg",
+      "cap": {
+       "ko": "셔틀에 감은 실",
+       "en": "Yarn wound on shuttles"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/21.jpg",
+      "cap": {
+       "ko": "편직기로 편성하는 중",
+       "en": "Knitting on the machine"
+      }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/40.jpg",
+      "cap": {
+       "ko": "굵은 실 편성 과정",
+       "en": "Chunky yarn knitting in progress"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "표면 샘플",
+     "en": "SURFACE SAMPLES"
+    },
+    "images": [
+     {
+      "src": "/images/projects/engineered-surfaces/08.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/09.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/10.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/11.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/12.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/13.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/14.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/15.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/16.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/17.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/18.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/36.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/22.jpg",
+      "cap": {
+       "ko": "레이스·자수 콜라주 샘플",
+       "en": "Lace and embroidery collage sample"
+      }
+     }
+    ],
+    "note": {
+     "ko": "슬럽 간격과 크기가 만드는 표면 리듬",
+     "en": "Slub spacing and size set the rhythm"
+    }
+   }
+  ],
   "nar": {
    "ko": {
     "title": "Engineered Surfaces",
@@ -1149,6 +2436,100 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "sections": [
+   {
+    "title": {
+     "ko": "완성 프린트",
+     "en": "FINAL PRINTS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-printed/01.jpg"
+     },
+     {
+      "src": "/images/projects/textile-printed/03.jpg"
+     },
+     {
+      "src": "/images/projects/textile-printed/05.jpg"
+     },
+     {
+      "src": "/images/projects/textile-printed/07.jpg"
+     }
+    ],
+    "note": {
+     "ko": "기와와 호랑이 모티프의 리피트 프린트",
+     "en": "Repeat prints of roof tile and tiger motifs"
+    }
+   },
+   {
+    "title": {
+     "ko": "스트리트웨어 적용",
+     "en": "AS STREETWEAR"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-printed/09.jpg"
+     },
+     {
+      "src": "/images/projects/textile-printed/a01.jpg"
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "펫 어패럴 적용",
+     "en": "AS PET APPAREL"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-printed/10.jpg"
+     },
+     {
+      "src": "/images/projects/textile-printed/11.jpg"
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "NedGraphics 리피트 설계",
+     "en": "REPEATS BUILT IN NEDGRAPHICS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-printed/02.jpg",
+      "cap": {
+       "ko": "격자 패턴 리피트",
+       "en": "Grid pattern repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-printed/04.jpg",
+      "cap": {
+       "ko": "블록 패턴 리피트",
+       "en": "Block pattern repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-printed/06.jpg",
+      "cap": {
+       "ko": "잔꽃 패턴 리피트",
+       "en": "Small floral repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-printed/08.jpg",
+      "cap": {
+       "ko": "스트라이프 리피트",
+       "en": "Stripe repeat"
+      }
+     }
+    ],
+    "note": {
+     "ko": "프린트마다 크기와 리피트 방식을 설정",
+     "en": "Size and repeat type set for each print"
+    }
+   }
+  ],
   "nar": {
    "ko": {
     "title": "Textile Design I: Printed 〈Urban Botanica〉",
@@ -1210,6 +2591,142 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "sections": [
+   {
+    "title": {
+     "ko": "직조 컬렉션",
+     "en": "THE WOVEN COLLECTION"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-woven/02.jpg"
+     },
+     {
+      "src": "/images/projects/textile-woven/14.jpg"
+     }
+    ],
+    "note": {
+     "ko": "같은 디자인, 두 가지 배색",
+     "en": "Same designs in two colourways"
+    }
+   },
+   {
+    "title": {
+     "ko": "패턴 디자인과 디테일",
+     "en": "PATTERNS AND DETAILS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-woven/05.jpg",
+      "cap": {
+       "ko": "네 가지 디자인 원안",
+       "en": "The four designs, flat artwork"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/07.jpg",
+      "cap": {
+       "ko": "상감 메달리온 위의 달토끼",
+       "en": "Moon rabbit on an inlay medallion"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/09.jpg",
+      "cap": {
+       "ko": "모란 덩굴 속 구미호",
+       "en": "Nine tailed fox among peonies"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/11.jpg",
+      "cap": {
+       "ko": "모란 스트라이프",
+       "en": "Peony stripe"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/12.jpg",
+      "cap": {
+       "ko": "구미호와 달토끼 메달리온",
+       "en": "Fox and moon rabbit medallion"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "콘셉트와 모티프",
+     "en": "CONCEPT AND MOTIFS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-woven/01.jpg",
+      "cap": {
+       "ko": "출발점이 된 프린트 작업",
+       "en": "The print project it grew from"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/03.jpg",
+      "cap": {
+       "ko": "무드보드와 첫 아이디어",
+       "en": "Mood board and first idea"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/04.jpg",
+      "cap": {
+       "ko": "구미호 메인 모티프와 요소",
+       "en": "Main fox motif and its elements"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "리피트 설정",
+     "en": "SETTING THE REPEATS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-woven/06.jpg",
+      "cap": {
+       "ko": "달토끼·메달리온 패턴 리피트",
+       "en": "Rabbit and medallion pattern repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/08.jpg",
+      "cap": {
+       "ko": "구미호 패턴 리피트",
+       "en": "Fox pattern repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/10.jpg",
+      "cap": {
+       "ko": "스트라이프 리피트",
+       "en": "Stripe repeat"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "영화 의상으로 상상하기",
+     "en": "IMAGINED AS FILM COSTUME"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-woven/13.jpg",
+      "cap": {
+       "ko": "영화 장면·파우치에 텍스처 매핑",
+       "en": "Mapped onto film stills and pouches"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
     "title": "Textile Design II: Woven 〈Moonlit Thread〉",
@@ -1269,6 +2786,113 @@ window.PROJECTS = [
   "spotify": null,
   "spotifyNote": null,
   "cardThumb": "/images/projects/textile-knit/thumb-card.jpg",
+  "sections": [
+   {
+    "title": {
+     "ko": "완성 니트 디자인",
+     "en": "FINAL KNIT DESIGNS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-knit/03.jpg",
+      "cap": {
+       "ko": "네 가지 편성 패턴",
+       "en": "The four knit patterns"
+      }
+     },
+     {
+      "src": "/images/projects/textile-knit/04.jpg",
+      "cap": {
+       "ko": "메인 디자인, 모든 모티프",
+       "en": "Main design with every motif"
+      }
+     },
+     {
+      "src": "/images/projects/textile-knit/05.jpg",
+      "cap": {
+       "ko": "학 날개를 대칭으로",
+       "en": "Crane wings, mirrored"
+      }
+     },
+     {
+      "src": "/images/projects/textile-knit/06.jpg",
+      "cap": {
+       "ko": "날개 패턴 가디건",
+       "en": "Wing pattern cardigan"
+      }
+     },
+     {
+      "src": "/images/projects/textile-knit/07.jpg",
+      "cap": {
+       "ko": "구름·학 메달리온 중심",
+       "en": "Cloud and crane medallion focus"
+      }
+     },
+     {
+      "src": "/images/projects/textile-knit/08.jpg",
+      "cap": {
+       "ko": "스트라이프 패턴 가디건",
+       "en": "Stripe pattern cardigan"
+      }
+     },
+     {
+      "src": "/images/projects/textile-knit/09.jpg",
+      "cap": {
+       "ko": "차분한 배색과 스케일",
+       "en": "Calmer palette, adjusted scale"
+      }
+     }
+    ],
+    "note": {
+     "ko": "고려청자의 학과 상감 메달리온을 편성으로",
+     "en": "Celadon cranes and inlay medallions, in knit"
+    }
+   },
+   {
+    "title": {
+     "ko": "청자에서 도안까지",
+     "en": "FROM CELADON TO CHART"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-knit/02.jpg",
+      "cap": {
+       "ko": "출발점이 된 고려청자 매병",
+       "en": "Starting point: a Goryeo celadon vase"
+      }
+     },
+     {
+      "src": "/images/projects/textile-knit/01.jpg",
+      "cap": {
+       "ko": "EasyKnit에서 짠 네 도안",
+       "en": "Four charts built in EasyKnit"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "배색 바리에이션",
+     "en": "COLOURWAY VARIATIONS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-knit/10.jpg",
+      "cap": {
+       "ko": "다른 배색의 날개 패턴",
+       "en": "Wing pattern, another colourway"
+      }
+     },
+     {
+      "src": "/images/projects/textile-knit/11.jpg",
+      "cap": {
+       "ko": "다른 배색의 스트라이프 패턴",
+       "en": "Stripe pattern, another colourway"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
     "title": "Textile Design III: Knit 〈Celadon Reverie〉",
@@ -1337,6 +2961,184 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "sections": [
+   {
+    "title": {
+     "ko": "완성된 공간",
+     "en": "THE FINISHED ROOM"
+    },
+    "images": [
+     {
+      "src": "/images/projects/adaptive-textile/01.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/a01.jpg"
+     }
+    ],
+    "note": {
+     "ko": "커튼·바닥재·가구 패브릭으로 전개",
+     "en": "Extended to curtains, flooring and upholstery"
+    }
+   },
+   {
+    "title": {
+     "ko": "트렌드 무드보드",
+     "en": "TREND MOOD BOARDS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/adaptive-textile/06.jpg",
+      "cap": {
+       "ko": "맥시멀 인테리어 레퍼런스",
+       "en": "Maximalist interior references"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/07.jpg",
+      "cap": {
+       "ko": "맥시멀리즘 무드 콜라주",
+       "en": "Maximalism mood collage"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "패턴과 공간 시안",
+     "en": "PATTERNS AND ROOM MOCKUPS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/adaptive-textile/03.jpg",
+      "cap": {
+       "ko": "보태니컬·기하학 패턴 모음",
+       "en": "Botanical and geometric patterns"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/02.jpg",
+      "cap": {
+       "ko": "공간 일러스트 시안",
+       "en": "Room illustration mockup"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/09.jpg",
+      "cap": {
+       "ko": "버건디·올리브 배색 시안",
+       "en": "Burgundy and olive colorways"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/10.jpg",
+      "cap": {
+       "ko": "그린 계열 배색 시안",
+       "en": "Green colorways"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/11.jpg",
+      "cap": {
+       "ko": "머스터드·퍼플 배색 시안",
+       "en": "Mustard and purple colorways"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/08.jpg",
+      "cap": {
+       "ko": "제품 사이즈와 후보 소재",
+       "en": "Product sizes and fabric options"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "소재 실험과 제작",
+     "en": "MATERIAL TESTS AND MAKING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/adaptive-textile/12.jpg",
+      "cap": {
+       "ko": "번아웃 프린트 테스트",
+       "en": "Burnout print test"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/13.jpg",
+      "cap": {
+       "ko": "벨벳 원단 표면 테스트",
+       "en": "Surface test on velvet"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/14.jpg",
+      "cap": {
+       "ko": "컨베이어 기계 위 원단",
+       "en": "Fabric on a conveyor machine"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/16.jpg",
+      "cap": {
+       "ko": "작업실에 걸어 둔 프린트 샘플",
+       "en": "Print samples hung in the studio"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/15.jpg",
+      "cap": {
+       "ko": "스프레이로 물들인 티셔츠",
+       "en": "T shirt colored with spray"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/17.jpg",
+      "cap": {
+       "ko": "주름 가공 기계 위 원단",
+       "en": "Fabric on a pleating machine"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/04.jpg",
+      "cap": {
+       "ko": "담요용 굵은 실 편성",
+       "en": "Chunky knit for the blanket"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/05.jpg",
+      "cap": {
+       "ko": "러그 제작 과정",
+       "en": "Rug in progress"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "전시와 3D 공간",
+     "en": "SHOWCASE AND 3D SPACE"
+    },
+    "images": [
+     {
+      "src": "/images/projects/adaptive-textile/18.jpg",
+      "cap": {
+       "ko": "텍스타일 쇼케이스 현장",
+       "en": "At a textile showcase"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/19.jpg",
+      "cap": {
+       "ko": "3D로 렌더링한 작업실 장면",
+       "en": "3D rendered workroom scenes"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
     "title": "적응형 텍스타일 시스템: 현대적 실내를 위한",
@@ -1456,6 +3258,81 @@ window.PROJECTS = [
   "spotify": null,
   "spotifyNote": null,
   "video": "https://www.youtube.com/embed/DMHkNnFztYY",
+  "sections": [
+   {
+    "title": {
+     "ko": "완성 영상 장면",
+     "en": "FROM THE FINAL FILM"
+    },
+    "images": [
+     {
+      "src": "/images/projects/seoul-metro/a01.jpg",
+      "cap": {
+       "ko": "‘서울을 잇다’ 문구 장면",
+       "en": "Scene with the words ‘Connecting Seoul’"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "참고한 노선도",
+     "en": "MAP REFERENCE"
+    },
+    "images": [
+     {
+      "src": "/images/projects/seoul-metro/01.jpg",
+      "cap": {
+       "ko": "손그림의 바탕이 된 노선도",
+       "en": "Map behind the hand drawn lines"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "AI 승객 장면 생성",
+     "en": "AI RIDER SCENES"
+    },
+    "images": [
+     {
+      "src": "/images/projects/seoul-metro/02.jpg",
+      "cap": {
+       "ko": "필름 사진 느낌으로 생성한 승객",
+       "en": "Riders generated with a film look"
+      }
+     },
+     {
+      "src": "/images/projects/seoul-metro/03.jpg",
+      "cap": {
+       "ko": "목발 짚은 승객 이미지 시도",
+       "en": "Trying a rider on crutches"
+      }
+     },
+     {
+      "src": "/images/projects/seoul-metro/04.jpg",
+      "cap": {
+       "ko": "카메라 화면 속 구도로 생성",
+       "en": "Framed inside a camera screen"
+      }
+     },
+     {
+      "src": "/images/projects/seoul-metro/05.jpg",
+      "cap": {
+       "ko": "생성 화면 모아 보기",
+       "en": "The generation screens together"
+      }
+     },
+     {
+      "src": "/images/projects/seoul-metro/06.jpg",
+      "cap": {
+       "ko": "생성한 다섯 승객 장면",
+       "en": "Generated scene of five riders"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
     "title": "서울교통공사 홍보영상",
@@ -1557,6 +3434,7 @@ window.PROJECTS = [
    "/images/projects/denim-2026/ai14.jpg",
    "/images/projects/denim-2026/ai15.jpg",
    "/images/projects/denim-2026/ai16.jpg",
+   "/images/projects/denim-2026/ai29.jpg",
    "/images/projects/denim-2026/ai17.jpg",
    "/images/projects/denim-2026/ai18.jpg",
    "/images/projects/denim-2026/ai19.jpg",
@@ -1569,6 +3447,333 @@ window.PROJECTS = [
    "/images/projects/denim-2026/ai26.jpg",
    "/images/projects/denim-2026/ai27.jpg",
    "/images/projects/denim-2026/ai28.jpg"
+  ],
+  "sections": [
+   {
+    "title": {
+     "ko": "완성 작품",
+     "en": "THE FINAL PIECE"
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/01.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai13.jpg",
+      "cap": {
+       "ko": "AI로 미리 입혀 본 뒷모습",
+       "en": "Back view tried on with AI first"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/03.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/04.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/05.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/06.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/07.jpg"
+     }
+    ],
+    "note": {
+     "ko": "원단을 받아 실물로 만든 한 벌",
+     "en": "The single garment, built from the delivered fabric"
+    }
+   },
+   {
+    "title": {
+     "ko": "AI 예선 이미지 · 디자인 보드",
+     "en": "AI PRELIMINARY IMAGE · BOARDS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/ai01.jpg",
+      "cap": {
+       "ko": "예선 이미지 · 튜브에서 풀린 실",
+       "en": "Preliminary image · tube into thread"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai02.jpg",
+      "cap": {
+       "ko": "커팅 사이로 보이는 레이스",
+       "en": "Lace showing through the cut"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai03.jpg",
+      "cap": {
+       "ko": "물감이 도트를 지나 실로",
+       "en": "Paint to dots to thread"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai04.jpg",
+      "cap": {
+       "ko": "보로 스티치와 스웨이드 패치",
+       "en": "Boro stitching and suede patches"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai05.jpg",
+      "cap": {
+       "ko": "패치 그래픽 네 가지 변주",
+       "en": "Four patch graphic variations"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai06.jpg",
+      "cap": {
+       "ko": "홀터 베스트 · 카고 팬츠 셋업",
+       "en": "Halter vest and cargo pants set"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai07.jpg",
+      "cap": {
+       "ko": "튜브 프린트와 레이스 데미지",
+       "en": "Tube print with lace damage"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai08.jpg",
+      "cap": {
+       "ko": "레이스로 번지는 물감",
+       "en": "Paint bleeding into lace"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai09.jpg",
+      "cap": {
+       "ko": "격자 스티치 패치 버전",
+       "en": "Grid stitch patch version"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai10.jpg",
+      "cap": {
+       "ko": "튜브 프린트 홀터 디테일",
+       "en": "Halter look, tube print details"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai11.jpg",
+      "cap": {
+       "ko": "데님 재킷 셋업",
+       "en": "Denim jacket set"
+      }
+     }
+    ],
+    "note": {
+     "ko": "원단을 자르기 전 AI로 방향 비교",
+     "en": "Directions compared with AI before cutting"
+    }
+   },
+   {
+    "title": {
+     "ko": "AI 룩북 변주",
+     "en": "AI LOOKBOOK VARIATIONS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/ai12.jpg",
+      "cap": {
+       "ko": "뒷모습 · 옆선 패치 배열",
+       "en": "Back view, patches down the side"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai14.jpg",
+      "cap": {
+       "ko": "앞모습 · 옆선 패치 배열",
+       "en": "Front view, patches down the side"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai15.jpg",
+      "cap": {
+       "ko": "옆선 체크 테이프 버전",
+       "en": "Check tape down the side"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai16.jpg",
+      "cap": {
+       "ko": "비대칭 덧단 앞뒤",
+       "en": "Asymmetric flap, front and back"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai29.jpg",
+      "cap": {
+       "ko": "뒷판 튜브 프린트 클로즈업",
+       "en": "Back tube print, close up"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai17.jpg",
+      "cap": {
+       "ko": "길게 늘어진 덧단 버전",
+       "en": "Longer draped flap version"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "AI 패치 컬러웨이",
+     "en": "AI PATCH COLORWAYS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/ai18.jpg",
+      "cap": {
+       "ko": "멀티 컬러",
+       "en": "Multicolor"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai19.jpg",
+      "cap": {
+       "ko": "인디고 톤",
+       "en": "Indigo tone"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai20.jpg",
+      "cap": {
+       "ko": "차분한 믹스 톤",
+       "en": "Muted mix"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai21.jpg",
+      "cap": {
+       "ko": "아이보리 톤",
+       "en": "Ivory tone"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai22.jpg",
+      "cap": {
+       "ko": "브라운 톤",
+       "en": "Brown tone"
+      }
+     }
+    ],
+    "note": {
+     "ko": "같은 패치 배열, 색만 바꿔 비교",
+     "en": "Same patch layout, only the colors change"
+    }
+   },
+   {
+    "title": {
+     "ko": "AI 백패치 텍스타일",
+     "en": "AI BACK PATCH TEXTILES"
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/ai23.jpg",
+      "cap": {
+       "ko": "레드 바탕 튜브 패치",
+       "en": "Tube patch on red"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai24.jpg",
+      "cap": {
+       "ko": "흑백 튜브 패치",
+       "en": "Black and white tube patch"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai25.jpg",
+      "cap": {
+       "ko": "그래픽 모음 · 밝은 바탕",
+       "en": "Treatments on a light ground"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai26.jpg",
+      "cap": {
+       "ko": "그래픽 모음 · 인디고 바탕",
+       "en": "Treatments on an indigo ground"
+      }
+     }
+    ],
+    "note": {
+     "ko": "같은 튜브 그래픽, 다른 표현 방식",
+     "en": "One tube graphic, different treatments"
+    }
+   },
+   {
+    "title": {
+     "ko": "AI 베스트 시뮬레이션",
+     "en": "AI VEST SIMULATIONS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/ai27.jpg",
+      "cap": {
+       "ko": "뒷판 물감 튜브 프린트",
+       "en": "Paint tube print on the back"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/ai28.jpg",
+      "cap": {
+       "ko": "단추 여밈 베스트 앞뒤",
+       "en": "Button front vest, front and back"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "입선 시상식",
+     "en": "AWARD CEREMONY"
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/aw01.jpg",
+      "cap": {
+       "ko": "수상자 단체 사진",
+       "en": "Group photo of the awardees"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/aw02.jpg",
+      "cap": {
+       "ko": "무대 위 수상 소감",
+       "en": "Award speeches on stage"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/aw03.jpg",
+      "cap": {
+       "ko": "상장을 든 수상자들",
+       "en": "Awardees holding certificates"
+      }
+     },
+     {
+      "src": "/images/projects/denim-2026/aw04.jpg",
+      "cap": {
+       "ko": "공모전 소개와 심사위원",
+       "en": "Contest intro and the judges"
+      }
+     }
+    ],
+    "note": {
+     "ko": "코리아 데님 디자인 공모전 2026 입선",
+     "en": "Honorable Mention, Korea Denim Design Contest 2026"
+    }
+   }
   ],
   "nar": {
    "ko": {
@@ -1776,6 +3981,208 @@ window.PROJECTS = [
     ]
    }
   ],
+  "sections": [
+   {
+    "title": {
+     "ko": "워크플로우",
+     "en": "WORKFLOW"
+    },
+    "images": [
+     {
+      "src": "/images/projects/portfolio-site/wf.jpg"
+     }
+    ],
+    "rowTarget": 2000
+   },
+   {
+    "title": {
+     "ko": "실제로 보낸 지시",
+     "en": "PROMPTS I SENT"
+    },
+    "images": [
+     {
+      "src": "/images/projects/portfolio-site/pr01.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/pr02.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/pr03.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/pr04.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/pr05.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/04.jpg",
+      "cap": {
+       "ko": "인트로를 글로 정리해 보낸 지시",
+       "en": "The intro, written out as a brief"
+      }
+     }
+    ],
+    "rowTarget": 440
+   },
+   {
+    "title": {
+     "ko": "마인드맵 발전 과정",
+     "en": "MIND MAP, STEP BY STEP"
+    },
+    "images": [
+     {
+      "src": "/images/projects/portfolio-site/mm01.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm02.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm03.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm04.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm05.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm06.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm07.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm08.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm09.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm10.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm11.jpg"
+     },
+     {
+      "src": "/images/projects/portfolio-site/mm12.jpg"
+     }
+    ],
+    "note": {
+     "ko": "손 스케치에서 지금의 모습까지",
+     "en": "From the hand sketch to what you see now"
+    },
+    "layout": "stack"
+   },
+   {
+    "title": {
+     "ko": "첫 시안에서 구현까지",
+     "en": "FROM FIRST DRAFT TO BUILD"
+    },
+    "images": [
+     {
+      "src": "/images/projects/portfolio-site/05.jpg",
+      "cap": {
+       "ko": "Manus로 시작한 첫 시안",
+       "en": "First draft started in Manus"
+      }
+     },
+     {
+      "src": "/images/projects/portfolio-site/08.jpg",
+      "cap": {
+       "ko": "첫 시안의 상세 페이지 틀",
+       "en": "Detail page frame, first draft"
+      }
+     },
+     {
+      "src": "/images/projects/portfolio-site/09.jpg",
+      "cap": {
+       "ko": "초기 메인 화면",
+       "en": "An early main screen"
+      }
+     },
+     {
+      "src": "/images/projects/portfolio-site/11.jpg",
+      "cap": {
+       "ko": "초기 인트로 화면",
+       "en": "An early intro screen"
+      }
+     },
+     {
+      "src": "/images/projects/portfolio-site/13.jpg",
+      "cap": {
+       "ko": "Selected Work 링의 초기 모습",
+       "en": "The Selected Work ring, early"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "3D 오브제",
+     "en": "THE 3D OBJECT"
+    },
+    "images": [
+     {
+      "src": "/images/projects/portfolio-site/14.jpg",
+      "cap": {
+       "ko": "ChatGPT로 만든 여러 각도 이미지",
+       "en": "Angles generated in ChatGPT"
+      }
+     },
+     {
+      "src": "/images/projects/portfolio-site/15.jpg",
+      "cap": {
+       "ko": "링 한가운데 놓인 3D 오브제",
+       "en": "The 3D object inside the ring"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "다듬고 검토하기",
+     "en": "REFINING AND REVIEWING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/portfolio-site/cmp01.jpg",
+      "cap": {
+       "ko": "같은 각도로 찍은 링 전후 비교",
+       "en": "The ring before and after, same angle"
+      }
+     },
+     {
+      "src": "/images/projects/portfolio-site/cd01.jpg",
+      "cap": {
+       "ko": "렌즈 효과 코드, 핵심은 가림",
+       "en": "Lens effect code, key parts hidden"
+      }
+     },
+     {
+      "src": "/images/projects/portfolio-site/cd02.jpg",
+      "cap": {
+       "ko": "손글씨 마인드맵 코드",
+       "en": "Handwritten mind map code"
+      }
+     },
+     {
+      "src": "/images/projects/portfolio-site/22.jpg",
+      "cap": {
+       "ko": "프로젝트 정보를 고치던 편집 화면",
+       "en": "Screen for editing project details"
+      }
+     },
+     {
+      "src": "/images/projects/portfolio-site/rv01.jpg",
+      "cap": {
+       "ko": "리뷰 시트에 남긴 사진 배치 메모",
+       "en": "Photo placement notes on the review sheet"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
     "title": "AI와 독학으로 만든 포트폴리오",
@@ -1803,7 +4210,7 @@ window.PROJECTS = [
      "마인드맵은 아이패드로 직접 그려서 지시: 화면 캡처 위에 손으로 그린 스케치를 그대로 보내고, 그 선과 글씨를 옮겨 키워드에 마우스를 올리면 나타나게 함",
      "첫인상은 일부러 반대로: 세련되고 번쩍이는 대신 타자기 효과와 빈티지한 무드로 시작. 나를 전달하는 문장을 맨 앞에 두고, 작업의 방향성은 마인드맵으로 보여줌",
      "사이트의 이미지도 내 작업으로: 작품 사진을 배경에 깔고 그 위에 반투명한 종이 질감을 덮음. 곳곳에 마우스 인터랙션을 넣음",
-     "보는 사람의 경험까지 설계: 프로젝트마다 어울리는 곡을 Spotify 플레이어로 넣어 음악에 대한 관심을 보여주고, 그 분위기 속에서 작업을 보게 함. 아카이브는 필터별로 볼 수 있게 함",
+     "보는 사람의 경험까지 설계: 링크를 받는 순간 뜨는 미리보기 카드부터 인트로의 첫 문장과 같게 맞춤. 프로젝트마다 어울리는 곡을 Spotify 플레이어로 넣어 음악에 대한 관심을 보여주고, 그 분위기 속에서 작업을 보게 함. 아카이브는 필터별로 볼 수 있게 함",
      "한국어와 영어 두 버전을 모두 제작",
      "검토는 리뷰 시트로: 프로젝트, 타임라인, 스킬을 한 페이지에 펼쳐 두고 바꿀 것만 표시해 한 번에 반영. 화면 수정은 같은 각도에서 찍은 전후 화면을 나란히 놓고 비교해 결정"
     ],
@@ -1846,7 +4253,7 @@ window.PROJECTS = [
      "Drew the mind map by hand on an iPad and sent the sketch over a screenshot; its lines and handwriting were carried over so they appear when a keyword is hovered",
      "Opened against the grain: instead of sleek and shiny, a typewriter effect and a vintage mood. A sentence that introduces me comes first, and the mind map shows where my work is heading",
      "Made the site’s imagery out of my own work: project photos as the background under a layer of translucent paper, with mouse interactions throughout",
-     "Designed the viewer’s experience too: each project has a song in a Spotify player, showing my interest in music and letting the work be seen inside a mood. The archive can be filtered",
+     "Designed the viewer’s experience too: even the preview card that appears when the link is shared opens with the same line as the intro. Each project has a song in a Spotify player, showing my interest in music and letting the work be seen inside a mood. The archive can be filtered",
      "Built in both Korean and English",
      "Reviewed on a sheet, not in chat: projects, timeline and skills on one page; I mark only what changes and it is applied in one pass. Layout changes were decided by putting before and after side by side, shot from the same angle"
     ],
@@ -2000,7 +4407,18 @@ window.PROJECTS = [
    "/images/projects/arts-week-2026/06.jpg",
    "/images/projects/arts-week-2026/07.jpg",
    "/images/projects/arts-week-2026/08.jpg",
-   "/images/projects/arts-week-2026/09.jpg"
+   "/images/projects/arts-week-2026/09.jpg",
+   "/images/projects/arts-week-2026/10.jpg",
+   "/images/projects/arts-week-2026/11.jpg",
+   "/images/projects/arts-week-2026/12.jpg",
+   "/images/projects/arts-week-2026/13.jpg",
+   "/images/projects/arts-week-2026/14.jpg",
+   "/images/projects/arts-week-2026/15.jpg",
+   "/images/projects/arts-week-2026/16.jpg",
+   "/images/projects/arts-week-2026/17.jpg",
+   "/images/projects/arts-week-2026/18.jpg",
+   "/images/projects/arts-week-2026/19.jpg",
+   "/images/projects/arts-week-2026/20.jpg"
   ],
   "role": {
    "ko": "설치 재구성 · 제작 · 현장 설치 (단독)",
@@ -2008,6 +4426,156 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "sections": [
+   {
+    "title": {
+     "ko": "설치 전경",
+     "en": "THE FULL INSTALLATION"
+    },
+    "images": [
+     {
+      "src": "/images/projects/arts-week-2026/04.jpg"
+     },
+     {
+      "src": "/images/projects/arts-week-2026/08.jpg"
+     },
+     {
+      "src": "/images/projects/arts-week-2026/09.jpg"
+     },
+     {
+      "src": "/images/projects/arts-week-2026/10.jpg"
+     },
+     {
+      "src": "/images/projects/arts-week-2026/15.jpg"
+     },
+     {
+      "src": "/images/projects/arts-week-2026/16.jpg"
+     },
+     {
+      "src": "/images/projects/arts-week-2026/19.jpg"
+     },
+     {
+      "src": "/images/projects/arts-week-2026/20.jpg"
+     }
+    ],
+    "note": {
+     "ko": "학생회관과 관정관 사이 잔디",
+     "en": "The lawn between Student Union and Kwanjeong Library"
+    }
+   },
+   {
+    "title": {
+     "ko": "마네킹 위 디테일",
+     "en": "DETAILS ON THE MANNEQUIN"
+    },
+    "images": [
+     {
+      "src": "/images/projects/arts-week-2026/02.jpg",
+      "cap": {
+       "ko": "목에 올린 도자기 파편 꽃",
+       "en": "Ceramic shard flower at the neck"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/03.jpg",
+      "cap": {
+       "ko": "우산과 함께 본 옆모습",
+       "en": "Side view with the umbrella"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/13.jpg",
+      "cap": {
+       "ko": "도자기 파편과 인조진주",
+       "en": "Ceramic shards and faux pearls"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/11.jpg",
+      "cap": {
+       "ko": "정면, 도자기 꽃과 실 뭉치",
+       "en": "Front: ceramic flower, yarn bundle"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/01.jpg",
+      "cap": {
+       "ko": "청키한 실 뭉치와 트럼프 카드",
+       "en": "Chunky yarn bundle with playing cards"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/14.jpg",
+      "cap": {
+       "ko": "실 뭉치와 철사·나뭇가지",
+       "en": "Yarn bundle, wire and branch"
+      }
+     }
+    ],
+    "note": {
+     "ko": "런웨이 소재를 마네킹 위에 다시 구성",
+     "en": "Runway materials rebuilt on a mannequin"
+    }
+   },
+   {
+    "title": {
+     "ko": "우산 캐노피",
+     "en": "THE UMBRELLA CANOPY"
+    },
+    "images": [
+     {
+      "src": "/images/projects/arts-week-2026/06.jpg",
+      "cap": {
+       "ko": "우산 위 시스루 천과 구두",
+       "en": "Sheer cloth and heels on top"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/17.jpg",
+      "cap": {
+       "ko": "우산 아래 선 마네킹",
+       "en": "The mannequin under the umbrella"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/18.jpg",
+      "cap": {
+       "ko": "아래에서 올려다본 우산",
+       "en": "The umbrella seen from below"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/12.jpg",
+      "cap": {
+       "ko": "카드 너머로 보이는 관정관",
+       "en": "Kwanjeong Library behind a playing card"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "전시 안내",
+     "en": "EXHIBITION SIGNAGE"
+    },
+    "images": [
+     {
+      "src": "/images/projects/arts-week-2026/05.jpg",
+      "cap": {
+       "ko": "2026 예술주간 포스터",
+       "en": "2026 Arts Week poster"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/07.jpg",
+      "cap": {
+       "ko": "〈공생〉 작품 안내 포스터",
+       "en": "Poster for Tensed Symbiosis"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
     "title": "2026 서울대 예술주간: 〈공생 Tensed Symbiosis〉",

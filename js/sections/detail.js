@@ -35,7 +35,8 @@ function justifyGallery(gallery, rowTarget = 0) {
       if (last && height > target * 1.15) height = target * 1.15; /* a short last row is left-aligned, not stretched */
       const maxNatural = Math.min(...row.map(({ item, img }) => img.naturalHeight * (item.classList.contains('is-small') ? .35 : 1)));
       height = Math.min(height, maxNatural);
-      row.forEach(({ item, ratio }) => { item.style.width = `${Math.floor(ratio * height)}px`; item.style.height = `${Math.floor(height)}px`; });
+      /* the height goes on the picture, not the figure, so a caption can sit under it */
+      row.forEach(({ item, img, ratio }) => { item.style.width = `${Math.floor(ratio * height)}px`; item.style.height = 'auto'; img.style.height = `${Math.floor(height)}px`; });
       row = []; rowRatio = 0;
     };
     ready.forEach((item) => {
@@ -363,26 +364,99 @@ function renderProject(detail, project, lang) {
   }
 
   const small = new Set((project.small || []).map(normalizeSource));
-  const addGallery = (sources, title, extraClass, rowTarget) => {
+  /* an entry is a path, or { src, cap } when the picture carries a short caption */
+  const entrySource = (entry) => (typeof entry === 'string' ? entry : entry.src);
+  const sectionHead = (section, title, note) => {
+    const galleryTitle = document.createElement('h3'); galleryTitle.textContent = title;
+    section.append(galleryTitle);
+    if (note) { const line = document.createElement('p'); line.className = 'detail-section-note'; line.textContent = note; section.append(line); }
+  };
+  const addGallery = (entries, title, extraClass, rowTarget, note = '') => {
     const gallerySection = document.createElement('section');
     gallerySection.className = `detail-gallery-section${extraClass ? ` ${extraClass}` : ''}`;
-    const galleryTitle = document.createElement('h3'); galleryTitle.textContent = title;
+    sectionHead(gallerySection, title, note);
     const gallery = document.createElement('div'); gallery.className = 'detail-gallery';
-    sources.forEach((source, index) => {
-      const item = createMedia(source, `${SITE.detailUi.gallerySlot} ${String(index + 1).padStart(2, '0')}`, 'detail-gallery-item', `${copy.title} ${index + 1}`);
+    entries.forEach((entry, index) => {
+      const source = entrySource(entry);
+      const caption = typeof entry === 'string' ? '' : translated(entry.cap, lang) || '';
+      const item = createMedia(source, `${SITE.detailUi.gallerySlot} ${String(index + 1).padStart(2, '0')}`, 'detail-gallery-item', caption || `${copy.title} ${index + 1}`);
       if (small.has(normalizeSource(source))) item.classList.add('is-small');
+      if (caption) { const text = document.createElement('figcaption'); text.className = 'detail-caption'; text.textContent = caption; item.append(text); item.classList.add('has-caption'); }
       gallery.append(item);
     });
     justifyGallery(gallery, rowTarget);
-    gallerySection.append(galleryTitle, gallery); content.append(gallerySection);
+    gallerySection.append(gallery); content.append(gallerySection);
   };
-  /* the hero already shows the thumb — don't repeat it as the first gallery item */
-  const gallerySources = (project.images || []).filter((source) => normalizeSource(source) !== normalizeSource(project.thumb));
-  if (gallerySources.length) addGallery(gallerySources, SITE.detailUi.gallery);
-  /* extra titled sets in a fixed order, e.g. how the mind map grew from a sketch */
-  (project.galleries || []).forEach((set) => { if (set.images?.length) addGallery(set.images, translated(set.title, lang) || '', 'detail-extra', set.rowTarget || 340); });
-  /* 작업과정 — the making-of pictures, gathered under the finished work with a small label */
-  if (Array.isArray(project.process) && project.process.length) addGallery(project.process, translated(SITE.detailUi.process, lang) || 'PROCESS', 'detail-process', 300);
+  /* a pile: small cards overlapping in order (the mind map, sketch to final); the one under the pointer comes forward */
+  const addStack = (entries, title, note) => {
+    const stackSection = document.createElement('section');
+    stackSection.className = 'detail-gallery-section detail-extra detail-stack-section';
+    sectionHead(stackSection, title, note);
+    const stack = document.createElement('div'); stack.className = 'detail-stack';
+    const cards = entries.map((entry, index) => {
+      const card = createMedia(entrySource(entry), '', 'detail-stack-item', `${title} ${index + 1}`);
+      card.tabIndex = 0;
+      card.style.setProperty('--tilt', `${((index * 37) % 7) - 3}deg`);
+      const number = document.createElement('span'); number.className = 'detail-stack-num'; number.textContent = String(index + 1).padStart(2, '0');
+      card.append(number);
+      return card;
+    });
+    const firstRow = document.createElement('div'); firstRow.className = 'detail-stack-row';
+    firstRow.append(...cards); stack.append(firstRow);
+    /* every card shares one height (a sketch shot upright is narrower, not taller); each card starts one even
+       step after the previous one, so the pile spans the full width */
+    const layout = () => {
+      const width = stack.clientWidth;
+      if (!width) return;
+      /* a very wide or very tall picture sits letterboxed in a card of ordinary shape, so no card runs past the page */
+      const ratios = cards.map((card) => { const img = card.querySelector('img'); return Math.min(1.8, Math.max(.6, img?.naturalWidth ? img.naturalWidth / img.naturalHeight : 1.6)); });
+      const rows = width < 700 ? 2 : 1;
+      const perRow = Math.ceil(cards.length / rows);
+      /* one plain flex line per row (wrapping on rounded widths broke the rows on a phone) */
+      while (stack.children.length < rows) { const line = document.createElement('div'); line.className = 'detail-stack-row'; stack.append(line); }
+      while (stack.children.length > rows) stack.lastElementChild.remove();
+      cards.forEach((card, index) => { const line = stack.children[Math.floor(index / perRow)]; if (card.parentElement !== line) line.append(card); });
+      const height = Math.min(190, width * (rows > 1 ? .3 : .15));
+      cards.forEach((card, index) => {
+        const column = index % perRow;
+        const rowStart = index - column;
+        const rowEnd = Math.min(rowStart + perRow, cards.length) - 1;
+        const lastWidth = height * ratios[rowEnd];
+        const step = rowEnd > rowStart ? (width - lastWidth) / (rowEnd - rowStart) : 0;
+        card.style.width = `${Math.floor(height * ratios[index])}px`;
+        card.style.height = `${Math.floor(height)}px`;
+        card.style.marginLeft = column === 0 ? '0px' : `${Math.floor(step - height * ratios[index - 1])}px`;
+        card.style.zIndex = String(index + 1);
+        /* the first and last card of a row grow inwards, so a hovered card stays inside the page */
+        card.style.transformOrigin = column === 0 ? 'left center' : index === rowEnd ? 'right center' : 'center center';
+      });
+    };
+    cards.forEach((card) => card.querySelector('img')?.addEventListener('load', layout, { once: true }));
+    let timer = 0;
+    window.addEventListener('resize', () => { clearTimeout(timer); timer = window.setTimeout(layout, 120); }, { passive: true });
+    stackSection.append(stack); content.append(stackSection);
+    requestAnimationFrame(layout);
+  };
+  if (Array.isArray(project.sections) && project.sections.length) {
+    /* titled groups: the finished work first, then how it was made, each making-of picture with a short caption */
+    project.sections.forEach((section, index) => {
+      /* the hero already shows the thumb, so it is not repeated */
+      const entries = section.images.filter((entry) => normalizeSource(entrySource(entry)) !== normalizeSource(project.thumb));
+      if (!entries.length) return;
+      const title = translated(section.title, lang) || '';
+      const note = translated(section.note, lang) || '';
+      if (section.layout === 'stack') addStack(entries, title, note);
+      else addGallery(entries, title, index ? 'detail-extra detail-section' : 'detail-section', section.rowTarget || (index ? 340 : 0), note);
+    });
+  } else {
+    /* the hero already shows the thumb — don't repeat it as the first gallery item */
+    const gallerySources = (project.images || []).filter((source) => normalizeSource(source) !== normalizeSource(project.thumb));
+    if (gallerySources.length) addGallery(gallerySources, SITE.detailUi.gallery);
+    /* extra titled sets in a fixed order, e.g. how the mind map grew from a sketch */
+    (project.galleries || []).forEach((set) => { if (set.images?.length) addGallery(set.images, translated(set.title, lang) || '', 'detail-extra', set.rowTarget || 340); });
+    /* 작업과정 — the making-of pictures, gathered under the finished work with a small label */
+    if (Array.isArray(project.process) && project.process.length) addGallery(project.process, translated(SITE.detailUi.process, lang) || 'PROCESS', 'detail-process', 300);
+  }
 
 }
 
