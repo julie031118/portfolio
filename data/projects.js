@@ -124,12 +124,11 @@ window.PROJECTS = [
  },
  {
   "slug": "directing-a-year",
-  "featured": 9,
+  "featured": 10,
   "archiveRank": null,
   "tags": [
    "CONTENT",
-   "INSIGHT",
-   "AI"
+   "INSIGHT"
   ],
   "year": "2026",
   "period": "2026.07~08",
@@ -422,7 +421,7 @@ window.PROJECTS = [
  },
  {
   "slug": "fashion-show-2024",
-  "featured": 6,
+  "featured": 5,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -450,6 +449,9 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "filterThumbs": {
+   "CONTENT": "/images/projects/fashion-show-2024/15.jpg"
+  },
   "process": [
    "/images/projects/fashion-show-2024/01.jpg",
    "/images/projects/fashion-show-2024/02.jpg",
@@ -551,7 +553,7 @@ window.PROJECTS = [
  },
  {
   "slug": "campus-festival",
-  "featured": 5,
+  "featured": 9,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -739,7 +741,7 @@ window.PROJECTS = [
  {
   "slug": "clo3d",
   "featured": null,
-  "archiveRank": 16,
+  "archiveRank": 13,
   "tags": [
    "FASHION"
   ],
@@ -753,7 +755,8 @@ window.PROJECTS = [
    "/images/projects/clo3d/04.jpg",
    "/images/projects/clo3d/05.jpg",
    "/images/projects/clo3d/06.jpg",
-   "/images/projects/clo3d/07.jpg"
+   "/images/projects/clo3d/07.jpg",
+   "/images/projects/clo3d/a01.jpg"
   ],
   "role": {
    "ko": "3D 디자인 · 스타일링 · 렌더링 (단독)",
@@ -811,7 +814,7 @@ window.PROJECTS = [
  {
   "slug": "sub-motion",
   "featured": null,
-  "archiveRank": 17,
+  "archiveRank": 14,
   "tags": [
    "CONTENT"
   ],
@@ -895,7 +898,7 @@ window.PROJECTS = [
  {
   "slug": "senior-fit",
   "featured": null,
-  "archiveRank": 14,
+  "archiveRank": 11,
   "tags": [
    "FASHION",
    "INSIGHT"
@@ -1119,7 +1122,7 @@ window.PROJECTS = [
  {
   "slug": "textile-printed",
   "featured": null,
-  "archiveRank": 11,
+  "archiveRank": 15,
   "tags": [
    "FASHION"
   ],
@@ -1137,7 +1140,8 @@ window.PROJECTS = [
    "/images/projects/textile-printed/08.jpg",
    "/images/projects/textile-printed/09.jpg",
    "/images/projects/textile-printed/10.jpg",
-   "/images/projects/textile-printed/11.jpg"
+   "/images/projects/textile-printed/11.jpg",
+   "/images/projects/textile-printed/a01.jpg"
   ],
   "role": {
    "ko": "프린트 디자인 (단독)",
@@ -1177,7 +1181,7 @@ window.PROJECTS = [
  {
   "slug": "textile-woven",
   "featured": null,
-  "archiveRank": 12,
+  "archiveRank": 16,
   "tags": [
    "FASHION"
   ],
@@ -1238,7 +1242,7 @@ window.PROJECTS = [
  {
   "slug": "textile-knit",
   "featured": null,
-  "archiveRank": 13,
+  "archiveRank": 17,
   "tags": [
    "FASHION"
   ],
@@ -1264,6 +1268,7 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "cardThumb": "/images/projects/textile-knit/thumb-card.jpg",
   "nar": {
    "ko": {
     "title": "Textile Design III: Knit 〈Celadon Reverie〉",
@@ -1323,7 +1328,8 @@ window.PROJECTS = [
    "/images/projects/adaptive-textile/16.jpg",
    "/images/projects/adaptive-textile/17.jpg",
    "/images/projects/adaptive-textile/18.jpg",
-   "/images/projects/adaptive-textile/19.jpg"
+   "/images/projects/adaptive-textile/19.jpg",
+   "/images/projects/adaptive-textile/a01.jpg"
   ],
   "role": {
    "ko": "텍스타일 개발 · 룸 디자인 (4인 팀)",
@@ -1440,7 +1446,8 @@ window.PROJECTS = [
    "/images/projects/seoul-metro/03.jpg",
    "/images/projects/seoul-metro/04.jpg",
    "/images/projects/seoul-metro/05.jpg",
-   "/images/projects/seoul-metro/06.jpg"
+   "/images/projects/seoul-metro/06.jpg",
+   "/images/projects/seoul-metro/a01.jpg"
   ],
   "role": {
    "ko": "일러스트 · 애니메이션 (2인 협업)",
@@ -1659,6 +1666,7 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "cardThumb": "/images/projects/fashion-illustration/thumb-card.jpg",
   "nar": {
    "ko": {
     "title": "패션 일러스트레이션 & 도식화",
@@ -1690,7 +1698,7 @@ window.PROJECTS = [
  },
  {
   "slug": "portfolio-site",
-  "featured": 10,
+  "featured": 6,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -1706,6 +1714,7 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "cardThumb": "/images/projects/portfolio-site/thumb-card.jpg",
   "process": [
    "/images/projects/portfolio-site/05.jpg",
    "/images/projects/portfolio-site/08.jpg",
@@ -1714,9 +1723,11 @@ window.PROJECTS = [
    "/images/projects/portfolio-site/13.jpg",
    "/images/projects/portfolio-site/14.jpg",
    "/images/projects/portfolio-site/15.jpg",
+   "/images/projects/portfolio-site/cmp01.jpg",
    "/images/projects/portfolio-site/cd01.jpg",
    "/images/projects/portfolio-site/cd02.jpg",
-   "/images/projects/portfolio-site/22.jpg"
+   "/images/projects/portfolio-site/22.jpg",
+   "/images/projects/portfolio-site/rv01.jpg"
   ],
   "galleries": [
    {
@@ -1794,10 +1805,10 @@ window.PROJECTS = [
      "사이트의 이미지도 내 작업으로: 작품 사진을 배경에 깔고 그 위에 반투명한 종이 질감을 덮음. 곳곳에 마우스 인터랙션을 넣음",
      "보는 사람의 경험까지 설계: 프로젝트마다 어울리는 곡을 Spotify 플레이어로 넣어 음악에 대한 관심을 보여주고, 그 분위기 속에서 작업을 보게 함. 아카이브는 필터별로 볼 수 있게 함",
      "한국어와 영어 두 버전을 모두 제작",
-     "검토는 리뷰 시트로: 프로젝트, 타임라인, 스킬을 한 페이지에 펼쳐 두고 바꿀 것만 표시해 한 번에 반영"
+     "검토는 리뷰 시트로: 프로젝트, 타임라인, 스킬을 한 페이지에 펼쳐 두고 바꿀 것만 표시해 한 번에 반영. 화면 수정은 같은 각도에서 찍은 전후 화면을 나란히 놓고 비교해 결정"
     ],
     "result": [
-     "인트로 · Selected Work · About · 아카이브 · 연락처와 프로젝트 26개 상세 페이지를 한국어 · 영어로 구현 (2026.10, 계속 다듬는 중)",
+     "인트로 · Selected Work · About · 아카이브 · 연락처와 프로젝트 23개 상세 페이지를 한국어 · 영어로 구현 (2026.10, 계속 다듬는 중)",
      "AI 도구 4종을 교차로 쓰고 배포는 터미널로 직접 실행하며, 기획부터 배포까지 혼자 진행"
     ],
     "detail": {
@@ -1805,7 +1816,7 @@ window.PROJECTS = [
      "body": [
       "\"예쁘게 해줘\", \"멋지게 해줘\"로는 좋은 결과가 나오지 않았다. 원하는 결과가 나온 건 늘 내가 먼저 자세히 기획하고, 선 하나와 글씨 크기 하나까지 세세하게 지시했을 때였다.",
       "그래서 AI가 발전할수록 사람의 역할은 더 분명해진다고 생각한다. 무엇을 왜 만들지 정하고, 결과를 보고 판단하고, 다시 지시하는 일이다.",
-      "아래 이미지: 전체 워크플로우와 실제로 보낸 지시 → 마인드맵이 손 스케치에서 지금의 모습이 되기까지 → 작업 과정 (첫 시안, 3D, 코드, 리뷰 시트)."
+      "아래 이미지: 전체 워크플로우와 실제로 보낸 지시 → 마인드맵이 손 스케치에서 지금의 모습이 되기까지 → 작업 과정 (첫 시안, 3D, 전후 비교, 코드, 리뷰 시트)."
      ]
     }
    },
@@ -1837,10 +1848,10 @@ window.PROJECTS = [
      "Made the site’s imagery out of my own work: project photos as the background under a layer of translucent paper, with mouse interactions throughout",
      "Designed the viewer’s experience too: each project has a song in a Spotify player, showing my interest in music and letting the work be seen inside a mood. The archive can be filtered",
      "Built in both Korean and English",
-     "Reviewed on a sheet, not in chat: projects, timeline and skills on one page; I mark only what changes and it is applied in one pass"
+     "Reviewed on a sheet, not in chat: projects, timeline and skills on one page; I mark only what changes and it is applied in one pass. Layout changes were decided by putting before and after side by side, shot from the same angle"
     ],
     "result": [
-     "Intro, Selected Work, About, Archive and Contact plus 26 project pages, in Korean and English (Oct 2026, still being refined)",
+     "Intro, Selected Work, About, Archive and Contact plus 23 project pages, in Korean and English (Oct 2026, still being refined)",
      "Planned, built and deployed alone: four AI tools used together, and the deploy run from the terminal myself"
     ],
     "detail": {
@@ -1848,7 +1859,7 @@ window.PROJECTS = [
      "body": [
       "\"Make it pretty\" and \"make it cool\" never produced anything good. The results I wanted came every time I had planned in detail first and directed down to a single line or a font size.",
       "So the better AI gets, the clearer the human part becomes: deciding what to make and why, judging what comes back, and directing again.",
-      "Below: the whole workflow and prompts I actually sent → how the mind map grew from a hand sketch → the making (first draft, 3D, code, review sheet)."
+      "Below: the whole workflow and prompts I actually sent → how the mind map grew from a hand sketch → the making (first draft, 3D, before and after, code, review sheet)."
      ]
     }
    }
@@ -1859,7 +1870,7 @@ window.PROJECTS = [
  {
   "slug": "promo-video-ai",
   "featured": null,
-  "archiveRank": 15,
+  "archiveRank": 12,
   "tags": [
    "CONTENT",
    "AI"

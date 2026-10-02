@@ -99,14 +99,15 @@ export function renderArchive(lang) {
     slot.className = 'archive-image-slot';
     slot.textContent = SITE.archiveUi.imageSlot;
     image.append(slot);
-    if (project.thumb && !/\/images\/x\.jpg$|\/images\/projects\/x\//.test(project.thumb)) {
+    const cardSource = project.cardThumb || project.thumb; /* cardThumb: a crop for the 3:4 card only, the detail hero keeps thumb */
+    if (cardSource && !/\/images\/x\.jpg$|\/images\/projects\/x\//.test(cardSource)) {
       const picture = document.createElement('img');
       picture.loading = 'lazy';
       picture.decoding = 'async';
       picture.alt = '';
       picture.addEventListener('load', () => image.classList.add('has-image'), { once: true });
       picture.addEventListener('error', () => image.classList.remove('has-image'), { once: true });
-      picture.src = project.thumb.replace(/^\//, '');
+      picture.src = cardSource.replace(/^\//, '');
       image.append(picture);
     }
     if (project.tags.includes('NOW')) {
@@ -155,8 +156,22 @@ export function renderArchive(lang) {
     cards.map((card, index) => index).sort((a, b) => rank(a) - rank(b)).forEach((index) => grid.append(cards[index]));
   }
 
+  /* a project can show another card image while one filter is on (fashion show: its Instagram feed under CONTENT) */
+  function swapThumbs() {
+    const tag = SITE.archiveUi.filters.find((item) => item.label === activeFilter)?.tag;
+    cards.forEach((card, index) => {
+      const project = projects[index];
+      if (!project.filterThumbs) return;
+      const picture = card.querySelector('.card-img img');
+      if (!picture) return;
+      const next = ((tag && project.filterThumbs[tag]) || project.cardThumb || project.thumb).replace(/^\//, '');
+      if (picture.getAttribute('src') !== next) picture.src = next;
+    });
+  }
+
   function toggleCards() {
     orderCards();
+    swapThumbs();
     cards.forEach((card, index) => { card.hidden = !projectMatches(projects[index], activeFilter); });
   }
 

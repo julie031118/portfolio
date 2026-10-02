@@ -191,7 +191,8 @@ async function createRing(section, projects, lang, onDispose) {
   /* the object in the middle of the ring — 연서's broken-plate flower (Tripo GLB). It sits at the
      ring's centre, lit by a room environment, turning gently with the pointer; the ring's near cards
      pass in front of it and the far cards behind (painter's order by depth, like the cards). */
-  const OBJECT_SIZE = 6.0; /* world units, longest side — the centrepiece, larger than a card */
+  const OBJECT_SIZE = 6.9; /* world units, longest side — the centrepiece, larger than a card (6.0 until 2026-10-02) */
+  const OBJECT_LIFT = 0.75; /* raised a little above the ring's centre so the near cards cover less of it */
   const pivot = new THREE.Group();
   scene.add(pivot);
   let object = null;
@@ -235,12 +236,15 @@ async function createRing(section, projects, lang, onDispose) {
 
   const N = projects.length;
   /* bigger cards that overlap, on a ring stretched sideways (an ellipse) */
-  const CARD_W = 3.0, CARD_H = 4.0;
-  const RADIUS = Math.max(3.4, (N * (CARD_W - 0.85)) / TAU);
+  const CARD_W = 3.1, CARD_H = CARD_W * 4 / 3; /* 3.0 until 2026-10-02 */
+  /* cards overlap by OVERLAP world units along the ring; less overlap = a wider ring with more room around the object
+     (0.85 until 2026-10-02, when Selected went from 12 to 10 cards and the ring closed in on the object) */
+  const OVERLAP = 0.7;
+  const RADIUS = Math.max(3.4, (N * (CARD_W - OVERLAP)) / TAU);
   /* RX grows to use whatever width the stage has (see resize); RY stays flat so the cards read large */
   let RX = RADIUS * 1.5;
-  const RY = RADIUS * 0.72;
-  const TILT = -0.5, PARALLAX_X = 0.07, PARALLAX_Y = 0.16;
+  const RY = RADIUS * 0.8; /* 0.72 until 2026-10-02: a touch taller, the near row sits lower and shows more of the object */
+  const TILT = -0.5, PARALLAX_X = 0.05, PARALLAX_Y = 0.10; /* 0.07 / 0.16 until 2026-10-02: a smaller swing leaves less margin to reserve */
   const geometry = new THREE.PlaneGeometry(CARD_W, CARD_H);
   const frameGeometry = new THREE.PlaneGeometry(CARD_W + 0.04, CARD_H + 0.04);
   /* painter's order instead of the depth buffer: overlapping cards at near-equal depth were z-fighting (flicker) */
@@ -261,8 +265,9 @@ async function createRing(section, projects, lang, onDispose) {
     mesh.userData = holder.userData;
     ring.add(holder);
     cards.push({ holder, mesh, frame, material, project, texture: placeholder });
-    if (!isPlaceholderPath(project.thumb)) {
-      loader.load(normalizeSource(project.thumb), (loaded) => {
+    const cardSource = project.cardThumb || project.thumb; /* the card crop, if there is one */
+    if (!isPlaceholderPath(cardSource)) {
+      loader.load(normalizeSource(cardSource), (loaded) => {
         loaded.colorSpace = THREE.SRGBColorSpace;
         loaded.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
         const texture = tonedTexture(THREE, loaded);
@@ -312,7 +317,7 @@ async function createRing(section, projects, lang, onDispose) {
     const corner = new THREE.Vector3();
     const s = 1.07 * 1.02;
     const extents = () => {
-      const half = { x: 0, y: 0 };
+      const half = { x: 0, y: 0, top: -Infinity, bottom: Infinity };
       [[-1, -1], [-1, 1], [1, -1], [1, 1]].forEach(([px, py]) => {
         rot.makeRotationFromEuler(new THREE.Euler(TILT + py * PARALLAX_X, px * PARALLAX_Y, 0));
         for (let step = 0; step < 72; step += 1) {
@@ -322,23 +327,38 @@ async function createRing(section, projects, lang, onDispose) {
             const d = Math.max(1, cz - corner.z);
             half.x = Math.max(half.x, Math.abs(corner.x) / d);
             half.y = Math.max(half.y, Math.abs(corner.y) / d);
+            half.top = Math.max(half.top, corner.y / d);
+            half.bottom = Math.min(half.bottom, corner.y / d);
           });
         }
       });
       return half;
     };
+    /* The far cards are drawn smaller, so a fit centred on the object left an empty band above the ring.
+       The fit is asymmetric now: the ring's real top and bottom are fitted into the band between the nav and
+       the bottom edge, and the view is shifted to centre it (2026-10-02: everything reads larger). */
+    const topInset = (Number.parseFloat(cssColor('--nav-height')) || 56) + 12;
+    const bottomInset = 14;
+    const band = Math.max(120, height - topInset - bottomInset);
+    const halfBand = (h) => ((h.top - h.bottom) / 2) * (height / band); /* the half-height the band needs, in tan units */
     /* stretch the ellipse sideways until the ring is as wide as the stage allows (the height sets the scale) */
     RX = RADIUS * 1.5;
     let half = extents();
     for (let pass = 0; pass < 4; pass += 1) {
-      const room = (half.y * camera.aspect) / half.x; /* > 1: width to spare */
+      const room = (halfBand(half) * camera.aspect) / half.x; /* > 1: width to spare */
       if (Math.abs(room - 1) < .01) break;
       RX = THREE.MathUtils.clamp(RX * (1 + (room - 1) * .85), RADIUS * 1.5, RADIUS * 3.2);
       half = extents();
     }
-    const fovY = 2 * Math.atan(half.y * 1.01);
-    const fovFromX = 2 * Math.atan((half.x * 1.01) / camera.aspect);
-    camera.fov = THREE.MathUtils.radToDeg(Math.max(fovY, fovFromX));
+    const tanHalf = Math.max(halfBand(half) * 1.01, (half.x * 1.01) / camera.aspect);
+    camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(tanHalf));
+    /* shift the view so the ring's middle sits in the middle of the band */
+    const middle = (half.top + half.bottom) / 2;
+    const middlePx = height / 2 - (middle / tanHalf) * (height / 2);
+    const shiftPx = Math.round(topInset + band / 2 - middlePx); /* > 0: the ring moves down */
+    if (reserved > 0) camera.setViewOffset(region, height, -reserved, -shiftPx, width, height);
+    else camera.setViewOffset(width, height, 0, -shiftPx, width, height);
+    if (slot) slot.style.top = `${height / 2 + shiftPx}px`;
     camera.updateProjectionMatrix();
   }
 
@@ -388,7 +408,7 @@ async function createRing(section, projects, lang, onDispose) {
       const sway = reducedQuery.matches ? 0 : Math.sin(t * 0.45) * 0.26;
       pivot.rotation.y += ((sway + parallax.x * 0.5 + (angle + Math.PI / 2) * 0.12) - pivot.rotation.y) * 0.05;
       pivot.rotation.x += ((-0.08 + parallax.y * 0.22) - pivot.rotation.x) * 0.05;
-      pivot.position.y = reducedQuery.matches ? 0 : Math.sin(t * 0.7) * 0.06;
+      pivot.position.y = OBJECT_LIFT + (reducedQuery.matches ? 0 : Math.sin(t * 0.7) * 0.06);
     }
     renderer.render(scene, camera);
     raf = requestAnimationFrame(frame);
@@ -501,8 +521,9 @@ function renderMobileList(root, projects, lang) {
     const img = document.createElement('div');
     img.className = 'card-img';
     img.innerHTML = `<span class="archive-image-slot">${SITE.workUi?.imageSlot || 'IMAGE 3:4'}</span>`;
-    if (!isPlaceholderPath(project.thumb)) {
-      const image = document.createElement('img'); image.loading = 'lazy'; image.decoding = 'async'; image.alt = copy.title; image.src = normalizeSource(project.thumb);
+    const cardSource = project.cardThumb || project.thumb;
+    if (!isPlaceholderPath(cardSource)) {
+      const image = document.createElement('img'); image.loading = 'lazy'; image.decoding = 'async'; image.alt = copy.title; image.src = normalizeSource(cardSource);
       image.addEventListener('load', () => img.classList.add('has-image'), { once: true });
       img.append(image);
     }

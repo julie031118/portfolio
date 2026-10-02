@@ -89,9 +89,9 @@ window.SITE = {
       {
         claim: { ko: '머릿속 그림을 AI로 바로 눈에 보이는 결과물로 만듭니다.', en: 'I turn the picture in my head into something you can see, with AI.' },
         keyword: { ko: '눈에 보이는 결과물', en: 'something you can see' },
-        evidence: { ko: 'AI 단편영화를 혼자 연출해 대상. 카프탄과 데님은 자르기 전에 AI로 먼저 입혀 봤다. 지금 보고 있는 이 포트폴리오도 코딩 없이 AI와 함께 기획부터 구현까지 직접 만들었다. 더 섬세하게 다루고 싶어서, 인공지능예술실습에서 생성 모델을 직접 학습시키며 원리부터 배우는 중.', en: 'Directed an AI short film solo and won the grand prize. Tried the kaftan and the denim on a body with AI before cutting. And this portfolio you are looking at: planned and built with AI from concept to code, with no coding background. To get finer control, I am now training generative models myself in Deep Learning for Artists.' },
-        media: 'images/projects/ai-short-film/11.jpg',
-        link: 'ai-short-film',
+        evidence: { ko: '지금 보고 있는 이 포트폴리오를 코딩 없이 AI와 함께 기획부터 구현까지 직접 만들었다. AI 단편영화는 혼자 연출해 대상을 받았고, 카프탄과 데님은 자르기 전에 AI로 먼저 입혀 봤다. 더 섬세하게 다루고 싶어서, 인공지능예술실습에서 생성 모델을 직접 학습시키며 원리부터 배우는 중.', en: 'This portfolio you are looking at: planned and built with AI from concept to code, with no coding background. I directed an AI short film solo and won the grand prize, and tried the kaftan and the denim on a body with AI before cutting. To get finer control, I am now training generative models myself in Deep Learning for Artists.' },
+        media: 'img/strength-3-portfolio.jpg', /* this site's own ring and 3D object (2026-10-02); was the AI film still */
+        link: 'portfolio-site', /* was ai-short-film (연서, 2026-10-02): the AI film is already Selected 01 */
       },
     ],
 
@@ -240,9 +240,9 @@ window.SITE = {
     ],
     /* each filter can have its own order (연서, 2026-10-02); ALL and any slug left out follow featured, then archiveRank */
     order: {
-      FASHION: ['art2wear', 'kaftan', 'fashion-show-2024', 'arts-week-2026', 'denim-2026', 'textile-printed', 'textile-woven', 'textile-knit', 'senior-fit', 'clo3d', 'engineered-surfaces', 'adaptive-textile', 'korean-costume', 'fashion-illustration'],
-      CONTENT: ['ai-short-film', 'miraen', 'directing-a-year', 'fashion-show-2024', 'campus-festival', 'promo-video-ai', 'portfolio-site', 'sub-motion', 'unreal-engine', 'seoul-metro'],
-      AI: ['ai-short-film', 'promo-video-ai', 'kaftan', 'denim-2026', 'portfolio-site', 'directing-a-year', 'miraen'],
+      FASHION: ['art2wear', 'fashion-show-2024', 'kaftan', 'denim-2026', 'arts-week-2026', 'senior-fit', 'clo3d', 'korean-costume', 'textile-printed', 'textile-woven', 'textile-knit', 'adaptive-textile', 'engineered-surfaces', 'fashion-illustration'],
+      CONTENT: ['ai-short-film', 'miraen', 'campus-festival', 'directing-a-year', 'fashion-show-2024', 'promo-video-ai', 'portfolio-site', 'sub-motion', 'unreal-engine', 'seoul-metro'],
+      AI: ['portfolio-site', 'ai-short-film', 'promo-video-ai', 'kaftan', 'denim-2026', 'miraen'],
       INSIGHT: ['miraen', 'senior-fit', 'campus-festival', 'directing-a-year', 'adaptive-textile'],
     },
   },
