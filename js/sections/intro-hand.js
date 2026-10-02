@@ -169,7 +169,8 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     svg.innerHTML = DRAW[name](...args);
     return svg;
   };
-  /* the labels keep a note open under the pointer; nothing on the paper navigates anywhere */
+  /* the labels keep a note open under the pointer, blink softly while it is open, and a click on one opens
+     that filter of the archive (2026-10-02: before that nothing on the paper navigated anywhere) */
   const hot = (label, className) => { const a = make('span', `hand-hot ${className}`); a.setAttribute('aria-hidden', 'true'); a.dataset.label = label; return a; };
 
   const groups = {
@@ -341,7 +342,7 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     Object.values(groups).forEach((group) => group.classList.add('is-on', 'is-ghost'));
     /* the last note to fade decides the end; the timer is only a safety net */
     groups.design.addEventListener('animationend', endPreview, { once: true });
-    previewTimer = window.setTimeout(endPreview, 2200);
+    previewTimer = window.setTimeout(endPreview, 1700); /* the 1.3s ghost plus its .1s stagger; 2200 before */
   }
 
   function show(key) {
@@ -363,13 +364,22 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
   function hide() {
     clearTimeout(hideTimer);
     if (pinned) { if (active !== pinned) show(pinned); return; }
-    hideTimer = window.setTimeout(hideNow, 140);
+    /* long enough to travel from the word to its label (USING AI sits a line's length away) */
+    hideTimer = window.setTimeout(hideNow, 650);
   }
   function pin(key) {
     if (pinned === key) { pinned = null; hideNow(); return; }
     pinned = key; show(key);
   }
   function unpin() { if (!pinned) return; pinned = null; hideNow(); }
+  /* go to the archive with one filter on (archive.js follows the hash and scrolls there) */
+  function openFilter(label) {
+    if (!label) return;
+    clearTimeout(hideTimer); pinned = null; hideNow();
+    window.location.hash = `#archive/${encodeURIComponent(label)}`;
+  }
+  /* a word with a single label goes straight there; visual language has two (FASHION, CONTENT), so it pins */
+  const SINGLE = { insight: 'INSIGHT', design: 'AI WORKS' };
   function toggle(key) { pin(key); }
 
   /* keep the note open while the pointer is on one of its labels (they are links); the group box itself is inert */
@@ -377,7 +387,7 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     group.querySelectorAll('.hand-hot').forEach((link) => {
       link.addEventListener('pointerenter', () => { clearTimeout(hideTimer); if (active !== key) show(key); });
       link.addEventListener('pointerleave', hide);
-      link.addEventListener('click', () => pin(key));
+      link.addEventListener('click', (event) => { event.stopPropagation(); openFilter(link.dataset.label); });
     });
   });
   /* a click anywhere else on the paper lets a pinned note go */
@@ -392,7 +402,7 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     word.addEventListener('focus', () => show(key));
     word.addEventListener('pointerleave', hide);
     word.addEventListener('blur', () => { if (!pinned) hide(); });
-    word.addEventListener('click', () => pin(key));
+    word.addEventListener('click', () => { if (SINGLE[key]) openFilter(SINGLE[key]); else pin(key); });
   }
 
   function reset() { clearTimeout(hideTimer); endPreview(); pinned = null; hideNow(); }

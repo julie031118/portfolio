@@ -69,6 +69,7 @@ export function renderArchive(lang) {
 
   const filtersRoot = section.querySelector('.archive-filters');
   const grid = section.querySelector('.archive-grid');
+  const nowBlock = section.querySelector('.now-block');
   const projects = sortedProjects();
   let activeFilter = filterFromHash();
   let flipAnimation = null;
@@ -181,7 +182,8 @@ export function renderArchive(lang) {
     const running = flipAnimation;
     flipAnimation = null;
     if (running) { running.progress(1); running.kill(); }
-    if (window.gsap) gsap.set(cards, { clearProps: 'all' });
+    grid.style.height = '';
+    if (window.gsap) { gsap.set(cards, { clearProps: 'all' }); if (nowBlock) { gsap.killTweensOf(nowBlock); gsap.set(nowBlock, { clearProps: 'opacity,visibility' }); } }
   }
 
   function applyFilter(nextFilter, animate = true, updateUrl = false) {
@@ -193,7 +195,13 @@ export function renderArchive(lang) {
     finishFlip();
     if (changed && animate && !reducedQuery.matches && window.Flip && window.gsap) {
       const state = Flip.getState(cards);
+      /* while the cards fly they are out of the flow (absolute), so the grid would collapse and the NOW block
+         under it would rise over them: the grid keeps the taller of its two heights until the last card lands,
+         and NOW steps aside meanwhile and comes back in its new place */
+      const fromHeight = grid.offsetHeight;
       toggleCards();
+      grid.style.height = `${Math.max(fromHeight, grid.offsetHeight)}px`;
+      if (nowBlock) gsap.to(nowBlock, { autoAlpha: 0, duration: .15, overwrite: true });
       flipAnimation = Flip.from(state, {
         duration: .8,
         ease: 'expo.inOut',
@@ -201,7 +209,7 @@ export function renderArchive(lang) {
         stagger: .02,
         onEnter: (elements) => gsap.fromTo(elements, { opacity: 0, scale: .96 }, { opacity: 1, scale: 1, duration: .35, overwrite: true }),
         onLeave: (elements) => gsap.to(elements, { opacity: 0, scale: .96, duration: .25, overwrite: true }),
-        onComplete: () => { flipAnimation = null; gsap.set(cards, { clearProps: 'all' }); },
+        onComplete: () => { flipAnimation = null; grid.style.height = ''; gsap.set(cards, { clearProps: 'all' }); if (nowBlock) gsap.to(nowBlock, { autoAlpha: 1, duration: .4, overwrite: true, onComplete: () => gsap.set(nowBlock, { clearProps: 'opacity,visibility' }) }); },
       });
     } else toggleCards();
     updateFilterButtons();
