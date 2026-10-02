@@ -1277,13 +1277,6 @@ window.PROJECTS = [
        "ko": "축제 안내 카드 레이아웃",
        "en": "Festival notice card layouts"
       }
-     },
-     {
-      "src": "/images/projects/campus-festival/07.jpg",
-      "cap": {
-       "ko": "패션쇼 2024 인스타그램 계정",
-       "en": "Fashion Show 2024 Instagram account"
-      }
      }
     ]
    }
@@ -2260,13 +2253,6 @@ window.PROJECTS = [
        "ko": "틀에 걸린 펀치 니들 작업",
        "en": "Punch needle piece on its frame"
       }
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/43.jpg",
-      "cap": {
-       "ko": "다른 도안의 펀치 니들 작업",
-       "en": "Punch needle on another design"
-      }
      }
     ]
    },
@@ -2302,13 +2288,6 @@ window.PROJECTS = [
       "cap": {
        "ko": "편직기로 편성하는 중",
        "en": "Knitting on the machine"
-      }
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/40.jpg",
-      "cap": {
-       "ko": "굵은 실 편성 과정",
-       "en": "Chunky yarn knitting in progress"
       }
      }
     ]
@@ -2660,13 +2639,6 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/textile-woven/01.jpg",
-      "cap": {
-       "ko": "출발점이 된 프린트 작업",
-       "en": "The print project it grew from"
-      }
-     },
-     {
       "src": "/images/projects/textile-woven/03.jpg",
       "cap": {
        "ko": "무드보드와 첫 아이디어",
@@ -2932,28 +2904,30 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026.01~04",
-  "thumb": "/images/06_adaptive_textile_interiors.jpg",
+  "thumb": "/images/projects/adaptive-textile/ad01.jpg",
   "images": [
-   "/images/projects/adaptive-textile/01.jpg",
-   "/images/projects/adaptive-textile/02.jpg",
-   "/images/projects/adaptive-textile/03.jpg",
-   "/images/projects/adaptive-textile/04.jpg",
-   "/images/projects/adaptive-textile/05.jpg",
-   "/images/projects/adaptive-textile/06.jpg",
-   "/images/projects/adaptive-textile/07.jpg",
-   "/images/projects/adaptive-textile/08.jpg",
-   "/images/projects/adaptive-textile/09.jpg",
-   "/images/projects/adaptive-textile/10.jpg",
-   "/images/projects/adaptive-textile/11.jpg",
-   "/images/projects/adaptive-textile/12.jpg",
-   "/images/projects/adaptive-textile/13.jpg",
-   "/images/projects/adaptive-textile/14.jpg",
-   "/images/projects/adaptive-textile/15.jpg",
-   "/images/projects/adaptive-textile/16.jpg",
-   "/images/projects/adaptive-textile/17.jpg",
-   "/images/projects/adaptive-textile/18.jpg",
-   "/images/projects/adaptive-textile/19.jpg",
-   "/images/projects/adaptive-textile/a01.jpg"
+   "/images/projects/adaptive-textile/ad01.jpg",
+   "/images/projects/adaptive-textile/ad02.jpg",
+   "/images/projects/adaptive-textile/ad03.jpg",
+   "/images/projects/adaptive-textile/ad04.jpg",
+   "/images/projects/adaptive-textile/ad05.jpg",
+   "/images/projects/adaptive-textile/ad06.jpg",
+   "/images/projects/adaptive-textile/ad07.jpg",
+   "/images/projects/adaptive-textile/ad08.jpg",
+   "/images/projects/adaptive-textile/ad09.jpg",
+   "/images/projects/adaptive-textile/ad10.jpg",
+   "/images/projects/adaptive-textile/ad11.jpg",
+   "/images/projects/adaptive-textile/ad12.jpg",
+   "/images/projects/adaptive-textile/ad13.jpg",
+   "/images/projects/adaptive-textile/ad14.jpg",
+   "/images/projects/adaptive-textile/ad15.jpg",
+   "/images/projects/adaptive-textile/ad16.jpg",
+   "/images/projects/adaptive-textile/ad17.jpg",
+   "/images/projects/adaptive-textile/ad18.jpg",
+   "/images/projects/adaptive-textile/ad19.jpg",
+   "/images/projects/adaptive-textile/ad20.jpg",
+   "/images/projects/adaptive-textile/ad21.jpg",
+   "/images/projects/adaptive-textile/ad22.jpg"
   ],
   "role": {
    "ko": "텍스타일 개발 · 룸 디자인 (4인 팀)",
@@ -2964,192 +2938,195 @@ window.PROJECTS = [
   "sections": [
    {
     "title": {
-     "ko": "완성된 공간",
+     "ko": "완성된 방",
      "en": "THE FINISHED ROOM"
     },
     "images": [
      {
-      "src": "/images/projects/adaptive-textile/01.jpg"
+      "src": "/images/projects/adaptive-textile/ad01.jpg"
      },
      {
-      "src": "/images/projects/adaptive-textile/a01.jpg"
+      "src": "/images/projects/adaptive-textile/ad02.jpg",
+      "cap": {
+       "ko": "러그와 커튼",
+       "en": "Rug and curtains"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad03.jpg",
+      "cap": {
+       "ko": "자수 쿠션, 담요, 바구니",
+       "en": "Embroidered cushion, blanket and basket"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad04.jpg",
+      "cap": {
+       "ko": "램프 갓과 테이블 커버",
+       "en": "Lampshade and table cover"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad05.jpg",
+      "cap": {
+       "ko": "의자 패브릭과 쿠션",
+       "en": "Chair fabric and cushions"
+      }
      }
     ],
     "note": {
-     "ko": "커튼·바닥재·가구 패브릭으로 전개",
-     "en": "Extended to curtains, flooring and upholstery"
+     "ko": "4인 팀이 방 하나를 기획하고, 텍스타일을 디자인해 직접 만들었다",
+     "en": "A team of four planned one room, designed its textiles and made them"
     }
    },
    {
     "title": {
-     "ko": "트렌드 무드보드",
-     "en": "TREND MOOD BOARDS"
+     "ko": "공간 시뮬레이션과 패턴 개발",
+     "en": "ROOM SIMULATION AND PATTERNS"
     },
     "images": [
      {
-      "src": "/images/projects/adaptive-textile/06.jpg",
+      "src": "/images/projects/adaptive-textile/ad06.jpg",
       "cap": {
-       "ko": "맥시멀 인테리어 레퍼런스",
-       "en": "Maximalist interior references"
+       "ko": "완성될 방을 미리 그려 본 일러스트",
+       "en": "The room drawn before it was made"
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/07.jpg",
+      "src": "/images/projects/adaptive-textile/ad07.jpg",
       "cap": {
-       "ko": "맥시멀리즘 무드 콜라주",
-       "en": "Maximalism mood collage"
+       "ko": "컨셉에 맞춰 개발한 패턴 후보 16종",
+       "en": "16 candidate patterns developed for the concept"
       }
      }
-    ]
+    ],
+    "rowTarget": 460
    },
    {
     "title": {
-     "ko": "패턴과 공간 시안",
-     "en": "PATTERNS AND ROOM MOCKUPS"
+     "ko": "제작 과정",
+     "en": "MAKING"
     },
     "images": [
      {
-      "src": "/images/projects/adaptive-textile/03.jpg",
+      "src": "/images/projects/adaptive-textile/ad08.jpg",
       "cap": {
-       "ko": "보태니컬·기하학 패턴 모음",
-       "en": "Botanical and geometric patterns"
+       "ko": "담요 뜨기",
+       "en": "Knitting the blanket"
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/02.jpg",
+      "src": "/images/projects/adaptive-textile/ad09.jpg",
       "cap": {
-       "ko": "공간 일러스트 시안",
-       "en": "Room illustration mockup"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/09.jpg",
-      "cap": {
-       "ko": "버건디·올리브 배색 시안",
-       "en": "Burgundy and olive colorways"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/10.jpg",
-      "cap": {
-       "ko": "그린 계열 배색 시안",
-       "en": "Green colorways"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/11.jpg",
-      "cap": {
-       "ko": "머스터드·퍼플 배색 시안",
-       "en": "Mustard and purple colorways"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/08.jpg",
-      "cap": {
-       "ko": "제품 사이즈와 후보 소재",
-       "en": "Product sizes and fabric options"
+       "ko": "러그 만들기",
+       "en": "Making the rug"
       }
      }
-    ]
+    ],
+    "rowTarget": 640
    },
    {
     "title": {
-     "ko": "소재 실험과 제작",
-     "en": "MATERIAL TESTS AND MAKING"
+     "ko": "리서치와 기획",
+     "en": "RESEARCH AND PLANNING"
     },
     "images": [
      {
-      "src": "/images/projects/adaptive-textile/12.jpg",
+      "src": "/images/projects/adaptive-textile/ad10.jpg",
       "cap": {
-       "ko": "번아웃 프린트 테스트",
-       "en": "Burnout print test"
+       "ko": "레퍼런스 이미지",
+       "en": "Reference images"
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/13.jpg",
+      "src": "/images/projects/adaptive-textile/ad11.jpg",
       "cap": {
-       "ko": "벨벳 원단 표면 테스트",
-       "en": "Surface test on velvet"
+       "ko": "무드보드",
+       "en": "Mood board"
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/14.jpg",
+      "src": "/images/projects/adaptive-textile/ad12.jpg",
       "cap": {
-       "ko": "컨베이어 기계 위 원단",
-       "en": "Fabric on a conveyor machine"
+       "ko": "작업 계획: 제품 사이즈와 후보 소재",
+       "en": "Work plan: product sizes and fabric options"
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/16.jpg",
+      "src": "/images/projects/adaptive-textile/ad13.jpg",
       "cap": {
-       "ko": "작업실에 걸어 둔 프린트 샘플",
-       "en": "Print samples hung in the studio"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/15.jpg",
-      "cap": {
-       "ko": "스프레이로 물들인 티셔츠",
-       "en": "T shirt colored with spray"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/17.jpg",
-      "cap": {
-       "ko": "주름 가공 기계 위 원단",
-       "en": "Fabric on a pleating machine"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/04.jpg",
-      "cap": {
-       "ko": "담요용 굵은 실 편성",
-       "en": "Chunky knit for the blanket"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/05.jpg",
-      "cap": {
-       "ko": "러그 제작 과정",
-       "en": "Rug in progress"
+       "ko": "컬러 팔레트",
+       "en": "Color palette"
       }
      }
-    ]
+    ],
+    "rowTarget": 360
    },
    {
     "title": {
-     "ko": "전시와 3D 공간",
-     "en": "SHOWCASE AND 3D SPACE"
+     "ko": "패턴 조합 시안",
+     "en": "PATTERN COMBINATION STUDIES"
     },
     "images": [
      {
-      "src": "/images/projects/adaptive-textile/18.jpg",
-      "cap": {
-       "ko": "텍스타일 쇼케이스 현장",
-       "en": "At a textile showcase"
-      }
+      "src": "/images/projects/adaptive-textile/ad14.jpg"
      },
      {
-      "src": "/images/projects/adaptive-textile/19.jpg",
-      "cap": {
-       "ko": "3D로 렌더링한 작업실 장면",
-       "en": "3D rendered workroom scenes"
-      }
+      "src": "/images/projects/adaptive-textile/ad15.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad16.jpg"
      }
-    ]
+    ],
+    "note": {
+     "ko": "패턴 16종 중 무엇을 어디에 쓸지 바꿔 가며 비교한 방 시안 (Procreate)",
+     "en": "The same room with different picks and placements from the 16 patterns (Procreate)"
+    },
+    "rowTarget": 420
+   },
+   {
+    "title": {
+     "ko": "기법 실습",
+     "en": "TECHNIQUE PRACTICE"
+    },
+    "images": [
+     {
+      "src": "/images/projects/adaptive-textile/ad17.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad18.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad19.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad20.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad21.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad22.jpg"
+     }
+    ],
+    "note": {
+     "ko": "수업에서 익힌 텍스타일 디자인 기법 실습",
+     "en": "Textile design techniques practised in class"
+    },
+    "rowTarget": 260
    }
   ],
   "nar": {
    "ko": {
-    "title": "적응형 텍스타일 시스템: 현대적 실내를 위한",
+    "title": "인테리어 텍스타일: 방 하나의 기획부터 제작까지",
     "cat": "인테리어 텍스타일 · 4인 팀 · FTD 374, 2026 봄",
     "headline": "취향이 아니라 시장 근거로 팔레트를 정했다. 트렌드 리서치와 브랜드 3사 분석이 먼저였다.",
     "need": "맥시멀리즘 인테리어 텍스타일 컬렉션을 만들되, \"많이 넣었다\"가 아니라 \"의도적으로 쌓았다\"로 읽혀야 했다. 근거 없이 화려하면 그냥 산만해진다.",
     "action": [
      "'New Maximalism & Layered Home' 트렌드를 조사하고 AD·Elle Decor의 보도를 시장 근거로 확보",
      "브랜드 3사를 분석해 각각에서 전략을 도출: 빈티지 드로잉 조합에서 다양한 보태니컬 모티프를 하나의 테마로 묶는 논리를, 핸드 스티치 기반 브랜드에서 디지털 프린트와 텍스처를 결합하는 방향을, 진한 바탕색을 쓰는 브랜드에서 네이비·테라코타·그린 팔레트의 타당성을 확인",
-     "보태니컬과 기하학 모티프를 하나의 컬러 스토리 안에서 조화시키는 전략으로 15개 패턴을 의도적으로 레이어링",
-     "번아웃 프린트, 레이저 커팅, 자수를 인테리어용 소재에 테스트하고 커튼·바닥재·가구 패브릭으로 전개"
+     "보태니컬과 기하학 모티프를 하나의 컬러 스토리로 묶어 컨셉에 맞는 패턴 후보 16종을 개발하고, Procreate로 패턴 선정과 배치를 바꾼 방 시안을 여러 개 비교",
+     "수업에서 익힌 번아웃 프린트, 레이저 커팅, 자수 같은 기법을 바탕으로 커튼, 러그, 담요, 쿠션, 의자 패브릭, 램프 갓, 테이블 커버, 바구니까지 팀이 직접 만들어 방을 완성"
     ],
     "result": null,
     "detail": {
@@ -3161,15 +3138,15 @@ window.PROJECTS = [
     }
    },
    "en": {
-    "title": "Adaptive Textile Systems for Modern Interiors",
+    "title": "Interior Textiles: One Room from Concept to Making",
     "cat": "Interior Textiles · Team of 4 · FTD 374, Spring 2026",
     "headline": "The palette was decided on market evidence, not taste: trend research and three brand studies came first.",
     "need": "A maximalist interior textile collection had to read as deliberate layering rather than simply “a lot.” Without a reason behind it, bold just becomes noise.",
     "action": [
      "Researched the “New Maximalism & Layered Home” trend and cited AD and Elle Decor coverage as market evidence",
      "Studied three brands and pulled a strategy from each: a logic for unifying diverse botanical motifs under one theme, a direction for combining digital print with textile texture, and validation for the deep navy / terracotta / green palette",
-     "Layered 15 patterns deliberately, harmonising botanical and geometric motifs within a single color story",
-     "Tested burn-out printing, laser cutting and embroidery on interior-grade fibers, extending the collection across window treatments, flooring and upholstery"
+     "Developed 16 candidate patterns for the concept, pairing botanical and geometric motifs in one color story, then compared room studies in Procreate with different picks and placements",
+     "Building on burn-out printing, laser cutting and embroidery learned in class, the team made every piece itself: curtains, rug, blanket, cushions, chair fabric, lampshade, table cover and basket"
     ],
     "result": null,
     "detail": {
@@ -3181,8 +3158,8 @@ window.PROJECTS = [
     }
    }
   },
-  "title": "Adaptive Textile Systems",
-  "desc": "A luxury home-interior textile collection spanning window treatments, flooring and upholstery. Burn-out printing, laser-cutting and machine embroidery tested across interior-grade fibers."
+  "title": "Interior Textiles",
+  "desc": "A team of four planned one room, developed 16 patterns for it and made every textile piece in it."
  },
  {
   "slug": "korean-costume",
@@ -3285,49 +3262,6 @@ window.PROJECTS = [
       "cap": {
        "ko": "손그림의 바탕이 된 노선도",
        "en": "Map behind the hand drawn lines"
-      }
-     }
-    ]
-   },
-   {
-    "title": {
-     "ko": "AI 승객 장면 생성",
-     "en": "AI RIDER SCENES"
-    },
-    "images": [
-     {
-      "src": "/images/projects/seoul-metro/02.jpg",
-      "cap": {
-       "ko": "필름 사진 느낌으로 생성한 승객",
-       "en": "Riders generated with a film look"
-      }
-     },
-     {
-      "src": "/images/projects/seoul-metro/03.jpg",
-      "cap": {
-       "ko": "목발 짚은 승객 이미지 시도",
-       "en": "Trying a rider on crutches"
-      }
-     },
-     {
-      "src": "/images/projects/seoul-metro/04.jpg",
-      "cap": {
-       "ko": "카메라 화면 속 구도로 생성",
-       "en": "Framed inside a camera screen"
-      }
-     },
-     {
-      "src": "/images/projects/seoul-metro/05.jpg",
-      "cap": {
-       "ko": "생성 화면 모아 보기",
-       "en": "The generation screens together"
-      }
-     },
-     {
-      "src": "/images/projects/seoul-metro/06.jpg",
-      "cap": {
-       "ko": "생성한 다섯 승객 장면",
-       "en": "Generated scene of five riders"
       }
      }
     ]
