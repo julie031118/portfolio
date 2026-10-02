@@ -1,4 +1,3 @@
-import { attachLens } from '../lens.js';
 let lastFocus = null;
 let currentSlug = null;
 let openedViaPush = false;
@@ -139,7 +138,6 @@ function trapFocus(event) {
   if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
 }
 
-let detachLens = null;
 
 function groundFor(project) {
   const map = SITE.detailGround || {};
@@ -192,7 +190,7 @@ function renderProject(detail, project, lang) {
   }
 
   const hero = createMedia(project.thumb, SITE.detailUi.heroSlot, 'detail-hero', copy.title, true);
-  detachLens?.(); detachLens = attachLens(hero); /* the magnifier lives on the cover photo */
+  /* the square lens that lived on the cover was removed (2026-10-02): the page-wide glass lens covers it */
   const header = document.createElement('header');
   header.className = 'detail-header';
   const meta = document.createElement('p');

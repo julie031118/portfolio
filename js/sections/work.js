@@ -621,7 +621,7 @@ export function renderWork(lang) {
     trigger = ScrollTrigger.create({
       trigger: section,
       start: 'top top',
-      end: () => `+=${window.innerHeight * 2.5}`, /* 3 screens until 2026-10-02: a touch shorter */
+      end: () => `+=${window.innerHeight * 2}`, /* 3 screens, then 2.5, until 2026-10-02 */
       pin: section.querySelector('.work-stage'),
       scrub: true,
       invalidateOnRefresh: true,

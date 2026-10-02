@@ -7,6 +7,7 @@ import { renderContact } from './sections/contact.js';
 import { renderDetailShell, closeDetail } from './sections/detail.js';
 import { initLoader } from './loader.js';
 import { initGround } from './ground.js';
+import { initCursorLens } from './cursor-lens.js';
 import { getSoundEnabled, setSoundEnabled, toggleSound } from './audio.js';
 import { storageGet, storageSet } from './sections/render-shell.js';
 
@@ -88,7 +89,7 @@ function showDesktopNote() {
 
 function startRuntime() {
   initScroll();
-  initLoader({ host: introController.host, onComplete: () => { introController.start(); window.__introReady = true; window.dispatchEvent(new Event('portfolio:intro-ready')); window.ScrollTrigger?.refresh(); window.setTimeout(showDesktopNote, 1200); }, onGesture: () => { setSoundEnabled(true); renderNav(); } });
+  initLoader({ host: introController.host, onComplete: () => { introController.start(); window.__introReady = true; window.dispatchEvent(new Event('portfolio:intro-ready')); window.ScrollTrigger?.refresh(); window.setTimeout(showDesktopNote, 1200); initCursorLens(); }, onGesture: () => { setSoundEnabled(true); renderNav(); } });
 }
 
 if (document.readyState === 'loading') window.addEventListener('DOMContentLoaded', startRuntime, { once: true });
