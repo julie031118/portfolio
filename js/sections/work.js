@@ -248,7 +248,7 @@ async function createRing(section, projects, lang, onDispose) {
   const geometry = new THREE.PlaneGeometry(CARD_W, CARD_H);
   const frameGeometry = new THREE.PlaneGeometry(CARD_W + 0.04, CARD_H + 0.04);
   /* painter's order instead of the depth buffer: overlapping cards at near-equal depth were z-fighting (flicker) */
-  const frameMaterial = new THREE.MeshBasicMaterial({ color: new THREE.Color(cssColor('--ink-2') || '#7C808A'), transparent: true, opacity: 0.35, depthTest: false, depthWrite: false, toneMapped: false });
+  const frameMaterial = new THREE.MeshBasicMaterial({ color: new THREE.Color('#7C808A') /* the old --ink-2: the card outlines keep their tone */, transparent: true, opacity: 0.35, depthTest: false, depthWrite: false, toneMapped: false });
   const loader = new THREE.TextureLoader();
   const cards = [];
 
@@ -621,7 +621,7 @@ export function renderWork(lang) {
     trigger = ScrollTrigger.create({
       trigger: section,
       start: 'top top',
-      end: () => `+=${window.innerHeight * 3}`,
+      end: () => `+=${window.innerHeight * 2.5}`, /* 3 screens until 2026-10-02: a touch shorter */
       pin: section.querySelector('.work-stage'),
       scrub: true,
       invalidateOnRefresh: true,

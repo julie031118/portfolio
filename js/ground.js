@@ -16,26 +16,32 @@ export function initGround() {
   const root = document.createElement('div');
   root.className = 'ground';
   root.setAttribute('aria-hidden', 'true');
-  root.innerHTML = '<img class="ground-photo" alt="" decoding="async"><img class="ground-photo" alt="" decoding="async"><div class="ground-vellum"></div>';
+  root.innerHTML = '<img class="ground-photo" alt="" decoding="async"><img class="ground-photo" alt="" decoding="async"><img class="ground-photo" alt="" decoding="async"><div class="ground-vellum"></div>';
   document.body.prepend(root);
-  const photos = [...root.querySelectorAll('.ground-photo')];
-  let active = 0;
+  /* three layers, oldest at the bottom: each new photo fades in slowly on top of whatever is showing, and the
+     ones under it stay fully there until it has covered them, so a change reads as one even blend, even when
+     several sections pass quickly (2026-10-02: two layers crossfading at once flashed and felt abrupt) */
+  const order = [...root.querySelectorAll('.ground-photo')]; /* bottom → top */
   let current = '';
+  let settleTimer = 0;
+  const restack = () => order.forEach((photo, index) => { photo.style.zIndex = String(index + 1); });
+  restack();
 
   function show(source) {
     if (source === current) return;
     current = source;
-    const next = photos[1 - active];
-    const previous = photos[active];
-    const swap = () => {
+    const next = order[0]; /* the oldest layer is reused */
+    next.style.transition = 'none'; next.classList.remove('is-on'); void next.offsetWidth; next.style.transition = '';
+    const reveal = () => {
       if (next.src.endsWith(source) === false) return; /* a newer request won */
+      order.push(order.shift()); restack();
       next.classList.add('is-on');
-      previous.classList.remove('is-on');
-      active = 1 - active;
+      clearTimeout(settleTimer);
+      settleTimer = window.setTimeout(() => { order.forEach((photo) => { if (photo !== next) photo.classList.remove('is-on'); }); }, 2800);
     };
-    next.onload = swap;
+    next.onload = reveal;
     next.src = source;
-    if (next.complete && next.naturalWidth) swap();
+    if (next.complete && next.naturalWidth) reveal();
   }
 
   /* the section whose box crosses the viewport centre decides the photo */

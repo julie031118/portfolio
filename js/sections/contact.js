@@ -53,7 +53,12 @@ export function renderContact() {
   const target = { x: .5, y: .5 };
   let quickX = null;
   let quickY = null;
-  const dotColor = rgbaInk(.4);
+  /* the cursor, tracked on the whole page: scrolling moves the section under a still cursor and fires no
+     pointermove, so the reveal is placed from the cursor's last screen position every frame (2026-10-02) */
+  const client = { x: 0, y: 0, known: false };
+  let inside = false;
+  let presence = touchQuery.matches ? 1 : 0; /* how open the reveal is: 0 until the cursor is over the section */
+  const dotColor = 'rgba(124,128,138,.4)'; /* the old --ink-2 at .4: the grid keeps its look after the grey text was darkened (2026-10-02) */
 
   function resize() {
     const rect = section.getBoundingClientRect();
@@ -82,6 +87,19 @@ export function renderContact() {
     if (!visible || now - lastDraw < 33) { frame = requestAnimationFrame(draw); return; }
     lastDraw = now;
     const idle = now - lastInteraction > 1100;
+    if (!touchQuery.matches) {
+      const rect = section.getBoundingClientRect();
+      const nowInside = client.known && client.x >= rect.left && client.x <= rect.right && client.y >= rect.top && client.y <= rect.bottom;
+      if (nowInside) {
+        const tx = (client.x - rect.left) / rect.width, ty = (client.y - rect.top) / rect.height;
+        /* entering: the reveal opens right under the cursor instead of travelling in from the centre */
+        if (!inside) { pointer.x = tx; pointer.y = ty; if (quickX) { gsap.set(pointer, { x: tx, y: ty }); } }
+        if (tx !== target.x || ty !== target.y) { target.x = tx; target.y = ty; quickX?.(tx); quickY?.(ty); }
+      }
+      inside = nowInside;
+      presence += ((inside ? 1 : 0) - presence) * .2;
+      if (presence < .01) presence = 0;
+    }
     if (touchQuery.matches && idle && !reducedQuery.matches) {
       const phase = (now % 8000) / 8000 * Math.PI * 2;
       target.x = .5 + Math.sin(phase) * .25 + Math.sin(phase * 2.13) * .06;
@@ -96,12 +114,12 @@ export function renderContact() {
     const px = pointer.x * width;
     const py = pointer.y * height;
     const cell = 22;
-    const revealRadius = Math.min(width, height) * (touchQuery.matches ? .26 : .22);
+    const revealRadius = Math.min(width, height) * (touchQuery.matches ? .26 : .22) * presence;
     /* The section itself is the page's vellum ground. The pointer opens a grid of little windows in the paper,
        each showing the sharp photograph that lies (blurred) under the whole section. */
     context.globalCompositeOperation = 'source-over';
     context.clearRect(0, 0, width, height);
-    if (reveal.complete && reveal.naturalWidth) {
+    if (presence > 0 && reveal.complete && reveal.naturalWidth) {
       const iw = reveal.naturalWidth, ih = reveal.naturalHeight;
       const scale = Math.max(width / iw, height / ih) * 1.16; /* same over-scan as the ground photo */
       const dw = iw * scale, dh = ih * scale;
@@ -131,8 +149,11 @@ export function renderContact() {
     quickX = gsap.quickTo(pointer, 'x', { duration: .45, ease: 'power3.out' });
     quickY = gsap.quickTo(pointer, 'y', { duration: .45, ease: 'power3.out' });
   }
-  section.addEventListener('pointermove', (event) => setTarget(event.clientX, event.clientY), { passive: true });
-  section.addEventListener('pointerdown', (event) => setTarget(event.clientX, event.clientY), { passive: true });
+  const onPointer = (event) => { if (event.pointerType === 'touch') return; client.x = event.clientX; client.y = event.clientY; client.known = true; };
+  const onLeavePage = (event) => { if (!event.relatedTarget) client.known = false; };
+  window.addEventListener('pointermove', onPointer, { passive: true });
+  document.addEventListener('mouseout', onLeavePage);
+  section.addEventListener('pointerdown', (event) => { if (touchQuery.matches) setTarget(event.clientX, event.clientY); }, { passive: true });
   section.addEventListener('touchmove', (event) => { const touch = event.touches[0]; if (touch) setTarget(touch.clientX, touch.clientY); }, { passive: true });
   const resizeObserver = new ResizeObserver(resize);
   resizeObserver.observe(section);
@@ -148,6 +169,8 @@ export function renderContact() {
       cancelAnimationFrame(frame);
       resizeObserver.disconnect();
       visibilityObserver.disconnect();
+      window.removeEventListener('pointermove', onPointer);
+      document.removeEventListener('mouseout', onLeavePage);
     },
   };
   window.__contactStage = instance;

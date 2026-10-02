@@ -168,7 +168,7 @@ async function createRenderer(section, data) {
     uTexel: { value: new THREE.Vector2(1 / GRID_SIZE, 1 / GRID_SIZE) },
     uResolution: { value: new THREE.Vector2(1, 1) },
     uPaper: { value: new THREE.Color(cssColor('--paper')) },
-    uInk2: { value: new THREE.Color(cssColor('--ink-2')) },
+    uInk2: { value: new THREE.Color('#7C808A') }, /* the old --ink-2: the glass shading keeps its tone after the grey text was darkened (2026-10-02) */
   };
   const material = new THREE.ShaderMaterial({
     uniforms,
