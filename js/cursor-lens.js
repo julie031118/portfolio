@@ -58,6 +58,32 @@ function makeMap(size, ball) {
   return { url: canvas.toDataURL('image/png'), scale };
 }
 
+/* the rim, as a grey mask multiplied onto the bent page inside the filter: the edge darkens in the page's own
+   colour (an overlay on top tinted it a cold grey and looked pasted on), ending in a soft dark hairline */
+function makeRim(size, ball) {
+  const canvas = document.createElement('canvas');
+  canvas.width = size; canvas.height = size;
+  const context = canvas.getContext('2d');
+  const image = context.createImageData(size, size);
+  const centre = size / 2;
+  const radius = ball / 2;
+  const smooth = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+  for (let y = 0; y < size; y += 1) {
+    for (let x = 0; x < size; x += 1) {
+      const distance = Math.hypot(x + .5 - centre, y + .5 - centre);
+      const n = distance / radius;
+      let value = 1;
+      if (n < 1) value = 1 - .2 * smooth(.62, .98, n) - .18 * smooth(radius - 2.2, radius - .3, distance) / 1;
+      else value = 1 - .3 * (1 - smooth(radius, radius + 1.4, distance)); /* the hairline fades out over a pixel and a half */
+      const v = Math.round(Math.max(0, Math.min(1, value)) * 255);
+      const offset = (y * size + x) * 4;
+      image.data[offset] = v; image.data[offset + 1] = v; image.data[offset + 2] = v; image.data[offset + 3] = 255;
+    }
+  }
+  context.putImageData(image, 0, 0);
+  return canvas.toDataURL('image/png');
+}
+
 function isChromium() {
   const brands = navigator.userAgentData?.brands;
   if (brands) return brands.some((entry) => /Chromium/i.test(entry.brand));
@@ -73,7 +99,8 @@ export function initCursorLens() {
   lens.setAttribute('aria-hidden', 'true');
   lens.style.width = `${size}px`; lens.style.height = `${size}px`;
   lens.style.setProperty('--ball', `${ball}px`);
-  lens.innerHTML = '<div class="cursor-lens-glass"></div><div class="cursor-lens-ball"></div>';
+  /* glass (the bent page) · rim (darkens the bent page itself at the edge, so it keeps the page's own colour) · shine */
+  lens.innerHTML = '<div class="cursor-lens-glass"></div><div class="cursor-lens-rim"></div><div class="cursor-lens-ball"></div>';
 
   if (isChromium()) {
     const { url, scale } = makeMap(size, ball);
@@ -90,7 +117,9 @@ export function initCursorLens() {
         <feImage href="${url}" x="0" y="0" width="${size}" height="${size}" preserveAspectRatio="none" result="map"/>
         ${channel('r', 0)}${channel('g', 1)}${channel('b', 2)}
         <feBlend in="r" in2="g" mode="screen" result="rg"/>
-        <feBlend in="rg" in2="b" mode="screen"/>
+        <feBlend in="rg" in2="b" mode="screen" result="bent"/>
+        <feImage href="${makeRim(size, ball)}" x="0" y="0" width="${size}" height="${size}" preserveAspectRatio="none" result="rim"/>
+        <feBlend in="bent" in2="rim" mode="multiply"/>
       </filter>`;
     document.body.append(svg);
     lens.classList.add('is-refracting');
