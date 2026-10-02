@@ -45,6 +45,13 @@ button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 1px s
 .nav-link:hover, .nav-toggle:hover { color: var(--ink-2); }
 /* a wider pause between the section links and the two toggles (연서, 2026-10-02) */
 .nav-link + .nav-toggle { margin-left: 30px; }
+/* the two toggles are settings, not sections: a softer grey until hovered */
+.nav-toggle { color: #61656E; }
+.nav-toggle:hover { color: var(--ink); }
+/* phones: 'best viewed on a computer', bottom centre, fades in and out */
+.desktop-note { position: fixed; left: 50%; bottom: 16px; z-index: 70; display: flex; align-items: center; gap: 10px; width: max-content; max-width: calc(100vw - 32px); padding: 9px 10px 9px 14px; border: 1px solid var(--hairline); background: rgba(250,250,251,.92); backdrop-filter: blur(10px); color: var(--ink); font: 11px/1.5 var(--font-mono); letter-spacing: .02em; transform: translate(-50%, 8px); opacity: 0; transition: opacity .5s ease, transform .5s ease; }
+.desktop-note.is-shown { opacity: 1; transform: translate(-50%, 0); }
+.desktop-note button { flex: none; border: 0; padding: 0 4px; background: transparent; color: var(--ink-2); font: 16px/1 var(--font-mono); cursor: pointer; }
 .nav-divider { color: var(--ink-2); }
 
 .loader { position: fixed; inset: 0; z-index: 50; overflow: hidden; background: transparent; touch-action: none; user-select: none; }
@@ -116,9 +123,9 @@ main { overflow: clip; }
 .hand-group:not(.is-on) .hand-sub text, .hand-group:not(.is-on) .hand-sub .hand-dots, .hand-group:not(.is-on) .hand-sub path { transition-delay: 0s; transition-duration: 0s; }
 .hand-hot { position: absolute; display: block; cursor: default; }
 /* the first look: every note at once, faint, rippling like water, then gone */
-.hand-group.is-ghost { visibility: visible; animation: hand-ghost 1.7s ease-in-out both; will-change: opacity, transform; transform-origin: 50% 50%; }
-.hand-group--visual.is-ghost { animation-delay: .08s; }
-.hand-group--design.is-ghost { animation-delay: .16s; }
+.hand-group.is-ghost { visibility: visible; animation: hand-ghost 1.2s ease-in-out both; /* 1.7s until 2026-10-02 */ will-change: opacity, transform; transform-origin: 50% 50%; }
+.hand-group--visual.is-ghost { animation-delay: .05s; }
+.hand-group--design.is-ghost { animation-delay: .1s; }
 .hand-group.is-ghost .hand-svg { filter: url("#hand-wave"); }
 .hand-group.is-ghost .hand-hot { pointer-events: none; }
 @keyframes hand-ghost {
@@ -790,7 +797,7 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
    project pages read (Special Elite only has Latin, and its full stops and commas sat heavy next to Hangul) */
 html[lang="ko"] :is(.about-strength-claim, .about-strength-evidence, .now-label, .now-claim, .now-evidence, .now-next, .now-lead, .now-media figcaption,
   .timeline-item-title, .timeline-grade, .timeline-item-desc, .timeline-panel-title, .timeline-panel-desc, .timeline-panel-grade,
-  .work-index-title, .archive-card-details span, .detail-meta, .detail-metrics span, .detail-note, .detail-film-label, .about-strength-hint),
+  .work-index-title, .archive-card-details span, .detail-meta, .detail-metrics span, .detail-note, .detail-film-label, .about-strength-hint, .desktop-note span),
 html[lang="ko"] .timeline-item.is-major .timeline-item-title {
   font-family: "Nanum Gothic Coding", "Special Elite", monospace;
 }

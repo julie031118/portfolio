@@ -341,7 +341,7 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     Object.values(groups).forEach((group) => group.classList.add('is-on', 'is-ghost'));
     /* the last note to fade decides the end; the timer is only a safety net */
     groups.design.addEventListener('animationend', endPreview, { once: true });
-    previewTimer = window.setTimeout(endPreview, 3000);
+    previewTimer = window.setTimeout(endPreview, 2200);
   }
 
   function show(key) {

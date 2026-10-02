@@ -71,9 +71,24 @@ window.__siteActions = { toggleLanguage, toggleSound: toggleSiteSound, getLangua
 initGround(); renderNav(); renderDetailShell(); renderLaterSections(); introController = renderIntro(LANG); initNavState();
 window.addEventListener('portfolio:soundchange', renderNav);
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !document.querySelector('#detail')?.hidden) closeDetail(); });
+/* phones: one small note per visit that the site is fuller on a computer; it fades by itself or on tap */
+function showDesktopNote() {
+  if (!window.matchMedia('(max-width: 768px), (hover: none)').matches) return;
+  if (storageGet('sessionStorage', 'yeonseo-desktop-note')) return;
+  storageSet('sessionStorage', 'yeonseo-desktop-note', '1');
+  const note = document.createElement('div'); note.className = 'desktop-note'; note.setAttribute('role', 'note');
+  const text = document.createElement('span'); text.textContent = T(SITE.aboutUi.desktopNote);
+  const close = document.createElement('button'); close.type = 'button'; close.textContent = '×'; close.setAttribute('aria-label', T(SITE.aboutUi.desktopNoteClose));
+  note.append(text, close); document.body.append(note);
+  const hide = () => { note.classList.remove('is-shown'); window.setTimeout(() => note.remove(), 600); };
+  close.addEventListener('click', hide);
+  requestAnimationFrame(() => note.classList.add('is-shown'));
+  window.setTimeout(hide, 8000);
+}
+
 function startRuntime() {
   initScroll();
-  initLoader({ host: introController.host, onComplete: () => { introController.start(); window.__introReady = true; window.dispatchEvent(new Event('portfolio:intro-ready')); window.ScrollTrigger?.refresh(); }, onGesture: () => { setSoundEnabled(true); renderNav(); } });
+  initLoader({ host: introController.host, onComplete: () => { introController.start(); window.__introReady = true; window.dispatchEvent(new Event('portfolio:intro-ready')); window.ScrollTrigger?.refresh(); window.setTimeout(showDesktopNote, 1200); }, onGesture: () => { setSoundEnabled(true); renderNav(); } });
 }
 
 if (document.readyState === 'loading') window.addEventListener('DOMContentLoaded', startRuntime, { once: true });

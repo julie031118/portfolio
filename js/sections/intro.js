@@ -146,7 +146,7 @@ export function renderIntro(siteLang) {
     locked = true;
     if (!previewed) {
       previewed = true;
-      window.setTimeout(() => { if (mode === 'final') hand.preview(); }, 1500);
+      window.setTimeout(() => { if (mode === 'final') hand.preview(); }, 600); /* 1500 until 2026-10-02: too slow to arrive */
     }
   }
 
