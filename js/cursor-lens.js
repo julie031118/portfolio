@@ -1,212 +1,187 @@
 /* A round glass ball under the pointer, after Codrops' "Progressively Enhanced WebGL Lens Refraction" (2023),
-   on a few chosen parts only (2026-10-03): the intro paragraph and the photographs of a project page.
-   It works the same in Chrome and Safari: instead of filtering what lies behind the ball (backdrop-filter with
-   an SVG filter runs in Chrome only), an SVG filter is put on the hovered element itself, and only a small square
-   around the pointer is worked on: inside the ball the element is magnified in the middle and bent near the rim,
-   with its colours fanning apart there, a darker rim and a highlight; everywhere else it is drawn as it is.
-   Safari caches filter results by id, so every move writes a fresh filter with a new id and drops the old one. Phones and reduced motion get nothing; the page-wide version of 2026-10-02 is gone. */
+   on photographs only (2026-10-03): the cover and the pictures of a project page, and the archive cards
+   (under every filter). Like the original it is drawn in WebGL, so Chrome and Safari show the same thing:
+   one small canvas follows the pointer and paints the photo under it again, magnified in the middle, bent
+   and fanned into red / green / blue near the rim, with a darker rim and a highlight. Outside the photo the
+   ball is cut away, so it never spills over the page.
+   (The SVG-filter versions before it ran differently in each browser: Safari bent the wrong pixels and made
+   gallery photos vanish.) The photo under the pointer is found every frame, so the ball is there the moment a
+   project page opens over a still pointer, and it follows when the page scrolls under it.
+   Phones and reduced motion get nothing. */
 
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-/* text: the intro paragraph (its glyphs on a clear ground, so the colours are given as tinted ghosts);
-   photo: an opaque picture, whose own red, green and blue are bent by different amounts */
-const TARGETS = [
-  { selector: '.intro-lines.is-final', kind: 'text' },
-  { selector: '.detail-hero.has-image img, .detail-gallery-item.has-image img', kind: 'photo' },
-];
-
 const LENS = {
-  zoom: .56,      /* the middle shows the element at 1 / .56 ≈ 1.8× */
+  zoom: .56,      /* the middle shows the photo at 1 / .56 ≈ 1.8× */
   rimReach: 1.26, /* at the rim it shows 26 % beyond its own edge */
   curve: 2.2,
-  split: [.9, 1.05, 1.2], /* red, green, blue (photo) · pink ghost, glyph, cyan ghost (text) */
+  split: [.9, 1.05, 1.2], /* how far red, green and blue are bent, relative to each other */
   ease: .22,
 };
-const PAD = 24; /* the filter reaches a little past the element, so nothing at its edge is clipped */
 
-const smooth = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-
-function canvasOf(size, paint) {
-  const canvas = document.createElement('canvas');
-  canvas.width = size; canvas.height = size;
-  const context = canvas.getContext('2d');
-  const image = context.createImageData(size, size);
-  paint(image.data);
-  context.putImageData(image, 0, 0);
-  return canvas.toDataURL('image/png');
-}
-
-/* everything the filter draws is baked once per ball size: the bend map, the disc, the rims, the shine */
-function makeImages(ball) {
-  const size = ball;
-  const r = ball / 2;
-  const shifts = new Float32Array(size * size * 2);
-  let maxShift = 0;
-  for (let y = 0; y < size; y += 1) {
-    for (let x = 0; x < size; x += 1) {
-      const dx = x + .5 - r; const dy = y + .5 - r;
-      const n = Math.hypot(dx, dy) / r;
-      let sx = 0; let sy = 0;
-      if (n < 1) {
-        const reach = LENS.zoom + (LENS.rimReach - LENS.zoom) * Math.pow(n, LENS.curve);
-        sx = dx * (reach - 1); sy = dy * (reach - 1);
-      }
-      const i = (y * size + x) * 2;
-      shifts[i] = sx; shifts[i + 1] = sy;
-      maxShift = Math.max(maxShift, Math.abs(sx), Math.abs(sy));
-    }
+/* which photo is under the pointer, the box it is clipped to, and the colour treatment the page gives it */
+function photoAt(node) {
+  if (!node || node.nodeType !== 1) return null;
+  const card = node.closest('.card-img.has-image');
+  if (card && card.closest('.archive-grid')) {
+    const img = card.querySelector('img');
+    /* a hovered card is veiled in vellum with its title on top: the ball sits between the two, so it shows the
+       photo through the veil and the title stays readable over it */
+    return img ? { img, clip: card, host: card.closest('.archive-card-button'), saturate: .72, contrast: 1.02, veil: .42 } : null; /* .card-img img { filter: saturate(.72) contrast(1.02) } */
   }
-  const scale = Math.max(1, maxShift * 2.02);
-  const each = (fn) => (data) => {
-    for (let y = 0; y < size; y += 1) {
-      for (let x = 0; x < size; x += 1) {
-        const d = Math.hypot(x + .5 - r, y + .5 - r);
-        fn(data, (y * size + x) * 4, d, d / r, x, y);
-      }
-    }
-  };
-  const map = canvasOf(size, each((data, o, d, n, x, y) => {
-    const i = (y * size + x) * 2;
-    data[o] = Math.round((.5 + shifts[i] / scale) * 255);
-    data[o + 1] = Math.round((.5 + shifts[i + 1] / scale) * 255);
-    data[o + 2] = 128; data[o + 3] = 255;
-  }));
-  /* the ball's outline, softened over a pixel */
-  const disc = canvasOf(size, each((data, o, d) => {
-    data[o] = 255; data[o + 1] = 255; data[o + 2] = 255;
-    data[o + 3] = Math.round((1 - smooth(r - 1, r, d)) * 255);
-  }));
-  /* rim for a photo: a grey to multiply with, so the edge darkens in the picture's own colour */
-  const rim = canvasOf(size, each((data, o, d, n) => {
-    const v = 1 - .2 * smooth(.62, .98, n) - .18 * smooth(r - 2.2, r - .3, d);
-    const c = Math.round(Math.max(0, Math.min(1, v)) * 255);
-    data[o] = c; data[o + 1] = c; data[o + 2] = c; data[o + 3] = 255;
-  }));
-  /* rim for text: the same shading as a see-through ring (there is no picture under the glyphs to darken) */
-  const ring = canvasOf(size, each((data, o, d, n) => {
-    const a = .13 * smooth(.62, .98, n) + .2 * smooth(r - 2.2, r - .3, d);
-    data[o] = 70; data[o + 1] = 70; data[o + 2] = 80;
-    data[o + 3] = Math.round(Math.min(1, a) * 255 * (1 - smooth(r - .4, r, d)));
-  }));
-  /* the shine: a soft glare up and to the left, a fainter one low on the right */
-  const glare = (x, y, cx, cy, rx, ry, rot) => {
-    const c = Math.cos(rot); const s = Math.sin(rot);
-    const px = (x - cx) * c + (y - cy) * s; const py = -(x - cx) * s + (y - cy) * c;
-    return Math.max(0, 1 - Math.hypot(px / rx, py / ry));
-  };
-  const shine = canvasOf(size, each((data, o, d, n, x, y) => {
-    const u = x / size; const v = y / size;
-    const a = .5 * Math.pow(glare(u, v, .34, .24, .2, .12, -.32), 1.6) + .16 * Math.pow(glare(u, v, .62, .86, .17, .07, 0), 1.6);
-    data[o] = 255; data[o + 1] = 255; data[o + 2] = 255;
-    data[o + 3] = n < 1 ? Math.round(Math.min(1, a) * 255) : 0;
-  }));
-  return { map, disc, rim, ring, shine, scale };
+  const frame = node.closest('.detail-hero.has-image, .detail-gallery-item.has-image');
+  if (frame) {
+    const img = frame.querySelector('img');
+    if (!img || (node !== img && !frame.classList.contains('detail-hero'))) return null; /* not over a caption */
+    return { img, clip: img, host: null, saturate: 1, contrast: 1 };
+  }
+  return null;
 }
 
-/* one filter, for an element of w × h with the ball's square at (x, y) */
-function filterMarkup(kind, images, ball, w, h, x, y) {
-  const box = `x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${ball}" height="${ball}"`;
-  const all = `x="${-PAD}" y="${-PAD}" width="${w + PAD * 2}" height="${h + PAD * 2}"`;
-  const img = (href, result) => `<feImage href="${href}" ${box} preserveAspectRatio="none" result="${result}"/>`;
-  const bend = (scale, result) => `<feDisplacementMap in="SourceGraphic" in2="map" scale="${(images.scale * scale).toFixed(2)}" xChannelSelector="R" yChannelSelector="G" ${box} result="${result}"/>`;
-  const matrix = (values, input, result) => `<feColorMatrix in="${input}" type="matrix" values="${values}" ${box} result="${result}"/>`;
-  let glass = '';
-  if (kind === 'photo') {
-    const only = (index) => [0, 1, 2].map((row) => [0, 1, 2, 3, 4].map((col) => (col === row && row === index ? 1 : 0)).join(' ')).join('  ') + '  0 0 0 1 0';
-    glass = `${bend(LENS.split[0], 'd0')}${matrix(only(0), 'd0', 'c0')}
-      ${bend(LENS.split[1], 'd1')}${matrix(only(1), 'd1', 'c1')}
-      ${bend(LENS.split[2], 'd2')}${matrix(only(2), 'd2', 'c2')}
-      <feBlend in="c0" in2="c1" mode="screen" ${box} result="c01"/>
-      <feBlend in="c01" in2="c2" mode="screen" ${box} result="bent"/>
-      ${img(images.rim, 'rim')}
-      <feBlend in="bent" in2="rim" mode="multiply" ${box} result="shaded"/>`;
-  } else {
-    /* glyphs: a pink ghost bent least, a cyan ghost bent most, the real glyph between them on top */
-    glass = `${bend(LENS.split[0], 'd0')}${matrix('0 0 0 0 .93  0 0 0 0 .38  0 0 0 0 .66  0 0 0 .85 0', 'd0', 'pink')}
-      ${bend(LENS.split[2], 'd2')}${matrix('0 0 0 0 .18  0 0 0 0 .74  0 0 0 0 .92  0 0 0 .85 0', 'd2', 'cyan')}
-      ${bend(LENS.split[1], 'glyph')}
-      <feMerge ${box} result="bent"><feMergeNode in="cyan"/><feMergeNode in="pink"/><feMergeNode in="glyph"/></feMerge>
-      ${img(images.ring, 'ring')}
-      <feComposite in="ring" in2="bent" operator="over" ${box} result="shaded"/>`;
-  }
-  return `${img(images.map, 'map')}${img(images.disc, 'disc')}
-    ${glass}
-    ${img(images.shine, 'shine')}
-    <feComposite in="shine" in2="shaded" operator="over" ${box} result="lit"/>
-    <feComposite in="lit" in2="disc" operator="in" ${box} result="ball"/>
-    <feComposite in="SourceGraphic" in2="disc" operator="out" ${all} result="rest"/>
-    <feComposite in="ball" in2="rest" operator="over" ${all}/>`;
+const VERT = 'attribute vec2 p; varying vec2 v; void main(){ v = p * .5 + .5; gl_Position = vec4(p, 0., 1.); }';
+const FRAG = `precision highp float;
+varying vec2 v;
+uniform sampler2D tex;
+uniform vec2 origin;     /* the canvas' top left, in page pixels */
+uniform float ball;
+uniform vec4 imgRect;    /* the image box on the page */
+uniform vec4 clipRect;   /* what of it is visible */
+uniform vec4 cover;      /* the picture inside its box (object-fit: cover): offset and size */
+uniform float zoom, reach, curve;
+uniform vec3 split;
+uniform float saturation, contrast, veil;
+vec3 pick(vec2 P) {
+  vec2 uv = (P - imgRect.xy - cover.xy) / cover.zw;
+  return texture2D(tex, clamp(uv, vec2(.0005), vec2(.9995))).rgb;
 }
+float glare(vec2 u, vec2 c, vec2 radius, float rot) {
+  vec2 q = u - c; float cs = cos(rot), sn = sin(rot);
+  q = vec2(q.x * cs + q.y * sn, -q.x * sn + q.y * cs);
+  return max(0., 1. - length(q / radius));
+}
+void main() {
+  vec2 p = vec2(v.x, 1. - v.y) * ball;
+  float r = ball * .5;
+  vec2 d = p - vec2(r);
+  float dist = length(d);
+  float n = dist / r;
+  if (n > 1.) discard;
+  vec2 P = origin + p;
+  if (P.x < clipRect.x || P.y < clipRect.y || P.x > clipRect.x + clipRect.z || P.y > clipRect.y + clipRect.w) discard;
+  float k = zoom + (reach - zoom) * pow(n, curve);
+  vec2 C = origin + vec2(r);
+  vec3 col = vec3(pick(C + d * (1. + (k - 1.) * split.x)).r, pick(C + d * (1. + (k - 1.) * split.y)).g, pick(C + d * (1. + (k - 1.) * split.z)).b);
+  float luma = dot(col, vec3(.2126, .7152, .0722));
+  col = (mix(vec3(luma), col, saturation) - .5) * contrast + .5;
+  col *= 1. - .2 * smoothstep(.62, .98, n) - .18 * smoothstep(r - 2.2, r - .3, dist); /* the rim, in the photo's own colour */
+  vec2 u = p / ball;
+  float shine = min(1., .5 * pow(glare(u, vec2(.34, .24), vec2(.2, .12), -.32), 1.6) + .16 * pow(glare(u, vec2(.62, .86), vec2(.17, .07), 0.), 1.6));
+  col = mix(col, vec3(.945, .945, .953), veil); /* a hovered archive card: a thinner vellum than the card's, so the title reads */
+  col = mix(col, vec3(1.), shine);
+  float edge = 1. - smoothstep(r - 1., r, dist);
+  gl_FragColor = vec4(clamp(col, 0., 1.) * edge, edge);
+}`;
 
 export function initCursorLens() {
-  if (!finePointer.matches || reducedQuery.matches || document.querySelector('.cursor-lens-defs')) return;
+  if (!finePointer.matches || reducedQuery.matches || document.querySelector('.cursor-lens-canvas')) return;
   const ball = Math.round(Math.min(200, Math.max(140, window.innerWidth * .12)));
-  const images = makeImages(ball);
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('class', 'cursor-lens-defs');
-  svg.setAttribute('aria-hidden', 'true');
-  document.body.append(svg);
-  let serial = 0;
-  let current = null; /* the <filter> in use */
+  const canvas = document.createElement('canvas');
+  canvas.className = 'cursor-lens-canvas';
+  canvas.setAttribute('aria-hidden', 'true');
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  canvas.width = Math.round(ball * dpr); canvas.height = Math.round(ball * dpr);
+  canvas.style.width = `${ball}px`; canvas.style.height = `${ball}px`;
+  const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: true, antialias: false });
+  if (!gl) return;
+  document.body.append(canvas);
 
-  let active = null; /* { el, kind, previous } */
-  const pointer = { x: 0, y: 0 };
-  const at = { x: 0, y: 0 };
-  let frame = 0;
-  let last = '';
+  const shader = (type, source) => { const s = gl.createShader(type); gl.shaderSource(s, source); gl.compileShader(s); return s; };
+  const program = gl.createProgram();
+  gl.attachShader(program, shader(gl.VERTEX_SHADER, VERT));
+  gl.attachShader(program, shader(gl.FRAGMENT_SHADER, FRAG));
+  gl.linkProgram(program);
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) { canvas.remove(); return; }
+  gl.useProgram(program);
+  const buffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+  const position = gl.getAttribLocation(program, 'p');
+  gl.enableVertexAttribArray(position);
+  gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
+  const u = (name) => gl.getUniformLocation(program, name);
+  const U = { origin: u('origin'), ball: u('ball'), imgRect: u('imgRect'), clipRect: u('clipRect'), cover: u('cover'), zoom: u('zoom'), reach: u('reach'), curve: u('curve'), split: u('split'), saturation: u('saturation'), contrast: u('contrast'), veil: u('veil') };
+  gl.uniform1f(U.ball, ball); gl.uniform1f(U.zoom, LENS.zoom); gl.uniform1f(U.reach, LENS.rimReach); gl.uniform1f(U.curve, LENS.curve);
+  gl.uniform3f(U.split, ...LENS.split);
+  gl.viewport(0, 0, canvas.width, canvas.height);
+  gl.clearColor(0, 0, 0, 0);
 
-  const release = () => {
-    if (!active) return;
-    active.el.style.filter = active.previous;
-    active = null; last = '';
-    current?.remove(); current = null;
+  /* one texture per photo, uploaded the first time the ball crosses it */
+  const textures = new Map();
+  const textureFor = (img) => {
+    const key = img.currentSrc || img.src;
+    if (textures.has(key)) return textures.get(key);
+    if (!img.complete || !img.naturalWidth) return null;
+    const texture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    try { gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, img); } catch { gl.deleteTexture(texture); return null; }
+    textures.set(key, texture);
+    if (textures.size > 40) { const [oldest] = textures.keys(); gl.deleteTexture(textures.get(oldest)); textures.delete(oldest); }
+    return texture;
   };
-  const draw = () => {
-    frame = 0;
-    if (!active || !active.el.isConnected) { release(); return; }
+
+  const pointer = { x: 0, y: 0, known: false };
+  const at = { x: 0, y: 0 };
+  let current = null;
+  let shown = false;
+  let last = '';
+  const hide = () => { if (shown) { canvas.style.display = 'none'; shown = false; } current = null; last = ''; };
+
+  const frame = () => {
+    requestAnimationFrame(frame);
+    if (!pointer.known || document.hidden) { hide(); return; }
+    const hit = photoAt(document.elementFromPoint(pointer.x, pointer.y));
+    if (!hit) { hide(); return; }
+    const texture = textureFor(hit.img);
+    if (!texture) { hide(); return; }
+    if (!current || current.img !== hit.img) { at.x = pointer.x; at.y = pointer.y; } /* a new photo: start right under the pointer */
+    current = hit;
     at.x += (pointer.x - at.x) * LENS.ease;
     at.y += (pointer.y - at.y) * LENS.ease;
-    const rect = active.el.getBoundingClientRect();
-    const w = Math.round(rect.width); const h = Math.round(rect.height);
-    const x = at.x - rect.left - ball / 2; const y = at.y - rect.top - ball / 2;
-    const key = `${w}|${h}|${x.toFixed(1)}|${y.toFixed(1)}`;
-    if (key !== last) {
-      last = key;
-      const next = document.createElementNS('http://www.w3.org/2000/svg', 'filter');
-      serial += 1;
-      next.id = `cursor-lens-${serial}`;
-      [['filterUnits', 'userSpaceOnUse'], ['primitiveUnits', 'userSpaceOnUse'], ['color-interpolation-filters', 'sRGB'],
-        ['x', -PAD], ['y', -PAD], ['width', w + PAD * 2], ['height', h + PAD * 2]].forEach(([name, value]) => next.setAttribute(name, String(value)));
-      next.innerHTML = filterMarkup(active.kind, images, ball, w, h, x, y);
-      svg.append(next);
-      active.el.style.filter = `url(#${next.id})`;
-      const old = current; current = next;
-      if (old) requestAnimationFrame(() => old.remove());
-    }
-    /* keeps following while it eases in, and while the page scrolls under a still pointer */
-    frame = requestAnimationFrame(draw);
+    const box = hit.img.getBoundingClientRect();
+    const clip = hit.clip === hit.img ? box : hit.clip.getBoundingClientRect();
+    const left = at.x - ball / 2; const top = at.y - ball / 2;
+    const key = `${hit.img.src}|${left.toFixed(1)}|${top.toFixed(1)}|${box.left.toFixed(1)}|${box.top.toFixed(1)}|${box.width.toFixed(1)}|${clip.top.toFixed(1)}`;
+    if (key === last) return;
+    last = key;
+    /* object-fit: cover, centred */
+    const scale = Math.max(box.width / hit.img.naturalWidth, box.height / hit.img.naturalHeight);
+    const dw = hit.img.naturalWidth * scale; const dh = hit.img.naturalHeight * scale;
+    /* over a project page the canvas floats on the page; on an archive card it goes inside the card */
+    const host = hit.host || document.body;
+    if (canvas.parentElement !== host) { host.append(canvas); canvas.classList.toggle('is-in-card', !!hit.host); }
+    const hostBox = hit.host ? hit.host.getBoundingClientRect() : { left: 0, top: 0 };
+    canvas.style.transform = `translate3d(${(left - hostBox.left).toFixed(1)}px, ${(top - hostBox.top).toFixed(1)}px, 0)`;
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.uniform2f(U.origin, left, top);
+    gl.uniform4f(U.imgRect, box.left, box.top, box.width, box.height);
+    gl.uniform4f(U.clipRect, clip.left, clip.top, clip.width, clip.height);
+    gl.uniform4f(U.cover, (box.width - dw) / 2, (box.height - dh) / 2, dw, dh);
+    gl.uniform1f(U.saturation, hit.saturate); gl.uniform1f(U.contrast, hit.contrast); gl.uniform1f(U.veil, hit.veil || 0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    if (!shown) { canvas.style.display = 'block'; shown = true; }
   };
+  requestAnimationFrame(frame);
 
-  const pick = (node) => {
-    for (const target of TARGETS) {
-      const el = node?.closest?.(target.selector);
-      if (el) return { el, kind: target.kind };
-    }
-    return null;
-  };
   window.addEventListener('pointermove', (event) => {
     if (event.pointerType && event.pointerType !== 'mouse') return;
-    pointer.x = event.clientX; pointer.y = event.clientY;
-    const hit = pick(event.target);
-    if (!hit) { release(); return; }
-    if (!active || active.el !== hit.el) {
-      release();
-      active = { el: hit.el, kind: hit.kind, previous: hit.el.style.filter || '' };
-      at.x = pointer.x; at.y = pointer.y; /* a new element: the ball starts right under the pointer */
-    }
-    if (!frame) frame = requestAnimationFrame(draw);
+    pointer.x = event.clientX; pointer.y = event.clientY; pointer.known = true;
   }, { passive: true });
-  document.addEventListener('mouseout', (event) => { if (!event.relatedTarget) release(); });
-  window.addEventListener('blur', release);
+  document.addEventListener('mouseout', (event) => { if (!event.relatedTarget) pointer.known = false; });
+  window.addEventListener('blur', () => { pointer.known = false; });
 }
