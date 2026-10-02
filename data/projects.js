@@ -2,7 +2,7 @@
 window.PROJECTS = [
  {
   "slug": "miraen",
-  "featured": 1,
+  "featured": 4,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -213,7 +213,7 @@ window.PROJECTS = [
  },
  {
   "slug": "ai-short-film",
-  "featured": 3,
+  "featured": 1,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -318,7 +318,7 @@ window.PROJECTS = [
  },
  {
   "slug": "kaftan",
-  "featured": 2,
+  "featured": 3,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -422,7 +422,7 @@ window.PROJECTS = [
  },
  {
   "slug": "fashion-show-2024",
-  "featured": 8,
+  "featured": 6,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -551,7 +551,7 @@ window.PROJECTS = [
  },
  {
   "slug": "campus-festival",
-  "featured": 4,
+  "featured": 5,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -628,7 +628,7 @@ window.PROJECTS = [
  },
  {
   "slug": "art2wear",
-  "featured": 5,
+  "featured": 2,
   "archiveRank": null,
   "tags": [
    "FASHION"
@@ -739,7 +739,7 @@ window.PROJECTS = [
  {
   "slug": "clo3d",
   "featured": null,
-  "archiveRank": 14,
+  "archiveRank": 16,
   "tags": [
    "FASHION"
   ],
@@ -810,8 +810,8 @@ window.PROJECTS = [
  },
  {
   "slug": "sub-motion",
-  "featured": 10,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 17,
   "tags": [
    "CONTENT"
   ],
@@ -833,7 +833,20 @@ window.PROJECTS = [
   "spotify": null,
   "spotifyNote": null,
   "video": "https://www.youtube.com/embed/5P_bMBgHbfE",
-  "video2": "https://www.youtube.com/embed/9abbAMsJ7vo",
+  "video2": "https://drive.google.com/file/d/1pM8zbooE5pAAg7apwDPqp-r-T_QK4Q7H/preview",
+  "video3": "https://www.youtube.com/embed/9abbAMsJ7vo",
+  "filmLabels": {
+   "ko": [
+    "'Toxic Till the End' 티저 (4인 팀)",
+    "'APT' 타이포그래피 (2인 팀)",
+    "'후라이의 꿈' 캐릭터 애니메이션 (4인 팀, 조장)"
+   ],
+   "en": [
+    "'Toxic Till the End' teaser (team of 4)",
+    "'APT' typography (team of 2)",
+    "'Fry's Dream' character animation (team of 4, team lead)"
+   ]
+  },
   "nar": {
    "ko": {
     "title": "모션그래픽",
@@ -881,8 +894,8 @@ window.PROJECTS = [
  },
  {
   "slug": "senior-fit",
-  "featured": 11,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 14,
   "tags": [
    "FASHION",
    "INSIGHT"
@@ -1106,7 +1119,7 @@ window.PROJECTS = [
  {
   "slug": "textile-printed",
   "featured": null,
-  "archiveRank": 20,
+  "archiveRank": 11,
   "tags": [
    "FASHION"
   ],
@@ -1164,7 +1177,7 @@ window.PROJECTS = [
  {
   "slug": "textile-woven",
   "featured": null,
-  "archiveRank": 21,
+  "archiveRank": 12,
   "tags": [
    "FASHION"
   ],
@@ -1225,7 +1238,7 @@ window.PROJECTS = [
  {
   "slug": "textile-knit",
   "featured": null,
-  "archiveRank": 22,
+  "archiveRank": 13,
   "tags": [
    "FASHION"
   ],
@@ -1283,7 +1296,7 @@ window.PROJECTS = [
  {
   "slug": "adaptive-textile",
   "featured": null,
-  "archiveRank": 13,
+  "archiveRank": 20,
   "tags": [
    "FASHION",
    "INSIGHT"
@@ -1366,7 +1379,7 @@ window.PROJECTS = [
  {
   "slug": "korean-costume",
   "featured": null,
-  "archiveRank": 23,
+  "archiveRank": 21,
   "tags": [
    "FASHION"
   ],
@@ -1414,7 +1427,7 @@ window.PROJECTS = [
  {
   "slug": "seoul-metro",
   "featured": null,
-  "archiveRank": 24,
+  "archiveRank": 22,
   "tags": [
    "CONTENT"
   ],
@@ -1439,7 +1452,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "서울교통공사 홍보영상",
-    "cat": "일러스트 · 모션그래픽 · 공모전 · 2인 · 2025",
+    "cat": "일러스트 · 모션그래픽 · 공모전 출품 · 2인 · 2025",
     "headline": "지하철 노선을 손으로 그려 움직이게 하고, 그 선이 마지막에 글자로 모이게 했다.",
     "need": "노선도는 정보이지 이야기가 아니다. 공모전 영상에서 노선도를 그대로 보여주면 끝까지 보지 않는다.",
     "action": [
@@ -1451,7 +1464,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Seoul Metro Promo Video",
-    "cat": "Illustration · Motion · Contest · 2 people · 2025",
+    "cat": "Illustration · Motion · Contest Entry · 2 people · 2025",
     "headline": "Subway lines, hand-drawn and set moving, resolving at the end into type.",
     "need": "A transit map is information, not a story. Show it as-is in a contest film and nobody watches to the end.",
     "action": [
@@ -1467,7 +1480,7 @@ window.PROJECTS = [
  },
  {
   "slug": "denim-2026",
-  "featured": 7,
+  "featured": 8,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -1630,7 +1643,7 @@ window.PROJECTS = [
  {
   "slug": "fashion-illustration",
   "featured": null,
-  "archiveRank": 26,
+  "archiveRank": 23,
   "tags": [
    "FASHION"
   ],
@@ -1677,7 +1690,7 @@ window.PROJECTS = [
  },
  {
   "slug": "portfolio-site",
-  "featured": 12,
+  "featured": 10,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -1869,7 +1882,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "경주 APEC 홍보 영상",
-    "cat": "AI 영상",
+    "cat": "AI 영상 · 공모전 출품 · 2025",
     "need": "2025 APEC 경주 특별전시를 주제로 한 공모전 출품작으로, ‘전통은 보존된 과거’라는 통념을 벗어나야 했다. 유네스코 세계유산 공간에서 아홉 개의 전통 무용을 실제로 촬영하는 것은 개인 제작자에게 불가능했고, 그럼에도 국가 행사에 걸맞은 스케일이 요구됐다.",
     "action": [
      "신라 김현감호 설화를 시적 프롤로그로 시각화해 영상의 진입점을 설화에서 출발시킴",
@@ -1889,7 +1902,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Gyeongju APEC Promo Film",
-    "cat": "AI Film",
+    "cat": "AI Film · Contest Entry · 2025",
     "need": "An entry built on the brief of the 2025 APEC Special Exhibition in Gyeongju, which had to break the assumption that heritage is a preserved past. Filming nine traditional dances across UNESCO World Heritage sites was impossible for a solo maker, and the result still had to carry the scale of a national event.",
     "action": [
      "Opened on the Silla legend of Kim Hyun-gam-ho as a poetic prologue, entering the film through myth rather than description",
@@ -1914,7 +1927,7 @@ window.PROJECTS = [
  {
   "slug": "unreal-engine",
   "featured": null,
-  "archiveRank": 25,
+  "archiveRank": 18,
   "tags": [
    "CONTENT"
   ],
@@ -1959,7 +1972,7 @@ window.PROJECTS = [
  },
  {
   "slug": "arts-week-2026",
-  "featured": 6,
+  "featured": 7,
   "archiveRank": null,
   "tags": [
    "FASHION"

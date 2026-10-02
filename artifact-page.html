@@ -119,9 +119,9 @@ main { overflow: clip; }
 .hand-group:not(.is-on) .hand-sub text, .hand-group:not(.is-on) .hand-sub .hand-dots, .hand-group:not(.is-on) .hand-sub path { transition-delay: 0s; transition-duration: 0s; }
 .hand-hot { position: absolute; display: block; cursor: default; }
 /* the first look: every note at once, faint, rippling like water, then gone */
-.hand-group.is-ghost { visibility: visible; animation: hand-ghost 2.8s ease-in-out both; will-change: opacity, transform; transform-origin: 50% 50%; }
-.hand-group--visual.is-ghost { animation-delay: .18s; }
-.hand-group--design.is-ghost { animation-delay: .36s; }
+.hand-group.is-ghost { visibility: visible; animation: hand-ghost 1.7s ease-in-out both; will-change: opacity, transform; transform-origin: 50% 50%; }
+.hand-group--visual.is-ghost { animation-delay: .08s; }
+.hand-group--design.is-ghost { animation-delay: .16s; }
 .hand-group.is-ghost .hand-svg { filter: url("#hand-wave"); }
 .hand-group.is-ghost .hand-hot { pointer-events: none; }
 @keyframes hand-ghost {
@@ -320,10 +320,10 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .about-strength-list { margin: 42px 0 0; padding: 0; list-style: none; }
 .about-strength-item { position: relative; padding: 24px 0; border-top: 1px solid var(--hairline); }
 .about-strength-item:last-child { border-bottom: 1px solid var(--hairline); }
-.about-strength-claim { margin: 0; font: 400 20px/1.45 var(--font-serif-ko); }
-html[lang="en"] .about-strength-claim { font-family: var(--font-serif-en); }
+.about-strength-claim { margin: 0; font: 400 17px/1.55 var(--font-mono); letter-spacing: .01em; }
+
 .about-strength-keyword { display: inline; border: 0; padding: 0; background: transparent; color: var(--ink); font: inherit; cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
-.about-strength-evidence { margin: 8px 0 0; color: var(--ink-2); font: 12px/1.65 var(--font-mono); }
+.about-strength-evidence { margin: 8px 0 0; color: #4A4D55; font: 12px/1.65 var(--font-mono); } /* ink-2 got lost on the warm photos */
 .about-strength-inline { display: none; margin-top: 18px; }
 .about-photo { position: relative; width: min(100%,440px); margin: 0 0 0 auto; }
 .about-photo-frame { position: relative; aspect-ratio: 3/4; overflow: hidden; border: 1px dotted var(--ink-2); background: var(--placeholder); }
@@ -334,6 +334,10 @@ html[lang="en"] .about-strength-claim { font-family: var(--font-serif-en); }
 .about-photo--stack .about-photo-frame--2 { right: 0; top: 0; width: 55%; aspect-ratio: 4/3; z-index: 2; }
 .about-photo--stack .about-photo-frame--3 { right: 6%; bottom: 0; width: 47%; aspect-ratio: 4/3; z-index: 3; }
 .about-photo--stack figcaption { position: absolute; right: 0; bottom: -22px; }
+/* two photos: the portrait, and the café shot tucked over its lower right corner */
+.about-photo--count-2 { aspect-ratio: 1 / .98; }
+.about-photo--count-2 .about-photo-frame--1 { top: 0; width: 66%; }
+.about-photo--count-2 .about-photo-frame--2 { right: 0; top: auto; bottom: 0; width: 52%; aspect-ratio: 4/3; }
 .about-photo-frame img, .strength-media-frame img, .strength-inline-frame img { width: 100%; height: 100%; display: none; object-fit: cover; }
 .about-photo-frame.has-image img, .strength-media-frame.has-image img, .strength-inline-frame.has-image img { display: block; }
 .about-photo-frame > span, .strength-media-frame > span, .strength-inline-frame > span { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-2); font: 11px/1 var(--font-mono); letter-spacing: .1em; }
@@ -353,11 +357,11 @@ html[lang="en"] .about-strength-claim { font-family: var(--font-serif-en); }
 .about-stat span { color: var(--ink-2); font: 11px/1.4 var(--font-mono); letter-spacing: .08em; }
 .about-timeline { position: relative; width: 100vw; margin: 120px 0 0 calc(50% - 50vw); }
 .timeline-pin { position: relative; height: 100vh; min-height: 680px; overflow: hidden; background: transparent; }
-.timeline-topline { position: absolute; top: calc(var(--nav-height) + 28px); left: 28px; right: 28px; z-index: 4; display: flex; justify-content: space-between; align-items: center; }
+.timeline-topline { position: absolute; top: calc(var(--nav-height) + 68px + (100% - var(--nav-height) - 68px) * .46 - 240px); left: 28px; right: 28px; z-index: 4; display: flex; justify-content: space-between; align-items: center; }
 .timeline-topline h2 { margin: 0; font: inherit; }
 .timeline-topline-arrow { font-family: var(--font-body-ko); } /* the typewriter face has no arrow glyph */
 .timeline-viewport { position: absolute; inset: calc(var(--nav-height) + 68px) 0 0; overflow: hidden; perspective: 900px; }
-.timeline-track { position: relative; height: 100%; display: flex; width: max-content; padding: 0 38vw; transform-style: preserve-3d; }
+.timeline-track { position: relative; height: 100%; display: flex; width: max-content; padding: 0 14vw 0 6vw; transform-style: preserve-3d; }
 .timeline-track::before { content: ''; position: absolute; top: 46%; left: 0; right: 0; border-top: 1px solid var(--ink-2); }
 .timeline-segment { position: relative; flex: 0 0 720px; height: 100%; }
 .timeline-segment-marker { position: absolute; top: calc(46% - 24px); left: 0; display: flex; flex-direction: column; gap: 30px; }
@@ -384,16 +388,16 @@ html[lang="en"] .about-strength-claim { font-family: var(--font-serif-en); }
 .timeline-item-date { color: #555861; }
 .timeline-item { text-shadow: 0 0 14px rgba(246,245,242,.55); }
 .timeline-item.is-major { color: var(--ink); }
-.timeline-item.is-major .timeline-item-title { font: 400 18px/1.25 var(--font-serif-ko); }
-html[lang="en"] .timeline-item.is-major .timeline-item-title { font-family: var(--font-serif-en); }
+.timeline-item.is-major .timeline-item-title { font: 400 15px/1.4 var(--font-mono); letter-spacing: .02em; }
+
 .timeline-item-desc { display: none; }
 .timeline-side-panel { position: fixed; top: var(--nav-height); right: 0; bottom: 0; z-index: 55; width: 380px; border-left: 1px solid var(--hairline); background: var(--paper); transform: translateX(100%); transition: transform .25s ease; pointer-events: none; }
 .timeline-side-panel.is-open { transform: translateX(0); pointer-events: auto; }
 .timeline-panel-inner { padding: 72px 34px; }
 .timeline-panel-date, .timeline-panel-grade { margin: 0; color: var(--ink-2); font: 11px/1.5 var(--font-mono); letter-spacing: .08em; }
-.timeline-panel-title { margin: 18px 0 10px; font: 400 30px/1.15 var(--font-serif-ko); }
-html[lang="en"] .timeline-panel-title { font-family: var(--font-serif-en); }
-.timeline-panel-desc { margin: 42px 0; color: var(--ink); font: 14px/1.75 var(--font-body-ko); }
+.timeline-panel-title { margin: 18px 0 10px; font: 400 22px/1.4 var(--font-mono); letter-spacing: .02em; }
+
+.timeline-panel-desc { margin: 42px 0; color: var(--ink); font: 13px/1.85 var(--font-mono); }
 .timeline-panel-open { border: 0; padding: 8px 0; background: transparent; color: var(--ink); font: 11px/1 var(--font-mono); letter-spacing: .08em; cursor: pointer; }
 .about-skills { display: grid; grid-template-columns: 150px 1fr; gap: 34px; padding: 76px 0 0; }
 .about-skill-groups { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
@@ -407,7 +411,7 @@ html[lang="en"] .timeline-panel-title { font-family: var(--font-serif-en); }
   .about-section { padding: calc(var(--nav-height) + 28px) 16px 64px; }
   .about-strengths-grid { grid-template-columns: 1fr; gap: 48px; padding: 64px 0 72px; }
   .about-strength-list { margin-top: 28px; }
-  .about-strength-claim { font-size: 20px; }
+  .about-strength-claim { font-size: 16px; }
   .about-strength-inline { width: min(62vw,240px); aspect-ratio: 4/5; }
   .about-strength-item.is-media-open .about-strength-inline { display: block; }
   .about-photo { width: 100%; margin: 0; }
@@ -434,8 +438,8 @@ html[lang="en"] .timeline-panel-title { font-family: var(--font-serif-en); }
   .timeline-item::before, .timeline-item:nth-child(n)::before { left: -28px; bottom: auto; top: 26px; width: 16px; height: 0; border-left: 0; border-top: 1px solid var(--hairline); }
   .timeline-item-date { font-size: 10px; }
   .timeline-item-title { color: var(--ink-2); font-size: 12px; }
-  .timeline-item.is-major .timeline-item-title { color: var(--ink); font-size: 18px; }
-  .timeline-item-desc { display: block; margin-top: 9px; color: #4A4D55; font: 12px/1.65 var(--font-body-ko); }
+  .timeline-item.is-major .timeline-item-title { color: var(--ink); font-size: 16px; }
+  .timeline-item-desc { display: block; margin-top: 9px; color: #4A4D55; font: 12px/1.7 var(--font-mono); }
   .about-skills { grid-template-columns: 1fr; gap: 20px; padding-top: 48px; }
   .about-skill-groups { grid-template-columns: 1fr 1fr; gap: 24px 18px; }
 }
@@ -489,8 +493,8 @@ html[lang="en"] .archive-card-title { font-family: var(--font-serif-en); }
 .now-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0 clamp(28px,3.4vw,56px); margin: 0; padding: 0; list-style: none; }
 .now-item { padding: 28px 0 8px; }
 .now-label { margin: 0 0 14px; color: #5F636C; font: 11px/1.4 var(--font-mono); letter-spacing: .06em; }
-.now-claim { margin: 0; color: var(--ink); font: 400 20px/1.45 var(--font-serif-ko); }
-html[lang="en"] .now-claim { font-family: var(--font-serif-en); }
+.now-claim { margin: 0; color: var(--ink); font: 400 17px/1.55 var(--font-mono); letter-spacing: .01em; }
+
 html[lang="ko"] .now-claim, html[lang="ko"] .now-evidence, html[lang="ko"] .about-strength-evidence { word-break: keep-all; overflow-wrap: anywhere; }
 .now-evidence { margin: 10px 0 0; color: #5F636C; font: 12px/1.65 var(--font-mono); }
 /* the AI class clip: small, square, looping while on screen */
@@ -522,7 +526,7 @@ html[lang="ko"] .now-next, html[lang="ko"] .now-lead { word-break: keep-all; ove
   .archive-card-details { gap: 2px 8px; font-size: 10px; }
   .now-block { margin-top: 64px; padding: 22px 18px 10px; }
   .now-head { font-size: 11px; }
-  .now-claim { font-size: 18px; }
+  .now-claim { font-size: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -584,7 +588,7 @@ html[lang="ko"] .now-next, html[lang="ko"] .now-lead { word-break: keep-all; ove
 .mindmap-line.is-visible { opacity: 1; stroke-dashoffset: 0; }
 
 /* One baseline and 220px item allocations. */
-.timeline-track::before { top: 46%; height: 1px; border: 0; background: var(--ink-2); z-index: 1; }
+.timeline-track::before { top: 46%; height: 1px; border: 0; background: rgba(29,29,31,.62); box-shadow: 0 1px 0 rgba(250,250,251,.5); z-index: 1; } /* ink-2 vanished on mid-grey photos */
 .timeline-segment { z-index: 2; flex-basis: 380px; }
 .timeline-segment--count-2 { flex-basis: 600px; }
 .timeline-segment--count-3 { flex-basis: 820px; }
@@ -779,6 +783,15 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
 
 /* Korean line breaking: keep words whole in headings. */
 html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"] .archive-card-title, html[lang="ko"] .timeline-item-title, html[lang="ko"] .timeline-panel-title, html[lang="ko"] .about-strength-claim, html[lang="ko"] .work-tooltip, html[lang="ko"] .work-card-title { word-break: keep-all; overflow-wrap: anywhere; }
+
+/* Korean prose set in the mono voice: Hangul and its punctuation in Nanum Gothic Coding, the way the intro and the
+   project pages read (Special Elite only has Latin, and its full stops and commas sat heavy next to Hangul) */
+html[lang="ko"] :is(.about-strength-claim, .about-strength-evidence, .now-label, .now-claim, .now-evidence, .now-next, .now-lead, .now-media figcaption,
+  .timeline-item-title, .timeline-grade, .timeline-item-desc, .timeline-panel-title, .timeline-panel-desc, .timeline-panel-grade,
+  .work-index-title, .archive-card-details span, .detail-meta, .detail-metrics span, .detail-note),
+html[lang="ko"] .timeline-item.is-major .timeline-item-title {
+  font-family: "Nanum Gothic Coding", "Special Elite", monospace;
+}
 
 </style>
 <script>window.REVIEW_LABELS = location.hash === '#review'; if (window.REVIEW_LABELS) document.documentElement.classList.add('is-review'); window.REVIEW_MODEL = 'models/review/plate-flower.gltf.json'; /* review build: open with #review for image ids and GL badges; the model is split into .json/.wasm/.jpg because the artifact host serves only listed extensions and blocks blob: textures */</script>

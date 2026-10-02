@@ -146,7 +146,17 @@ export function renderArchive(lang) {
     });
   }
 
+  /* a filter can carry its own order (SITE.archiveUi.order, keyed by tag): the cards are re-appended in that order.
+     Moving DOM nodes (not inline `order`) because finishFlip wipes every inline style. */
+  function orderCards() {
+    const tag = SITE.archiveUi.filters.find((item) => item.label === activeFilter)?.tag;
+    const list = (tag && SITE.archiveUi.order?.[tag]) || [];
+    const rank = (index) => { const at = list.indexOf(projects[index].slug); return at < 0 ? list.length + index : at; };
+    cards.map((card, index) => index).sort((a, b) => rank(a) - rank(b)).forEach((index) => grid.append(cards[index]));
+  }
+
   function toggleCards() {
+    orderCards();
     cards.forEach((card, index) => { card.hidden = !projectMatches(projects[index], activeFilter); });
   }
 

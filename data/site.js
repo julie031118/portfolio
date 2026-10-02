@@ -5,7 +5,7 @@ window.SITE = {
     wordmark: 'YEONSEO LEE',
     links: [
       { label: 'INTRO', target: '#intro' },
-      { label: 'WORK', target: '#work' },
+      { label: 'SELECTED', target: '#work' }, /* was WORK (연서, 2026-10-02): SELECTED names the ring, ARCHIVE holds everything */
       { label: 'ABOUT', target: '#about' },
       { label: 'ARCHIVE', target: '#archive' },
       { label: 'NOW', target: '#now' },
@@ -64,7 +64,7 @@ window.SITE = {
   profile: {
     name: { ko: '이연서', en: 'Yeonseo Lee' },
     photo: 'img/profile-3.jpg',
-    photos: ['img/profile-3.jpg', 'img/profile-1.jpg', 'img/profile-2.jpg'], /* stacked collage — order: big portrait, selfie, café */
+    photos: ['img/profile-3.jpg', 'img/profile-2.jpg'], /* stacked collage: big portrait, café (the landscape selfie came out, 2026-10-02) */
     photoAlt: { ko: '이연서 프로필 사진', en: 'Portrait of Yeonseo Lee' },
     email: 'julie031118@gmail.com',
     linkedin: 'https://www.linkedin.com/in/yeonseo-lee-64b970388/',
@@ -75,21 +75,21 @@ window.SITE = {
       {
         claim: { ko: '제 취향을 고집하지 않고, 보는 사람과 콘셉트에 맞춰 비주얼을 바꿉니다.', en: 'I don’t hold on to my own taste. I shape the visuals around the audience and the concept.' },
         keyword: { ko: '보는 사람과 콘셉트', en: 'the audience and the concept' },
-        evidence: { ko: '40~50대가 실제로 보는 릴스를 먼저 분석해 세 자리 조회수를 2.8만으로 올렸다. 미래엔수학, 2025 · 어르신 한 분을 여러 번 만나 굽은 등과 어깨 비대칭에 맞춰 코트를 설계했다. 인체공학적 의복디자인, 2024', en: 'Studied the Reels women in their 40s and 50s actually watch; views went from three digits to 28K. MiraeN Math, 2025 · Met one senior model several times and cut his coat around a curved back and uneven shoulders. Ergonomic Clothing Design, 2024' },
+        evidence: { ko: '40~50대가 실제로 보는 릴스를 먼저 분석해 세 자리 조회수를 2.8만으로 올렸다(미래엔수학). 어르신 한 분을 여러 번 만나 굽은 등과 어깨 비대칭에 맞춰 코트를 설계했다(인체공학적 의복디자인).', en: 'Studied the Reels women in their 40s and 50s actually watch; views went from three digits to 28K (MiraeN Math). Met one senior model several times and cut his coat around a curved back and uneven shoulders (Ergonomic Clothing Design).' },
         media: 'img/strength-1-miraen.jpg',
         link: 'miraen',
       },
       {
         claim: { ko: '머리로 기획하고, 몸으로 끝까지 만듭니다.', en: 'I plan it in my head and build it all the way through with my hands.' },
         keyword: { ko: '몸으로 끝까지', en: 'all the way through' },
-        evidence: { ko: '54인치 프린터로 100인치 카프탄을 세 패널로 나눠 찍어 Wilson College Collection 영구 소장. Art2Wear 〈공생〉은 디자인과 제작부터 런웨이 모델까지 맡았다. 교환학생 1년 동안 인턴 3곳과 아르바이트를 병행하면서 전 과목 A(GPA 4.0). 2025~2026', en: 'Printed a 100-inch kaftan on a 54-inch printer in three panels; it is now in the Wilson College Collection. Took Art2Wear’s Tensed Symbiosis from design and construction to walking it on the runway. One exchange year with three internships and a part-time job alongside, and straight A’s (GPA 4.0). 2025 to 2026' },
-        media: 'img/strength-2-kaftan.jpg',
-        link: 'kaftan',
+        evidence: { ko: 'Art2Wear 〈공생〉은 디자인과 제작부터 직접 입고 런웨이에 서기까지, 패션쇼 〈형〉은 디자인부터 무대까지, 데님 공모전은 AI 시뮬레이션부터 실물 한 벌까지 끝까지 해냈다. 교환학생 1년 동안 인턴 3곳과 아르바이트를 병행하면서 전 과목 A(GPA 4.0).', en: 'Art2Wear’s Tensed Symbiosis, from design and construction to walking it on the runway myself; the SNU Fashion Show ‘Hyeong’, from design to the stage; the denim contest, from AI simulation to one finished garment. One exchange year with three internships and a part-time job alongside, and straight A’s (GPA 4.0).' },
+        media: 'img/strength-2-art2wear-making.jpg', /* art2wear/30: making it by hand (연서, 2026-10-02) */
+        link: 'art2wear',
       },
       {
         claim: { ko: '머릿속 그림을 AI로 바로 눈에 보이는 결과물로 만듭니다.', en: 'I turn the picture in my head into something you can see, with AI.' },
         keyword: { ko: '눈에 보이는 결과물', en: 'something you can see' },
-        evidence: { ko: 'AI 단편영화를 혼자 연출해 대상. 카프탄과 데님은 자르기 전에 AI로 먼저 입혀 봤다. 지금 보고 있는 이 포트폴리오도 코딩 없이 AI와 함께 기획부터 구현까지 직접 만들었다. 더 섬세하게 다루고 싶어서, 인공지능예술실습에서 생성 모델을 직접 학습시키며 원리부터 배우는 중. 2025~2026', en: 'Directed an AI short film solo and won the grand prize. Tried the kaftan and the denim on a body with AI before cutting. And this portfolio you are looking at: planned and built with AI from concept to code, with no coding background. To get finer control, I am now training generative models myself in Deep Learning for Artists. 2025 to 2026' },
+        evidence: { ko: 'AI 단편영화를 혼자 연출해 대상. 카프탄과 데님은 자르기 전에 AI로 먼저 입혀 봤다. 지금 보고 있는 이 포트폴리오도 코딩 없이 AI와 함께 기획부터 구현까지 직접 만들었다. 더 섬세하게 다루고 싶어서, 인공지능예술실습에서 생성 모델을 직접 학습시키며 원리부터 배우는 중.', en: 'Directed an AI short film solo and won the grand prize. Tried the kaftan and the denim on a body with AI before cutting. And this portfolio you are looking at: planned and built with AI from concept to code, with no coding background. To get finer control, I am now training generative models myself in Deep Learning for Artists.' },
         media: 'images/projects/ai-short-film/11.jpg',
         link: 'ai-short-film',
       },
@@ -102,10 +102,10 @@ window.SITE = {
     ],
 
     skills: [
-      { group: { ko: '콘텐츠 · 영상', en: 'Content & Film' }, items: ['Premiere Pro', 'After Effects', 'CapCut', { ko: '채널 운영 · 유료광고', en: 'Channel ops & paid media' }, { ko: '숏폼 기획', en: 'Short-form planning' }] },
-      { group: { ko: 'AI', en: 'AI' }, items: ['Midjourney', 'Kling AI', 'Suno', 'ElevenLabs', 'ComfyUI', { ko: '2D→3D 캐릭터 변환', en: '2D→3D character conversion' }] },
-      { group: { ko: '패션 · 텍스타일', en: 'Fashion & Textile' }, items: ['CLO 3D', 'Blender', 'NedGraphics', { ko: '엔지니어드 프린트', en: 'Engineered print' }, { ko: '제직·편직·날염', en: 'Weaving, knitting, printing' }, { ko: '패턴 · 봉제', en: 'Pattern & construction' }] },
-      { group: { ko: '디자인', en: 'Design' }, items: ['Photoshop', 'Illustrator', 'InDesign', { ko: '브랜딩 · 캐릭터 전개', en: 'Branding & character systems' }] },
+      { group: { ko: '콘텐츠 · 마케팅', en: 'Content & Marketing' }, items: ['Premiere Pro', 'After Effects', 'CapCut', { ko: '숏폼 기획', en: 'Short-form planning' }, { ko: '채널 운영과 유료광고', en: 'Channel ops & paid media' }, { ko: '브랜딩과 캐릭터 IP 확장', en: 'Branding & character IP' }] },
+      { group: { ko: 'AI 툴', en: 'AI Tools' }, items: ['Midjourney', 'Kling AI', 'Suno', 'Riffusion', 'ElevenLabs', 'Tripo', 'Manus', 'Claude Code'] },
+      { group: { ko: '패션 · 텍스타일', en: 'Fashion & Textile' }, items: ['CLO 3D', 'NedGraphics', { ko: '엔지니어드 프린트', en: 'Engineered print' }, { ko: '텍스타일 제작(프린트, 직조, 니트)', en: 'Textile making (print, weave, knit)' }, { ko: '패턴과 봉제', en: 'Pattern & construction' }] },
+      { group: { ko: '디자인 · 3D', en: 'Design & 3D' }, items: ['Photoshop', 'Illustrator', 'Blender'] },
     ],
   },
 
@@ -238,6 +238,13 @@ window.SITE = {
       { label: 'ALL', tag: null }, { label: 'FASHION', tag: 'FASHION' }, { label: 'CONTENT', tag: 'CONTENT' },
       { label: 'AI WORKS', tag: 'AI' }, { label: 'INSIGHT', tag: 'INSIGHT' },
     ],
+    /* each filter can have its own order (연서, 2026-10-02); ALL and any slug left out follow featured, then archiveRank */
+    order: {
+      FASHION: ['art2wear', 'kaftan', 'fashion-show-2024', 'arts-week-2026', 'denim-2026', 'textile-printed', 'textile-woven', 'textile-knit', 'senior-fit', 'clo3d', 'engineered-surfaces', 'adaptive-textile', 'korean-costume', 'fashion-illustration'],
+      CONTENT: ['ai-short-film', 'miraen', 'directing-a-year', 'fashion-show-2024', 'campus-festival', 'promo-video-ai', 'portfolio-site', 'sub-motion', 'unreal-engine', 'seoul-metro'],
+      AI: ['ai-short-film', 'promo-video-ai', 'kaftan', 'denim-2026', 'portfolio-site', 'directing-a-year', 'miraen'],
+      INSIGHT: ['miraen', 'senior-fit', 'campus-festival', 'directing-a-year', 'adaptive-textile'],
+    },
   },
   /* NOW: what I am learning this term. Sits under the archive grid (#now), same weight as the 3 strengths.
      Facts from 연서's class notes (Notion, weeks 1 to 5). The class show was cancelled by vote: do not mention it. */
@@ -303,5 +310,5 @@ window.SITE = {
 
   contactUi: { title: "LET'S TALK.", linkedin: 'LINKEDIN ↗', imageSlot: 'IMAGE 16:9', caption: '05 / 06', footerLeft: '© 2026 YEONSEO LEE' },
   detail: { resultTbc: 'RESULT: TO BE CONFIRMED' },
-  detailUi: { heroSlot: 'IMAGE 16:9', gallerySlot: 'IMAGE', period: 'PERIOD', role: 'ROLE', need: 'NEED', action: 'ACTION', result: 'RESULT', gallery: 'GALLERY', process: { ko: '작업과정', en: 'PROCESS' }, film: 'FILM', watch: { ko: 'YouTube에서 보기 ↗', en: 'Watch on YouTube ↗' }, fullSong: { ko: 'YouTube에서 전곡 ↗', en: 'Full song on YouTube ↗' }, press: 'PRESS', soundtrack: 'SOUNDTRACK', close: 'CLOSE', closeExpanded: 'CLOSE −' },
+  detailUi: { heroSlot: 'IMAGE 16:9', gallerySlot: 'IMAGE', period: 'PERIOD', role: 'ROLE', need: 'NEED', action: 'ACTION', result: 'RESULT', gallery: 'GALLERY', process: { ko: '작업과정', en: 'PROCESS' }, film: 'FILM', watch: { ko: 'YouTube에서 보기 ↗', en: 'Watch on YouTube ↗' }, watchDrive: { ko: 'Google Drive에서 보기 ↗', en: 'Watch on Google Drive ↗' }, fullSong: { ko: 'YouTube에서 전곡 ↗', en: 'Full song on YouTube ↗' }, press: 'PRESS', soundtrack: 'SOUNDTRACK', close: 'CLOSE', closeExpanded: 'CLOSE −' },
 };

@@ -231,7 +231,8 @@ function renderProject(detail, project, lang) {
     content.append(note);
   }
 
-  const films = [project.video, project.video2].filter(Boolean);
+  const films = [project.video, project.video2, project.video3].filter(Boolean);
+  const filmLabels = project.filmLabels ? (project.filmLabels[lang] || project.filmLabels.ko || []) : [];
   if (films.length) {
     const filmSection = document.createElement('section');
     filmSection.className = 'detail-films';
@@ -248,11 +249,26 @@ function renderProject(detail, project, lang) {
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
       frame.append(iframe);
+      if (filmLabels[index]) {
+        const caption = document.createElement('p');
+        caption.className = 'detail-film-label';
+        caption.textContent = filmLabels[index];
+        filmSection.append(caption);
+      }
       filmSection.append(frame);
       /* a plain link under every film: the embed can be blocked (the review preview blocks all outside
          frames, some browsers block YouTube cookies), and then this is the way to the video */
       const id = (source.match(/(?:embed\/|youtu\.be\/|[?&]v=)([A-Za-z0-9_-]{6,})/) || [])[1];
-      if (id) {
+      /* Google Drive films (APT: a team file that was never put on YouTube) link back to Drive's own page */
+      const driveId = (source.match(/drive\.google\.com\/file\/d\/([A-Za-z0-9_-]{10,})/) || [])[1];
+      if (driveId) {
+        const link = document.createElement('a');
+        link.className = 'detail-film-link';
+        link.href = `https://drive.google.com/file/d/${driveId}/view`;
+        link.target = '_blank'; link.rel = 'noopener noreferrer';
+        link.textContent = translated(SITE.detailUi.watchDrive, lang) || 'Watch on Google Drive ↗';
+        filmSection.append(link);
+      } else if (id) {
         const link = document.createElement('a');
         link.className = 'detail-film-link';
         link.href = `https://www.youtube.com/watch?v=${id}`;

@@ -59,7 +59,7 @@ export function renderAbout(lang) {
       <div class="section-heading"><span>${SITE.sections.about.title}</span><span class="section-heading__index">${SITE.sections.about.index}</span></div>
       <section class="about-strengths-grid" aria-labelledby="about-strengths-title">
         <div class="about-strengths-copy"><p id="about-strengths-title" class="about-kicker">${SITE.aboutUi.strengths}</p><ol class="about-strength-list"></ol></div>
-        <figure class="about-photo about-photo--stack">${(SITE.profile.photos || [SITE.profile.photo]).map((_, index) => mediaMarkup(`about-photo-frame about-photo-frame--${index + 1}`, SITE.aboutUi.photoSlot)).join('')}<figcaption>${SITE.aboutUi.profile}</figcaption></figure>
+        <figure class="about-photo about-photo--stack about-photo--count-${(SITE.profile.photos || [SITE.profile.photo]).length}">${(SITE.profile.photos || [SITE.profile.photo]).map((_, index) => mediaMarkup(`about-photo-frame about-photo-frame--${index + 1}`, SITE.aboutUi.photoSlot)).join('')}<figcaption>${SITE.aboutUi.profile}</figcaption></figure>
       </section>
       <section class="about-stats" aria-label="${SITE.aboutUi.stats}"></section>
       <section class="about-timeline" aria-labelledby="about-timeline-title"><div class="timeline-pin"><div class="timeline-topline"><h2 id="about-timeline-title">${SITE.aboutUi.timeline}</h2><span>${String(SITE.timeline[0].segment).slice(0, 4)} <span class="timeline-topline-arrow">→</span> ${String(SITE.timeline[SITE.timeline.length - 1].segment).slice(0, 4)}</span></div><div class="timeline-viewport"><div class="timeline-track"></div></div></div></section>
@@ -204,7 +204,7 @@ export function renderAbout(lang) {
     }
     if (reducedQuery.matches) { section.classList.add('about-reduced'); return; }
     const distance = () => Math.max(0, track.scrollWidth - window.innerWidth);
-    horizontalTween = gsap.to(track, { x: () => -distance(), ease: 'none', scrollTrigger: { trigger: timeline, start: 'top top', end: () => `+=${SITE.timeline.length * window.innerHeight * .6}`, pin: timelinePin, scrub: true, invalidateOnRefresh: true, onUpdate: updateDepth, onRefresh: updateDepth } });
+    horizontalTween = gsap.to(track, { x: () => -distance(), ease: 'none', scrollTrigger: { trigger: timeline, start: 'top top', end: () => `+=${Math.round(distance() * .6)}` /* scroll 0.6px per px of travel (was 0.6 screen per column, too long) */, pin: timelinePin, scrub: true, invalidateOnRefresh: true, onUpdate: updateDepth, onRefresh: updateDepth } });
     window.ScrollTrigger?.refresh();
   }
 
