@@ -33,8 +33,6 @@ export function initGround() {
       previous.classList.remove('is-on');
       active = 1 - active;
     };
-    /* the first page's photo is shown closer in than the others (2026-10-02: its edges cropped further) */
-    next.classList.toggle('is-intro', source === GROUND.intro);
     next.onload = swap;
     next.src = source;
     if (next.complete && next.naturalWidth) swap();
