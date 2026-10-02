@@ -22,9 +22,14 @@ function mediaMarkup(className, label) {
 function loadMedia(frame, source, alt) {
   const image = frame.querySelector('img');
   image.alt = alt;
-  image.addEventListener('load', () => frame.classList.add('has-image'), { once: true });
+  const shown = () => frame.classList.add('has-image');
+  /* hovering the same word again sets the same src: Safari fires no load event then, and the photo never came
+     back (2026-10-02). An image that is already there is shown at once. */
+  if (image.getAttribute('src') === source && image.complete && image.naturalWidth) { shown(); return; }
+  image.addEventListener('load', shown, { once: true });
   image.addEventListener('error', () => frame.classList.remove('has-image'), { once: true });
   image.src = source;
+  if (image.complete && image.naturalWidth) shown();
 }
 
 /* '2024.07 ~ 2025.06', or '2024.09 ~ 12' inside one year */
@@ -58,7 +63,7 @@ export function renderAbout(lang) {
     <div class="about-inner">
       <div class="section-heading"><span>${SITE.sections.about.title}</span><span class="section-heading__index">${SITE.sections.about.index}</span></div>
       <section class="about-strengths-grid" aria-labelledby="about-strengths-title">
-        <div class="about-strengths-copy"><p id="about-strengths-title" class="about-kicker">${SITE.aboutUi.strengths}</p><ol class="about-strength-list"></ol></div>
+        <div class="about-strengths-copy"><p id="about-strengths-title" class="about-kicker">${SITE.aboutUi.strengths}</p><ol class="about-strength-list"></ol><p class="about-strength-hint">${T(mobileQuery.matches ? SITE.aboutUi.strengthHintTouch : SITE.aboutUi.strengthHint, lang)}</p></div>
         <figure class="about-photo about-photo--stack about-photo--count-${(SITE.profile.photos || [SITE.profile.photo]).length}">${(SITE.profile.photos || [SITE.profile.photo]).map((_, index) => mediaMarkup(`about-photo-frame about-photo-frame--${index + 1}`, SITE.aboutUi.photoSlot)).join('')}<figcaption>${SITE.aboutUi.profile}</figcaption></figure>
       </section>
       <section class="about-stats" aria-label="${SITE.aboutUi.stats}"></section>

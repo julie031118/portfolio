@@ -43,6 +43,8 @@ button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 1px s
 .nav-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 16px; }
 .nav-link, .nav-toggle { border: 0; padding: 5px 0; background: transparent; color: var(--ink); cursor: pointer; }
 .nav-link:hover, .nav-toggle:hover { color: var(--ink-2); }
+/* a wider pause between the section links and the two toggles (연서, 2026-10-02) */
+.nav-link + .nav-toggle { margin-left: 30px; }
 .nav-divider { color: var(--ink-2); }
 
 .loader { position: fixed; inset: 0; z-index: 50; overflow: hidden; background: transparent; touch-action: none; user-select: none; }
@@ -200,6 +202,7 @@ main { overflow: clip; }
   .nav-wordmark { width: 100%; }
   .nav-actions { width: 100%; max-width: none; gap: 4px 8px; justify-content: space-between; }
   .nav-divider { display: none; }
+  .nav-link + .nav-toggle { margin-left: 0; }
   .site-section { padding: calc(var(--nav-height) + 28px) 16px 48px; }
   .section-shell { min-height: calc(100vh - var(--nav-height) - 76px); }
   .section-empty { padding: 9vh 0; }
@@ -317,6 +320,8 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .about-strength-item:last-child { border-bottom: 1px solid var(--hairline); }
 .about-strength-claim { margin: 0; font: 400 17px/1.55 var(--font-mono); letter-spacing: .01em; }
 
+/* the small how-to line under the strengths, bottom right */
+.about-strength-hint { margin: 14px 0 0; text-align: right; color: var(--ink-2); font: 11px/1.5 var(--font-mono); letter-spacing: .04em; }
 .about-strength-keyword { display: inline; border: 0; padding: 0; background: transparent; color: var(--ink); font: inherit; cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
 .about-strength-evidence { margin: 8px 0 0; color: #4A4D55; font: 12px/1.65 var(--font-mono); } /* ink-2 got lost on the warm photos */
 .about-strength-inline { display: none; margin-top: 18px; }
@@ -785,7 +790,7 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
    project pages read (Special Elite only has Latin, and its full stops and commas sat heavy next to Hangul) */
 html[lang="ko"] :is(.about-strength-claim, .about-strength-evidence, .now-label, .now-claim, .now-evidence, .now-next, .now-lead, .now-media figcaption,
   .timeline-item-title, .timeline-grade, .timeline-item-desc, .timeline-panel-title, .timeline-panel-desc, .timeline-panel-grade,
-  .work-index-title, .archive-card-details span, .detail-meta, .detail-metrics span, .detail-note, .detail-film-label),
+  .work-index-title, .archive-card-details span, .detail-meta, .detail-metrics span, .detail-note, .detail-film-label, .about-strength-hint),
 html[lang="ko"] .timeline-item.is-major .timeline-item-title {
   font-family: "Nanum Gothic Coding", "Special Elite", monospace;
 }

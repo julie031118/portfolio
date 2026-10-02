@@ -90,7 +90,7 @@ window.SITE = {
         claim: { ko: '머릿속 그림을 AI로 바로 눈에 보이는 결과물로 만듭니다.', en: 'I turn the picture in my head into something you can see, with AI.' },
         keyword: { ko: '눈에 보이는 결과물', en: 'something you can see' },
         evidence: { ko: '지금 보고 있는 이 포트폴리오를 코딩 없이 AI와 함께 기획부터 구현까지 직접 만들었다. AI 단편영화는 혼자 연출해 대상을 받았고, 카프탄과 데님은 자르기 전에 AI로 먼저 입혀 봤다. 더 섬세하게 다루고 싶어서, 인공지능예술실습에서 생성 모델을 직접 학습시키며 원리부터 배우는 중.', en: 'This portfolio you are looking at: planned and built with AI from concept to code, with no coding background. I directed an AI short film solo and won the grand prize, and tried the kaftan and the denim on a body with AI before cutting. To get finer control, I am now training generative models myself in Deep Learning for Artists.' },
-        media: 'img/strength-3-portfolio.jpg', /* this site's own ring and 3D object (2026-10-02); was the AI film still */
+        media: 'img/strength-3-object.jpg', /* the porcelain flower 3D object alone on white, rendered from models/plate-flower.glb (2026-10-02); the multiply popup lets the white drop away */
         link: 'portfolio-site', /* was ai-short-film (연서, 2026-10-02): the AI film is already Selected 01 */
       },
     ],
@@ -231,7 +231,11 @@ window.SITE = {
   loader: { drag: 'DRAG TO OPEN', tap: 'TAP TO OPEN', objectLabel: '3D OBJECT' },
   name: { title: 'YEONSEO LEE', disciplines: 'FASHION · CONTENT · AI · INSIGHT', caption: '02 / NAME' },
   workUi: { imageSlot: 'IMAGE 3:4', objectLabel: '3D OBJECT', hint: 'SCROLL TO ROTATE · CLICK TO OPEN' },
-  aboutUi: { strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
+  aboutUi: {
+    /* a small line under the three strengths so the underlined words are not missed (연서, 2026-10-02) */
+    strengthHint: { ko: '밑줄 친 단어에 마우스를 올리면 사진이, 누르면 프로젝트가 열려요', en: 'hover the underlined words for a photo, click to open the project' },
+    strengthHintTouch: { ko: '밑줄 친 단어를 누르면 사진이 열려요', en: 'tap the underlined words for a photo' },
+    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
   archiveUi: {
     filterLabel: 'ARCHIVE FILTERS', imageSlot: 'IMAGE 3:4', inProgress: 'IN PROGRESS',
     filters: [
