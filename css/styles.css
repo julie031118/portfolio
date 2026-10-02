@@ -828,22 +828,5 @@ html[lang="ko"] .timeline-item.is-major .timeline-item-title {
   font-family: "Nanum Gothic Coding", "Special Elite", monospace;
 }
 
-/* the pointer's glass ball (js/cursor-lens.js): the square .cursor-lens-glass refracts the live page under it in
-   Chrome and Edge (an SVG displacement map run as a backdrop filter, neutral outside the ball, so the square never
-   shows); .cursor-lens-ball gives the glass its body: a darker rim, a highlight, a soft shadow under it.
-   Elsewhere the ball alone, as a clear bead without the bend. (2026-10-02, a rounder 3D ball 2026-10-03) */
+/* the glass ball under the pointer (js/cursor-lens.js): an SVG filter on the hovered intro paragraph or photo */
 .cursor-lens-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-.cursor-lens { position: fixed; left: 0; top: 0; z-index: 9999; pointer-events: none; opacity: 0; transition: opacity .35s ease; will-change: transform; }
-.cursor-lens.is-on { opacity: 1; }
-.cursor-lens-glass { position: absolute; inset: 0; }
-.cursor-lens.is-refracting .cursor-lens-glass { -webkit-backdrop-filter: url(#cursor-lens-refract); backdrop-filter: url(#cursor-lens-refract); }
-/* the rim (2026-10-03): in Chrome and Edge it is drawn inside the filter (cursor-lens.js makeRim), darkening the
-   bent page in its own colour; a blend mode here would cut the glass off from the page. Elsewhere a light rim. */
-.cursor-lens-rim, .cursor-lens-ball { position: absolute; left: 50%; top: 50%; width: var(--ball); height: var(--ball); margin: calc(var(--ball) / -2) 0 0 calc(var(--ball) / -2); border-radius: 50%; }
-.cursor-lens.is-refracting .cursor-lens-rim { display: none; }
-.cursor-lens-rim { background: radial-gradient(circle at 50% 50%, rgba(80, 80, 90, 0) 66%, rgba(80, 80, 90, .08) 88%, rgba(80, 80, 90, .2) 100%); box-shadow: inset 0 0 1.5px 1px rgba(80, 80, 90, .25); }
-.cursor-lens-ball { box-shadow: 0 10px 26px rgba(29, 29, 31, .07); }
-.cursor-lens-ball::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(ellipse 34% 22% at 34% 22%, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 72%); transform: rotate(-18deg); }
-.cursor-lens-ball::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(ellipse 30% 14% at 62% 88%, rgba(255, 255, 255, .16), rgba(255, 255, 255, 0) 70%); }
-.cursor-lens:not(.is-refracting) .cursor-lens-ball { -webkit-backdrop-filter: saturate(1.3) brightness(1.05) contrast(1.04); backdrop-filter: saturate(1.3) brightness(1.05) contrast(1.04); }
-@media (hover: none), (pointer: coarse) { .cursor-lens { display: none; } }
