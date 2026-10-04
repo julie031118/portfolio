@@ -185,7 +185,12 @@ function renderProject(detail, project, lang) {
     iframe.title = `${SITE.detailUi.soundtrack} · ${copy.title}`;
     iframe.src = spotifyUrl(project.spotify);
     iframe.allow = 'clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-    track.append(text, iframe);
+    /* the player under a thin sheet of vellum, washed out to the page's soft, low-contrast tone (2026-10-03);
+       it comes back to near colour under the pointer so the controls stay readable */
+    const player = document.createElement('span');
+    player.className = 'detail-spotify-wrap';
+    player.append(iframe);
+    track.append(text, player);
     content.append(track);
   }
 
@@ -312,6 +317,34 @@ function renderProject(detail, project, lang) {
     content.append(story);
   }
 
+  /* see also: a project rebuilt as another (Art2Wear ⇄ the Arts Week installation). The link swaps the page in
+     place and replaces the hash, so CLOSE still goes back to wherever the first project was opened from */
+  const related = (project.related || []).filter((item) => PROJECTS.some((other) => other.slug === item.slug));
+  if (related.length) {
+    const block = document.createElement('section');
+    block.className = 'detail-story-block detail-related';
+    const heading = document.createElement('h3'); heading.textContent = SITE.detailUi.related || 'SEE ALSO';
+    const body = document.createElement('div');
+    related.forEach((item) => {
+      const noteText = translated(item.note, lang);
+      if (noteText) { const note = document.createElement('p'); note.textContent = noteText; body.append(note); }
+      const link = document.createElement('a');
+      link.className = 'detail-related-link';
+      link.href = `#p/${encodeURIComponent(item.slug)}`;
+      link.textContent = translated(item.label, lang) || item.slug;
+      link.addEventListener('click', (event) => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+        event.preventDefault();
+        history.replaceState({ project: item.slug }, '', `#p/${encodeURIComponent(item.slug)}`);
+        openDetail(item.slug, lang, { updateHash: false, preserveFocus: true });
+      });
+      body.append(link);
+    });
+    block.append(heading, body);
+    const storyNode = content.querySelector('.detail-story:not(.detail-role-column)');
+    if (storyNode) storyNode.append(block); else content.append(block);
+  }
+
   if (copy.detail?.title && Array.isArray(copy.detail.body) && copy.detail.body.length) {
     const expandable = document.createElement('section');
     expandable.className = 'detail-expandable';
@@ -373,17 +406,30 @@ function renderProject(detail, project, lang) {
     const gallerySection = document.createElement('section');
     gallerySection.className = `detail-gallery-section${extraClass ? ` ${extraClass}` : ''}`;
     sectionHead(gallerySection, title, note);
-    const gallery = document.createElement('div'); gallery.className = 'detail-gallery';
-    entries.forEach((entry, index) => {
-      const source = entrySource(entry);
-      const caption = typeof entry === 'string' ? '' : translated(entry.cap, lang) || '';
-      const item = createMedia(source, `${SITE.detailUi.gallerySlot} ${String(index + 1).padStart(2, '0')}`, 'detail-gallery-item', caption || `${copy.title} ${index + 1}`);
-      if (small.has(normalizeSource(source))) item.classList.add('is-small');
-      if (caption) { const text = document.createElement('figcaption'); text.className = 'detail-caption'; text.textContent = caption; item.append(text); item.classList.add('has-caption'); }
-      gallery.append(item);
+    /* a picture marked wide (2026-10-03, the arts-week umbrella close-up) takes a full-width row of its own;
+       the pictures around it stay in justified rows */
+    const groups = [];
+    entries.forEach((entry) => {
+      const wide = typeof entry === 'object' && !!entry.wide;
+      if (wide || !groups.length || groups[groups.length - 1].wide) groups.push({ wide, entries: [] });
+      groups[groups.length - 1].entries.push(entry);
     });
-    justifyGallery(gallery, rowTarget);
-    gallerySection.append(gallery); content.append(gallerySection);
+    let index = 0;
+    groups.forEach((group) => {
+      const gallery = document.createElement('div'); gallery.className = `detail-gallery${group.wide ? ' detail-gallery--wide' : ''}`;
+      group.entries.forEach((entry) => {
+        const source = entrySource(entry);
+        const caption = typeof entry === 'string' ? '' : translated(entry.cap, lang) || '';
+        const item = createMedia(source, `${SITE.detailUi.gallerySlot} ${String(index + 1).padStart(2, '0')}`, 'detail-gallery-item', caption || `${copy.title} ${index + 1}`);
+        if (small.has(normalizeSource(source))) item.classList.add('is-small');
+        if (caption) { const text = document.createElement('figcaption'); text.className = 'detail-caption'; text.textContent = caption; item.append(text); item.classList.add('has-caption'); }
+        gallery.append(item);
+        index += 1;
+      });
+      justifyGallery(gallery, group.wide ? 100000 : rowTarget);
+      gallerySection.append(gallery);
+    });
+    content.append(gallerySection);
   };
   /* a pile: small cards overlapping in order (the mind map, sketch to final); the one under the pointer comes forward */
   const addStack = (entries, title, note) => {

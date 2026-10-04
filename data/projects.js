@@ -671,8 +671,11 @@ window.PROJECTS = [
    "ko": "텍스타일 디자인 · 엔지니어드 프린트 설계 · AI 시뮬레이션 · 제작",
    "en": "Textile design, engineered print, AI simulation, construction"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "6QGCdRsqlovtzy0ulHNIsD",
+  "spotifyNote": {
+   "ko": "얇게 비치는 실크에 꽃을 담아, 햇살에 비치는 꽃을 표현하고 싶었다. 이 노래를 들으면 햇살이 따사롭게 들어오는 장면이 떠오른다.",
+   "en": "I wanted flowers held in sheer silk, catching the sunlight. This song always brings back warm light pouring in."
+  },
   "process": [
    "/images/projects/kaftan/01.jpg",
    "/images/projects/kaftan/02.jpg",
@@ -908,7 +911,8 @@ window.PROJECTS = [
    }
   },
   "title": "Engineered Kaftan",
-  "desc": "Chopin's Nocturne translated into visual movement across silk. Engineered placement prints carry the score through the garment; the finished kaftan was selected for the Wilson College Collection at NC State."
+  "desc": "Chopin's Nocturne translated into visual movement across silk. Engineered placement prints carry the score through the garment; the finished kaftan was selected for the Wilson College Collection at NC State.",
+  "song": "moneto She feat MRCH"
  },
  {
   "slug": "fashion-show-2024",
@@ -1355,11 +1359,24 @@ window.PROJECTS = [
    "/images/projects/art2wear/s03.jpg"
   ],
   "role": {
-   "ko": "디자인 · 소재 개발 · 제작 · 런웨이 모델",
-   "en": "Design, material development, construction, runway model"
+   "ko": "기획 · 디자인 · 제작 · 런웨이 모델",
+   "en": "Concept, design, construction, runway model"
   },
-  "spotify": "6QGCdRsqlovtzy0ulHNIsD",
+  "spotify": null,
   "spotifyNote": null,
+  "related": [
+   {
+    "slug": "arts-week-2026",
+    "note": {
+     "ko": "이 작품의 꽃, 가방, 치마를 가져와 서울대 예술주간에서 사람 몸이 아닌 야외 설치로 다시 전시했다.",
+     "en": "The flowers, bag and skirt from this piece were shown again at SNU Arts Week, this time as an outdoor installation instead of on a body."
+    },
+    "label": {
+     "ko": "야외 설치로 재구성한 버전 보기 →",
+     "en": "See the outdoor installation version →"
+    }
+   }
+  ],
   "process": [
    "/images/projects/art2wear/41.jpg",
    "/images/projects/art2wear/40.jpg",
@@ -1391,15 +1408,15 @@ window.PROJECTS = [
      {
       "src": "/images/projects/art2wear/a03.jpg",
       "cap": {
-       "ko": "청키한 실과 마른 가지",
-       "en": "Chunky yarn and dried branches"
+       "ko": "자이언트 얀으로 뜬 미니백과 나뭇가지",
+       "en": "Giant-yarn knitted mini bag and branches"
       }
      },
      {
       "src": "/images/projects/art2wear/a04.jpg",
       "cap": {
-       "ko": "작은 흰 꽃을 단 구두",
-       "en": "Heels dotted with small white flowers"
+       "ko": "안개꽃(조화)을 붙인 하이힐",
+       "en": "Heels covered in artificial baby's breath"
       }
      },
      {
@@ -1416,8 +1433,8 @@ window.PROJECTS = [
      }
     ],
     "note": {
-     "ko": "깨진 도자기 꽃, 마른 가지, 청키한 실, 인조진주",
-     "en": "Ceramic shard flowers, dried branches, chunky yarn, faux pearls"
+     "ko": "깨진 도자기 꽃, 나뭇가지, 뜨개 미니백, 안개꽃을 붙인 하이힐",
+     "en": "Ceramic shard flowers, branches, a knitted mini bag, heels covered in baby's breath"
     }
    },
    {
@@ -1552,16 +1569,18 @@ window.PROJECTS = [
    "ko": {
     "title": "Art2Wear 2026: Tensed Symbiosis",
     "cat": "웨어러블 아트 · 런웨이 · 2026.01~04",
-    "need": "'공생'을 조화롭고 평화로운 상태로 그리는 통상적 해석을 거부하고, 극한의 긴장 아래 유지되는 구조로 다시 정의해야 했다. 불안과 집중이라는 상충하는 두 상태를 한 벌의 옷 안에 동시에 존재시키는 것이 과제였다.",
+    "need": "쇼의 주제는 '공생'이었다. 나는 실제 동물의 공생 관계보다 사람의 내면 이야기로 풀어내는 걸 좋아하고, 동물의 공생은 이미 다른 참가자들이 멋지게 표현하고 있었다. 나만의 주제가 필요했고, 그렇게 고른 것이 '불안과 집중의 공생'이다. 지금의 내 상태이자, 내가 일을 해 나가는 원동력의 일부다. 만드는 동안 나도 위로받았고, 불안을 부정적으로만 보지 않게 해서 보는 사람에게도 같은 위로를 건네고 싶었다.",
     "action": [
-     "불안 없는 집중은 동력을 잃고 집중 없는 불안은 혼돈이 된다는 상호의존 구조를 개념의 축으로 설정",
-     "도자기 접시를 직접 깨뜨려 그 파편으로 꽃을 만들고, 마른 나뭇가지·청키한 두꺼운 실·인조진주를 대비시켜 죽은 것과 자라는 것의 경계를 흐림",
-     "이질적인 소재들을 느리고 반복적인 핸드 스티치로 물리적으로 결합: 제작 행위 자체를 '협상의 현장'으로 삼아, 관계를 재현하는 대신 생존을 위한 구조를 쌓는 과정을 수행",
+     "쇼 주제 '공생'을 사람의 내면으로 가져와 '불안과 집중의 공생'으로 설정: 불안 없는 집중은 동력을 잃고, 집중 없는 불안은 혼돈이 된다",
+     "대비되는 소재를 보여 주면서 그 이질적인 소재들이 조화를 이루게 하는 데 집중: 도자기 접시를 직접 깨뜨려, 깨진 접시와는 정반대 이미지인 꽃을 만듦",
+     "번진 염색 무늬가 들어간 데님과 쉬폰을 이어 상의를 만들고, 찢은 뒤 철사로 형태만 남긴 카키 스커트 위에 꽃잎을 얹음",
+     "부드럽고 새하얀 자이언트 얀으로 미니백을 뜨고, 한쪽 옆면만 일부러 터서 정반대 소재인 철사로 연결. 검은 뾰족한 하이힐에는 흰 안개꽃(조화)을 붙임",
+     "꽃이 들어온 뒤로 룩 전체의 일관성을 위해 나뭇가지와 꽃을 곳곳에 더함. 인조 나뭇가지는 옷의 일반적인 실루엣을 벗어나 덩굴처럼 타고 올라가게 해 불안을 표현",
      "완성한 작품을 직접 입고 라이브 런웨이에 올라, 디자이너이자 착용자로 작업을 마무리"
     ],
     "result": [
      "Gregg Museum of Art & Design, Art2Wear 2026 런웨이 발표 (2026년 4월)",
-     "2026 서울대 예술주간 야외 전시 〈공생 Tensed Symbiosis〉: 같은 개념을 가변설치로 재구성 (2026.09.28~10.02)"
+     "Art2Wear 작품의 꽃, 가방, 치마를 가져와 2026 서울대 예술주간 야외 설치로 재구성 (2026.09.28~10.02)"
     ],
     "headline": "공생을 평화로운 균형이 아니라, 극한의 긴장 아래 유지되는 구조로 다시 정의했다.",
     "metrics": [
@@ -1571,28 +1590,32 @@ window.PROJECTS = [
      }
     ],
     "detail": {
-     "title": "재료가 바뀐 이유",
+     "title": "만들며 부딪힌 문제",
      "body": [
       "초기 컨셉은 철가루와 자석이었다. 자석으로 철가루를 끌어당기고 흩뜨려 불안과 집중의 인력과 반발을 직접 보여주려 했다.",
       "그런데 이 방식은 물이 필요했고, 패션쇼장은 물 반입이 불가능했다. 개념을 바꾸는 대신 표현 방식을 바꾸기로 했다. 주제는 그대로 두고, 같은 긴장을 다른 재료로 옮길 방법을 찾았다.",
-      "답은 실제로 깨지고 마른 것들이었다. 도자기를 직접 깨뜨려 만든 꽃, 마른 나뭇가지, 청키한 실. 깨뜨리는 행위 자체가 개념의 일부가 되면서, 재료가 개념의 은유가 아니라 증거가 됐다.",
+      "답은 실제로 깨진 것이었다. 직접 깨뜨린 도자기로 꽃을 만들면서, 깨뜨리는 행위 자체가 개념의 일부가 됐고 재료가 개념의 은유가 아니라 증거가 됐다.",
+      "다음 문제는 무게였다. 접시 조각을 붙여 만든 꽃은 무거워서 조각을 이어 꽃 모양을 잡는 것부터 쉽지 않았고, 그 꽃을 옷에 고정하는 건 더 어려웠다. 낚싯줄, 섬유 본드, 순간접착제, 강력 본드를 겹쳐 쓰며 여러 번 다시 고정했다. 날카로운 단면과 나뭇가지에 손을 여러 번 다치기도 했다.",
       "제약이 컨셉을 무너뜨리지 않는다는 걸 배운 작업이다. 무너지는 건 표현 방식이지 주제가 아니다."
      ]
-    }
+    },
+    "note": "미국 NC State 교환학생 중, 인턴십과 아르바이트를 병행하며 만든 작품."
    },
    "en": {
     "title": "Art2Wear 2026: “Tensed Symbiosis”",
     "cat": "Wearable Art · Runway · Jan to Apr 2026",
-    "need": "Symbiosis is usually read as harmony. This piece had to redefine it as a rigid structure held under extreme tension, putting anxiety and focus, two conflicting states, inside one garment at once.",
+    "need": "The show's theme was symbiosis. I prefer to tell stories about people's inner lives rather than real animal symbiosis, and other designers were already handling animal symbiosis beautifully. I wanted a theme of my own, and chose the symbiosis of anxiety and focus: my own state right now, and part of what drives my work. Making it comforted me, and I wanted to pass that comfort on by letting people see anxiety as more than something negative.",
     "action": [
-     "Built the concept on interdependence: focus without anxiety loses its drive, anxiety without focus becomes chaos",
-     "Broke ceramic plates by hand and built flowers from the shards, setting them against dried branches, chunky yarn and faux pearls so the line between what is dead and what is growing blurs",
-     "Unified the contrasting materials through slow, repetitive hand-stitching, making construction the site of negotiation, performing the act of building a structure for survival rather than depicting it",
+     "Brought the show's theme inward as the symbiosis of anxiety and focus: focus without anxiety loses its drive, anxiety without focus becomes chaos",
+     "Focused on showing contrasting materials while making those unlike materials work together: smashed ceramic plates by hand and built flowers from them, the opposite image of a broken plate",
+     "Joined denim with a bled dye pattern to chiffon for the top, and laid petals on a khaki skirt that was torn apart and held in shape only by wire",
+     "Knitted a mini bag from soft, pure white giant yarn, left just one side deliberately open and laced it with wire, its opposite. Covered pointed black heels with white baby's breath (artificial)",
+     "Once flowers entered the piece, added branches and flowers throughout for one consistent look. The artificial branches break out of a normal garment silhouette and climb like vines, expressing anxiety",
      "Wore the finished piece on the live runway, closing the work as both designer and wearer"
     ],
     "result": [
      "Shown at Art2Wear 2026, Gregg Museum of Art & Design (April 2026)",
-     "Rebuilt as a site installation for the 2026 SNU Arts Week outdoor exhibition (28 Sep to 2 Oct 2026)"
+     "Its flowers, bag and skirt were reworked into an outdoor installation for SNU Arts Week 2026 (28 Sep to 2 Oct 2026)"
     ],
     "headline": "Symbiosis redefined: not a peaceful balance, but a structure held under extreme tension.",
     "metrics": [
@@ -1602,19 +1625,20 @@ window.PROJECTS = [
      }
     ],
     "detail": {
-     "title": "Why the materials changed",
+     "title": "Problems along the way",
      "body": [
       "The first concept used iron filings and magnets, pulling and scattering the filings to stage the attraction and repulsion of anxiety and focus directly.",
       "That method needed water, and the show venue did not allow water on site. Rather than change the concept, I changed the medium: same subject, a different way to carry the same tension.",
-      "The answer was things that were actually broken and dried: flowers built from ceramic I smashed by hand, dead branches, chunky yarn. Once breaking became part of the making, the material stopped being a metaphor for the concept and became evidence of it.",
+      "The answer was something actually broken. Building flowers from ceramic I smashed by hand made the breaking part of the concept, and the material stopped being a metaphor for it and became evidence.",
+      "The next problem was weight. Flowers made of plate shards are heavy: getting the pieces to hold a flower shape was hard, and fixing the flowers to the garment was harder. I layered fishing line, fabric glue, superglue and strong adhesive, refixing them again and again, and cut my hands more than once on the sharp edges and branches.",
       "The lesson: a constraint does not break the concept. What breaks is the method, not the subject."
      ]
-    }
+    },
+    "note": "Made during my exchange year at NC State in the US, alongside an internship and a part-time job."
    }
   },
   "title": "Art2Wear 2026",
-  "desc": "불안과 집중의 공존을 이질적인 재료의 대비로 옮긴 웨어러블 아트. 직접 깨뜨린 도자기 접시 파편이 꽃이 되고, 마른 가지와 청키한 실이 한 벌 안에서 부딪힌다. Gregg Museum of Art & Design, Art2Wear 2026 런웨이에 직접 입고 올랐다.",
-  "song": "moneto She feat MRCH"
+  "desc": "불안과 집중의 공존을 이질적인 재료의 대비로 옮긴 웨어러블 아트. 직접 깨뜨린 도자기 접시 파편이 꽃이 되고, 나뭇가지와 청키한 실이 한 벌 안에서 부딪힌다. Gregg Museum of Art & Design, Art2Wear 2026 런웨이에 직접 입고 올랐다."
  },
  {
   "slug": "clo3d",
@@ -2907,10 +2931,23 @@ window.PROJECTS = [
   "thumb": "/images/projects/adaptive-textile/ad01.jpg",
   "images": [
    "/images/projects/adaptive-textile/ad01.jpg",
-   "/images/projects/adaptive-textile/ad02.jpg",
-   "/images/projects/adaptive-textile/ad03.jpg",
-   "/images/projects/adaptive-textile/ad04.jpg",
-   "/images/projects/adaptive-textile/ad05.jpg",
+   "/images/projects/adaptive-textile/ad02-1.jpg",
+   "/images/projects/adaptive-textile/ad02-2.jpg",
+   "/images/projects/adaptive-textile/ad02-3.jpg",
+   "/images/projects/adaptive-textile/ad02-4.jpg",
+   "/images/projects/adaptive-textile/ad03-1.jpg",
+   "/images/projects/adaptive-textile/ad03-2.jpg",
+   "/images/projects/adaptive-textile/ad03-3.jpg",
+   "/images/projects/adaptive-textile/ad03-4.jpg",
+   "/images/projects/adaptive-textile/ad04-1.jpg",
+   "/images/projects/adaptive-textile/ad04-2.jpg",
+   "/images/projects/adaptive-textile/ad04-3.jpg",
+   "/images/projects/adaptive-textile/ad04-4.jpg",
+   "/images/projects/adaptive-textile/ad04-5.jpg",
+   "/images/projects/adaptive-textile/ad05-1.jpg",
+   "/images/projects/adaptive-textile/ad05-2.jpg",
+   "/images/projects/adaptive-textile/ad05-3.jpg",
+   "/images/projects/adaptive-textile/ad05-4.jpg",
    "/images/projects/adaptive-textile/ad06.jpg",
    "/images/projects/adaptive-textile/ad07.jpg",
    "/images/projects/adaptive-textile/ad08.jpg",
@@ -2919,9 +2956,12 @@ window.PROJECTS = [
    "/images/projects/adaptive-textile/ad11.jpg",
    "/images/projects/adaptive-textile/ad12.jpg",
    "/images/projects/adaptive-textile/ad13.jpg",
-   "/images/projects/adaptive-textile/ad14.jpg",
-   "/images/projects/adaptive-textile/ad15.jpg",
-   "/images/projects/adaptive-textile/ad16.jpg",
+   "/images/projects/adaptive-textile/ad14-1.jpg",
+   "/images/projects/adaptive-textile/ad14-2.jpg",
+   "/images/projects/adaptive-textile/ad15-1.jpg",
+   "/images/projects/adaptive-textile/ad15-2.jpg",
+   "/images/projects/adaptive-textile/ad16-1.jpg",
+   "/images/projects/adaptive-textile/ad16-2.jpg",
    "/images/projects/adaptive-textile/ad17.jpg",
    "/images/projects/adaptive-textile/ad18.jpg",
    "/images/projects/adaptive-textile/ad19.jpg",
@@ -2946,38 +2986,130 @@ window.PROJECTS = [
       "src": "/images/projects/adaptive-textile/ad01.jpg"
      },
      {
-      "src": "/images/projects/adaptive-textile/ad02.jpg",
+      "src": "/images/projects/adaptive-textile/ad02-1.jpg",
       "cap": {
-       "ko": "러그와 커튼",
-       "en": "Rug and curtains"
+       "ko": "러그",
+       "en": "Rug"
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/ad03.jpg",
+      "src": "/images/projects/adaptive-textile/ad02-2.jpg",
       "cap": {
-       "ko": "자수 쿠션, 담요, 바구니",
-       "en": "Embroidered cushion, blanket and basket"
+       "ko": "러그 디테일",
+       "en": "Rug detail"
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/ad04.jpg",
+      "src": "/images/projects/adaptive-textile/ad02-3.jpg",
       "cap": {
-       "ko": "램프 갓과 테이블 커버",
-       "en": "Lampshade and table cover"
+       "ko": "커튼 원단",
+       "en": "Curtain fabric"
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/ad05.jpg",
+      "src": "/images/projects/adaptive-textile/ad02-4.jpg",
       "cap": {
-       "ko": "의자 패브릭과 쿠션",
-       "en": "Chair fabric and cushions"
+       "ko": "커튼",
+       "en": "Curtain"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad03-1.jpg",
+      "cap": {
+       "ko": "자수 쿠션",
+       "en": "Embroidered cushion"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad03-2.jpg",
+      "cap": {
+       "ko": "담요",
+       "en": "Blanket"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad03-3.jpg",
+      "cap": {
+       "ko": "바구니",
+       "en": "Basket"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad03-4.jpg",
+      "cap": {
+       "ko": "의자와 담요",
+       "en": "Chair and blanket"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad04-1.jpg",
+      "cap": {
+       "ko": "램프 갓",
+       "en": "Lampshade"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad04-2.jpg",
+      "cap": {
+       "ko": "테이블 커버",
+       "en": "Table cover"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad04-3.jpg",
+      "cap": {
+       "ko": "램프와 테이블",
+       "en": "Lamp and table"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad04-4.jpg",
+      "cap": {
+       "ko": "테이블 커버 디테일",
+       "en": "Table cover detail"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad04-5.jpg",
+      "cap": {
+       "ko": "램프",
+       "en": "Lamp"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad05-1.jpg",
+      "cap": {
+       "ko": "쿠션",
+       "en": "Cushions"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad05-2.jpg",
+      "cap": {
+       "ko": "의자 위 자수 쿠션",
+       "en": "Embroidered cushion on the chair"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad05-3.jpg",
+      "cap": {
+       "ko": "의자 패브릭",
+       "en": "Chair fabric"
+      }
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad05-4.jpg",
+      "cap": {
+       "ko": "의자 시트",
+       "en": "Chair seat"
       }
      }
     ],
     "note": {
      "ko": "4인 팀이 방 하나를 기획하고, 텍스타일을 디자인해 직접 만들었다",
      "en": "A team of four planned one room, designed its textiles and made them"
-    }
+    },
+    "rowTarget": 300
    },
    {
     "title": {
@@ -3069,13 +3201,22 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/adaptive-textile/ad14.jpg"
+      "src": "/images/projects/adaptive-textile/ad14-1.jpg"
      },
      {
-      "src": "/images/projects/adaptive-textile/ad15.jpg"
+      "src": "/images/projects/adaptive-textile/ad14-2.jpg"
      },
      {
-      "src": "/images/projects/adaptive-textile/ad16.jpg"
+      "src": "/images/projects/adaptive-textile/ad15-1.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad15-2.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad16-1.jpg"
+     },
+     {
+      "src": "/images/projects/adaptive-textile/ad16-2.jpg"
      }
     ],
     "note": {
@@ -3851,8 +3992,11 @@ window.PROJECTS = [
    "ko": "기획 · 웹디자인 · AI 워크플로우 · 콘텐츠 (단독, 독학)",
    "en": "Planning, web design, AI workflow, content (solo, self-taught)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "4m0bcPhfZSmAuH8zzkV1T5",
+  "spotifyNote": {
+   "ko": "이 포트폴리오를 시작할 때 만든 무드보드와 가장 어울리는 곡. 힘을 뺀 부드러운 보컬과 사운드가, 대비 없이 부드러운 이 사이트의 톤과 닮았다.",
+   "en": "The song closest to the moodboard this portfolio started from: soft, unforced vocals and sound, like the site’s gentle, low-contrast tone."
+  },
   "cardThumb": "/images/projects/portfolio-site/thumb-card.jpg",
   "process": [
    "/images/projects/portfolio-site/05.jpg",
@@ -4143,7 +4287,7 @@ window.PROJECTS = [
      "직접 만든 웨어러블 아트(깨진 도자기 조각으로 만든 꽃)를 3D로 구현: ChatGPT로 여러 각도의 이미지를 먼저 만든 뒤 Tripo에 넣어 3D 모델로 만들고, Selected Work 한가운데에 배치",
      "마인드맵은 아이패드로 직접 그려서 지시: 화면 캡처 위에 손으로 그린 스케치를 그대로 보내고, 그 선과 글씨를 옮겨 키워드에 마우스를 올리면 나타나게 함",
      "첫인상은 일부러 반대로: 세련되고 번쩍이는 대신 타자기 효과와 빈티지한 무드로 시작. 나를 전달하는 문장을 맨 앞에 두고, 작업의 방향성은 마인드맵으로 보여줌",
-     "사이트의 이미지도 내 작업으로: 작품 사진을 배경에 깔고 그 위에 반투명한 종이 질감을 덮음. 곳곳에 마우스 인터랙션을 넣음",
+     "사이트의 이미지도 내 작업으로: 실제 프로젝트 사진 중 색감이 예쁘고 무드보드에 맞는 것을 골라 배경에 깔고, 그 위에 트레이싱지를 덮은 느낌을 줌. 대비가 튀는 곳 없이 채도를 낮춰 전체를 부드럽고 힘을 뺀 톤으로 맞춤. 곳곳에 마우스 인터랙션을 넣음",
      "보는 사람의 경험까지 설계: 링크를 받는 순간 뜨는 미리보기 카드부터 인트로의 첫 문장과 같게 맞춤. 프로젝트마다 어울리는 곡을 Spotify 플레이어로 넣어 음악에 대한 관심을 보여주고, 그 분위기 속에서 작업을 보게 함. 아카이브는 필터별로 볼 수 있게 함",
      "한국어와 영어 두 버전을 모두 제작",
      "검토는 리뷰 시트로: 프로젝트, 타임라인, 스킬을 한 페이지에 펼쳐 두고 바꿀 것만 표시해 한 번에 반영. 화면 수정은 같은 각도에서 찍은 전후 화면을 나란히 놓고 비교해 결정"
@@ -4186,7 +4330,7 @@ window.PROJECTS = [
      "Brought my own wearable art piece, a flower made of broken porcelain, into 3D: generated views from several angles in ChatGPT, fed them to Tripo for a 3D model, and set it at the centre of Selected Work",
      "Drew the mind map by hand on an iPad and sent the sketch over a screenshot; its lines and handwriting were carried over so they appear when a keyword is hovered",
      "Opened against the grain: instead of sleek and shiny, a typewriter effect and a vintage mood. A sentence that introduces me comes first, and the mind map shows where my work is heading",
-     "Made the site’s imagery out of my own work: project photos as the background under a layer of translucent paper, with mouse interactions throughout",
+     "Made the site’s imagery out of my own work: project photos picked for their colour and fit with the moodboard, laid under what feels like tracing paper. Nothing jumps out in contrast; saturation stays low so the whole site reads soft and relaxed. Mouse interactions throughout",
      "Designed the viewer’s experience too: even the preview card that appears when the link is shared opens with the same line as the intro. Each project has a song in a Spotify player, showing my interest in music and letting the work be seen inside a mood. The archive can be filtered",
      "Built in both Korean and English",
      "Reviewed on a sheet, not in chat: projects, timeline and skills on one page; I mark only what changes and it is applied in one pass. Layout changes were decided by putting before and after side by side, shot from the same angle"
@@ -4206,7 +4350,8 @@ window.PROJECTS = [
    }
   },
   "title": "Making this Portfolio with AI",
-  "desc": "이 사이트 자체를 하나의 프로젝트로 기록한다. 사람들이 AI 결과물에 느끼는 피로를 읽고, 반대로 빈티지한 공간을 만든 과정."
+  "desc": "이 사이트 자체를 하나의 프로젝트로 기록한다. 사람들이 AI 결과물에 느끼는 피로를 읽고, 반대로 빈티지한 공간을 만든 과정.",
+  "song": "midnightpetals in between"
  },
  {
   "slug": "promo-video-ai",
@@ -4358,8 +4503,24 @@ window.PROJECTS = [
    "ko": "설치 재구성 · 제작 · 현장 설치 (단독)",
    "en": "Installation redesign, construction, on-site setup (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "7HOl87ObyzayM0i4qZ6Ybv",
+  "spotifyNote": {
+   "ko": "불안과 자기혐오를 담은 가사가 작품의 주제와 어울려서, 실제로 만들 때 많이 들었다.",
+   "en": "Lyrics about anxiety and self-loathing fit the theme of the piece; I listened to it a lot while making it."
+  },
+  "related": [
+   {
+    "slug": "art2wear",
+    "note": {
+     "ko": "가져온 꽃, 가방, 치마가 어떻게 만들어졌는지, 그리고 '불안과 집중의 공생'이라는 주제는 Art2Wear 페이지에 자세히 적었다.",
+     "en": "How the flowers, bag and skirt were made, and the theme of anxiety and focus behind them, are on the Art2Wear page."
+    },
+    "label": {
+     "ko": "Art2Wear 2026 보기 →",
+     "en": "See Art2Wear 2026 →"
+    }
+   }
+  ],
   "sections": [
    {
     "title": {
@@ -4393,8 +4554,49 @@ window.PROJECTS = [
      }
     ],
     "note": {
-     "ko": "학생회관과 관정관 사이 잔디",
-     "en": "The lawn between Student Union and Kwanjeong Library"
+     "ko": "관정도서관 앞, 덩굴이 감긴 아치 터널 아래",
+     "en": "Under the vine-covered arch tunnel in front of Kwanjeong Library"
+    }
+   },
+   {
+    "title": {
+     "ko": "우산 위의 압박",
+     "en": "PRESSURE ON THE UMBRELLA"
+    },
+    "images": [
+     {
+      "src": "/images/projects/arts-week-2026/18.jpg",
+      "cap": {
+       "ko": "우산 위에 올린 구두 두 짝과 카드",
+       "en": "Two heels and a card on the umbrella"
+      },
+      "wide": true
+     },
+     {
+      "src": "/images/projects/arts-week-2026/06.jpg",
+      "cap": {
+       "ko": "직접 만든 시곗바늘과 흰 쉬폰",
+       "en": "Handmade clock hands and white chiffon"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/17.jpg",
+      "cap": {
+       "ko": "우산 아래 선 마네킹",
+       "en": "The mannequin under the umbrella"
+      }
+     },
+     {
+      "src": "/images/projects/arts-week-2026/12.jpg",
+      "cap": {
+       "ko": "카드 너머로 보이는 관정관",
+       "en": "Kwanjeong Library behind a playing card"
+      }
+     }
+    ],
+    "note": {
+     "ko": "구두, 벨트, 시곗바늘, 트럼프 카드, 그리고 흘러내리는 흰 쉬폰",
+     "en": "Heels, a belt, clock hands, playing cards, and white chiffon slipping down"
     }
    },
    {
@@ -4427,65 +4629,29 @@ window.PROJECTS = [
      {
       "src": "/images/projects/arts-week-2026/11.jpg",
       "cap": {
-       "ko": "정면, 도자기 꽃과 실 뭉치",
-       "en": "Front: ceramic flower, yarn bundle"
+       "ko": "정면, 도자기 꽃과 뜨개 가방",
+       "en": "Front: ceramic flower, knitted bag"
       }
      },
      {
       "src": "/images/projects/arts-week-2026/01.jpg",
       "cap": {
-       "ko": "청키한 실 뭉치와 트럼프 카드",
-       "en": "Chunky yarn bundle with playing cards"
+       "ko": "뜨개 가방과 트럼프 카드",
+       "en": "Knitted bag with playing cards"
       }
      },
      {
       "src": "/images/projects/arts-week-2026/14.jpg",
       "cap": {
-       "ko": "실 뭉치와 철사·나뭇가지",
-       "en": "Yarn bundle, wire and branch"
+       "ko": "뜨개 가방과 철사·나뭇가지",
+       "en": "Knitted bag, wire and branch"
       }
      }
     ],
     "note": {
-     "ko": "런웨이 소재를 마네킹 위에 다시 구성",
-     "en": "Runway materials rebuilt on a mannequin"
+     "ko": "Art2Wear에서 가져온 꽃, 가방, 치마를 마네킹 위에 다시 구성",
+     "en": "Flowers, bag and skirt from Art2Wear, rebuilt on a mannequin"
     }
-   },
-   {
-    "title": {
-     "ko": "우산 캐노피",
-     "en": "THE UMBRELLA CANOPY"
-    },
-    "images": [
-     {
-      "src": "/images/projects/arts-week-2026/06.jpg",
-      "cap": {
-       "ko": "우산 위 시스루 천과 구두",
-       "en": "Sheer cloth and heels on top"
-      }
-     },
-     {
-      "src": "/images/projects/arts-week-2026/17.jpg",
-      "cap": {
-       "ko": "우산 아래 선 마네킹",
-       "en": "The mannequin under the umbrella"
-      }
-     },
-     {
-      "src": "/images/projects/arts-week-2026/18.jpg",
-      "cap": {
-       "ko": "아래에서 올려다본 우산",
-       "en": "The umbrella seen from below"
-      }
-     },
-     {
-      "src": "/images/projects/arts-week-2026/12.jpg",
-      "cap": {
-       "ko": "카드 너머로 보이는 관정관",
-       "en": "Kwanjeong Library behind a playing card"
-      }
-     }
-    ]
    },
    {
     "title": {
@@ -4512,45 +4678,66 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "2026 서울대 예술주간: 〈공생 Tensed Symbiosis〉",
+    "title": "다시 세운 〈공생〉: Art2Wear 작품을 재구성한 서울대 예술주간 야외 설치",
     "cat": "야외 설치 · 예술주간 · 2026.09.28~10.02",
-    "headline": "런웨이 위에서 한 벌이던 것을, 잔디 위에 서 있는 구조로 다시 세웠다.",
+    "headline": "Art2Wear에서 입었던 꽃, 가방, 치마를 가져와, 캠퍼스 한가운데 우산 아래 다시 세웠다.",
     "metrics": [],
-    "need": "Art2Wear에서 입고 걸었던 옷은 움직이는 사람이 전제였다. 예술주간은 관객이 다가와서 보는 야외 설치다. 같은 긴장을 몸 없이, 비와 바람 속에서 닷새 동안 유지시켜야 했다.",
+    "need": "Art2Wear에서 입고 걸었던 옷은 움직이는 사람이 전제였다. 예술주간은 관객이 다가와서 보는 야외 설치다. 같은 긴장을 몸 없이 세워 두어야 했고, 전시 기간 예보에는 비 소식까지 있었다. 작품을 비로부터 지킬 장치가 필요했지만, 그 장치가 주제를 가리지 않고 오히려 살리기를 바랐다.",
     "action": [
-     "깨진 도자기 파편, 마른 꽃, 나뭇가지, 인조진주를 마네킹 위에 가변설치로 재구성",
-     "런웨이용 핸드 스티치 결합을 야외 조건에 맞게 다시 설계",
-     "학생회관과 관정관 사이 잔디에 설치: 지나가는 사람의 동선에서 읽히는 각도로 배치"
+     "Art2Wear 작품에서 깨진 접시로 만든 꽃, 뜨개 가방, 치마를 가져와 일부는 바꾸고 새 오브제를 더해 마네킹 위에 재구성",
+     "장소는 세 가지 기준으로 선정: 유동인구가 많은 관정도서관 앞, 치마의 나뭇가지와 어우러질 진짜 덩굴이 있는 곳, 자연을 훼손하지 않고 우산을 고정할 수 있는 곳. 덩굴이 감긴 아치 터널을 지지대로 삼아, 무거워진 우산을 철사로 고정",
+     "비 예보를 작품 안으로 끌어들임: 작품을 비로부터 지키면서 주제도 살리는 오브제로 우산을 더함",
+     "원래 주제인 '불안과 집중의 공생'을 전시 장소인 대학교와 연결: 대학생의 불안을 압박으로 보고, 우산 위에 구두, 벨트, 시곗바늘을 올림. 시곗바늘은 시간의 압박, 검은 구두 두 짝은 누군가 우산 위에 서 있는 모습",
+     "압박을 '레드 퀸 가설'(제자리에 머물려면 쉬지 않고 달려야 한다)과도 연결해, 구두와 앨리스 이야기의 트럼프 카드를 오브제로 사용",
+     "시곗바늘은 직접 제작: 두꺼운 폼 판을 바늘 모양으로 두 장 잘라, 사이에 나무 꼬치를 넣고 붙인 샌드위치 구조",
+     "구두와 대비되는 흰 쉬폰을 우산 위에 함께 올려 살짝 흘러내리게 함: 압박(불안)이 만들어 내는 집중, 즉 불안과 집중의 공생을 한 번 더 표현"
     ],
-    "result": null,
+    "result": [
+     "2026 서울대 예술주간 야외 전시, 관정도서관 앞 (2026.09.28~10.02)"
+    ],
     "detail": {
-     "title": "왜 다시 만들었나",
+     "title": "우산을 더한 이유, 그리고 설치",
      "body": [
-      "같은 개념이 매체를 바꿔도 살아남는지 확인하고 싶었다. 런웨이의 긴장은 걸음에서 왔고, 설치의 긴장은 서 있는 시간에서 온다."
+      "전시 기간 예보에 비가 있었다. 야외 전시라 작품을 비로부터 지켜야 했는데, 덮개를 씌우는 대신 그 조건을 주제를 살리는 데 쓰고 싶었다. 그래서 우산이라는 오브제를 더했다.",
+      "그다음 질문은 '불안과 집중의 공생'이 서울대학교라는 장소에서 어떤 모습일까였다. 대학생의 불안은 압박으로 이어진다고 봤고, 그 압박을 우산 위에 올렸다.",
+      "결국 전시 기간에 비는 오지 않았다. 우산은 비를 막는 장치보다, 압박을 올려 두는 자리로 작품의 중심이 됐다.",
+      "가장 어려웠던 건 그 우산을 설치하는 일이었다. 구두, 벨트, 시곗바늘, 쉬폰을 올리자 우산이 굉장히 무거워졌고, 무게중심도 고르지 않았다. 게다가 높은 곳에 고정해야 했다.",
+      "그래서 철사를 쓰고, 전시 장소의 이점을 적극 활용했다. 덩굴이 감긴 아치 터널을 지지대로 삼아 철사로 우산을 고정했다. 자연을 훼손하지 않고 우산을 고정할 수 있는 곳이라는, 장소를 고른 세 번째 이유가 그대로 해결책이 됐다."
      ]
     }
    },
    "en": {
-    "title": "SNU Arts Week 2026: “Tensed Symbiosis”",
+    "title": "Tensed Symbiosis, Rebuilt: The Art2Wear Piece Reworked for SNU Arts Week",
     "cat": "Outdoor Installation · Arts Week · 28 Sep to 2 Oct 2026",
-    "headline": "What was one garment on a runway, rebuilt as a structure standing on the lawn.",
+    "headline": "I brought the flowers, bag and skirt over from my Art2Wear piece and stood them up again under an umbrella, in the middle of campus.",
     "metrics": [],
-    "need": "The Art2Wear piece assumed a moving body. Arts Week is an outdoor installation people walk up to: the same tension had to hold without a body, in rain and wind, for five days.",
+    "need": "The Art2Wear garment assumed a moving body. Arts Week is an outdoor installation people walk up to: the same tension had to stand without a body, and the forecast for the week called for rain. The piece needed protecting from the rain, and I wanted that protection to strengthen the theme rather than hide it.",
     "action": [
-     "Reassembled the ceramic shards, dried flowers, branches and faux pearls on a mannequin as a site-specific installation",
-     "Redesigned the runway hand-stitch joins for outdoor conditions",
-     "Sited on the lawn between the Student Union and Kwanjeong Library, angled to read from the path people actually take"
+     "Took the broken-plate flowers, the knitted bag and the skirt from the Art2Wear piece, changed some parts, added new objects and rebuilt them on a mannequin",
+     "Chose the site on three counts: heavy foot traffic in front of Kwanjeong Library, real vines for the branches on the skirt to blend into, and a place to hold an umbrella without harming any plants. The vine-covered arch tunnel became the support, and the heavy umbrella is wired to it",
+     "Brought the rain forecast into the work: added an umbrella, an object that protects the piece and carries the theme at once",
+     "Connected the original theme, the symbiosis of anxiety and focus, to the venue, a university: read students' anxiety as pressure and set heels, a belt and clock hands on top of the umbrella. The clock hands are time pressure; the two black heels suggest someone standing on it",
+     "Tied that pressure to the Red Queen hypothesis (you have to keep running just to stay in place), using the heels and playing cards from the Alice stories as objects",
+     "Made the clock hands myself: two pieces of thick foam cut to the shape of a hand, glued together with a wooden skewer sandwiched between them",
+     "Laid white chiffon over the umbrella beside the heels so it slips gently down: the focus that pressure (anxiety) produces, the symbiosis of anxiety and focus stated once more"
     ],
-    "result": null,
+    "result": [
+     "Shown outdoors at SNU Arts Week 2026, in front of Kwanjeong Library (28 Sep to 2 Oct 2026)"
+    ],
     "detail": {
-     "title": "Why rebuild it",
+     "title": "Why the umbrella, and how it went up",
      "body": [
-      "I wanted to know whether the concept survives a change of medium. On the runway the tension came from walking; in the installation it comes from standing still."
+      "The forecast for the exhibition week called for rain. Outdoors, the piece had to be protected, and instead of throwing a cover over it I wanted to use that condition to strengthen the theme. So I added an umbrella.",
+      "The next question was what the symbiosis of anxiety and focus looks like at a university. I read students' anxiety as pressure, and put that pressure on top of the umbrella.",
+      "In the end it never rained. The umbrella became the centre of the piece less as shelter than as the place where the pressure sits.",
+      "The hardest part was installing that umbrella. With the heels, belt, clock hands and chiffon on top it became very heavy, its centre of gravity was uneven, and it had to be fixed high up.",
+      "So I used wire and made the most of the site. The vine-covered arch tunnel became the support, and the umbrella was wired to it. The third reason for choosing the site, a place to hold an umbrella without harming any plants, turned out to be the solution."
      ]
     }
    }
   },
-  "title": "SNU Arts Week 2026: Tensed Symbiosis",
-  "desc": "The Art2Wear piece rebuilt as an outdoor site installation for SNU Arts Week 2026."
+  "title": "Tensed Symbiosis, Rebuilt: The Art2Wear Piece Reworked for SNU Arts Week",
+  "desc": "Flowers, bag and skirt from the Art2Wear piece, reworked with new objects into an outdoor installation for SNU Arts Week 2026.",
+  "song": "리도어 21가지의 월세계"
  }
 ];

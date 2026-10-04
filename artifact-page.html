@@ -9,7 +9,7 @@
   --bg: #F1F1F3;
   --paper: #FAFAFB;
   --ink: #1D1D1F;
-  --ink-2: #7C808A;
+  --ink-2: #555861; /* #7C808A until 2026-10-02: lost on some photos; now the timeline's date grey */
   --hairline: rgba(29,29,31,.14);
   --vellum: rgba(250,250,251,.72);
   --placeholder: #D9DBE0;
@@ -26,9 +26,9 @@ body { margin: 0; min-width: 320px; overflow-x: hidden; background: var(--bg); c
 main { position: relative; z-index: 1; }
 /* ---- vellum ground: photo → frosted paper → grain (the moodboard) ---- */
 .ground { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; background: var(--bg); }
-.ground-photo { position: absolute; left: -8%; top: -8%; width: 116%; height: 116%; object-fit: cover; opacity: 0; filter: blur(12px) saturate(1.2) contrast(.97) brightness(1.02); transform: translateZ(0); transition: opacity 1.6s ease; will-change: opacity; }
+.ground-photo { position: absolute; left: -8%; top: -8%; width: 116%; height: 116%; object-fit: cover; opacity: 0; filter: blur(12px) saturate(1.2) contrast(.97) brightness(1.02); transform: translateZ(0); transition: opacity 2.6s cubic-bezier(.45, 0, .25, 1); will-change: opacity; } /* 1.6s ease until 2026-10-02: the change felt abrupt */
 .ground-photo.is-on { opacity: 1; }
-.ground-vellum { position: absolute; inset: 0; background: rgba(241,241,243,.46); }
+.ground-vellum { position: absolute; inset: 0; z-index: 5; background: rgba(241,241,243,.46); } /* above the three photo layers */
 .ground-vellum::before { content: ''; position: absolute; inset: 0; opacity: .11; mix-blend-mode: multiply; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
 .ground-vellum::after { content: ''; position: absolute; inset: 0; background: radial-gradient(130% 80% at 50% 12%, rgba(255,255,255,.34), rgba(255,255,255,0) 62%), linear-gradient(180deg, rgba(29,29,31,0) 70%, rgba(29,29,31,.05)); }
 @media (max-width: 768px) { .ground-photo { filter: blur(10px) saturate(1.2) contrast(.97) brightness(1.02); transition: none; } }
@@ -48,6 +48,15 @@ button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 1px s
 .nav-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 16px; }
 .nav-link, .nav-toggle { border: 0; padding: 5px 0; background: transparent; color: var(--ink); cursor: pointer; }
 .nav-link:hover, .nav-toggle:hover { color: var(--ink-2); }
+/* a wider pause between the section links and the two toggles (연서, 2026-10-02) */
+.nav-link + .nav-toggle { margin-left: 30px; }
+/* the two toggles are settings, not sections: a softer grey until hovered */
+.nav-toggle { color: #61656E; }
+.nav-toggle:hover { color: var(--ink); }
+/* phones: 'best viewed on a computer', bottom centre, fades in and out */
+.desktop-note { position: fixed; left: 50%; bottom: 16px; z-index: 70; display: flex; align-items: center; gap: 10px; width: max-content; max-width: calc(100vw - 32px); padding: 9px 10px 9px 14px; border: 1px solid var(--hairline); background: rgba(250,250,251,.92); backdrop-filter: blur(10px); color: var(--ink); font: 11px/1.5 var(--font-mono); letter-spacing: .02em; transform: translate(-50%, 8px); opacity: 0; transition: opacity .5s ease, transform .5s ease; }
+.desktop-note.is-shown { opacity: 1; transform: translate(-50%, 0); }
+.desktop-note button { flex: none; border: 0; padding: 0 4px; background: transparent; color: var(--ink-2); font: 16px/1 var(--font-mono); cursor: pointer; }
 .nav-divider { color: var(--ink-2); }
 
 .loader { position: fixed; inset: 0; z-index: 50; overflow: hidden; background: transparent; touch-action: none; user-select: none; }
@@ -117,21 +126,29 @@ main { overflow: clip; }
 .hand-group.is-on .hand-sub path { stroke-dashoffset: 0; }
 .hand-group.is-on .hand-sub text, .hand-group.is-on .hand-sub .hand-dots { opacity: 1; clip-path: inset(-30% -6% -30% -6%); }
 .hand-group:not(.is-on) .hand-sub text, .hand-group:not(.is-on) .hand-sub .hand-dots, .hand-group:not(.is-on) .hand-sub path { transition-delay: 0s; transition-duration: 0s; }
-.hand-hot { position: absolute; display: block; cursor: default; }
+.hand-hot { position: absolute; display: block; cursor: pointer; }
+/* the label(s) of an open note blink softly and slowly: they are links to that filter of the archive */
+.hand-group.is-on:not(.is-ghost) :is(.hand-insight, .hand-ai, .hand-fc) { animation: hand-blink 2s ease-in-out .35s infinite; }
+.hand-group.is-on:has(.hand-hot:hover) :is(.hand-insight, .hand-ai, .hand-fc) { animation: none; opacity: 1; }
+@keyframes hand-blink { 0%, 100% { opacity: 1; } 50% { opacity: .38; } }
 /* the first look: every note at once, faint, rippling like water, then gone */
 .hand-group.is-ghost { visibility: visible; animation: hand-ghost 1.7s ease-in-out both; will-change: opacity, transform; transform-origin: 50% 50%; }
-.hand-group--visual.is-ghost { animation-delay: .08s; }
-.hand-group--design.is-ghost { animation-delay: .16s; }
+/* thin pen in the glimpse: a blur on the whole layer had spread every line and letter, so they read bold */
+.hand-group.is-ghost .hand-svg path { stroke-width: 1.3; }
+.hand-group.is-ghost .hand-sub path { stroke-width: 1.1; }
+.hand-group.is-ghost .hand-svg .hand-thin { stroke-width: .8; }
+.hand-group--visual.is-ghost { animation-delay: .05s; }
+.hand-group--design.is-ghost { animation-delay: .1s; }
 .hand-group.is-ghost .hand-svg { filter: url("#hand-wave"); }
 .hand-group.is-ghost .hand-hot { pointer-events: none; }
+/* the first look: faint, one slow sway, then gone (2026-10-02) */
 @keyframes hand-ghost {
-  0% { opacity: 0; transform: translateY(10px) skewX(1.2deg) scaleY(.985); }
-  20% { opacity: .5; transform: translateY(0) skewX(-.8deg) scaleY(1.01); }
-  40% { opacity: .42; transform: translateY(-4px) skewX(.9deg) scaleY(.99); }
-  60% { opacity: .46; transform: translateY(2px) skewX(-.7deg) scaleY(1.008); }
-  80% { opacity: .3; transform: translateY(-3px) skewX(.5deg) scaleY(.995); }
-  100% { opacity: 0; transform: translateY(-8px) skewX(0) scaleY(1); }
+  0% { opacity: 0; transform: translateY(8px) skewX(1deg) scaleY(.99); }
+  45% { opacity: .32; transform: translateY(0) skewX(-.8deg) scaleY(1.008); }
+  100% { opacity: 0; transform: translateY(-6px) skewX(0) scaleY(1); }
 }
+
+
 .hand-hot:hover { outline: 0; }
 .intro-frame.is-hand-insight .intro-keyword[data-keyword="insight"] { color: transparent; text-shadow: none; }
 @media (max-width: 760px), (hover: none) { .hand-layer { display: none; } }
@@ -205,6 +222,7 @@ main { overflow: clip; }
   .nav-wordmark { width: 100%; }
   .nav-actions { width: 100%; max-width: none; gap: 4px 8px; justify-content: space-between; }
   .nav-divider { display: none; }
+  .nav-link + .nav-toggle { margin-left: 0; }
   .site-section { padding: calc(var(--nav-height) + 28px) 16px 48px; }
   .section-shell { min-height: calc(100vh - var(--nav-height) - 76px); }
   .section-empty { padding: 9vh 0; }
@@ -322,22 +340,28 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .about-strength-item:last-child { border-bottom: 1px solid var(--hairline); }
 .about-strength-claim { margin: 0; font: 400 17px/1.55 var(--font-mono); letter-spacing: .01em; }
 
+/* the small how-to line under the strengths, bottom right */
+.about-strength-hint { margin: 14px 0 0; text-align: right; color: var(--ink-2); font: 11px/1.5 var(--font-mono); letter-spacing: .04em; }
 .about-strength-keyword { display: inline; border: 0; padding: 0; background: transparent; color: var(--ink); font: inherit; cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
 .about-strength-evidence { margin: 8px 0 0; color: #4A4D55; font: 12px/1.65 var(--font-mono); } /* ink-2 got lost on the warm photos */
 .about-strength-inline { display: none; margin-top: 18px; }
 .about-photo { position: relative; width: min(100%,440px); margin: 0 0 0 auto; }
 .about-photo-frame { position: relative; aspect-ratio: 3/4; overflow: hidden; border: 1px dotted var(--ink-2); background: var(--placeholder); }
 /* stacked collage: three photos, uneven sizes and gaps, overlapping */
-.about-photo--stack { width: min(100%, 560px); aspect-ratio: 1 / 1.08; }
+.about-photo--stack { width: min(100%, 560px); aspect-ratio: auto; }
+/* heights come from a padding box and percentages, not aspect-ratio: in one browser the frames grew taller than
+   their photos and white showed underneath (2026-10-02). The photo always fills its frame. */
+.about-photo--stack::before { content: ''; display: block; padding-top: 108%; }
+.about-photo--stack .about-photo-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .about-photo--stack .about-photo-frame { position: absolute; margin: 0; box-shadow: 0 10px 28px rgba(29,29,31,.14); }
-.about-photo--stack .about-photo-frame--1 { left: 0; top: 6%; width: 63%; aspect-ratio: 3/4; z-index: 1; } /* the portrait, a touch bigger (2026-10-01) */
-.about-photo--stack .about-photo-frame--2 { right: 0; top: 0; width: 55%; aspect-ratio: 4/3; z-index: 2; }
-.about-photo--stack .about-photo-frame--3 { right: 6%; bottom: 0; width: 47%; aspect-ratio: 4/3; z-index: 3; }
+.about-photo--stack .about-photo-frame--1 { left: 0; top: 6%; width: 63%; height: 77.78%; aspect-ratio: auto; z-index: 1; } /* the portrait, a touch bigger (2026-10-01) */
+.about-photo--stack .about-photo-frame--2 { right: 0; top: 0; width: 55%; height: 38.19%; aspect-ratio: auto; z-index: 2; }
+.about-photo--stack .about-photo-frame--3 { right: 6%; bottom: 0; width: 47%; height: 32.64%; aspect-ratio: auto; z-index: 3; }
 .about-photo--stack figcaption { position: absolute; right: 0; bottom: -22px; }
 /* two photos: the portrait, and the café shot tucked over its lower right corner */
-.about-photo--count-2 { aspect-ratio: 1 / .98; }
-.about-photo--count-2 .about-photo-frame--1 { top: 0; width: 66%; }
-.about-photo--count-2 .about-photo-frame--2 { right: 0; top: auto; bottom: 0; width: 52%; aspect-ratio: 4/3; }
+.about-photo--count-2::before { padding-top: 98%; }
+.about-photo--count-2 .about-photo-frame--1 { top: 0; width: 66%; height: 89.8%; }
+.about-photo--count-2 .about-photo-frame--2 { right: 0; top: auto; bottom: 0; width: 52%; height: 39.8%; aspect-ratio: auto; }
 .about-photo-frame img, .strength-media-frame img, .strength-inline-frame img { width: 100%; height: 100%; display: none; object-fit: cover; }
 .about-photo-frame.has-image img, .strength-media-frame.has-image img, .strength-inline-frame.has-image img { display: block; }
 .about-photo-frame > span, .strength-media-frame > span, .strength-inline-frame > span { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-2); font: 11px/1 var(--font-mono); letter-spacing: .1em; }
@@ -472,7 +496,7 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .card-img img { filter: saturate(.72) contrast(1.02); }
 .archive-card-button:hover .archive-image-slot, .archive-card-button:focus-visible .archive-image-slot { transform: scale(1.03); }
 .archive-now-badge { position: absolute; top: 10px; left: 10px; z-index: 2; padding: 6px 8px; border: 1px solid var(--hairline); background: var(--vellum); color: var(--ink); font: 10px/1 var(--font-mono); letter-spacing: .06em; }
-.archive-card-meta { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px 16px; color: var(--ink); text-align: center; opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .25s ease; pointer-events: none; }
+.archive-card-meta { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px 16px; color: var(--ink); text-align: center; opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .25s ease; pointer-events: none; }
 .archive-card-button { position: relative; display: block; }
 .archive-card-button::after { content: ''; position: absolute; inset: 0; z-index: 1; background: rgba(241,241,243,.78); opacity: 0; transition: opacity .25s ease; pointer-events: none; }
 .archive-card-button:hover::after, .archive-card-button:focus-visible::after { opacity: 1; }
@@ -689,6 +713,11 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
 .detail-result-pending { margin: 0; border: 1px dotted var(--ink-2); padding: 28px; }
 .detail-result-pending h3 { color: var(--ink-2); }
 .detail-result-pending p { color: var(--ink-2); font: 11px/1.4 var(--font-mono); letter-spacing: .08em; text-align: center; }
+/* see also (2026-10-03): Art2Wear ⇄ the Arts Week installation */
+.detail-related p + p { margin-top: 10px; }
+.detail-related-link { display: inline-block; margin-top: 16px; padding: 10px 18px; border: 1px solid var(--ink); border-radius: 999px; color: var(--ink); font: 12px/1.4 var(--font-mono); letter-spacing: .06em; text-decoration: none; transition: background-color .2s ease, color .2s ease; }
+.detail-related-link:hover, .detail-related-link:focus-visible { background: var(--ink); color: var(--paper); }
+.detail-related-link + p { margin-top: 22px; }
 .detail-expandable { margin: 12px 0 82px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .detail-expand-toggle { width: 100%; border: 0; padding: 20px 0; background: transparent; color: var(--ink); font: 12px/1.4 var(--font-mono); letter-spacing: .06em; text-align: left; cursor: pointer; }
 .detail-expand-body { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 26px 56px; padding: 18px 0 48px; }
@@ -697,6 +726,8 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
 .detail-gallery-section, .detail-soundtrack { padding-top: 20px; }
 .detail-film-link { display: inline-block; margin: 10px 0 18px; color: var(--ink-2); font: 11px/1.4 var(--font-mono); letter-spacing: .08em; text-decoration: underline; text-underline-offset: .3em; }
 .detail-film-link:hover { color: var(--ink); }
+/* one caption above each film when a page has several (motion graphics: Toxic, APT, 후라이의 꿈) */
+.detail-film-label { margin: 0 0 8px; color: var(--ink); font: 13px/1.6 var(--font-mono); }
 /* the project's song, top right: three tiny lines, then the 80px Spotify bar. The player's own colours can't
    be restyled (it is Spotify's page), so the whole frame is toned down and returns to full colour on hover */
 .detail-track { display: flex; justify-content: flex-end; align-items: center; gap: 14px; margin: -40px 0 16px; }
@@ -704,8 +735,13 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
 .detail-track-label { color: var(--ink); letter-spacing: .14em; }
 .detail-track-text a { color: inherit; opacity: .8; text-decoration: underline; text-underline-offset: .28em; }
 .detail-track-text a:hover { opacity: 1; color: var(--ink); }
-.detail-track .detail-spotify { flex: 0 0 auto; display: block; width: 250px; height: 80px; border: 0; border-radius: 12px; filter: saturate(.55) contrast(.94); transition: filter .4s ease; }
-.detail-track .detail-spotify:hover { filter: none; }
+/* 2026-10-03: softer and lighter so it sits in the page (연서: 채도 연하게, 밝게, 대비 강하지 않게).
+   Was saturate(.55) contrast(.94) with full colour on hover */
+.detail-track .detail-spotify-wrap { position: relative; flex: 0 0 auto; display: block; width: 250px; height: 80px; border-radius: 12px; overflow: hidden; }
+.detail-track .detail-spotify-wrap::after { content: ''; position: absolute; inset: 0; background: rgba(250,250,251,.3); pointer-events: none; transition: opacity .4s ease; }
+.detail-track .detail-spotify { display: block; width: 100%; height: 100%; border: 0; border-radius: 12px; filter: saturate(.3) contrast(.6) brightness(1.32); transition: filter .4s ease; }
+.detail-track .detail-spotify-wrap:hover::after { opacity: 0; }
+.detail-track .detail-spotify-wrap:hover .detail-spotify { filter: saturate(.55) contrast(.9) brightness(1.05); }
 .detail-soundtrack > p:not(.detail-song-meta) { margin-top: 8px; }
 .detail-song-meta { margin: 6px 0 0 !important; color: var(--ink-2); opacity: .7; font: 9.5px/1.4 var(--font-mono) !important; letter-spacing: .06em; }
 .detail-song-meta a { color: inherit; text-decoration: underline; text-underline-offset: .28em; }
@@ -729,6 +765,19 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
 .detail-gallery.is-justified .detail-gallery-item.has-image img { position: static; display: block; width: 100%; height: 100%; object-fit: cover; }
 .detail-gallery.is-justified .detail-gallery-item:not(.has-image) { display: none; }
 .detail-gallery-item.has-image img { vertical-align: top; }
+/* sections (2026-10-02): a title, an optional one-line note, short captions under the making-of pictures */
+.detail-section + .detail-section, .detail-section + .detail-stack-section, .detail-stack-section + .detail-section { padding-top: 56px; }
+.detail-section-note { margin: -12px 0 20px; color: var(--ink-2); font: 12px/1.55 var(--font-mono); }
+.detail-gallery-item.has-image { background: transparent; }
+.detail-gallery-item .detail-caption { margin: 0; padding: 7px 14px 16px 0; color: var(--ink-2); font: 11px/1.45 var(--font-mono); }
+/* the mind map as a pile of small overlapping cards, in order; the one under the pointer comes forward */
+.detail-stack { display: flex; flex-direction: column; gap: 22px; padding: 12px 0 34px; }
+.detail-stack-row { display: flex; flex-wrap: nowrap; align-items: flex-start; }
+.detail-stack-item { position: relative; flex: 0 0 auto; margin: 0; background: #fff; box-shadow: 0 4px 16px rgba(20, 20, 30, .16); transform: rotate(var(--tilt, 0deg)); transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s; outline: none; }
+.detail-stack-item img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.detail-stack-item .detail-media-slot { display: none; }
+.detail-stack-item:hover, .detail-stack-item:focus { z-index: 60 !important; transform: rotate(0deg) translateY(-10px) scale(1.6); box-shadow: 0 16px 40px rgba(20, 20, 30, .28); }
+.detail-stack-num { position: absolute; left: 6px; top: 5px; padding: 1px 4px; background: rgba(255, 255, 255, .86); color: var(--ink-2); font: 10px/1.2 var(--font-mono); }
 .detail-film { margin: 0; }
 .detail-film + .detail-film { margin-top: 0; }
 .detail-review-tag { position: absolute; left: 0; top: 0; z-index: 2; padding: 3px 6px; background: rgba(29,29,31,.72); color: #fff; font: 10px/1.2 var(--font-mono); letter-spacing: .06em; pointer-events: none; }
@@ -763,7 +812,7 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
   .detail-roles { grid-template-columns: 1fr; gap: 48px; }
   .detail-track { margin: -24px 0 12px; gap: 10px; }
   .detail-track-text { max-width: 46%; }
-  .detail-track .detail-spotify { width: min(54%, 250px); }
+  .detail-track .detail-spotify-wrap { width: min(54%, 250px); }
   .detail-roles .detail-story-block { grid-template-columns: 1fr; }
   .detail-note { padding-left: 0; }
   .detail-expand-body { grid-template-columns: 1fr; gap: 22px; }
@@ -788,10 +837,15 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
    project pages read (Special Elite only has Latin, and its full stops and commas sat heavy next to Hangul) */
 html[lang="ko"] :is(.about-strength-claim, .about-strength-evidence, .now-label, .now-claim, .now-evidence, .now-next, .now-lead, .now-media figcaption,
   .timeline-item-title, .timeline-grade, .timeline-item-desc, .timeline-panel-title, .timeline-panel-desc, .timeline-panel-grade,
-  .work-index-title, .archive-card-details span, .detail-meta, .detail-metrics span, .detail-note),
+  .work-index-title, .archive-card-details span, .detail-meta, .detail-metrics span, .detail-note, .detail-film-label, .about-strength-hint, .desktop-note span,
+  .detail-caption, .detail-section-note, .detail-section > h3, .detail-stack-section > h3),
 html[lang="ko"] .timeline-item.is-major .timeline-item-title {
   font-family: "Nanum Gothic Coding", "Special Elite", monospace;
 }
+
+/* the glass ball under the pointer (js/cursor-lens.js): a small WebGL canvas over the photo it is on */
+.cursor-lens-canvas { position: fixed; left: 0; top: 0; z-index: 9999; display: none; pointer-events: none; will-change: transform; }
+.cursor-lens-canvas.is-in-card { position: absolute; z-index: 2; } /* between the card's vellum veil (1) and its title (3) */
 
 </style>
 <script>window.REVIEW_LABELS = location.hash === '#review'; if (window.REVIEW_LABELS) document.documentElement.classList.add('is-review'); window.REVIEW_MODEL = 'models/review/plate-flower.gltf.json'; /* review build: open with #review for image ids and GL badges; the model is split into .json/.wasm/.jpg because the artifact host serves only listed extensions and blocks blob: textures */</script>
