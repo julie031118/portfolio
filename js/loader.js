@@ -3,7 +3,7 @@ import { unlockAudio } from './audio.js';
 import { GROUND } from './ground.js';
 
 const SESSION_KEY = 'yeonseo-loader-seen';
-const mobileQuery = window.matchMedia('(max-width: 768px), (hover: none)');
+const mobileQuery = window.matchMedia('(max-width: 600px), (hover: none)');
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 /* Torn edge: an organic contour (three overlapping low-frequency waves) with fine per-point jitter,
    emitted as a smooth curve. The fibrous look comes from the SVG filters on the rim strokes. */

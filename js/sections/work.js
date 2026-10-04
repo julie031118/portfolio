@@ -1,12 +1,13 @@
 import { T } from './render-shell.js';
 import { openDetail } from './detail.js';
 import { releaseWebGL } from './render-shell.js';
+import { ringTick } from '../audio.js';
 
 /* SELECTED WORK — ring of the 12 featured projects (vanilla Three.js).
    Motion reference: Codrops "Scroll-Driven 3D Image Tube" (MIT) — scroll adds
    rotation with inertial damping, hover slows, DOM tooltip, object slot in the middle. */
 
-const mobileQuery = window.matchMedia('(max-width: 768px), (hover: none)');
+const mobileQuery = window.matchMedia('(max-width: 600px), (hover: none)');
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const TAU = Math.PI * 2;
 let instance = null;
@@ -290,6 +291,7 @@ async function createRing(section, projects, lang, onDispose) {
   let disposed = false;
   let lastTime = performance.now();
   let activeIndex = -1;
+  let ringSpeed = 0;
   const raycaster = new THREE.Raycaster();
   const pointer = new THREE.Vector2(-2, -2);
   const worldPos = new THREE.Vector3();
@@ -388,6 +390,8 @@ async function createRing(section, projects, lang, onDispose) {
       if (depth > nearestZ) { nearestZ = depth; nearest = i; }
     });
     if (nearest !== activeIndex) {
+      /* a tick when the user turns the ring (scroll, drag, index), not during the slow idle drift */
+      if (activeIndex !== -1 && Math.abs(ringSpeed) > 0.12) ringTick();
       activeIndex = nearest;
       indexButtons.forEach((button, i) => button.classList.toggle('is-active', i === nearest));
     }
@@ -399,7 +403,9 @@ async function createRing(section, projects, lang, onDispose) {
     if (!reducedQuery.matches && !hovered) drift += dt * 0.05 * hoverSlow;
     hoverSlow += ((hovered ? 0.25 : 1) - hoverSlow) * 0.1;
     const target = -Math.PI / 2 + scrollAngle + offsetAngle + drift;
+    const before = angle;
     angle += (target - angle) * (1 - Math.pow(0.001, dt)); /* inertial damping */
+    ringSpeed = dt > 0 ? (angle - before) / dt : 0;
     parallax.x += (parallax.tx - parallax.x) * 0.06;
     parallax.y += (parallax.ty - parallax.y) * 0.06;
     layout();

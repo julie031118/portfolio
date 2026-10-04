@@ -912,7 +912,8 @@ window.PROJECTS = [
   },
   "title": "Engineered Kaftan",
   "desc": "Chopin's Nocturne translated into visual movement across silk. Engineered placement prints carry the score through the garment; the finished kaftan was selected for the Wilson College Collection at NC State.",
-  "song": "moneto She feat MRCH"
+  "song": "moneto She feat MRCH",
+  "songYoutube": "https://www.youtube.com/watch?v=qdC0zV_6JkI"
  },
  {
   "slug": "fashion-show-2024",
@@ -1569,7 +1570,7 @@ window.PROJECTS = [
    "ko": {
     "title": "Art2Wear 2026: Tensed Symbiosis",
     "cat": "웨어러블 아트 · 런웨이 · 2026.01~04",
-    "need": "쇼의 주제는 '공생'이었다. 나는 실제 동물의 공생 관계보다 사람의 내면 이야기로 풀어내는 걸 좋아하고, 동물의 공생은 이미 다른 참가자들이 멋지게 표현하고 있었다. 나만의 주제가 필요했고, 그렇게 고른 것이 '불안과 집중의 공생'이다. 지금의 내 상태이자, 내가 일을 해 나가는 원동력의 일부다. 만드는 동안 나도 위로받았고, 불안을 부정적으로만 보지 않게 해서 보는 사람에게도 같은 위로를 건네고 싶었다.",
+    "need": "쇼의 주제는 '공생'이었다. 나는 실제 동물의 공생 관계보다 사람의 내면 이야기로 풀어내는 걸 좋아하고, 동물의 공생은 이미 다른 참가자들이 멋지게 표현하고 있었다. 나만의 주제가 필요했고, 그렇게 고른 것이 '불안과 집중의 공생'이다. 나를 움직이는 원동력이기도 하다. 만드는 동안 나도 위로받았고, 불안을 부정적으로만 보지 않게 해서 보는 사람에게도 같은 위로를 건네고 싶었다.",
     "action": [
      "쇼 주제 '공생'을 사람의 내면으로 가져와 '불안과 집중의 공생'으로 설정: 불안 없는 집중은 동력을 잃고, 집중 없는 불안은 혼돈이 된다",
      "대비되는 소재를 보여 주면서 그 이질적인 소재들이 조화를 이루게 하는 데 집중: 도자기 접시를 직접 깨뜨려, 깨진 접시와는 정반대 이미지인 꽃을 만듦",
@@ -1604,7 +1605,7 @@ window.PROJECTS = [
    "en": {
     "title": "Art2Wear 2026: “Tensed Symbiosis”",
     "cat": "Wearable Art · Runway · Jan to Apr 2026",
-    "need": "The show's theme was symbiosis. I prefer to tell stories about people's inner lives rather than real animal symbiosis, and other designers were already handling animal symbiosis beautifully. I wanted a theme of my own, and chose the symbiosis of anxiety and focus: my own state right now, and part of what drives my work. Making it comforted me, and I wanted to pass that comfort on by letting people see anxiety as more than something negative.",
+    "need": "The show's theme was symbiosis. I prefer to tell stories about people's inner lives rather than real animal symbiosis, and other designers were already handling animal symbiosis beautifully. I wanted a theme of my own, and chose the symbiosis of anxiety and focus: part of what drives me. Making it comforted me, and I wanted to pass that comfort on by letting people see anxiety as more than something negative.",
     "action": [
      "Brought the show's theme inward as the symbiosis of anxiety and focus: focus without anxiety loses its drive, anxiety without focus becomes chaos",
      "Focused on showing contrasting materials while making those unlike materials work together: smashed ceramic plates by hand and built flowers from them, the opposite image of a broken plate",
@@ -4351,7 +4352,8 @@ window.PROJECTS = [
   },
   "title": "Making this Portfolio with AI",
   "desc": "이 사이트 자체를 하나의 프로젝트로 기록한다. 사람들이 AI 결과물에 느끼는 피로를 읽고, 반대로 빈티지한 공간을 만든 과정.",
-  "song": "midnightpetals in between"
+  "song": "midnightpetals in between",
+  "songYoutube": "https://www.youtube.com/watch?v=kOk-BxD9v3g"
  },
  {
   "slug": "promo-video-ai",
@@ -4503,11 +4505,8 @@ window.PROJECTS = [
    "ko": "설치 재구성 · 제작 · 현장 설치 (단독)",
    "en": "Installation redesign, construction, on-site setup (solo)"
   },
-  "spotify": "7HOl87ObyzayM0i4qZ6Ybv",
-  "spotifyNote": {
-   "ko": "불안과 자기혐오를 담은 가사가 작품의 주제와 어울려서, 실제로 만들 때 많이 들었다.",
-   "en": "Lyrics about anxiety and self-loathing fit the theme of the piece; I listened to it a lot while making it."
-  },
+  "spotify": null,
+  "spotifyNote": null,
   "related": [
    {
     "slug": "art2wear",
@@ -4737,7 +4736,6 @@ window.PROJECTS = [
    }
   },
   "title": "Tensed Symbiosis, Rebuilt: The Art2Wear Piece Reworked for SNU Arts Week",
-  "desc": "Flowers, bag and skirt from the Art2Wear piece, reworked with new objects into an outdoor installation for SNU Arts Week 2026.",
-  "song": "리도어 21가지의 월세계"
+  "desc": "Flowers, bag and skirt from the Art2Wear piece, reworked with new objects into an outdoor installation for SNU Arts Week 2026."
  }
 ];

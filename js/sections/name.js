@@ -1,6 +1,7 @@
 import { releaseWebGL } from './render-shell.js';
+import { waterSwish } from '../audio.js';
 const GRID_SIZE = 128;
-const mobileQuery = window.matchMedia('(max-width: 768px), (hover: none)');
+const mobileQuery = window.matchMedia('(max-width: 600px), (hover: none)');
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 let instance = null;
 
@@ -253,6 +254,7 @@ async function createRenderer(section, data) {
     const rect = section.getBoundingClientRect();
     const x = event.clientX;
     const y = event.clientY;
+    if (lastPointerX !== null) { const speed = Math.hypot(x - lastPointerX, y - lastPointerY); if (speed > 3) waterSwish(speed); }
     if (lastPointerX !== null) fluid.inject((x - rect.left) / rect.width, 1 - (y - rect.top) / rect.height, clamp(x - lastPointerX, -24, 24), clamp(y - lastPointerY, -24, 24), 11, 1.4);
     activeUntil = performance.now() + 1500;
     needsRender = true;

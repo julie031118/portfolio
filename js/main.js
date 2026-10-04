@@ -17,6 +17,13 @@ const browserLang = /^ko\b/i.test(navigator.language || '') || (navigator.langua
 let LANG = storageGet('localStorage', LANG_KEY) || browserLang;
 let introController = null;
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* The ring, the name's water and the timeline are built once for desktop or once for phones. A window resized
+   across that line (split screen, then full screen) rebuilds the page so the right version runs (2026-10-03). */
+{
+  const layoutQuery = window.matchMedia('(max-width: 600px), (hover: none)');
+  let reloadTimer = 0;
+  layoutQuery.addEventListener('change', () => { clearTimeout(reloadTimer); reloadTimer = window.setTimeout(() => window.location.reload(), 400); });
+}
 const T = (value) => value && typeof value === 'object' && 'ko' in value ? (value[LANG] || value.ko) : value;
 
 function toggleLanguage() {
@@ -74,7 +81,7 @@ window.addEventListener('portfolio:soundchange', renderNav);
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !document.querySelector('#detail')?.hidden) closeDetail(); });
 /* phones: one small note per visit that the site is fuller on a computer; it fades by itself or on tap */
 function showDesktopNote() {
-  if (!window.matchMedia('(max-width: 768px), (hover: none)').matches) return;
+  if (!window.matchMedia('(max-width: 600px), (hover: none)').matches) return;
   if (storageGet('sessionStorage', 'yeonseo-desktop-note')) return;
   storageSet('sessionStorage', 'yeonseo-desktop-note', '1');
   const note = document.createElement('div'); note.className = 'desktop-note'; note.setAttribute('role', 'note');

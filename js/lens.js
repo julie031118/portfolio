@@ -1,6 +1,6 @@
 import { releaseWebGL } from './sections/render-shell.js';
 
-const mobileQuery = window.matchMedia('(max-width: 768px), (hover: none)');
+const mobileQuery = window.matchMedia('(max-width: 600px), (hover: none)');
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 /* The square lens from Codrops' "Mouse-Following Square Lens Effect" (Tomoyuki Nakata, MIT, 2026-08),

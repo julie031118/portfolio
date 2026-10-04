@@ -1,3 +1,4 @@
+import { dropPlip } from './audio.js';
 /* A round glass ball under the pointer, after Codrops' "Progressively Enhanced WebGL Lens Refraction" (2023),
    on photographs only (2026-10-03): the cover and the pictures of a project page, and the archive cards
    (under every filter). Like the original it is drawn in WebGL, so Chrome and Safari show the same thing:
@@ -174,7 +175,7 @@ export function initCursorLens() {
     gl.uniform1f(U.saturation, hit.saturate); gl.uniform1f(U.contrast, hit.contrast); gl.uniform1f(U.veil, hit.veil || 0);
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-    if (!shown) { canvas.style.display = 'block'; shown = true; }
+    if (!shown) { canvas.style.display = 'block'; shown = true; dropPlip(); }
   };
   requestAnimationFrame(frame);
 

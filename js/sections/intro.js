@@ -4,7 +4,7 @@ import { openDetail } from './detail.js';
 
 import { createHandNotes } from './intro-hand.js';
 let controller = null;
-const compactQuery = window.matchMedia('(max-width: 760px), (hover: none)');
+const compactQuery = window.matchMedia('(max-width: 760px), (hover: none)'); /* hand-drawn notes need room; the rest of the desktop site runs down to 601px (2026-10-03) */
 
 function fragmentsFor(keyword, lang) {
   return keyword.fragments?.[lang] || [T(keyword.text, lang)];
@@ -174,7 +174,7 @@ export function renderIntro(siteLang) {
     const typed = lines[step].slice(0, Math.round(lines[step].length * chars));
     if (typed !== solo.textContent) { solo.textContent = ''; appendText(solo, typed); }
     const count = typed.length;
-    if (count > previousCount) for (let index = 0; index < Math.min(count - previousCount, 3); index += 1) typeClick();
+    if (count > previousCount) typeClick(); /* one click per step, throttled in audio.js (was up to 3) */
     previousCount = count;
   }
 

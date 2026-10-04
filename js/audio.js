@@ -13,7 +13,7 @@ export async function unlockAudio() {
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
     if (!AudioContextClass) return false;
     context = new AudioContextClass();
-    noiseBuffer = context.createBuffer(1, Math.ceil(context.sampleRate * 0.02), context.sampleRate);
+    noiseBuffer = context.createBuffer(1, Math.ceil(context.sampleRate * 0.4), context.sampleRate);
     const channel = noiseBuffer.getChannelData(0);
     for (let i = 0; i < channel.length; i += 1) channel[i] = Math.random() * 2 - 1;
   }
@@ -56,22 +56,72 @@ export async function toggleSound() {
   return enabled;
 }
 
-export function typeClick() {
-  if (!enabled || !context || context.state !== 'running' || document.hidden || !noiseBuffer) return;
-  const now = context.currentTime;
+/* Interaction sounds (2026-10-03, 연서: the typing was only audible at full volume and too busy).
+   All synthesised (no files), all gated by the SOUND toggle, each with its own minimum gap so fast
+   scrolling or a quick pointer never turns into a buzz. */
+const lastPlayed = {};
+function ready(name, gapMs) {
+  if (!enabled || !context || context.state !== 'running' || document.hidden || !noiseBuffer) return false;
+  const now = performance.now();
+  if (now - (lastPlayed[name] || 0) < gapMs) return false;
+  lastPlayed[name] = now;
+  return true;
+}
+function burst(now, { freq, q = 1.2, gain, length, type = 'bandpass', rate = 1 }) {
   const source = context.createBufferSource();
   const filter = context.createBiquadFilter();
-  const gain = context.createGain();
+  const amp = context.createGain();
   source.buffer = noiseBuffer;
-  source.playbackRate.value = 0.92 + Math.random() * 0.18;
-  filter.type = 'bandpass';
-  filter.frequency.value = 1450 + Math.random() * 500;
-  filter.Q.value = 1.4;
-  gain.gain.setValueAtTime(0.063, now);
-  gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.01);
-  source.connect(filter).connect(gain).connect(context.destination);
-  source.start(now);
-  source.stop(now + 0.012);
+  source.playbackRate.value = rate;
+  filter.type = type; filter.frequency.value = freq; filter.Q.value = q;
+  amp.gain.setValueAtTime(gain, now);
+  amp.gain.exponentialRampToValueAtTime(0.0001, now + length);
+  source.connect(filter).connect(amp).connect(context.destination);
+  source.start(now); source.stop(now + length + 0.01);
+}
+function tone(now, { from, to = from, gain, length, type = 'sine' }) {
+  const osc = context.createOscillator();
+  const amp = context.createGain();
+  osc.type = type;
+  osc.frequency.setValueAtTime(from, now);
+  if (to !== from) osc.frequency.exponentialRampToValueAtTime(to, now + length);
+  amp.gain.setValueAtTime(0.0001, now);
+  amp.gain.exponentialRampToValueAtTime(gain, now + 0.004);
+  amp.gain.exponentialRampToValueAtTime(0.0001, now + length);
+  osc.connect(amp).connect(context.destination);
+  osc.start(now); osc.stop(now + length + 0.02);
+}
+
+/* typewriter key: a sharp click with a little body under it; at most one every 120 ms */
+export function typeClick() {
+  if (!ready('type', 120)) return;
+  const now = context.currentTime;
+  burst(now, { freq: 1500 + Math.random() * 500, q: 1.3, gain: 0.42, length: 0.018, rate: 0.92 + Math.random() * 0.18 });
+  tone(now, { from: 150 + Math.random() * 30, gain: 0.16, length: 0.03, type: 'triangle' });
+}
+
+/* the ring: a soft wooden tick each time a new card comes to the front */
+export function ringTick() {
+  if (!ready('ring', 80)) return;
+  const now = context.currentTime;
+  tone(now, { from: 1150 + Math.random() * 120, to: 900, gain: 0.12, length: 0.05, type: 'triangle' });
+  burst(now, { freq: 3200, q: 2, gain: 0.05, length: 0.012 });
+}
+
+/* the glass drop appearing over a photo: a small rising plip */
+export function dropPlip() {
+  if (!ready('drop', 450)) return;
+  const now = context.currentTime;
+  tone(now, { from: 520, to: 1250, gain: 0.16, length: 0.09 });
+  tone(now + 0.012, { from: 1900, to: 2300, gain: 0.035, length: 0.05 });
+}
+
+/* the name's water: a soft swish whose loudness follows the pointer speed */
+export function waterSwish(speed = 10) {
+  if (!ready('water', 260)) return;
+  const now = context.currentTime;
+  const strength = Math.min(1, speed / 40);
+  burst(now, { freq: 700 + strength * 500, q: 0.8, gain: 0.05 + strength * 0.12, length: 0.22 + strength * 0.12, rate: 0.35, type: 'lowpass' });
 }
 
 document.addEventListener('visibilitychange', () => {
