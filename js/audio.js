@@ -8,16 +8,29 @@ export function getSoundEnabled() {
   return enabled;
 }
 
+function createContext() {
+  if (context) return true;
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) return false;
+  context = new AudioContextClass();
+  noiseBuffer = context.createBuffer(1, Math.ceil(context.sampleRate * 0.4), context.sampleRate);
+  const channel = noiseBuffer.getChannelData(0);
+  for (let i = 0; i < channel.length; i += 1) channel[i] = Math.random() * 2 - 1;
+  return true;
+}
+
+/* Safari starts or resumes audio only inside a click, key or touch handler; scrolling and pointer movement don't
+   count. A visitor whose SOUND was left on from an earlier visit heard nothing, because nothing ever made the
+   context (2026-10-05). The first real gesture, and any later one after Safari suspends it, brings sound back. */
+function wakeAudio() {
+  if (!enabled || !createContext()) return;
+  if (context.state !== 'running') context.resume().catch(() => { /* tried again on the next gesture */ });
+}
+['pointerdown', 'keydown', 'touchend', 'click'].forEach((type) => window.addEventListener(type, wakeAudio, { capture: true, passive: true }));
+
 export async function unlockAudio() {
-  if (!context) {
-    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContextClass) return false;
-    context = new AudioContextClass();
-    noiseBuffer = context.createBuffer(1, Math.ceil(context.sampleRate * 0.4), context.sampleRate);
-    const channel = noiseBuffer.getChannelData(0);
-    for (let i = 0; i < channel.length; i += 1) channel[i] = Math.random() * 2 - 1;
-  }
-  if (context.state === 'suspended') await context.resume();
+  if (!createContext()) return false;
+  if (context.state !== 'running') await context.resume();
   if (storageGet('localStorage', SOUND_KEY) === null) setSoundEnabled(true);
   return true;
 }
@@ -51,7 +64,7 @@ export function setSoundEnabled(next) {
 
 export async function toggleSound() {
   const next = !enabled;
-  if (!context && next) await unlockAudio();
+  if (next) await unlockAudio(); /* also resumes a context Safari suspended */
   setSoundEnabled(next);
   return enabled;
 }

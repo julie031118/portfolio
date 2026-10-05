@@ -528,13 +528,16 @@ export function closeDetail(options = {}) {
   if (!detail || detail.hidden) return;
   detail.hidden = true;
   /* closing the project silences anything still playing in it (the song, a film) */
-  detail.querySelectorAll('iframe').forEach((frame) => { frame.src = 'about:blank'; });
+  /* removed, not pointed at about:blank: that was a navigation, it added a history entry, and Safari then sent
+     the whole tab to about:blank on close (2026-10-05). The next open renders fresh players. */
+  detail.querySelectorAll('iframe').forEach((frame) => frame.remove());
   document.body.classList.remove('detail-open');
   window.__lenis?.start?.();
   currentSlug = null;
   if (options.updateHash !== false && location.hash.startsWith('#p/')) {
-    if (openedViaPush && history.length > 1) history.back();
-    else history.replaceState(null, '', `${location.pathname}${location.search}`);
+    /* never history.back(): players inside the overlay (Spotify, Drive, YouTube) add their own history entries,
+       so going back could land anywhere. Dropping the hash in place is predictable in every browser. */
+    history.replaceState(null, '', `${location.pathname}${location.search}`);
   }
   openedViaPush = false;
   if (!options.preserveFocus && lastFocus?.isConnected) lastFocus.focus();
