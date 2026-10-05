@@ -1,3 +1,4 @@
+import { ringTick } from '../audio.js';
 import { T, releaseWebGL } from './render-shell.js';
 import { openDetail } from './detail.js';
 
@@ -165,6 +166,15 @@ export function renderAbout(lang) {
     });
   });
 
+  /* the same tick as the ring (2026-10-06): one each time another item reaches the middle while the timeline scrolls */
+  let middleIndex = -1;
+  function tickTimeline() {
+    const items = section.querySelectorAll('.timeline-item'); let nearest = -1; let best = Infinity;
+    items.forEach((item, index) => { const rect = item.getBoundingClientRect(); const off = Math.abs(rect.left + rect.width / 2 - window.innerWidth / 2); if (off < best) { best = off; nearest = index; } });
+    if (middleIndex !== -1 && nearest !== middleIndex) ringTick();
+    middleIndex = nearest;
+  }
+
   function updateDepth() {
     if (mobileQuery.matches || reducedQuery.matches) return;
     section.querySelectorAll('.timeline-item').forEach((item) => {
@@ -217,7 +227,7 @@ export function renderAbout(lang) {
     }
     if (reducedQuery.matches) { section.classList.add('about-reduced'); return; }
     const distance = () => Math.max(0, track.scrollWidth - window.innerWidth);
-    horizontalTween = gsap.to(track, { x: () => -distance(), ease: 'none', scrollTrigger: { trigger: timeline, start: 'top top', end: () => `+=${Math.round(distance() * .6)}` /* scroll 0.6px per px of travel (was 0.6 screen per column, too long) */, pin: timelinePin, scrub: true, invalidateOnRefresh: true, onUpdate: updateDepth, onRefresh: updateDepth } });
+    horizontalTween = gsap.to(track, { x: () => -distance(), ease: 'none', scrollTrigger: { trigger: timeline, start: 'top top', end: () => `+=${Math.round(distance() * .6)}` /* scroll 0.6px per px of travel (was 0.6 screen per column, too long) */, pin: timelinePin, scrub: true, invalidateOnRefresh: true, onUpdate: () => { updateDepth(); tickTimeline(); }, onRefresh: updateDepth } });
     window.ScrollTrigger?.refresh();
   }
 

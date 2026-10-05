@@ -1,3 +1,4 @@
+import { contactBrush } from '../audio.js';
 import { GROUND } from '../ground.js';
 
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -149,7 +150,11 @@ export function renderContact() {
     quickX = gsap.quickTo(pointer, 'x', { duration: .45, ease: 'power3.out' });
     quickY = gsap.quickTo(pointer, 'y', { duration: .45, ease: 'power3.out' });
   }
-  const onPointer = (event) => { if (event.pointerType === 'touch') return; client.x = event.clientX; client.y = event.clientY; client.known = true; };
+  const onPointer = (event) => {
+    if (event.pointerType === 'touch') return;
+    if (client.known && inside && visible) { const speed = Math.hypot(event.clientX - client.x, event.clientY - client.y); if (speed > 2) contactBrush(speed); } /* the ASMR brush (2026-10-06) */
+    client.x = event.clientX; client.y = event.clientY; client.known = true;
+  };
   const onLeavePage = (event) => { if (!event.relatedTarget) client.known = false; };
   window.addEventListener('pointermove', onPointer, { passive: true });
   document.addEventListener('mouseout', onLeavePage);

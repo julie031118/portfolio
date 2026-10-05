@@ -315,7 +315,7 @@ window.SITE = {
 
   /* sound: the typewriter click is synthesised; an ambient track plays on loop once SOUND is on
      (drop an mp3 at audio/ambient.mp3 — leave the path empty for no music) */
-  sound: { ambient: '' },
+  sound: { ambient: '', hint: { mouse: '♪ Click anywhere to turn on the sound', touch: '♪ Tap anywhere for sound' } },
 
   contactUi: { title: "LET'S TALK.", linkedin: 'LINKEDIN ↗', imageSlot: 'IMAGE 16:9', caption: '05 / 06', footerLeft: '© 2026 YEONSEO LEE' },
   detail: { resultTbc: 'RESULT: TO BE CONFIRMED' },

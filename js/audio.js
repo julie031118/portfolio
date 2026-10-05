@@ -10,11 +10,19 @@ export function getSoundEnabled() {
   return enabled;
 }
 
+export function isAudioRunning() {
+  return Boolean(context && context.state === 'running');
+}
+
 function createContext() {
   if (context) return true;
   const AudioContextClass = window.AudioContext || window.webkitAudioContext;
   if (!AudioContextClass) return false;
   context = new AudioContextClass();
+  /* tells the page when sound actually starts, so the "click for sound" hint can go away */
+  const announce = () => { if (context.state === 'running') window.dispatchEvent(new Event('portfolio:audioready')); };
+  context.addEventListener?.('statechange', announce);
+  window.setTimeout(announce, 0);
   noiseBuffer = context.createBuffer(1, Math.ceil(context.sampleRate * 0.4), context.sampleRate);
   const channel = noiseBuffer.getChannelData(0);
   for (let i = 0; i < channel.length; i += 1) channel[i] = Math.random() * 2 - 1;
@@ -29,6 +37,9 @@ function wakeAudio() {
   if (context.state !== 'running') context.resume().catch(() => { /* tried again on the next gesture */ });
 }
 ['pointerdown', 'keydown', 'touchend', 'click'].forEach((type) => window.addEventListener(type, wakeAudio, { capture: true, passive: true }));
+/* and try once right away: where the browser allows sound for this site (Safari set to "Allow All Auto-Play",
+   Chrome after repeat visits) it plays from the first line; everywhere else it waits for the first gesture */
+if (enabled) { try { if (createContext() && context.state !== 'running') context.resume().catch(() => {}); } catch (error) { /* the first gesture does it */ } }
 
 export async function unlockAudio() {
   if (!createContext()) return false;
@@ -145,6 +156,28 @@ export function waterSwish(speed = 10) {
     const second = 520 + Math.random() * 300;
     tone(now + 0.07 + Math.random() * 0.05, { from: second, to: second * 2.3, gain: 0.05, length: 0.08 });
   }
+}
+
+/* the contact page (2026-10-06, 연서: an ASMR-like sound that follows the cursor). The reveal there is a soft circle
+   opening a photo through a grid of dots, so the sound is a brush over fine paper: very quiet, airy high noise grains
+   that fade in and out, one every ~70 ms while the cursor moves, louder and brighter with speed, silent when still. */
+export function contactBrush(speed = 10) {
+  if (!ready('brush', 70)) return;
+  const now = context.currentTime;
+  const strength = Math.min(1, speed / 45);
+  const source = context.createBufferSource();
+  const filter = context.createBiquadFilter();
+  const amp = context.createGain();
+  source.buffer = noiseBuffer;
+  source.playbackRate.value = 0.85 + Math.random() * 0.3;
+  filter.type = 'bandpass'; filter.Q.value = 0.6;
+  filter.frequency.value = 3600 + strength * 2800 + Math.random() * 600;
+  const length = 0.12 + strength * 0.06;
+  amp.gain.setValueAtTime(0.0001, now);
+  amp.gain.linearRampToValueAtTime(0.018 + strength * 0.05, now + 0.03);
+  amp.gain.exponentialRampToValueAtTime(0.0001, now + length);
+  source.connect(filter).connect(amp).connect(context.destination);
+  source.start(now, Math.random() * 0.2); source.stop(now + length + 0.02);
 }
 
 document.addEventListener('visibilitychange', () => {
