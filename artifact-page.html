@@ -281,6 +281,8 @@ main { overflow: clip; }
 html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .work-tooltip span { color: var(--ink-2); font: 10px/1.4 var(--font-mono); letter-spacing: .06em; }
 .work-hint { display: none; }
+/* soundtrack note under the ring (2026-10-04): quiet, above the canvas so it can be read, never clickable */
+.work-sound-note { position: absolute; left: 50%; bottom: 22px; z-index: 2; margin: 0; transform: translateX(-50%); white-space: nowrap; color: var(--ink-2); font: 11px/1.4 var(--font-mono); letter-spacing: .06em; pointer-events: none; padding: 4px 12px; border-radius: 999px; background: rgba(247, 247, 248, .72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 .work-list { display: none; }
 .work-mobile-object { display: none; }
 
@@ -288,6 +290,7 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
   .work-section { padding: calc(var(--nav-height) + 28px) 16px 72px; }
   .work-stage { height: auto; min-height: 0; padding: 0; }
   .work-body, .work-hint { display: none; }
+  .work-sound-note { position: static; transform: none; white-space: normal; margin: 4px 0 0; padding: 0; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; font-size: 10.5px; text-wrap: balance; }
   .work-mobile-object { display: block; position: relative; width: 100%; height: min(92vw, 420px); margin: 8px 0 0; }
   .work-mobile-canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: pan-y; opacity: 0; transition: opacity .6s ease; }
   .work-mobile-object.is-loaded .work-mobile-canvas { opacity: 1; }

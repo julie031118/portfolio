@@ -137,10 +137,18 @@ export function renderAbout(lang) {
     const date = document.createElement('p'); date.className = 'timeline-panel-date'; date.textContent = dateRange(item);
     const title = document.createElement('h3'); title.className = 'timeline-panel-title'; title.textContent = T(item.title, lang);
     const meta = document.createElement('p'); meta.className = 'timeline-panel-grade'; meta.textContent = [segment, grade].filter(Boolean).join(' · ');
-    const desc = document.createElement('p'); desc.className = 'timeline-panel-desc'; desc.textContent = T(item.desc, lang);
-    panelInner.append(date, title, meta, desc);
-    if (item.link) { const open = document.createElement('button'); open.type = 'button'; open.className = 'timeline-panel-open'; open.textContent = SITE.aboutUi.openProject; open.addEventListener('click', () => openDetail(item.link, lang)); panelInner.append(open); }
+    panelInner.append(date, title, meta);
+    if (T(item.desc, lang)) { const desc = document.createElement('p'); desc.className = 'timeline-panel-desc'; desc.textContent = T(item.desc, lang); panelInner.append(desc); }
+    if (item.link) { const open = document.createElement('button'); open.type = 'button'; open.className = 'timeline-panel-open'; open.textContent = isAnchor(item.link) ? SITE.aboutUi.openNow : SITE.aboutUi.openProject; open.addEventListener('click', () => follow(item.link)); panelInner.append(open); }
     panel.classList.add('is-open'); panel.setAttribute('aria-hidden', 'false');
+  }
+  /* a timeline link is a project slug, or '#id' for a spot on the page (NOW, 2026-10-04) */
+  const isAnchor = (link) => link.startsWith('#');
+  function follow(link) {
+    if (!isAnchor(link)) { openDetail(link, lang); return; }
+    const target = document.querySelector(link); if (!target) return;
+    closePanel();
+    if (window.__lenis) window.__lenis.scrollTo(target, { offset: -40 }); else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   panel.addEventListener('pointerenter', () => clearTimeout(panelTimer));
   panel.addEventListener('pointerleave', closePanel);
@@ -153,7 +161,7 @@ export function renderAbout(lang) {
       button.addEventListener('pointerleave', () => { closePanel(); button.timelineSpan?.classList.remove('is-hot'); });
       button.addEventListener('focus', () => openPanel(item, segment.segment, grade));
       button.addEventListener('blur', closePanel);
-      if (mobileQuery.matches) { const desc = document.createElement('span'); desc.className = 'timeline-item-desc'; desc.textContent = T(item.desc, lang); button.append(desc); if (item.link) button.addEventListener('click', () => openDetail(item.link, lang)); }
+      if (mobileQuery.matches) { if (T(item.desc, lang)) { const desc = document.createElement('span'); desc.className = 'timeline-item-desc'; desc.textContent = T(item.desc, lang); button.append(desc); } if (item.link) button.addEventListener('click', () => follow(item.link)); }
     });
   });
 

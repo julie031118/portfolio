@@ -28,8 +28,11 @@ window.PROJECTS = [
    "ko": "디자인 · 콘텐츠 기획 · 채널 운영 · 유료광고 (단독)",
    "en": "Design, content planning, channel ops, paid media (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "2aSRUHDFrf6202bDqLQIcd",
+  "spotifyNote": {
+   "ko": "릴스에 실제로 쓴 곡. 세련된 음악보다 타깃이 바로 반응하는 친근한 음악이 더 효과적이라고 판단했다.",
+   "en": "The song I actually used in the Reels. For this audience, a familiar song they react to at once worked better than a polished one."
+  },
   "small": [
    "/images/projects/miraen/06.jpg",
    "/images/projects/miraen/07.jpg",
@@ -157,7 +160,7 @@ window.PROJECTS = [
     "metrics": [
      {
       "v": "2.9만",
-      "l": "릴스 최고 조회수"
+      "l": "릴스 최고 조회수, 팔로워 0에서 시작한 지사 계정"
      },
      {
       "v": "세 자리 → 2.8만",
@@ -168,7 +171,7 @@ window.PROJECTS = [
       "l": "채널 0에서 시작, 3개월 만에"
      }
     ],
-    "need": "신설 가맹 지사에는 아무것도 없었다. 인스타그램도 유튜브도 블로그도, 네이버 지도 등록조차 없는 상태. 학원은 검색에서 선택되는데 검색 결과에 브랜드가 존재하지 않았다.",
+    "need": "본사 계정이 아니라, 지사장 한 명이 새로 연 가맹 지사의 계정이었다. 인스타그램도 유튜브도 블로그도, 네이버 지도 등록조차 없는 0의 상태. 학원은 검색에서 선택되는데 검색 결과에 브랜드가 존재하지 않았다.",
     "action": [
      "주 타깃인 40~50대 여성 학부모가 실제로 보는 릴스와, 잘 되는 학원 계정·동종업계 브랜드를 먼저 분석해 제작 규칙을 세움: 큰 글씨, 느린 속도, 세련된 미감보다 \"잘 보이는 것\"",
      "브랜드 캐릭터 '미래'를 실존 인물처럼 연출하고, 2D 캐릭터를 AI로 3D화해 움직이는 형태로 릴스에 투입",
@@ -176,7 +179,7 @@ window.PROJECTS = [
      "인스타그램·유튜브·네이버 블로그를 0에서 개설하고, 스마트플레이스 세팅과 검색·유튜브 유료광고까지 직접 집행"
     ],
     "result": [
-     "릴스 최고 조회수 2.9만 · 차순위 2.8만 (오프라인 홍보 시리즈), 초반 세 자리 수에서 시리즈 도입 후 전환",
+     "팔로워 0에서 시작한 지사 계정에서 릴스 최고 조회수 2.9만 · 차순위 2.8만 (오프라인 홍보 시리즈). 초반 세 자리 수에서 시리즈 도입 후 전환",
      "사업설명회 릴스 2.2만",
      "채널이 하나도 없던 상태에서 시작해, 인스타그램 개설 3개월 만에 지사장 5월 우수지사장상 수상"
     ],
@@ -197,7 +200,7 @@ window.PROJECTS = [
     "metrics": [
      {
       "v": "29K",
-      "l": "top Reel views"
+      "l": "top Reel views, on a branch account started from zero"
      },
      {
       "v": "3 digits → 28K",
@@ -208,7 +211,7 @@ window.PROJECTS = [
       "l": "3 months after starting from zero"
      }
     ],
-    "need": "The new franchise branch had nothing: no Instagram, no YouTube, no blog, not even a Naver Map listing. Parents choose an academy by searching, and in search the brand did not exist.",
+    "need": "Not the head office account: a franchise branch one director had just opened. No Instagram, YouTube or blog, not even a Naver Map listing. Academies are chosen through search, and the brand did not exist in the results.",
     "action": [
      "Started by analysing the Reels that the core audience, mothers in their 40s to 50s, actually watch, plus the best-performing academy accounts and brands in the category, and turned that into production rules: large type, slower pacing, \"clearly visible\" over \"beautifully designed\"",
      "Treated the brand character Mirae as a real personality, and used AI to turn the 2D character into a moving 3D one for Reels",
@@ -216,7 +219,7 @@ window.PROJECTS = [
      "Launched Instagram, YouTube and Naver Blog from zero, set up SmartPlace, and ran paid search and YouTube campaigns directly"
     ],
     "result": [
-     "Top Reel 29,000 views; second 28,000 (the offline-promotion series), up from the hundreds before the series",
+     "Top Reel 29,000 views on a branch account that started from zero followers; second 28,000 (the offline-promotion series), up from the hundreds before the series",
      "Business-briefing Reel: 22,000 views",
      "Starting with no channels at all, the branch director won the May Excellence Award three months after the Instagram launch"
     ],
@@ -232,7 +235,9 @@ window.PROJECTS = [
    }
   },
   "title": "MiraeN Designer & Marketer",
-  "desc": "Social media and promotional campaigns for a math education franchise across five Seoul districts."
+  "desc": "Social media and promotional campaigns for a math education franchise across five Seoul districts.",
+  "song": "싸이 예술이야",
+  "songYoutube": "https://www.youtube.com/watch?v=1cKc1rkZwf8"
  },
  {
   "slug": "directing-a-year",
@@ -260,8 +265,11 @@ window.PROJECTS = [
    "ko": "기획 · 연출 · 편집 · 채널별 배포 설계 (단독)",
    "en": "Planning, directing, editing, per-channel distribution (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "3UpS7kBnkVQYG13pDDFTC4",
+  "spotifyNote": {
+   "ko": "미국 교환학생 1년을 담은 영상이라 미국 보이그룹의 노래를 골랐다. 내가 태어나기 전 곡인데도, 들으면 미국의 햇빛 아래 빨간 차로 드라이브하는 장면이 떠오른다.",
+   "en": "A year on exchange in the US, so an American boy band. It came out before I was born, yet it always puts me in a red car, driving through American sunlight."
+  },
   "video": "https://www.youtube.com/embed/GhNy8TXhi-0",
   "sections": [
    {
@@ -397,7 +405,9 @@ window.PROJECTS = [
    }
   },
   "title": "Exchange Year Recap",
-  "desc": "A ten-minute narrative video shaped from a year on exchange in NC State's textile program."
+  "desc": "A ten-minute narrative video shaped from a year on exchange in NC State's textile program.",
+  "song": "Backstreet Boys As Long As You Love Me",
+  "songYoutube": "https://www.youtube.com/watch?v=0Gl2QnHNpkA"
  },
  {
   "slug": "ai-short-film",
@@ -436,8 +446,11 @@ window.PROJECTS = [
    "ko": "기획 · 대사 · 컷 구성 · 연출 · 영상 · 음악 · 보이스 · 자막 (단독, 전 과정 AI)",
    "en": "Concept, dialogue, shot list, direction, video, music, voice, subtitles (solo, all made with AI)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "2BuJrxYKhYky20dQqTlobO",
+  "spotifyNote": {
+   "ko": "가사 속 'I need medicine'은 실제 약이 아니라, 감당하기 힘든 불안에서 당장 꺼내 줄 무언가를 찾는 마음으로 읽힌다. 감정을 조절하는 약이 나오는 이 영화와 바로 이어지고, 분위기도 닮았다.",
+   "en": "The line 'I need medicine' reads less like a call for real pills than a need for something to pull you out of unbearable anxiety right now. It ties straight into this film and its emotion-control pill, and the mood fits too."
+  },
   "video": "https://www.youtube.com/embed/utCOOrnRLZk",
   "sections": [
    {
@@ -640,7 +653,9 @@ window.PROJECTS = [
    }
   },
   "title": "AI Short Film",
-  "desc": "A speculative short about emotion regulated by numbers and mood-control pills. Grand Prize, SNU AI Filmmaking 2025."
+  "desc": "A speculative short about emotion regulated by numbers and mood-control pills. Grand Prize, SNU AI Filmmaking 2025.",
+  "song": "keshi skeletons",
+  "songYoutube": "https://www.youtube.com/watch?v=w_6fWYY6pRw"
  },
  {
   "slug": "kaftan",
@@ -940,11 +955,14 @@ window.PROJECTS = [
    "/images/projects/fashion-show-2024/a11.jpg"
   ],
   "role": {
-   "ko": "디자이너 · 홍보팀 (팀 컬렉션)",
-   "en": "Designer; promotion team (team collection)"
+   "ko": "디자이너 · 홍보팀",
+   "en": "Designer; promotion team"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "4Z4i631BesV0P6LTvfLAdL",
+  "spotifyNote": {
+   "ko": "로파이 하우스가 또렷한 소리를 일부러 뭉개 흐릿한 질감을 만들듯, 이 룩에서는 선명한 테두리의 원을 쉬폰에 프린트하고 겹겹이 레이어링해 일부러 흐리게 만들었다.",
+   "en": "Lo-fi house muddies clean sound on purpose into a hazy texture. I did the same here: circles with sharp edges, printed on chiffon and layered until they blur."
+  },
   "filterThumbs": {
    "CONTENT": "/images/projects/fashion-show-2024/15.jpg"
   },
@@ -1080,13 +1098,14 @@ window.PROJECTS = [
     "headline": "디자이너로 컬렉션을 만들고, 홍보팀으로 그 컬렉션을 알렸다.",
     "need": "학과 패션쇼는 옷이 완성되면 끝난다. 하지만 완성된 컬렉션을 아무도 모르면 런웨이 하루로 끝나 버린다. 콘셉트를 세우는 일과 그것을 밖으로 알리는 일이 따로 놀고 있었다.",
     "action": [
-     "컬렉션 콘셉트 '형(形)' 개발과 의상 제작을 주도",
+     "쇼 전체 주제 '형(形)'을 내 룩으로 풀어, 디자인부터 의상 제작까지 직접 진행",
      "플랫 스케치 → 가봉 → 최종 런웨이 룩까지 제작 전 과정을 직접 진행",
-     "오버사이즈 테일러링을 흐르는 실루엣과 겹친 시스루로 풀어 '형태의 유동성'을 옷으로 번역",
+     "단단한 테일러링과 부드러운 쉬폰의 흐르는 실루엣을 대비",
+     "크기가 다른 원을 쉬폰에 프린트하고 겹겹이 레이어링해, 선명한 원의 테두리를 일부러 흐리게 만듦",
      "완성된 컬렉션을 알리는 숏폼 영상 제작과 인스타그램 운영을 직접 맡음",
      "디자이너 인터뷰를 기획·진행해 옷 뒤의 의도를 콘텐츠로 남김"
     ],
-    "note": "팀 컬렉션: 디자이너로 콘셉트와 의상 제작을 주도하고, 홍보팀으로 영상·SNS·인터뷰를 맡았다.",
+    "note": "의류학과 졸업패션쇼: 디자이너로 의상 컬렉션을 만들고, 홍보팀으로 인스타그램 관리·피드·숏폼 제작·디자이너 인터뷰를 맡았다.",
     "detail": null,
     "roles": [
      {
@@ -1123,13 +1142,14 @@ window.PROJECTS = [
     "headline": "As a designer I made the collection; on the promotion team I made sure it was seen.",
     "need": "A school runway show ends when the garments are finished. If nobody hears about the collection, one evening is all it gets.",
     "action": [
-     "Led concept development for the collection 'Form' and the garment construction",
+     "Took the show's overall theme 'Form' into my own looks, from design through construction",
      "Ran the full build: flat sketch, muslin fitting, final runway look",
-     "Translated 'fluidity of form' into oversized tailoring softened by flowing silhouettes and layered sheers",
+     "Set rigid tailoring against the flowing silhouette of soft chiffon",
+     "Printed circles of many sizes on chiffon and layered them, so the sharp edges blur on purpose",
      "Produced the short-form promo video and ran the Instagram account",
      "Planned and conducted the designer interviews so the intent behind the clothes survived the show"
     ],
-    "note": "Team collection: led concept and construction as a designer, and ran video, social and interviews on the promotion team.",
+    "note": "The department graduation show: made a collection as a designer, and on the promotion team ran Instagram, feed posts, short-form video and designer interviews.",
     "roles": [
      {
       "label": "Designer",
@@ -1162,7 +1182,9 @@ window.PROJECTS = [
    }
   },
   "title": "2024 SNU Fashion Show",
-  "desc": "A collection on the fluidity of form, oversized tailoring softened by flowing silhouettes and layered sheer fabrics. Developed from flat sketch through muslin fitting to the final runway look."
+  "desc": "A collection on the fluidity of form, oversized tailoring softened by flowing silhouettes and layered sheer fabrics. Developed from flat sketch through muslin fitting to the final runway look.",
+  "song": "Ross From Friends Talk to Me You'll Understand",
+  "songYoutube": "https://www.youtube.com/watch?v=s93kHQe8Upc"
  },
  {
   "slug": "campus-festival",
@@ -1190,8 +1212,11 @@ window.PROJECTS = [
    "ko": "브랜딩 · 일러스트 · 굿즈 디자인 (디자인팀 6인 중 팀원)",
    "en": "Branding, illustration, merchandise design (member of a six-person design team)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "53T5mZuqAjvm0pinUfwIXr",
+  "spotifyNote": {
+   "ko": "축제의 소란이 끝난 뒤, 돌아가는 길에 듣고 싶은 노래. 한글을 곱게 쓴 가사가 캠퍼스의 청춘만이 아니라 누구에게나 조용한 응원이 된다.",
+   "en": "For the walk home after the festival noise fades. Lyrics that use Korean beautifully, a quiet encouragement for anyone, not only the students on campus."
+  },
   "sections": [
    {
     "title": {
@@ -1333,7 +1358,9 @@ window.PROJECTS = [
    }
   },
   "title": "SNUFESTIVAL Branding",
-  "desc": "Promotional materials built around RIO, official character of the SNU Festival, photo-booth frames, card news, stamps and AirPods case illustrations."
+  "desc": "Promotional materials built around RIO, official character of the SNU Festival, photo-booth frames, card news, stamps and AirPods case illustrations.",
+  "song": "이무진 뱁새",
+  "songYoutube": "https://www.youtube.com/watch?v=H_qXO7zVOU0"
  },
  {
   "slug": "art2wear",
@@ -1363,8 +1390,11 @@ window.PROJECTS = [
    "ko": "기획 · 디자인 · 제작 · 런웨이 모델",
    "en": "Concept, design, construction, runway model"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "3X6r24vM7DSQQinGuFCFuJ",
+  "spotifyNote": {
+   "ko": "이 작품을 만들며 가장 많이 고민한 건 따뜻하면서도 차가운 느낌이었다. 새하얀 자이언트 얀과 철사, 깨진 접시와 꽃처럼 상반된 소재가 부딪히면서도 어우러져야 했다. 분위기도 가사도, 내가 아는 가장 따뜻하면서도 차가운 노래.",
+   "en": "What I worked through most here was how to make something feel warm and cold at once. Opposite materials, white giant yarn and wire, broken plates and flowers, had to clash and still belong together. In sound and in words, the warmest and coldest song I know."
+  },
   "related": [
    {
     "slug": "arts-week-2026",
@@ -1639,7 +1669,9 @@ window.PROJECTS = [
    }
   },
   "title": "Art2Wear 2026",
-  "desc": "불안과 집중의 공존을 이질적인 재료의 대비로 옮긴 웨어러블 아트. 직접 깨뜨린 도자기 접시 파편이 꽃이 되고, 나뭇가지와 청키한 실이 한 벌 안에서 부딪힌다. Gregg Museum of Art & Design, Art2Wear 2026 런웨이에 직접 입고 올랐다."
+  "desc": "불안과 집중의 공존을 이질적인 재료의 대비로 옮긴 웨어러블 아트. 직접 깨뜨린 도자기 접시 파편이 꽃이 되고, 나뭇가지와 청키한 실이 한 벌 안에서 부딪힌다. Gregg Museum of Art & Design, Art2Wear 2026 런웨이에 직접 입고 올랐다.",
+  "song": "백예린 I am not your ocean anymore",
+  "songYoutube": "https://www.youtube.com/watch?v=vnxO_lHypFk"
  },
  {
   "slug": "clo3d",
@@ -1723,7 +1755,7 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "CLO 3D 디지털 패션 〈Dopamine Dressing〉",
+    "title": "CLO 3D 디지털 패션 공모전 (주제 〈Dopamine Dressing〉)",
     "cat": "3D 디지털 패션 · 공모전 · 단독 · 2024",
     "headline": "입을 사람을 먼저 좁게 정의하고 트렌드 리포트를 근거로 삼았더니, 실물 없이 3D로만 액티브웨어 한 벌이 끝까지 나왔다.",
     "metrics": [
@@ -1736,7 +1768,7 @@ window.PROJECTS = [
     "action": [
      "러닝 크루 문화를 즐기는 20대 후반 직장인으로 페르소나를 좁게 설정",
      "WGSN 트렌드 리포트를 근거로 원단 기능성·색상 조화·체온 조절·활동성을 핵심 변수로 정의",
-     "그 변수에 맞춰 액티브웨어 컬렉션 'Dopamine Dressing'을 설계",
+     "공모전 주제 'Dopamine Dressing'에 맞춰, 그 변수로 액티브웨어 컬렉션을 설계",
      "패턴 제작부터 3D 시뮬레이션·렌더링까지 CLO 3D로 단독 진행"
     ],
     "result": [
@@ -1744,7 +1776,7 @@ window.PROJECTS = [
     ]
    },
    "en": {
-    "title": "CLO 3D Digital Fashion: Dopamine Dressing",
+    "title": "CLO 3D Digital Fashion Contest (theme: Dopamine Dressing)",
     "cat": "3D Digital Fashion · Competition · Solo · 2024",
     "headline": "Define the wearer narrowly, back it with a trend report, and a full activewear look can be built in 3D alone.",
     "metrics": [
@@ -1757,7 +1789,7 @@ window.PROJECTS = [
     "action": [
      "Set a narrow persona: a late-twenties office worker in running-crew culture",
      "Used WGSN trend reporting to fix the working variables: fabric performance, color harmony, thermal regulation, range of motion",
-     "Designed the activewear collection 'Dopamine Dressing' against those variables",
+     "Designed an activewear collection for the contest theme 'Dopamine Dressing' against those variables",
      "Built it solo in CLO 3D, from patterning through simulation and rendering"
     ],
     "result": [
@@ -1766,7 +1798,7 @@ window.PROJECTS = [
    }
   },
   "title": "CLO 3D Digital Fashion",
-  "desc": "A digital collection built around MZ-generation running culture and dopamine dressing. Honorable Mention, 13th International Digital Fashion Contest."
+  "desc": "An activewear collection for MZ-generation running culture, made for the contest theme ‘dopamine dressing’. Honorable Mention, 13th International Digital Fashion Contest."
  },
  {
   "slug": "sub-motion",
@@ -3466,8 +3498,11 @@ window.PROJECTS = [
    "ko": "디자인 · 그래픽 · 소재 실험 · 제작 (단독)",
    "en": "Design, graphics, material experiments, construction (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "3nts3JEnWM8CIhcsKahCvC",
+  "spotifyNote": {
+   "ko": "패션 매장에서 흘러나올 법한, 몸이 저절로 리듬을 타는 하우스. 이 옷을 입은 모델이 격하지 않게, 어깨와 고개로만 리듬을 타며 걸어 나오는 장면을 떠올리며 골랐다.",
+   "en": "House you might hear in a fashion store, the kind your body moves to on its own. I pictured a model in this outfit walking out to it, not dancing hard, just shoulders and head catching the groove."
+  },
   "press": [
    {
     "outlet": {
@@ -3855,7 +3890,7 @@ window.PROJECTS = [
    "ko": {
     "title": "데님 디자인 공모전",
     "cat": "데님 디자인 · 공모전 입선 · 2026",
-    "headline": "만들기 전에 수십 번 먼저 만들어봤다. AI를 스케치북처럼 썼다.",
+    "headline": "원단을 자르기 전에 먼저 만들어봤다. AI를 스케치북처럼 썼다.",
     "metrics": [
      {
       "v": "입선",
@@ -3873,7 +3908,9 @@ window.PROJECTS = [
      "기존 브랜드 디자인과 겹쳐 보이는 결과물은 표절 위험으로 따로 걸러내고 진행",
      "물감이 점점 흩어지는 그래디언트를 만들고, 그 그래디언트가 끝나는 지점에서 실제 프린지가 시작되도록 앞뒤를 연결",
      "물감 튜브 그래픽을 하프톤·ASCII·레트로·애시드·그레인·찢어진 종이·잉크브러시 등 여덟 가지 그래픽 언어로 전개해, 같은 오브젝트가 표현 방식에 따라 어디까지 달라지는지 실험",
-     "로우 워시 raw indigo 데님과 아이보리 캔버스 백패치로 소재를 확정하고, 원단을 받아 실물 한 벌을 제작"
+     "로우 워시 raw indigo 데님과 아이보리 캔버스 백패치로 소재를 확정하고, 원단을 받아 실물 한 벌을 제작",
+     "상의 디스트로이드: 스판 데님이라 찢기도 올을 풀기도 쉽지 않아, 칼·드릴·송곳으로 직접 찢고 올을 풀어냄",
+     "디스트로이드를 많이 넣어도 상의 실루엣이 무너지지 않도록 레이스를 덧대 고정하고, 찢긴 질감과 레이스의 대비로 디자인에 재미를 더함. 같은 레이스를 바지에도 써서 상하의를 하나로 묶음"
     ],
     "result": [
      "입선 (Honorable Mention): 코리아 데님 디자인 공모전 2026 (D&J DenimsandJeans Korea, COEX Seoul)",
@@ -3882,7 +3919,7 @@ window.PROJECTS = [
     "detail": {
      "title": "AI를 어떻게 썼나",
      "body": [
-      "AI는 최종 결과물이 아니라 의사결정 도구로 썼다. 손으로 스케치하면 하루에 몇 장이지만, 시뮬레이션으로는 같은 시간에 수십 개의 방향을 눈으로 비교할 수 있었다.",
+      "AI는 최종 결과물이 아니라 의사결정 도구로 썼다. 손으로 스케치하면 하루에 몇 장이지만, 시뮬레이션으로는 같은 시간에 훨씬 많은 방향을 눈으로 비교할 수 있었다.",
       "특히 '그래픽이 실제 원단 위에 프린트되면 어떻게 보일까'를 미리 확인한 것이 컸다. 화면에서 예뻐 보이는 그래픽이 데님의 어두운 인디고 위에서는 묻히는 경우가 많았다.",
       "여러 그래픽 언어를 한 장에 늘어놓고 비교하는 방식 자체가 목적이었다. 하나를 고르기 위해서라기보다, 같은 소재가 표현에 따라 어떤 폭을 갖는지 먼저 알아야 방향을 정할 수 있다고 봤다."
      ]
@@ -3891,7 +3928,7 @@ window.PROJECTS = [
    "en": {
     "title": "D&J Korea Denim Design Challenge",
     "cat": "Denim Design · Competition · Honorable Mention · 2026",
-    "headline": "I made it dozens of times before making it. AI was the sketchbook.",
+    "headline": "I built it before cutting the fabric. AI was the sketchbook.",
     "metrics": [
      {
       "v": "Honorable Mention",
@@ -3909,7 +3946,9 @@ window.PROJECTS = [
      "Set aside any output that looked too close to an existing brand’s design",
      "Scattered the paint into a gradient, and started the real fringe exactly where the gradient ends, connecting front to back",
      "Ran the paint-tube graphic through eight treatments (halftone, ASCII, retro, acid, grain, torn paper, ink brush) to see how far the same object could travel by treatment alone",
-     "Settled on low-wash raw indigo denim with an ivory canvas back patch, then built the single garment from the delivered fabric"
+     "Settled on low-wash raw indigo denim with an ivory canvas back patch, then built the single garment from the delivered fabric",
+     "Distressing the top: stretch denim does not tear or unravel easily, so I opened it by hand with a knife, a drill and an awl, then pulled the threads loose",
+     "Backed the heavy distressing with lace so the top kept its silhouette, and let the torn texture play against the lace. The same lace runs into the trousers to tie top and bottom together"
     ],
     "result": [
      "Honorable Mention: Korea Denim Design Contest 2026 (D&J DenimsandJeans Korea, COEX Seoul)",
@@ -3918,7 +3957,7 @@ window.PROJECTS = [
     "detail": {
      "title": "How AI was used",
      "body": [
-      "AI was a decision tool, not the output. Sketching by hand gives you a few directions a day; simulation let me compare dozens in the same time.",
+      "AI was a decision tool, not the output. Sketching by hand gives you a few directions a day; simulation let me compare many more in the same time.",
       "The biggest gain was seeing the graphic on the fabric before printing it. Plenty of graphics that looked good on screen simply disappeared against dark indigo.",
       "Laying the treatments side by side was the point in itself. Less about picking one than about learning the range a single motif has before committing to a direction."
      ]
@@ -3926,7 +3965,9 @@ window.PROJECTS = [
    }
   },
   "title": "D&J Korea Denim Design Challenge",
-  "desc": "물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 수십 개의 방향을 먼저 시뮬레이션한 뒤, 원단을 받아 실제 제작에 들어갔다."
+  "desc": "물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 수십 개의 방향을 먼저 시뮬레이션한 뒤, 원단을 받아 실제 제작에 들어갔다.",
+  "song": "BoA EVERYBODY KNOWS",
+  "songYoutube": "https://www.youtube.com/watch?v=J6DewG1OP5M"
  },
  {
   "slug": "fashion-illustration",
@@ -4505,8 +4546,11 @@ window.PROJECTS = [
    "ko": "설치 재구성 · 제작 · 현장 설치 (단독)",
    "en": "Installation redesign, construction, on-site setup (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "0SHmzw1nd4V94W5qyuaf7O",
+  "spotifyNote": {
+   "ko": "세상과 삶에서 밀려드는 압박과 불안을 노래한 곡. 대학생이 짊어진 압박을 우산 위에 올려 보인 이 설치와 같은 이야기를 하고 있어서 골랐다.",
+   "en": "A song about the pressure and anxiety that pour in from the world and from life. It tells the same story as this installation, which put the pressure students carry on top of an umbrella."
+  },
   "related": [
    {
     "slug": "art2wear",
@@ -4736,6 +4780,8 @@ window.PROJECTS = [
    }
   },
   "title": "Tensed Symbiosis, Rebuilt: The Art2Wear Piece Reworked for SNU Arts Week",
-  "desc": "Flowers, bag and skirt from the Art2Wear piece, reworked with new objects into an outdoor installation for SNU Arts Week 2026."
+  "desc": "Flowers, bag and skirt from the Art2Wear piece, reworked with new objects into an outdoor installation for SNU Arts Week 2026.",
+  "song": "리도어 세상:소음",
+  "songYoutube": "https://www.youtube.com/watch?v=l3AmjZ7ZQGM"
  }
 ];

@@ -120,7 +120,7 @@ window.SITE = {
       items: [
         { date: '2022.03', major: true, link: null,
           title: { ko: '서울대학교 의류학과 입학', en: 'Entered Seoul National University: Clothing & Textiles' },
-          desc: { ko: '생활과학대학 의류학과 단일전공. 패션디자인·패션마케팅·소재를 함께 배우는 커리큘럼. 2027년 2월 졸업 예정.', en: 'BA in Clothing & Textiles, College of Human Ecology, a curriculum spanning fashion design, marketing and materials. Graduating February 2027.' } },
+          desc: { ko: '', en: '' } /* title only (연서, 2026-10-04) */ },
       ],
     },
     {
@@ -138,16 +138,16 @@ window.SITE = {
       segment: '2023-2', grade: { ko: '2학년 2학기', en: 'Year 2-2' },
       items: [
         { date: '2023.07', until: '2024.06', major: true, link: 'campus-festival',
-          title: { ko: 'SNUFESTIVAL 축제기획단: 디자인팀 · 퍼포먼스팀', en: 'SNUFESTIVAL Committee: Design & Performance' },
-          desc: { ko: '디자인팀(6인) 팀원으로 공식 캐릭터 RIO의 굿즈를 디자인해 한정판 에어팟 케이스를 완판. 퍼포먼스팀(6인)에서는 버스킹·폐막식 진행과 출연자 리허설 조율. 2023.07~2024.06', en: 'In the design team (6), designed RIO merchandise and sold out the limited-edition AirPods cases. In the performance team (6) ran busking and the closing ceremony. Jul 2023 to Jun 2024' } },
+          title: { ko: 'SNUFESTIVAL 축제기획단: 디자인팀 · 공연팀', en: 'SNUFESTIVAL Committee: Design & Performance' },
+          desc: { ko: '디자인팀(6인) 팀원으로 공식 캐릭터 RIO의 굿즈를 디자인해 한정판 에어팟 케이스를 완판. 공연팀(6인)에서는 버스킹·폐막식 진행과 출연자 리허설 조율. 2023.07~2024.06', en: 'In the design team (6), designed RIO merchandise and sold out the limited-edition AirPods cases. In the performance team (6) ran busking and the closing ceremony. Jul 2023 to Jun 2024' } },
       ],
     },
     {
       segment: '2024-1', grade: { ko: '3학년 1학기', en: 'Year 3-1' },
       items: [
         { date: '2024.03', until: '2024.10', major: true, link: 'fashion-show-2024',
-          title: { ko: '2024 SNU Fashion Show \'형(形)\': 디자이너 · 홍보', en: '2024 SNU Fashion Show \'Hyeong\': Designer & Promotions' },
-          desc: { ko: '팀 컬렉션의 콘셉트 개발과 의상 제작을 주도하고, 숏폼 영상·인스타그램·디자이너 인터뷰까지 홍보 파트를 전담. 2024.03~10', en: 'Led concept development and construction for the team collection, and owned promotion (short-form film, Instagram, designer interviews). Mar to Oct 2024' } },
+          title: { ko: '2024 의류학과 졸업패션쇼 \'형(形)\': 디자이너 · 홍보팀', en: '2024 SNU Graduation Fashion Show \'Hyeong\': Designer & Promotions' },
+          desc: { ko: '의류학과 졸업패션쇼에 디자이너로 참여해 의상 컬렉션을 제작하고, 홍보팀으로 인스타그램 관리·피드·숏폼 제작·디자이너 인터뷰를 맡음. 2024.03~10', en: 'Made a collection as a designer for the department graduation show, and on the promotion team ran Instagram, feed posts, short-form video and designer interviews. Mar to Oct 2024' } },
       ],
     },
     {
@@ -155,13 +155,13 @@ window.SITE = {
       items: [
         { date: '2024.07', until: '2025.06', major: true, link: 'sub-motion',
           title: { ko: 'SUB 서울대학교 학생방송국: 기술팀 모션그래픽 디자이너', en: 'SUB, SNU Student Broadcasting: Motion Graphics, Technical Team' },
-          desc: { ko: 'After Effects로 타이포그래피 영상과 티저를 제작. \'apt (ROSÉ)\' 2인, \'후라이의 꿈\' 4인(조장), \'Toxic till the end\' 4인 공동작업에서 모션그래픽을 파트별로 나눠 작업. 2024.07~2025.06', en: 'Built typography films and teasers in After Effects; split the motion graphics by part on \'apt (ROSÉ)\' (team of 2), \'Fry\'s Dream\' (team of 4, team lead) and \'Toxic till the end\' (team of 4). Jul 2024 to Jun 2025' } },
+          desc: { ko: 'After Effects로 타이포그래피 영상과 뮤비 티저를 제작. \'apt (ROSÉ)\' 2인, \'후라이의 꿈\' 4인(조장), \'Toxic till the end\' 4인 공동작업에서 모션그래픽을 파트별로 나눠 작업. 2024.07~2025.06', en: 'Built typography films and music-video teasers in After Effects; split the motion graphics by part on \'apt (ROSÉ)\' (team of 2), \'Fry\'s Dream\' (team of 4, team lead) and \'Toxic till the end\' (team of 4). Jul 2024 to Jun 2025' } },
         { date: '2024.09', until: '2024.12', major: true, link: 'senior-fit',
           title: { ko: '관악노인종합복지관 × 서울대 협업 패션쇼: 시니어핏', en: 'Gwanak Senior Welfare Center × SNU Fashion Show: Senior Fit' },
           desc: { ko: '어르신 한 분을 전담해 수업 밖에서까지 여러 차례 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 코트를 제작. 완성작으로 시니어 런웨이까지 진행했고, 대학신문 인터뷰 대상자로 선정. 2024.09~12', en: 'Paired one-to-one with a senior model, interviewed him repeatedly beyond class hours and built a coat from his taste and body. Shown on the senior runway; interviewed by The SNU Newspaper. Sep to Dec 2024' } },
         { date: '2024.11', major: true, link: 'clo3d',
           title: { ko: '입선: 제13회 국제 디지털 패션 공모전', en: 'Selected Entry: 13th International Digital Fashion Contest' },
-          desc: { ko: '한국의류산업학회 주최. 러닝 크루 문화를 즐기는 20대 후반 직장인 페르소나를 WGSN 트렌드 리포트로 설계하고, CLO 3D로 디자인부터 3D 시뮬레이션까지 단독 제작한 액티브웨어 컬렉션 \'Dopamine Dressing\'으로 입선. 2024.09~11', en: 'Hosted by the Korean Society for Clothing Industry. \'Dopamine Dressing\', an activewear collection for a late-20s running-crew persona grounded in WGSN trend reports, designed and simulated solo in CLO 3D. Sep to Nov 2024' } },
+          desc: { ko: '한국의류산업학회 주최, 공모전 주제는 \'Dopamine Dressing\'. 러닝 크루 문화를 즐기는 20대 후반 직장인 페르소나를 WGSN 트렌드 리포트로 설계하고, CLO 3D로 디자인부터 3D 시뮬레이션까지 단독 제작한 액티브웨어 컬렉션으로 입선. 2024.09~11', en: 'Hosted by the Korean Society for Clothing Industry, on the theme \'Dopamine Dressing\'. An activewear collection for a late-20s running-crew persona grounded in WGSN trend reports, designed and simulated solo in CLO 3D. Sep to Nov 2024' } },
       ],
     },
     {
@@ -169,10 +169,10 @@ window.SITE = {
       items: [
         { date: '2025.01', until: '2025.08', major: true, link: 'miraen',
           title: { ko: '미래엔수학 5개 지사: 디자이너 & 마케터', en: 'MiraeN Math (5-district branch): Designer & Marketer' },
-          desc: { ko: 'SNS 3개 채널을 0에서 개설·운영하며 누적 50여 편의 브랜드 콘텐츠 제작. 브랜드 2D 캐릭터를 3D로 리빌드해 숏폼으로 확장. 유료광고와 네이버 스마트플레이스 SEO 병행. 릴스 최고 조회수 2.9만. 2025.01~08', en: 'Built and ran three channels from zero: 50+ pieces of brand content, the 2D brand character rebuilt in 3D for short-form, paid media alongside Naver SmartPlace SEO. Top Reel 29,000 views. Jan to Aug 2025' } },
+          desc: { ko: '지사장 한 명이 새로 연 지사의 SNS 3개 채널을 0에서 개설·운영. 팔로워 0인 계정에서 릴스 최고 조회수 2.9만. 브랜드 콘텐츠 50여 편, 2D 캐릭터를 3D로 리빌드한 숏폼, 유료광고와 네이버 스마트플레이스 SEO 병행. 2025.01~08', en: 'Opened and ran three channels from zero for a branch one director had just opened. Top Reel 29,000 views from a zero-follower account. 50+ pieces of brand content, the 2D character rebuilt in 3D for short-form, paid media alongside Naver SmartPlace SEO. Jan to Aug 2025' } },
         { date: '2025.07', major: true, link: 'ai-short-film',
           title: { ko: '대상: 서울대학교 중앙도서관 AI Filmmaking Program', en: 'Grand Prize: SNU Central Library AI Filmmaking Program' },
-          desc: { ko: '디지털 리터러시 아카데미 \'AI로 만드는 영화\' 클래스(2025.06)를 들은 뒤, 단편영화 \'Happiness is Intelligence?\'를 기획·연출·프롬프트 디렉팅·편집까지 단독 제작. 2025.07.10', en: 'After the Digital Literacy Academy class \'Filmmaking with AI\' (Jun 2025), made the short film \'Happiness is Intelligence?\' solo: concept, direction, prompt direction and editing. 10 Jul 2025' } },
+          desc: { ko: '디지털 리터러시 아카데미 \'AI로 만드는 영화\' 클래스(2025.06) 수료 후, 단편영화 \'Happiness is Intelligence?\'를 기획·연출·프롬프트 디렉팅·편집까지 단독 제작. 2025.07.10', en: 'After completing the Digital Literacy Academy class \'Filmmaking with AI\' (Jun 2025), made the short film \'Happiness is Intelligence?\' solo: concept, direction, prompt direction and editing. 10 Jul 2025' } },
       ],
     },
     {
@@ -180,10 +180,10 @@ window.SITE = {
       items: [
         { date: '2025.08', until: '2026.06', major: true, link: null,
           title: { ko: 'NC State University, Wilson College of Textiles: 교환학생', en: 'NC State University, Wilson College of Textiles: Exchange' },
-          desc: { ko: '패션 & 텍스타일 디자인. 두 학기 24학점 전 과목 A, GPA 4.0/4.0. 학기 중 현지 인턴과 캠퍼스 식당 근무를 병행하며 전 과정을 영어로. 2025.08.18~2026.06.30', en: 'Fashion & Textile Design. Straight A’s across 24 credits over two semesters, GPA 4.0/4.0, while interning and working on campus, everything in English. 18 Aug 2025 to 30 Jun 2026' } },
+          desc: { ko: '패션 & 텍스타일 디자인. 두 학기 24학점 전 과목 A, GPA 4.0/4.0. 학기 중 현지 인턴과 캠퍼스 식당 근무를 병행. 2025.08.18~2026.06.30', en: 'Fashion & Textile Design. Straight A’s across 24 credits over two semesters, GPA 4.0/4.0, while interning and working on campus. 18 Aug 2025 to 30 Jun 2026' } },
         { date: '2025.11', until: '2026.05', major: false, link: null,
           title: { ko: 'Missions with Monty: 마케팅 & 디자인 인턴 (원격, 미국)', en: 'Missions with Monty: Marketing & Design Intern (remote, US)' },
-          desc: { ko: '과학 교육 분야 게임 기반 학습 프로젝트에서 소셜미디어 콘텐츠 기획과 굿즈 제작을 맡아, 연구 인사이트를 플랫폼에 맞는 콘텐츠로 옮겨 링크드인에 직접 게시. 교수진·디자인팀과 전 과정 영어로 협업. 2025.11~2026.05', en: 'Planned social content and merchandise for a game-based science-learning project, turning research insight into platform-native posts published on LinkedIn. Collaborated with faculty and the design team in English. Nov 2025 to May 2026' } },
+          desc: { ko: '자기주도학습 게임 기반 프로젝트에서 소셜미디어 콘텐츠 기획과 굿즈 제작을 맡아, 연구 인사이트를 플랫폼에 맞는 콘텐츠로 옮겨 링크드인에 직접 게시. 교수진·디자인팀과 전 과정 영어로 협업. 2025.11~2026.05', en: 'Planned social content and merchandise for a game-based self-directed learning project, turning research insight into platform-native posts published on LinkedIn. Collaborated with faculty and the design team in English. Nov 2025 to May 2026' } },
       ],
     },
     {
@@ -194,27 +194,27 @@ window.SITE = {
           desc: { ko: '미국 하이엔드 패션 트레이드쇼에서 3일간 부스 운영과 상품 준비를 담당하고 현지 바이어·방문객을 영어로 응대. 완성된 제품과 비주얼이 바이어 앞에서 어떻게 소비되는지 현장에서 관찰. 2026.01.29~31', en: 'Three days running a booth at a US high-end fashion trade show, preparing product and handling buyers in English. Saw first-hand how finished product and visuals land in front of a buyer. 29 to 31 Jan 2026' } },
         { date: '2026.01', until: '2026.04', major: true, link: 'art2wear',
           title: { ko: 'Art2Wear 2026 \'Tensed Symbiosis\': 웨어러블 아트 디자이너 & 런웨이 모델', en: 'Art2Wear 2026 \'Tensed Symbiosis\': Wearable Art Designer & Runway Model' },
-          desc: { ko: '접시를 직접 깨뜨려 꽃을 만들고 나뭇가지·청키한 실·인조진주를 대비시킨 웨어러블 아트. Gregg Museum of Art & Design 런웨이에 직접 입고 올랐다. 2026.01~04', en: 'Wearable art built from hand-broken ceramic flowers set against branches, chunky yarn and faux pearls, worn on the Gregg Museum of Art & Design runway. Jan to Apr 2026' } },
+          desc: { ko: '미국 교환 중 만든 작품. 접시를 직접 깨뜨려 꽃을 만들고 나뭇가지·청키한 실·인조진주·철사를 대비시킨 웨어러블 아트. NC State의 Gregg Museum of Art & Design 런웨이에 직접 입고 올랐다. 2026.01~04', en: 'Made during my exchange in the US: wearable art built from hand-broken ceramic flowers set against branches, chunky yarn, faux pearls and wire, worn on the runway at NC State’s Gregg Museum of Art & Design. Jan to Apr 2026' } },
         { date: '2026.01', until: '2026.04', major: true, link: 'kaftan',
           title: { ko: 'Engineered Kaftan: Wilson College Collection 영구 소장', en: 'Engineered Kaftan: Wilson College Collection (permanent)' },
           desc: { ko: '54인치 인쇄 폭 안에서 100인치가 넘는 실크 카프탄을 세 패널로 나눠 설계하고, 이음선이 악보 모티프의 흐름을 끊지 않도록 좌표를 계산. 수업 대표로 출품돼 교수진 심사를 거쳐 NC State Wilson College of Textiles Collection 영구 소장작으로 선정. 2026.01~04', en: 'A 100-inch silk kaftan designed in three panels for a 54-inch printer, with coordinates calculated so the seams never break the score motif. Entered as the class representative and selected by the faculty jury for permanent inclusion in the NC State Wilson College of Textiles Collection. Jan to Apr 2026' } },
         { date: '2026.05', until: '2026.08', major: true, link: null,
           title: { ko: 'The Nonwovens Institute, NC State: 연구실 인턴', en: 'The Nonwovens Institute, NC State: Research Intern' },
-          desc: { ko: '글로벌 스포츠 브랜드와 협력한 스판덱스 원사 샘플 테스트를 담당해 인장시험기로 신축성과 무게를 측정하고 영어로 결과 보고. 크리스마스트리 농가용 부직포 보호 커버의 재단 패턴을 설계하고 열접합으로 샘플 제작. 2026.05.11~08.04', en: 'Ran spandex yarn tests for a project with a global sportswear brand (stretch and weight on a tensile tester), reported in English. Designed the cutting pattern for nonwoven tree-farm covers and produced heat-bonded samples. 11 May to 4 Aug 2026' } },
+          desc: { ko: '언더아머(Under Armour)와 협력한 스판덱스 원사 샘플 테스트를 담당해 인장시험기로 신축성과 무게를 측정하고 영어로 결과 보고. 크리스마스트리 농가용 부직포 보호 커버의 재단 패턴을 설계하고 열접합으로 샘플 제작. 2026.05.11~08.04', en: 'Ran spandex yarn tests for a project with Under Armour (stretch and weight on a tensile tester), reported in English. Designed the cutting pattern for nonwoven tree-farm covers and produced heat-bonded samples. 11 May to 4 Aug 2026' } },
       ],
     },
     {
       segment: '2026-2', grade: { ko: '5학년 1학기 · 마지막 학기', en: 'Year 5-1 · Final term' },
       items: [
-        { date: '2026.09', major: false, link: null,
+        { date: '2026.09', major: false, link: '#now', /* jumps to NOW under the archive (연서, 2026-10-04) */
           title: { ko: '서울대 복귀: 졸업 전 마지막 학기', en: 'Back at SNU: final term before graduation' },
           desc: { ko: '교환 1년을 마치고 복귀. 이번 학기에 배우는 테크니컬 디자인, 인공지능예술실습, 3D 그래픽 디자인은 아카이브 아래 NOW에.', en: 'Back from the exchange year. What I am learning this term (Technical Design, Deep Learning for Artists, 3D Graphic Design) is under NOW, below the archive.' } },
         { date: '2026.09', major: true, link: 'denim-2026',
           title: { ko: '입선: 코리아 데님 디자인 공모전 2026 \'Squeezed Motion\'', en: 'Honorable Mention: Korea Denim Design Contest 2026, \'Squeezed Motion\'' },
-          desc: { ko: '물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 수십 개의 방향을 먼저 시뮬레이션한 뒤 원단을 받아 실물 한 벌을 제작. 본선을 거쳐 입선. 2026.09.23 발표', en: 'Paint becoming thread, on denim. Dozens of directions simulated with AI before one garment was built from the delivered fabric. Finalist, then Honorable Mention. Announced 23 Sep 2026' } },
+          desc: { ko: '물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 여러 방향을 먼저 시뮬레이션한 뒤 실물 한 벌을 제작하고, 스판 데님을 칼·드릴·송곳으로 직접 찢어 레이스로 실루엣을 잡음. 본선을 거쳐 입선. 2026.09.23 발표', en: 'Paint becoming thread, on denim. Directions simulated with AI before one garment was built; the stretch denim torn by hand and held in shape with lace. Finalist, then Honorable Mention. Announced 23 Sep 2026' } },
         { date: '2026.09', major: true, link: 'arts-week-2026',
           title: { ko: '2026 서울대 예술주간 〈공생 Tensed Symbiosis〉: 야외 설치', en: 'SNU Arts Week 2026 \'Tensed Symbiosis\': outdoor installation' },
-          desc: { ko: 'Art2Wear 작업을 야외 가변설치로 재구성. 깨진 도자기 파편, 마른 꽃, 나뭇가지, 인조진주, 마네킹. 학생회관과 관정관 사이 잔디. 2026.09.28~10.02', en: 'The Art2Wear piece rebuilt as an outdoor site installation (ceramic shards, dried flowers, branches, faux pearls, a mannequin) on the lawn between the Student Union and Kwanjeong Library. 28 Sep to 2 Oct 2026' } },
+          desc: { ko: 'Art2Wear 작품을 예술주간 야외 설치로 재구성. 대학 캠퍼스, 야외, 비 예보라는 장소와 조건을 읽고 우산을 더해, 대학생이 느끼는 압박으로 주제를 넓힘. 관정도서관 앞. 2026.09.28~10.02', en: 'The Art2Wear piece rebuilt as an outdoor installation for SNU Arts Week. Reading the site (a university campus, outdoors, rain in the forecast), I added umbrellas and turned it toward the pressure students carry. In front of Kwanjeong Library. 28 Sep to 2 Oct 2026' } },
       ],
     },
     {
@@ -222,7 +222,7 @@ window.SITE = {
       items: [
         { date: '2027.02', major: true, link: null,
           title: { ko: '졸업 예정: 서울대학교 의류학과', en: 'Graduation (expected): SNU Clothing & Textiles' },
-          desc: { ko: '학사 졸업 예정. 학점 3.9 / 4.3.', en: 'BA expected. GPA 3.9 / 4.3.' } },
+          desc: { ko: '학사 졸업 예정. 현재 기준 학점 3.9 / 4.3.', en: 'BA expected. GPA to date 3.9 / 4.3.' } },
       ],
     },
   ],
@@ -230,7 +230,9 @@ window.SITE = {
   /* ---- UI labels (English only) ---- */
   loader: { drag: 'DRAG TO OPEN', tap: 'TAP TO OPEN', objectLabel: '3D OBJECT' },
   name: { title: 'YEONSEO LEE', disciplines: 'FASHION · CONTENT · AI · INSIGHT', caption: '02 / NAME' },
-  workUi: { imageSlot: 'IMAGE 3:4', objectLabel: '3D OBJECT', hint: 'SCROLL TO ROTATE · CLICK TO OPEN' },
+  workUi: { imageSlot: 'IMAGE 3:4', objectLabel: '3D OBJECT', hint: 'SCROLL TO ROTATE · CLICK TO OPEN',
+    /* under the ring: every featured project has a soundtrack on its page (연서, 2026-10-04) */
+    soundNote: '♪ Every selected work comes with a song. Press play inside.' },
   aboutUi: {
     /* a small line under the three strengths so the underlined words are not missed (연서, 2026-10-02) */
     strengthHint: { ko: '밑줄 친 단어에 마우스를 올리면 사진이, 누르면 프로젝트가 열려요', en: 'hover the underlined words for a photo, click to open the project' },
@@ -238,7 +240,7 @@ window.SITE = {
     /* phones only: a small note once per visit that the full site is on a computer (연서, 2026-10-02) */
     desktopNote: { ko: '컴퓨터로 보면 훨씬 좋아요. 3D 링과 인터랙션까지 모두 보여요', en: 'Best viewed on a computer, with the 3D ring and every interaction' },
     desktopNoteClose: { ko: '닫기', en: 'Close' },
-    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
+    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
   archiveUi: {
     filterLabel: 'ARCHIVE FILTERS', imageSlot: 'IMAGE 3:4', inProgress: 'IN PROGRESS',
     filters: [

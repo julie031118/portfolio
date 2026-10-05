@@ -564,6 +564,7 @@ export function renderWork(lang) {
           </div>
         </div>
         <div class="work-hint">${SITE.workUi?.hint || 'SCROLL TO ROTATE · CLICK TO OPEN'}</div>
+        ${SITE.workUi?.soundNote ? `<p class="work-sound-note">${SITE.workUi.soundNote}</p>` : ''}
       </div>
       <div class="work-mobile-object" aria-hidden="true"></div>
       <div class="work-list"></div>
