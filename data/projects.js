@@ -4039,7 +4039,7 @@ window.PROJECTS = [
    "ko": "이 포트폴리오를 시작할 때 만든 무드보드와 가장 어울리는 곡. 힘을 뺀 부드러운 보컬과 사운드가, 대비 없이 부드러운 이 사이트의 톤과 닮았다.",
    "en": "The song closest to the moodboard this portfolio started from: soft, unforced vocals and sound, like the site’s gentle, low-contrast tone."
   },
-  "cardThumb": "/images/projects/portfolio-site/thumb-card.jpg",
+  "cardThumb": "/images/projects/portfolio-site/thumb-card-v2.jpg",
   "process": [
    "/images/projects/portfolio-site/05.jpg",
    "/images/projects/portfolio-site/08.jpg",

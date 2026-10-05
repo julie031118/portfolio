@@ -129,12 +129,34 @@ export function dropPlip() {
   tone(now + 0.012, { from: 1900, to: 2300, gain: 0.035, length: 0.05 });
 }
 
-/* the name's water: a soft swish whose loudness follows the pointer speed */
+/* the name's water (2026-10-05, 연서: the old one sounded like hitting a wall). A wall thud is a sudden low hit; water is
+   a soft swell that rises and falls, with a few small droplets on top. So: filtered noise that fades in (no hard attack)
+   while its pitch sweeps upward like a ripple spreading, plus one or two quiet droplet blips. Louder and longer with speed. */
+function swell(now, { from, to, gain, attack, length, q = 0.9 }) {
+  const source = context.createBufferSource();
+  const filter = context.createBiquadFilter();
+  const amp = context.createGain();
+  source.buffer = noiseBuffer; source.loop = true;
+  filter.type = 'bandpass'; filter.Q.value = q;
+  filter.frequency.setValueAtTime(from, now);
+  filter.frequency.exponentialRampToValueAtTime(to, now + length);
+  amp.gain.setValueAtTime(0.0001, now);
+  amp.gain.linearRampToValueAtTime(gain, now + attack);
+  amp.gain.exponentialRampToValueAtTime(0.0001, now + length);
+  source.connect(filter).connect(amp).connect(context.destination);
+  source.start(now); source.stop(now + length + 0.02);
+}
 export function waterSwish(speed = 10) {
-  if (!ready('water', 260)) return;
+  if (!ready('water', 320)) return;
   const now = context.currentTime;
   const strength = Math.min(1, speed / 40);
-  burst(now, { freq: 700 + strength * 500, q: 0.8, gain: 0.05 + strength * 0.12, length: 0.22 + strength * 0.12, rate: 0.35, type: 'lowpass' });
+  swell(now, { from: 420, to: 1500 + strength * 900, gain: 0.05 + strength * 0.07, attack: 0.07, length: 0.38 + strength * 0.18 });
+  const drops = strength > 0.45 ? 2 : 1;
+  for (let i = 0; i < drops; i += 1) {
+    const at = now + 0.05 + Math.random() * 0.16;
+    const base = 700 + Math.random() * 500;
+    tone(at, { from: base, to: base * 1.9, gain: 0.025 + strength * 0.02, length: 0.06 });
+  }
 }
 
 document.addEventListener('visibilitychange', () => {
