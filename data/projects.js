@@ -446,10 +446,10 @@ window.PROJECTS = [
    "ko": "기획 · 대사 · 컷 구성 · 연출 · 영상 · 음악 · 보이스 · 자막 (단독, 전 과정 AI)",
    "en": "Concept, dialogue, shot list, direction, video, music, voice, subtitles (solo, all made with AI)"
   },
-  "spotify": "2BuJrxYKhYky20dQqTlobO",
+  "spotify": "6D6HVKe7Qu3imn4zzJD0W9",
   "spotifyNote": {
-   "ko": "가사 속 'I need medicine'은 실제 약이 아니라, 감당하기 힘든 불안에서 당장 꺼내 줄 무언가를 찾는 마음으로 읽힌다. 감정을 조절하는 약이 나오는 이 영화와 바로 이어지고, 분위기도 닮았다.",
-   "en": "The line 'I need medicine' reads less like a call for real pills than a need for something to pull you out of unbearable anxiety right now. It ties straight into this film and its emotion-control pill, and the mood fits too."
+   "ko": "원래는 이별 뒤 괜찮은 척하다 결국 지난 감정에 무너지는 노래다. 'All my friends are drunk again'이 반복될 때마다, 모두가 약에 취해 행복을 유지하는 사회에서 혼자 깨어나 지워 둔 감정과 마주하는 이 영화의 주인공이 겹쳐 들렸다.",
+   "en": "It is really a breakup song about acting fine until old feelings break through. But each time 'All my friends are drunk again' comes back, I hear this film's protagonist: awake alone in a society kept happy on pills, facing the feelings that were erased."
   },
   "video": "https://www.youtube.com/embed/utCOOrnRLZk",
   "sections": [
@@ -654,8 +654,8 @@ window.PROJECTS = [
   },
   "title": "AI Short Film",
   "desc": "A speculative short about emotion regulated by numbers and mood-control pills. Grand Prize, SNU AI Filmmaking 2025.",
-  "song": "keshi skeletons",
-  "songYoutube": "https://www.youtube.com/watch?v=w_6fWYY6pRw"
+  "song": "keshi drunk",
+  "songYoutube": "https://www.youtube.com/watch?v=4HLumkaPcCI"
  },
  {
   "slug": "kaftan",
@@ -4039,7 +4039,7 @@ window.PROJECTS = [
    "ko": "이 포트폴리오를 시작할 때 만든 무드보드와 가장 어울리는 곡. 힘을 뺀 부드러운 보컬과 사운드가, 대비 없이 부드러운 이 사이트의 톤과 닮았다.",
    "en": "The song closest to the moodboard this portfolio started from: soft, unforced vocals and sound, like the site’s gentle, low-contrast tone."
   },
-  "cardThumb": "/images/projects/portfolio-site/thumb-card-v2.jpg",
+  "cardThumb": "/images/projects/portfolio-site/thumb-card-v3.jpg",
   "process": [
    "/images/projects/portfolio-site/05.jpg",
    "/images/projects/portfolio-site/08.jpg",

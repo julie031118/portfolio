@@ -2,7 +2,9 @@ import { storageGet, storageSet } from './sections/render-shell.js';
 const SOUND_KEY = 'yeonseo-sound';
 let context = null;
 let noiseBuffer = null;
-let enabled = storageGet('localStorage', SOUND_KEY) === 'on';
+/* on by default (연서, 2026-10-05): only a visitor who switched it off keeps it off. Browsers still hold every sound until
+   the first click, tap or key press (see wakeAudio), so nothing plays before the visitor touches the page. */
+let enabled = storageGet('localStorage', SOUND_KEY) !== 'off';
 
 export function getSoundEnabled() {
   return enabled;
@@ -129,33 +131,19 @@ export function dropPlip() {
   tone(now + 0.012, { from: 1900, to: 2300, gain: 0.035, length: 0.05 });
 }
 
-/* the name's water (2026-10-05, 연서: the old one sounded like hitting a wall). A wall thud is a sudden low hit; water is
-   a soft swell that rises and falls, with a few small droplets on top. So: filtered noise that fades in (no hard attack)
-   while its pitch sweeps upward like a ripple spreading, plus one or two quiet droplet blips. Louder and longer with speed. */
-function swell(now, { from, to, gain, attack, length, q = 0.9 }) {
-  const source = context.createBufferSource();
-  const filter = context.createBiquadFilter();
-  const amp = context.createGain();
-  source.buffer = noiseBuffer; source.loop = true;
-  filter.type = 'bandpass'; filter.Q.value = q;
-  filter.frequency.setValueAtTime(from, now);
-  filter.frequency.exponentialRampToValueAtTime(to, now + length);
-  amp.gain.setValueAtTime(0.0001, now);
-  amp.gain.linearRampToValueAtTime(gain, now + attack);
-  amp.gain.exponentialRampToValueAtTime(0.0001, now + length);
-  source.connect(filter).connect(amp).connect(context.destination);
-  source.start(now); source.stop(now + length + 0.02);
-}
+/* the name's water (2026-10-05, 연서: the swell didn't read as water either, just make it a water drop). A drop is a
+   short sine that jumps up in pitch with a soft tail; each one gets its own pitch so a moving pointer sounds like
+   drops falling, not one note repeating. A fast pointer adds a smaller second drop. */
 export function waterSwish(speed = 10) {
-  if (!ready('water', 320)) return;
+  if (!ready('water', 240)) return;
   const now = context.currentTime;
   const strength = Math.min(1, speed / 40);
-  swell(now, { from: 420, to: 1500 + strength * 900, gain: 0.05 + strength * 0.07, attack: 0.07, length: 0.38 + strength * 0.18 });
-  const drops = strength > 0.45 ? 2 : 1;
-  for (let i = 0; i < drops; i += 1) {
-    const at = now + 0.05 + Math.random() * 0.16;
-    const base = 700 + Math.random() * 500;
-    tone(at, { from: base, to: base * 1.9, gain: 0.025 + strength * 0.02, length: 0.06 });
+  const base = 380 + Math.random() * 260;
+  tone(now, { from: base, to: base * 2.6, gain: 0.1 + strength * 0.06, length: 0.11 });
+  tone(now + 0.006, { from: base * 3.1, to: base * 4.2, gain: 0.018, length: 0.05 });
+  if (strength > 0.5) {
+    const second = 520 + Math.random() * 300;
+    tone(now + 0.07 + Math.random() * 0.05, { from: second, to: second * 2.3, gain: 0.05, length: 0.08 });
   }
 }
 
