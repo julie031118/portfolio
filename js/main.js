@@ -8,7 +8,7 @@ import { renderDetailShell, closeDetail } from './sections/detail.js';
 import { initLoader } from './loader.js';
 import { initGround } from './ground.js';
 import { initCursorLens } from './cursor-lens.js';
-import { getSoundEnabled, setSoundEnabled, toggleSound, isAudioRunning } from './audio.js';
+import { getSoundEnabled, setSoundEnabled, toggleSound } from './audio.js';
 import { storageGet, storageSet } from './sections/render-shell.js';
 
 const LANG_KEY = 'yeonseo-lang';
@@ -79,27 +79,6 @@ window.__siteActions = { toggleLanguage, toggleSound: toggleSiteSound, getLangua
 initGround(); renderNav(); renderDetailShell(); renderLaterSections(); introController = renderIntro(LANG); initNavState();
 window.addEventListener('portfolio:soundchange', renderNav);
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !document.querySelector('#detail')?.hidden) closeDetail(); });
-/* browsers hold every sound until the first click, tap or key press, so the typewriter would go unheard: a quiet line
-   under the SOUND toggle says so, and goes the moment sound starts or is switched off (2026-10-06) */
-function showSoundHint() {
-  window.setTimeout(() => {
-    if (!getSoundEnabled() || isAudioRunning()) return;
-    const touch = window.matchMedia('(hover: none)').matches;
-    const copy = SITE.sound?.hint || {};
-    const hint = document.createElement('div'); hint.className = 'sound-hint'; hint.setAttribute('role', 'status');
-    hint.textContent = touch ? (copy.touch || '♪ Tap anywhere for sound') : (copy.mouse || '♪ Click anywhere to turn on the sound');
-    document.body.append(hint);
-    requestAnimationFrame(() => hint.classList.add('is-shown'));
-    const hide = () => {
-      hint.classList.remove('is-shown'); window.setTimeout(() => hint.remove(), 600);
-      window.removeEventListener('portfolio:audioready', hide); window.removeEventListener('portfolio:soundchange', onChange);
-    };
-    const onChange = (event) => { if (!event.detail) hide(); };
-    window.addEventListener('portfolio:audioready', hide);
-    window.addEventListener('portfolio:soundchange', onChange);
-  }, 1200);
-}
-
 /* phones: one small note per visit that the site is fuller on a computer; it fades by itself or on tap */
 function showDesktopNote() {
   if (!window.matchMedia('(max-width: 600px), (hover: none)').matches) return;
@@ -117,7 +96,7 @@ function showDesktopNote() {
 
 function startRuntime() {
   initScroll();
-  initLoader({ host: introController.host, onComplete: () => { introController.start(); window.__introReady = true; window.dispatchEvent(new Event('portfolio:intro-ready')); window.ScrollTrigger?.refresh(); window.setTimeout(showDesktopNote, 1200); showSoundHint(); initCursorLens(); }, onGesture: () => { setSoundEnabled(true); renderNav(); } });
+  initLoader({ host: introController.host, onComplete: () => { introController.start(); window.__introReady = true; window.dispatchEvent(new Event('portfolio:intro-ready')); window.ScrollTrigger?.refresh(); window.setTimeout(showDesktopNote, 1200); initCursorLens(); }, onGesture: () => { setSoundEnabled(true); renderNav(); } });
 }
 
 if (document.readyState === 'loading') window.addEventListener('DOMContentLoaded', startRuntime, { once: true });
