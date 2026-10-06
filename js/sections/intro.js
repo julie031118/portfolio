@@ -193,6 +193,8 @@ export function renderIntro(siteLang) {
 
   function update(progress) {
     frame.classList.toggle('is-started', progress > .004);
+    /* once scrolled away, the sound line is gone for the visit: back at the top it came back over the paragraph (2026-10-06) */
+    if (progress > .004 || locked) soundHint.classList.add('is-hidden');
     if (locked) { renderFinal(); return; }
     const scaled = Math.min(progress * STEPS, STEPS - .001);
     const step = Math.floor(scaled);
