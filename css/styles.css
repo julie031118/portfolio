@@ -539,6 +539,24 @@ html[lang="ko"] .now-claim, html[lang="ko"] .now-evidence, html[lang="ko"] .abou
 .now-media--image { width: min(100%, 420px); }
 .now-media img { display: block; width: 100%; height: auto; background: var(--placeholder); }
 .now-media + .now-media { margin-top: 18px; } /* several media in one NOW item (2026-10-06) */
+/* the AI class item (2026-10-07): text on the left, its media as a stack of cards on the right, spanning two columns
+   and both rows, so the other two courses sit stacked in the third column and the box has no empty corner */
+.now-item--deck { grid-column: span 2; grid-row: span 2; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: clamp(28px,3.4vw,56px); align-items: start; }
+.now-item--deck + .now-item + .now-item { border-top: 1px solid var(--hairline); margin-top: 20px; }
+.now-deck { padding: 34px 30px 0 0; }
+.now-deck-stage { position: relative; width: 100%; aspect-ratio: 1/1; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.now-deck-stage:focus-visible { outline: 1px solid var(--ink); outline-offset: 6px; }
+.now-deck-stage > .now-media { position: absolute; inset: 0; margin: 0; width: 100%; transform-origin: 30% 100%; transition: transform .55s cubic-bezier(.2,.7,.2,1), filter .55s, box-shadow .55s; box-shadow: 0 1px 0 rgba(29,29,31,.08); }
+.now-deck-stage > .now-media img, .now-deck-stage > .now-media video { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; }
+.now-deck-stage > .now-media figcaption { display: none; }
+.now-deck-stage > .now-media[data-pos="0"] { z-index: 3; transform: none; }
+.now-deck-stage > .now-media[data-pos="1"] { z-index: 2; transform: translate(14px,-14px) rotate(2deg); filter: saturate(.55) brightness(1.06); }
+.now-deck-stage > .now-media[data-pos="2"] { z-index: 1; transform: translate(28px,-28px) rotate(4deg); filter: saturate(.35) brightness(1.1); }
+.now-deck-stage:hover > .now-media[data-pos="1"] { transform: translate(20px,-18px) rotate(3deg); }
+.now-deck-stage:hover > .now-media[data-pos="2"] { transform: translate(36px,-34px) rotate(5.5deg); }
+.now-deck-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin: 10px 0 0; color: #5F636C; font: 10px/1.45 var(--font-mono); letter-spacing: .06em; }
+.now-deck-count { flex: none; color: var(--ink); }
+html[lang="ko"] .now-deck-caption { word-break: keep-all; overflow-wrap: anywhere; }
 /* where it gets me by December: same voice, a shade darker, with its own small label */
 .now-lead { margin: 16px 0 0; color: #383B42; font: 12px/1.6 var(--font-mono); letter-spacing: .02em; }
 .now-next { margin: 12px 0 0; padding-top: 10px; border-top: 1px dotted rgba(29,29,31,.22); color: #383B42; font: 12px/1.65 var(--font-mono); }
@@ -550,6 +568,9 @@ html[lang="ko"] .now-next, html[lang="ko"] .now-lead { word-break: keep-all; ove
   .now-list { grid-template-columns: 1fr; max-width: 640px; }
   .now-item { padding: 24px 0; border-bottom: 1px solid var(--hairline); }
   .now-item:last-child { border-bottom: 0; }
+  .now-item--deck { display: block; grid-column: auto; grid-row: auto; }
+  .now-item--deck + .now-item + .now-item { border-top: 0; margin-top: 0; }
+  .now-deck { width: min(100%, 380px); padding: 40px 30px 0 0; }
 }
 
 @media (max-width: 600px), (hover: none) {

@@ -1,5 +1,6 @@
 import { T } from './render-shell.js';
 import { openDetail } from './detail.js';
+import { ringTick } from '../audio.js';
 
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 let instance = null;
@@ -44,16 +45,26 @@ function nowMediaMarkup(media, lang) {
 }
 
 /* NOW: this term's courses, as three short lines under the grid (they used to be placeholder cards) */
+/* several media in one item: a small stack of cards, the front one plays; click (or Enter) brings the next to the front (2026-10-07) */
+function nowDeckMarkup(list, lang) {
+  const cards = list.map((media, i) => nowMediaMarkup(media, lang).replace('<figure class="now-media', `<figure data-pos="${i}" class="now-media`)).join('');
+  const label = lang === 'ko' ? '다음 이미지 보기' : 'Show the next one';
+  return `<div class="now-deck"><div class="now-deck-stage" role="button" tabindex="0" aria-label="${label}">${cards}</div><p class="now-deck-meta"><span class="now-deck-caption">${T(list[0].caption, lang) || ''}</span><span class="now-deck-count">1 / ${list.length} →</span></p></div>`;
+}
+
 function nowMarkup(lang) {
   const items = SITE.now || [];
   if (!items.length) return '';
   const list = items.map((item) => `
-        <li class="now-item">
+        <li class="now-item${nowMediaList(item).length > 1 ? ' now-item--deck' : ''}">
+          <div class="now-text">
           <p class="now-label">${T(item.label, lang)}</p>
           <p class="now-claim">${T(item.claim, lang)}</p>
           <p class="now-evidence">${T(item.evidence, lang)}</p>
-          ${nowMediaList(item).map((media) => nowMediaMarkup(media, lang)).join('')}
+          ${nowMediaList(item).length === 1 ? nowMediaMarkup(nowMediaList(item)[0], lang) : ''}
           ${item.next ? `<p class="now-next"><span>${T(SITE.nowUi.next, lang)}</span>${T(item.next, lang)}</p>` : ''}
+          </div>
+          ${nowMediaList(item).length > 1 ? nowDeckMarkup(nowMediaList(item), lang) : ''}
         </li>`).join('');
   return `
       <section class="now-block" id="now" aria-labelledby="now-title">
@@ -242,15 +253,38 @@ export function renderArchive(lang) {
   }
 
   const nowVideos = [...section.querySelectorAll('.now-media video')];
+  const nowVisible = new Set();
+  const isFrontCard = (video) => { const card = video.closest('.now-media'); return !card?.dataset.pos || card.dataset.pos === '0'; };
+  const syncNowVideos = () => nowVideos.forEach((video) => {
+    if (nowVisible.has(video) && isFrontCard(video)) { const playing = video.play(); if (playing?.catch) playing.catch(() => {}); }
+    else video.pause();
+  });
   let nowObserver = null;
   if (nowVideos.length && !reducedQuery.matches && 'IntersectionObserver' in window) {
-    nowObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
-      const video = entry.target;
-      if (entry.isIntersecting) { const playing = video.play(); if (playing?.catch) playing.catch(() => {}); }
-      else video.pause();
-    }), { rootMargin: '120px 0px' });
+    nowObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => { if (entry.isIntersecting) nowVisible.add(entry.target); else nowVisible.delete(entry.target); });
+      syncNowVideos();
+    }, { rootMargin: '120px 0px' });
     nowVideos.forEach((video) => nowObserver.observe(video));
   }
+  let deckVersion = 0;
+  section.querySelectorAll('.now-deck').forEach((deck) => {
+    const stage = deck.querySelector('.now-deck-stage');
+    const cards = [...stage.querySelectorAll('.now-media')];
+    const captions = cards.map((card) => card.querySelector('figcaption')?.textContent || '');
+    const caption = deck.querySelector('.now-deck-caption'); const count = deck.querySelector('.now-deck-count');
+    let front = 0;
+    const bump = () => { if (nowBlock) nowBlock.dataset.deck = String(++deckVersion); }; /* tells the drop lens to repaint the box */
+    const next = () => {
+      front = (front + 1) % cards.length;
+      cards.forEach((card, i) => { card.dataset.pos = String((i - front + cards.length) % cards.length); });
+      caption.textContent = captions[front]; count.textContent = `${front + 1} / ${cards.length} →`;
+      syncNowVideos(); bump(); ringTick();
+    };
+    stage.addEventListener('click', next);
+    stage.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); next(); } });
+    stage.addEventListener('transitionend', bump);
+  });
 
   function onHistory() { syncFromLocation(); }
   window.addEventListener('hashchange', onHistory);
