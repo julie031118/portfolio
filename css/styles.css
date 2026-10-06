@@ -624,6 +624,15 @@ html[lang="ko"] .now-next, html[lang="ko"] .now-lead { word-break: keep-all; ove
 
 /* One baseline and 220px item allocations. */
 .timeline-track::before { top: 46%; height: 1px; border: 0; background: rgba(29,29,31,.62); box-shadow: 0 1px 0 rgba(250,250,251,.5); z-index: 1; } /* ink-2 vanished on mid-grey photos */
+/* Chrome on a Mac drew the spine only part way (2026-10-06): it sat in a 6000px-wide layer inside a 3D context
+   (preserve-3d + perspective). The items never showed perspective (their segments flatten them), so the 3D context
+   goes, and the spine is drawn across the viewport instead of along the whole moving track: it looks the same. */
+@media (min-width: 601px) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .timeline-viewport { perspective: none; }
+  .timeline-track { transform-style: flat; }
+  .timeline-track::before { display: none; }
+  .timeline-viewport::before { content: ''; position: absolute; left: 0; right: 0; top: 46%; height: 1px; background: rgba(29,29,31,.62); box-shadow: 0 1px 0 rgba(250,250,251,.5); pointer-events: none; }
+}
 .timeline-segment { z-index: 2; flex-basis: 380px; }
 .timeline-segment--count-2 { flex-basis: 600px; }
 .timeline-segment--count-3 { flex-basis: 820px; }
@@ -860,3 +869,5 @@ html[lang="ko"] .timeline-item.is-major .timeline-item-title {
 /* the glass ball under the pointer (js/cursor-lens.js): a small WebGL canvas over the photo it is on */
 .cursor-lens-canvas { position: fixed; left: 0; top: 0; z-index: 9999; display: none; pointer-events: none; will-change: transform; }
 .cursor-lens-canvas.is-in-card { position: absolute; z-index: 2; } /* between the card's vellum veil (1) and its title (3) */
+.now-block { position: relative; }
+.now-block > :not(.cursor-lens-canvas) { position: relative; z-index: 3; } /* the text stays over the drop */

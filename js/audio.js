@@ -174,7 +174,7 @@ export function contactBrush(speed = 10) {
   filter.frequency.value = 3600 + strength * 2800 + Math.random() * 600;
   const length = 0.12 + strength * 0.06;
   amp.gain.setValueAtTime(0.0001, now);
-  amp.gain.linearRampToValueAtTime(0.018 + strength * 0.05, now + 0.03);
+  amp.gain.linearRampToValueAtTime(0.026 + strength * 0.07, now + 0.03); /* 0.018 + 0.05 until 2026-10-06: a little too quiet */
   amp.gain.exponentialRampToValueAtTime(0.0001, now + length);
   source.connect(filter).connect(amp).connect(context.destination);
   source.start(now, Math.random() * 0.2); source.stop(now + length + 0.02);

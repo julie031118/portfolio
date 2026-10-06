@@ -1685,13 +1685,16 @@ window.PROJECTS = [
   "thumb": "/images/projects/clo3d/01.jpg",
   "images": [
    "/images/projects/clo3d/01.jpg",
+   "/images/projects/clo3d/06.jpg",
    "/images/projects/clo3d/02.jpg",
-   "/images/projects/clo3d/03.jpg",
    "/images/projects/clo3d/04.jpg",
    "/images/projects/clo3d/05.jpg",
-   "/images/projects/clo3d/06.jpg",
-   "/images/projects/clo3d/07.jpg",
-   "/images/projects/clo3d/a01.jpg"
+   "/images/projects/clo3d/ad02.jpg",
+   "/images/projects/clo3d/ad03.jpg",
+   "/images/projects/clo3d/ad01.jpg",
+   "/images/projects/clo3d/ad06.jpg",
+   "/images/projects/clo3d/ad11.jpg",
+   "/images/projects/clo3d/ad04.jpg"
   ],
   "role": {
    "ko": "3D 디자인 · 스타일링 · 렌더링 (단독)",
@@ -1710,44 +1713,77 @@ window.PROJECTS = [
       "src": "/images/projects/clo3d/01.jpg"
      },
      {
-      "src": "/images/projects/clo3d/02.jpg"
+      "src": "/images/projects/clo3d/06.jpg"
      },
      {
-      "src": "/images/projects/clo3d/03.jpg"
+      "src": "/images/projects/clo3d/02.jpg"
      },
      {
       "src": "/images/projects/clo3d/04.jpg"
      },
      {
       "src": "/images/projects/clo3d/05.jpg"
-     },
-     {
-      "src": "/images/projects/clo3d/06.jpg"
      }
     ],
     "note": {
-     "ko": "CLO 3D로 렌더링한 액티브웨어 룩",
-     "en": "Activewear looks rendered in CLO 3D"
+     "ko": "CLO 3D로 렌더링한 두 가지 액티브웨어 룩",
+     "en": "Two activewear looks rendered in CLO 3D"
     }
    },
    {
     "title": {
-     "ko": "CLO 3D 작업과 발표 자료",
-     "en": "CLO 3D BUILD AND DECK"
+     "ko": "앞, 옆, 뒤",
+     "en": "FRONT, SIDE, BACK"
     },
     "images": [
      {
-      "src": "/images/projects/clo3d/a01.jpg",
+      "src": "/images/projects/clo3d/ad02.jpg",
       "cap": {
-       "ko": "CLO 3D 속 메시 재킷 디테일",
-       "en": "Mesh jacket detail in CLO 3D"
+       "ko": "앞",
+       "en": "Front"
       }
      },
      {
-      "src": "/images/projects/clo3d/07.jpg",
+      "src": "/images/projects/clo3d/ad03.jpg",
       "cap": {
-       "ko": "렌더 컷을 정리한 발표 자료",
-       "en": "Renders laid out in the deck"
+       "ko": "옆",
+       "en": "Side"
+      }
+     },
+     {
+      "src": "/images/projects/clo3d/ad01.jpg",
+      "cap": {
+       "ko": "뒤",
+       "en": "Back"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "CLO 3D 작업",
+     "en": "IN CLO 3D"
+    },
+    "images": [
+     {
+      "src": "/images/projects/clo3d/ad06.jpg",
+      "cap": {
+       "ko": "메시 재킷 디테일",
+       "en": "Mesh jacket detail"
+      }
+     },
+     {
+      "src": "/images/projects/clo3d/ad11.jpg",
+      "cap": {
+       "ko": "팬츠 트임과 밑단 디테일",
+       "en": "Trouser slit and hem detail"
+      }
+     },
+     {
+      "src": "/images/projects/clo3d/ad04.jpg",
+      "cap": {
+       "ko": "패턴 조각과 컬러·소재를 정리한 라인 레이아웃",
+       "en": "Pattern pieces and the line layout of colors and materials"
       }
      }
     ]
@@ -1755,19 +1791,20 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "CLO 3D 디지털 패션 공모전 (주제 〈Dopamine Dressing〉)",
+    "title": "CLO 3D 디지털 패션 공모전",
     "cat": "3D 디지털 패션 · 공모전 · 단독 · 2024",
-    "headline": "입을 사람을 먼저 좁게 정의하고 트렌드 리포트를 근거로 삼았더니, 실물 없이 3D로만 액티브웨어 한 벌이 끝까지 나왔다.",
+    "headline": "퇴근 후 러닝 크루에 나가는 20대 후반 직장인 한 명을 정하고, 그 사람의 하루에서 디자인 변수를 뽑았다.",
     "metrics": [
      {
       "v": "입선",
       "l": "제13회 국제 디지털 패션 공모전"
      }
     ],
-    "need": "디지털 패션은 예쁜 렌더링을 뽑는 일로 오해되기 쉽다. 실제로 입을 사람을 정의하지 않으면 3D 안에서만 그럴듯한 옷이 나온다.",
+    "need": "공모전 주제 'Dopamine Dressing'을 색감만으로 풀지 않고, 실제로 입고 움직일 사람의 생활에서 출발하고 싶었다.",
     "action": [
-     "러닝 크루 문화를 즐기는 20대 후반 직장인으로 페르소나를 좁게 설정",
-     "WGSN 트렌드 리포트를 근거로 원단 기능성·색상 조화·체온 조절·활동성을 핵심 변수로 정의",
+     "MZ세대 사이에서 커지는 러닝 문화를 분석해, 대중교통으로 출퇴근하고 퇴근 후 러닝 크루에 나가는 20대 후반 여성 직장인으로 페르소나를 구체화",
+     "이 페르소나를 기준으로 원단 기능성, 색 조화, 체온 조절, 활동성을 핵심 디자인 변수로 정의",
+     "WGSN F/W 2025 아웃도어·액티브웨어 트렌드 중 'New Optimism'과 'Analog Nostalgia'를 디자인 방향에 반영",
      "공모전 주제 'Dopamine Dressing'에 맞춰, 그 변수로 액티브웨어 컬렉션을 설계",
      "패턴 제작부터 3D 시뮬레이션·렌더링까지 CLO 3D로 단독 진행"
     ],
@@ -1776,19 +1813,20 @@ window.PROJECTS = [
     ]
    },
    "en": {
-    "title": "CLO 3D Digital Fashion Contest (theme: Dopamine Dressing)",
+    "title": "CLO 3D Digital Fashion Contest",
     "cat": "3D Digital Fashion · Competition · Solo · 2024",
-    "headline": "Define the wearer narrowly, back it with a trend report, and a full activewear look can be built in 3D alone.",
+    "headline": "I defined one wearer, a woman in her late twenties who runs with a crew after work, and drew the design variables from her day.",
     "metrics": [
      {
       "v": "Honorable Mention",
       "l": "13th Int'l Digital Fashion Contest"
      }
     ],
-    "need": "Digital fashion is easily mistaken for rendering pretty pictures. Without a defined wearer you get clothes that only work inside the software.",
+    "need": "I did not want to answer the theme, Dopamine Dressing, with color alone. It had to start from the life of someone who would actually wear it and move in it.",
     "action": [
-     "Set a narrow persona: a late-twenties office worker in running-crew culture",
-     "Used WGSN trend reporting to fix the working variables: fabric performance, color harmony, thermal regulation, range of motion",
+     "Studied the running culture growing among the MZ generation and set a detailed persona: a woman in her late twenties who commutes by public transport and joins a running crew after work",
+     "Set the key design variables from that persona: fabric performance, color harmony, body temperature regulation, mobility",
+     "Took the direction from WGSN F/W 2025 Outdoor & Activewear trends, especially 'New Optimism' and 'Analog Nostalgia'",
      "Designed an activewear collection for the contest theme 'Dopamine Dressing' against those variables",
      "Built it solo in CLO 3D, from patterning through simulation and rendering"
     ],
@@ -2455,16 +2493,22 @@ window.PROJECTS = [
   "images": [
    "/images/projects/textile-printed/01.jpg",
    "/images/projects/textile-printed/02.jpg",
-   "/images/projects/textile-printed/03.jpg",
+   "/images/projects/textile-printed/ad04.jpg",
    "/images/projects/textile-printed/04.jpg",
-   "/images/projects/textile-printed/05.jpg",
+   "/images/projects/textile-printed/ad03.jpg",
    "/images/projects/textile-printed/06.jpg",
-   "/images/projects/textile-printed/07.jpg",
+   "/images/projects/textile-printed/ad02.jpg",
    "/images/projects/textile-printed/08.jpg",
-   "/images/projects/textile-printed/09.jpg",
+   "/images/projects/textile-printed/ad05.jpg",
+   "/images/projects/textile-printed/ad08.jpg",
+   "/images/projects/textile-printed/ad09.jpg",
    "/images/projects/textile-printed/10.jpg",
    "/images/projects/textile-printed/11.jpg",
-   "/images/projects/textile-printed/a01.jpg"
+   "/images/projects/textile-printed/ad14.jpg",
+   "/images/projects/textile-printed/ad06.jpg",
+   "/images/projects/textile-printed/ad16.jpg",
+   "/images/projects/textile-printed/ad17.jpg",
+   "/images/projects/textile-printed/ad18.jpg"
   ],
   "role": {
    "ko": "프린트 디자인 (단독)",
@@ -2472,128 +2516,263 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "related": [
+   {
+    "slug": "textile-woven",
+    "note": {
+     "ko": "같은 교환학생 학기에 한국 모티프를 직조로 풀어낸 프로젝트.",
+     "en": "Same exchange semester: Korean motifs worked into weaving."
+    },
+    "label": {
+     "ko": "Woven Textile Design 〈Moonlit Thread〉 보기 →",
+     "en": "See Woven Textile Design (Moonlit Thread) →"
+    }
+   },
+   {
+    "slug": "textile-knit",
+    "note": {
+     "ko": "같은 교환학생 학기에 한국 모티프를 니트로 풀어낸 프로젝트.",
+     "en": "Same exchange semester: Korean motifs worked into knit."
+    },
+    "label": {
+     "ko": "Knit Textile Design 〈Celadon Reverie〉 보기 →",
+     "en": "See Knit Textile Design (Celadon Reverie) →"
+    }
+   }
+  ],
   "sections": [
    {
     "title": {
-     "ko": "완성 프린트",
-     "en": "FINAL PRINTS"
+     "ko": "컬렉션",
+     "en": "THE COLLECTION"
     },
     "images": [
      {
-      "src": "/images/projects/textile-printed/01.jpg"
-     },
-     {
-      "src": "/images/projects/textile-printed/03.jpg"
-     },
-     {
-      "src": "/images/projects/textile-printed/05.jpg"
-     },
-     {
-      "src": "/images/projects/textile-printed/07.jpg"
+      "src": "/images/projects/textile-printed/01.jpg",
+      "wide": true
      }
     ],
     "note": {
-     "ko": "기와와 호랑이 모티프의 리피트 프린트",
-     "en": "Repeat prints of roof tile and tiger motifs"
+     "ko": "격자, 블록, 잔꽃, 스트라이프: 하나의 컬렉션으로 맞춘 네 패턴",
+     "en": "Grid, block, small floral, stripe: four patterns tuned into one collection"
     }
    },
    {
     "title": {
-     "ko": "스트리트웨어 적용",
-     "en": "AS STREETWEAR"
-    },
-    "images": [
-     {
-      "src": "/images/projects/textile-printed/09.jpg"
-     },
-     {
-      "src": "/images/projects/textile-printed/a01.jpg"
-     }
-    ]
-   },
-   {
-    "title": {
-     "ko": "펫 어패럴 적용",
-     "en": "AS PET APPAREL"
-    },
-    "images": [
-     {
-      "src": "/images/projects/textile-printed/10.jpg"
-     },
-     {
-      "src": "/images/projects/textile-printed/11.jpg"
-     }
-    ]
-   },
-   {
-    "title": {
-     "ko": "NedGraphics 리피트 설계",
-     "en": "REPEATS BUILT IN NEDGRAPHICS"
+     "ko": "메인 패턴",
+     "en": "MAIN PATTERNS"
     },
     "images": [
      {
       "src": "/images/projects/textile-printed/02.jpg",
       "cap": {
-       "ko": "격자 패턴 리피트",
-       "en": "Grid pattern repeat"
+       "ko": "1 격자: 리피트",
+       "en": "1 Grid: repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-printed/ad04.jpg",
+      "cap": {
+       "ko": "1 격자: 확대",
+       "en": "1 Grid: detail"
       }
      },
      {
       "src": "/images/projects/textile-printed/04.jpg",
       "cap": {
-       "ko": "블록 패턴 리피트",
-       "en": "Block pattern repeat"
+       "ko": "2 블록: 리피트",
+       "en": "2 Block: repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-printed/ad03.jpg",
+      "cap": {
+       "ko": "2 블록: 확대",
+       "en": "2 Block: detail"
       }
      },
      {
       "src": "/images/projects/textile-printed/06.jpg",
       "cap": {
-       "ko": "잔꽃 패턴 리피트",
-       "en": "Small floral repeat"
+       "ko": "3 잔꽃: 리피트",
+       "en": "3 Small floral: repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-printed/ad02.jpg",
+      "cap": {
+       "ko": "3 잔꽃: 확대",
+       "en": "3 Small floral: detail"
       }
      },
      {
       "src": "/images/projects/textile-printed/08.jpg",
       "cap": {
-       "ko": "스트라이프 리피트",
-       "en": "Stripe repeat"
+       "ko": "4 스트라이프: 리피트",
+       "en": "4 Stripe: repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-printed/ad05.jpg",
+      "cap": {
+       "ko": "4 스트라이프: 확대",
+       "en": "4 Stripe: detail"
       }
      }
     ],
     "note": {
-     "ko": "프린트마다 크기와 리피트 방식을 설정",
-     "en": "Size and repeat type set for each print"
+     "ko": "패턴마다 NedGraphics 리피트 설계와 확대 이미지",
+     "en": "Each pattern: the NedGraphics repeat, then a detail view"
+    }
+   },
+   {
+    "title": {
+     "ko": "실제 프린트",
+     "en": "PRINTED ON FABRIC"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-printed/ad08.jpg",
+      "cap": {
+       "ko": "면 원단에 실제로 프린트한 네 패턴",
+       "en": "The four patterns printed on cotton"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "텍스처 매핑",
+     "en": "TEXTURE MAPPING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-printed/ad09.jpg",
+      "cap": {
+       "ko": "스트리트웨어",
+       "en": "Streetwear"
+      }
+     },
+     {
+      "src": "/images/projects/textile-printed/10.jpg",
+      "cap": {
+       "ko": "반려동물 재킷",
+       "en": "Pet jacket"
+      }
+     },
+     {
+      "src": "/images/projects/textile-printed/11.jpg",
+      "cap": {
+       "ko": "반려동물 재킷과 모자",
+       "en": "Pet jacket and hat"
+      }
+     }
+    ],
+    "note": {
+     "ko": "포토샵으로 패턴을 옷에 입혀 본 착장",
+     "en": "The prints mapped onto garments in Photoshop"
+    }
+   },
+   {
+    "title": {
+     "ko": "얼터너티브 컬러웨이",
+     "en": "ALTERNATIVE COLORWAY"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-printed/ad14.jpg",
+      "wide": true
+     }
+    ],
+    "note": {
+     "ko": "더 부드럽고 캐주얼한 버전",
+     "en": "A softer, more casual version"
+    }
+   },
+   {
+    "title": {
+     "ko": "모티프",
+     "en": "MOTIFS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-printed/ad06.jpg",
+      "wide": true
+     }
+    ],
+    "note": {
+     "ko": "Procreate로 직접 그린 모티프: 기와, 호랑이, 무궁화와 꽃, 상모돌리기, 강강술래, 비보잉",
+     "en": "Motifs drawn in Procreate: roof tiles, tiger, mugunghwa and flowers, sangmo, ganggangsullae, breakdancer"
+    }
+   },
+   {
+    "title": {
+     "ko": "패턴 개발 과정",
+     "en": "PATTERN DEVELOPMENT"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-printed/ad16.jpg"
+     },
+     {
+      "src": "/images/projects/textile-printed/ad17.jpg"
+     },
+     {
+      "src": "/images/projects/textile-printed/ad18.jpg"
+     }
+    ],
+    "note": {
+     "ko": "패턴을 만드는 과정에서 나온 다른 패턴들",
+     "en": "Other patterns that came out along the way"
     }
    }
   ],
   "nar": {
    "ko": {
-    "title": "Textile Design I: Printed 〈Urban Botanica〉",
-    "cat": "프린트 텍스타일 · 개인 · 2025.08~12",
-    "headline": "전통 모티프를 스트리트웨어의 문법으로 옮기면 어디까지 읽히는지 리피트 프린트로 시험했다.",
-    "need": "전통 모티프는 그대로 쓰면 박물관 굿즈가 되고, 너무 비틀면 출처가 사라진다. 그 사이의 지점을 찾아야 했다.",
+    "title": "Printed Textile Design 〈Urban Botanica〉",
+    "cat": "프린트 텍스타일 · 미국 교환학생 수업 · 개인 · 2025.08~12",
+    "headline": "전통 모티프에 비보잉의 움직임을 겹쳐, 한국을 잘 모르는 사람에게도 낯설지 않은 한국을 프린트로 풀었다.",
+    "need": "미국 교환학생 때 들은 텍스타일 수업의 첫 프로젝트. 반에서 한국 학생은 나 혼자였고, 수업은 서로의 작업에 대한 피드백이 아주 활발했다. 한국을 잘 모르는 노스캐롤라이나의 교수님과 친구들 앞에서, 한국을 담아 차별성을 가지면서도 어렵거나 낯설지 않고 끌리는 작업이어야 했다.",
     "action": [
-     "기와지붕의 기하와 호랑이 상징을 모티프로 잡고 NedGraphics로 리피트 프린트를 설계",
-     "펫 어패럴과 스트리트웨어 두 제품군을 상정해 같은 모티프의 스케일과 배색을 다르게 전개",
-     "스크린 프린팅과 디지털 프린팅을 함께 실습해 인쇄 방식에 따라 색과 디테일이 어떻게 달라지는지 실물로 비교"
+     "iPad Procreate로 모티프를 직접 그림: 비보잉 실루엣과 기와, 호랑이, 무궁화와 꽃, 상모돌리기와 강강술래",
+     "NedGraphics로 리피트를 설계하고, 스케일과 배색을 실험하며 네 가지 패턴이 하나의 컬렉션으로 어울리도록 조율",
+     "얼터너티브 컬러웨이로 더 부드럽고 캐주얼한 버전도 전개",
+     "통기성, 지속가능성, 자연스러운 부드러움이 좋은 면을 바탕으로 설계해, 실제 원단 프린트까지 진행",
+     "포토샵 텍스처 매핑은 기억에 남도록 사람 옷에 더해 반려동물 옷에도 입혀 봄"
     ],
-    "note": "프린트·직조·편성 세 프로젝트를 하나의 텍스타일 시리즈로 함께 진행했다."
+    "note": "미국 교환학생 수업에서 진행한 프린트, 직조, 니트 세 프로젝트는 각각 다른 과제지만, 모두 한국 모티프를 엮는 하나의 흐름으로 이어진다.",
+    "detail": {
+     "title": "왜 비보잉이었나",
+     "body": [
+      "한국을 잘 모르는 사람들이 한국 모티프를 어떻게 읽는지 직접 확인할 수 있는 기회였고, 처음 보는 사람들 앞에 한국의 미감을 꺼내 놓는 자리이기도 했다.",
+      "하지만 전통 모티프만 늘어놓으면 재미가 없을 것 같았다. 한국의 전통과 지금의 서울을 함께 담고 싶었고, 도시의 역동적인 스트리트 댄스를 떠올렸다. 그래서 비보잉 실루엣을 기와, 호랑이, 무궁화, 전통춤 모티프와 한 화면에 놓아, 힙한 에너지 안에서 전통을 세련되게 풀어냈다."
+     ]
+    }
    },
    "en": {
-    "title": "Textile Design I: Printed (Urban Botanica)",
-    "cat": "Print Design · Solo · 2025.08~12",
-    "headline": "How far can a traditional motif travel into streetwear grammar and still be read? Tested in repeat print.",
-    "need": "Used literally, a traditional motif becomes museum merchandise; pushed too far, its origin disappears.",
+    "title": "Printed Textile Design (Urban Botanica)",
+    "cat": "Print Design · Exchange in the US · Solo · 2025.08~12",
+    "headline": "I set the movement of breakdance against traditional Korean motifs, to print a Korea that reads easily even to people who barely know it.",
+    "need": "The first project of my textile class on exchange in the US. I was the only Korean student, and the class ran on lively feedback. In front of professors and classmates in North Carolina who knew little about Korea, the work had to carry Korea and stand apart, without feeling difficult, foreign or unappealing.",
     "action": [
-     "Took roof-tile geometry and tiger symbolism as motifs and built the repeats in NedGraphics",
-     "Ran the same motif at different scales and colourways for two product types: pet apparel and streetwear",
-     "Printed by both screen and digital methods to compare how colour and detail shift with the process"
+     "Drew the motifs myself in Procreate on iPad: breakdancer silhouettes with roof tiles, tigers, mugunghwa and flowers, sangmo and ganggangsullae dancers",
+     "Built the repeats in NedGraphics, testing scale and color until the four patterns worked as one collection",
+     "Added an alternative colorway: a softer, more casual version",
+     "Designed for cotton, for its breathability, sustainability and natural softness, and printed it on real fabric",
+     "For the Photoshop texture mapping I wanted something people would remember, so besides streetwear I put the prints on pet clothes"
     ],
-    "note": "Printed, woven and knit were run together as one textile series."
+    "note": "Printed, woven and knit were separate projects in my exchange semester in the US, carried by one thread: Korean motifs.",
+    "detail": {
+     "title": "Why breakdance",
+     "body": [
+      "It was a chance to see first hand how people who barely know Korea read Korean motifs, and to put Korean aesthetics in front of people meeting them for the first time.",
+      "Traditional motifs on their own felt flat, though. I wanted Korean tradition and today's Seoul in the same frame, and thought of the energy of street dance. So the breakdancer silhouettes share each print with roof tiles, tigers, mugunghwa and traditional dance, and the tradition comes through that energy, sharp rather than old."
+     ]
+    }
    }
   },
-  "title": "Textile Design I: Printed",
-  "desc": "Korean tradition meeting street culture, roof-tile geometry and tiger symbolism worked into repeat prints for pet apparel and streetwear."
+  "title": "Printed Textile Design",
+  "desc": "Korean motifs meet breakdancer silhouettes: roof tiles, tigers, mugunghwa and traditional dance worked into a four-print collection, made on exchange in the US."
  },
  {
   "slug": "textile-woven",
@@ -2627,6 +2806,30 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "related": [
+   {
+    "slug": "textile-printed",
+    "note": {
+     "ko": "같은 교환학생 학기에 한국 모티프를 프린트로 풀어낸 프로젝트.",
+     "en": "Same exchange semester: Korean motifs worked into print."
+    },
+    "label": {
+     "ko": "Printed Textile Design 〈Urban Botanica〉 보기 →",
+     "en": "See Printed Textile Design (Urban Botanica) →"
+    }
+   },
+   {
+    "slug": "textile-knit",
+    "note": {
+     "ko": "같은 교환학생 학기에 한국 모티프를 니트로 풀어낸 프로젝트.",
+     "en": "Same exchange semester: Korean motifs worked into knit."
+    },
+    "label": {
+     "ko": "Knit Textile Design 〈Celadon Reverie〉 보기 →",
+     "en": "See Knit Textile Design (Celadon Reverie) →"
+    }
+   }
+  ],
   "sections": [
    {
     "title": {
@@ -2758,7 +2961,7 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "Textile Design II: Woven 〈Moonlit Thread〉",
+    "title": "Woven Textile Design 〈Moonlit Thread〉",
     "cat": "직조 텍스타일 · 개인 · 2025.08~12",
     "headline": "구미호와 달토끼라는 두 설화를 한 장의 면 직물 안에서 만나게 했다.",
     "need": "프린트는 표면에 얹는 일이고 직조는 구조를 짜는 일이다. 같은 모티프를 직조로 옮기면 무엇이 남고 무엇이 사라지는지 확인하고 싶었다.",
@@ -2767,10 +2970,10 @@ window.PROJECTS = [
      "모란과 잎을 배경 층으로 깔고 달토끼를 상감 메달리온 위에 올려 시선의 중심을 만듦",
      "면사로 직조해 색과 조직의 조합에 따라 같은 모티프가 어떻게 다르게 읽히는지 비교"
     ],
-    "note": "프린트·직조·편성 세 프로젝트를 하나의 텍스타일 시리즈로 함께 진행했다."
+    "note": "미국 교환학생 수업에서 진행한 프린트, 직조, 니트 세 프로젝트는 각각 다른 과제지만, 모두 한국 모티프를 엮는 하나의 흐름으로 이어진다."
    },
    "en": {
-    "title": "Textile Design II: Woven (Moonlit Thread)",
+    "title": "Woven Textile Design (Moonlit Thread)",
     "cat": "Woven Design · Solo · 2025.08~12",
     "headline": "Two Korean folk tales, the nine-tailed fox and the moon rabbit, brought together in one woven cotton cloth.",
     "need": "Print sits on a surface; weaving builds the structure. I wanted to see what survives when the same motif is moved into cloth.",
@@ -2779,10 +2982,10 @@ window.PROJECTS = [
      "Layered peonies and foliage behind, with the rabbit set on an inlay medallion as the focal point",
      "Wove in cotton to compare how colour and weave structure change the reading of the same motif"
     ],
-    "note": "Printed, woven and knit were run together as one textile series."
+    "note": "Printed, woven and knit were separate projects in my exchange semester in the US, carried by one thread: Korean motifs."
    }
   },
-  "title": "Textile Design II: Woven",
+  "title": "Woven Textile Design",
   "desc": "Korean folklore, the nine-tailed fox and the moon rabbit, reinterpreted as woven cotton textiles."
  },
  {
@@ -2815,6 +3018,30 @@ window.PROJECTS = [
   "spotify": null,
   "spotifyNote": null,
   "cardThumb": "/images/projects/textile-knit/thumb-card.jpg",
+  "related": [
+   {
+    "slug": "textile-printed",
+    "note": {
+     "ko": "같은 교환학생 학기에 한국 모티프를 프린트로 풀어낸 프로젝트.",
+     "en": "Same exchange semester: Korean motifs worked into print."
+    },
+    "label": {
+     "ko": "Printed Textile Design 〈Urban Botanica〉 보기 →",
+     "en": "See Printed Textile Design (Urban Botanica) →"
+    }
+   },
+   {
+    "slug": "textile-woven",
+    "note": {
+     "ko": "같은 교환학생 학기에 한국 모티프를 직조로 풀어낸 프로젝트.",
+     "en": "Same exchange semester: Korean motifs worked into weaving."
+    },
+    "label": {
+     "ko": "Woven Textile Design 〈Moonlit Thread〉 보기 →",
+     "en": "See Woven Textile Design (Moonlit Thread) →"
+    }
+   }
+  ],
   "sections": [
    {
     "title": {
@@ -2924,7 +3151,7 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "Textile Design III: Knit 〈Celadon Reverie〉",
+    "title": "Knit Textile Design 〈Celadon Reverie〉",
     "cat": "니트 텍스타일 · 개인 · 2025.08~12",
     "headline": "고려청자의 상감 무늬를 편성 조직으로 다시 그렸다.",
     "need": "청자의 상감은 표면을 파고들어 간 선이다. 실을 엮어 만드는 편성에서 그 깊이를 어떻게 만들 것인지가 문제였다.",
@@ -2933,10 +3160,10 @@ window.PROJECTS = [
      "EasyKnit으로 조직과 배색을 설계하고 도안을 실물 편성으로 전개",
      "프린트·직조와 모티프 계열을 공유해 세 기법의 차이를 한 시리즈 안에서 비교 가능하게 구성"
     ],
-    "note": "프린트·직조·편성 세 프로젝트를 하나의 텍스타일 시리즈로 함께 진행했다."
+    "note": "미국 교환학생 수업에서 진행한 프린트, 직조, 니트 세 프로젝트는 각각 다른 과제지만, 모두 한국 모티프를 엮는 하나의 흐름으로 이어진다."
    },
    "en": {
-    "title": "Textile Design III: Knit (Celadon Reverie)",
+    "title": "Knit Textile Design (Celadon Reverie)",
     "cat": "Knit Design · Solo · 2025.08~12",
     "headline": "Goryeo celadon inlay, redrawn as knit structure.",
     "need": "Celadon inlay is a line cut into the surface. The question was how to give that depth in a structure made by looping yarn.",
@@ -2945,10 +3172,10 @@ window.PROJECTS = [
      "Designed structure and colourway in EasyKnit and took the charts through to knitted samples",
      "Shared the motif family with the printed and woven pieces so the three techniques could be compared in one series"
     ],
-    "note": "Printed, woven and knit were run together as one textile series."
+    "note": "Printed, woven and knit were separate projects in my exchange semester in the US, carried by one thread: Korean motifs."
    }
   },
-  "title": "Textile Design III: Knit",
+  "title": "Knit Textile Design",
   "desc": "Goryeo celadon aesthetics translated to knit, crane motifs and circular medallions, designed in EasyKnit."
  },
  {

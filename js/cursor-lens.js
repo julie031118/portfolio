@@ -31,6 +31,13 @@ function photoAt(node) {
        photo through the veil and the title stays readable over it */
     return img ? { img, clip: card, host: card.closest('.archive-card-button'), saturate: .72, contrast: 1.02, veil: .42 } : null; /* .card-img img { filter: saturate(.72) contrast(1.02) } */
   }
+  /* the NOW box is frosted glass over the page photo: the ball is a drop on it, the photo clear through it (2026-10-06) */
+  const now = node.closest('.now-block');
+  if (now) {
+    if (node.closest('.now-media')) return null; /* not over the video */
+    const img = [...document.querySelectorAll('.ground-photo.is-on')].sort((a, b) => (+b.style.zIndex || 0) - (+a.style.zIndex || 0))[0];
+    return img ? { img, clip: now, host: now, saturate: 1.2, contrast: .97, veil: .5 } : null; /* .ground-photo { filter: saturate(1.2) contrast(.97) } */
+  }
   const frame = node.closest('.detail-hero.has-image, .detail-gallery-item.has-image');
   if (frame) {
     const img = frame.querySelector('img');
@@ -150,6 +157,7 @@ export function initCursorLens() {
     const texture = textureFor(hit.img);
     if (!texture) { hide(); return; }
     if (!current || current.img !== hit.img) { at.x = pointer.x; at.y = pointer.y; } /* a new photo: start right under the pointer */
+    if (shown && current && current.clip !== hit.clip) dropPlip(); /* straight from one archive photo to the next (2026-10-06) */
     current = hit;
     at.x += (pointer.x - at.x) * LENS.ease;
     at.y += (pointer.y - at.y) * LENS.ease;
