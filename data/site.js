@@ -105,7 +105,7 @@ window.SITE = {
       { group: { ko: '콘텐츠 · 마케팅', en: 'Content & Marketing' }, items: [{ ko: '숏폼 기획', en: 'Short-form planning' }, { ko: '채널 운영과 유료광고', en: 'Channel ops & paid media' }, { ko: '브랜딩과 캐릭터 IP 확장', en: 'Branding & character IP' }] },
       { group: { ko: 'AI 툴', en: 'AI Tools' }, items: ['Midjourney', 'Kling AI', 'Suno', 'Riffusion', 'ElevenLabs', 'Tripo', 'Manus', 'Claude Code'] },
       { group: { ko: '패션 · 텍스타일', en: 'Fashion & Textile' }, items: ['CLO 3D', 'NedGraphics', { ko: '엔지니어드 프린트', en: 'Engineered print' }, { ko: '텍스타일 제작(프린트, 직조, 니트)', en: 'Textile making (print, weave, knit)' }, { ko: '패턴과 봉제', en: 'Pattern & construction' }] },
-      { group: { ko: '디자인 · 영상 · 3D', en: 'Design, Video & 3D' }, items: ['Photoshop', 'Illustrator', 'After Effects', 'Premiere Pro', 'CapCut', 'Blender'] }, /* video tools moved here from Content (연서, 2026-10-05): tools with tools, the content group keeps what she plans and runs */
+      { group: { ko: '디자인 · 영상', en: 'Design & Video' }, items: ['Photoshop', 'Illustrator', 'After Effects', 'Premiere Pro', 'CapCut'] }, /* video tools moved here from Content (연서, 2026-10-05): tools with tools, the content group keeps what she plans and runs */
     ],
   },
 
