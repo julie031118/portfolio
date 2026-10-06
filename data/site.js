@@ -261,8 +261,8 @@ window.SITE = {
   now: [
     {
       label: { ko: '인공지능예술실습 · 2026 가을학기', en: 'Deep Learning for Artists · Fall 2026' },
-      claim: { ko: 'AI를 툴로만 쓰지 않고, 이미지 AI가 작동하는 원리부터 배우고 있습니다.', en: 'Learning how image AI works underneath, not just how to use the tools.' },
-      evidence: { ko: 'AI로 창작하며 더 섬세하게 다루고 싶어 들은 수업. 미드저니로 만든 얼굴 이미지로 Claude Code와 함께 PyTorch에서 생성 모델(GAN)을 직접 학습시켜, 얼굴 사이를 걷는 latent travel 영상을 만들었다. 다음은 ComfyUI와 클라우드 GPU(RunPod).', en: 'I make things with AI and wanted finer control. I generated face images in Midjourney, trained a generative model (GAN) on them in PyTorch with Claude Code, and made a latent travel video that walks from face to face. Next: ComfyUI and cloud GPUs (RunPod).' },
+      claim: { ko: '이미지 AI의 작동 원리를 배우고, 그 과정 자체를 작업의 재료로 쓰는 법을 익히고 있습니다.', en: 'Learning how image AI works inside, and how to use that process itself as material for my work.' },
+      evidence: { ko: 'AI로 창작하며 더 섬세하게 다루고 싶어 들은 수업. 툴 사용법이 아니라 작동 원리를 배우는데, 구조를 알아야 AI에게도 정확하게 지시할 수 있기 때문이다. 미드저니로 만든 얼굴 이미지로 Claude Code와 함께 PyTorch에서 생성 모델(GAN)을 직접 학습시켜, 얼굴 사이를 걷는 latent travel 영상을 만들었다. 지금은 클라우드 GPU에서 ComfyUI로 생성 과정을 단계별로 열어 보는 중.', en: 'I make things with AI and wanted finer control. The class teaches how it works rather than which buttons to press, because knowing the structure is what lets you direct AI precisely. I generated face images in Midjourney, trained a generative model (GAN) on them in PyTorch with Claude Code, and made a latent travel video that walks from face to face. Now I am opening up the generation process step by step in ComfyUI on a cloud GPU.' },
       /* 연서's own run (week 4): every training image was made in Midjourney, so no real faces */
       media: { webm: 'images/now/latent-travel.webm', video: 'images/now/latent-travel.mp4', poster: 'images/now/latent-travel.jpg', caption: { ko: 'latent travel · 직접 학습시킨 모델', en: 'latent travel · the model I trained' } },
       next: { ko: '내 데이터로 모델을 조정해 최종 프로젝트를 완성합니다.', en: 'Tune a model with my own data and finish the final project.' },

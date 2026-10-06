@@ -869,5 +869,3 @@ html[lang="ko"] .timeline-item.is-major .timeline-item-title {
 /* the glass ball under the pointer (js/cursor-lens.js): a small WebGL canvas over the photo it is on */
 .cursor-lens-canvas { position: fixed; left: 0; top: 0; z-index: 9999; display: none; pointer-events: none; will-change: transform; }
 .cursor-lens-canvas.is-in-card { position: absolute; z-index: 2; } /* between the card's vellum veil (1) and its title (3) */
-.now-block { position: relative; }
-.now-block > :not(.cursor-lens-canvas) { position: relative; z-index: 3; } /* the text stays over the drop */

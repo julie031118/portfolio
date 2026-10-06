@@ -136,7 +136,7 @@ export function ringTick() {
 
 /* the glass drop appearing over a photo: a small rising plip */
 export function dropPlip() {
-  if (!ready('drop', 450)) return;
+  if (!ready('drop', 0)) return; /* 450 ms apart until 2026-10-06: overlapping is fine when sweeping across photos */
   const now = context.currentTime;
   tone(now, { from: 520, to: 1250, gain: 0.16, length: 0.09 });
   tone(now + 0.012, { from: 1900, to: 2300, gain: 0.035, length: 0.05 });
