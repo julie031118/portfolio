@@ -1,5 +1,5 @@
 import { T } from './render-shell.js';
-import { typeClick, getSoundEnabled, isAudioRunning } from '../audio.js';
+import { typeClick, getSoundEnabled } from '../audio.js';
 import { openDetail } from './detail.js';
 
 import { createHandNotes } from './intro-hand.js';
@@ -75,14 +75,15 @@ export function renderIntro(siteLang) {
   const stage = section.querySelector('.intro-stage');
   const frame = section.querySelector('.intro-frame');
   /* browsers hold sound until the first click: on the empty first screen, where the typing will start, a small line
-     asks for one. It goes on the first scroll (the typing takes its place), or as soon as sound plays (2026-10-06) */
+     asks for one. It goes on the first scroll, where the typing takes its place (2026-10-06) */
   const soundHint = section.querySelector('.intro-sound-hint');
   {
     const copy = SITE.sound?.hint || {};
     soundHint.textContent = window.matchMedia('(hover: none)').matches ? (copy.touch || '♪ Tap anywhere for sound') : (copy.mouse || '♪ Click anywhere to turn on the sound');
     const off = () => soundHint.classList.add('is-hidden');
-    if (!getSoundEnabled() || isAudioRunning()) off();
-    window.addEventListener('portfolio:audioready', off, { once: true });
+    /* it stays until the first scroll even when the browser already lets sound play (a site visited often):
+       hiding it on audioready made it flash for half a second on reload (2026-10-06) */
+    if (!getSoundEnabled()) off();
     window.addEventListener('portfolio:soundchange', (event) => { if (!event.detail) off(); });
   }
   const linesRoot = section.querySelector('.intro-lines');
