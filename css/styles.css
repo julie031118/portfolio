@@ -536,6 +536,9 @@ html[lang="ko"] .now-claim, html[lang="ko"] .now-evidence, html[lang="ko"] .abou
 .now-media { margin: 16px 0 0; width: min(100%, 280px); }
 .now-media video { display: block; width: 100%; aspect-ratio: 1/1; object-fit: cover; background: var(--placeholder); }
 .now-media figcaption { margin-top: 6px; color: #5F636C; font: 10px/1.4 var(--font-mono); letter-spacing: .06em; }
+.now-media--image { width: min(100%, 420px); }
+.now-media img { display: block; width: 100%; height: auto; background: var(--placeholder); }
+.now-media + .now-media { margin-top: 18px; } /* several media in one NOW item (2026-10-06) */
 /* where it gets me by December: same voice, a shade darker, with its own small label */
 .now-lead { margin: 16px 0 0; color: #383B42; font: 12px/1.6 var(--font-mono); letter-spacing: .02em; }
 .now-next { margin: 12px 0 0; padding-top: 10px; border-top: 1px dotted rgba(29,29,31,.22); color: #383B42; font: 12px/1.65 var(--font-mono); }

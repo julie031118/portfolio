@@ -166,6 +166,7 @@ export function initCursorLens() {
       const cs = getComputedStyle(el);
       if (cs.display === 'none' || cs.visibility === 'hidden') return;
       const b = el.getBoundingClientRect(); const x = b.left - rect.left; const y = b.top - rect.top;
+      if (el.tagName === 'IMG') { if (el.complete && el.naturalWidth) { try { ctx.drawImage(el, x, y, b.width, b.height); } catch {} } return; } /* NOW images bend with the text (2026-10-06) */
       [['Top', x, y, b.width, 0], ['Bottom', x, y + b.height, b.width, 0], ['Left', x, y, 0, b.height], ['Right', x + b.width, y, 0, b.height]].forEach(([side, sx, sy, w, h]) => {
         const width = parseFloat(cs[`border${side}Width`]); const style = cs[`border${side}Style`];
         if (!width || style === 'none' || style === 'hidden') return;
@@ -215,6 +216,7 @@ export function initCursorLens() {
     return img.complete && img.naturalWidth ? img : null;
   };
   let videoSource = null;
+  let videoOwner = null; /* the <video> whose frame is in the texture */
 
   /* one texture per photo, uploaded the first time the ball crosses it */
   const textures = new Map();
@@ -260,25 +262,27 @@ export function initCursorLens() {
       const navBottom = document.querySelector('#nav')?.getBoundingClientRect().bottom || 0;
       if (clip.top < navBottom) clip = { left: clip.left, top: navBottom, width: clip.width, height: clip.height - (navBottom - clip.top) };
       const sheetRect = hit.scene.getBoundingClientRect();
-      const keyNow = `${sheetRect.width.toFixed(0)}x${sheetRect.height.toFixed(0)}|${document.documentElement.lang}|${fontsVersion}|${hit.scene.textContent.length}`;
+      const keyNow = `${sheetRect.width.toFixed(0)}x${sheetRect.height.toFixed(0)}|${document.documentElement.lang}|${fontsVersion}|${hit.scene.textContent.length}|${[...hit.scene.querySelectorAll('img')].filter((i) => i.complete && i.naturalWidth).length}`;
       if (hit.scene !== paintScene.block || keyNow !== sceneKey) { paintScene(hit.scene, sheetRect); paintScene.block = hit.scene; sceneKey = keyNow; last = ''; }
       gl.uniform4f(U.boxRect, sheetRect.left, sheetRect.top, sheetRect.width, sheetRect.height);
-      const video = hit.scene.querySelector('.now-media video');
+      const videos = [...hit.scene.querySelectorAll('.now-media video')]; /* several videos (2026-10-06): use the one under the drop */
+      const under = (r) => at.x + ball / 2 > r.left && at.x - ball / 2 < r.right && at.y + ball / 2 > r.top && at.y - ball / 2 < r.bottom;
+      const video = videos.find((v) => under(v.getBoundingClientRect())) || videos[0];
       const source = video && video.readyState >= 2 && video.videoWidth ? video : (video ? posterFor(video) : null);
       if (source) {
         const vr = video.getBoundingClientRect();
         const near = at.x + ball / 2 > vr.left && at.x - ball / 2 < vr.right && at.y + ball / 2 > vr.top && at.y - ball / 2 < vr.bottom;
         const sw = source.videoWidth || source.naturalWidth; const sh = source.videoHeight || source.naturalHeight;
-        if (near && (source === video || videoSource !== source)) {
+        if (near && (source === video || videoSource !== source || videoOwner !== video)) {
           gl.activeTexture(gl.TEXTURE2);
-          try { gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, source); videoSource = source; } catch { videoSource = null; }
+          try { gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, source); videoSource = source; videoOwner = video; } catch { videoSource = null; }
           gl.activeTexture(gl.TEXTURE0);
           sceneLive = source === video && !video.paused;
         }
         const vs = Math.max(vr.width / sw, vr.height / sh);
         gl.uniform4f(U.vidRect, vr.left, vr.top, vr.width, vr.height);
         gl.uniform4f(U.vidCover, (vr.width - sw * vs) / 2, (vr.height - sh * vs) / 2, sw * vs, sh * vs);
-        gl.uniform1f(U.hasVid, videoSource ? 1 : 0);
+        gl.uniform1f(U.hasVid, videoSource && videoOwner === video ? 1 : 0);
       } else gl.uniform1f(U.hasVid, 0);
     }
     gl.uniform1f(U.scene, hit.scene ? 1 : 0);

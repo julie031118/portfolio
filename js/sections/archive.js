@@ -34,6 +34,15 @@ function projectMatches(project, filter) {
   return target ? project.tags.includes(target) : true;
 }
 
+/* NOW media (2026-10-06): one object or a list, shown in order; { image } or { video, webm?, poster? }, each with a caption */
+const nowMediaList = (item) => (Array.isArray(item.media) ? item.media : item.media ? [item.media] : []);
+function nowMediaMarkup(media, lang) {
+  const caption = T(media.caption, lang) || '';
+  if (media.image) return `<figure class="now-media now-media--image"><img src="${media.image}" alt="${caption}" loading="lazy" decoding="async"><figcaption>${caption}</figcaption></figure>`;
+  if (media.video) return `<figure class="now-media"><video poster="${media.poster || ''}" muted loop playsinline preload="none" aria-label="${caption}">${media.webm ? `<source src="${media.webm}" type="video/webm">` : ''}<source src="${media.video}" type="video/mp4"></video><figcaption>${caption}</figcaption></figure>`;
+  return '';
+}
+
 /* NOW: this term's courses, as three short lines under the grid (they used to be placeholder cards) */
 function nowMarkup(lang) {
   const items = SITE.now || [];
@@ -43,7 +52,7 @@ function nowMarkup(lang) {
           <p class="now-label">${T(item.label, lang)}</p>
           <p class="now-claim">${T(item.claim, lang)}</p>
           <p class="now-evidence">${T(item.evidence, lang)}</p>
-          ${item.media?.video ? `<figure class="now-media"><video poster="${item.media.poster || ''}" muted loop playsinline preload="none" aria-label="${T(item.media.caption, lang) || ''}">${item.media.webm ? `<source src="${item.media.webm}" type="video/webm">` : ''}<source src="${item.media.video}" type="video/mp4"></video><figcaption>${T(item.media.caption, lang) || ''}</figcaption></figure>` : ''}
+          ${nowMediaList(item).map((media) => nowMediaMarkup(media, lang)).join('')}
           ${item.next ? `<p class="now-next"><span>${T(SITE.nowUi.next, lang)}</span>${T(item.next, lang)}</p>` : ''}
         </li>`).join('');
   return `
