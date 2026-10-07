@@ -870,7 +870,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Engineered Kaftan",
-    "cat": "디지털 텍스타일 · AI 시뮬레이션 · 어패럴 · 2026.01~04",
+    "cat": "디지털 텍스타일 · AI 시뮬레이션 · 어패럴 · 미국 교환학생 · 2026.01~04",
     "need": "쇼팽 녹턴의 유동적인 구조를 실크 위의 시각적 움직임으로 옮기되, 프린트가 옷의 솔기와 트임에 정확히 맞아야 했다. 문제는 디지털 프린터의 인쇄 폭이 54인치인데 카프탄은 100인치가 넘는다는 것이었다. 한 장으로는 물리적으로 찍을 수 없었다.",
     "action": [
      "악보의 선 방향과 반복을 패턴의 구조로 삼고, 인체의 곡선과 겹쳐 '구조'와 '유동' 사이의 균형점을 설계",
@@ -898,7 +898,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Engineered Kaftan",
-    "cat": "Digital Textile · AI Simulation · Apparel · Jan to Apr 2026",
+    "cat": "Digital Textile · AI Simulation · Apparel · Exchange in the US · Jan to Apr 2026",
     "need": "Translating the fluid structure of Chopin's Nocturne into visual movement across silk meant the print had to land exactly on the garment's seams and slits. The problem: the digital printer runs 54 inches wide and the kaftan is over 100. A single panel was physically impossible.",
     "action": [
      "Used the line direction and repetition of sheet music as the pattern's structure, layered against the curves of the body",
@@ -1599,7 +1599,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Art2Wear 2026: Tensed Symbiosis",
-    "cat": "웨어러블 아트 · 런웨이 · 2026.01~04",
+    "cat": "웨어러블 아트 · 런웨이 · 미국 교환학생 · 2026.01~04",
     "need": "쇼의 주제는 '공생'이었다. 나는 실제 동물의 공생 관계보다 사람의 내면 이야기로 풀어내는 걸 좋아하고, 동물의 공생은 이미 다른 참가자들이 멋지게 표현하고 있었다. 나만의 주제가 필요했고, 그렇게 고른 것이 '불안과 집중의 공생'이다. 나를 움직이는 원동력이기도 하다. 만드는 동안 나도 위로받았고, 불안을 부정적으로만 보지 않게 해서 보는 사람에게도 같은 위로를 건네고 싶었다.",
     "action": [
      "쇼 주제 '공생'을 사람의 내면으로 가져와 '불안과 집중의 공생'으로 설정: 불안 없는 집중은 동력을 잃고, 집중 없는 불안은 혼돈이 된다",
@@ -1634,7 +1634,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Art2Wear 2026: “Tensed Symbiosis”",
-    "cat": "Wearable Art · Runway · Jan to Apr 2026",
+    "cat": "Wearable Art · Runway · Exchange in the US · Jan to Apr 2026",
     "need": "The show's theme was symbiosis. I prefer to tell stories about people's inner lives rather than real animal symbiosis, and other designers were already handling animal symbiosis beautifully. I wanted a theme of my own, and chose the symbiosis of anxiety and focus: part of what drives me. Making it comforted me, and I wanted to pass that comfort on by letting people see anxiety as more than something negative.",
     "action": [
      "Brought the show's theme inward as the symbiosis of anxiety and focus: focus without anxiety loses its drive, anxiety without focus becomes chaos",
@@ -2446,7 +2446,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Engineered Surfaces",
-    "cat": "텍스타일 · NC State · 2026.01~04",
+    "cat": "텍스타일 · NC State · 미국 교환학생 · 2026.01~04",
     "headline": "실을 직접 만들어 보고 나서야 원사의 구조가 드레이프와 밀도를 어디까지 결정하는지 알았다.",
     "need": "원단은 보통 완성된 상태로 주어진다. 어떤 실로 어떻게 짰는지 모르면 소재를 고를 때 결국 감에 의존하게 된다.",
     "action": [
@@ -2466,7 +2466,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Engineered Surfaces",
-    "cat": "Textile Design · NC State · 2026.01~04",
+    "cat": "Textile Design · NC State · Exchange in the US · 2026.01~04",
     "headline": "Only after spinning the yarn myself did I see how far yarn geometry decides drape and density.",
     "need": "Fabric usually arrives finished. Without knowing how the yarn was made and worked, material choices come down to instinct.",
     "action": [
@@ -2734,8 +2734,8 @@ window.PROJECTS = [
     "headline": "전통 모티프에 비보잉의 움직임을 겹쳐, 한국을 잘 모르는 사람에게도 낯설지 않은 한국을 프린트로 풀었다.",
     "need": "미국 교환학생 때 들은 텍스타일 수업의 첫 프로젝트. 반에서 한국 학생은 나 혼자였고, 수업은 서로의 작업에 대한 피드백이 아주 활발했다. 한국을 잘 모르는 노스캐롤라이나의 교수님과 친구들 앞에서, 한국을 담아 차별성을 가지면서도 어렵거나 낯설지 않고 끌리는 작업이어야 했다.",
     "action": [
-     "iPad Procreate로 모티프를 직접 그림: 비보잉 실루엣과 기와, 호랑이, 무궁화와 꽃, 상모돌리기와 강강술래",
-     "NedGraphics로 리피트를 설계하고, 스케일과 배색을 실험하며 네 가지 패턴이 하나의 컬렉션으로 어울리도록 조율",
+     "iPad Procreate로 모티프를 직접 그리고 포토샵으로 다듬음: 비보잉 실루엣과 기와, 호랑이, 무궁화와 꽃, 상모돌리기와 강강술래",
+     "NedGraphics로 가져와 리피트를 설계하고, 스케일과 배색을 실험하며 네 가지 패턴이 하나의 컬렉션으로 어울리도록 조율",
      "얼터너티브 컬러웨이로 더 부드럽고 캐주얼한 버전도 전개",
      "통기성, 지속가능성, 자연스러운 부드러움이 좋은 면을 바탕으로 설계해, 실제 원단 프린트까지 진행",
      "포토샵 텍스처 매핑은 기억에 남도록 사람 옷에 더해 반려동물 옷에도 입혀 봄"
@@ -2755,8 +2755,8 @@ window.PROJECTS = [
     "headline": "I set the movement of breakdance against traditional Korean motifs, to print a Korea that reads easily even to people who barely know it.",
     "need": "The first project of my textile class on exchange in the US. I was the only Korean student, and the class ran on lively feedback. In front of professors and classmates in North Carolina who knew little about Korea, the work had to carry Korea and stand apart, without feeling difficult, foreign or unappealing.",
     "action": [
-     "Drew the motifs myself in Procreate on iPad: breakdancer silhouettes with roof tiles, tigers, mugunghwa and flowers, sangmo and ganggangsullae dancers",
-     "Built the repeats in NedGraphics, testing scale and color until the four patterns worked as one collection",
+     "Drew the motifs myself in Procreate on iPad and refined them in Photoshop: breakdancer silhouettes with roof tiles, tigers, mugunghwa and flowers, sangmo and ganggangsullae dancers",
+     "Brought them into NedGraphics to build the repeats, testing scale and color until the four patterns worked as one collection",
      "Added an alternative colorway: a softer, more casual version",
      "Designed for cotton, for its breathability, sustainability and natural softness, and printed it on real fabric",
      "For the Photoshop texture mapping I wanted something people would remember, so besides streetwear I put the prints on pet clothes"
@@ -2783,22 +2783,28 @@ window.PROJECTS = [
   ],
   "year": "2025",
   "period": "2025.08~12",
-  "thumb": "/images/10_textile_design_woven.jpg",
+  "thumb": "/images/projects/textile-woven/ad11.jpg",
   "images": [
-   "/images/projects/textile-woven/01.jpg",
-   "/images/projects/textile-woven/02.jpg",
-   "/images/projects/textile-woven/03.jpg",
-   "/images/projects/textile-woven/04.jpg",
-   "/images/projects/textile-woven/05.jpg",
+   "/images/projects/textile-woven/ad01.jpg",
+   "/images/projects/textile-woven/ad02.jpg",
+   "/images/projects/textile-woven/14.jpg",
+   "/images/projects/textile-woven/ad03.jpg",
    "/images/projects/textile-woven/06.jpg",
-   "/images/projects/textile-woven/07.jpg",
+   "/images/projects/textile-woven/ad04.jpg",
    "/images/projects/textile-woven/08.jpg",
-   "/images/projects/textile-woven/09.jpg",
+   "/images/projects/textile-woven/ad05.jpg",
    "/images/projects/textile-woven/10.jpg",
-   "/images/projects/textile-woven/11.jpg",
-   "/images/projects/textile-woven/12.jpg",
-   "/images/projects/textile-woven/13.jpg",
-   "/images/projects/textile-woven/14.jpg"
+   "/images/projects/textile-woven/ad06.jpg",
+   "/images/projects/textile-woven/ad08.jpg",
+   "/images/projects/textile-woven/ad09.jpg",
+   "/images/projects/textile-woven/ad10.jpg",
+   "/images/projects/textile-woven/ad11.jpg",
+   "/images/projects/textile-woven/ad12.jpg",
+   "/images/projects/textile-woven/ad13.jpg",
+   "/images/projects/textile-woven/ad14.jpg",
+   "/images/projects/textile-woven/ad15.jpg",
+   "/images/projects/textile-woven/03.jpg",
+   "/images/projects/textile-woven/04.jpg"
   ],
   "role": {
    "ko": "직조 디자인 (단독)",
@@ -2833,64 +2839,156 @@ window.PROJECTS = [
   "sections": [
    {
     "title": {
-     "ko": "직조 컬렉션",
-     "en": "THE WOVEN COLLECTION"
+     "ko": "컬렉션",
+     "en": "THE COLLECTION"
     },
     "images": [
      {
-      "src": "/images/projects/textile-woven/02.jpg"
-     },
-     {
-      "src": "/images/projects/textile-woven/14.jpg"
+      "src": "/images/projects/textile-woven/ad01.jpg",
+      "wide": true
      }
     ],
     "note": {
-     "ko": "같은 디자인, 두 가지 배색",
-     "en": "Same designs in two colourways"
+     "ko": "모란 위 달토끼, 덩굴 속 구미호, 모란 스트라이프, 메달리온: 하나의 컬렉션으로 맞춘 네 패턴",
+     "en": "Rabbit among peonies, fox in the vines, peony stripe, medallion: four patterns tuned into one collection"
     }
    },
    {
     "title": {
-     "ko": "패턴 디자인과 디테일",
-     "en": "PATTERNS AND DETAILS"
+     "ko": "DesignScope Victor 적용",
+     "en": "IN DESIGNSCOPE VICTOR"
     },
     "images": [
      {
-      "src": "/images/projects/textile-woven/05.jpg",
-      "cap": {
-       "ko": "네 가지 디자인 원안",
-       "en": "The four designs, flat artwork"
-      }
-     },
+      "src": "/images/projects/textile-woven/ad02.jpg",
+      "wide": true
+     }
+    ],
+    "note": {
+     "ko": "직물로 짰을 때의 모습",
+     "en": "How the collection reads as woven cloth"
+    }
+   },
+   {
+    "title": {
+     "ko": "다른 컬러웨이",
+     "en": "ANOTHER COLORWAY"
+    },
+    "images": [
      {
-      "src": "/images/projects/textile-woven/07.jpg",
-      "cap": {
-       "ko": "상감 메달리온 위의 달토끼",
-       "en": "Moon rabbit on an inlay medallion"
-      }
-     },
-     {
-      "src": "/images/projects/textile-woven/09.jpg",
-      "cap": {
-       "ko": "모란 덩굴 속 구미호",
-       "en": "Nine tailed fox among peonies"
-      }
-     },
-     {
-      "src": "/images/projects/textile-woven/11.jpg",
-      "cap": {
-       "ko": "모란 스트라이프",
-       "en": "Peony stripe"
-      }
-     },
-     {
-      "src": "/images/projects/textile-woven/12.jpg",
-      "cap": {
-       "ko": "구미호와 달토끼 메달리온",
-       "en": "Fox and moon rabbit medallion"
-      }
+      "src": "/images/projects/textile-woven/14.jpg",
+      "wide": true
      }
     ]
+   },
+   {
+    "title": {
+     "ko": "메인 패턴",
+     "en": "MAIN PATTERNS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-woven/ad03.jpg",
+      "cap": {
+       "ko": "1 모란 위 달토끼",
+       "en": "1 Rabbit among peonies"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/06.jpg",
+      "cap": {
+       "ko": "1 리피트",
+       "en": "1 Repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/ad04.jpg",
+      "cap": {
+       "ko": "2 덩굴 속 구미호",
+       "en": "2 Fox in the vines"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/08.jpg",
+      "cap": {
+       "ko": "2 리피트",
+       "en": "2 Repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/ad05.jpg",
+      "cap": {
+       "ko": "3 모란 스트라이프",
+       "en": "3 Peony stripe"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/10.jpg",
+      "cap": {
+       "ko": "3 리피트",
+       "en": "3 Repeat"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/ad06.jpg",
+      "cap": {
+       "ko": "4 구미호와 달토끼 메달리온: 엔지니어드 패턴",
+       "en": "4 Fox and rabbit medallion: engineered"
+      }
+     }
+    ],
+    "note": {
+     "ko": "패턴과 NedGraphics 리피트 설정. 메달리온은 엔지니어드 패턴이라 리피트가 없음",
+     "en": "Each pattern with its NedGraphics repeat; the medallion is an engineered pattern, so it has no repeat"
+    }
+   },
+   {
+    "title": {
+     "ko": "텍스처 매핑",
+     "en": "TEXTURE MAPPING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-woven/ad08.jpg"
+     },
+     {
+      "src": "/images/projects/textile-woven/ad09.jpg"
+     },
+     {
+      "src": "/images/projects/textile-woven/ad10.jpg"
+     },
+     {
+      "src": "/images/projects/textile-woven/ad11.jpg"
+     },
+     {
+      "src": "/images/projects/textile-woven/ad12.jpg"
+     },
+     {
+      "src": "/images/projects/textile-woven/ad14.jpg",
+      "cap": {
+       "ko": "파우치 앞면",
+       "en": "Pouch, front"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/ad13.jpg",
+      "cap": {
+       "ko": "옆면",
+       "en": "Side"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/ad15.jpg",
+      "cap": {
+       "ko": "밑면",
+       "en": "Bottom"
+      }
+     }
+    ],
+    "note": {
+     "ko": "포토샵으로 영화 속 의상과 파우치에 패턴을 입혀 봄",
+     "en": "The patterns mapped onto film costumes and a pouch in Photoshop"
+    }
    },
    {
     "title": {
@@ -2901,59 +2999,15 @@ window.PROJECTS = [
      {
       "src": "/images/projects/textile-woven/03.jpg",
       "cap": {
-       "ko": "무드보드와 첫 아이디어",
-       "en": "Mood board and first idea"
+       "ko": "초기 콘셉트 전개",
+       "en": "First concept"
       }
      },
      {
       "src": "/images/projects/textile-woven/04.jpg",
       "cap": {
        "ko": "구미호 메인 모티프와 요소",
-       "en": "Main fox motif and its elements"
-      }
-     }
-    ]
-   },
-   {
-    "title": {
-     "ko": "리피트 설정",
-     "en": "SETTING THE REPEATS"
-    },
-    "images": [
-     {
-      "src": "/images/projects/textile-woven/06.jpg",
-      "cap": {
-       "ko": "달토끼·메달리온 패턴 리피트",
-       "en": "Rabbit and medallion pattern repeat"
-      }
-     },
-     {
-      "src": "/images/projects/textile-woven/08.jpg",
-      "cap": {
-       "ko": "구미호 패턴 리피트",
-       "en": "Fox pattern repeat"
-      }
-     },
-     {
-      "src": "/images/projects/textile-woven/10.jpg",
-      "cap": {
-       "ko": "스트라이프 리피트",
-       "en": "Stripe repeat"
-      }
-     }
-    ]
-   },
-   {
-    "title": {
-     "ko": "영화 의상으로 상상하기",
-     "en": "IMAGINED AS FILM COSTUME"
-    },
-    "images": [
-     {
-      "src": "/images/projects/textile-woven/13.jpg",
-      "cap": {
-       "ko": "영화 장면·파우치에 텍스처 매핑",
-       "en": "Mapped onto film stills and pouches"
+       "en": "The fox as main motif, with its elements"
       }
      }
     ]
@@ -2962,31 +3016,33 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Woven Textile Design 〈Moonlit Thread〉",
-    "cat": "직조 텍스타일 · 개인 · 2025.08~12",
-    "headline": "구미호와 달토끼라는 두 설화를 한 장의 면 직물 안에서 만나게 했다.",
-    "need": "프린트는 표면에 얹는 일이고 직조는 구조를 짜는 일이다. 같은 모티프를 직조로 옮기면 무엇이 남고 무엇이 사라지는지 확인하고 싶었다.",
+    "cat": "직조 텍스타일 · 미국 교환학생 수업 · 개인 · 2025.08~12",
+    "headline": "구미호와 달토끼, 두 한국 설화를 하나의 직물 컬렉션으로 엮었다.",
+    "need": "프린트 텍스타일과 같은 학기에 진행한 프로젝트로, 같은 이유로 한국 모티프를 골랐다. 한국을 잘 모르는 미국 교실에서 한국 설화를 낯설지 않고 끌리는 직물로 풀어야 했다.",
     "action": [
-     "한국 설화의 구미호와 달토끼를 주 모티프로 잡고 'Moonlit Thread'라는 이름으로 묶음",
-     "모란과 잎을 배경 층으로 깔고 달토끼를 상감 메달리온 위에 올려 시선의 중심을 만듦",
-     "면사로 직조해 색과 조직의 조합에 따라 같은 모티프가 어떻게 다르게 읽히는지 비교"
+     "한국 설화의 구미호와 달토끼를 주 모티프로, 모란과 잎을 배경으로 잡고 'Moonlit Thread'라는 이름으로 묶음",
+     "Procreate로 모티프를 그리고 포토샵으로 다듬은 뒤, NedGraphics로 가져와 네 가지 패턴으로 전개 (하나는 엔지니어드 패턴)",
+     "DesignScope Victor에 적용해 직물로 짰을 때의 모습을 확인하고, 다른 컬러웨이도 전개",
+     "포토샵 텍스처 매핑으로 영화 속 의상과 파우치에 입혀 봄"
     ],
     "note": "미국 교환학생 수업에서 진행한 프린트, 직조, 니트 세 프로젝트는 각각 다른 과제지만, 모두 한국 모티프를 엮는 하나의 흐름으로 이어진다."
    },
    "en": {
     "title": "Woven Textile Design (Moonlit Thread)",
-    "cat": "Woven Design · Solo · 2025.08~12",
-    "headline": "Two Korean folk tales, the nine-tailed fox and the moon rabbit, brought together in one woven cotton cloth.",
-    "need": "Print sits on a surface; weaving builds the structure. I wanted to see what survives when the same motif is moved into cloth.",
+    "cat": "Woven Design · Exchange in the US · Solo · 2025.08~12",
+    "headline": "Two Korean folk tales, the nine-tailed fox and the moon rabbit, woven into one textile collection.",
+    "need": "Made in the same exchange semester as the printed textiles, with Korean motifs for the same reason: in a US classroom that knew little about Korea, Korean folklore had to become cloth that felt familiar and appealing, not foreign.",
     "action": [
-     "Took the fox and the moon rabbit as the two motifs and tied them together as 'Moonlit Thread'",
-     "Layered peonies and foliage behind, with the rabbit set on an inlay medallion as the focal point",
-     "Wove in cotton to compare how colour and weave structure change the reading of the same motif"
+     "Took the fox and the moon rabbit from Korean folk tales as the motifs, with peonies and leaves behind them, and tied them together as 'Moonlit Thread'",
+     "Drew the motifs in Procreate, refined them in Photoshop, then brought them into NedGraphics and built four patterns (one of them engineered)",
+     "Ran them through DesignScope Victor to see them as woven cloth, and added another colourway",
+     "Mapped the patterns onto film costumes and a pouch in Photoshop"
     ],
     "note": "Printed, woven and knit were separate projects in my exchange semester in the US, carried by one thread: Korean motifs."
    }
   },
   "title": "Woven Textile Design",
-  "desc": "Korean folklore, the nine-tailed fox and the moon rabbit, reinterpreted as woven cotton textiles."
+  "desc": "Korean folklore, the nine-tailed fox and the moon rabbit, worked into a four-pattern woven collection, made on exchange in the US."
  },
  {
   "slug": "textile-knit",
@@ -3152,11 +3208,12 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Knit Textile Design 〈Celadon Reverie〉",
-    "cat": "니트 텍스타일 · 개인 · 2025.08~12",
+    "cat": "니트 텍스타일 · 미국 교환학생 수업 · 개인 · 2025.08~12",
     "headline": "고려청자의 상감 무늬를 편성 조직으로 다시 그렸다.",
     "need": "청자의 상감은 표면을 파고들어 간 선이다. 실을 엮어 만드는 편성에서 그 깊이를 어떻게 만들 것인지가 문제였다.",
     "action": [
      "고려청자의 학 모티프와 원형 상감 메달리온을 편성 도안으로 재구성",
+     "Procreate로 모티프를 그리고 포토샵으로 다듬은 뒤, NedGraphics로 가져와 패턴 제작",
      "EasyKnit으로 조직과 배색을 설계하고 도안을 실물 편성으로 전개",
      "프린트·직조와 모티프 계열을 공유해 세 기법의 차이를 한 시리즈 안에서 비교 가능하게 구성"
     ],
@@ -3164,11 +3221,12 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Knit Textile Design (Celadon Reverie)",
-    "cat": "Knit Design · Solo · 2025.08~12",
+    "cat": "Knit Design · Exchange in the US · Solo · 2025.08~12",
     "headline": "Goryeo celadon inlay, redrawn as knit structure.",
     "need": "Celadon inlay is a line cut into the surface. The question was how to give that depth in a structure made by looping yarn.",
     "action": [
      "Rebuilt the celadon crane motif and circular inlay medallions as knit charts",
+     "Drew the motifs in Procreate, refined them in Photoshop, then brought them into NedGraphics to build the patterns",
      "Designed structure and colourway in EasyKnit and took the charts through to knitted samples",
      "Shared the motif family with the printed and woven pieces so the three techniques could be compared in one series"
     ],
@@ -3520,7 +3578,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "인테리어 텍스타일: 방 하나의 기획부터 제작까지",
-    "cat": "인테리어 텍스타일 · 4인 팀 · FTD 374, 2026 봄",
+    "cat": "인테리어 텍스타일 · 4인 팀 · 미국 교환학생 · FTD 374, 2026 봄",
     "headline": "취향이 아니라 시장 근거로 팔레트를 정했다. 트렌드 리서치와 브랜드 3사 분석이 먼저였다.",
     "need": "맥시멀리즘 인테리어 텍스타일 컬렉션을 만들되, \"많이 넣었다\"가 아니라 \"의도적으로 쌓았다\"로 읽혀야 했다. 근거 없이 화려하면 그냥 산만해진다.",
     "action": [
@@ -3540,7 +3598,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Interior Textiles: One Room from Concept to Making",
-    "cat": "Interior Textiles · Team of 4 · FTD 374, Spring 2026",
+    "cat": "Interior Textiles · Team of 4 · Exchange in the US · FTD 374, Spring 2026",
     "headline": "The palette was decided on market evidence, not taste: trend research and three brand studies came first.",
     "need": "A maximalist interior textile collection had to read as deliberate layering rather than simply “a lot.” Without a reason behind it, bold just becomes noise.",
     "action": [
