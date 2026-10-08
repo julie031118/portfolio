@@ -2274,7 +2274,7 @@ window.PROJECTS = [
      {
       "src": "/images/projects/engineered-surfaces/07.jpg",
       "cap": {
-       "ko": "직접 만든 노벨티 얀",
+       "ko": "직접 만든 팬시 얀",
        "en": "Novelty yarns I spun"
       }
      },
@@ -2426,7 +2426,7 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "섬유에서 원단까지",
+    "title": "직접 만든 실에서 원단까지",
     "cat": "텍스타일 · NC State · 미국 교환학생 · 2026.01~04",
     "headline": "나만의 실을 spinning과 plying으로 직접 만들고, 기존 실과 섞어 짠 원단으로 미니스커트를 만들었다.",
     "need": "실을 만드는 법(염색, spinning, plying)과 그 실로 천을 만드는 법(뜨개질, 위빙, 펀치니들)을 배우고, 이를 적용해 직접 작품을 만드는 프로젝트였다.",
@@ -2439,7 +2439,7 @@ window.PROJECTS = [
     ]
    },
    "en": {
-    "title": "From Fibre to Fabric",
+    "title": "From Handmade Yarn to Fabric",
     "cat": "Textile Design · NC State · Exchange in the US · 2026.01~04",
     "headline": "I spun and plied yarns of my own, wove fabrics mixing them with bought yarn, and made a mini skirt from those fabrics.",
     "need": "The project was to learn how yarn is made (dyeing, spinning, plying) and how yarn becomes cloth (knitting, weaving, punch needle), then put it all to use in my own pieces.",
@@ -2452,7 +2452,7 @@ window.PROJECTS = [
     ]
    }
   },
-  "title": "From Fibre to Fabric",
+  "title": "From Handmade Yarn to Fabric",
   "desc": "From raw fibre to fabric: hand-spun and dyed novelty yarns, a woven mini skirt, a punch needle piece with holographic organza, and devoré, pleated and laser-cut surfaces."
  },
  {
