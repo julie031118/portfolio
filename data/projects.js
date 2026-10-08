@@ -1848,38 +1848,28 @@ window.PROJECTS = [
   "thumb": "/images/14_music_video_teaser.jpg",
   "images": [
    "/images/projects/sub-motion/mv01.jpg",
-   "/images/projects/sub-motion/mv02.jpg",
-   "/images/projects/sub-motion/ty01.jpg",
-   "/images/projects/sub-motion/ty02.jpg",
-   "/images/projects/sub-motion/ty03.jpg",
-   "/images/projects/sub-motion/ty04.jpg"
+   "/images/projects/sub-motion/mv02.jpg"
   ],
   "role": {
-   "ko": "모션그래픽 · 편집 (2~4인 팀, 파트 분담 · '후라이의 꿈' 조장)",
-   "en": "Motion graphics and editing, teams of 2 to 4 splitting the work by part; team lead on \"Fry's Dream\""
+   "ko": "기획 · 모션그래픽 (3인 협업, 중간 파트 담당)",
+   "en": "Planning and motion graphics (team of 3, I made the middle part)"
   },
   "spotify": null,
   "spotifyNote": null,
   "video": "https://www.youtube.com/embed/5P_bMBgHbfE",
-  "video2": "https://drive.google.com/file/d/1pM8zbooE5pAAg7apwDPqp-r-T_QK4Q7H/preview",
-  "video3": "https://www.youtube.com/embed/9abbAMsJ7vo",
   "filmLabels": {
    "ko": [
-    "'Toxic Till the End' 티저 (4인 팀)",
-    "'APT' 타이포그래피 (2인 팀)",
-    "'후라이의 꿈' 캐릭터 애니메이션 (4인 팀, 조장)"
+    "'Toxic Till the End' 뮤직비디오 티저 (3인 협업)"
    ],
    "en": [
-    "'Toxic Till the End' teaser (team of 4)",
-    "'APT' typography (team of 2)",
-    "'Fry's Dream' character animation (team of 4, team lead)"
+    "'Toxic Till the End' music video teaser (team of 3)"
    ]
   },
   "sections": [
    {
     "title": {
-     "ko": "'Toxic Till the End' 티저",
-     "en": "'TOXIC TILL THE END' TEASER"
+     "ko": "'Toxic Till the End' 뮤직비디오 티저",
+     "en": "'TOXIC TILL THE END' MUSIC VIDEO TEASER"
     },
     "images": [
      {
@@ -1890,44 +1880,8 @@ window.PROJECTS = [
      }
     ],
     "note": {
-     "ko": "필름 릴 속 장면이 살아나는 구성 · 4인 팀",
-     "en": "Scenes coming alive in a film roll · team of 4"
-    }
-   },
-   {
-    "title": {
-     "ko": "'후라이의 꿈' 손그림 애니메이션",
-     "en": "FRY'S DREAM ANIMATION"
-    },
-    "images": [
-     {
-      "src": "/images/projects/sub-motion/ty01.jpg"
-     },
-     {
-      "src": "/images/projects/sub-motion/ty02.jpg"
-     }
-    ],
-    "note": {
-     "ko": "손으로 그린 캐릭터 · 4인 팀 조장",
-     "en": "Hand drawn characters · team of 4, as lead"
-    }
-   },
-   {
-    "title": {
-     "ko": "'APT' 타이포그래피 모션",
-     "en": "'APT' TYPE IN MOTION"
-    },
-    "images": [
-     {
-      "src": "/images/projects/sub-motion/ty03.jpg"
-     },
-     {
-      "src": "/images/projects/sub-motion/ty04.jpg"
-     }
-    ],
-    "note": {
-     "ko": "지퍼 형태 글자와 하트 · 2인 팀",
-     "en": "Zipper shaped letters and hearts · team of 2"
+     "ko": "3인 협업 · 중간 파트 담당",
+     "en": "Team of 3 · I made the middle part"
     }
    }
   ],
@@ -1935,46 +1889,42 @@ window.PROJECTS = [
    "ko": {
     "title": "모션그래픽",
     "cat": "모션그래픽 · After Effects · SUB 학생방송국",
-    "headline": "여럿이 파트를 나눠 만들어도 한 편처럼 보이게, 그리고 흔하지 않게.",
+    "headline": "셋이 나눠 만든 뮤직비디오 티저를 한 편처럼 보이게.",
     "metrics": [],
-    "need": "세 편 모두 2~4인 팀이 같은 모션 작업을 파트별로 나눠 만드는 구조였다. 나눠 만들수록 전체 영상의 일관성이 깨지기 쉬웠고, 아티스트 음악 기반 영상은 자칫 흔해 보이기 쉬웠다.",
+    "need": "로제 'Toxic Till the End' 뮤직비디오 티저를 3명이 3등분해 나눠 만들었다. 나눠 만들수록 전체 영상의 일관성이 깨지기 쉬웠다.",
     "action": [
-     "'Toxic Till the End'(로제): 뮤직비디오가 하나의 서사로 흐른다는 점에 맞춰, 필름 릴 속 장면들이 살아나는 구성으로 티저를 설계. 원본의 시그니처 컬러와 체스판 이미지를 가져와 톤과 상징을 유지 (4인 팀)",
-     "'APT': 지퍼 형태의 타이포그래피와 하트 이미지로 곡의 리듬을 글자 자체의 움직임으로 처리 (2인 팀)",
-     "'후라이의 꿈': 손으로 그린 캐릭터 애니메이션으로, 곡의 따뜻한 정서를 정교한 그래픽 대신 손맛으로 옮김 (4인 팀, 조장). 파트를 나누기 전에 에셋을 미리 정해 전체가 한 편으로 이어지도록 리드"
+     "기획은 셋이 함께하고, 영상을 3등분해 그중 중간 부분을 맡음",
+     "처음부터 색상 팔레트를 정해 공유하고, 그 팔레트로 각자 장면을 그림",
+     "After Effects로 모션을 넣기 전에 서로 그린 그림을 보며 그림체를 맞춤",
+     "작업 중간중간 진행 상황을 공유하고 서로 고쳐 줌",
+     "내가 맡은 중간 부분에는 영화 필름이 지나가는 듯한 모션을 넣음"
     ],
-    "result": null,
-    "detail": {
-     "title": "팀 안에서의 역할",
-     "body": [
-      "세 편 모두 팀원 전원이 모션 작업을 했고, 같은 일을 파트별로 나눠 맡는 방식이었다.",
-      "나눠 만든 파트가 붙었을 때 한 편처럼 보여야 해서, 조장을 맡은 '후라이의 꿈'에서는 작업을 나누기 전에 에셋을 먼저 정해 두었다."
-     ]
-    }
+    "result": [
+     "내가 만든 필름이 지나가는 모션이 티저 속 로제의 목소리 대사와 잘 어울린다는 좋은 평가를 받음",
+     "처음부터 색상 팔레트를 통일하고 중간중간 공유하며 서로 고친 덕분에, 셋이 나눠 만든 영상이 전체적으로 일관성 있게 이어짐"
+    ]
    },
    "en": {
     "title": "Motion Graphics",
     "cat": "Motion Graphics · After Effects · SNU Student Broadcasting",
-    "headline": "Split between several people, but reading as one piece, and not like every other one.",
+    "headline": "A music video teaser split three ways, made to read as one piece.",
     "metrics": [],
-    "need": "All three were made by teams of two to four splitting the same motion work by part. The more it is split, the easier the whole loses consistency, and music-led pieces for artists easily end up looking like everyone else’s.",
+    "need": "Three of us split Rosé's 'Toxic Till the End' music video teaser into three parts. The more it is split, the easier the whole loses consistency.",
     "action": [
-     "'Toxic Till the End' (Rosé): the music video runs as a single narrative, so the teaser was composed as scenes coming alive inside a roll of film, carrying over the original's signature palette and chessboard imagery (team of 4)",
-     "'APT': zipper-formed typography and heart imagery, letting the letters themselves carry the rhythm (team of 2)",
-     "\"Fry's Dream\": hand-drawn character animation, moving the track's warmth through hand feel rather than polish (team of 4, team lead); fixed the assets before the work was split, so the parts would join as one piece"
+     "Planned it together, cut the teaser in three, and took the middle part",
+     "Set and shared one colour palette from the start, and each drew our scenes with it",
+     "Matched our drawing styles before adding motion in After Effects",
+     "Shared progress along the way and revised each other's parts",
+     "In my middle part, added motion that feels like a film strip running past"
     ],
-    "result": null,
-    "detail": {
-     "title": "The role inside a team",
-     "body": [
-      "Everyone on each team did motion work; the same job was divided by part.",
-      "The parts had to read as one piece once joined, so on \"Fry's Dream\", where I was team lead, the assets were fixed before the work was split."
-     ]
-    }
+    "result": [
+     "The film-strip motion I made was well received, as it suited Rosé's spoken lines in the teaser",
+     "With one palette from the start and sharing and revising along the way, the three parts came together as one consistent film"
+    ]
    }
   },
   "title": "Motion Graphics",
-  "desc": "아티스트의 곡을 티저와 타이포그래피 영상으로 옮긴 세 편의 작업. 'Toxic Till the End'(로제), 'APT', '후라이의 꿈'."
+  "desc": "Rosé's 'Toxic Till the End' music video teaser, split three ways; I made the middle part in After Effects."
  },
  {
   "slug": "senior-fit",
@@ -2441,6 +2391,12 @@ window.PROJECTS = [
      "실의 형태에 따라 원단이 떨어지는 느낌과 촘촘함이 어떻게 달라지는지 편성과 직조로 비교",
      "번아웃, 열로 주름을 고정하는 플리츠, 레이저 커팅으로 입체적인 표면을 만듦",
      "펀치니들 작품 위에 홀로그램 오간자를 원형으로 덧대 바느질해, 비눗방울의 무지갯빛 반짝임을 표현"
+    ],
+    "result": [
+     "다른 사람들은 모두 일반적인 펀치니들 방식으로 작업했는데, 머리카락을 표현하려고 앞머리 부분은 실을 다르게 써서 참신하다는 평을 받음",
+     "펀치니들 작품의 실 색 조합도 좋다는 평을 받음",
+     "직조 샘플은 여러 굵기의 실로 독특한 표면을 만든 점이 인상적이라는 평을 받음",
+     "특히 직조기로 짠 튤립처럼 보이는 패턴의 샘플은 색 조합과 패턴 구성이 좋다는 칭찬을 받음 (의도한 그대로 나온 샘플)"
     ]
    },
    "en": {
@@ -2454,6 +2410,12 @@ window.PROJECTS = [
      "Compared through knitting and weaving how the shape of the yarn changes the way the cloth falls and how dense it is",
      "Built three-dimensional surfaces with burn-out, heat-set pleats and laser cutting",
      "Stitched a circle of sheer holographic organza over the punch needle piece to catch the iridescent shimmer of soap bubbles"
+    ],
+    "result": [
+     "Everyone else used the standard punch needle method; I used the yarn differently on the fringe to suggest hair, which was called fresh",
+     "The yarn colour combinations in the punch needle piece were also praised",
+     "The woven samples were found striking for the unusual surfaces made with yarns of many thicknesses",
+     "The tulip-like sample woven on the loom was singled out for its colour combination and pattern, and it came out just as I intended"
     ]
    }
   },
@@ -2724,10 +2686,15 @@ window.PROJECTS = [
      "title": "왜 비보잉이었나",
      "body": [
       "한국을 잘 모르는 사람들이 한국 모티프를 어떻게 읽는지 직접 확인할 수 있는 기회였고, 처음 보는 사람들 앞에 한국의 미감을 꺼내 놓는 자리이기도 했다.",
-      "하지만 전통 모티프만 늘어놓으면 재미가 없을 것 같았다. 한국의 전통과 지금의 서울을 함께 담고 싶었고, 도시의 역동적인 스트리트 댄스를 떠올렸다. 그래서 비보잉 실루엣을 기와, 호랑이, 무궁화, 전통춤 모티프와 한 화면에 놓았다. 교수님과 동기들에게서 힙한 에너지 안에 전통을 세련되게 담았다는 평을 받았다."
+      "하지만 전통 모티프만 늘어놓으면 재미가 없을 것 같았다. 한국의 전통과 지금의 서울을 함께 담고 싶었고, 도시의 역동적인 스트리트 댄스를 떠올렸다. 그래서 비보잉 실루엣을 기와, 호랑이, 무궁화, 전통춤 모티프와 한 화면에 놓았다."
      ]
     },
-    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
+    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
+    "result": [
+     "교수님과 동기들에게서 비보잉 실루엣이 들어간 패턴이 역동적이면서도 전통 모티프가 잘 드러난다는 평을 받음",
+     "텍스처 매핑 아이디어가 참신하다는 평을 받음",
+     "피드백을 받고 컬러웨이를 더 과감하게 바꾸고, 다른 패턴에도 초록을 넣고 색 수를 줄여 컬렉션을 하나로 묶음"
+    ]
    },
    "en": {
     "title": "Printed Textile Design (Urban Botanica)",
@@ -2745,10 +2712,15 @@ window.PROJECTS = [
      "title": "Why breakdance",
      "body": [
       "It was a chance to see first hand how people who barely know Korea read Korean motifs, and to put Korean aesthetics in front of people meeting them for the first time.",
-      "Traditional motifs on their own felt flat, though. I wanted Korean tradition and today’s Seoul in the same frame, and thought of the energy of street dance. So I put breakdancer silhouettes in the same prints as roof tiles, tigers, mugunghwa and traditional dance. My professor and classmates said it carried tradition with a sharp, hip energy."
+      "Traditional motifs on their own felt flat, though. I wanted Korean tradition and today’s Seoul in the same frame, and thought of the energy of street dance. So I put breakdancer silhouettes in the same prints as roof tiles, tigers, mugunghwa and traditional dance."
      ]
     },
-    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
+    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
+    "result": [
+     "Professors and classmates said the patterns with breakdancer silhouettes felt dynamic while the traditional motifs still came through clearly",
+     "The texture mapping ideas were called fresh",
+     "After feedback, made the colourway bolder, added green to the other patterns and cut the number of colours so the collection held together"
+    ]
    }
   },
   "title": "Printed Textile Design",
@@ -3005,7 +2977,14 @@ window.PROJECTS = [
      "DesignScope Victor에 적용해 직물로 짰을 때의 모습을 확인하고, 다른 컬러웨이도 전개",
      "포토샵 텍스처 매핑으로 영화 속 의상과 파우치에 입혀 봄"
     ],
-    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
+    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
+    "result": [
+     "엔지니어드 패턴이 구조를 잘 반영해 디자인됐고, 모티프 크기가 다양하면서도 균형 있게 어우러진다는 평을 받음",
+     "구미호 꼬리에서 잎이 퍼져 나가는 패턴이 참신하다는 평을 받았고, 구미호라는 한국 설화 속 동물을 이 작업으로 처음 알게 됐다며 재미있고 잘 표현됐다는 반응을 얻음",
+     "텍스처 매핑 아이디어가 참신하다는 평을 받음",
+     "자카드 직물이 텍스처 매핑에서 잘 안 보인다는 피드백을 받고, 더 두꺼운 소재로 바꿔 다시 매핑",
+     "선과 외곽선을 두껍게 하고 모티프 크기를 키워 더 잘 보이게 수정"
+    ]
    },
    "en": {
     "title": "Woven Textile Design (Moonlit Thread)",
@@ -3018,7 +2997,14 @@ window.PROJECTS = [
      "Ran them through DesignScope Victor to see them as woven cloth, and added another colourway",
      "Mapped the patterns onto film costumes and a pouch in Photoshop"
     ],
-    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
+    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
+    "result": [
+     "The engineered pattern was said to reflect the structure well, with motifs in varied sizes that stayed balanced",
+     "The leaves spreading from the gumiho's tail were called fresh, and people meeting the gumiho of Korean folklore for the first time found it fun and well drawn",
+     "The texture mapping ideas were called fresh",
+     "After feedback that the jacquard fabric did not read clearly in the texture mapping, switched to a thicker fabric and mapped it again",
+     "Thickened lines and outlines and enlarged the motifs so they read better"
+    ]
    }
   },
   "title": "Woven Textile Design",
@@ -3223,7 +3209,13 @@ window.PROJECTS = [
      "4가지 색만으로도 학의 날개가 아이보리색에서 점점 진해지는 그라데이션처럼 보이고 색이 더 섞여 보이도록, NedGraphics에서 여러 색을 조합해 하나의 모티프로 만들어 사용",
      "가디건 도식화 이미지는 포토샵과 일러스트레이터로, 대표 이미지는 AI로 제작"
     ],
-    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
+    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
+    "result": [
+     "4가지 색 제한 안에서 색을 조합해 새 모티프로 만든 방식이 좋고, 그 덕에 학의 날개가 잘 표현됐다는 평을 받음",
+     "네 가지 편성 패턴 중 두 번째 패턴의 배경이 고려청자와 컬렉션의 분위기를 잘 살린다는 평을 받음",
+     "텍스처 매핑 아이디어가 참신하다는 평을 받음",
+     "피드백을 받고 디자인끼리 통일감을 맞춤: 붉은색과 아이보리 비율 조정, 두 디자인이 겹쳐 보이게 하던 학 다리를 빼고 청자 모티프 추가, 붉은색이 과한 스트라이프는 원·학·청자 모티프로 다시 구성"
+    ]
    },
    "en": {
     "title": "Knit Textile Design (Celadon Reverie)",
@@ -3237,7 +3229,13 @@ window.PROJECTS = [
      "With only four colours, combined several of them into single motifs in NedGraphics, so the crane wings could shade from ivory to darker like a gradient and the colours would blend more",
      "Made the cardigan flats in Photoshop and Illustrator, and the cover image with AI"
     ],
-    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
+    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
+    "result": [
+     "Combining the four set colours into new motifs was praised, and with it the crane wings came out well",
+     "The background of the second of the four knit patterns was said to bring out the mood of Goryeo celadon and of the collection",
+     "The texture mapping ideas were called fresh",
+     "After feedback, pulled the designs together: rebalanced red and ivory, removed the crane legs that made two designs overlap and added a celadon motif, and rebuilt the red-heavy stripe with circles, cranes and celadon motifs"
+    ]
    }
   },
   "title": "Knit Textile Design",
@@ -3598,7 +3596,8 @@ window.PROJECTS = [
     ],
     "result": [
      "FTD 374 프로젝트 평가 97.5 / 100",
-     "교수는 램프 갓 플리츠와 청키 블랭킷을 돋보이는 요소로 꼽았고, 업계 멘토도 두 가지를 호평"
+     "교수는 램프 갓 플리츠와 청키 블랭킷을 돋보이는 요소로 꼽았고, 업계 멘토도 두 가지를 호평",
+     "업계 멘토는 패턴 16종이 창의적이고 색이 잘 어울린다고 평가. 중간 리뷰에서 패턴이 많아 정신없어 보일 수 있다는 점과 모티프 크기가 다 비슷하니 다양하게 하라는 피드백을 받았고, 기말 리뷰에서 둘 다 잘 개선됐다는 평을 받음"
     ],
     "detail": {
      "title": "팀 구성",
@@ -3623,7 +3622,8 @@ window.PROJECTS = [
     ],
     "result": [
      "FTD 374 project grade 97.5 / 100",
-     "The professor named the lamp shade pleating and the chunky blanket as standout additions, and the industry mentor praised both"
+     "The professor named the lamp shade pleating and the chunky blanket as standout additions, and the industry mentor praised both",
+     "The industry mentor found the 16 patterns creative and the colours well matched. At the mid review the mentor warned that so many patterns could look busy and that the motifs were all much the same size; at the final review the mentor said both had been fixed well"
     ],
     "detail": {
      "title": "Team",
@@ -3669,8 +3669,8 @@ window.PROJECTS = [
      {
       "src": "/images/projects/korean-costume/hb02.jpg",
       "cap": {
-       "ko": "마네킹 피팅. 오른쪽 마네킹의 빨간 허리띠 부분은 마무리 전",
-       "en": "On the mannequins. The red waistband on the right one is not finished yet"
+       "ko": "제작 과정 중 마네킹 피팅. 오른쪽 마네킹의 빨간 허리띠 부분은 마무리 전",
+       "en": "A fitting on the mannequins while making. The red waistband on the right one is not finished yet"
       }
      },
      {
@@ -3699,7 +3699,7 @@ window.PROJECTS = [
    "ko": {
     "title": "한복 디자인과 제작",
     "cat": "한복 · 전통 구성 · 개인 · 2024.03~06",
-    "headline": "전통 한복의 형태는 거의 그대로 두고, 내 사이즈에 맞춰 디자인해 직접 만들었다.",
+    "headline": "전통 한복의 아름다움을 살려, 내 사이즈에 맞춰 디자인하고 직접 만들었다.",
     "need": "한복 구성을 배우며, 서양 의복과 다른 한복만의 패턴 제작과 재단 방식에 끌렸다. 전통 요소는 그대로 두고 아주 살짝만 현대적인 느낌을 더한 한복을 만들고 싶었다.",
     "action": [
      "전통 한복의 형태를 기본으로, 내 사이즈에 맞춰 저고리와 치마를 디자인",
@@ -3711,12 +3711,15 @@ window.PROJECTS = [
      "body": [
       "마네킹 사진이 착용 사진보다 부해 보이는 건, 내 사이즈에 맞춰 디자인해 옷이 마네킹보다 작기 때문이다."
      ]
-    }
+    },
+    "result": [
+     "한복의 실루엣과 비치는 오간자의 아름다움을 살리고, 연분홍 오간자 치마와 붉은 치마허리, 꽃무늬 저고리로 색까지 맞춘 한복을 완성"
+    ]
    },
    "en": {
     "title": "Hanbok Design and Making",
     "cat": "Hanbok · Traditional Construction · Solo · 2024.03~06",
-    "headline": "I kept the traditional hanbok form almost as it is, designed it to my own size and made it myself.",
+    "headline": "A hanbok that keeps the beauty of the traditional form, designed to my own size and made myself.",
     "need": "Learning how hanbok is constructed, I was drawn to its pattern-making and cutting, which differ from Western garment-making. I wanted a hanbok that keeps the traditional elements, with only a subtle contemporary touch.",
     "action": [
      "Designed the jeogori and skirt to my own size, starting from the traditional hanbok form",
@@ -3728,11 +3731,14 @@ window.PROJECTS = [
      "body": [
       "It looks fuller on the mannequin than when I wear it: I designed it to my own size, so it is smaller than the mannequin."
      ]
-    }
+    },
+    "result": [
+     "Finished a hanbok that brings out its silhouette and the sheer beauty of organza, with a pale pink organza skirt, a red waistband and a floral jeogori chosen to go together"
+    ]
    }
   },
   "title": "Hanbok Design and Making",
-  "desc": "A hanbok I designed to my own size and made myself, keeping the traditional form almost as it is."
+  "desc": "A hanbok I designed to my own size and made myself, keeping the beauty of the traditional form."
  },
  {
   "slug": "seoul-metro",

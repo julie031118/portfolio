@@ -155,7 +155,7 @@ window.SITE = {
       items: [
         { date: '2024.07', until: '2025.06', major: true, link: 'sub-motion',
           title: { ko: 'SUB 서울대학교 학생방송국: 기술팀 모션그래픽 디자이너', en: 'SUB, SNU Student Broadcasting: Motion Graphics, Technical Team' },
-          desc: { ko: 'After Effects로 타이포그래피 영상과 뮤비 티저를 제작. \'apt (ROSÉ)\' 2인, \'후라이의 꿈\' 4인(조장), \'Toxic till the end\' 4인 공동작업에서 모션그래픽을 파트별로 나눠 작업. 2024.07~2025.06', en: 'Built typography films and music-video teasers in After Effects; split the motion graphics by part on \'apt (ROSÉ)\' (team of 2), \'Fry\'s Dream\' (team of 4, team lead) and \'Toxic till the end\' (team of 4). Jul 2024 to Jun 2025' } },
+          desc: { ko: 'After Effects로 로제 \'Toxic Till the End\' 뮤직비디오 티저를 3인이 나눠 만들고, 그중 중간 파트의 모션그래픽을 맡음. 2024.07~2025.06', en: 'Made the motion graphics for Rosé\'s \'Toxic Till the End\' music video teaser in After Effects with two others, splitting it in three; I made the middle part. Jul 2024 to Jun 2025' } },
         { date: '2024.09', until: '2024.12', major: true, link: 'senior-fit',
           title: { ko: '관악노인종합복지관 × 서울대 협업 패션쇼: 시니어핏', en: 'Gwanak Senior Welfare Center × SNU Fashion Show: Senior Fit' },
           desc: { ko: '어르신 한 분을 전담해 수업 밖에서까지 여러 차례 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 코트를 제작. 완성작으로 시니어 런웨이까지 진행했고, 대학신문 인터뷰 대상자로 선정. 2024.09~12', en: 'Paired one-to-one with a senior model, interviewed him repeatedly beyond class hours and built a coat from his taste and body. Shown on the senior runway; interviewed by The SNU Newspaper. Sep to Dec 2024' } },
