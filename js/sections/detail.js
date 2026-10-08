@@ -345,6 +345,7 @@ function renderProject(detail, project, lang) {
     block.className = 'detail-story-block detail-related';
     const heading = document.createElement('h3'); heading.textContent = SITE.detailUi.related || 'SEE ALSO';
     const body = document.createElement('div');
+    if (copy.relatedNote) { const lead = document.createElement('p'); lead.className = 'detail-related-lead'; lead.textContent = copy.relatedNote; body.append(lead); } /* a line about the whole series, above the links (2026-10-08) */
     related.forEach((item) => {
       const noteText = translated(item.note, lang);
       if (noteText) { const note = document.createElement('p'); note.textContent = noteText; body.append(note); }

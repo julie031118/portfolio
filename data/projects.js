@@ -2205,9 +2205,10 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026.01~04",
-  "thumb": "/images/projects/engineered-surfaces/02.jpg",
+  "thumb": "/images/projects/engineered-surfaces/punch-01-hero.jpg",
   "images": [
-   "/images/projects/engineered-surfaces/02.jpg",
+   "/images/projects/engineered-surfaces/punch-01-hero.jpg",
+   "/images/projects/engineered-surfaces/punch-01.jpg",
    "/images/projects/engineered-surfaces/skirt-01.jpg",
    "/images/projects/engineered-surfaces/skirt-02.jpg",
    "/images/projects/engineered-surfaces/07.jpg",
@@ -2246,6 +2247,7 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "cardThumb": "/images/projects/engineered-surfaces/punch-01.jpg",
   "sections": [
    {
     "title": {
@@ -2254,6 +2256,9 @@ window.PROJECTS = [
     },
     "images": [
      {
+      "src": "/images/projects/engineered-surfaces/punch-01.jpg"
+     },
+     {
       "src": "/images/projects/engineered-surfaces/skirt-01.jpg"
      },
      {
@@ -2261,8 +2266,8 @@ window.PROJECTS = [
      }
     ],
     "note": {
-     "ko": "직조 원단으로 만든 미니스커트",
-     "en": "The mini skirt made from the woven fabrics"
+     "ko": "펀치니들 작품과 직조 원단으로 만든 미니스커트",
+     "en": "The punch needle piece, and the mini skirt made from the woven fabrics"
     }
    },
    {
@@ -2715,14 +2720,14 @@ window.PROJECTS = [
      "통기성, 지속가능성, 자연스러운 부드러움이 좋은 면을 바탕으로 설계해, 실제 원단 프린트까지 진행",
      "포토샵 텍스처 매핑은 기억에 남도록 사람 옷에 더해 반려동물 옷에도 입혀 봄"
     ],
-    "note": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
     "detail": {
      "title": "왜 비보잉이었나",
      "body": [
       "한국을 잘 모르는 사람들이 한국 모티프를 어떻게 읽는지 직접 확인할 수 있는 기회였고, 처음 보는 사람들 앞에 한국의 미감을 꺼내 놓는 자리이기도 했다.",
       "하지만 전통 모티프만 늘어놓으면 재미가 없을 것 같았다. 한국의 전통과 지금의 서울을 함께 담고 싶었고, 도시의 역동적인 스트리트 댄스를 떠올렸다. 그래서 비보잉 실루엣을 기와, 호랑이, 무궁화, 전통춤 모티프와 한 화면에 놓았다. 교수님과 동기들에게서 힙한 에너지 안에 전통을 세련되게 담았다는 평을 받았다."
      ]
-    }
+    },
+    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
    },
    "en": {
     "title": "Printed Textile Design (Urban Botanica)",
@@ -2736,14 +2741,14 @@ window.PROJECTS = [
      "Designed for cotton, for its breathability, sustainability and natural softness, and printed it on real fabric",
      "For the Photoshop texture mapping I wanted something people would remember, so besides streetwear I put the prints on pet clothes"
     ],
-    "note": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
     "detail": {
      "title": "Why breakdance",
      "body": [
       "It was a chance to see first hand how people who barely know Korea read Korean motifs, and to put Korean aesthetics in front of people meeting them for the first time.",
       "Traditional motifs on their own felt flat, though. I wanted Korean tradition and today’s Seoul in the same frame, and thought of the energy of street dance. So I put breakdancer silhouettes in the same prints as roof tiles, tigers, mugunghwa and traditional dance. My professor and classmates said it carried tradition with a sharp, hip energy."
      ]
-    }
+    },
+    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
    }
   },
   "title": "Printed Textile Design",
@@ -2824,7 +2829,7 @@ window.PROJECTS = [
      }
     ],
     "note": {
-     "ko": "모란 위 달토끼, 덩굴 속 구미호, 모란 스트라이프, 메달리온: 하나의 컬렉션으로 맞춘 네 패턴",
+     "ko": "모란 위 달토끼, 덩굴 속 구미호, 모란 스트라이프, 원형 문양: 하나의 컬렉션으로 맞춘 네 패턴",
      "en": "Rabbit among peonies, fox in the vines, peony stripe, medallion: four patterns tuned into one collection"
     }
    },
@@ -2907,13 +2912,13 @@ window.PROJECTS = [
      {
       "src": "/images/projects/textile-woven/ad06.jpg",
       "cap": {
-       "ko": "4 구미호와 달토끼 메달리온: 엔지니어드 패턴",
+       "ko": "4 구미호와 달토끼 원형 문양: 엔지니어드 패턴",
        "en": "4 Fox and rabbit medallion: engineered"
       }
      }
     ],
     "note": {
-     "ko": "패턴과 NedGraphics 리피트 설정. 메달리온은 엔지니어드 패턴이라 리피트가 없음",
+     "ko": "패턴과 NedGraphics 리피트 설정. 원형 문양은 엔지니어드 패턴이라 리피트가 없음",
      "en": "Each pattern with its NedGraphics repeat; the medallion is an engineered pattern, so it has no repeat"
     }
    },
@@ -3000,7 +3005,7 @@ window.PROJECTS = [
      "DesignScope Victor에 적용해 직물로 짰을 때의 모습을 확인하고, 다른 컬러웨이도 전개",
      "포토샵 텍스처 매핑으로 영화 속 의상과 파우치에 입혀 봄"
     ],
-    "note": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
+    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
    },
    "en": {
     "title": "Woven Textile Design (Moonlit Thread)",
@@ -3013,7 +3018,7 @@ window.PROJECTS = [
      "Ran them through DesignScope Victor to see them as woven cloth, and added another colourway",
      "Mapped the patterns onto film costumes and a pouch in Photoshop"
     ],
-    "note": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
+    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
    }
   },
   "title": "Woven Textile Design",
@@ -3087,8 +3092,8 @@ window.PROJECTS = [
      {
       "src": "/images/projects/textile-knit/cardigans.jpg",
       "cap": {
-       "ko": "네 가지 패턴의 가디건",
-       "en": "The four patterns as cardigans"
+       "ko": "네 가지 패턴의 가디건 (AI 이미지)",
+       "en": "The four patterns as cardigans (AI image)"
       },
       "wide": true
      },
@@ -3123,7 +3128,7 @@ window.PROJECTS = [
      {
       "src": "/images/projects/textile-knit/ad07.jpg",
       "cap": {
-       "ko": "구름·학 메달리온 중심",
+       "ko": "구름·학 원형 문양 중심",
        "en": "Cloud and crane medallion focus"
       }
      },
@@ -3146,8 +3151,8 @@ window.PROJECTS = [
      }
     ],
     "note": {
-     "ko": "고려청자의 학과 상감 메달리온을 편성으로",
-     "en": "Celadon cranes and inlay medallions, in knit"
+     "ko": "고려청자의 학, 원형 문양, 형태를 니트로",
+     "en": "Celadon cranes, round motifs and shape, in knit"
     }
    },
    {
@@ -3166,15 +3171,15 @@ window.PROJECTS = [
      {
       "src": "/images/projects/textile-knit/ad02.jpg",
       "cap": {
-       "ko": "도안 작업 화면",
-       "en": "Chart work on screen"
+       "ko": "NedGraphics에서 색을 조합해 만든 모티프",
+       "en": "Colour mixes made into motifs in NedGraphics"
       }
      },
      {
       "src": "/images/projects/textile-knit/ad03.jpg",
       "cap": {
-       "ko": "도안 작업 화면",
-       "en": "Chart work on screen"
+       "ko": "NedGraphics에서 색을 조합해 만든 모티프",
+       "en": "Colour mixes made into motifs in NedGraphics"
       }
      },
      {
@@ -3209,28 +3214,34 @@ window.PROJECTS = [
    "ko": {
     "title": "Knit Textile Design 〈Celadon Reverie〉",
     "cat": "니트 텍스타일 · 미국 교환학생 수업 · 개인 · 2025.08~12",
-    "headline": "고려청자의 학과 원형 메달리온을 니트 패턴으로 다시 그렸다.",
-    "need": "프린트·직조와 같은 학기에 진행한 프로젝트로, 같은 이유로 한국 모티프를 골랐다. 한국을 잘 모르는 미국 교실에서 고려청자의 미감을 낯설지 않고 끌리는 니트로 풀어야 했다.",
+    "headline": "고려청자의 학과 원형 문양, 청자의 형태를 니트 패턴으로 다시 그렸다.",
+    "need": "미국 교환학생 수업의 니트 프로젝트로, 모두가 똑같이 정해진 4가지 색만 쓸 수 있었다. 같은 학기 프린트·직조에서 가져온 한국 모티프의 흐름을 니트에서는 어떻게 이어갈지 고민하다가 고려청자를 떠올렸다.",
     "action": [
-     "고려청자의 학 모티프와 원형 메달리온을 니트 도안으로 재구성",
-     "Procreate로 모티프를 그리고 포토샵으로 다듬은 뒤, NedGraphics로 패턴을 만들고 EasyKnit으로 니트 도안을 제작"
+     "고려청자의 학과 원형 문양, 청자의 형태를 모티프로 가져와 니트 도안으로 재구성",
+     "정해진 4가지 색 안에서 청자의 색감을 살리고, 아이보리색으로 차분함을, 붉은색으로 포인트를 줘 니트 가디건에 입혀 봄",
+     "Procreate로 모티프를 그리고 포토샵으로 다듬은 뒤, NedGraphics로 패턴을 만들고 EasyKnit으로 니트 도안을 제작",
+     "4가지 색만으로도 학의 날개가 아이보리색에서 점점 진해지는 그라데이션처럼 보이고 색이 더 섞여 보이도록, NedGraphics에서 여러 색을 조합해 하나의 모티프로 만들어 사용",
+     "가디건 도식화 이미지는 포토샵과 일러스트레이터로, 대표 이미지는 AI로 제작"
     ],
-    "note": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
+    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
    },
    "en": {
     "title": "Knit Textile Design (Celadon Reverie)",
     "cat": "Knit Design · Exchange in the US · Solo · 2025.08~12",
-    "headline": "The cranes and round medallions of Goryeo celadon, redrawn as knit patterns.",
-    "need": "Made in the same exchange semester as the printed and woven textiles, with Korean motifs for the same reason: in a US classroom that knew little about Korea, the look of Goryeo celadon had to become knitwear that felt familiar and appealing, not foreign.",
+    "headline": "The cranes, round motifs and shape of Goryeo celadon, redrawn as knit patterns.",
+    "need": "A knit project in an exchange class in the US, where everyone had to use the same four set colours. I had brought Korean motifs into the printed and woven projects that semester, and while thinking about how to carry that into knit, I came up with Goryeo celadon.",
     "action": [
-     "Rebuilt the celadon crane motif and its round medallions as knit charts",
-     "Drew the motifs in Procreate, refined them in Photoshop, built the patterns in NedGraphics and made the knit charts in EasyKnit"
+     "Took the cranes, round motifs and shape of Goryeo celadon and rebuilt them as knit charts",
+     "Within the four set colours, kept the feel of celadon, used ivory for calm and red as an accent, and put the patterns on knit cardigans",
+     "Drew the motifs in Procreate, refined them in Photoshop, built the patterns in NedGraphics and made the knit charts in EasyKnit",
+     "With only four colours, combined several of them into single motifs in NedGraphics, so the crane wings could shade from ivory to darker like a gradient and the colours would blend more",
+     "Made the cardigan flats in Photoshop and Illustrator, and the cover image with AI"
     ],
-    "note": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
+    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
    }
   },
   "title": "Knit Textile Design",
-  "desc": "Goryeo celadon, its cranes and round medallions, turned into knit patterns with NedGraphics and EasyKnit, made on exchange in the US."
+  "desc": "Goryeo celadon, its cranes, round motifs and shape, turned into knit patterns with NedGraphics and EasyKnit, made on exchange in the US."
  },
  {
   "slug": "adaptive-textile",

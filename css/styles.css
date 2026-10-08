@@ -764,6 +764,7 @@ html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"]
 .detail-result-pending p { color: var(--ink-2); font: 11px/1.4 var(--font-mono); letter-spacing: .08em; text-align: center; }
 /* see also (2026-10-03): Art2Wear ⇄ the Arts Week installation */
 .detail-related p + p { margin-top: 10px; }
+.detail-related-lead { color: var(--ink-2); font: 12px/1.7 var(--font-mono); margin-bottom: 22px; }
 .detail-related-link { display: inline-block; margin-top: 16px; padding: 10px 18px; border: 1px solid var(--ink); border-radius: 999px; color: var(--ink); font: 12px/1.4 var(--font-mono); letter-spacing: .06em; text-decoration: none; transition: background-color .2s ease, color .2s ease; }
 .detail-related-link:hover, .detail-related-link:focus-visible { background: var(--ink); color: var(--paper); }
 .detail-related-link + p { margin-top: 22px; }
