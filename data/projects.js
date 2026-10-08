@@ -890,7 +890,7 @@ window.PROJECTS = [
     ],
     "result": [
      "교수 추천으로 수업 대표 출품 → NC State 윌슨 컬리지 컬렉션 영구 소장작 선정 (2026.04)",
-     "FTD 374 프로젝트 평가 96 / 100, 프린트 디자인 항목 만점",
+     "프로젝트 평가 96 / 100, 프린트 디자인 항목 만점",
      "교수 평가: 독창적인 패턴 레이어링, 모티프 사이 색의 어우러짐, 엔지니어드 모티프 배치를 높이 평가"
     ],
     "headline": "패턴 3개, 레이아웃 3개로 배치를 실험했다. 교수 평가에서는 패턴 레이어링과 색의 어우러짐이 꼽혔다.",
@@ -918,7 +918,7 @@ window.PROJECTS = [
     ],
     "result": [
      "Entered as the class representative on faculty recommendation, then selected for permanent inclusion in the Wilson College Collection, NC State (Apr 2026)",
-     "FTD 374 project grade 96 / 100, full marks for print design",
+     "Project grade 96 / 100, full marks for print design",
      "Professor's review praised the inventive pattern layering, the colour interaction between motifs and the engineered motif placement"
     ],
     "headline": "Three patterns, three layouts, and placement tests between them. The professor singled out the pattern layering and the way the colours interact.",
@@ -2187,9 +2187,7 @@ window.PROJECTS = [
    "/images/projects/engineered-surfaces/18.jpg",
    "/images/projects/engineered-surfaces/36.jpg",
    "/images/projects/engineered-surfaces/22.jpg",
-   "/images/projects/engineered-surfaces/25.jpg",
-   "/images/projects/engineered-surfaces/40.jpg",
-   "/images/projects/engineered-surfaces/43.jpg"
+   "/images/projects/engineered-surfaces/25.jpg"
   ],
   "role": {
    "ko": "실 만들기(spinning, plying, 염색) · 직조 · 편성 · 펀치니들 · 표면 가공 (단독)",
@@ -2382,7 +2380,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "직접 만든 실에서 원단까지",
-    "cat": "텍스타일 · NC State · 미국 교환학생 · 2026.01~04",
+    "cat": "텍스타일 · 미국 교환학생 · 2026.01~04",
     "headline": "나만의 실을 spinning과 plying으로 직접 만들고, 기존 실과 섞어 짠 원단으로 미니스커트를 만들었다.",
     "need": "실을 만드는 법(염색, spinning, plying)과 그 실로 천을 만드는 법(뜨개질, 위빙, 펀치니들)을 배우고, 이를 적용해 직접 작품을 만드는 프로젝트였다.",
     "action": [
@@ -2401,7 +2399,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "From Handmade Yarn to Fabric",
-    "cat": "Textile Design · NC State · Exchange in the US · 2026.01~04",
+    "cat": "Textile Design · Exchange in the US · 2026.01~04",
     "headline": "I spun and plied yarns of my own, wove fabrics mixing them with bought yarn, and made a mini skirt from those fabrics.",
     "need": "The project was to learn how yarn is made (dyeing, spinning, plying) and how yarn becomes cloth (knitting, weaving, punch needle), then put it all to use in my own pieces.",
     "action": [
@@ -2672,7 +2670,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Printed Textile Design 〈Urban Botanica〉",
-    "cat": "프린트 텍스타일 · 미국 교환학생 수업 · 개인 · 2025.08~12",
+    "cat": "프린트 텍스타일 · 미국 교환학생 · 개인 · 2025.08~12",
     "headline": "전통 모티프에 비보잉의 움직임을 겹쳐, 한국을 잘 모르는 사람에게도 낯설지 않은 한국을 프린트로 풀었다.",
     "need": "미국 교환학생 때 들은 텍스타일 수업의 첫 프로젝트. 반에서 한국 학생은 나 혼자였고, 수업은 서로의 작업에 대한 피드백이 아주 활발했다. 한국을 잘 모르는 노스캐롤라이나의 교수님과 친구들 앞에서, 한국을 담아 차별성을 가지면서도 어렵거나 낯설지 않고 끌리는 작업이어야 했다.",
     "action": [
@@ -2968,7 +2966,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Woven Textile Design 〈Moonlit Thread〉",
-    "cat": "직조 텍스타일 · 미국 교환학생 수업 · 개인 · 2025.08~12",
+    "cat": "직조 텍스타일 · 미국 교환학생 · 개인 · 2025.08~12",
     "headline": "구미호와 달토끼, 두 한국 설화를 하나의 직물 컬렉션으로 엮었다.",
     "need": "프린트 텍스타일과 같은 학기에 진행한 프로젝트로, 같은 이유로 한국 모티프를 골랐다. 한국을 잘 모르는 미국 교실에서 한국 설화를 낯설지 않고 끌리는 직물로 풀어야 했다.",
     "action": [
@@ -3199,7 +3197,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Knit Textile Design 〈Celadon Reverie〉",
-    "cat": "니트 텍스타일 · 미국 교환학생 수업 · 개인 · 2025.08~12",
+    "cat": "니트 텍스타일 · 미국 교환학생 · 개인 · 2025.08~12",
     "headline": "고려청자의 학과 원형 문양, 청자의 형태를 니트 패턴으로 다시 그렸다.",
     "need": "미국 교환학생 수업의 니트 프로젝트로, 모두가 똑같이 정해진 4가지 색만 쓸 수 있었다. 같은 학기 프린트·직조에서 가져온 한국 모티프의 흐름을 니트에서는 어떻게 이어갈지 고민하다가 고려청자를 떠올렸다.",
     "action": [
@@ -3252,25 +3250,18 @@ window.PROJECTS = [
   "thumb": "/images/projects/adaptive-textile/ad01.jpg",
   "images": [
    "/images/projects/adaptive-textile/ad01.jpg",
-   "/images/projects/adaptive-textile/ad02-1.jpg",
+   "/images/projects/adaptive-textile/ad02-1-v2.jpg",
    "/images/projects/adaptive-textile/ad02-2.jpg",
-   "/images/projects/adaptive-textile/ad02-3.jpg",
    "/images/projects/adaptive-textile/ad02-4.jpg",
    "/images/projects/adaptive-textile/ad03-1.jpg",
-   "/images/projects/adaptive-textile/ad03-2.jpg",
    "/images/projects/adaptive-textile/ad03-3.jpg",
    "/images/projects/adaptive-textile/ad03-4.jpg",
    "/images/projects/adaptive-textile/ad04-1.jpg",
-   "/images/projects/adaptive-textile/ad04-2.jpg",
    "/images/projects/adaptive-textile/ad04-3.jpg",
    "/images/projects/adaptive-textile/ad04-4.jpg",
-   "/images/projects/adaptive-textile/ad04-5.jpg",
-   "/images/projects/adaptive-textile/ad05-1.jpg",
    "/images/projects/adaptive-textile/ad05-2.jpg",
-   "/images/projects/adaptive-textile/ad05-3.jpg",
-   "/images/projects/adaptive-textile/ad05-4.jpg",
    "/images/projects/adaptive-textile/ad06.jpg",
-   "/images/projects/adaptive-textile/ad07.jpg",
+   "/images/projects/adaptive-textile/ad07-v2.jpg",
    "/images/projects/adaptive-textile/ad08.jpg",
    "/images/projects/adaptive-textile/ad09.jpg",
    "/images/projects/adaptive-textile/ad10.jpg",
@@ -3286,7 +3277,6 @@ window.PROJECTS = [
    "/images/projects/adaptive-textile/ad17.jpg",
    "/images/projects/adaptive-textile/ad18.jpg",
    "/images/projects/adaptive-textile/ad19.jpg",
-   "/images/projects/adaptive-textile/ad20.jpg",
    "/images/projects/adaptive-textile/ad21.jpg",
    "/images/projects/adaptive-textile/ad22.jpg"
   ],
@@ -3307,7 +3297,7 @@ window.PROJECTS = [
       "src": "/images/projects/adaptive-textile/ad01.jpg"
      },
      {
-      "src": "/images/projects/adaptive-textile/ad02-1.jpg",
+      "src": "/images/projects/adaptive-textile/ad02-1-v2.jpg",
       "cap": {
        "ko": "러그",
        "en": "Rug"
@@ -3318,13 +3308,6 @@ window.PROJECTS = [
       "cap": {
        "ko": "러그 디테일",
        "en": "Rug detail"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/ad02-3.jpg",
-      "cap": {
-       "ko": "커튼 원단",
-       "en": "Curtain fabric"
       }
      },
      {
@@ -3339,13 +3322,6 @@ window.PROJECTS = [
       "cap": {
        "ko": "자수 쿠션",
        "en": "Embroidered cushion"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/ad03-2.jpg",
-      "cap": {
-       "ko": "담요",
-       "en": "Blanket"
       }
      },
      {
@@ -3370,13 +3346,6 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/ad04-2.jpg",
-      "cap": {
-       "ko": "테이블 커버",
-       "en": "Table cover"
-      }
-     },
-     {
       "src": "/images/projects/adaptive-textile/ad04-3.jpg",
       "cap": {
        "ko": "램프와 테이블",
@@ -3391,38 +3360,10 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/ad04-5.jpg",
-      "cap": {
-       "ko": "램프",
-       "en": "Lamp"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/ad05-1.jpg",
-      "cap": {
-       "ko": "쿠션",
-       "en": "Cushions"
-      }
-     },
-     {
       "src": "/images/projects/adaptive-textile/ad05-2.jpg",
       "cap": {
        "ko": "의자 위 자수 쿠션",
        "en": "Embroidered cushion on the chair"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/ad05-3.jpg",
-      "cap": {
-       "ko": "의자 패브릭",
-       "en": "Chair fabric"
-      }
-     },
-     {
-      "src": "/images/projects/adaptive-textile/ad05-4.jpg",
-      "cap": {
-       "ko": "의자 시트",
-       "en": "Chair seat"
       }
      }
     ],
@@ -3446,7 +3387,7 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/adaptive-textile/ad07.jpg",
+      "src": "/images/projects/adaptive-textile/ad07-v2.jpg",
       "cap": {
        "ko": "컨셉에 맞춰 개발한 패턴 후보 16종",
        "en": "16 candidate patterns developed for the concept"
@@ -3476,7 +3417,7 @@ window.PROJECTS = [
       }
      }
     ],
-    "rowTarget": 640
+    "rowTarget": 420
    },
    {
     "title": {
@@ -3562,9 +3503,6 @@ window.PROJECTS = [
       "src": "/images/projects/adaptive-textile/ad19.jpg"
      },
      {
-      "src": "/images/projects/adaptive-textile/ad20.jpg"
-     },
-     {
       "src": "/images/projects/adaptive-textile/ad21.jpg"
      },
      {
@@ -3581,7 +3519,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "인테리어 텍스타일: 방 하나의 기획, 디자인, 제작",
-    "cat": "인테리어 텍스타일 · 4인 팀 · 미국 교환학생 · FTD 374, 2026 봄",
+    "cat": "인테리어 텍스타일 · 4인 팀 · 미국 교환학생 · 2026.01~04",
     "headline": "패턴이 가득한 맥시멀리즘 방에는 화려함을 완화할 요소가 필요해 보였다. 그래서 청키 블랭킷을 제안하고 직접 만들었다.",
     "need": "맥시멀리즘 인테리어 텍스타일을 만드는 과제였다. 그냥 많이 넣기만 하면 방이 산만해 보인다. 패턴과 색을 겹겹이 쌓더라도, 일부러 그렇게 고른 것처럼 보여야 했다.",
     "action": [
@@ -3593,21 +3531,14 @@ window.PROJECTS = [
      "그중 청키 블랭킷은 아이디어부터 제작까지 단독으로 맡음"
     ],
     "result": [
-     "FTD 374 프로젝트 평가 97.5 / 100",
+     "프로젝트 평가 97.5 / 100",
      "교수는 램프 갓 플리츠와 청키 블랭킷을 돋보이는 요소로 꼽았고, 업계 멘토도 두 가지를 호평",
      "업계 멘토는 패턴 16종이 창의적이고 색이 잘 어울린다고 평가. 중간 리뷰에서 패턴이 많아 정신없어 보일 수 있다는 점과 모티프 크기가 다 비슷하니 다양하게 하라는 피드백을 받았고, 기말 리뷰에서 둘 다 잘 개선됐다는 평을 받음"
-    ],
-    "detail": {
-     "title": "팀 구성",
-     "body": [
-      "Hannah Komulainen · Emily Cribbs · Allison Roth · 이연서 (4인 팀)",
-      "NC State FTD 374 Digital Textile and Apparel Design, 2026 봄학기"
-     ]
-    }
+    ]
    },
    "en": {
     "title": "Interior Textiles: One Room, Planned, Designed and Made",
-    "cat": "Interior Textiles · Team of 4 · Exchange in the US · FTD 374, Spring 2026",
+    "cat": "Interior Textiles · Team of 4 · Exchange in the US · 2026.01~04",
     "headline": "A maximalist room full of pattern seemed to need something to soften it, so I proposed the chunky blanket and made it myself.",
     "need": "The brief was maximalist interior textiles. Just putting a lot in makes a room look messy. Even with pattern and colour layered on, it had to look chosen on purpose.",
     "action": [
@@ -3619,17 +3550,10 @@ window.PROJECTS = [
      "Of these, the chunky blanket was mine alone, from the idea through to making it"
     ],
     "result": [
-     "FTD 374 project grade 97.5 / 100",
+     "Project grade 97.5 / 100",
      "The professor named the lamp shade pleating and the chunky blanket as standout additions, and the industry mentor praised both",
      "The industry mentor found the 16 patterns creative and the colours well matched. At the mid review the mentor warned that so many patterns could look busy and that the motifs were all much the same size; at the final review the mentor said both had been fixed well"
-    ],
-    "detail": {
-     "title": "Team",
-     "body": [
-      "Hannah Komulainen, Emily Cribbs, Allison Roth, Yeonseo Lee (team of 4)",
-      "NC State FTD 374 Digital Textile and Apparel Design, Spring 2026"
-     ]
-    }
+    ]
    }
   },
   "title": "Interior Textiles",
@@ -5042,7 +4966,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Unreal Engine 의류실습실 구현",
-    "cat": "실시간 3D · 수업 · 개인",
+    "cat": "실시간 3D · 개인",
     "headline": "내가 가장 잘 아는 공간, 의류학과 실습실을 언리얼 엔진 안에 지었다.",
     "need": "수업에서 언리얼 엔진으로 공간 만드는 법을 배운 뒤, 살짝 무서운 분위기의 의류학과 실습실을 만들어 보고 싶었다.",
     "action": [
@@ -5055,7 +4979,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Building the Clothing Lab in Unreal Engine",
-    "cat": "Real-time 3D · Class project · Solo",
+    "cat": "Real-time 3D · Solo",
     "headline": "I built the space I know best, our clothing lab, inside Unreal Engine.",
     "need": "After learning to build spaces in Unreal Engine in class, I wanted to make our clothing lab with a slightly scary mood.",
     "action": [
