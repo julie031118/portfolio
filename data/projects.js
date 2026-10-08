@@ -274,6 +274,13 @@ window.PROJECTS = [
   },
   "video": "https://www.youtube.com/embed/Vx8FLDGOt90",
   "video2": "https://www.instagram.com/reel/DcFcT-YzNBE/embed/",
+  "filmSide": [
+   null,
+   [
+    "/images/projects/directing-a-year/a05.jpg",
+    "/images/projects/directing-a-year/a08.jpg"
+   ]
+  ],
   "filmLabels": {
    "ko": [
     "공모전 출품 영상 (유튜브)",
@@ -340,24 +347,6 @@ window.PROJECTS = [
     "note": {
      "ko": "유튜브에 올린 10분 내러티브 영상",
      "en": "Stills from the 10 minute YouTube film"
-    }
-   },
-   {
-    "title": {
-     "ko": "30초 세로형 티저",
-     "en": "THE 30 SECOND TEASER"
-    },
-    "images": [
-     {
-      "src": "/images/projects/directing-a-year/a05.jpg"
-     },
-     {
-      "src": "/images/projects/directing-a-year/a08.jpg"
-     }
-    ],
-    "note": {
-     "ko": "본편을 자르지 않고 따로 만든 숏폼",
-     "en": "Cut on its own, not trimmed from the film"
     }
    }
   ],
@@ -614,7 +603,7 @@ window.PROJECTS = [
      "이미지와 영상은 Midjourney와 Kling AI, 음악은 Suno와 Riffusion, 보이스는 ElevenLabs로 만듦",
      "컷이 바뀌어도 같은 인물, 같은 세계로 보이도록 맞추는 데 가장 공을 들임",
      "주인공이 무너지는 순간을 가장 인간다운 순간으로 둠: 사람은 원래 감정이 무너질 수 있고, 늘 완벽하게 행복한 게 오히려 이상하다. 약으로 행복을 유지하던 상태가 비인간적인 것이었다",
-     "제목을 ‘HAPPINESS IS INTELLIGENCE.’에서 ‘HAPPINESS IS INTELLIGENCE?’로 바꿔, 행복의 진짜 의미가 무엇인지 생각하게 함"
+     "제목을 ‘HAPPINESS IS INTELLIGENCE’에서 ‘HAPPINESS IS INTELLIGENCE?’로 바꿔, 행복의 진짜 의미가 무엇인지 생각하게 함"
     ],
     "result": [
      "서울대학교 중앙도서관 디지털 리터러시 아카데미 〈AI로 만드는 영화클래스〉 대상 (2025, 중앙도서관장 표창)",
@@ -646,7 +635,7 @@ window.PROJECTS = [
      "Made the images and video in Midjourney and Kling AI, the music in Suno and Riffusion and the voice in ElevenLabs",
      "Put the most effort into keeping the same person and the same world from cut to cut",
      "Treated the protagonist’s breakdown as her most human moment: people’s feelings can fall apart, and being perfectly happy all the time is what is strange. Keeping happiness up with pills was the inhuman state",
-     "Changed the title from ‘HAPPINESS IS INTELLIGENCE.’ to ‘HAPPINESS IS INTELLIGENCE?’ to make the audience think about what happiness really means"
+     "Changed the title from ‘HAPPINESS IS INTELLIGENCE’ to ‘HAPPINESS IS INTELLIGENCE?’ to make the audience think about what happiness really means"
     ],
     "result": [
      "Grand Prize, SNU Central Library Digital Literacy Academy ‘AI Filmmaking Class’ (2025, awarded by the Director of the Central Library)",

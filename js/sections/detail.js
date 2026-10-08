@@ -261,7 +261,17 @@ function renderProject(detail, project, lang) {
         caption.textContent = filmLabels[index];
         filmSection.append(caption);
       }
-      filmSection.append(frame);
+      /* stills can sit beside a film (the exchange-year reel: the teaser's two frames fill the space to its right, 2026-10-08) */
+      const side = (project.filmSide || [])[index];
+      if (side && side.length) {
+        const row = document.createElement('div');
+        row.className = 'detail-film-row';
+        row.append(frame);
+        side.forEach((src) => { const img = document.createElement('img'); img.className = 'detail-film-side'; img.src = normalizeSource(src); img.alt = ''; img.loading = 'lazy'; row.append(img); });
+        filmSection.append(row);
+      } else {
+        filmSection.append(frame);
+      }
       /* a plain link under every film: the embed can be blocked (the review preview blocks all outside
          frames, some browsers block YouTube cookies), and then this is the way to the video */
       const id = (source.match(/(?:embed\/|youtu\.be\/|[?&]v=)([A-Za-z0-9_-]{6,})/) || [])[1];
