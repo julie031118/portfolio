@@ -796,8 +796,8 @@ window.PROJECTS = [
    },
    {
     "title": {
-     "ko": "프린트 개발",
-     "en": "PRINT DEVELOPMENT"
+     "ko": "패턴과 레이아웃",
+     "en": "PATTERNS AND LAYOUTS"
     },
     "images": [
      {
@@ -820,34 +820,19 @@ window.PROJECTS = [
        "ko": "세 프린트 나란히 비교",
        "en": "The three prints side by side"
       }
-     }
-    ]
-   },
-   {
-    "title": {
-     "ko": "패턴에서 봉제까지",
-     "en": "PATTERN TO SEWING"
-    },
-    "images": [
-     {
-      "src": "/images/projects/kaftan/07.jpg",
-      "cap": {
-       "ko": "첫 프로토타입 피팅",
-       "en": "First prototype fitting"
-      }
      },
      {
       "src": "/images/projects/kaftan/a16.jpg",
       "cap": {
-       "ko": "네크라인과 트임 패턴 스케치",
-       "en": "Pattern sketch, neckline and slit"
+       "ko": "레이아웃 구성 3안",
+       "en": "Three layout compositions"
       }
      },
      {
       "src": "/images/projects/kaftan/a18.jpg",
       "cap": {
-       "ko": "패턴 위에 얹어 본 프린트",
-       "en": "Print laid over the pattern"
+       "ko": "패턴을 레이아웃에 얹어 본 배치 실험",
+       "en": "Placement test, patterns on a layout"
       }
      },
      {
@@ -855,6 +840,21 @@ window.PROJECTS = [
       "cap": {
        "ko": "화면에서 프린트 배치 작업",
        "en": "Placing the print on screen"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "제작",
+     "en": "MAKING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/kaftan/07.jpg",
+      "cap": {
+       "ko": "첫 프로토타입 피팅",
+       "en": "First prototype fitting"
       }
      },
      {
@@ -871,58 +871,58 @@ window.PROJECTS = [
    "ko": {
     "title": "Engineered Kaftan",
     "cat": "디지털 텍스타일 · AI 시뮬레이션 · 어패럴 · 미국 교환학생 · 2026.01~04",
-    "need": "쇼팽 녹턴의 유동적인 구조를 실크 위의 시각적 움직임으로 옮기되, 프린트가 옷의 솔기와 트임에 정확히 맞아야 했다. 문제는 디지털 프린터의 인쇄 폭이 54인치인데 카프탄은 100인치가 넘는다는 것이었다. 한 장으로는 물리적으로 찍을 수 없었다.",
+    "need": "쇼팽 녹턴의 유동적인 구조를 실크 위의 시각적 움직임으로 옮기되, 프린트가 네크라인과 솔기, 벨트 위치, 앞트임에 맞춰 옷 전체에서 하나의 구성으로 읽혀야 했다.",
     "action": [
-     "악보의 선 방향과 반복을 패턴의 구조로 삼고, 인체의 곡선과 겹쳐 '구조'와 '유동' 사이의 균형점을 설계",
-     "악보 모티프를 세 개의 패널로 분할하고, 이음선이 소재의 흐름을 끊지 않도록 패턴을 다시 설계: 실크 위에 인쇄된 조각들이 봉제선에서 정확히 이어지도록 좌표를 계산",
-     "AI 시뮬레이션: 패턴을 뜬 뒤 봉제에 들어가기 전에, 세 패널이 이어진 실루엣과 드레이프를 AI로 먼저 구현해 몸 위에서 어떻게 보일지 확인",
-     "여러 차례 피팅을 거쳐 네크라인을 조정하고 길이를 줄여(앞 3인치, 뒤 1.5인치) 실크의 드레이프와 움직임을 최적화",
-     "예술적인 이야기가 담긴 옷을 찾는 소비자를 위한 elevated resortwear로 기획"
+     "악보의 선 방향과 반복으로 구조를 잡고, 수채화 꽃 모티프로 부드러운 움직임을 더해 '구조'와 '유동'의 균형을 맞춤",
+     "Zimmermann, Johnny Was를 경쟁 브랜드로 분석하고, 예술적인 이야기가 담긴 옷을 찾는 소비자를 위한 elevated resortwear로 기획",
+     "Procreate, Photoshop, NedGraphics로 패턴 3개를 디자인. 초기 모티프가 이끼처럼 보이는 문제와 소프트웨어의 팔레트 제한을 세 차례 큰 수정을 거치며 해결",
+     "레이아웃 구성 3개를 짜고, 패턴마다 배치를 바꿔 가며 실험한 뒤 최종안을 고름",
+     "밤의 톤으로 팔레트 구성: 깊이를 주는 딥 블루와 바이올렛, 가벼움을 주는 시폼, 대비를 주는 골드. 골드는 의도한 노랑보다 주황빛으로 출력됐지만, 바이올렛과의 대비가 더 풍부해져 그대로 살림",
+     "샘플 출력이 예상보다 탁하게 나와 최종 파일의 밝기와 채도를 올리고, 모티프를 약 3분의 1 크기로 줄여 더 촘촘한 표면을 만듦",
+     "봉제에 들어가기 전에 완성 실루엣과 드레이프를 AI로 먼저 구현해, 몸 위에서 어떻게 보일지 확인",
+     "앞단 3인치, 뒷단 1.5인치를 줄이고 허벅지 중간까지 오는 앞트임을 더해, 걸을 때 실크가 움직이도록 함"
     ],
     "result": [
-     "교수 추천으로 수업 대표 출품 → NC State 윌슨 컬리지 컬렉션 영구 소장작 선정 (2026.04)"
+     "교수 추천으로 수업 대표 출품 → NC State 윌슨 컬리지 컬렉션 영구 소장작 선정 (2026.04)",
+     "FTD 374 프로젝트 평가 96 / 100, 프린트 디자인 항목 만점",
+     "교수 평가: 독창적인 패턴 레이어링, 모티프 사이 색의 어우러짐, 엔지니어드 모티프 배치를 높이 평가"
     ],
-    "headline": "프린터 폭은 54인치, 옷은 100인치가 넘었다. 세 패널로 나눠 찍고, 자르기 전에 AI로 먼저 입혀 봤다.",
+    "headline": "패턴 3개, 레이아웃 3개로 배치를 실험했다. 교수 평가에서는 패턴 레이어링과 색의 어우러짐이 꼽혔다.",
     "metrics": [
      {
       "v": "선정",
       "l": "Wilson College Collection 2026"
      }
     ],
-    "detail": {
-     "title": "이 작업에서 배운 것",
-     "body": [
-      "좋은 비주얼은 예쁜 이미지 한 장이 아니라, 인쇄기와 재봉틀과 마감 시간이라는 물리적 제약 안에서 완성되는 결과물이라는 것."
-     ]
-    }
+    "detail": null
    },
    "en": {
     "title": "Engineered Kaftan",
     "cat": "Digital Textile · AI Simulation · Apparel · Exchange in the US · Jan to Apr 2026",
-    "need": "Translating the fluid structure of Chopin's Nocturne into visual movement across silk meant the print had to land exactly on the garment's seams and slits. The problem: the digital printer runs 54 inches wide and the kaftan is over 100. A single panel was physically impossible.",
+    "need": "Translating the fluid structure of Chopin's Nocturnes into visual movement on silk meant placing the print against the neckline, seams, belt position and front slit, so it reads as one composition across the garment.",
     "action": [
-     "Used the line direction and repetition of sheet music as the pattern's structure, layered against the curves of the body",
-     "Split the motif across three panels and redrew the pattern so the joins would not break the flow of the material, calculating coordinates so the printed pieces meet exactly at the seams",
-     "AI simulation: after drafting the pattern and before any sewing, rendered the joined three-panel silhouette and drape with AI to see how it would sit on a body",
-     "Ran repeated fit trials, adjusting the neckline and shortening the garment (front 3\", back 1.5\") to optimise drape and movement",
-     "Designed as elevated resortwear for art-conscious consumers who value narrative-driven garments"
+     "Used the line direction and repetition of sheet music for structure and watercolour florals for soft movement, balancing structure and fluidity",
+     "Analysed Zimmermann and Johnny Was as the competitive landscape and positioned the piece as elevated resortwear for art-conscious consumers who value narrative-driven garments",
+     "Designed three patterns in Procreate, Photoshop and NedGraphics, working through three major revisions: early motifs read like moss, and the software limited the palette",
+     "Drew three layout compositions and tested each pattern in different placements before choosing the final design",
+     "Built the palette from night tones: deep blue and violet for depth, seafoam for lightness, gold for contrast. The gold printed more orange than the intended yellow, and was kept because it gave a richer contrast against the violet",
+     "The first sample printed duller than expected, so brightness and saturation went up in the final file and the motifs shrank to about a third of their size for a denser surface",
+     "Before any sewing, rendered the finished silhouette and drape with AI to see how it would sit on a body",
+     "Shortened the front hem by 3\" and the back by 1.5\", and added a front slit to mid-thigh so the silk moves with each step"
     ],
     "result": [
-     "Entered as the class representative on faculty recommendation, then selected for permanent inclusion in the Wilson College Collection, NC State (Apr 2026)"
+     "Entered as the class representative on faculty recommendation, then selected for permanent inclusion in the Wilson College Collection, NC State (Apr 2026)",
+     "FTD 374 project grade 96 / 100, full marks for print design",
+     "Professor's review praised the inventive pattern layering, the colour interaction between motifs and the engineered motif placement"
     ],
-    "headline": "The printer was 54 inches wide; the garment was over 100. I printed it in three panels, and put it on a body with AI before cutting anything.",
+    "headline": "Three patterns, three layouts, and placement tests between them. The professor singled out the pattern layering and the way the colours interact.",
     "metrics": [
      {
       "v": "Selected",
       "l": "Wilson College Collection 2026"
      }
     ],
-    "detail": {
-     "title": "What the project taught",
-     "body": [
-      "A good visual is not one beautiful image; it is what survives the printer, the sewing machine and the deadline."
-     ]
-    }
+    "detail": null
    }
   },
   "title": "Engineered Kaftan",
@@ -3568,7 +3568,7 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "인테리어 텍스타일: 방 하나의 기획부터 제작까지",
+    "title": "인테리어 텍스타일: 방 하나의 기획, 디자인, 제작",
     "cat": "인테리어 텍스타일 · 4인 팀 · 미국 교환학생 · FTD 374, 2026 봄",
     "headline": "패턴이 가득한 맥시멀리즘 방에는 화려함을 완화할 요소가 필요해 보였다. 그래서 청키 블랭킷을 제안하고 직접 만들었다.",
     "need": "맥시멀리즘 인테리어 텍스타일 컬렉션을 만들되, \"많이 넣었다\"가 아니라 \"의도적으로 쌓았다\"로 읽혀야 했다. 근거 없이 화려하면 그냥 산만해진다.",
@@ -3588,12 +3588,12 @@ window.PROJECTS = [
      "title": "팀 구성",
      "body": [
       "Hannah Komulainen · Emily Cribbs · Allison Roth · 이연서 (4인 팀)",
-      "NC State FTD 374 Surface Design and Texture, 2026 봄학기"
+      "NC State FTD 374 Digital Textile and Apparel Design, 2026 봄학기"
      ]
     }
    },
    "en": {
-    "title": "Interior Textiles: One Room from Concept to Making",
+    "title": "Interior Textiles: One Room, Planned, Designed and Made",
     "cat": "Interior Textiles · Team of 4 · Exchange in the US · FTD 374, Spring 2026",
     "headline": "A maximalist room full of pattern seemed to need something to soften it, so I proposed the chunky blanket and made it myself.",
     "need": "A maximalist interior textile collection had to read as deliberate layering rather than simply “a lot.” Without a reason behind it, bold just becomes noise.",
@@ -3613,7 +3613,7 @@ window.PROJECTS = [
      "title": "Team",
      "body": [
       "Hannah Komulainen, Emily Cribbs, Allison Roth, Yeonseo Lee (team of 4)",
-      "NC State FTD 374 Surface Design and Texture, Spring 2026"
+      "NC State FTD 374 Digital Textile and Apparel Design, Spring 2026"
      ]
     }
    }
@@ -3630,9 +3630,11 @@ window.PROJECTS = [
   ],
   "year": "2024",
   "period": "2024.03~06",
-  "thumb": "/images/projects/korean-costume/01.jpg",
+  "thumb": "/images/projects/korean-costume/hb02-hero.jpg",
   "images": [
-   "/images/projects/korean-costume/01.jpg"
+   "/images/projects/korean-costume/hb02.jpg",
+   "/images/projects/korean-costume/hb01.jpg",
+   "/images/projects/korean-costume/hb03.jpg"
   ],
   "role": {
    "ko": "디자인 · 제작 (단독)",
@@ -3640,34 +3642,81 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
-  "nar": {
-   "ko": {
-    "title": "모던 한복",
-    "cat": "한복 · 전통 구성 · 개인 · 2024.03~06",
-    "headline": "한복의 재단·봉제 방식을 서양 의복과 하나씩 비교한 뒤, 구성은 남기고 선만 현대로 옮겼다.",
-    "need": "모던 한복은 실루엣만 바꾸고 구성은 양장 방식으로 가는 경우가 많다. 그러면 한복처럼 보이지만 한복의 구조는 아니다.",
-    "action": [
-     "한복 고유의 재단·봉제 기법을 서양 의복 제작 방식과 항목별로 비교 분석",
-     "깃·섶·배래 같은 전통 구성은 유지하고 선과 비례만 현대적으로 조정",
-     "오간자 등 한복 원단의 물성을 살리는 방향으로 소재를 실험",
-     "손바느질로 직접 제작해 기법을 손으로 익힘"
+  "cardThumb": "/images/projects/korean-costume/hb02.jpg",
+  "sections": [
+   {
+    "title": {
+     "ko": "제작 과정",
+     "en": "MAKING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/korean-costume/hb02.jpg",
+      "cap": {
+       "ko": "마네킹 피팅. 오른쪽 마네킹의 빨간 허리띠 부분은 마무리 전",
+       "en": "On the mannequins. The red waistband on the right one is not finished yet"
+      }
+     },
+     {
+      "src": "/images/projects/korean-costume/hb01.jpg",
+      "cap": {
+       "ko": "제작 중 디테일",
+       "en": "Details while making"
+      }
+     }
     ]
    },
-   "en": {
-    "title": "Modern Hanbok",
-    "cat": "Hanbok · Traditional Construction · Solo · 2024.03~06",
-    "headline": "Compared hanbok cutting and sewing against Western construction line by line, then kept the construction and moved only the lines.",
-    "need": "Modern hanbok often changes the silhouette but builds it the Western way, and it looks like hanbok without being structured like one.",
+   {
+    "title": {
+     "ko": "직접 입은 모습",
+     "en": "WORN BY ME"
+    },
+    "images": [
+     {
+      "src": "/images/projects/korean-costume/hb03.jpg"
+     }
+    ],
+    "rowTarget": 300
+   }
+  ],
+  "nar": {
+   "ko": {
+    "title": "한복 디자인과 제작",
+    "cat": "한복 · 전통 구성 · 개인 · 2024.03~06",
+    "headline": "전통 한복의 형태는 거의 그대로 두고, 내 사이즈에 맞춰 디자인해 직접 만들었다.",
+    "need": "한복 구성을 배우며, 서양 의복과 다른 한복만의 패턴 제작과 재단 방식에 끌렸다. 전통 요소는 그대로 두고 아주 살짝만 현대적인 느낌을 더한 한복을 만들고 싶었다.",
     "action": [
-     "Analysed hanbok cutting and sewing technique against Western garment construction, item by item",
-     "Kept the traditional components (git, seop, baerae) and adjusted only line and proportion",
-     "Experimented with organza and other hanbok fabrics to work with their behaviour rather than against it",
-     "Hand-sewed the garment to learn the technique by doing it"
-    ]
+     "전통 한복의 형태를 기본으로, 내 사이즈에 맞춰 저고리와 치마를 디자인",
+     "전통 손바느질 기법을 익혀 가며 직접 제작",
+     "비치면서도 형태가 잡히는 오간자의 특성을 살려 소재로 사용"
+    ],
+    "detail": {
+     "title": "사진 참고",
+     "body": [
+      "마네킹 사진이 착용 사진보다 부해 보이는 건, 내 사이즈에 맞춰 디자인해 옷이 마네킹보다 작기 때문이다."
+     ]
+    }
+   },
+   "en": {
+    "title": "Hanbok Design and Making",
+    "cat": "Hanbok · Traditional Construction · Solo · 2024.03~06",
+    "headline": "I kept the traditional hanbok form almost as it is, designed it to my own size and made it myself.",
+    "need": "Learning how hanbok is constructed, I was drawn to its pattern-making and cutting, which differ from Western garment-making. I wanted a hanbok that keeps the traditional elements, with only a subtle contemporary touch.",
+    "action": [
+     "Designed the jeogori and skirt to my own size, starting from the traditional hanbok form",
+     "Made it myself, learning traditional hand-sewing as I went",
+     "Used organza for the way it is sheer yet holds its shape"
+    ],
+    "detail": {
+     "title": "About the photos",
+     "body": [
+      "It looks fuller on the mannequin than when I wear it: I designed it to my own size, so it is smaller than the mannequin."
+     ]
+    }
    }
   },
-  "title": "Korean Costume Design",
-  "desc": "Modern hanbok blending traditional construction with contemporary lines, pattern-making, traditional hand-sewing, and organza experiments."
+  "title": "Hanbok Design and Making",
+  "desc": "A hanbok I designed to my own size and made myself, keeping the traditional form almost as it is."
  },
  {
   "slug": "seoul-metro",
@@ -4759,9 +4808,15 @@ window.PROJECTS = [
   ],
   "year": "2025",
   "period": "2024.09~12",
-  "thumb": "/images/18_unreal_engine.jpg",
+  "thumb": "/images/projects/unreal-engine/ad06.jpg",
   "images": [
-   "/images/projects/unreal-engine/01.jpg"
+   "/images/projects/unreal-engine/ad06.jpg",
+   "/images/projects/unreal-engine/ad05.jpg",
+   "/images/projects/unreal-engine/ad04.jpg",
+   "/images/projects/unreal-engine/ad03.jpg",
+   "/images/projects/unreal-engine/ad01.jpg",
+   "/images/projects/unreal-engine/01-crop.jpg",
+   "/images/projects/unreal-engine/ad02.jpg"
   ],
   "role": {
    "ko": "3D 환경 · 캐릭터 셋업 (단독)",
@@ -4769,32 +4824,97 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "sections": [
+   {
+    "title": {
+     "ko": "실습실",
+     "en": "THE LAB"
+    },
+    "images": [
+     {
+      "src": "/images/projects/unreal-engine/ad06.jpg",
+      "cap": {
+       "ko": "벽면 포스터와 선반 위 빨간 구두",
+       "en": "Posters on the wall, red shoes on the shelf"
+      }
+     },
+     {
+      "src": "/images/projects/unreal-engine/ad05.jpg",
+      "cap": {
+       "ko": "실습실 전경",
+       "en": "The whole lab"
+      }
+     },
+     {
+      "src": "/images/projects/unreal-engine/ad04.jpg",
+      "cap": {
+       "ko": "재봉틀과 마네킹이 놓인 작업대",
+       "en": "Work tables with sewing machines and dress forms"
+      }
+     },
+     {
+      "src": "/images/projects/unreal-engine/ad03.jpg",
+      "cap": {
+       "ko": "위에서 내려다본 배치",
+       "en": "The layout from above"
+      }
+     },
+     {
+      "src": "/images/projects/unreal-engine/ad01.jpg",
+      "cap": {
+       "ko": "창가와 사물함",
+       "en": "Windows and lockers"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "캐릭터",
+     "en": "THE CHARACTER"
+    },
+    "images": [
+     {
+      "src": "/images/projects/unreal-engine/01-crop.jpg",
+      "cap": {
+       "ko": "MetaHuman으로 캐릭터 만드는 화면",
+       "en": "Making a character in MetaHuman"
+      }
+     },
+     {
+      "src": "/images/projects/unreal-engine/ad02.jpg",
+      "cap": {
+       "ko": "실습실 안의 캐릭터",
+       "en": "The character in the lab"
+      }
+     }
+    ]
+   }
+  ],
   "nar": {
    "ko": {
-    "title": "가상 의류 제작실 (Unreal Engine)",
-    "cat": "실시간 3D · 개인",
-    "headline": "게임 엔진 안에 옷을 만드는 방을 짓고, 캐릭터가 그 안에서 움직이게 했다.",
-    "need": "3D 패션 툴은 옷 한 벌을 시뮬레이션하는 데서 멈춘다. 옷이 만들어지는 공간 자체를 다루면 무엇이 달라지는지 보고 싶었다.",
+    "title": "Unreal Engine 의류실습실 구현",
+    "cat": "실시간 3D · 수업 · 개인",
+    "headline": "내가 가장 잘 아는 공간, 의류학과 실습실을 언리얼 엔진 안에 지었다.",
+    "need": "수업에서 언리얼 엔진으로 공간 만드는 법을 배운 뒤, 살짝 무서운 분위기의 의류학과 실습실을 만들어 보고 싶었다.",
     "action": [
-     "Unreal Engine으로 가상의 의류 제작 스튜디오 공간을 설계하고 구현",
-     "MetaHuman으로 캐릭터를 만들고 공간 안에서 이동·상호작용하도록 세팅",
-     "게임 엔진 기술을 패션·텍스타일 제작 환경에 접목하는 실험으로 진행"
+     "Unreal Engine으로 재봉틀, 작업대, 마네킹, 사물함이 놓인 의류학과 실습실 공간을 구현",
+     "MetaHuman으로 캐릭터를 만들고 공간 안에서 이동·상호작용하도록 세팅"
     ]
    },
    "en": {
-    "title": "Virtual Clothing Production Room (Unreal Engine)",
-    "cat": "Real-time 3D · Solo",
-    "headline": "Built the room where clothes get made inside a game engine, and put a character in it.",
-    "need": "3D fashion tools stop at simulating one garment. I wanted to see what changes when the space of making is the thing you model.",
+    "title": "Building the Clothing Lab in Unreal Engine",
+    "cat": "Real-time 3D · Class project · Solo",
+    "headline": "I built the space I know best, our clothing lab, inside Unreal Engine.",
+    "need": "After learning to build spaces in Unreal Engine in class, I wanted to make our clothing lab with a slightly scary mood.",
     "action": [
-     "Designed and built a virtual garment-production studio in Unreal Engine",
-     "Created the character with MetaHuman and set it up to move and interact within the space",
-     "Ran it as an experiment in bringing game-engine technique into a fashion and textile making environment"
+     "Built the clothing lab in Unreal Engine, with sewing machines, work tables, dress forms and lockers",
+     "Created the character with MetaHuman and set it up to move and interact within the space"
     ]
    }
   },
-  "title": "Unreal Engine",
-  "desc": "A virtual fashion studio built in Unreal Engine with interactive 3D characters, using MetaHuman for character creation."
+  "title": "Clothing Lab in Unreal Engine",
+  "desc": "The clothing department lab built in Unreal Engine for a class, with a MetaHuman character set up to move through it."
  },
  {
   "slug": "arts-week-2026",

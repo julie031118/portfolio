@@ -63,8 +63,8 @@ window.SITE = {
 
   profile: {
     name: { ko: '이연서', en: 'Yeonseo Lee' },
-    photo: 'img/profile-3.jpg',
-    photos: ['img/profile-3.jpg', 'img/profile-2.jpg'], /* stacked collage: big portrait, café (the landscape selfie came out, 2026-10-02) */
+    photo: 'img/profile-4.jpg', /* profile-3 with the lips a touch deeper (연서, 2026-10-08) */
+    photos: ['img/profile-4.jpg', 'img/profile-2.jpg'], /* stacked collage: big portrait, café (the landscape selfie came out, 2026-10-02) */
     photoAlt: { ko: '이연서 프로필 사진', en: 'Portrait of Yeonseo Lee' },
     email: 'julie031118@gmail.com',
     linkedin: 'https://www.linkedin.com/in/yeonseo-lee-64b970388/',
@@ -197,7 +197,7 @@ window.SITE = {
           desc: { ko: '미국 교환 중 만든 작품. 접시를 직접 깨뜨려 꽃을 만들고 나뭇가지·청키한 실·인조진주·철사를 대비시킨 웨어러블 아트. NC State의 Gregg Museum of Art & Design 런웨이에 직접 입고 올랐다. 2026.01~04', en: 'Made during my exchange in the US: wearable art built from hand-broken ceramic flowers set against branches, chunky yarn, faux pearls and wire, worn on the runway at NC State’s Gregg Museum of Art & Design. Jan to Apr 2026' } },
         { date: '2026.01', until: '2026.04', major: true, link: 'kaftan',
           title: { ko: 'Engineered Kaftan: Wilson College Collection 영구 소장', en: 'Engineered Kaftan: Wilson College Collection (permanent)' },
-          desc: { ko: '54인치 인쇄 폭 안에서 100인치가 넘는 실크 카프탄을 세 패널로 나눠 설계하고, 이음선이 악보 모티프의 흐름을 끊지 않도록 좌표를 계산. 수업 대표로 출품돼 교수진 심사를 거쳐 NC State Wilson College of Textiles Collection 영구 소장작으로 선정. 2026.01~04', en: 'A 100-inch silk kaftan designed in three panels for a 54-inch printer, with coordinates calculated so the seams never break the score motif. Entered as the class representative and selected by the faculty jury for permanent inclusion in the NC State Wilson College of Textiles Collection. Jan to Apr 2026' } },
+          desc: { ko: '쇼팽 녹턴에서 출발한 엔지니어드 프린트 실크 카프탄. 패턴 3개와 레이아웃 3개로 배치를 실험해, 프린트가 옷 전체에서 하나의 구성으로 읽히도록 설계. 교수 추천으로 수업 대표로 출품돼 NC State Wilson College of Textiles Collection 영구 소장작으로 선정. 2026.01~04', en: 'An engineered-print silk kaftan that began with Chopin\'s Nocturnes. Three patterns and three layouts were tested in different placements so the print reads as one composition across the garment. Entered as the class representative on faculty recommendation and selected for permanent inclusion in the NC State Wilson College of Textiles Collection. Jan to Apr 2026' } },
         { date: '2026.05', until: '2026.08', major: true, link: null,
           title: { ko: 'The Nonwovens Institute, NC State: 연구실 인턴', en: 'The Nonwovens Institute, NC State: Research Intern' },
           desc: { ko: '언더아머(Under Armour)와 협력한 스판덱스 원사 샘플 테스트를 담당해 인장시험기로 신축성과 무게를 측정하고 영어로 결과 보고. 크리스마스트리 농가용 부직포 보호 커버의 재단 패턴을 설계하고 열접합으로 샘플 제작. 2026.05.11~08.04', en: 'Ran spandex yarn tests for a project with Under Armour (stretch and weight on a tensile tester), reported in English. Designed the cutting pattern for nonwoven tree-farm covers and produced heat-bonded samples. 11 May to 4 Aug 2026' } },
