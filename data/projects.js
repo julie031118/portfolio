@@ -3213,7 +3213,6 @@ window.PROJECTS = [
     "result": [
      "4가지 색 제한 안에서 색을 조합해 새 모티프로 만든 방식이 좋고, 그 덕에 학의 날개가 잘 표현됐다는 평을 받음",
      "네 가지 편성 패턴 중 두 번째 패턴의 배경이 고려청자와 컬렉션의 분위기를 잘 살린다는 평을 받음",
-     "텍스처 매핑 아이디어가 참신하다는 평을 받음",
      "피드백을 받고 디자인끼리 통일감을 맞춤: 붉은색과 아이보리 비율 조정, 두 디자인이 겹쳐 보이게 하던 학 다리를 빼고 청자 모티프 추가, 붉은색이 과한 스트라이프는 원·학·청자 모티프로 다시 구성"
     ]
    },
@@ -3233,7 +3232,6 @@ window.PROJECTS = [
     "result": [
      "Combining the four set colours into new motifs was praised, and with it the crane wings came out well",
      "The background of the second of the four knit patterns was said to bring out the mood of Goryeo celadon and of the collection",
-     "The texture mapping ideas were called fresh",
      "After feedback, pulled the designs together: rebalanced red and ivory, removed the crane legs that made two designs overlap and added a celadon motif, and rebuilt the red-heavy stripe with circles, cranes and celadon motifs"
     ]
    }
@@ -3825,7 +3823,11 @@ window.PROJECTS = [
      "이 흐름이 이어져 모든 노선이 그려지면 노선도가 완성되도록 모션그래픽으로 표현",
      "모션그래픽, 촬영, 편집 담당 (2인 협업)"
     ],
-    "note": "2025 서울교통공사 유튜브 영상 공모전 출품작. 2인 협업."
+    "note": "2025 서울교통공사 유튜브 영상 공모전 출품작. 2인 협업.",
+    "result": [
+     "모든 역을 다 보여주지 않고도, 노선이 하나씩 그려지며 노선도가 완성되는 흐름으로 지하철이 서울 구석구석을 잇는다는 걸 보여줌",
+     "유동인구와 관광객이 많은 환승역을 골라 담아, 지하철과 함께 서울의 풍경도 보여줌"
+    ]
    },
    "en": {
     "title": "Seoul Metro Promo Video",
@@ -3838,7 +3840,11 @@ window.PROJECTS = [
      "Carried that flow on in motion graphics until every line is drawn and the map is complete",
      "Motion graphics, filming and editing (two-person collaboration)"
     ],
-    "note": "Entry for the 2025 Seoul Metro YouTube Video Contest. Two-person collaboration."
+    "note": "Entry for the 2025 Seoul Metro YouTube Video Contest. Two-person collaboration.",
+    "result": [
+     "Without showing every station, the film shows the subway linking every corner of Seoul, as the lines are drawn one by one until the map is complete",
+     "By choosing busy transfer stations full of commuters and tourists, it shows Seoul itself along with the subway"
+    ]
    }
   },
   "title": "Seoul Metro Promo Video",
@@ -4460,11 +4466,14 @@ window.PROJECTS = [
     "need": "패션 일러스트레이션은 개인의 취향이 잘 드러나는 작업이다. 두 작업 모두 취향이 다른 세 사람이 함께해서, 처음에는 의견을 하나로 합치기가 쉽지 않았다.",
     "action": [
      "우리가 정한 컨셉과 무드보드를 객관적인 기준으로 가운데 두고, 서로의 장점을 합치는 방법을 고민",
-     "〈고려청자의 우아함과 금속 나무〉: 우아하고 세련된 느낌, 금속의 날카롭고 반사되는 질감, 전통적인 느낌으로 의견이 갈리자 실루엣은 우아하게, 텍스처는 메탈릭하게, 배경에는 전통 모티프를 넣고 각자 한 부분씩 맡자고 제안. 모두 만족했고 역할이 나뉘어 효율적으로 진행됨",
-     "두 번째 작업(Peggy Gou와 해파리, 바다거북, 조개 질감 같은 바다 요소에서 출발): 15개 룩을 전개할 수 있어서 직선적인 느낌, 우아한 곡선 같은 각자의 방향을 패턴과 소재에 나눠 적용하고, 그 조합을 룩마다 조금씩 바꿔 모두가 만족하는 컬렉션을 완성",
+     "〈고려청자의 우아함과 금속 나무〉: 우아하고 세련된 느낌, 금속의 날카롭고 반사되는 질감, 전통적인 느낌으로 의견이 갈리자 실루엣은 우아하게, 텍스처는 메탈릭하게, 배경에는 전통 모티프를 넣고 각자 한 부분씩 맡자고 제안. 역할이 나뉘어 효율적으로 진행됨",
+     "두 번째 작업(Peggy Gou와 해파리, 바다거북, 조개 질감 같은 바다 요소에서 출발): 15개 룩을 전개할 수 있어서 직선적인 느낌, 우아한 곡선 같은 각자의 방향을 패턴과 소재에 나눠 적용하고, 그 조합을 룩마다 조금씩 바꿔 컬렉션을 완성",
      "두 번째 작업은 일러스트와 함께 도식화까지 그림"
     ],
-    "note": "두 작업 모두 3인 협업이다."
+    "note": "두 작업 모두 3인 협업이다.",
+    "result": [
+     "두 작업 모두 주제와 컨셉에 맞으면서도 세 사람의 취향이 고루 반영돼, 모두가 만족하는 결과가 나옴"
+    ]
    },
    "en": {
     "title": "Fashion Illustration & Flat Drawing",
@@ -4473,11 +4482,14 @@ window.PROJECTS = [
     "need": "Fashion illustration shows personal taste clearly. Both works were made by three people with different tastes, so bringing the ideas together was not easy at first.",
     "action": [
      "Put the concept and mood board we had agreed on in the middle as the objective standard, and worked out how to combine each person’s strengths",
-     "‘The Grace of Goryeo Celadon and the Metal Tree’: when we split between elegance, the sharp reflective texture of metal and a traditional feel, I proposed elegance in the silhouette, metal in the texture and traditional motifs in the background, one part each. Everyone was happy, and splitting the roles made the work efficient",
-     "The second work (starting from Peggy Gou and the sea: jellyfish, sea turtles, shell textures): with 15 looks to develop, each person’s direction, from straight lines to elegant curves, went into pattern or material, and the combination shifted a little from look to look, so the collection pleased everyone",
+     "‘The Grace of Goryeo Celadon and the Metal Tree’: when we split between elegance, the sharp reflective texture of metal and a traditional feel, I proposed elegance in the silhouette, metal in the texture and traditional motifs in the background, one part each. Splitting the roles made the work efficient",
+     "The second work (starting from Peggy Gou and the sea: jellyfish, sea turtles, shell textures): with 15 looks to develop, each person’s direction, from straight lines to elegant curves, went into pattern or material, and the combination shifted a little from look to look",
      "For the second work we drew flat drawings as well as the illustrations"
     ],
-    "note": "Both works were three-person collaborations."
+    "note": "Both works were three-person collaborations.",
+    "result": [
+     "Both works fit the theme and concept while carrying all three people's tastes, and everyone was happy with the result"
+    ]
    }
   },
   "title": "Fashion Illustration & Flat Drawing",
@@ -4871,9 +4883,9 @@ window.PROJECTS = [
   ],
   "year": "2025",
   "period": "2025",
-  "thumb": "/images/projects/promo-video-ai/01.jpg",
+  "thumb": "/images/projects/promo-video-ai/01-v2.jpg",
   "images": [
-   "/images/projects/promo-video-ai/01.jpg",
+   "/images/projects/promo-video-ai/01-v2.jpg",
    "/images/projects/promo-video-ai/a02.jpg",
    "/images/projects/promo-video-ai/a03.jpg"
   ],
@@ -4895,8 +4907,11 @@ window.PROJECTS = [
      "전통 무용 아홉 가지를 각각 다른 세계유산에 두고, 아침부터 밤까지 시간 순서로 이어지게 구성",
      "마지막 장면은 황리단길에서 전통 리듬에 현대 안무를 섞어 마무리"
     ],
-    "result": null,
-    "note": "2025 APEC AI 영상 콘텐츠 공모전(한국콘텐츠진흥원) 출품작 · 생성형 AI로 제작",
+    "result": [
+     "실제로는 혼자 촬영할 수 없는 세계유산 아홉 곳과 전통 무용 아홉 가지를 AI로 장면마다 구현",
+     "노래부터 영상까지 AI 툴 세 가지를 오가며, 기획부터 완성까지 혼자 한 편을 만듦"
+    ],
+    "note": "2025 APEC AI 영상 콘텐츠 공모전(한국콘텐츠진흥원) 출품작. 노래와 영상 모두 AI(Suno, Midjourney, Kling AI)로 만들었다. 2025년 여름 당시의 AI라, 지금 보면 어색한 장면이 있다.",
     "headline": "경주의 세계유산 아홉 곳에서 전통 무용 아홉 가지를 보여주는 영상. 혼자서는 촬영할 수 없는 장면이라 AI로 만들었다.",
     "metrics": [
      {
@@ -4915,8 +4930,11 @@ window.PROJECTS = [
      "Set each of the nine dances at a different World Heritage site, in time order from morning to night",
      "Ended in Hwangnidan-gil, mixing modern choreography into traditional rhythm"
     ],
-    "result": null,
-    "note": "Entry for the 2025 APEC AI Video Content Contest (Korea Creative Content Agency), made with generative AI",
+    "result": [
+     "Brought to life, scene by scene with AI, nine World Heritage sites and nine traditional dances that I could never have filmed alone",
+     "Moved between three AI tools from the song to the film, and made the whole piece alone from plan to finish"
+    ],
+    "note": "Entry to the 2025 APEC AI Video Content Contest (Korea Creative Content Agency). Song and film were both made with AI (Suno, Midjourney, Kling AI), as it was in summer 2025, so some shots look awkward now.",
     "headline": "A film showing nine traditional dances at nine World Heritage sites in Gyeongju. I could not film that alone, so I made it with AI.",
     "metrics": [
      {
@@ -5030,6 +5048,9 @@ window.PROJECTS = [
     "action": [
      "Unreal Engine으로 재봉틀, 작업대, 마네킹, 사물함이 놓인 의류학과 실습실 공간을 구현",
      "MetaHuman으로 캐릭터를 만들고 공간 안에서 이동·상호작용하도록 세팅"
+    ],
+    "result": [
+     "의류학과 실습실을 완성하고, 실습실 내부를 촬영한 영상까지 만들어 제출"
     ]
    },
    "en": {
@@ -5040,6 +5061,9 @@ window.PROJECTS = [
     "action": [
      "Built the clothing lab in Unreal Engine, with sewing machines, work tables, dress forms and lockers",
      "Created the character with MetaHuman and set it up to move and interact within the space"
+    ],
+    "result": [
+     "Finished the clothing lab and made a film shot inside it, which I submitted for the class"
     ]
    }
   },
