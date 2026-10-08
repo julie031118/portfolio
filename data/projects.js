@@ -694,8 +694,8 @@ window.PROJECTS = [
   },
   "spotify": "6QGCdRsqlovtzy0ulHNIsD",
   "spotifyNote": {
-   "ko": "얇게 비치는 실크에 꽃을 담아, 햇살에 비치는 꽃을 표현하고 싶었다. 이 노래를 들으면 햇살이 따사롭게 들어오는 장면이 떠오른다.",
-   "en": "I wanted flowers held in sheer silk, catching the sunlight. This song always brings back warm light pouring in."
+   "ko": "밤을 그린 피아노곡인 쇼팽 녹턴(야상곡)에서 출발한 카프탄이라, 얇게 비치는 실크 위의 꽃이 달빛을 받아 반짝이는 느낌을 내고 싶었다. 이 노래를 들으면 그런 장면이 떠오른다.",
+   "en": "The kaftan began with Chopin’s Nocturnes, piano pieces about the night, so I wanted the flowers on sheer silk to look as if they were catching the moonlight. This song brings that scene to mind."
   },
   "process": [
    "/images/projects/kaftan/01.jpg",
@@ -866,8 +866,8 @@ window.PROJECTS = [
      {
       "src": "/images/projects/kaftan/09.jpg",
       "cap": {
-       "ko": "프린트 원단 끈 봉제",
-       "en": "Sewing the printed fabric strips"
+       "ko": "벨트 봉제",
+       "en": "Sewing the belt"
       }
      }
     ]
@@ -883,7 +883,7 @@ window.PROJECTS = [
      "Zimmermann, Johnny Was를 경쟁 브랜드로 분석하고, 예술적인 이야기가 담긴 옷을 찾는 소비자를 위한 elevated resortwear로 기획",
      "Procreate, Photoshop, NedGraphics로 패턴 3개를 디자인. 초기 모티프가 이끼처럼 보이는 문제와 소프트웨어의 팔레트 제한을 세 차례 큰 수정을 거치며 해결",
      "레이아웃 구성 3개를 짜고, 패턴마다 배치를 바꿔 가며 실험한 뒤 최종안을 고름",
-     "밤의 톤으로 팔레트 구성: 깊이를 주는 딥 블루와 바이올렛, 가벼움을 주는 시폼, 대비를 주는 골드. 골드는 의도한 노랑보다 주황빛으로 출력됐지만, 바이올렛과의 대비가 더 풍부해져 그대로 살림",
+     "밤의 톤으로 팔레트 구성: 깊이를 주는 딥 블루와 바이올렛, 가벼움을 주는 연한 청록색, 대비를 주는 골드. 골드는 의도한 노랑보다 주황빛으로 출력됐지만, 바이올렛과의 대비가 더 풍부해져 그대로 살림",
      "샘플 출력이 예상보다 탁하게 나와 최종 파일의 밝기와 채도를 올리고, 모티프를 약 3분의 1 크기로 줄여 더 촘촘한 표면을 만듦",
      "봉제에 들어가기 전에 완성 실루엣과 드레이프를 AI로 먼저 구현해, 몸 위에서 어떻게 보일지 확인",
      "앞단 3인치, 뒷단 1.5인치를 줄이고 허벅지 중간까지 오는 앞트임을 더해, 걸을 때 실크가 움직이도록 함"
@@ -1214,8 +1214,8 @@ window.PROJECTS = [
   },
   "spotify": "53T5mZuqAjvm0pinUfwIXr",
   "spotifyNote": {
-   "ko": "축제의 소란이 끝난 뒤, 돌아가는 길에 듣고 싶은 노래. 한글을 곱게 쓴 가사가 캠퍼스의 청춘만이 아니라 누구에게나 조용한 응원이 된다.",
-   "en": "For the walk home after the festival noise fades. Lyrics that use Korean beautifully, a quiet encouragement for anyone, not only the students on campus."
+   "ko": "축제가 끝나고 각자의 자리로 돌아가는 대학생들에게 들려주고 싶은 노래. 열심히 해도 안 되는 날이 있다는 걸 인정하면서도, 그 시간이 헛되지 않았다고 말해 준다. 한글로 곱게 쓴 이 가사가 지금의 대학생들에게, 그리고 앞으로의 날들에도 위로와 용기가 될 것 같았다.",
+   "en": "A song I would play for students heading back to their own lives after the festival. It admits that some days hard work is not enough, and says that the time still meant something. I thought these lyrics, written in carefully chosen Korean, could comfort students now and give them courage in the years ahead."
   },
   "sections": [
    {
@@ -1325,7 +1325,7 @@ window.PROJECTS = [
      "포토부스: 행사 기간 내내 대기줄이 이어졌고, 참가자들이 프레임 사진을 인스타그램 스토리에 올림",
      "직접 디자인한 에어팟·버즈 케이스 굿즈 매진"
     ],
-    "headline": "캐릭터가 포스터 안에만 있으면 기억되지 않는다. 만질 수 있는 것으로 만들었다.",
+    "headline": "RIO를 포토부스와 굿즈로 옮겼다. 포토부스에는 행사 내내 줄이 섰고, 에어팟·버즈 케이스는 매진됐다.",
     "metrics": [
      {
       "v": "매진",
@@ -1346,7 +1346,7 @@ window.PROJECTS = [
      "Photo booth: queues ran throughout the festival, and attendees posted the framed photos to their Instagram stories",
      "The AirPods and Buds cases I designed sold out"
     ],
-    "headline": "A character that stays inside a poster is never remembered, so I made it something people could hold.",
+    "headline": "I took RIO into a photo booth and merchandise. The booth had a queue all festival long, and the AirPods and Buds cases sold out.",
     "metrics": [
      {
       "v": "Sold out",
@@ -1611,7 +1611,7 @@ window.PROJECTS = [
      "Gregg Museum of Art & Design, Art2Wear 2026 런웨이 발표 (2026년 4월)",
      "Art2Wear 작품의 꽃, 가방, 치마를 가져와 2026 서울대 예술주간 야외 설치로 재구성 (2026.09.28~10.02)"
     ],
-    "headline": "공생을 평화로운 균형이 아니라, 극한의 긴장 아래 유지되는 구조로 다시 정의했다.",
+    "headline": "쇼 주제 '공생'을 평화로운 균형이 아니라, 팽팽한 긴장 속에서 유지되는 관계로 풀었다.",
     "metrics": [
      {
       "v": "런웨이",
@@ -1625,7 +1625,7 @@ window.PROJECTS = [
       "그런데 이 방식은 물이 필요했고, 패션쇼장은 물 반입이 불가능했다. 개념을 바꾸는 대신 표현 방식을 바꾸기로 했다. 주제는 그대로 두고, 같은 긴장을 다른 재료로 옮길 방법을 찾았다.",
       "답은 실제로 깨진 것이었다. 도자기 접시를 직접 깨뜨려 꽃을 만들었다.",
       "다음 문제는 무게였다. 접시 조각을 붙여 만든 꽃은 무거워서 조각을 이어 꽃 모양을 잡는 것부터 쉽지 않았고, 그 꽃을 옷에 고정하는 건 더 어려웠다. 낚싯줄, 섬유 본드, 순간접착제, 강력 본드를 겹쳐 쓰며 여러 번 다시 고정했다. 날카로운 단면과 나뭇가지에 손을 여러 번 다치기도 했다.",
-      "제약이 컨셉을 무너뜨리지 않는다는 걸 배운 작업이다. 무너지는 건 표현 방식이지 주제가 아니다."
+      "물을 쓸 수 없다는 제약 때문에 고민이 많았지만, 표현 방식을 바꾸면서 주제는 그대로 유지했다."
      ]
     },
     "note": "미국 NC State 교환학생 중, 인턴십과 아르바이트를 병행하며 만든 작품."
@@ -1646,7 +1646,7 @@ window.PROJECTS = [
      "Shown at Art2Wear 2026, Gregg Museum of Art & Design (April 2026)",
      "Its flowers, bag and skirt were reworked into an outdoor installation for SNU Arts Week 2026 (28 Sep to 2 Oct 2026)"
     ],
-    "headline": "Symbiosis redefined: not a peaceful balance, but a structure held under extreme tension.",
+    "headline": "I read the show’s theme, symbiosis, not as a peaceful balance but as a relationship held together under tension.",
     "metrics": [
      {
       "v": "Runway",
@@ -1660,7 +1660,7 @@ window.PROJECTS = [
       "That method needed water, and the show venue did not allow water on site. Rather than change the concept, I changed the medium: same subject, a different way to carry the same tension.",
       "The answer was something actually broken. I smashed ceramic plates by hand and built the flowers from them.",
       "The next problem was weight. Flowers made of plate shards are heavy: getting the pieces to hold a flower shape was hard, and fixing the flowers to the garment was harder. I layered fishing line, fabric glue, superglue and strong adhesive, refixing them again and again, and cut my hands more than once on the sharp edges and branches.",
-      "The lesson: a constraint does not break the concept. What breaks is the method, not the subject."
+      "The no-water rule took a lot of thought, but by changing how I expressed it, I kept the theme as it was."
      ]
     },
     "note": "Made during my exchange year at NC State in the US, alongside an internship and a part-time job."
@@ -1791,7 +1791,7 @@ window.PROJECTS = [
    "ko": {
     "title": "CLO 3D 디지털 패션 공모전",
     "cat": "3D 디지털 패션 · 공모전 · 단독 · 2024",
-    "headline": "퇴근 후 러닝 크루에 나가는 20대 후반 직장인 한 명을 정하고, 그 사람의 하루에서 디자인 변수를 뽑았다.",
+    "headline": "퇴근 후 러닝 크루에 나가는 20대 후반 직장인 한 명을 정하고, 그 사람의 하루에서 디자인 기준을 뽑았다.",
     "metrics": [
      {
       "v": "입선",
@@ -1801,9 +1801,9 @@ window.PROJECTS = [
     "need": "공모전 주제 'Dopamine Dressing'을, MZ세대 사이에서 커지고 있는 러닝 문화의 라이프스타일을 분석하는 데서 출발해 풀었다.",
     "action": [
      "MZ세대 사이에서 커지는 러닝 문화를 분석해, 대중교통으로 출퇴근하고 퇴근 후 러닝 크루에 나가는 20대 후반 여성 직장인으로 페르소나를 구체화",
-     "이 페르소나를 기준으로 원단 기능성, 색 조화, 체온 조절, 활동성을 핵심 디자인 변수로 정의",
+     "이 페르소나에 맞춰 원단 기능성, 색 조화, 체온 조절, 활동성을 핵심 디자인 기준으로 정함",
      "WGSN F/W 2025 아웃도어·액티브웨어 트렌드 중 'New Optimism'과 'Analog Nostalgia'를 디자인 방향에 반영",
-     "공모전 주제 'Dopamine Dressing'에 맞춰, 그 변수로 액티브웨어 컬렉션을 설계",
+     "공모전 주제 'Dopamine Dressing'에 맞춰, 이 기준으로 액티브웨어 컬렉션을 설계",
      "패턴 제작부터 3D 시뮬레이션·렌더링까지 CLO 3D로 단독 진행"
     ],
     "result": [
@@ -1813,7 +1813,7 @@ window.PROJECTS = [
    "en": {
     "title": "CLO 3D Digital Fashion Contest",
     "cat": "3D Digital Fashion · Competition · Solo · 2024",
-    "headline": "I defined one wearer, a woman in her late twenties who runs with a crew after work, and drew the design variables from her day.",
+    "headline": "I defined one wearer, a woman in her late twenties who runs with a crew after work, and drew the design criteria from her day.",
     "metrics": [
      {
       "v": "Honorable Mention",
@@ -1823,9 +1823,9 @@ window.PROJECTS = [
     "need": "I approached the contest theme, Dopamine Dressing, by analysing the lifestyle of the running culture growing among the MZ generation.",
     "action": [
      "Studied the running culture growing among the MZ generation and set a detailed persona: a woman in her late twenties who commutes by public transport and joins a running crew after work",
-     "Set the key design variables from that persona: fabric performance, color harmony, body temperature regulation, mobility",
+     "Set the key design criteria for that persona: fabric performance, colour harmony, body temperature, freedom of movement",
      "Took the direction from WGSN F/W 2025 Outdoor & Activewear trends, especially 'New Optimism' and 'Analog Nostalgia'",
-     "Designed an activewear collection for the contest theme 'Dopamine Dressing' against those variables",
+     "Designed an activewear collection for the contest theme 'Dopamine Dressing' around those criteria",
      "Built it solo in CLO 3D, from patterning through simulation and rendering"
     ],
     "result": [
@@ -2145,7 +2145,7 @@ window.PROJECTS = [
      "어르신 한 분을 전담해, 수업 시간 외에도 여러 차례 따로 만나 인터뷰",
      "첫 자리에서 원하는 옷을 묻지 않고 일상과 취향을 먼저 이야기하며 관계를 쌓음. 편해지신 뒤에 나온 말들에서 진짜 원하시는 것이 드러났고, 그 말들을 설계 기준으로 삼음",
      "원단은 직접 고르시게 함, 마음에 드는 것을 고르신 뒤 그 선택을 디자인에 반영",
-     "관찰한 신체적 특징을 설계 사양으로 변환: 등이 굽으신 점과 걸으실 때 팔이 뒤로 향한다는 점을 반영해 코트의 패턴을 잡고, 착용 시 어깨 비대칭을 보완하는 어깨 패드를 추가",
+     "관찰한 몸의 특징을 패턴과 부자재에 반영: 등이 굽으신 점과 걸으실 때 팔이 뒤로 향하는 점에 맞춰 코트 패턴을 잡고, 입었을 때 어깨 비대칭을 보완하는 어깨 패드를 넣음",
      "완성한 옷을 어르신이 직접 입고 시니어 런웨이에 오름"
     ],
     "result": [
@@ -2154,8 +2154,8 @@ window.PROJECTS = [
     "detail": {
      "title": "이 작업에서 배운 것",
      "body": [
-      "좋은 결과물은 대상을 가장 잘 아는 사람만 만들 수 있다는 것. 그리고 '가장 잘 안다'는 상태는 질문 한 번으로 도달하지 않는다는 것.",
-      "관찰을 사양으로 옮기는 훈련이기도 했다. '등이 굽으셨다'는 인상이 아니라 패턴 수정으로, '어깨가 비대칭이다'가 어깨 패드라는 부자재 결정으로 이어져야 옷이 실제로 편해진다."
+      "입는 사람이 만족하는 옷을 만들려면 그 사람을 잘 아는 것이 가장 중요하다는 것. 그리고 그 사람을 잘 알게 되는 건 질문 한 번으로 되지 않는다는 것.",
+      "관찰한 것을 실제 옷에 옮기는 연습이기도 했다. '등이 굽으셨다'는 패턴 수정으로, '어깨가 비대칭이다'는 어깨 패드로 이어져야 옷이 실제로 편해진다."
      ]
     }
    },
@@ -2178,7 +2178,7 @@ window.PROJECTS = [
      "Took one senior as my model and met him repeatedly, including outside class hours",
      "Opened not with clothing but with daily life and taste, building the relationship first; the real preferences surfaced only once he was at ease, and those became the design criteria",
      "Let him choose the fabric himself, then built the design around that choice",
-     "Translated observation into specification: patterned the coat around a curved back and arms that swing backward when walking, and added a shoulder pad to compensate for asymmetry once worn",
+     "Built what I observed into the pattern and trims: shaped the coat around his curved back and the way his arms swing back when he walks, and added a shoulder pad to even out his shoulders when worn",
      "He wore the finished coat on the senior runway"
     ],
     "result": [
@@ -2187,8 +2187,8 @@ window.PROJECTS = [
     "detail": {
      "title": "What the project taught",
      "body": [
-      "The best work can only be made by the person who knows the subject best, and knowing them best does not arrive in a single question.",
-      "It was also training in turning observation into specification. 'His back is curved' has to become a pattern correction, and 'his shoulders are uneven' a decision about shoulder padding, before the garment is actually comfortable."
+      "To make clothes the wearer is happy with, knowing that person well matters most, and you do not get there with a single question.",
+      "It was also practice in turning what I saw into the actual garment. 'His back is curved' had to become a pattern change, and 'his shoulders are uneven' a shoulder pad, before the coat was really comfortable."
      ]
     }
    }
@@ -2205,19 +2205,28 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026.01~04",
-  "thumb": "/images/07_engineered_surfaces_interior.jpg",
+  "thumb": "/images/projects/engineered-surfaces/02.jpg",
   "images": [
-   "/images/projects/engineered-surfaces/01.jpg",
    "/images/projects/engineered-surfaces/02.jpg",
-   "/images/projects/engineered-surfaces/03.jpg",
-   "/images/projects/engineered-surfaces/04.jpg",
-   "/images/projects/engineered-surfaces/05.jpg",
-   "/images/projects/engineered-surfaces/06.jpg",
+   "/images/projects/engineered-surfaces/skirt-01.jpg",
+   "/images/projects/engineered-surfaces/skirt-02.jpg",
    "/images/projects/engineered-surfaces/07.jpg",
+   "/images/projects/engineered-surfaces/19.jpg",
+   "/images/projects/engineered-surfaces/20.jpg",
+   "/images/projects/engineered-surfaces/24.jpg",
+   "/images/projects/engineered-surfaces/03.jpg",
+   "/images/projects/engineered-surfaces/01.jpg",
+   "/images/projects/engineered-surfaces/46.jpg",
+   "/images/projects/engineered-surfaces/23.jpg",
+   "/images/projects/engineered-surfaces/06.jpg",
+   "/images/projects/engineered-surfaces/45.jpg",
+   "/images/projects/engineered-surfaces/21.jpg",
    "/images/projects/engineered-surfaces/08.jpg",
    "/images/projects/engineered-surfaces/09.jpg",
    "/images/projects/engineered-surfaces/10.jpg",
    "/images/projects/engineered-surfaces/11.jpg",
+   "/images/projects/engineered-surfaces/ad13.jpg",
+   "/images/projects/engineered-surfaces/ad14.jpg",
    "/images/projects/engineered-surfaces/12.jpg",
    "/images/projects/engineered-surfaces/13.jpg",
    "/images/projects/engineered-surfaces/14.jpg",
@@ -2225,38 +2234,15 @@ window.PROJECTS = [
    "/images/projects/engineered-surfaces/16.jpg",
    "/images/projects/engineered-surfaces/17.jpg",
    "/images/projects/engineered-surfaces/18.jpg",
-   "/images/projects/engineered-surfaces/19.jpg",
-   "/images/projects/engineered-surfaces/20.jpg",
-   "/images/projects/engineered-surfaces/21.jpg",
-   "/images/projects/engineered-surfaces/22.jpg",
-   "/images/projects/engineered-surfaces/23.jpg",
-   "/images/projects/engineered-surfaces/24.jpg",
-   "/images/projects/engineered-surfaces/25.jpg",
-   "/images/projects/engineered-surfaces/26.jpg",
-   "/images/projects/engineered-surfaces/27.jpg",
-   "/images/projects/engineered-surfaces/28.jpg",
-   "/images/projects/engineered-surfaces/29.jpg",
-   "/images/projects/engineered-surfaces/30.jpg",
-   "/images/projects/engineered-surfaces/31.jpg",
-   "/images/projects/engineered-surfaces/32.jpg",
-   "/images/projects/engineered-surfaces/33.jpg",
-   "/images/projects/engineered-surfaces/34.jpg",
-   "/images/projects/engineered-surfaces/35.jpg",
    "/images/projects/engineered-surfaces/36.jpg",
-   "/images/projects/engineered-surfaces/37.jpg",
-   "/images/projects/engineered-surfaces/38.jpg",
-   "/images/projects/engineered-surfaces/39.jpg",
+   "/images/projects/engineered-surfaces/22.jpg",
+   "/images/projects/engineered-surfaces/25.jpg",
    "/images/projects/engineered-surfaces/40.jpg",
-   "/images/projects/engineered-surfaces/41.jpg",
-   "/images/projects/engineered-surfaces/42.jpg",
-   "/images/projects/engineered-surfaces/43.jpg",
-   "/images/projects/engineered-surfaces/44.jpg",
-   "/images/projects/engineered-surfaces/45.jpg",
-   "/images/projects/engineered-surfaces/46.jpg"
+   "/images/projects/engineered-surfaces/43.jpg"
   ],
   "role": {
-   "ko": "실 잣기·염색 · 직조 · 편성 · 펀치니들 · 표면 가공 (단독)",
-   "en": "Spinning and dyeing, weaving, knitting, punch needle, surface work (solo)"
+   "ko": "실 만들기(spinning, plying, 염색) · 직조 · 편성 · 펀치니들 · 표면 가공 (단독)",
+   "en": "Yarn making (spinning, plying, dyeing), weaving, knitting, punch needle, surface work (solo)"
   },
   "spotify": null,
   "spotifyNote": null,
@@ -2268,18 +2254,15 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/engineered-surfaces/44.jpg"
+      "src": "/images/projects/engineered-surfaces/skirt-01.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/04.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/05.jpg"
+      "src": "/images/projects/engineered-surfaces/skirt-02.jpg"
      }
     ],
     "note": {
-     "ko": "펀치니들과 직조로 만든 작품",
-     "en": "Pieces made in punch needle and weaving"
+     "ko": "직조 원단으로 만든 미니스커트",
+     "en": "The mini skirt made from the woven fabrics"
     }
    },
    {
@@ -2291,7 +2274,7 @@ window.PROJECTS = [
      {
       "src": "/images/projects/engineered-surfaces/07.jpg",
       "cap": {
-       "ko": "직접 자은 노벨티 얀",
+       "ko": "직접 만든 노벨티 얀",
        "en": "Novelty yarns I spun"
       }
      },
@@ -2402,6 +2385,12 @@ window.PROJECTS = [
       "src": "/images/projects/engineered-surfaces/11.jpg"
      },
      {
+      "src": "/images/projects/engineered-surfaces/ad13.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/ad14.jpg"
+     },
+     {
       "src": "/images/projects/engineered-surfaces/12.jpg"
      },
      {
@@ -2437,33 +2426,33 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "섬유에서 원단까지: 실 잣기부터 표면 가공까지",
+    "title": "섬유에서 원단까지",
     "cat": "텍스타일 · NC State · 미국 교환학생 · 2026.01~04",
-    "headline": "실을 직접 잣고 염색해, 직조 미니스커트와 펀치니들 작품을 만들었다.",
-    "need": "창문 커튼과 가구 커버용 텍스타일 컬렉션을 만드는 프로젝트. 완성된 원단을 고르는 대신, 섬유가 실이 되고 실이 원단이 되는 과정을 처음부터 직접 거쳤다.",
+    "headline": "나만의 실을 spinning과 plying으로 직접 만들고, 기존 실과 섞어 짠 원단으로 미니스커트를 만들었다.",
+    "need": "실을 만드는 법(염색, spinning, plying)과 그 실로 천을 만드는 법(뜨개질, 위빙, 펀치니들)을 배우고, 이를 적용해 직접 작품을 만드는 프로젝트였다.",
     "action": [
-     "실을 직접 잣고 꼬아 합쳐 노벨티 얀을 만들고 염색",
-     "실의 두께, 질감, 색, 느슨함을 바꿔 가며 직조를 실험하고 미니스커트로 완성",
+     "나만의 실을 spinning과 plying으로 여러 개 만들고 직접 염색",
+     "기존 실과 직접 만든 실을 모두 써서 두께, 질감, 색, 느슨함을 바꿔 가며 위빙 원단을 여러 개 실험하고, 이 원단들을 모아 미니스커트를 만듦",
      "실의 형태에 따라 원단이 떨어지는 느낌과 촘촘함이 어떻게 달라지는지 편성과 직조로 비교",
      "번아웃, 열로 주름을 고정하는 플리츠, 레이저 커팅으로 입체적인 표면을 만듦",
      "펀치니들 작품 위에 홀로그램 오간자를 원형으로 덧대 바느질해, 비눗방울의 무지갯빛 반짝임을 표현"
     ]
    },
    "en": {
-    "title": "From Fibre to Fabric: Spinning to Surface Work",
+    "title": "From Fibre to Fabric",
     "cat": "Textile Design · NC State · Exchange in the US · 2026.01~04",
-    "headline": "I spun and dyed my own yarn, then made a woven mini skirt and a punch needle piece.",
-    "need": "A textile collection for curtains and upholstery. Instead of choosing finished fabric, I took fibre to yarn and yarn to cloth myself.",
+    "headline": "I spun and plied yarns of my own, wove fabrics mixing them with bought yarn, and made a mini skirt from those fabrics.",
+    "need": "The project was to learn how yarn is made (dyeing, spinning, plying) and how yarn becomes cloth (knitting, weaving, punch needle), then put it all to use in my own pieces.",
     "action": [
-     "Spun and plied my own novelty yarns, and dyed them",
-     "Wove with yarns of different thickness, texture, colour and looseness, and finished a mini skirt",
+     "Made several yarns of my own by spinning and plying, and dyed them myself",
+     "Wove many test fabrics with both bought yarn and my own, changing thickness, texture, colour and looseness, then put those fabrics together into a mini skirt",
      "Compared through knitting and weaving how the shape of the yarn changes the way the cloth falls and how dense it is",
      "Built three-dimensional surfaces with burn-out, heat-set pleats and laser cutting",
      "Stitched a circle of sheer holographic organza over the punch needle piece to catch the iridescent shimmer of soap bubbles"
     ]
    }
   },
-  "title": "Engineered Surfaces",
+  "title": "From Fibre to Fabric",
   "desc": "From raw fibre to fabric: hand-spun and dyed novelty yarns, a woven mini skirt, a punch needle piece with holographic organza, and devoré, pleated and laser-cut surfaces."
  },
  {
@@ -2726,12 +2715,12 @@ window.PROJECTS = [
      "통기성, 지속가능성, 자연스러운 부드러움이 좋은 면을 바탕으로 설계해, 실제 원단 프린트까지 진행",
      "포토샵 텍스처 매핑은 기억에 남도록 사람 옷에 더해 반려동물 옷에도 입혀 봄"
     ],
-    "note": "미국 교환학생 수업에서 진행한 프린트, 직조, 니트 세 프로젝트는 각각 다른 과제지만, 모두 한국 모티프를 엮는 하나의 흐름으로 이어진다.",
+    "note": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
     "detail": {
      "title": "왜 비보잉이었나",
      "body": [
       "한국을 잘 모르는 사람들이 한국 모티프를 어떻게 읽는지 직접 확인할 수 있는 기회였고, 처음 보는 사람들 앞에 한국의 미감을 꺼내 놓는 자리이기도 했다.",
-      "하지만 전통 모티프만 늘어놓으면 재미가 없을 것 같았다. 한국의 전통과 지금의 서울을 함께 담고 싶었고, 도시의 역동적인 스트리트 댄스를 떠올렸다. 그래서 비보잉 실루엣을 기와, 호랑이, 무궁화, 전통춤 모티프와 한 화면에 놓아, 힙한 에너지 안에서 전통을 세련되게 풀어냈다."
+      "하지만 전통 모티프만 늘어놓으면 재미가 없을 것 같았다. 한국의 전통과 지금의 서울을 함께 담고 싶었고, 도시의 역동적인 스트리트 댄스를 떠올렸다. 그래서 비보잉 실루엣을 기와, 호랑이, 무궁화, 전통춤 모티프와 한 화면에 놓았다. 교수님과 동기들에게서 힙한 에너지 안에 전통을 세련되게 담았다는 평을 받았다."
      ]
     }
    },
@@ -2747,12 +2736,12 @@ window.PROJECTS = [
      "Designed for cotton, for its breathability, sustainability and natural softness, and printed it on real fabric",
      "For the Photoshop texture mapping I wanted something people would remember, so besides streetwear I put the prints on pet clothes"
     ],
-    "note": "Printed, woven and knit were separate projects in my exchange semester in the US, carried by one thread: Korean motifs.",
+    "note": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
     "detail": {
      "title": "Why breakdance",
      "body": [
       "It was a chance to see first hand how people who barely know Korea read Korean motifs, and to put Korean aesthetics in front of people meeting them for the first time.",
-      "Traditional motifs on their own felt flat, though. I wanted Korean tradition and today's Seoul in the same frame, and thought of the energy of street dance. So the breakdancer silhouettes share each print with roof tiles, tigers, mugunghwa and traditional dance, and the tradition comes through that energy, sharp rather than old."
+      "Traditional motifs on their own felt flat, though. I wanted Korean tradition and today’s Seoul in the same frame, and thought of the energy of street dance. So I put breakdancer silhouettes in the same prints as roof tiles, tigers, mugunghwa and traditional dance. My professor and classmates said it carried tradition with a sharp, hip energy."
      ]
     }
    }
@@ -3011,7 +3000,7 @@ window.PROJECTS = [
      "DesignScope Victor에 적용해 직물로 짰을 때의 모습을 확인하고, 다른 컬러웨이도 전개",
      "포토샵 텍스처 매핑으로 영화 속 의상과 파우치에 입혀 봄"
     ],
-    "note": "미국 교환학생 수업에서 진행한 프린트, 직조, 니트 세 프로젝트는 각각 다른 과제지만, 모두 한국 모티프를 엮는 하나의 흐름으로 이어진다."
+    "note": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
    },
    "en": {
     "title": "Woven Textile Design (Moonlit Thread)",
@@ -3024,7 +3013,7 @@ window.PROJECTS = [
      "Ran them through DesignScope Victor to see them as woven cloth, and added another colourway",
      "Mapped the patterns onto film costumes and a pouch in Photoshop"
     ],
-    "note": "Printed, woven and knit were separate projects in my exchange semester in the US, carried by one thread: Korean motifs."
+    "note": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
    }
   },
   "title": "Woven Textile Design",
@@ -3042,15 +3031,18 @@ window.PROJECTS = [
   "thumb": "/images/projects/textile-knit/cardigans.jpg",
   "images": [
    "/images/projects/textile-knit/cardigans.jpg",
-   "/images/projects/textile-knit/01.jpg",
-   "/images/projects/textile-knit/02.jpg",
    "/images/projects/textile-knit/03.jpg",
-   "/images/projects/textile-knit/04.jpg",
-   "/images/projects/textile-knit/05.jpg",
+   "/images/projects/textile-knit/ad05.jpg",
+   "/images/projects/textile-knit/ad06.jpg",
    "/images/projects/textile-knit/06.jpg",
-   "/images/projects/textile-knit/07.jpg",
+   "/images/projects/textile-knit/ad07.jpg",
    "/images/projects/textile-knit/08.jpg",
-   "/images/projects/textile-knit/09.jpg",
+   "/images/projects/textile-knit/ad08.jpg",
+   "/images/projects/textile-knit/ad09.jpg",
+   "/images/projects/textile-knit/ad01.jpg",
+   "/images/projects/textile-knit/ad02.jpg",
+   "/images/projects/textile-knit/ad03.jpg",
+   "/images/projects/textile-knit/ad04.jpg",
    "/images/projects/textile-knit/10.jpg",
    "/images/projects/textile-knit/11.jpg"
   ],
@@ -3108,14 +3100,14 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/textile-knit/04.jpg",
+      "src": "/images/projects/textile-knit/ad05.jpg",
       "cap": {
        "ko": "메인 디자인, 모든 모티프",
        "en": "Main design with every motif"
       }
      },
      {
-      "src": "/images/projects/textile-knit/05.jpg",
+      "src": "/images/projects/textile-knit/ad06.jpg",
       "cap": {
        "ko": "학 날개를 대칭으로",
        "en": "Crane wings, mirrored"
@@ -3129,7 +3121,7 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/textile-knit/07.jpg",
+      "src": "/images/projects/textile-knit/ad07.jpg",
       "cap": {
        "ko": "구름·학 메달리온 중심",
        "en": "Cloud and crane medallion focus"
@@ -3143,11 +3135,14 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/textile-knit/09.jpg",
+      "src": "/images/projects/textile-knit/ad08.jpg",
       "cap": {
        "ko": "차분한 배색과 스케일",
        "en": "Calmer palette, adjusted scale"
       }
+     },
+     {
+      "src": "/images/projects/textile-knit/ad09.jpg"
      }
     ],
     "note": {
@@ -3162,18 +3157,28 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/textile-knit/02.jpg",
+      "src": "/images/projects/textile-knit/ad01.jpg",
       "cap": {
        "ko": "출발점이 된 고려청자 매병",
        "en": "Starting point: a Goryeo celadon vase"
       }
      },
      {
-      "src": "/images/projects/textile-knit/01.jpg",
+      "src": "/images/projects/textile-knit/ad02.jpg",
       "cap": {
-       "ko": "EasyKnit에서 짠 네 도안",
-       "en": "Four charts built in EasyKnit"
+       "ko": "도안 작업 화면",
+       "en": "Chart work on screen"
       }
+     },
+     {
+      "src": "/images/projects/textile-knit/ad03.jpg",
+      "cap": {
+       "ko": "도안 작업 화면",
+       "en": "Chart work on screen"
+      }
+     },
+     {
+      "src": "/images/projects/textile-knit/ad04.jpg"
      }
     ]
    },
@@ -3210,7 +3215,7 @@ window.PROJECTS = [
      "고려청자의 학 모티프와 원형 메달리온을 니트 도안으로 재구성",
      "Procreate로 모티프를 그리고 포토샵으로 다듬은 뒤, NedGraphics로 패턴을 만들고 EasyKnit으로 니트 도안을 제작"
     ],
-    "note": "미국 교환학생 수업에서 진행한 프린트, 직조, 니트 세 프로젝트는 각각 다른 과제지만, 모두 한국 모티프를 엮는 하나의 흐름으로 이어진다."
+    "note": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다."
    },
    "en": {
     "title": "Knit Textile Design (Celadon Reverie)",
@@ -3221,7 +3226,7 @@ window.PROJECTS = [
      "Rebuilt the celadon crane motif and its round medallions as knit charts",
      "Drew the motifs in Procreate, refined them in Photoshop, built the patterns in NedGraphics and made the knit charts in EasyKnit"
     ],
-    "note": "Printed, woven and knit were separate projects in my exchange semester in the US, carried by one thread: Korean motifs."
+    "note": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project."
    }
   },
   "title": "Knit Textile Design",
@@ -3571,7 +3576,7 @@ window.PROJECTS = [
     "title": "인테리어 텍스타일: 방 하나의 기획, 디자인, 제작",
     "cat": "인테리어 텍스타일 · 4인 팀 · 미국 교환학생 · FTD 374, 2026 봄",
     "headline": "패턴이 가득한 맥시멀리즘 방에는 화려함을 완화할 요소가 필요해 보였다. 그래서 청키 블랭킷을 제안하고 직접 만들었다.",
-    "need": "맥시멀리즘 인테리어 텍스타일 컬렉션을 만들되, \"많이 넣었다\"가 아니라 \"의도적으로 쌓았다\"로 읽혀야 했다. 근거 없이 화려하면 그냥 산만해진다.",
+    "need": "맥시멀리즘 인테리어 텍스타일을 만드는 과제였다. 그냥 많이 넣기만 하면 방이 산만해 보인다. 패턴과 색을 겹겹이 쌓더라도, 일부러 그렇게 고른 것처럼 보여야 했다.",
     "action": [
      "뉴 맥시멀리즘 인테리어 트렌드를 조사",
      "브랜드 3곳을 조사해 모티프와 팔레트를 정할 때 참고",
@@ -3596,7 +3601,7 @@ window.PROJECTS = [
     "title": "Interior Textiles: One Room, Planned, Designed and Made",
     "cat": "Interior Textiles · Team of 4 · Exchange in the US · FTD 374, Spring 2026",
     "headline": "A maximalist room full of pattern seemed to need something to soften it, so I proposed the chunky blanket and made it myself.",
-    "need": "A maximalist interior textile collection had to read as deliberate layering rather than simply “a lot.” Without a reason behind it, bold just becomes noise.",
+    "need": "The brief was maximalist interior textiles. Just putting a lot in makes a room look messy. Even with pattern and colour layered on, it had to look chosen on purpose.",
     "action": [
      "Researched the New Maximalism trend in interiors",
      "Studied three brands for reference when choosing motifs and the palette",
@@ -4242,7 +4247,7 @@ window.PROJECTS = [
    "ko": {
     "title": "데님 디자인 공모전",
     "cat": "데님 디자인 · 공모전 입선 · 2026",
-    "headline": "원단을 자르기 전에 먼저 만들어봤다. AI를 스케치북처럼 썼다.",
+    "headline": "원단을 자르기 전에, 완성된 모습을 AI로 먼저 사진처럼 만들어 봤다.",
     "metrics": [
      {
       "v": "입선",
@@ -4256,11 +4261,12 @@ window.PROJECTS = [
     "need": "본선 작품은 한 벌만 만들 수 있고 원단은 되돌릴 수 없다. 프린트한 그래픽이 실제 데님 위에서 어떻게 보일지, 데미지를 어디까지 내야 물감이 흘러내리는 것처럼 읽힐지, 이걸 원단을 자르기 전에 알아야 했다.",
     "action": [
      "'물감 튜브에서 흘러나온 물감이 데님의 풀린 실로 변한다'는 하나의 서사를 축으로 잡고, 프린트(그래픽)와 리얼 데미지(실)가 옆선에서 이어지도록 설계",
-     "AI로 방향을 먼저 대량으로 만들어 비교: 예선 이미지, 디자인 보드, 룩북 변주, 패치 컬러웨이, 백패치 텍스타일 클로즈업까지 원단을 자르기 전에 눈으로 확인",
+     "원단을 자르기 전에 AI로 실제 사진처럼 만들어 미리 확인: 디자인 디테일과 실루엣, 전체 디자인, 그리고 포토샵으로 만든 그래픽이 실제로 프린트되면 어떻게 보일지(소재에 따라 느낌이 달라지기 때문)",
+     "예선 이미지, 디자인 보드, 룩북, 패치 컬러웨이, 백패치 클로즈업도 AI로 만들어 비교",
      "기존 브랜드 디자인과 겹쳐 보이는 결과물은 표절 위험으로 따로 걸러내고 진행",
      "물감이 점점 흩어지는 그래디언트를 만들고, 그 그래디언트가 끝나는 지점에서 실제 프린지가 시작되도록 앞뒤를 연결",
-     "물감 튜브 그래픽을 ASCII·레트로·애시드·그레인·찢어진 종이·잉크브러시 등 여러 그래픽 언어로 전개해, 같은 오브젝트가 표현 방식에 따라 어디까지 달라지는지 실험",
-     "로우 워시 raw indigo 데님과 아이보리 캔버스 백패치로 소재를 확정하고, 원단을 받아 실물 한 벌을 제작",
+     "물감 튜브 그래픽을 ASCII, 레트로, 애시드, 그레인, 찢어진 종이, 잉크 브러시 등 여러 스타일로 만들어, 표현 방식에 따라 얼마나 달라지는지 비교",
+     "인디고 생지 데님과 아이보리 캔버스 백패치로 소재를 정하고, 원단을 받아 실물 한 벌을 제작",
      "상의 디스트로이드: 스판 데님이라 찢기도 올을 풀기도 쉽지 않아, 칼·드릴·송곳으로 직접 찢고 올을 풀어냄",
      "디스트로이드를 많이 넣어도 상의 실루엣이 무너지지 않도록 레이스를 덧대 고정하고, 찢긴 질감과 레이스의 대비로 디자인에 재미를 더함. 같은 레이스를 바지에도 써서 상하의를 하나로 묶음"
     ],
@@ -4271,16 +4277,16 @@ window.PROJECTS = [
     "detail": {
      "title": "AI를 어떻게 썼나",
      "body": [
-      "AI는 최종 결과물이 아니라 의사결정 도구로 썼다. 원단을 자르기 전에 여러 방향을 눈으로 먼저 비교할 수 있었다.",
+      "AI로 최종 결과물을 만든 게 아니라, 원단을 자르기 전에 여러 방향을 눈으로 비교하는 데 썼다.",
       "특히 물감 그래픽을 AI로 고동색, 인디고, 다크 인디고, 베이지, 아이보리 등 여러 바탕 위에 올려 보며, 실제 원단 위에서 어떻게 보일지 미리 비교한 것이 컸다.",
-      "여러 그래픽 언어를 한 장에 늘어놓고 비교하는 방식 자체가 목적이었다. 하나를 고르기 위해서라기보다, 같은 소재가 표현에 따라 어떤 폭을 갖는지 먼저 알아야 방향을 정할 수 있다고 봤다."
+      "물감 튜브 그래픽을 여러 스타일로 한 장에 늘어놓고 비교했다. 같은 그래픽도 표현 방식에 따라 얼마나 달라지는지 먼저 봐야 방향을 정할 수 있다고 봤다."
      ]
     }
    },
    "en": {
     "title": "D&J Korea Denim Design Challenge",
     "cat": "Denim Design · Competition · Honorable Mention · 2026",
-    "headline": "I built it before cutting the fabric. AI was the sketchbook.",
+    "headline": "Before cutting any fabric, I had AI render the finished piece as a photo first.",
     "metrics": [
      {
       "v": "Honorable Mention",
@@ -4294,11 +4300,12 @@ window.PROJECTS = [
     "need": "A finals entry is one garment, and fabric does not undo. How a printed graphic would sit on real denim, and how far the damage had to go before it read as paint bleeding into thread: all of it had to be known before the first cut.",
     "action": [
      "Built everything on one narrative: paint squeezed from a tube becomes the frayed threads of the denim, with print and real damage meeting at the side seam",
-     "Generated directions in bulk with AI and compared them: the preliminary image, design boards, lookbook variations, patch colorways and back-patch textile close-ups, all seen before the fabric was cut",
+     "Had AI render it like real photos before any fabric was cut: design details and silhouette, the whole design, and how the graphic I made in Photoshop would look once printed (it can feel different depending on the fabric)",
+     "Also made the preliminary image, design boards, lookbook, patch colourways and back-patch close-ups with AI to compare",
      "Set aside any output that looked too close to an existing brand’s design",
      "Scattered the paint into a gradient, and started the real fringe exactly where the gradient ends, connecting front to back",
-     "Ran the paint-tube graphic through several treatments (ASCII, retro, acid, grain, torn paper, ink brush) to see how far the same object could travel by treatment alone",
-     "Settled on low-wash raw indigo denim with an ivory canvas back patch, then built the single garment from the delivered fabric",
+     "Made the paint-tube graphic in several styles (ASCII, retro, acid, grain, torn paper, ink brush) to compare how much it changes with each",
+     "Chose raw indigo denim with an ivory canvas back patch, then made the one garment from the delivered fabric",
      "Distressing the top: stretch denim does not tear or unravel easily, so I opened it by hand with a knife, a drill and an awl, then pulled the threads loose",
      "Backed the heavy distressing with lace so the top kept its silhouette, and let the torn texture play against the lace. The same lace runs into the trousers to tie top and bottom together"
     ],
@@ -4309,9 +4316,9 @@ window.PROJECTS = [
     "detail": {
      "title": "How AI was used",
      "body": [
-      "AI was a decision tool, not the output. It let me compare many directions by eye before cutting any fabric.",
+      "AI did not make the final piece. I used it to compare directions by eye before cutting any fabric.",
       "The biggest gain was trying the paint graphic on many grounds with AI, brown, indigo, dark indigo, beige and ivory, to see how it would look on real fabric before printing.",
-      "Laying the treatments side by side was the point in itself. Less about picking one than about learning the range a single motif has before committing to a direction."
+      "I laid the paint-tube graphic out in many styles on one sheet. I needed to see how much the same graphic changes with the style before I could choose a direction."
      ]
     }
    }
@@ -4748,7 +4755,7 @@ window.PROJECTS = [
    "ko": {
     "title": "독학 바이브코딩으로 만든 포트폴리오",
     "cat": "웹사이트 기획·디자인 · 바이브코딩 · 독학 · 2026",
-    "headline": "프롬프트 몇 줄로 나오는 포트폴리오는 화려하지만 뻔하다. 그래서 하나하나 기획하고, 하나하나 지시했다.",
+    "headline": "프롬프트 몇 줄이면 나오는 AI 포트폴리오는 다 비슷해 보인다. 그래서 구조부터 하나하나 직접 기획하고 지시했다.",
     "metrics": [
      {
       "v": "독학",
@@ -4763,7 +4770,7 @@ window.PROJECTS = [
       "l": "언어 (한국어 · 영어)"
      }
     ],
-    "need": "Manus 같은 도구에 프롬프트 몇 줄만 넣어도 화려한 포트폴리오가 나오는 시대다. 그래서 오히려 다 비슷해 보인다. 매끈하고 번쩍이는, 신세계 같은 사이트는 지루하고 뻔하다고 생각했다. 수만 개의 포트폴리오를 보는 사람이 내 것을 기억하고 좋은 기억으로 가져가게 하려면, 처음부터 끝까지 내가 직접 기획해야 했다. 디자인도 코딩도 전공하지 않았기 때문에, 그 기획을 AI에게 정확히 전달하는 방법부터 혼자 익혀야 했다.",
+    "need": "요즘은 AI에 프롬프트 몇 줄만 넣어도 포트폴리오 사이트가 금방 나온다. 하지만 그렇게 나온 사이트는 AI가 만든 티가 나고 서로 비슷해서, 내 강점을 살리지 못한다고 생각했다. 나는 한 분야만 공부하지 않았기 때문에, 여러 역량을 섹션별로 나눠 보여줄 수 있는 나만의 구조와 레이아웃이 필요했다. 디자인도 코딩도 전공하지 않아서, 이 기획을 AI에게 정확히 전달하는 방법부터 혼자 익혔다.",
     "action": [
      "디자인·코딩 비전공으로, 강의 없이 혼자 익힘: 코드를 직접 치지 않고 AI와 대화하며 만드는 바이브코딩 방식으로 설계하고 고침. 판단과 지시는 끝까지 내가 함",
      "AI를 하나만 쓰지 않고 교차 활용: Manus로 첫 UI 시안, Claude로 실제 구현과 인터랙션, ChatGPT로 이미지, Tripo로 3D",
@@ -4773,11 +4780,11 @@ window.PROJECTS = [
      "사이트의 이미지도 내 작업으로: 실제 프로젝트 사진 중 색감이 예쁘고 무드보드에 맞는 것을 골라 배경에 깔고, 그 위에 트레이싱지를 덮은 느낌을 줌. 대비가 튀는 곳 없이 채도를 낮춰 전체를 부드럽고 힘을 뺀 톤으로 맞춤. 곳곳에 마우스 인터랙션을 넣음",
      "보는 사람의 경험까지 설계: 링크를 받는 순간 뜨는 미리보기 카드부터 인트로의 첫 문장과 같게 맞춤. 프로젝트마다 Spotify 플레이어로 곡을 넣어, 그 분위기 속에서 작업을 보게 함. 곡은 내가 좋아하는 음악보다 프로젝트와 어울리는지에 집중해 고름. 아카이브는 필터별로 볼 수 있게 함",
      "한국어와 영어 두 버전을 모두 제작",
+     "문장도 하나하나 직접 확인: AI가 쓴 초안을 그대로 두지 않고, 사실과 다른 문장, 과장, 번역투를 고침",
      "검토는 리뷰 시트로: 프로젝트, 타임라인, 스킬을 한 페이지에 펼쳐 두고 바꿀 것만 표시해 한 번에 반영. 화면 수정은 같은 각도에서 찍은 전후 화면을 나란히 놓고 비교해 결정"
     ],
     "result": [
-     "인트로 · Selected Work · About · 아카이브 · 연락처와 프로젝트 23개 상세 페이지를 한국어 · 영어로 구현 (2026.10, 계속 다듬는 중)",
-     "AI 도구 4종을 교차로 쓰며, 기획부터 배포까지 혼자 진행"
+     "인트로 · Selected Work · About · 아카이브 · 연락처와 프로젝트 23개 상세 페이지를 한국어 · 영어로 구현 (2026.10, 계속 다듬는 중)"
     ],
     "detail": {
      "title": "AI가 발전해도 사람이 하는 일",
@@ -4791,7 +4798,7 @@ window.PROJECTS = [
    "en": {
     "title": "A Self-Taught, Vibe-Coded Portfolio",
     "cat": "Website Planning & Design · Vibe Coding · Self-taught · 2026",
-    "headline": "A portfolio from a few lines of prompt can be flashy, but it is predictable. So I planned every part and directed every detail.",
+    "headline": "A portfolio made from a few lines of prompt looks like every other one. So I planned the structure myself and directed every detail.",
     "metrics": [
      {
       "v": "Self-taught",
@@ -4806,7 +4813,7 @@ window.PROJECTS = [
       "l": "Languages (Korean, English)"
      }
     ],
-    "need": "Today a few lines of prompt in a tool like Manus can produce a flashy portfolio, which is exactly why they all look alike. Sleek, glittering, futuristic sites felt boring and predictable to me. For someone who looks through thousands of portfolios to remember mine and leave with a good memory of it, I had to plan it myself from start to finish. With no background in design or coding, I first had to teach myself how to hand that plan to AI precisely.",
+    "need": "These days a few lines of prompt are enough for AI to produce a portfolio site. But those sites look AI-made and alike, and I did not think one could show my strengths. I have not studied just one field, so I needed my own structure and layout that could show different skills section by section. With no background in design or coding, I first taught myself how to get that plan across to AI precisely.",
     "action": [
      "No design or coding degree, and no course: I taught myself and built it by vibe coding, typing no code by hand and designing and fixing everything in conversation with AI, while every judgement and instruction stayed mine",
      "Used several AIs together rather than one: Manus for the first UI draft, Claude for the real build and interactions, ChatGPT for images, Tripo for 3D",
@@ -4816,11 +4823,11 @@ window.PROJECTS = [
      "Made the site’s imagery out of my own work: project photos picked for their colour and fit with the moodboard, laid under what feels like tracing paper. Nothing jumps out in contrast; saturation stays low so the whole site reads soft and relaxed. Mouse interactions throughout",
      "Designed the viewer’s experience too: even the preview card that appears when the link is shared opens with the same line as the intro. Each project has a song in a Spotify player, so the work is seen inside a mood. I picked each song for how well it fits the project, not because it is a favourite of mine. The archive can be filtered",
      "Built in both Korean and English",
+     "Checked every sentence myself: instead of keeping AI drafts as they were, I fixed anything untrue, overstated or stiff",
      "Reviewed on a sheet, not in chat: projects, timeline and skills on one page; I mark only what changes and it is applied in one pass. Layout changes were decided by putting before and after side by side, shot from the same angle"
     ],
     "result": [
-     "Intro, Selected Work, About, Archive and Contact plus 23 project pages, in Korean and English (Oct 2026, still being refined)",
-     "Planned, built and deployed alone, with four AI tools used together"
+     "Intro, Selected Work, About, Archive and Contact plus 23 project pages, in Korean and English (Oct 2026, still being refined)"
     ],
     "detail": {
      "title": "What people still do as AI improves",
@@ -4866,14 +4873,14 @@ window.PROJECTS = [
     "cat": "AI 영상 · 공모전 출품 · 2025",
     "need": "2025 APEC 경주 특별전시를 주제로 한 공모전 출품작이다. 유네스코 세계유산에서 아홉 개의 전통 무용을 실제로 촬영하는 건 혼자서는 불가능했다.",
     "action": [
-     "신라 설화 「김현감호」를 첫 장면으로 만들어, 설화에서 이야기를 시작",
-     "신라 수막새 기와 문양이 APEC 로고로 바뀌는 장면을 만들어 과거와 현재를 이음",
-     "아홉 개의 전통 무용을 각기 다른 유네스코 세계유산에 배치하고, 아침에서 밤 순서로 이어지게 구성",
-     "마지막 장면은 황리단길에서 전통 리듬 위에 현대 안무를 겹쳐, 전통이 지금도 이어지고 있다는 것으로 마무리"
+     "신라 설화 「김현감호」로 영상을 시작",
+     "신라 수막새 기와 문양이 APEC 로고로 바뀌는 장면을 넣음",
+     "전통 무용 아홉 가지를 각각 다른 세계유산에 두고, 아침부터 밤까지 시간 순서로 이어지게 구성",
+     "마지막 장면은 황리단길에서 전통 리듬에 현대 안무를 섞어 마무리"
     ],
     "result": null,
     "note": "2025 APEC AI 영상 콘텐츠 공모전(한국콘텐츠진흥원) 출품작 · 생성형 AI로 제작",
-    "headline": "아홉 개의 전통 무용을 아홉 곳의 세계유산에서 펼쳤다. 혼자서는 촬영할 수 없는 규모라 AI로 만들었다.",
+    "headline": "경주의 세계유산 아홉 곳에서 전통 무용 아홉 가지를 보여주는 영상. 혼자서는 촬영할 수 없는 장면이라 AI로 만들었다.",
     "metrics": [
      {
       "v": "9",
@@ -4886,14 +4893,14 @@ window.PROJECTS = [
     "cat": "AI Film · Contest Entry · 2025",
     "need": "An entry on the theme of the 2025 APEC Special Exhibition in Gyeongju. Filming nine traditional dances at UNESCO World Heritage sites was impossible for one person.",
     "action": [
-     "Opened on the Silla legend of Kim Hyeon and the tiger, so the film starts from the folk tale",
-     "Made the Silla roof-tile pattern (sumaksae) turn into the APEC logo, linking past and present",
-     "Set the nine dances at nine different UNESCO World Heritage sites, ordered from morning to night",
-     "Ended in Hwangnidan-gil with modern choreography over traditional rhythm, closing on tradition that is still going on"
+     "Opened with the Silla legend of Kim Hyeon and the tiger",
+     "Added a shot where the Silla roof-tile pattern (sumaksae) turns into the APEC logo",
+     "Set each of the nine dances at a different World Heritage site, in time order from morning to night",
+     "Ended in Hwangnidan-gil, mixing modern choreography into traditional rhythm"
     ],
     "result": null,
     "note": "Entry for the 2025 APEC AI Video Content Contest (Korea Creative Content Agency), made with generative AI",
-    "headline": "Nine traditional dances across nine World Heritage sites. No one could film that alone, so I made it with AI.",
+    "headline": "A film showing nine traditional dances at nine World Heritage sites in Gyeongju. I could not film that alone, so I made it with AI.",
     "metrics": [
      {
       "v": "9",
