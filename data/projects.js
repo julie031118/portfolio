@@ -2437,9 +2437,9 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "Engineered Surfaces",
+    "title": "섬유에서 원단까지: 실 잣기부터 표면 가공까지",
     "cat": "텍스타일 · NC State · 미국 교환학생 · 2026.01~04",
-    "headline": "섬유에서 원단까지: 실을 직접 잣고 염색해, 직조 미니스커트와 펀치니들 작품을 만들었다.",
+    "headline": "실을 직접 잣고 염색해, 직조 미니스커트와 펀치니들 작품을 만들었다.",
     "need": "창문 커튼과 가구 커버용 텍스타일 컬렉션을 만드는 프로젝트. 완성된 원단을 고르는 대신, 섬유가 실이 되고 실이 원단이 되는 과정을 처음부터 직접 거쳤다.",
     "action": [
      "실을 직접 잣고 꼬아 합쳐 노벨티 얀을 만들고 염색",
@@ -2450,9 +2450,9 @@ window.PROJECTS = [
     ]
    },
    "en": {
-    "title": "Engineered Surfaces",
+    "title": "From Fibre to Fabric: Spinning to Surface Work",
     "cat": "Textile Design · NC State · Exchange in the US · 2026.01~04",
-    "headline": "From fibre to fabric: I spun and dyed my own yarn, then made a woven mini skirt and a punch needle piece.",
+    "headline": "I spun and dyed my own yarn, then made a woven mini skirt and a punch needle piece.",
     "need": "A textile collection for curtains and upholstery. Instead of choosing finished fabric, I took fibre to yarn and yarn to cloth myself.",
     "action": [
      "Spun and plied my own novelty yarns, and dyed them",
@@ -3729,17 +3729,14 @@ window.PROJECTS = [
   "period": "2025",
   "thumb": "/images/19_seoul_metro_promo_video.jpg",
   "images": [
-   "/images/projects/seoul-metro/01.jpg",
-   "/images/projects/seoul-metro/02.jpg",
-   "/images/projects/seoul-metro/03.jpg",
-   "/images/projects/seoul-metro/04.jpg",
-   "/images/projects/seoul-metro/05.jpg",
-   "/images/projects/seoul-metro/06.jpg",
-   "/images/projects/seoul-metro/a01.jpg"
+   "/images/projects/seoul-metro/a01.jpg",
+   "/images/projects/seoul-metro/ad03.jpg",
+   "/images/projects/seoul-metro/ad01.jpg",
+   "/images/projects/seoul-metro/01.jpg"
   ],
   "role": {
-   "ko": "일러스트 · 애니메이션 (2인 협업)",
-   "en": "Illustration, animation (two-person collaboration)"
+   "ko": "모션그래픽 · 촬영 · 편집 (2인 협업)",
+   "en": "Motion graphics, filming, editing (two-person collaboration)"
   },
   "spotify": null,
   "spotifyNote": null,
@@ -3757,6 +3754,28 @@ window.PROJECTS = [
        "ko": "‘서울을 잇다’ 문구 장면",
        "en": "Scene with the words ‘Connecting Seoul’"
       }
+     },
+     {
+      "src": "/images/projects/seoul-metro/ad03.jpg",
+      "cap": {
+       "ko": "이태원역 장면",
+       "en": "Itaewon station scene"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "모션그래픽",
+     "en": "MOTION GRAPHICS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/seoul-metro/ad01.jpg",
+      "cap": {
+       "ko": "노선이 하나씩 그려지는 장면들과 마지막 ‘구석구석’ 장면",
+       "en": "Lines drawn one by one, and the last ‘구석구석’ shot"
+      }
      }
     ]
    },
@@ -3767,11 +3786,7 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/seoul-metro/01.jpg",
-      "cap": {
-       "ko": "손그림의 바탕이 된 노선도",
-       "en": "Map behind the hand drawn lines"
-      }
+      "src": "/images/projects/seoul-metro/01.jpg"
      }
     ]
    }
@@ -3779,31 +3794,33 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "서울교통공사 홍보영상",
-    "cat": "일러스트 · 모션그래픽 · 공모전 출품 · 2인 · 2025",
-    "headline": "지하철 노선을 손으로 그려 움직이게 하고, 그 선이 마지막에 글자로 모이게 했다.",
-    "need": "노선도는 정보이지 이야기가 아니다. 공모전 영상에서 노선도를 그대로 보여주면 끝까지 보지 않는다.",
+    "cat": "모션그래픽 · 촬영 · 공모전 출품 · 2인 · 2025",
+    "headline": "노선도 위에 모든 호선을 지나는 글자 ‘구석구석’을 쓰고, 그 장면을 영상의 마지막으로 정했다.",
+    "need": "서울 지하철을 홍보하는 영상 공모전이었다. 지하철로 서울 구석구석을 다니는 사람으로서, 지하철이 서울 구석구석을 잇는다는 걸 뻔하지 않고 재미있게 보여주고 싶었다. 노선을 하나씩 다 보여주면 길고 지루할 것 같았다.",
     "action": [
-     "각 호선을 손그림으로 다시 그려 선 자체가 움직이는 애니메이션으로 전환",
-     "움직이던 선이 마지막에 타이포그래피로 수렴하도록 구성해 메시지를 한 번에 전달",
-     "After Effects로 모션그래픽 작업: 2인 협업 중 일러스트·애니메이션 파트를 담당"
+     "노선도 위에 모든 호선을 지나는 글자 ‘구석구석’을 적어 보고, 이 장면을 영상의 마지막 완성 장면으로 정함",
+     "흰 화면에서 노선 하나가 그려지기 시작해 한 역으로 들어가 서울을 대표하는 역의 모습을 보여주고, 다시 역으로 들어가 환승하면 다른 노선이 이어서 그려지는 흐름으로 구성",
+     "이 흐름이 이어져 모든 노선이 그려지면 노선도가 완성되도록 모션그래픽으로 표현",
+     "모션그래픽, 촬영, 편집 담당 (2인 협업)"
     ],
     "note": "2025 서울교통공사 유튜브 영상 공모전 출품작. 2인 협업."
    },
    "en": {
     "title": "Seoul Metro Promo Video",
-    "cat": "Illustration · Motion · Contest Entry · 2 people · 2025",
-    "headline": "Subway lines, hand-drawn and set moving, resolving at the end into type.",
-    "need": "A transit map is information, not a story. Show it as-is in a contest film and nobody watches to the end.",
+    "cat": "Motion Graphics · Filming · Contest Entry · 2 people · 2025",
+    "headline": "I wrote the word ‘구석구석’ (every corner) across the map so it runs through every line, and made that the last shot of the film.",
+    "need": "It was a contest for a film promoting the Seoul subway. As someone who gets to every corner of Seoul by subway, I wanted to show that it connects every corner of the city, in a way that was fun and not obvious. Showing every line one by one felt too long and dull.",
     "action": [
-     "Redrew each line by hand so the line itself became the animation",
-     "Let the moving lines resolve into typography at the end, delivering the message in one beat",
-     "Built the motion in After Effects; owned illustration and animation in a two-person team"
+     "Wrote the word ‘구석구석’ across the map through every line and made it the finished last shot",
+     "Built the flow from a blank page: one line is drawn, enters a station, shows a station that stands for Seoul, goes back in, transfers, and the next line is drawn",
+     "Carried that flow on in motion graphics until every line is drawn and the map is complete",
+     "Motion graphics, filming and editing (two-person collaboration)"
     ],
     "note": "Entry for the 2025 Seoul Metro YouTube Video Contest. Two-person collaboration."
    }
   },
   "title": "Seoul Metro Promo Video",
-  "desc": "Hand-drawn subway line animations resolving into typography. Two-person collaboration for the 2025 Seoul Metro YouTube Video Contest."
+  "desc": "A Seoul Metro contest film: subway lines drawn one by one through stations until the map is complete, ending on the word ‘구석구석’ (every corner) written across every line. Two-person collaboration."
  },
  {
   "slug": "denim-2026",
@@ -4315,43 +4332,132 @@ window.PROJECTS = [
   "period": "2024",
   "thumb": "/images/projects/fashion-illustration/01.jpg",
   "images": [
-   "/images/projects/fashion-illustration/01.jpg"
+   "/images/projects/fashion-illustration/01.jpg",
+   "/images/projects/fashion-illustration/ad01.jpg",
+   "/images/projects/fashion-illustration/ad02.jpg",
+   "/images/projects/fashion-illustration/ad03.jpg",
+   "/images/projects/fashion-illustration/ad04.jpg",
+   "/images/projects/fashion-illustration/ad05.jpg",
+   "/images/projects/fashion-illustration/ad06.jpg",
+   "/images/projects/fashion-illustration/ad07.jpg",
+   "/images/projects/fashion-illustration/ad08.jpg",
+   "/images/projects/fashion-illustration/ad09.jpg",
+   "/images/projects/fashion-illustration/ad10.jpg"
   ],
   "role": {
-   "ko": "일러스트레이션 (3인 협업 1건 · 개인 1건)",
-   "en": "Illustration (one three-person collaboration, one solo)"
+   "ko": "일러스트레이션 (3인 협업 2건)",
+   "en": "Illustration (two three-person collaborations)"
   },
   "spotify": null,
   "spotifyNote": null,
   "cardThumb": "/images/projects/fashion-illustration/thumb-card.jpg",
+  "sections": [
+   {
+    "title": {
+     "ko": "작업 1 · 고려청자의 우아함과 금속 나무",
+     "en": "WORK 1 · THE GRACE OF GORYEO CELADON AND THE METAL TREE"
+    },
+    "images": [
+     {
+      "src": "/images/projects/fashion-illustration/ad01.jpg",
+      "cap": {
+       "ko": "일러스트레이션 세 컷",
+       "en": "Three illustrations"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "작업 2 · 15개 룩",
+     "en": "WORK 2 · 15 LOOKS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/fashion-illustration/ad02.jpg",
+      "cap": {
+       "ko": "무드보드",
+       "en": "Mood board"
+      }
+     },
+     {
+      "src": "/images/projects/fashion-illustration/ad03.jpg",
+      "cap": {
+       "ko": "일러스트레이션",
+       "en": "Illustration"
+      }
+     },
+     {
+      "src": "/images/projects/fashion-illustration/ad04.jpg",
+      "cap": {
+       "ko": "일러스트레이션",
+       "en": "Illustration"
+      }
+     },
+     {
+      "src": "/images/projects/fashion-illustration/ad05.jpg",
+      "cap": {
+       "ko": "일러스트레이션",
+       "en": "Illustration"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "작업 2 · 도식화",
+     "en": "WORK 2 · FLAT DRAWINGS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/fashion-illustration/ad06.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-illustration/ad07.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-illustration/ad08.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-illustration/ad09.jpg"
+     },
+     {
+      "src": "/images/projects/fashion-illustration/ad10.jpg"
+     }
+    ],
+    "rowTarget": 260
+   }
+  ],
   "nar": {
    "ko": {
     "title": "패션 일러스트레이션 & 도식화",
-    "cat": "일러스트레이션 · 2024",
-    "headline": "아직 없는 옷을 합의하기 위한 그림. 두 개의 컬렉션을 손그림으로만 끝까지 설계했다.",
-    "need": "옷을 만들기 전에 옷을 설명할 수 있어야 한다. 일러스트는 장식이 아니라, 아직 존재하지 않는 옷을 두고 이야기하기 위한 도구다.",
+    "cat": "일러스트레이션 · 3인 협업 · 2024",
+    "headline": "취향이 다 다른 세 사람이 모였다. 컨셉과 무드보드를 기준으로 두고, 각자 원하는 방향을 한 작업의 다른 부분에 나눠 담았다.",
+    "need": "패션 일러스트레이션은 개인의 취향이 잘 드러나는 작업이다. 두 작업 모두 취향이 다른 세 사람이 함께해서, 처음에는 의견을 하나로 합치기가 쉽지 않았다.",
     "action": [
-     "〈고려청자의 우아함과 금속 나무〉: 3인 협업으로 컬렉션 콘셉트와 일러스트를 함께 설계",
-     "Peggy Gou에게서 출발한 오셔닉 컬렉션을 개인 작업으로 전개",
-     "두 작업 모두 패션 일러스트와 도식화(플랫)를 한 세트로 그려 실제로 제작 가능한 형태까지 정리"
+     "우리가 정한 컨셉과 무드보드를 객관적인 기준으로 가운데 두고, 서로의 장점을 합치는 방법을 고민",
+     "〈고려청자의 우아함과 금속 나무〉: 우아하고 세련된 느낌, 금속의 날카롭고 반사되는 질감, 전통적인 느낌으로 의견이 갈리자 실루엣은 우아하게, 텍스처는 메탈릭하게, 배경에는 전통 모티프를 넣고 각자 한 부분씩 맡자고 제안. 모두 만족했고 역할이 나뉘어 효율적으로 진행됨",
+     "두 번째 작업(Peggy Gou와 해파리, 바다거북, 조개 질감 같은 바다 요소에서 출발): 15개 룩을 전개할 수 있어서 직선적인 느낌, 우아한 곡선 같은 각자의 방향을 패턴과 소재에 나눠 적용하고, 그 조합을 룩마다 조금씩 바꿔 모두가 만족하는 컬렉션을 완성",
+     "두 번째 작업은 일러스트와 함께 도식화까지 그림"
     ],
-    "note": "〈고려청자의 우아함과 금속 나무〉는 3인 협업, 오셔닉 컬렉션은 개인 작업이다."
+    "note": "두 작업 모두 3인 협업이다."
    },
    "en": {
     "title": "Fashion Illustration & Flat Drawing",
-    "cat": "Illustration · 2024",
-    "headline": "Drawing as the way to agree on a garment that doesn't exist yet: two collections carried through on paper alone.",
-    "need": "You have to be able to explain a garment before you make it. Illustration isn't decoration; it's how people discuss something that isn't there yet.",
+    "cat": "Illustration · Team of 3 · 2024",
+    "headline": "Three people with very different tastes. With the concept and mood board as the common standard, each person’s direction went into a different part of the work.",
+    "need": "Fashion illustration shows personal taste clearly. Both works were made by three people with different tastes, so bringing the ideas together was not easy at first.",
     "action": [
-     "'The Grace of Goryeo Celadon and the Metal Tree': concept and illustration developed with two collaborators",
-     "An oceanic collection starting from Peggy Gou, developed solo",
-     "Drew fashion illustration and technical flats as a pair for both, to the point where the garments could actually be made"
+     "Put the concept and mood board we had agreed on in the middle as the objective standard, and worked out how to combine each person’s strengths",
+     "‘The Grace of Goryeo Celadon and the Metal Tree’: when we split between elegance, the sharp reflective texture of metal and a traditional feel, I proposed elegance in the silhouette, metal in the texture and traditional motifs in the background, one part each. Everyone was happy, and splitting the roles made the work efficient",
+     "The second work (starting from Peggy Gou and the sea: jellyfish, sea turtles, shell textures): with 15 looks to develop, each person’s direction, from straight lines to elegant curves, went into pattern or material, and the combination shifted a little from look to look, so the collection pleased everyone",
+     "For the second work we drew flat drawings as well as the illustrations"
     ],
-    "note": "'Goryeo Celadon' was a three-person collaboration; the oceanic collection was solo."
+    "note": "Both works were three-person collaborations."
    }
   },
   "title": "Fashion Illustration & Flat Drawing",
-  "desc": "Two sub-projects: ‘The Grace of Goryeo Celadon and the Metal Tree’, a three-person collaboration, and a Peggy Gou-inspired oceanic collection."
+  "desc": "Two three-person collaborations: ‘The Grace of Goryeo Celadon and the Metal Tree’, and a 15-look collection inspired by Peggy Gou and the sea."
  },
  {
   "slug": "portfolio-site",
