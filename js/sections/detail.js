@@ -252,6 +252,8 @@ function renderProject(detail, project, lang) {
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      /* an Instagram reel is vertical: a narrow, tall frame instead of 16:9 (the exchange-year teaser, 2026-10-08) */
+      if (/instagram\.com\//.test(source)) frame.classList.add('detail-film--vertical');
       frame.append(iframe);
       if (filmLabels[index]) {
         const caption = document.createElement('p');
@@ -265,7 +267,15 @@ function renderProject(detail, project, lang) {
       const id = (source.match(/(?:embed\/|youtu\.be\/|[?&]v=)([A-Za-z0-9_-]{6,})/) || [])[1];
       /* Google Drive films (APT: a team file that was never put on YouTube) link back to Drive's own page */
       const driveId = (source.match(/drive\.google\.com\/file\/d\/([A-Za-z0-9_-]{10,})/) || [])[1];
-      if (driveId) {
+      const insta = source.match(/instagram\.com\/(reel|p)\/([A-Za-z0-9_-]+)/);
+      if (insta) {
+        const link = document.createElement('a');
+        link.className = 'detail-film-link';
+        link.href = `https://www.instagram.com/${insta[1]}/${insta[2]}/`;
+        link.target = '_blank'; link.rel = 'noopener noreferrer';
+        link.textContent = translated(SITE.detailUi.watchInstagram, lang) || 'Watch on Instagram ↗';
+        filmSection.append(link);
+      } else if (driveId) {
         const link = document.createElement('a');
         link.className = 'detail-film-link';
         link.href = `https://drive.google.com/file/d/${driveId}/view`;

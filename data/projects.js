@@ -30,8 +30,8 @@ window.PROJECTS = [
   },
   "spotify": "2aSRUHDFrf6202bDqLQIcd",
   "spotifyNote": {
-   "ko": "릴스에 실제로 쓴 곡. 세련된 음악보다 타깃이 바로 반응하는 친근한 음악이 더 효과적이라고 판단했다.",
-   "en": "The song I actually used in the Reels. For this audience, a familiar song they react to at once worked better than a polished one."
+   "ko": "릴스에 실제로 쓴 곡. 최신곡보다 이런 친근한 음악을 넣었을 때 조회수가 눈에 띄게 늘었다.",
+   "en": "The song I actually used in the Reels. Views rose visibly once I used familiar songs like this instead of new releases."
   },
   "small": [
    "/images/projects/miraen/06.jpg",
@@ -171,25 +171,26 @@ window.PROJECTS = [
       "l": "채널 0에서 시작, 3개월 만에"
      }
     ],
-    "need": "본사 계정이 아니라, 지사장 한 명이 새로 연 가맹 지사의 계정이었다. 인스타그램도 유튜브도 블로그도, 네이버 지도 등록조차 없는 0의 상태. 학원은 검색에서 선택되는데 검색 결과에 브랜드가 존재하지 않았다.",
+    "need": "본사 계정이 아니라, 지사장 한 명이 새로 연 가맹 지사의 계정이었다. 인스타그램도 유튜브도 블로그도 없고, 네이버 지도 등록조차 안 된 0의 상태였다. 학원은 보통 검색으로 고르는데, 이 지사는 검색해도 나오지 않았다.",
     "action": [
      "주 타깃인 40~50대 여성 학부모가 실제로 보는 릴스와, 잘 되는 학원 계정·동종업계 브랜드를 먼저 분석해 제작 규칙을 세움: 큰 글씨, 느린 속도, 세련된 미감보다 \"잘 보이는 것\"",
      "브랜드 캐릭터 '미래'를 실존 인물처럼 연출하고, 2D 캐릭터를 AI로 3D화해 움직이는 형태로 릴스에 투입",
-     "학교 앞 오프라인 홍보를 직접 촬영해 \"나영지사장이 떴다 N탄 N초\" 시리즈로 포맷을 고정. 광고를 콘텐츠로 전환한 것이 전환점이 됨",
+     "학교 앞 오프라인 홍보를 직접 촬영해 \"나영지사장이 떴다 N탄 N초\" 시리즈로 형식을 고정. 홍보 현장 자체를 콘텐츠로 만든 이 시리즈부터 조회수가 크게 오름",
      "인스타그램·유튜브·네이버 블로그를 0에서 개설하고, 스마트플레이스 세팅과 검색·유튜브 유료광고까지 직접 집행"
     ],
     "result": [
-     "팔로워 0에서 시작한 지사 계정에서 릴스 최고 조회수 2.9만 · 차순위 2.8만 (오프라인 홍보 시리즈). 초반 세 자리 수에서 시리즈 도입 후 전환",
+     "팔로워 0에서 시작한 지사 계정에서 릴스 최고 조회수 2.9만, 그다음 2.8만 (오프라인 홍보 시리즈). 시리즈 전에는 조회수가 세 자리 수였음",
      "사업설명회 릴스 2.2만",
-     "채널이 하나도 없던 상태에서 시작해, 인스타그램 개설 3개월 만에 지사장 5월 우수지사장상 수상"
+     "채널이 하나도 없던 상태에서 시작해, 인스타그램 개설 3개월 만에 지사장이 5월 우수지사장상 수상"
     ],
     "detail": {
      "title": "어떻게 판단했나",
      "body": [
-      "분석에서 뽑은 규칙: 글씨는 크고 잘 보여야 한다. 속도는 빠르면 안 된다. 음악은 최신 아이돌곡도 잘 먹히고 예전 인기곡을 섞어도 좋다. 미감이 세련될 필요는 없고, 잘 보이는 것이 우선이다.",
+      "분석에서 뽑은 규칙: 글씨는 크고 잘 보여야 한다. 속도는 빠르면 안 된다. 음악은 최신 아이돌곡도 반응이 좋지만, 친근한 음악이 더 반응이 좋다. 요즘 릴스는 대부분 최신곡을 쓰니, 둘을 섞되 친근한 음악도 꼭 넣는다. 미감이 세련될 필요는 없고, 잘 보이는 것이 우선이다.",
       "사람 얼굴이 들어가야 신뢰가 생긴다고 보고 지사장을 최대한 노출시켰다. 동시에 학원은 결국 아이들을 대상으로 하는 사업이므로, 캐릭터 '미래'의 지속 노출을 두 번째 축으로 잡았다.",
-      "오프라인 홍보 시리즈에서는 \"미래야 힘들었지~\", \"미래야 수고했어\" 같은 지사장과 캐릭터의 대화를 자막으로 연출해 인간미와 친근함을 같이 만들었다. 아이들이 '미래' 앞에 모여드는 순간에는 싸이 노래를 얹었다. 이 타깃에게는 세련된 음악보다 친근한 음악이 훨씬 효과적이었다.",
-      "시리즈는 5탄까지 이어가며 신현초, 장평초처럼 학교별로 회차를 나눴다. 각 회차는 독립 콘텐츠로, 포맷은 고정."
+      "오프라인 홍보 시리즈에서는 \"미래야 힘들었지~\", \"미래야 수고했어\" 같은 지사장과 캐릭터의 대화를 자막으로 연출해 인간미와 친근함을 같이 만들었다. 아이들이 '미래' 앞에 모여드는 순간에는 싸이 노래를 얹었다. 최신곡 대신 이렇게 친근한 음악을 넣자 조회수가 눈에 띄게 늘었다.",
+      "시리즈는 5탄까지 이어가며 신현초, 장평초처럼 학교별로 회차를 나눴다. 각 회차는 독립 콘텐츠로, 포맷은 고정.",
+      "인체공학적 의복디자인 수업에서는 어르신 한 분을 여러 번 만나 입는 사람을 이해했고, 미래엔에서는 지표를 읽어 보는 사람을 이해했다. 방법은 달랐지만, 내 취향이 아니라 받는 사람에게 맞춘다는 점은 같았다."
      ]
     }
    },
@@ -211,25 +212,26 @@ window.PROJECTS = [
       "l": "3 months after starting from zero"
      }
     ],
-    "need": "Not the head office account: a franchise branch one director had just opened. No Instagram, YouTube or blog, not even a Naver Map listing. Academies are chosen through search, and the brand did not exist in the results.",
+    "need": "Not the head office account but a franchise branch one director had just opened, starting from zero: no Instagram, YouTube or blog, not even a Naver Map listing. People usually find an academy by searching, and this branch did not show up.",
     "action": [
      "Started by analysing the Reels that the core audience, mothers in their 40s to 50s, actually watch, plus the best-performing academy accounts and brands in the category, and turned that into production rules: large type, slower pacing, \"clearly visible\" over \"beautifully designed\"",
      "Treated the brand character Mirae as a real personality, and used AI to turn the 2D character into a moving 3D one for Reels",
-     "Filmed the street promotions outside schools myself and locked them into a series format: \"Director Nayeong is here, part N, N seconds\". Turning advertising into content was the turning point",
+     "Filmed the street promotions outside schools myself and fixed them as a series: \"Director Nayeong is here, part N, N seconds\". Views rose sharply from this series, which turned the promotion itself into content",
      "Launched Instagram, YouTube and Naver Blog from zero, set up SmartPlace, and ran paid search and YouTube campaigns directly"
     ],
     "result": [
-     "Top Reel 29,000 views on a branch account that started from zero followers; second 28,000 (the offline-promotion series), up from the hundreds before the series",
+     "Top Reel 29,000 views on a branch account that started from zero followers, then 28,000 (the street-promotion series). Before the series, views were in the hundreds",
      "Business-briefing Reel: 22,000 views",
      "Starting with no channels at all, the branch director won the May Excellence Award three months after the Instagram launch"
     ],
     "detail": {
      "title": "How the calls were made",
      "body": [
-      "The rules that came out of the analysis: type must be large and legible. Pacing must not be fast. Current idol tracks work, and older hits mixed in work too. The work does not need to look sophisticated; it needs to be readable.",
+      "The rules that came out of the analysis: type must be large and legible. Pacing must not be fast. New idol tracks get a good response, but familiar songs get a better one. Most Reels now use new releases, so mix the two and always include some familiar songs. The work does not need to look sophisticated; it needs to be readable.",
       "A human face builds trust, so I put the branch director on camera as much as possible. And since an academy ultimately sells to children, continuous exposure of the character Mirae became the second axis.",
       "In the street-promotion series, subtitle dialogue between the director and Mirae (\"Mirae, that was tough, wasn't it?\") brought warmth and familiarity together. When children gathered around Mirae I scored the moment with a PSY track. With this audience a familiar song beat a stylish one by a wide margin.",
-      "The series ran to five parts, one per school, each episode standalone, the format fixed."
+      "The series ran to five parts, one per school, each episode standalone, the format fixed.",
+      "In the ergonomic clothing class I came to understand the wearer by meeting one senior many times; at MiraeN I understood the audience by reading the numbers. Different methods, the same rule: fit the person on the receiving end, not my own taste."
      ]
     }
    }
@@ -270,7 +272,18 @@ window.PROJECTS = [
    "ko": "미국 교환학생 1년을 담은 영상이라 미국 보이그룹의 노래를 골랐다. 내가 태어나기 전 곡인데도, 들으면 미국의 햇빛 아래 빨간 차로 드라이브하는 장면이 떠오른다.",
    "en": "A year on exchange in the US, so an American boy band. It came out before I was born, yet it always puts me in a red car, driving through American sunlight."
   },
-  "video": "https://www.youtube.com/embed/GhNy8TXhi-0",
+  "video": "https://www.youtube.com/embed/Vx8FLDGOt90",
+  "video2": "https://www.instagram.com/reel/DcFcT-YzNBE/embed/",
+  "filmLabels": {
+   "ko": [
+    "공모전 출품 영상 (유튜브)",
+    "30초 세로 티저 (인스타그램 릴스)"
+   ],
+   "en": [
+    "Contest film (YouTube)",
+    "30-second vertical teaser (Instagram Reels)"
+   ]
+  },
   "sections": [
    {
     "title": {
@@ -352,54 +365,54 @@ window.PROJECTS = [
    "ko": {
     "title": "교환학생 후기 영상: 1년을 10분과 30초로",
     "cat": "콘텐츠 시스템 기획 · 영상 · 서울대 교환학생 국외수학후기 공모전 출품 · 2026.07~08",
-    "need": "NC State 윌슨 텍스타일 대학 교환 1년치 영상과, 후배들이 실제로 필요로 하는 비자·비용·주거 정보가 동시에 있었다. 문제는 이 둘을 한 포맷에 담을 수 없다는 것이었다. 정보를 다 넣으면 볼 수 없는 영상이 되고, 빼면 정작 필요한 사람에게 쓸모없어진다.",
+    "need": "NC State 윌슨 텍스타일 대학 교환 1년치 영상이 있었다. 처음부터 재미뿐 아니라 정보도 주는 영상을 만들고 싶었다. 나도 교환을 가기 전에 정보를 많이 찾아봤던 입장이라, 비자·비용·주거 정보가 필요한 후배들을 돕고 싶었다. 다만 정보를 다 넣으면 끝까지 보기 힘든 영상이 된다.",
     "action": [
-     "분량이 아니라 기능으로 프로젝트를 쪼갬: 보는 사람 입장에서 \"이게 재미있을까?\"를 기준으로 만든 10분 내러티브 영상(공모전 규정 분량 9~11분에 맞춤, 유튜브) + 비자 절차·실제 비용·주거 단계를 담은 7페이지 문서(무료 배포)로 분리",
-     "재미를 우선하되 영상에도 필요한 정보는 함께 담고, 정보가 나온다는 사실을 영상 맨 앞에 미리 공지",
-     "긴 영상은 발견되지 않는다는 점을 전제로, 본편을 잘라낸 게 아니라 자체 훅과 호흡을 가진 30초 세로형 티저를 따로 제작해 숏폼에서 본편으로 유입되도록 설계",
-     "1년간 만난 동기·교수·업계 관계자가 한국어 사용자만이 아니라는 점을 반영해 전편 영어 자막 제작",
-     "같은 캡션을 복사하지 않고 채널별로 프레이밍을 다시 씀: 맥락을 이미 아는 네트워크를 위한 링크드인용 전문가 서사와, 훅과 호흡이 다른 인스타그램·유튜브용 버전"
+     "영상과 문서로 나눔: ‘이게 재미있을까?’를 기준으로 만든 10분 영상(공모전 규정 9~11분, 유튜브)과, 비자 절차·실제 비용·주거를 정리한 7페이지 문서(무료 배포)",
+     "재미를 먼저 생각하되 꼭 필요한 정보는 영상에도 넣고, 영상 첫머리에서 정보가 나온다고 미리 알림",
+     "본편을 그대로 잘라 쓰지 않고 30초 세로 티저를 따로 만듦: 숏폼에 맞게 배경음악 박자에 따라 이미지가 빠르게 바뀌도록 하고, 세로 화면에 맞춰 이미지 구성과 비율을 다시 편집",
+     "1년 동안 만난 동기, 교수님, 업계 사람들이 모두 한국어를 쓰지는 않아서 전편에 영어 자막을 넣음",
+     "채널마다 소개 글을 따로 씀: 링크드인에는 1년 동안 만난 사람들을 생각한 글로, 인스타그램과 유튜브에는 짧고 가볍게"
     ],
     "result": [
-     "숏폼 티저: 팔로워 28명 · 게시물 5개인 신규 계정에서 조회수 1,655회, 팔로워 수의 59배 도달",
+     "숏폼 티저: 팔로워 28명인 신규 계정에서 조회수 1,677회, 팔로워 수의 약 60배 (2026.10 기준)",
      "서울대학교 교환학생 국외수학후기 공모전 출품, 결과 발표 대기 중"
     ],
-    "headline": "정보량과 시청성이 충돌했다. 분량이 아니라 기능으로 포맷을 쪼갰다.",
+    "headline": "재미와 정보를 둘 다 담고 싶었다. 그래서 보는 영상과 읽는 문서로 나눴다.",
     "metrics": [
      {
-      "v": "1,655",
+      "v": "1,677",
       "l": "티저 조회수"
      },
      {
-      "v": "×59",
-      "l": "팔로워 수 대비 도달"
+      "v": "×60",
+      "l": "팔로워 수 대비 조회수"
      }
     ]
    },
    "en": {
     "title": "Exchange Year Recap: a year in ten minutes and thirty seconds",
     "cat": "Content System Design · Film · SNU Exchange Study-Abroad Review Contest entry · Jul to Aug 2026",
-    "need": "After a year-long exchange at NC State's Wilson College of Textiles, I had a year of footage and a mountain of practical information juniors actually needed, and no single format that could hold both. Dense enough to cover visas, costs and housing, and it stops being watchable; skip all that, and it stops being useful to the people it's for.",
+    "need": "I had a year of footage from my exchange at NC State’s Wilson College of Textiles. From the start I wanted the film to give information as well as be fun. I had searched a lot myself before I left, so I wanted to help juniors who need visa, cost and housing information. But put all of it in, and the film gets hard to watch to the end.",
     "action": [
-     "Split the project by function, not length: a 10-minute narrative video for YouTube (cut to the contest’s 9 to 11 minute format) built on one question from the viewer’s side, \"would this be fun to watch?\", plus a separate 7-page document, free to share, holding everything reference-heavy",
-     "Fun came first, but the film still carries the key information, and says so up front, in its opening",
-     "Treated discovery as a design problem: cut a 30-second vertical teaser with its own hook and pacing rather than a trimmed copy of the long video, built to pull viewers back to the full story",
-     "Added English subtitles throughout, since the classmates, professors and industry contacts this story was relevant to weren't only Korean speakers",
-     "Rewrote the framing per channel instead of reposting one caption: a professional throughline for LinkedIn, a different hook and pacing for Instagram and YouTube"
+     "Split it into a film and a document: a 10-minute video for YouTube (within the contest’s 9 to 11 minutes) built around one question, “would this be fun to watch?”, and a free 7-page document on visa steps, real costs and housing",
+     "Fun came first, but the key information is in the film too, and the opening says so",
+     "Made a separate 30-second vertical teaser instead of trimming the main film: images cut fast on the beat of the music, as short-form video works, with composition and proportions re-edited for the vertical screen",
+     "Added English subtitles throughout, since not everyone I met that year, classmates, professors and people in the industry, speaks Korean",
+     "Wrote a separate caption for each channel: on LinkedIn for the people I met over the year, short and light on Instagram and YouTube"
     ],
     "result": [
-     "Short-form teaser: 1,655 views from a new account with 28 followers and 5 posts, 59x its follower count",
+     "Short-form teaser: 1,677 views on a new account with 28 followers, about 60 times its follower count (Oct 2026)",
      "Entered in the SNU Exchange Student Study-Abroad Review Contest, results pending"
     ],
-    "headline": "Information and watchability were in conflict, so I split the project by function, not length.",
+    "headline": "I wanted it to be fun and useful at once, so I split it into a film to watch and a document to read.",
     "metrics": [
      {
-      "v": "1,655",
+      "v": "1,677",
       "l": "teaser views"
      },
      {
-      "v": "59×",
-      "l": "its follower count"
+      "v": "×60",
+      "l": "views per follower"
      }
     ]
    }
@@ -443,8 +456,8 @@ window.PROJECTS = [
    "/images/projects/ai-short-film/20.jpg"
   ],
   "role": {
-   "ko": "기획 · 대사 · 컷 구성 · 연출 · 영상 · 음악 · 보이스 · 자막 (단독, 전 과정 AI)",
-   "en": "Concept, dialogue, shot list, direction, video, music, voice, subtitles (solo, all made with AI)"
+   "ko": "기획 · 연출 · 프롬프트 디렉팅 · 편집 (단독, AI 활용)",
+   "en": "Concept, direction, prompt directing, editing (solo, made with AI)"
   },
   "spotify": "6D6HVKe7Qu3imn4zzJD0W9",
   "spotifyNote": {
@@ -596,23 +609,25 @@ window.PROJECTS = [
     "cat": "AI 영상 · 연출 · 대상",
     "need": "감정을 숫자로 관리하는 사회라는 설정은 현실에서 촬영할 수 없었고, 배우도 없었다. AI로 본격적으로 작품을 만든 건 이 작업이 처음이었다.",
     "action": [
-     "기분 조절 약으로 일정한 행복을 유지하고 감정을 숫자로 관리하는 사회, 약이 떨어진 주인공이 지워 둔 감정과 마주하는 이야기를 직접 씀",
-     "기획·대사·컷 구성·세부 연출부터 영상·음악·보이스·자막까지 전부 AI로 제작: Midjourney(세계관·캐릭터), Kling AI(영상), Suno·Riffusion(음악), ElevenLabs(보이스)",
-     "컷이 바뀌어도 같은 인물, 같은 세계로 보이도록 일관성을 유지하는 데 가장 공을 들임",
-     "무너지는 순간을 결말이 아니라 인간다움의 시작점에 두고, '괜찮다는 것'의 의미를 관객에게 되묻는 구조로 편집"
+     "메인 컨셉과 주제, 큰 줄거리는 직접 정함: 기분 조절 약으로 늘 같은 행복을 유지하고 감정을 숫자로 관리하는 사회에서, 약이 떨어진 주인공이 지워 둔 감정과 마주하는 이야기",
+     "세부 줄거리와 컷 구성, 대사는 ChatGPT와 함께 짜고 여러 번 고침",
+     "이미지와 영상은 Midjourney와 Kling AI, 음악은 Suno와 Riffusion, 보이스는 ElevenLabs로 만듦",
+     "컷이 바뀌어도 같은 인물, 같은 세계로 보이도록 맞추는 데 가장 공을 들임",
+     "주인공이 무너지는 순간을 가장 인간다운 순간으로 둠: 사람은 원래 감정이 무너질 수 있고, 늘 완벽하게 행복한 게 오히려 이상하다. 약으로 행복을 유지하던 상태가 비인간적인 것이었다",
+     "제목을 ‘HAPPINESS IS INTELLIGENCE.’에서 ‘HAPPINESS IS INTELLIGENCE?’로 바꿔, 행복의 진짜 의미가 무엇인지 생각하게 함"
     ],
     "result": [
-     "서울대 AI 영화제작 프로그램 대상 (2025)",
+     "서울대학교 중앙도서관 디지털 리터러시 아카데미 〈AI로 만드는 영화클래스〉 대상 (2025, 중앙도서관장 표창)",
      "이 작업 이후 내 작업에 AI를 본격적으로 더하기 시작함"
     ],
-    "headline": "배우도 촬영도 없이, 처음부터 끝까지 AI로 만든 단편영화.",
+    "headline": "배우도 촬영도 없이 AI로 만든 단편영화.",
     "metrics": [
      {
       "v": "대상",
-      "l": "서울대 AI 영화제작 프로그램 2025"
+      "l": "서울대 중앙도서관 〈AI로 만드는 영화클래스〉 2025"
      }
     ],
-    "note": "2025년 여름 당시의 Midjourney로 만든 영상이다. AI가 워낙 빠르게 발전해서, 지금 보면 AI 티가 나는 장면이 있다.",
+    "note": "2025년 여름 당시의 Midjourney와 Kling AI로 만든 영상이다. AI가 워낙 빠르게 발전해서, 지금 보면 AI 티가 나는 장면이 있다.",
     "detail": {
      "title": "무엇을 말하고 싶었나",
      "body": [
@@ -626,23 +641,25 @@ window.PROJECTS = [
     "cat": "AI Film · Direction · Grand Prize",
     "need": "A society that manages feelings by numbers could not be filmed for real, and there were no actors. It was the first time I made a full piece with AI.",
     "action": [
-     "Wrote the story: a society where daily mood-control pills hold everyone at a constant happiness and feelings are managed by numbers, and a protagonist who runs out of pills and meets the feelings she had erased",
-     "Made every part with AI: concept, dialogue, shot list, detailing, video, music, voice, subtitles: Midjourney (world and characters), Kling AI (video), Suno and Riffusion (music), ElevenLabs (voice)",
-     "Put the most effort into consistency, so the same person and the same world held from cut to cut",
-     "Cut it to turn the question of what \"being okay\" means back on the audience, with the breakdown placed not as an ending but as the start of something human"
+     "Set the main concept, theme and story myself: a society where mood-control pills keep everyone at the same level of happiness and feelings are managed by numbers, and a protagonist who runs out of pills and meets the feelings she had erased",
+     "Worked out the detailed storyline, shot list and dialogue with ChatGPT, revising them many times",
+     "Made the images and video in Midjourney and Kling AI, the music in Suno and Riffusion and the voice in ElevenLabs",
+     "Put the most effort into keeping the same person and the same world from cut to cut",
+     "Treated the protagonist’s breakdown as her most human moment: people’s feelings can fall apart, and being perfectly happy all the time is what is strange. Keeping happiness up with pills was the inhuman state",
+     "Changed the title from ‘HAPPINESS IS INTELLIGENCE.’ to ‘HAPPINESS IS INTELLIGENCE?’ to make the audience think about what happiness really means"
     ],
     "result": [
-     "Grand Prize, SNU AI Filmmaking Program (2025)",
+     "Grand Prize, SNU Central Library Digital Literacy Academy ‘AI Filmmaking Class’ (2025, awarded by the Director of the Central Library)",
      "The point from which I started building AI into my work in earnest"
     ],
-    "headline": "A short film with no actors and no shoot, made with AI from start to finish.",
+    "headline": "A short film made with AI, with no actors and no shoot.",
     "metrics": [
      {
       "v": "Grand Prize",
-      "l": "SNU AI Filmmaking Program 2025"
+      "l": "SNU Central Library AI Filmmaking Class 2025"
      }
     ],
-    "note": "Made with Midjourney as it was in summer 2025. AI has moved so fast that some shots now read as AI.",
+    "note": "Made with Midjourney and Kling AI as they were in summer 2025. AI has moved so fast that some shots now read as AI.",
     "detail": {
      "title": "What I wanted to say",
      "body": [
@@ -653,7 +670,7 @@ window.PROJECTS = [
    }
   },
   "title": "AI Short Film",
-  "desc": "A speculative short about emotion regulated by numbers and mood-control pills. Grand Prize, SNU AI Filmmaking 2025.",
+  "desc": "A speculative short about emotion regulated by numbers and mood-control pills. Grand Prize, SNU Central Library ‘AI Filmmaking Class’ 2025.",
   "song": "keshi drunk",
   "songYoutube": "https://www.youtube.com/watch?v=4HLumkaPcCI"
  },
@@ -1096,10 +1113,9 @@ window.PROJECTS = [
     "title": "2024 SNU 패션쇼 〈형(形)〉",
     "cat": "컬렉션 · 런웨이 · 팀 프로젝트 · 2024.03~10",
     "headline": "디자이너로 컬렉션을 만들고, 홍보팀으로 그 컬렉션을 알렸다.",
-    "need": "학과 패션쇼는 옷이 완성되면 끝난다. 하지만 완성된 컬렉션을 아무도 모르면 런웨이 하루로 끝나 버린다.",
+    "need": "패션쇼는 몇 달에 걸쳐 준비하지만, 전시처럼 오래 걸어 두는 게 아니라 정해진 날, 정해진 장소에서 한 번 열리는 쇼다. 그래서 그 시간에 사람들을 불러 모으는 홍보가 중요했고, 매년 열리는 학과 패션쇼인 만큼 우리만의 차별점도 필요했다.",
     "action": [
-     "쇼 전체 주제 '형(形)'을 내 룩으로 풀어, 디자인부터 의상 제작까지 직접 진행",
-     "플랫 스케치 → 가봉 → 최종 런웨이 룩까지 제작 전 과정을 직접 진행",
+     "쇼 전체 주제 '형(形)'을 내 룩으로 풀고, 플랫 스케치부터 가봉, 최종 런웨이 룩까지 직접 제작",
      "단단한 테일러링과 부드러운 쉬폰의 흐르는 실루엣을 대비",
      "크기가 다른 원을 쉬폰에 프린트하고 겹겹이 레이어링해, 선명한 원의 테두리를 일부러 흐리게 만듦",
      "완성된 컬렉션을 알리는 숏폼 영상 제작과 인스타그램 운영을 직접 맡음",
@@ -1121,7 +1137,7 @@ window.PROJECTS = [
      },
      {
       "label": "홍보팀",
-      "need": "학과 패션쇼는 옷이 완성되면 끝난다. 하지만 완성된 컬렉션을 아무도 모르면 런웨이 하루로 끝나 버린다.",
+      "need": "패션쇼는 몇 달에 걸쳐 준비하지만, 전시처럼 오래 걸어 두는 게 아니라 정해진 날, 정해진 장소에서 한 번 열리는 쇼다. 그래서 그 시간에 사람들을 불러 모으는 홍보가 중요했고, 매년 열리는 학과 패션쇼인 만큼 우리만의 차별점도 필요했다.",
       "action": [
        "옷이 완성되는 과정부터 촬영해 숏폼 영상으로 편집. 쇼 당일이 아니라 준비 기간부터 인스타그램 운영",
        "인스타그램 피드를 매거진처럼 구성",
@@ -1138,10 +1154,9 @@ window.PROJECTS = [
     "title": "2024 SNU Fashion Show: Form",
     "cat": "Collection · Runway · Team · 2024.03~10",
     "headline": "As a designer I made the collection; on the promotion team I made sure it was seen.",
-    "need": "A school runway show ends when the garments are finished. If nobody hears about the collection, one evening is all it gets.",
+    "need": "A fashion show takes months to prepare, but it is not an exhibition left up for weeks: it happens once, at a set time and place. So the promotion that brings people there at that moment mattered, and since the department holds a show every year, ours needed something of its own.",
     "action": [
-     "Took the show's overall theme 'Form' into my own looks, from design through construction",
-     "Ran the full build: flat sketch, muslin fitting, final runway look",
+     "Took the show's theme 'Form' into my own looks and made them myself, from flat sketch through muslin fitting to the final runway look",
      "Set rigid tailoring against the flowing silhouette of soft chiffon",
      "Printed circles of many sizes on chiffon and layered them, so the sharp edges blur on purpose",
      "Produced the short-form promo video and ran the Instagram account",
@@ -1162,7 +1177,7 @@ window.PROJECTS = [
      },
      {
       "label": "Promotion team",
-      "need": "A school runway show ends when the garments are finished. If nobody hears about the collection, one evening is all it gets.",
+      "need": "A fashion show takes months to prepare, but it is not an exhibition left up for weeks: it happens once, at a set time and place. So the promotion that brings people there at that moment mattered, and since the department holds a show every year, ours needed something of its own.",
       "action": [
        "Filmed the garments from the making stage and cut them into short-form video. Instagram ran from the preparation period, not just on show day",
        "Laid the Instagram feed out like a magazine",
@@ -1311,12 +1326,11 @@ window.PROJECTS = [
    "ko": {
     "title": "SNUFESTIVAL 브랜딩: RIO",
     "cat": "브랜딩 · 비주얼 아이덴티티",
-    "need": "축제 공식 캐릭터 RIO는 존재했지만, 참가자가 실제로 만지고 찍고 가져가는 접점이 없었다. 캐릭터가 포스터 안에만 머물면 아이덴티티는 기억되지 않는다.",
+    "need": "축제 캐릭터 RIO의 존재감을 더 키우고, RIO를 활용해 포토부스, 스탬프, 굿즈, 카드뉴스 같은 여러 작업을 해야 했다.",
     "action": [
-     "RIO를 단일 이미지가 아닌 확장 가능한 비주얼 시스템으로 재정의",
      "참가자가 직접 사용하는 접점으로 전개: 포토부스 프레임, 이벤트 스탬프, 에어팟·버즈 케이스 일러스트",
      "인스타그램 카드뉴스를 만들어 온라인에서도 같은 톤을 이어감",
-     "포맷이 달라져도 캐릭터가 같은 인물로 읽히도록 비율·선·컬러 규칙을 통일"
+     "팀이 함께 비율·선·컬러 규칙을 정해, 포맷이 달라져도 같은 캐릭터로 보이게 그림"
     ],
     "result": [
      "포토부스: 행사 기간 내내 대기줄이 이어졌고, 참가자들이 프레임 사진을 인스타그램 스토리에 올림",
@@ -1333,12 +1347,11 @@ window.PROJECTS = [
    "en": {
     "title": "SNUFESTIVAL Branding: RIO",
     "cat": "Branding · Visual Identity",
-    "need": "RIO, the festival's official character, existed, but there was nothing for attendees to touch, photograph or take home. A character that stays inside a poster is never remembered.",
+    "need": "The job was to give the festival character RIO a bigger presence and use it across many pieces: the photo booth, stamps, merchandise and card news.",
     "action": [
-     "Redefined RIO as an extensible visual system rather than a single illustration",
      "Built it out into things people actually handle: photo-booth frames, event stamps, AirPods and Buds case illustrations",
      "Made Instagram card news so the same tone carried online",
-     "Fixed proportion, line and color rules so the character reads as one figure across every format"
+     "Set proportion, line and colour rules together as a team, so RIO reads as the same character in every format"
     ],
     "result": [
      "Photo booth: queues ran throughout the festival, and attendees posted the framed photos to their Instagram stories",
@@ -2147,14 +2160,13 @@ window.PROJECTS = [
      "완성한 옷을 어르신이 직접 입고 시니어 런웨이에 오름"
     ],
     "result": [
-     "담당 교수 추천으로 대학신문 취재 인터뷰 대상자에 선정 (2024.12.01)"
+     "담당 교수 추천으로 수업 대표가 되어 대학신문 취재 인터뷰 (2024.12.01)"
     ],
     "detail": {
      "title": "이 작업에서 배운 것",
      "body": [
       "좋은 결과물은 대상을 가장 잘 아는 사람만 만들 수 있다는 것. 그리고 '가장 잘 안다'는 상태는 질문 한 번으로 도달하지 않는다는 것.",
-      "관찰을 사양으로 옮기는 훈련이기도 했다. '등이 굽으셨다'는 인상이 아니라 패턴 수정으로, '어깨가 비대칭이다'가 어깨 패드라는 부자재 결정으로 이어져야 옷이 실제로 편해진다.",
-      "미래엔에서는 지표를 읽어 타깃을 이해했고, 여기서는 사람을 여러 번 만나 이해했다. 방법은 달랐지만 만드는 사람의 취향이 아니라 받는 사람의 조건에서 출발한다는 점은 같았다."
+      "관찰을 사양으로 옮기는 훈련이기도 했다. '등이 굽으셨다'는 인상이 아니라 패턴 수정으로, '어깨가 비대칭이다'가 어깨 패드라는 부자재 결정으로 이어져야 옷이 실제로 편해진다."
      ]
     }
    },
@@ -2181,14 +2193,13 @@ window.PROJECTS = [
      "He wore the finished coat on the senior runway"
     ],
     "result": [
-     "Chosen by the supervising professor as the class's interview subject for The SNU Newspaper (1 Dec 2024)"
+     "Chosen by the supervising professor to represent the class in an interview with The SNU Newspaper (1 Dec 2024)"
     ],
     "detail": {
      "title": "What the project taught",
      "body": [
       "The best work can only be made by the person who knows the subject best, and knowing them best does not arrive in a single question.",
-      "It was also training in turning observation into specification. 'His back is curved' has to become a pattern correction, and 'his shoulders are uneven' a decision about shoulder padding, before the garment is actually comfortable.",
-      "At MiraeN I understood the audience by reading metrics; here I understood him by meeting him repeatedly. Different methods, same starting point: the recipient’s conditions, not the maker’s taste."
+      "It was also training in turning observation into specification. 'His back is curved' has to become a pattern correction, and 'his shoulders are uneven' a decision about shoulder padding, before the garment is actually comfortable."
      ]
     }
    }
@@ -4746,8 +4757,8 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "AI와 독학으로 만든 포트폴리오",
-    "cat": "웹사이트 기획·디자인 · AI 워크플로우 · 독학 · 2026",
+    "title": "독학 바이브코딩으로 만든 포트폴리오",
+    "cat": "웹사이트 기획·디자인 · 바이브코딩 · 독학 · 2026",
     "headline": "프롬프트 몇 줄로 나오는 포트폴리오는 화려하지만 뻔하다. 그래서 하나하나 기획하고, 하나하나 지시했다.",
     "metrics": [
      {
@@ -4765,13 +4776,13 @@ window.PROJECTS = [
     ],
     "need": "Manus 같은 도구에 프롬프트 몇 줄만 넣어도 화려한 포트폴리오가 나오는 시대다. 그래서 오히려 다 비슷해 보인다. 매끈하고 번쩍이는, 신세계 같은 사이트는 지루하고 뻔하다고 생각했다. 수만 개의 포트폴리오를 보는 사람이 내 것을 기억하고 좋은 기억으로 가져가게 하려면, 처음부터 끝까지 내가 직접 기획해야 했다. 디자인도 코딩도 전공하지 않았기 때문에, 그 기획을 AI에게 정확히 전달하는 방법부터 혼자 익혀야 했다.",
     "action": [
-     "디자인·코딩 비전공으로 전 과정을 독학: 코드를 직접 치지 않고 AI와 대화하며 설계하고 고침. 판단과 지시는 끝까지 내가 함",
+     "디자인·코딩 비전공으로, 강의 없이 혼자 익힘: 코드를 직접 치지 않고 AI와 대화하며 만드는 바이브코딩 방식으로 설계하고 고침. 판단과 지시는 끝까지 내가 함",
      "AI를 하나만 쓰지 않고 교차 활용: Manus로 첫 UI 시안, Claude로 실제 구현과 인터랙션, ChatGPT로 이미지, Tripo로 3D",
      "직접 만든 웨어러블 아트(깨진 도자기 조각으로 만든 꽃)를 3D로 구현: ChatGPT로 여러 각도의 이미지를 먼저 만든 뒤 Tripo에 넣어 3D 모델로 만들고, Selected Work 한가운데에 배치",
      "마인드맵은 아이패드로 직접 그려서 지시: 화면 캡처 위에 손으로 그린 스케치를 그대로 보내고, 그 선과 글씨를 옮겨 키워드에 마우스를 올리면 나타나게 함",
      "첫인상은 일부러 반대로: 세련되고 번쩍이는 대신 타자기 효과와 빈티지한 무드로 시작. 나를 전달하는 문장을 맨 앞에 두고, 작업의 방향성은 마인드맵으로 보여줌",
      "사이트의 이미지도 내 작업으로: 실제 프로젝트 사진 중 색감이 예쁘고 무드보드에 맞는 것을 골라 배경에 깔고, 그 위에 트레이싱지를 덮은 느낌을 줌. 대비가 튀는 곳 없이 채도를 낮춰 전체를 부드럽고 힘을 뺀 톤으로 맞춤. 곳곳에 마우스 인터랙션을 넣음",
-     "보는 사람의 경험까지 설계: 링크를 받는 순간 뜨는 미리보기 카드부터 인트로의 첫 문장과 같게 맞춤. 프로젝트마다 어울리는 곡을 Spotify 플레이어로 넣어 음악에 대한 관심을 보여주고, 그 분위기 속에서 작업을 보게 함. 아카이브는 필터별로 볼 수 있게 함",
+     "보는 사람의 경험까지 설계: 링크를 받는 순간 뜨는 미리보기 카드부터 인트로의 첫 문장과 같게 맞춤. 프로젝트마다 Spotify 플레이어로 곡을 넣어, 그 분위기 속에서 작업을 보게 함. 곡은 내가 좋아하는 음악보다 프로젝트와 어울리는지에 집중해 고름. 아카이브는 필터별로 볼 수 있게 함",
      "한국어와 영어 두 버전을 모두 제작",
      "검토는 리뷰 시트로: 프로젝트, 타임라인, 스킬을 한 페이지에 펼쳐 두고 바꿀 것만 표시해 한 번에 반영. 화면 수정은 같은 각도에서 찍은 전후 화면을 나란히 놓고 비교해 결정"
     ],
@@ -4789,8 +4800,8 @@ window.PROJECTS = [
     }
    },
    "en": {
-    "title": "Making this Portfolio with AI",
-    "cat": "Website Planning & Design · AI Workflow · Self-taught · 2026",
+    "title": "A Self-Taught, Vibe-Coded Portfolio",
+    "cat": "Website Planning & Design · Vibe Coding · Self-taught · 2026",
     "headline": "A portfolio from a few lines of prompt can be flashy, but it is predictable. So I planned every part and directed every detail.",
     "metrics": [
      {
@@ -4808,13 +4819,13 @@ window.PROJECTS = [
     ],
     "need": "Today a few lines of prompt in a tool like Manus can produce a flashy portfolio, which is exactly why they all look alike. Sleek, glittering, futuristic sites felt boring and predictable to me. For someone who looks through thousands of portfolios to remember mine and leave with a good memory of it, I had to plan it myself from start to finish. With no background in design or coding, I first had to teach myself how to hand that plan to AI precisely.",
     "action": [
-     "Self-taught end to end, with no design or coding degree: no code typed by hand, everything designed and fixed in conversation with AI, while every judgement and instruction stayed mine",
+     "No design or coding degree, and no course: I taught myself and built it by vibe coding, typing no code by hand and designing and fixing everything in conversation with AI, while every judgement and instruction stayed mine",
      "Used several AIs together rather than one: Manus for the first UI draft, Claude for the real build and interactions, ChatGPT for images, Tripo for 3D",
      "Brought my own wearable art piece, a flower made of broken porcelain, into 3D: generated views from several angles in ChatGPT, fed them to Tripo for a 3D model, and set it at the centre of Selected Work",
      "Drew the mind map by hand on an iPad and sent the sketch over a screenshot; its lines and handwriting were carried over so they appear when a keyword is hovered",
      "Opened against the grain: instead of sleek and shiny, a typewriter effect and a vintage mood. A sentence that introduces me comes first, and the mind map shows where my work is heading",
      "Made the site’s imagery out of my own work: project photos picked for their colour and fit with the moodboard, laid under what feels like tracing paper. Nothing jumps out in contrast; saturation stays low so the whole site reads soft and relaxed. Mouse interactions throughout",
-     "Designed the viewer’s experience too: even the preview card that appears when the link is shared opens with the same line as the intro. Each project has a song in a Spotify player, showing my interest in music and letting the work be seen inside a mood. The archive can be filtered",
+     "Designed the viewer’s experience too: even the preview card that appears when the link is shared opens with the same line as the intro. Each project has a song in a Spotify player, so the work is seen inside a mood. I picked each song for how well it fits the project, not because it is a favourite of mine. The archive can be filtered",
      "Built in both Korean and English",
      "Reviewed on a sheet, not in chat: projects, timeline and skills on one page; I mark only what changes and it is applied in one pass. Layout changes were decided by putting before and after side by side, shot from the same angle"
     ],
@@ -4832,7 +4843,7 @@ window.PROJECTS = [
     }
    }
   },
-  "title": "Making this Portfolio with AI",
+  "title": "A Self-Taught, Vibe-Coded Portfolio",
   "desc": "이 사이트 자체를 하나의 프로젝트로 기록한다. 사람들이 AI 결과물에 느끼는 피로를 읽고, 반대로 빈티지한 공간을 만든 과정.",
   "song": "midnightpetals in between",
   "songYoutube": "https://www.youtube.com/watch?v=kOk-BxD9v3g"
@@ -4864,16 +4875,16 @@ window.PROJECTS = [
    "ko": {
     "title": "경주 APEC 홍보 영상",
     "cat": "AI 영상 · 공모전 출품 · 2025",
-    "need": "2025 APEC 경주 특별전시를 주제로 한 공모전 출품작으로, ‘전통은 보존된 과거’라는 통념을 벗어나야 했다. 유네스코 세계유산 공간에서 아홉 개의 전통 무용을 실제로 촬영하는 것은 개인 제작자에게 불가능했고, 그럼에도 국가 행사에 걸맞은 스케일이 요구됐다.",
+    "need": "2025 APEC 경주 특별전시를 주제로 한 공모전 출품작이다. 유네스코 세계유산에서 아홉 개의 전통 무용을 실제로 촬영하는 건 혼자서는 불가능했다.",
     "action": [
-     "신라 김현감호 설화를 시적 프롤로그로 시각화해 영상의 진입점을 설화에서 출발시킴",
-     "신라 수막새 기와 문양이 APEC 로고로 전환되는 모티프를 설계해 과거와 현재를 하나의 형태로 연결",
-     "아홉 개의 전통 무용을 각기 다른 유네스코 세계유산 공간에 배치하고, 아침에서 밤으로 흐르는 시간 순으로 배열해 시간의 흐름과 전통의 연속성을 구조화",
-     "마지막 시퀀스를 황리단길에 두고 전통 리듬과 현대 안무를 겹쳐, 유산이 새로운 형태로 살아있음을 결론으로 제시"
+     "신라 설화 「김현감호」를 첫 장면으로 만들어, 설화에서 이야기를 시작",
+     "신라 수막새 기와 문양이 APEC 로고로 바뀌는 장면을 만들어 과거와 현재를 이음",
+     "아홉 개의 전통 무용을 각기 다른 유네스코 세계유산에 배치하고, 아침에서 밤 순서로 이어지게 구성",
+     "마지막 장면은 황리단길에서 전통 리듬 위에 현대 안무를 겹쳐, 전통이 지금도 이어지고 있다는 것으로 마무리"
     ],
     "result": null,
-    "note": "2025 경북 국제 AI 메타버스 영상 공모전 출품작 · 생성형 AI 기반 제작",
-    "headline": "아홉 개의 전통 무용을 아홉 곳의 세계유산에서. 혼자서는 촬영할 수 없는 스케일이었다.",
+    "note": "2025 APEC AI 영상 콘텐츠 공모전(한국콘텐츠진흥원) 출품작 · 생성형 AI로 제작",
+    "headline": "아홉 개의 전통 무용을 아홉 곳의 세계유산에서 펼쳤다. 혼자서는 촬영할 수 없는 규모라 AI로 만들었다.",
     "metrics": [
      {
       "v": "9",
@@ -4884,16 +4895,16 @@ window.PROJECTS = [
    "en": {
     "title": "Gyeongju APEC Promo Film",
     "cat": "AI Film · Contest Entry · 2025",
-    "need": "An entry built on the brief of the 2025 APEC Special Exhibition in Gyeongju, which had to break the assumption that heritage is a preserved past. Filming nine traditional dances across UNESCO World Heritage sites was impossible for a solo maker, and the result still had to carry the scale of a national event.",
+    "need": "An entry on the theme of the 2025 APEC Special Exhibition in Gyeongju. Filming nine traditional dances at UNESCO World Heritage sites was impossible for one person.",
     "action": [
-     "Opened on the Silla legend of Kim Hyun-gam-ho as a poetic prologue, entering the film through myth rather than description",
-     "Designed the Silla roof tile “Sumaksae” to transform into the APEC logo, binding past and present into one shape",
-     "Placed nine traditional dances in nine different World Heritage sites and ordered them from morning to night, so time itself carried the continuity of tradition",
-     "Closed in Hwangnidan-gil, layering modern choreography over traditional rhythm to show heritage living on in new forms"
+     "Opened on the Silla legend of Kim Hyeon and the tiger, so the film starts from the folk tale",
+     "Made the Silla roof-tile pattern (sumaksae) turn into the APEC logo, linking past and present",
+     "Set the nine dances at nine different UNESCO World Heritage sites, ordered from morning to night",
+     "Ended in Hwangnidan-gil with modern choreography over traditional rhythm, closing on tradition that is still going on"
     ],
     "result": null,
-    "note": "Entry for the 2025 Gyeongbuk International AI Metaverse Video Competition, produced with generative AI",
-    "headline": "Nine traditional dances in nine World Heritage sites, a scale no solo maker could film.",
+    "note": "Entry for the 2025 APEC AI Video Content Contest (Korea Creative Content Agency), made with generative AI",
+    "headline": "Nine traditional dances across nine World Heritage sites. No one could film that alone, so I made it with AI.",
     "metrics": [
      {
       "v": "9",

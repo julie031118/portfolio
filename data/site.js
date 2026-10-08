@@ -63,8 +63,8 @@ window.SITE = {
 
   profile: {
     name: { ko: '이연서', en: 'Yeonseo Lee' },
-    photo: 'img/profile-4.jpg', /* profile-3 with the lips a touch deeper (연서, 2026-10-08) */
-    photos: ['img/profile-4.jpg', 'img/profile-2.jpg'], /* stacked collage: big portrait, café (the landscape selfie came out, 2026-10-02) */
+    photo: 'img/profile-3.jpg',
+    photos: ['img/profile-3.jpg', 'img/profile-2.jpg'], /* stacked collage: big portrait, café (the landscape selfie came out, 2026-10-02) */
     photoAlt: { ko: '이연서 프로필 사진', en: 'Portrait of Yeonseo Lee' },
     email: 'julie031118@gmail.com',
     linkedin: 'https://www.linkedin.com/in/yeonseo-lee-64b970388/',
@@ -171,8 +171,8 @@ window.SITE = {
           title: { ko: '미래엔수학 5개 지사: 디자이너 & 마케터', en: 'MiraeN Math (5-district branch): Designer & Marketer' },
           desc: { ko: '지사장 한 명이 새로 연 지사의 SNS 3개 채널을 0에서 개설·운영. 팔로워 0인 계정에서 릴스 최고 조회수 2.9만. 브랜드 콘텐츠 50여 편, 2D 캐릭터를 3D로 리빌드한 숏폼, 유료광고와 네이버 스마트플레이스 SEO 병행. 2025.01~08', en: 'Opened and ran three channels from zero for a branch one director had just opened. Top Reel 29,000 views from a zero-follower account. 50+ pieces of brand content, the 2D character rebuilt in 3D for short-form, paid media alongside Naver SmartPlace SEO. Jan to Aug 2025' } },
         { date: '2025.07', major: true, link: 'ai-short-film',
-          title: { ko: '대상: 서울대학교 중앙도서관 AI Filmmaking Program', en: 'Grand Prize: SNU Central Library AI Filmmaking Program' },
-          desc: { ko: '디지털 리터러시 아카데미 \'AI로 만드는 영화\' 클래스(2025.06) 수료 후, 단편영화 \'Happiness is Intelligence?\'를 기획·연출·프롬프트 디렉팅·편집까지 단독 제작. 2025.07.10', en: 'After completing the Digital Literacy Academy class \'Filmmaking with AI\' (Jun 2025), made the short film \'Happiness is Intelligence?\' solo: concept, direction, prompt direction and editing. 10 Jul 2025' } },
+          title: { ko: '대상: 서울대학교 중앙도서관 〈AI로 만드는 영화클래스〉', en: 'Grand Prize: SNU Central Library ‘AI Filmmaking Class’' },
+          desc: { ko: '디지털 리터러시 아카데미 〈AI로 만드는 영화클래스〉(2025.06) 수료 후, 단편영화 \'Happiness is Intelligence?\'를 기획·연출·프롬프트 디렉팅·편집까지 단독 제작. 2025.07.10', en: 'After completing the Digital Literacy Academy ‘AI Filmmaking Class’ (Jun 2025), made the short film \'Happiness is Intelligence?\' solo: concept, direction, prompt direction and editing. 10 Jul 2025' } },
       ],
     },
     {
@@ -323,5 +323,5 @@ window.SITE = {
 
   contactUi: { title: "LET'S TALK.", linkedin: 'LINKEDIN ↗', imageSlot: 'IMAGE 16:9', caption: '05 / 06', footerLeft: '© 2026 YEONSEO LEE' },
   detail: { resultTbc: 'RESULT: TO BE CONFIRMED' },
-  detailUi: { heroSlot: 'IMAGE 16:9', gallerySlot: 'IMAGE', period: 'PERIOD', role: 'ROLE', need: 'NEED', action: 'ACTION', result: 'RESULT', gallery: 'GALLERY', process: { ko: '작업과정', en: 'PROCESS' }, film: 'FILM', watch: { ko: 'YouTube에서 보기 ↗', en: 'Watch on YouTube ↗' }, watchDrive: { ko: 'Google Drive에서 보기 ↗', en: 'Watch on Google Drive ↗' }, fullSong: { ko: 'YouTube에서 전곡 ↗', en: 'Full song on YouTube ↗' }, press: 'PRESS', soundtrack: 'SOUNDTRACK', close: 'CLOSE', closeExpanded: 'CLOSE −' },
+  detailUi: { heroSlot: 'IMAGE 16:9', gallerySlot: 'IMAGE', period: 'PERIOD', role: 'ROLE', need: 'NEED', action: 'ACTION', result: 'RESULT', gallery: 'GALLERY', process: { ko: '작업과정', en: 'PROCESS' }, film: 'FILM', watch: { ko: 'YouTube에서 보기 ↗', en: 'Watch on YouTube ↗' }, watchDrive: { ko: 'Google Drive에서 보기 ↗', en: 'Watch on Google Drive ↗' }, watchInstagram: { ko: 'Instagram에서 보기 ↗', en: 'Watch on Instagram ↗' }, fullSong: { ko: 'YouTube에서 전곡 ↗', en: 'Full song on YouTube ↗' }, press: 'PRESS', soundtrack: 'SOUNDTRACK', close: 'CLOSE', closeExpanded: 'CLOSE −' },
 };
