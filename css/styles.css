@@ -901,3 +901,24 @@ html[lang="ko"] .timeline-item.is-major .timeline-item-title {
 /* the glass ball under the pointer (js/cursor-lens.js): a small WebGL canvas over the photo it is on */
 .cursor-lens-canvas { position: fixed; left: 0; top: 0; z-index: 9999; display: none; pointer-events: none; will-change: transform; }
 .cursor-lens-canvas.is-in-card { position: absolute; z-index: 2; } /* between the card's vellum veil (1) and its title (3) */
+
+/* phones (2026-10-09, 연서): no SELECTED section (no ring there, ARCHIVE holds every project), and the nav is the
+   name and a ≡ button whose panel holds the links and the two toggles */
+.nav-menu-button, .nav-menu-toggles { display: none; }
+@media (max-width: 600px), (hover: none) {
+  #work { display: none; }
+  :root { --nav-height: 54px; }
+  .site-nav { align-items: center; flex-wrap: nowrap; padding: 0 8px 0 16px; gap: 12px; font-size: 11px; letter-spacing: .08em; }
+  .site-nav.is-menu-open { background: var(--vellum); backdrop-filter: blur(14px) saturate(.9); -webkit-backdrop-filter: blur(14px) saturate(.9); }
+  .nav-wordmark { width: auto; }
+  .nav-menu-button { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 0 11px; border: 0; background: transparent; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .nav-menu-button span { display: block; height: 1.5px; background: var(--ink); transition: transform .3s ease, opacity .2s ease; }
+  .site-nav.is-menu-open .nav-menu-button span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .site-nav.is-menu-open .nav-menu-button span:nth-child(2) { opacity: 0; }
+  .site-nav.is-menu-open .nav-menu-button span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  .site-nav .nav-actions { position: absolute; top: 100%; left: 0; right: 0; width: auto; display: flex; flex-direction: column; align-items: stretch; flex-wrap: nowrap; gap: 0; padding: 4px 16px 18px; border-bottom: 1px solid var(--hairline); background: var(--vellum); backdrop-filter: blur(14px) saturate(.9); -webkit-backdrop-filter: blur(14px) saturate(.9); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s; }
+  .site-nav.is-menu-open .nav-actions { opacity: 1; visibility: visible; transform: none; transition: opacity .25s ease, transform .25s ease; }
+  .site-nav .nav-link { padding: 14px 0; border-bottom: 1px solid var(--hairline); font-size: 14px; letter-spacing: .12em; }
+  .nav-menu-toggles { display: flex; gap: 22px; padding-top: 12px; }
+  .nav-menu-toggles .nav-toggle { padding: 6px 0; font-size: 12px; letter-spacing: .1em; }
+}

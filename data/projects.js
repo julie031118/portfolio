@@ -2155,10 +2155,9 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026.01~04",
-  "thumb": "/images/projects/engineered-surfaces/punch-01-hero.jpg",
+  "thumb": "/images/projects/engineered-surfaces/01-v2.jpg",
   "images": [
-   "/images/projects/engineered-surfaces/punch-01-hero.jpg",
-   "/images/projects/engineered-surfaces/punch-01.jpg",
+   "/images/projects/engineered-surfaces/01-v2.jpg",
    "/images/projects/engineered-surfaces/skirt-01.jpg",
    "/images/projects/engineered-surfaces/skirt-02.jpg",
    "/images/projects/engineered-surfaces/07-1.jpg",
@@ -2170,7 +2169,6 @@ window.PROJECTS = [
    "/images/projects/engineered-surfaces/20.jpg",
    "/images/projects/engineered-surfaces/24.jpg",
    "/images/projects/engineered-surfaces/03.jpg",
-   "/images/projects/engineered-surfaces/01.jpg",
    "/images/projects/engineered-surfaces/46.jpg",
    "/images/projects/engineered-surfaces/23.jpg",
    "/images/projects/engineered-surfaces/06-1.jpg",
@@ -2206,7 +2204,7 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
-  "cardThumb": "/images/projects/engineered-surfaces/punch-01.jpg",
+  "heroRatio": 0.75,
   "sections": [
    {
     "title": {
@@ -2215,9 +2213,6 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/engineered-surfaces/punch-01.jpg"
-     },
-     {
       "src": "/images/projects/engineered-surfaces/skirt-01.jpg"
      },
      {
@@ -2225,9 +2220,23 @@ window.PROJECTS = [
      }
     ],
     "note": {
-     "ko": "펀치니들 작품과 직조 원단으로 만든 미니스커트",
-     "en": "The punch needle piece, and the mini skirt made from the woven fabrics"
+     "ko": "직조 원단으로 만든 미니스커트",
+     "en": "The mini skirt made from the woven fabrics"
     }
+   },
+   {
+    "title": {
+     "ko": "펀치니들 작업",
+     "en": "PUNCH NEEDLE WORK"
+    },
+    "images": [
+     {
+      "src": "/images/projects/engineered-surfaces/03.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/46.jpg"
+     }
+    ]
    },
    {
     "title": {
@@ -2236,11 +2245,7 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/engineered-surfaces/07-1.jpg",
-      "cap": {
-       "ko": "직접 만든 팬시 얀",
-       "en": "Novelty yarns I spun"
-      }
+      "src": "/images/projects/engineered-surfaces/07-1.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/07-2.jpg"
@@ -2275,36 +2280,11 @@ window.PROJECTS = [
        "en": "Yarn wrap for color and texture"
       }
      }
-    ]
-   },
-   {
-    "title": {
-     "ko": "펀치니들 과정",
-     "en": "PUNCH NEEDLE PROCESS"
-    },
-    "images": [
-     {
-      "src": "/images/projects/engineered-surfaces/03.jpg",
-      "cap": {
-       "ko": "펀치니들 도안",
-       "en": "Punch needle design drawing"
-      }
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/01.jpg",
-      "cap": {
-       "ko": "펀치니들 작업 중",
-       "en": "Punch needle in progress"
-      }
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/46.jpg",
-      "cap": {
-       "ko": "틀에 걸린 펀치니들 작업",
-       "en": "Punch needle piece on its frame"
-      }
-     }
-    ]
+    ],
+    "note": {
+     "ko": "직접 만든 팬시 얀",
+     "en": "Novelty yarns I spun"
+    }
    },
    {
     "title": {

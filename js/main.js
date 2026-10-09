@@ -40,20 +40,44 @@ async function toggleSiteSound() {
   renderNav();
 }
 
+/* phones (2026-10-09, 연서: "the list at the top is hard to see, put it behind a ≡ button"): the bar is the name and
+   a ≡ button, the links and the two toggles open in a panel under it. SELECTED is left out on phones, which have no
+   ring; the section itself is hidden there too (styles.css). */
+const compactNavQuery = window.matchMedia('(max-width: 600px), (hover: none)');
+let menuOpen = false;
+function setMenu(open) {
+  menuOpen = open;
+  const nav = document.querySelector('#nav');
+  nav?.classList.toggle('is-menu-open', open);
+  nav?.querySelector('.nav-menu-button')?.setAttribute('aria-expanded', String(open));
+}
+document.addEventListener('click', (event) => { if (menuOpen && !event.composedPath().some((node) => node.id === 'nav')) setMenu(false); /* the path, not closest(): a toggle rebuilds the nav before the click reaches here */ });
+
 function renderNav() {
   const nav = document.querySelector('#nav');
   nav.innerHTML = '';
+  const compact = compactNavQuery.matches;
+  const links = compact ? SITE.nav.links.filter((item) => item.target !== '#work') : SITE.nav.links;
   const wordmark = document.createElement('a'); wordmark.className = 'nav-wordmark'; wordmark.href = '#intro'; wordmark.textContent = SITE.nav.wordmark;
   const actions = document.createElement('div'); actions.className = 'nav-actions';
-  SITE.nav.links.forEach((item, index) => {
+  links.forEach((item, index) => {
     const link = document.createElement('a'); link.className = 'nav-link'; link.href = item.target; link.textContent = item.label; actions.append(link);
-    if (index < SITE.nav.links.length - 1) { const divider = document.createElement('span'); divider.className = 'nav-divider'; divider.textContent = '·'; actions.append(divider); }
+    if (compact) link.addEventListener('click', () => setMenu(false));
+    if (index < links.length - 1) { const divider = document.createElement('span'); divider.className = 'nav-divider'; divider.textContent = '·'; actions.append(divider); }
   });
   const language = document.createElement('button'); language.className = 'nav-toggle'; language.type = 'button'; language.setAttribute('aria-label', SITE.nav.languageAria); language.textContent = T(SITE.nav.language);
   language.addEventListener('click', toggleLanguage);
   const sound = document.createElement('button'); sound.className = 'nav-toggle'; sound.type = 'button'; sound.setAttribute('aria-label', SITE.nav.soundAria); sound.textContent = getSoundEnabled() ? SITE.nav.soundOn : SITE.nav.soundOff;
   sound.addEventListener('click', toggleSiteSound);
-  actions.append(language, sound); nav.append(wordmark, actions);
+  if (!compact) { actions.append(language, sound); nav.append(wordmark, actions); return; }
+  const toggles = document.createElement('div'); toggles.className = 'nav-menu-toggles'; toggles.append(language, sound); actions.append(toggles);
+  actions.id = 'nav-menu';
+  const button = document.createElement('button'); button.className = 'nav-menu-button'; button.type = 'button';
+  button.setAttribute('aria-label', 'Menu'); button.setAttribute('aria-controls', 'nav-menu');
+  button.innerHTML = '<span></span><span></span><span></span>';
+  button.addEventListener('click', () => setMenu(!menuOpen));
+  nav.append(wordmark, button, actions);
+  setMenu(menuOpen);
 }
 
 function renderLaterSections() { renderWork(LANG); renderName(LANG); renderAbout(LANG); renderArchive(LANG); renderContact(LANG); }
@@ -78,25 +102,11 @@ window.__webglLog = window.__webglLog || [];
 window.__siteActions = { toggleLanguage, toggleSound: toggleSiteSound, getLanguage: () => LANG };
 initGround(); renderNav(); renderDetailShell(); renderLaterSections(); introController = renderIntro(LANG); initNavState();
 window.addEventListener('portfolio:soundchange', renderNav);
-document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !document.querySelector('#detail')?.hidden) closeDetail(); });
-/* phones: one small note per visit that the site is fuller on a computer; it fades by itself or on tap */
-function showDesktopNote() {
-  if (!window.matchMedia('(max-width: 600px), (hover: none)').matches) return;
-  if (storageGet('sessionStorage', 'yeonseo-desktop-note')) return;
-  storageSet('sessionStorage', 'yeonseo-desktop-note', '1');
-  const note = document.createElement('div'); note.className = 'desktop-note'; note.setAttribute('role', 'note');
-  const text = document.createElement('span'); text.textContent = T(SITE.aboutUi.desktopNote);
-  const close = document.createElement('button'); close.type = 'button'; close.textContent = '×'; close.setAttribute('aria-label', T(SITE.aboutUi.desktopNoteClose));
-  note.append(text, close); document.body.append(note);
-  const hide = () => { note.classList.remove('is-shown'); window.setTimeout(() => note.remove(), 600); };
-  close.addEventListener('click', hide);
-  requestAnimationFrame(() => note.classList.add('is-shown'));
-  window.setTimeout(hide, 8000);
-}
-
+document.addEventListener('keydown', (event) => { if (event.key !== 'Escape') return; if (menuOpen) setMenu(false); if (!document.querySelector('#detail')?.hidden) closeDetail(); });
+/* the "best viewed on a computer" note for phones was removed (2026-10-09, 연서: no notes about what phones do not have) */
 function startRuntime() {
   initScroll();
-  initLoader({ host: introController.host, onComplete: () => { introController.start(); window.__introReady = true; window.dispatchEvent(new Event('portfolio:intro-ready')); window.ScrollTrigger?.refresh(); window.setTimeout(showDesktopNote, 1200); initCursorLens(); }, onGesture: () => { setSoundEnabled(true); renderNav(); } });
+  initLoader({ host: introController.host, onComplete: () => { introController.start(); window.__introReady = true; window.dispatchEvent(new Event('portfolio:intro-ready')); window.ScrollTrigger?.refresh(); initCursorLens(); }, onGesture: () => { setSoundEnabled(true); renderNav(); } });
 }
 
 if (document.readyState === 'loading') window.addEventListener('DOMContentLoaded', startRuntime, { once: true });
