@@ -26,25 +26,29 @@ function justifyGallery(gallery, rowTarget = 0) {
     if (!width) return;
     const ready = items.filter((item) => item.querySelector('img')?.naturalWidth);
     if (!ready.length) return;
-    const target = rowTarget || Math.min(620, Math.max(360, width * .46));
-    let row = []; let rowRatio = 0;
+    /* rowTarget -1: the whole set in one row (Art2Wear show photos, 2026-10-10); on a phone it falls back to normal rows */
+    const oneRow = rowTarget < 0 && width >= 600;
+    const target = oneRow ? 0 : (rowTarget > 0 ? rowTarget : Math.min(620, Math.max(360, width * .46)));
+    const GAP = 28; /* px before a picture marked has-gap-before, when it is not first in its row */
+    let row = []; let rowRatio = 0; let rowGap = 0;
     const flush = (last) => {
       if (!row.length) return;
-      let height = width / rowRatio;
+      let height = (width - rowGap) / rowRatio;
       if (last && height > target * 1.15) height = target * 1.15; /* a short last row is left-aligned, not stretched */
       const maxNatural = Math.min(...row.map(({ item, img }) => img.naturalHeight * (item.classList.contains('is-small') ? .35 : 1)));
       height = Math.min(height, maxNatural);
       /* the height goes on the picture, not the figure, so a caption can sit under it */
-      row.forEach(({ item, img, ratio }) => { item.style.width = `${Math.floor(ratio * height)}px`; item.style.height = 'auto'; img.style.height = `${Math.floor(height)}px`; });
-      row = []; rowRatio = 0;
+      row.forEach(({ item, img, ratio, gap }) => { item.style.width = `${Math.floor(ratio * height)}px`; item.style.height = 'auto'; item.style.marginLeft = gap ? `${gap}px` : ''; img.style.height = `${Math.floor(height)}px`; });
+      row = []; rowRatio = 0; rowGap = 0;
     };
     ready.forEach((item) => {
       const img = item.querySelector('img');
       const ratio = img.naturalWidth / img.naturalHeight;
-      row.push({ item, img, ratio }); rowRatio += ratio;
-      if (width / rowRatio <= target) flush(false);
+      const gap = row.length && item.classList.contains('has-gap-before') ? GAP : 0;
+      row.push({ item, img, ratio, gap }); rowRatio += ratio; rowGap += gap;
+      if (!oneRow && (width - rowGap) / rowRatio <= target) flush(false);
     });
-    flush(true);
+    flush(oneRow ? false : true);
     gallery.classList.add('is-justified');
   };
   items.forEach((item) => { const img = item.querySelector('img'); if (img) img.addEventListener('load', layout, { once: true }); });
@@ -313,17 +317,26 @@ function renderProject(detail, project, lang) {
        need / action / result, side by side with a gap between them and no rule */
     const roles = document.createElement('div');
     roles.className = 'detail-roles';
-    copy.roles.forEach((part) => {
+    /* pictures sit in their own row under the text, one cell per column, so both columns' pictures start at the
+       same height (2026-10-09); on a phone each column's pictures follow its own text (--m-order) */
+    const medias = [];
+    copy.roles.forEach((part, index) => {
       const column = document.createElement('div');
       column.className = 'detail-story detail-role-column';
+      column.style.setProperty('--m-order', String(index * 2 + 1));
       const label = document.createElement('h3'); label.className = 'detail-role-label'; label.textContent = part.label;
       column.append(label);
       appendLabelledBlock(column, SITE.detailUi.need, part.need || '');
       appendLabelledBlock(column, SITE.detailUi.action, Array.isArray(part.action) ? part.action : [], true);
       if (Array.isArray(part.result) && part.result.length) appendLabelledBlock(column, SITE.detailUi.result, part.result, true);
-      (part.images || []).forEach((source) => column.append(createMedia(source, SITE.detailUi.gallerySlot, 'detail-role-image', `${copy.title} · ${part.label}`)));
+      const media = document.createElement('div');
+      media.className = 'detail-role-media';
+      media.style.setProperty('--m-order', String(index * 2 + 2));
+      (part.images || []).forEach((source) => media.append(createMedia(source, SITE.detailUi.gallerySlot, 'detail-role-image', `${copy.title} · ${part.label}`)));
+      medias.push(media);
       roles.append(column);
     });
+    if (medias.some((media) => media.childElementCount)) medias.forEach((media) => roles.append(media));
     content.append(roles);
   } else {
     const story = document.createElement('div');
@@ -447,6 +460,7 @@ function renderProject(detail, project, lang) {
         const caption = typeof entry === 'string' ? '' : translated(entry.cap, lang) || '';
         const item = createMedia(source, `${SITE.detailUi.gallerySlot} ${String(index + 1).padStart(2, '0')}`, 'detail-gallery-item', caption || `${copy.title} ${index + 1}`);
         if (small.has(normalizeSource(source))) item.classList.add('is-small');
+        if (typeof entry === 'object' && entry.gapBefore) item.classList.add('has-gap-before'); /* a gap before this picture in its row (2026-10-10) */
         if (caption) { const text = document.createElement('figcaption'); text.className = 'detail-caption'; text.textContent = caption; item.append(text); item.classList.add('has-caption'); }
         gallery.append(item);
         index += 1;
@@ -509,8 +523,8 @@ function renderProject(detail, project, lang) {
   if (Array.isArray(project.sections) && project.sections.length) {
     /* titled groups: the finished work first, then how it was made, each making-of picture with a short caption */
     project.sections.forEach((section, index) => {
-      /* the hero already shows the thumb, so it is not repeated */
-      const entries = section.images.filter((entry) => normalizeSource(entrySource(entry)) !== normalizeSource(project.thumb));
+      /* the hero picture shows again in the body too (연서, 2026-10-09: repeats are fine) */
+      const entries = section.images;
       if (!entries.length) return;
       const title = translated(section.title, lang) || '';
       const note = translated(section.note, lang) || '';
@@ -518,8 +532,8 @@ function renderProject(detail, project, lang) {
       else addGallery(entries, title, index ? 'detail-extra detail-section' : 'detail-section', section.rowTarget || (index ? 340 : 0), note);
     });
   } else {
-    /* the hero already shows the thumb — don't repeat it as the first gallery item */
-    const gallerySources = (project.images || []).filter((source) => normalizeSource(source) !== normalizeSource(project.thumb));
+    /* the hero picture shows again in the gallery too (연서, 2026-10-09) */
+    const gallerySources = project.images || [];
     if (gallerySources.length) addGallery(gallerySources, SITE.detailUi.gallery);
     /* extra titled sets in a fixed order, e.g. how the mind map grew from a sketch */
     (project.galleries || []).forEach((set) => { if (set.images?.length) addGallery(set.images, translated(set.title, lang) || '', 'detail-extra', set.rowTarget || 340); });

@@ -11,7 +11,7 @@ window.PROJECTS = [
   ],
   "year": "2025",
   "period": "2025.01~08",
-  "thumb": "/images/projects/miraen/a01.jpg",
+  "thumb": "/images/projects/miraen/hero-blog-insta.jpg",
   "images": [
    "/images/projects/miraen/a01.jpg",
    "/images/projects/miraen/a02.jpg",
@@ -33,6 +33,7 @@ window.PROJECTS = [
    "ko": "릴스에 실제로 쓴 곡. 최신곡보다 이런 친근한 음악을 넣었을 때 조회수가 눈에 띄게 늘었다.",
    "en": "The song I actually used in the Reels. Views rose visibly once I used familiar songs like this instead of new releases."
   },
+  "cardThumb": "/images/projects/miraen/a01.jpg",
   "small": [
    "/images/projects/miraen/06.jpg",
    "/images/projects/miraen/07.jpg",
@@ -569,8 +570,8 @@ window.PROJECTS = [
    },
    {
     "title": {
-     "ko": "제목이 등장하는 장면",
-     "en": "WHERE THE TITLE APPEARS"
+     "ko": "엔딩",
+     "en": "ENDING"
     },
     "images": [
      {
@@ -581,15 +582,13 @@ window.PROJECTS = [
      },
      {
       "src": "/images/projects/ai-short-film/19.jpg"
-     },
-     {
-      "src": "/images/projects/ai-short-film/20.jpg"
      }
     ],
     "note": {
-     "ko": "광고 문구 뒤에 붙은 물음표",
-     "en": "The ad slogan, with a question mark"
-    }
+     "ko": "Suno로 만든 음악과 함께 나오는 마지막 장면. 광고 문구에 물음표가 붙어 제목으로 다시 등장",
+     "en": "The last scenes, set to music I made with Suno. The ad slogan comes back as the title, with a question mark"
+    },
+    "rowTarget": -1
    }
   ],
   "nar": {
@@ -969,6 +968,7 @@ window.PROJECTS = [
    "ko": "로파이 하우스가 또렷한 소리를 일부러 뭉개 흐릿한 질감을 만들듯, 이 룩에서는 선명한 테두리의 원을 쉬폰에 프린트하고 겹겹이 레이어링해 일부러 흐리게 만들었다.",
    "en": "Lo-fi house muddies clean sound on purpose into a hazy texture. I did the same here: circles with sharp edges, printed on chiffon and layered until they blur."
   },
+  "repeatThumb": true,
   "filterThumbs": {
    "CONTENT": "/images/projects/fashion-show-2024/15.jpg"
   },
@@ -1122,6 +1122,10 @@ window.PROJECTS = [
       ],
       "result": [
        "2024 SNU 패션쇼 〈형(形)〉 런웨이에서 발표"
+      ],
+      "images": [
+       "/images/projects/fashion-show-2024/a12.jpg",
+       "/images/projects/fashion-show-2024/04.jpg"
       ]
      },
      {
@@ -1136,7 +1140,8 @@ window.PROJECTS = [
        "이전 패션쇼 계정에는 없던 매거진 형식으로 디자이너의 의도와 이야기를 담았고, 피드를 본 사람들에게서 '디자이너의 의도를 알 수 있어서 좋았다'는 반응을 받음"
       ],
       "images": [
-       "/images/projects/fashion-show-2024/15.jpg"
+       "/images/projects/fashion-show-2024/promo-feed.jpg",
+       "/images/projects/fashion-show-2024/promo-reels.jpg"
       ]
      }
     ]
@@ -1164,6 +1169,10 @@ window.PROJECTS = [
       ],
       "result": [
        "Shown on the runway at the 2024 SNU Fashion Show 'Form'"
+      ],
+      "images": [
+       "/images/projects/fashion-show-2024/a12.jpg",
+       "/images/projects/fashion-show-2024/04.jpg"
       ]
      },
      {
@@ -1178,7 +1187,8 @@ window.PROJECTS = [
        "Ran the feed as a magazine telling each designer's intent and story, which the show's earlier accounts had never done, and viewers said they liked being able to see what the designers meant"
       ],
       "images": [
-       "/images/projects/fashion-show-2024/15.jpg"
+       "/images/projects/fashion-show-2024/promo-feed.jpg",
+       "/images/projects/fashion-show-2024/promo-reels.jpg"
       ]
      }
     ],
@@ -1376,7 +1386,6 @@ window.PROJECTS = [
   "thumb": "/images/projects/art2wear/a02.jpg",
   "images": [
    "/images/projects/art2wear/a02.jpg",
-   "/images/projects/art2wear/s01.jpg",
    "/images/projects/art2wear/a01.jpg",
    "/images/projects/art2wear/a03.jpg",
    "/images/projects/art2wear/a04.jpg",
@@ -1386,7 +1395,8 @@ window.PROJECTS = [
    "/images/projects/art2wear/a14.jpg",
    "/images/projects/art2wear/43.jpg",
    "/images/projects/art2wear/s02.jpg",
-   "/images/projects/art2wear/s03.jpg"
+   "/images/projects/art2wear/s03-crop.jpg",
+   "/images/projects/art2wear/s01.jpg"
   ],
   "role": {
    "ko": "기획 · 디자인 · 제작 · 런웨이 모델",
@@ -1433,9 +1443,6 @@ window.PROJECTS = [
       "src": "/images/projects/art2wear/a02.jpg"
      },
      {
-      "src": "/images/projects/art2wear/s01.jpg"
-     },
-     {
       "src": "/images/projects/art2wear/a01.jpg"
      },
      {
@@ -1477,31 +1484,23 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/art2wear/43.jpg",
-      "cap": {
-       "ko": "야외 정원의 행사 현장",
-       "en": "The event in the garden"
-      }
+      "src": "/images/projects/art2wear/43.jpg"
      },
      {
-      "src": "/images/projects/art2wear/s02.jpg",
-      "cap": {
-       "ko": "갤러리 안, 다른 참가작들과",
-       "en": "Inside the gallery with other pieces"
-      }
+      "src": "/images/projects/art2wear/s02.jpg"
      },
      {
-      "src": "/images/projects/art2wear/s03.jpg",
-      "cap": {
-       "ko": "디자이너이자 착용자로",
-       "en": "As both designer and wearer"
-      }
+      "src": "/images/projects/art2wear/s03-crop.jpg"
+     },
+     {
+      "src": "/images/projects/art2wear/s01.jpg"
      }
     ],
     "note": {
      "ko": "Gregg Museum of Art & Design, 2026년 4월",
      "en": "Gregg Museum of Art & Design, April 2026"
-    }
+    },
+    "rowTarget": -1
    },
    {
     "title": {
@@ -1536,66 +1535,30 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/art2wear/19.jpg",
-      "cap": {
-       "ko": "작업 중인 전체 모습",
-       "en": "The full piece in progress"
-      }
+      "src": "/images/projects/art2wear/19.jpg"
      },
      {
-      "src": "/images/projects/art2wear/20.jpg",
-      "cap": {
-       "ko": "스커트 위 꽃과 철사",
-       "en": "Flowers and wire on the skirt"
-      }
+      "src": "/images/projects/art2wear/20.jpg"
      },
      {
-      "src": "/images/projects/art2wear/22.jpg",
-      "cap": {
-       "ko": "지퍼와 철사 스티치",
-       "en": "Zipper and wire stitches"
-      }
+      "src": "/images/projects/art2wear/22.jpg"
      },
      {
-      "src": "/images/projects/art2wear/23.jpg",
-      "cap": {
-       "ko": "찢긴 구멍을 철사로 엮기",
-       "en": "Torn holes laced with wire"
-      }
+      "src": "/images/projects/art2wear/23.jpg"
      },
      {
-      "src": "/images/projects/art2wear/24.jpg",
-      "cap": {
-       "ko": "허리에 덧댄 데님 조각",
-       "en": "Denim scraps at the waist"
-      }
+      "src": "/images/projects/art2wear/24.jpg"
      },
      {
-      "src": "/images/projects/art2wear/25.jpg",
-      "cap": {
-       "ko": "철사로 감은 접시 조각",
-       "en": "Plate shard wrapped in wire"
-      }
+      "src": "/images/projects/art2wear/25.jpg"
      },
      {
-      "src": "/images/projects/art2wear/30.jpg",
-      "cap": {
-       "ko": "드레스폼 위에서 작업 중",
-       "en": "Working on the dress form"
-      }
+      "src": "/images/projects/art2wear/30.jpg"
      },
      {
-      "src": "/images/projects/art2wear/32.jpg",
-      "cap": {
-       "ko": "시스루 트레인을 단 뒷모습",
-       "en": "Back view with a sheer train"
-      }
+      "src": "/images/projects/art2wear/32.jpg"
      }
-    ],
-    "note": {
-     "ko": "이질적인 소재를 손바느질로 결합",
-     "en": "Contrasting materials joined by hand stitching"
-    }
+    ]
    }
   ],
   "nar": {
@@ -1677,7 +1640,7 @@ window.PROJECTS = [
  },
  {
   "slug": "clo3d",
-  "featured": null,
+  "featured": 12,
   "archiveRank": 13,
   "tags": [
    "FASHION"
@@ -1702,8 +1665,11 @@ window.PROJECTS = [
    "ko": "3D 디자인 · 스타일링 · 렌더링 (단독)",
    "en": "3D design, styling, rendering (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "5pzEL5TSvnT36z8fnMuyJL",
+  "spotifyNote": {
+   "ko": "WGSN 트렌드 중 'Analog Nostalgia'를 반영한 작업이라, 80년대 시티팝을 샘플링한 곡을 골랐다. 렌더링 속 밤 도시 장면과 이 곡의 분위기가 닮았다.",
+   "en": "The collection drew on WGSN's 'Analog Nostalgia', so I chose a song built on an 80s city pop sample. Its mood matches the night city scenes in the renders."
+  },
   "sections": [
    {
     "title": {
@@ -1838,7 +1804,9 @@ window.PROJECTS = [
    }
   },
   "title": "CLO 3D Digital Fashion",
-  "desc": "An activewear collection for MZ-generation running culture, made for the contest theme ‘dopamine dressing’. Honorable Mention, 13th International Digital Fashion Contest."
+  "desc": "An activewear collection for MZ-generation running culture, made for the contest theme ‘dopamine dressing’. Honorable Mention, 13th International Digital Fashion Contest.",
+  "song": "The Weeknd Out of Time",
+  "songYoutube": "https://www.youtube.com/watch?v=2fDzCWNS3ig"
  },
  {
   "slug": "sub-motion",
@@ -2237,6 +2205,9 @@ window.PROJECTS = [
     },
     "images": [
      {
+      "src": "/images/projects/engineered-surfaces/01-v2.jpg"
+     },
+     {
       "src": "/images/projects/engineered-surfaces/03.jpg"
      },
      {
@@ -2552,21 +2523,22 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/textile-printed/ad09.jpg",
+      "src": "/images/projects/textile-printed/ad09-v2.jpg",
       "cap": {
        "ko": "스트리트웨어",
        "en": "Streetwear"
       }
      },
      {
-      "src": "/images/projects/textile-printed/10.jpg",
+      "src": "/images/projects/textile-printed/10-bg.jpg",
       "cap": {
        "ko": "반려동물 재킷",
        "en": "Pet jacket"
-      }
+      },
+      "gapBefore": true
      },
      {
-      "src": "/images/projects/textile-printed/11.jpg",
+      "src": "/images/projects/textile-printed/11-bg.jpg",
       "cap": {
        "ko": "반려동물 재킷과 모자",
        "en": "Pet jacket and hat"
@@ -3264,6 +3236,9 @@ window.PROJECTS = [
      "en": "THE FINISHED ROOM"
     },
     "images": [
+     {
+      "src": "/images/projects/adaptive-textile/ad01.jpg"
+     },
      {
       "src": "/images/projects/adaptive-textile/ad02-1-v2.jpg",
       "cap": {
@@ -4453,6 +4428,9 @@ window.PROJECTS = [
        "ko": "Selected Work 링의 초기 모습",
        "en": "The Selected Work ring, early"
       }
+     },
+     {
+      "src": "/images/projects/portfolio-site/thumb.jpg"
      }
     ]
    },
@@ -4874,34 +4852,18 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/arts-week-2026/04.jpg"
+      "src": "/images/projects/arts-week-2026/10.jpg"
      },
      {
       "src": "/images/projects/arts-week-2026/08.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/09.jpg"
-     },
-     {
-      "src": "/images/projects/arts-week-2026/10.jpg"
-     },
-     {
-      "src": "/images/projects/arts-week-2026/15.jpg"
-     },
-     {
-      "src": "/images/projects/arts-week-2026/16.jpg"
-     },
-     {
       "src": "/images/projects/arts-week-2026/19.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/20.jpg"
+      "src": "/images/projects/arts-week-2026/16.jpg"
      }
-    ],
-    "note": {
-     "ko": "관정도서관 앞, 덩굴이 감긴 아치 터널 아래",
-     "en": "Under the vine-covered arch tunnel in front of Kwanjeong Library"
-    }
+    ]
    },
    {
     "title": {
@@ -4911,38 +4873,18 @@ window.PROJECTS = [
     "images": [
      {
       "src": "/images/projects/arts-week-2026/18.jpg",
-      "cap": {
-       "ko": "우산 위에 올린 구두 두 짝과 카드",
-       "en": "Two heels and a card on the umbrella"
-      },
       "wide": true
      },
      {
-      "src": "/images/projects/arts-week-2026/06.jpg",
-      "cap": {
-       "ko": "직접 만든 시곗바늘과 흰 쉬폰",
-       "en": "Handmade clock hands and white chiffon"
-      }
+      "src": "/images/projects/arts-week-2026/06.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/17.jpg",
-      "cap": {
-       "ko": "우산 아래 선 마네킹",
-       "en": "The mannequin under the umbrella"
-      }
+      "src": "/images/projects/arts-week-2026/17.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/12.jpg",
-      "cap": {
-       "ko": "카드 너머로 보이는 관정관",
-       "en": "Kwanjeong Library behind a playing card"
-      }
+      "src": "/images/projects/arts-week-2026/12.jpg"
      }
-    ],
-    "note": {
-     "ko": "구두, 벨트, 시곗바늘, 트럼프 카드, 그리고 흘러내리는 흰 쉬폰",
-     "en": "Heels, a belt, clock hands, playing cards, and white chiffon slipping down"
-    }
+    ]
    },
    {
     "title": {
@@ -4951,52 +4893,24 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/arts-week-2026/02.jpg",
-      "cap": {
-       "ko": "목에 올린 도자기 파편 꽃",
-       "en": "Ceramic shard flower at the neck"
-      }
+      "src": "/images/projects/arts-week-2026/02.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/03.jpg",
-      "cap": {
-       "ko": "우산과 함께 본 옆모습",
-       "en": "Side view with the umbrella"
-      }
+      "src": "/images/projects/arts-week-2026/03.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/13.jpg",
-      "cap": {
-       "ko": "도자기 파편과 인조진주",
-       "en": "Ceramic shards and faux pearls"
-      }
+      "src": "/images/projects/arts-week-2026/13.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/11.jpg",
-      "cap": {
-       "ko": "정면, 도자기 꽃과 뜨개 가방",
-       "en": "Front: ceramic flower, knitted bag"
-      }
+      "src": "/images/projects/arts-week-2026/11.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/01.jpg",
-      "cap": {
-       "ko": "뜨개 가방과 트럼프 카드",
-       "en": "Knitted bag with playing cards"
-      }
+      "src": "/images/projects/arts-week-2026/01.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/14.jpg",
-      "cap": {
-       "ko": "뜨개 가방과 철사·나뭇가지",
-       "en": "Knitted bag, wire and branch"
-      }
+      "src": "/images/projects/arts-week-2026/14.jpg"
      }
-    ],
-    "note": {
-     "ko": "Art2Wear에서 가져온 꽃, 가방, 치마를 마네킹 위에 다시 구성",
-     "en": "Flowers, bag and skirt from Art2Wear, rebuilt on a mannequin"
-    }
+    ]
    },
    {
     "title": {
@@ -5005,18 +4919,10 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/arts-week-2026/05.jpg",
-      "cap": {
-       "ko": "2026 예술주간 포스터",
-       "en": "2026 Arts Week poster"
-      }
+      "src": "/images/projects/arts-week-2026/05.jpg"
      },
      {
-      "src": "/images/projects/arts-week-2026/07.jpg",
-      "cap": {
-       "ko": "〈공생〉 작품 안내 포스터",
-       "en": "Poster for Tensed Symbiosis"
-      }
+      "src": "/images/projects/arts-week-2026/07.jpg"
      }
     ]
    }

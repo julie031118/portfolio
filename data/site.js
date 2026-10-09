@@ -8,7 +8,7 @@ window.SITE = {
       { label: 'SELECTED', target: '#work' }, /* was WORK (연서, 2026-10-02): SELECTED names the ring, ARCHIVE holds everything */
       { label: 'ABOUT', target: '#about' },
       { label: 'NOW', target: '#now' }, /* NOW moved above the archive grid (연서, 2026-10-09) */
-      { label: 'ARCHIVE', target: '#archive' },
+      { label: 'ARCHIVE', target: '#archive-list' }, /* the filters, not the section top: NOW sits above them since 10-09 (fix 2026-10-10) */
       { label: 'CONTACT', target: '#contact' },
     ],
     language: { ko: 'KO/EN', en: 'EN/KO' },

@@ -954,3 +954,16 @@ html[lang="ko"] .about-award-title { word-break: keep-all; overflow-wrap: anywhe
 
 /* SKILLS under AWARDS, the timeline after them (2026-10-09) */
 .about-awards + .about-skills { padding-top: 48px; }
+
+/* fashion show roles: pictures in a row of their own under both columns (2026-10-09) */
+.detail-role-media { display: flex; flex-direction: column; gap: 20px; margin-top: 32px; min-width: 0; }
+.detail-role-media:empty { display: none; }
+.detail-role-media .detail-role-image { margin: 0; }
+.detail-role-media .detail-role-image img { width: 100%; }
+@media (max-width: 600px), (hover: none) {
+  .detail-roles > * { order: var(--m-order, 0); }
+  .detail-role-media { margin-top: -24px; }
+}
+
+/* nav ARCHIVE lands on the filters, below NOW (2026-10-10) */
+#archive-list { scroll-margin-top: calc(var(--nav-height) + 16px); }

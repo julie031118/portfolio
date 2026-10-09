@@ -83,7 +83,7 @@ export function renderArchive(lang) {
     <div class="archive-inner">
       ${nowMarkup(lang)}
       <div class="section-heading"><span>${SITE.sections.archive.title}</span><span class="section-heading__index">${SITE.sections.archive.index}</span></div>
-      <nav class="archive-filters" aria-label="${SITE.archiveUi.filterLabel}"></nav>
+      <nav class="archive-filters" id="archive-list" aria-label="${SITE.archiveUi.filterLabel}"></nav>
       <div class="archive-grid" aria-live="polite"></div>
       ${SITE.archiveUi.aiNowNote ? `<p class="archive-now-note" hidden><a href="#now">${T(SITE.archiveUi.aiNowNote, lang)}</a></p>` : ''}
     </div>`;
