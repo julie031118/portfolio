@@ -84,6 +84,7 @@ export function renderArchive(lang) {
       <div class="section-heading"><span>${SITE.sections.archive.title}</span><span class="section-heading__index">${SITE.sections.archive.index}</span></div>
       <nav class="archive-filters" aria-label="${SITE.archiveUi.filterLabel}"></nav>
       <div class="archive-grid" aria-live="polite"></div>
+      ${SITE.archiveUi.aiNowNote ? `<p class="archive-now-note" hidden><a href="#now">${T(SITE.archiveUi.aiNowNote, lang)}</a></p>` : ''}
       ${nowMarkup(lang)}
     </div>`;
 
@@ -157,7 +158,10 @@ export function renderArchive(lang) {
     return card;
   });
 
+  /* under AI WORKS only: a line pointing to the AI courses in NOW (2026-10-09) */
+  const nowNote = section.querySelector('.archive-now-note');
   function updateFilterButtons() {
+    if (nowNote) nowNote.hidden = SITE.archiveUi.filters.find((item) => item.label === activeFilter)?.tag !== 'AI';
     filterButtons.forEach((button) => {
       const filter = button.dataset.filter;
       const active = filter === activeFilter;

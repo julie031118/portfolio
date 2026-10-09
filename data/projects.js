@@ -1929,7 +1929,7 @@ window.PROJECTS = [
  {
   "slug": "senior-fit",
   "featured": null,
-  "archiveRank": 11,
+  "archiveRank": 19,
   "tags": [
    "FASHION",
    "INSIGHT"
@@ -2149,14 +2149,15 @@ window.PROJECTS = [
  {
   "slug": "engineered-surfaces",
   "featured": null,
-  "archiveRank": 19,
+  "archiveRank": 18,
   "tags": [
    "FASHION"
   ],
   "year": "2026",
   "period": "2026.01~04",
-  "thumb": "/images/projects/engineered-surfaces/01-v2.jpg",
+  "thumb": "/images/projects/engineered-surfaces/01-v2-hero.jpg",
   "images": [
+   "/images/projects/engineered-surfaces/01-v2-hero.jpg",
    "/images/projects/engineered-surfaces/01-v2.jpg",
    "/images/projects/engineered-surfaces/skirt-01.jpg",
    "/images/projects/engineered-surfaces/skirt-02.jpg",
@@ -2196,7 +2197,8 @@ window.PROJECTS = [
    "/images/projects/engineered-surfaces/18.jpg",
    "/images/projects/engineered-surfaces/36-2.jpg",
    "/images/projects/engineered-surfaces/22.jpg",
-   "/images/projects/engineered-surfaces/25.jpg"
+   "/images/projects/engineered-surfaces/25.jpg",
+   "/images/projects/engineered-surfaces/19-20.jpg"
   ],
   "role": {
    "ko": "실 만들기(spinning, plying, 염색) · 직조 · 편성 · 펀치니들 · 표면 가공 (단독)",
@@ -2204,7 +2206,7 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
-  "heroRatio": 0.75,
+  "cardThumb": "/images/projects/engineered-surfaces/01-v3.jpg",
   "sections": [
    {
     "title": {
@@ -2260,24 +2262,20 @@ window.PROJECTS = [
       "src": "/images/projects/engineered-surfaces/07-5.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/19.jpg",
+      "src": "/images/projects/engineered-surfaces/24.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/19-20.jpg",
       "cap": {
-       "ko": "실 염색 과정",
-       "en": "Dyeing the yarn"
+       "ko": "염색",
+       "en": "Dyeing"
       }
      },
      {
-      "src": "/images/projects/engineered-surfaces/20.jpg",
+      "src": "/images/projects/engineered-surfaces/22.jpg",
       "cap": {
-       "ko": "염색을 마친 실",
-       "en": "Yarn after dyeing"
-      }
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/24.jpg",
-      "cap": {
-       "ko": "실을 감아 색과 질감을 본 샘플",
-       "en": "Yarn wrap for color and texture"
+       "ko": "레이스·자수 콜라주",
+       "en": "Lace and embroidery collage"
       }
      }
     ],
@@ -2293,32 +2291,16 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/engineered-surfaces/23.jpg",
-      "cap": {
-       "ko": "직조기에서 짜는 중",
-       "en": "Weaving on the loom"
-      }
+      "src": "/images/projects/engineered-surfaces/23.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/06-1.jpg",
-      "cap": {
-       "ko": "직조 샘플",
-       "en": "Woven sample"
-      }
+      "src": "/images/projects/engineered-surfaces/06-1.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/45.jpg",
-      "cap": {
-       "ko": "셔틀에 감은 실",
-       "en": "Yarn wound on shuttles"
-      }
+      "src": "/images/projects/engineered-surfaces/45.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/21.jpg",
-      "cap": {
-       "ko": "편직기로 짜는 중",
-       "en": "Knitting on the machine"
-      }
+      "src": "/images/projects/engineered-surfaces/21.jpg"
      }
     ]
    },
@@ -2329,76 +2311,31 @@ window.PROJECTS = [
     },
     "images": [
      {
+      "src": "/images/projects/engineered-surfaces/17-2.jpg"
+     },
+     {
       "src": "/images/projects/engineered-surfaces/08-1.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/08-2.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/09.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/10-1.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/10-2.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/11-1.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/11-2.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/ad13-1.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/ad13-2.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/ad13-3.jpg"
+      "src": "/images/projects/engineered-surfaces/18.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/ad14.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/12-1.jpg"
+      "src": "/images/projects/engineered-surfaces/10-1.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/12-2.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/13.jpg"
+      "src": "/images/projects/engineered-surfaces/ad13-3.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/14.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/15.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/16.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/17-1.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/17-2.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/18.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/36-2.jpg"
-     },
-     {
-      "src": "/images/projects/engineered-surfaces/22.jpg",
-      "cap": {
-       "ko": "레이스·자수 콜라주 샘플",
-       "en": "Lace and embroidery collage sample"
-      }
      }
-    ]
+    ],
+    "rowTarget": 460
    }
   ],
   "nar": {
@@ -3264,15 +3201,16 @@ window.PROJECTS = [
  {
   "slug": "adaptive-textile",
   "featured": null,
-  "archiveRank": 20,
+  "archiveRank": 12,
   "tags": [
    "FASHION",
    "INSIGHT"
   ],
   "year": "2026",
   "period": "2026.01~04",
-  "thumb": "/images/projects/adaptive-textile/ad01-hero.jpg",
+  "thumb": "/images/projects/adaptive-textile/ad01-hero-wide-v3.jpg",
   "images": [
+   "/images/projects/adaptive-textile/ad01-hero-wide-v3.jpg",
    "/images/projects/adaptive-textile/ad01-hero.jpg",
    "/images/projects/adaptive-textile/ad01.jpg",
    "/images/projects/adaptive-textile/ad02-1-v2.jpg",
@@ -3306,13 +3244,12 @@ window.PROJECTS = [
    "/images/projects/adaptive-textile/ad22.jpg"
   ],
   "role": {
-   "ko": "텍스타일 개발 · 룸 디자인 (4인 팀)",
-   "en": "Textile development, room design (team of 4)"
+   "ko": "컨셉 기획 · 제작 (4인 팀) / 시장 조사 · 컬러 팔레트 · 러그 터프팅 · 청키 블랭킷 손뜨개(단독)",
+   "en": "Concept and making (team of 4) / market research, color palette, rug tufting, chunky blanket hand knit (solo)"
   },
   "spotify": null,
   "spotifyNote": null,
   "cardThumb": "/images/projects/adaptive-textile/ad01.jpg",
-  "heroRatio": 1.262,
   "sections": [
    {
     "title": {
@@ -3547,12 +3484,13 @@ window.PROJECTS = [
     "headline": "패턴이 가득한 맥시멀리즘 방에는 화려함을 완화할 요소가 필요해 보였다. 그래서 청키 블랭킷을 제안하고 직접 만들었다.",
     "need": "맥시멀리즘 인테리어 텍스타일을 만드는 과제였다. 그냥 많이 넣기만 하면 방이 산만해 보인다. 패턴과 색을 겹겹이 쌓더라도, 일부러 그렇게 고른 것처럼 보여야 했다.",
     "action": [
-     "뉴 맥시멀리즘 인테리어 트렌드를 조사",
-     "브랜드 3곳을 조사해 모티프와 팔레트를 정할 때 참고",
+     "시장 조사를 맡아 뉴 맥시멀리즘 인테리어 트렌드를 조사",
+     "브랜드 3곳을 조사해, 빈티지 식물 그림을 모아 갤러리처럼 꾸미는 방식에서 여러 보태니컬 패턴을 한 테마로 묶을 근거를, 진한 바탕색으로 식물 모티프를 살리는 방식에서 네이비·테라코타·그린 팔레트의 근거를 얻음",
      "팀원 각자 무드보드를 만든 뒤, 하나로 합치는 방법을 찾아 방향을 맞춤",
-     "보태니컬과 기하학 모티프를 하나의 컬러 스토리로 묶어 컨셉에 맞는 패턴 후보 16종을 개발하고, Procreate로 패턴 선정과 배치를 바꾼 방 시안을 여러 개 비교",
+     "보태니컬과 기하학 모티프를 하나의 컬러 스토리로 묶어 컨셉에 맞는 패턴 후보 16종을 개발",
+     "컬러 팔레트는 팀원 한 명과 함께 최종 확정하고, Procreate 텍스처 매핑으로 패턴 선정과 배치를 바꾼 방 시안을 여러 개 만들어 비교",
      "수업에서 익힌 번아웃 프린트, 레이저 커팅, 자수 같은 기법을 바탕으로 커튼, 러그, 담요, 쿠션, 의자 패브릭, 램프 갓, 테이블 커버, 바구니까지 팀이 직접 만들어 방을 완성",
-     "그중 청키 블랭킷은 아이디어부터 제작까지 단독으로 맡음"
+     "그중 러그는 팀원 한 명과 함께 터프팅하고, 청키 블랭킷은 아이디어부터 손뜨개 제작까지 단독으로 맡음"
     ],
     "result": [
      "프로젝트 평가 97.5 / 100",
@@ -3566,12 +3504,13 @@ window.PROJECTS = [
     "headline": "A maximalist room full of pattern seemed to need something to soften it, so I proposed the chunky blanket and made it myself.",
     "need": "The brief was maximalist interior textiles. Just putting a lot in makes a room look messy. Even with pattern and colour layered on, it had to look chosen on purpose.",
     "action": [
-     "Researched the New Maximalism trend in interiors",
-     "Studied three brands for reference when choosing motifs and the palette",
+     "Took on market research, starting with the New Maximalism trend in interiors",
+     "Studied three brands: one that mixes vintage botanical drawings like a gallery gave us a reason to bring many botanical patterns into one theme, and one that sets botanical motifs on deep grounds backed our navy, terracotta and green palette",
      "Each of us made a mood board, then we worked out how to blend them into one direction",
-     "Developed 16 candidate patterns for the concept, pairing botanical and geometric motifs in one color story, then compared room studies in Procreate with different picks and placements",
+     "Developed 16 candidate patterns for the concept, pairing botanical and geometric motifs in one color story",
+     "Finalized the color palette with one teammate, and made several room studies in Procreate with texture mapping to compare pattern picks and placements",
      "Building on burn-out printing, laser cutting and embroidery learned in class, the team made every piece itself: curtains, rug, blanket, cushions, chair fabric, lampshade, table cover and basket",
-     "Of these, the chunky blanket was mine alone, from the idea through to making it"
+     "Of these, I tufted the rug with one teammate and hand knit the chunky blanket on my own, from the idea through to making it"
     ],
     "result": [
      "Project grade 97.5 / 100",
@@ -3586,7 +3525,7 @@ window.PROJECTS = [
  {
   "slug": "korean-costume",
   "featured": null,
-  "archiveRank": 21,
+  "archiveRank": 22,
   "tags": [
    "FASHION"
   ],
@@ -3689,7 +3628,7 @@ window.PROJECTS = [
  {
   "slug": "seoul-metro",
   "featured": null,
-  "archiveRank": 22,
+  "archiveRank": 20,
   "tags": [
    "CONTENT"
   ],
@@ -3744,17 +3683,6 @@ window.PROJECTS = [
        "ko": "노선이 하나씩 그려지는 장면들과 마지막 ‘구석구석’ 장면",
        "en": "Lines drawn one by one, and the last ‘구석구석’ shot"
       }
-     }
-    ]
-   },
-   {
-    "title": {
-     "ko": "참고한 노선도",
-     "en": "MAP REFERENCE"
-    },
-    "images": [
-     {
-      "src": "/images/projects/seoul-metro/01.jpg"
      }
     ]
    }
@@ -3891,18 +3819,11 @@ window.PROJECTS = [
    {
     "title": {
      "ko": "완성 작품",
-     "en": "THE FINAL PIECE"
+     "en": "FINISHED PIECE"
     },
     "images": [
      {
       "src": "/images/projects/denim-2026/01.jpg"
-     },
-     {
-      "src": "/images/projects/denim-2026/ai13.jpg",
-      "cap": {
-       "ko": "AI로 미리 입혀 본 뒷모습",
-       "en": "Back view tried on with AI first"
-      }
      },
      {
       "src": "/images/projects/denim-2026/03.jpg"
@@ -3919,259 +3840,143 @@ window.PROJECTS = [
      {
       "src": "/images/projects/denim-2026/07.jpg"
      }
-    ],
-    "note": {
-     "ko": "원단을 받아 실물로 만든 한 벌",
-     "en": "The single garment, built from the delivered fabric"
-    }
+    ]
    },
    {
     "title": {
-     "ko": "AI 예선 이미지 · 디자인 보드",
-     "en": "AI PRELIMINARY IMAGE · BOARDS"
+     "ko": "제작 전 AI로 방향 비교",
+     "en": "COMPARING DIRECTIONS WITH AI BEFORE MAKING"
     },
     "images": [
      {
-      "src": "/images/projects/denim-2026/ai01.jpg",
-      "cap": {
-       "ko": "예선 이미지 · 튜브에서 풀린 실",
-       "en": "Preliminary image · tube into thread"
-      }
+      "src": "/images/projects/denim-2026/ai02.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai02.jpg",
-      "cap": {
-       "ko": "커팅 사이로 보이는 레이스",
-       "en": "Lace showing through the cut"
-      }
+      "src": "/images/projects/denim-2026/ai03.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai03.jpg",
-      "cap": {
-       "ko": "물감이 도트를 지나 실로",
-       "en": "Paint to dots to thread"
-      }
+      "src": "/images/projects/denim-2026/ai04.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai04.jpg",
-      "cap": {
-       "ko": "보로 스티치와 스웨이드 패치",
-       "en": "Boro stitching and suede patches"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai05.jpg",
-      "cap": {
-       "ko": "패치 그래픽 네 가지 변주",
-       "en": "Four patch graphic variations"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai06.jpg",
-      "cap": {
-       "ko": "홀터 베스트 · 카고 팬츠 셋업",
-       "en": "Halter vest and cargo pants set"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai07.jpg",
-      "cap": {
-       "ko": "튜브 프린트와 레이스 데미지",
-       "en": "Tube print with lace damage"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai08.jpg",
-      "cap": {
-       "ko": "레이스로 번지는 물감",
-       "en": "Paint bleeding into lace"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai09.jpg",
-      "cap": {
-       "ko": "격자 스티치 패치 버전",
-       "en": "Grid stitch patch version"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai10.jpg",
-      "cap": {
-       "ko": "튜브 프린트 홀터 디테일",
-       "en": "Halter look, tube print details"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai11.jpg",
-      "cap": {
-       "ko": "데님 재킷 셋업",
-       "en": "Denim jacket set"
-      }
-     }
-    ],
-    "note": {
-     "ko": "원단을 자르기 전 AI로 방향 비교",
-     "en": "Directions compared with AI before cutting"
-    }
-   },
-   {
-    "title": {
-     "ko": "AI 룩북 변주",
-     "en": "AI LOOKBOOK VARIATIONS"
-    },
-    "images": [
-     {
-      "src": "/images/projects/denim-2026/ai12.jpg",
-      "cap": {
-       "ko": "뒷모습 · 옆선 패치 배열",
-       "en": "Back view, patches down the side"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai14.jpg",
-      "cap": {
-       "ko": "앞모습 · 옆선 패치 배열",
-       "en": "Front view, patches down the side"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai15.jpg",
-      "cap": {
-       "ko": "옆선 체크 테이프 버전",
-       "en": "Check tape down the side"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai16.jpg",
-      "cap": {
-       "ko": "비대칭 덧단 앞뒤",
-       "en": "Asymmetric flap, front and back"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai29.jpg",
-      "cap": {
-       "ko": "뒷판 튜브 프린트 클로즈업",
-       "en": "Back tube print, close up"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai17.jpg",
-      "cap": {
-       "ko": "길게 늘어진 덧단 버전",
-       "en": "Longer draped flap version"
-      }
+      "src": "/images/projects/denim-2026/ai05.jpg"
      }
     ]
    },
    {
     "title": {
-     "ko": "AI 패치 컬러웨이",
-     "en": "AI PATCH COLORWAYS"
+     "ko": "",
+     "en": ""
     },
     "images": [
      {
-      "src": "/images/projects/denim-2026/ai18.jpg",
-      "cap": {
-       "ko": "멀티 컬러",
-       "en": "Multicolor"
-      }
+      "src": "/images/projects/denim-2026/ai06.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai19.jpg",
-      "cap": {
-       "ko": "인디고 톤",
-       "en": "Indigo tone"
-      }
+      "src": "/images/projects/denim-2026/ai07.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai20.jpg",
-      "cap": {
-       "ko": "차분한 믹스 톤",
-       "en": "Muted mix"
-      }
+      "src": "/images/projects/denim-2026/ai08.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai21.jpg",
-      "cap": {
-       "ko": "아이보리 톤",
-       "en": "Ivory tone"
-      }
+      "src": "/images/projects/denim-2026/ai09.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai22.jpg",
-      "cap": {
-       "ko": "브라운 톤",
-       "en": "Brown tone"
-      }
+      "src": "/images/projects/denim-2026/ai10.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai11.jpg"
      }
-    ],
-    "note": {
-     "ko": "같은 패치 배열, 색만 바꿔 비교",
-     "en": "Same patch layout, only the colors change"
-    }
+    ]
+   },
+   {
+    "title": {
+     "ko": "",
+     "en": ""
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/ai12.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai13.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai14.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai15.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai16.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai17.jpg"
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "",
+     "en": ""
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/ai18.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai19.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai20.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai21.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai22.jpg"
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "",
+     "en": ""
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/ai27.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai29.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai28.jpg"
+     }
+    ]
    },
    {
     "title": {
      "ko": "AI 백패치 텍스타일",
-     "en": "AI BACK PATCH TEXTILES"
+     "en": "AI BACK PATCH TEXTILE"
     },
     "images": [
      {
-      "src": "/images/projects/denim-2026/ai23.jpg",
-      "cap": {
-       "ko": "레드 바탕 튜브 패치",
-       "en": "Tube patch on red"
-      }
+      "src": "/images/projects/denim-2026/ai23.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai24.jpg",
-      "cap": {
-       "ko": "흑백 튜브 패치",
-       "en": "Black and white tube patch"
-      }
+      "src": "/images/projects/denim-2026/ai24.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai25.jpg",
-      "cap": {
-       "ko": "그래픽 모음 · 밝은 바탕",
-       "en": "Treatments on a light ground"
-      }
+      "src": "/images/projects/denim-2026/ai25.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai26.jpg",
-      "cap": {
-       "ko": "그래픽 모음 · 인디고 바탕",
-       "en": "Treatments on an indigo ground"
-      }
+      "src": "/images/projects/denim-2026/ai26.jpg"
      }
     ],
     "note": {
-     "ko": "같은 튜브 그래픽, 다른 표현 방식",
-     "en": "One tube graphic, different treatments"
+     "ko": "직접 만든 그래픽을 옥스퍼드 원단에 디지털 프린트하면 어떤 느낌일지 미리 보려고 AI 이미지를 여러 장 만들어 봄",
+     "en": "Several AI images made to preview how my graphic would look digitally printed on oxford cloth"
     }
-   },
-   {
-    "title": {
-     "ko": "AI 베스트 시뮬레이션",
-     "en": "AI VEST SIMULATIONS"
-    },
-    "images": [
-     {
-      "src": "/images/projects/denim-2026/ai27.jpg",
-      "cap": {
-       "ko": "뒷판 물감 튜브 프린트",
-       "en": "Paint tube print on the back"
-      }
-     },
-     {
-      "src": "/images/projects/denim-2026/ai28.jpg",
-      "cap": {
-       "ko": "단추 여밈 베스트 앞뒤",
-       "en": "Button front vest, front and back"
-      }
-     }
-    ]
    },
    {
     "title": {
@@ -4180,38 +3985,18 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/denim-2026/aw01.jpg",
-      "cap": {
-       "ko": "수상자 단체 사진",
-       "en": "Group photo of the awardees"
-      }
+      "src": "/images/projects/denim-2026/aw01.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/aw02.jpg",
-      "cap": {
-       "ko": "무대 위 수상 소감",
-       "en": "Award speeches on stage"
-      }
+      "src": "/images/projects/denim-2026/aw02.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/aw03.jpg",
-      "cap": {
-       "ko": "상장을 든 수상자들",
-       "en": "Awardees holding certificates"
-      }
+      "src": "/images/projects/denim-2026/aw03.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/aw04.jpg",
-      "cap": {
-       "ko": "공모전 소개와 심사위원",
-       "en": "Contest intro and the judges"
-      }
+      "src": "/images/projects/denim-2026/aw04.jpg"
      }
-    ],
-    "note": {
-     "ko": "코리아 데님 디자인 공모전 2026 입선",
-     "en": "Honorable Mention, Korea Denim Design Contest 2026"
-    }
+    ]
    }
   ],
   "nar": {
@@ -4237,7 +4022,7 @@ window.PROJECTS = [
      "기존 브랜드 디자인과 겹쳐 보이는 결과물은 표절 위험으로 따로 걸러내고 진행",
      "물감이 점점 흩어지는 그래디언트를 만들고, 그 그래디언트가 끝나는 지점에서 실제 프린지가 시작되도록 앞뒤를 연결",
      "물감 튜브 그래픽을 ASCII, 레트로, 애시드, 그레인, 찢어진 종이, 잉크 브러시 등 여러 스타일로 만들어, 표현 방식에 따라 얼마나 달라지는지 비교",
-     "인디고 생지 데님과 아이보리 캔버스 백패치로 소재를 정하고, 원단을 받아 실물 한 벌을 제작",
+     "인디고 생지 데님과 아이보리 옥스퍼드 20수 백패치로 소재를 정하고, 원단을 받아 실물 한 벌을 제작",
      "상의 디스트로이드: 스판 데님이라 찢기도 올을 풀기도 쉽지 않아, 칼·드릴·송곳으로 직접 찢고 올을 풀어냄",
      "디스트로이드를 많이 넣어도 상의 실루엣이 무너지지 않도록 레이스를 덧대 고정하고, 찢긴 질감과 레이스의 대비로 디자인에 재미를 더함. 같은 레이스를 바지에도 써서 상하의를 하나로 묶음"
     ],
@@ -4276,7 +4061,7 @@ window.PROJECTS = [
      "Set aside any output that looked too close to an existing brand’s design",
      "Scattered the paint into a gradient, and started the real fringe exactly where the gradient ends, connecting front to back",
      "Made the paint-tube graphic in several styles (ASCII, retro, acid, grain, torn paper, ink brush) to compare how much it changes with each",
-     "Chose raw indigo denim with an ivory canvas back patch, then made the one garment from the delivered fabric",
+     "Chose raw indigo denim with an ivory 20s oxford back patch, then made the one garment from the delivered fabric",
      "Distressing the top: stretch denim does not tear or unravel easily, so I opened it by hand with a knife, a drill and an awl, then pulled the threads loose",
      "Backed the heavy distressing with lace so the top kept its silhouette, and let the torn texture play against the lace. The same lace runs into the trousers to tie top and bottom together"
     ],
@@ -4824,7 +4609,7 @@ window.PROJECTS = [
  {
   "slug": "promo-video-ai",
   "featured": null,
-  "archiveRank": 12,
+  "archiveRank": 11,
   "tags": [
    "CONTENT",
    "AI"
@@ -4898,7 +4683,7 @@ window.PROJECTS = [
  {
   "slug": "unreal-engine",
   "featured": null,
-  "archiveRank": 18,
+  "archiveRank": 21,
   "tags": [
    "CONTENT"
   ],

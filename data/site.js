@@ -95,6 +95,13 @@ window.SITE = {
       },
     ],
 
+    /* AWARDS under KEY FIGURES (연서, 2026-10-09: these four; the APEC video's award is left out on purpose) */
+    awards: [
+      { year: '2026', label: { ko: '입선', en: 'Honorable Mention' }, title: { ko: '코리아 데님 디자인 공모전', en: 'Korea Denim Design Contest' }, link: 'denim-2026' },
+      { year: '2026', label: { ko: '영구 소장작 선정', en: 'Permanent collection' }, title: { ko: 'NC State 윌슨 컬리지 컬렉션 (카프탄)', en: 'Wilson College Collection, NC State (kaftan)' }, link: 'kaftan' },
+      { year: '2025', label: { ko: '대상', en: 'Grand Prize' }, title: { ko: '서울대학교 중앙도서관 〈AI로 만드는 영화클래스〉', en: 'SNU Central Library ‘AI Filmmaking Class’' }, link: 'ai-short-film' },
+      { year: '2024', label: { ko: '입선', en: 'Honorable Mention' }, title: { ko: '제13회 국제 디지털 패션 공모전 (한국의류산업학회)', en: '13th International Digital Fashion Contest (KSCT)' }, link: 'clo3d' },
+    ],
     stats: [
       { v: '3.9 / 4.3', l: 'GPA · Seoul National University' },
       { v: '4.0 / 4.0', l: 'GPA · NC State University (Exchange)' },
@@ -240,8 +247,9 @@ window.SITE = {
     /* phones only: a small note once per visit that the full site is on a computer (연서, 2026-10-02) */
     desktopNote: { ko: '컴퓨터로 보면 훨씬 좋아요. 3D 링과 인터랙션까지 모두 보여요', en: 'Best viewed on a computer, with the 3D ring and every interaction' },
     desktopNoteClose: { ko: '닫기', en: 'Close' },
-    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
+    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', awards: 'AWARDS', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
   archiveUi: {
+    aiNowNote: { ko: '지금 배우고 있는 AI 작업은 NOW에 ↓', en: 'The AI work I am learning right now is in NOW ↓' }, /* shown only under AI WORKS (연서, 2026-10-09) */
     filterLabel: 'ARCHIVE FILTERS', imageSlot: 'IMAGE 3:4', inProgress: 'IN PROGRESS',
     filters: [
       { label: 'ALL', tag: null }, { label: 'FASHION', tag: 'FASHION' }, { label: 'CONTENT', tag: 'CONTENT' },
@@ -251,7 +259,7 @@ window.SITE = {
     order: {
       FASHION: ['art2wear', 'fashion-show-2024', 'kaftan', 'denim-2026', 'arts-week-2026', 'senior-fit', 'clo3d', 'korean-costume', 'textile-printed', 'textile-woven', 'textile-knit', 'adaptive-textile', 'engineered-surfaces', 'fashion-illustration'],
       CONTENT: ['ai-short-film', 'miraen', 'campus-festival', 'directing-a-year', 'fashion-show-2024', 'promo-video-ai', 'portfolio-site', 'sub-motion', 'unreal-engine', 'seoul-metro'],
-      AI: ['portfolio-site', 'ai-short-film', 'promo-video-ai', 'kaftan', 'denim-2026', 'miraen'],
+      AI: ['portfolio-site', 'ai-short-film', 'promo-video-ai', 'denim-2026', 'kaftan', 'miraen'], /* denim right after APEC (연서, 2026-10-09) */
       INSIGHT: ['miraen', 'senior-fit', 'campus-festival', 'directing-a-year', 'adaptive-textile'],
     },
   },
