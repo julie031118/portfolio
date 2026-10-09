@@ -1132,7 +1132,9 @@ window.PROJECTS = [
        "인스타그램 피드를 매거진처럼 구성",
        "디자이너 인터뷰를 기획·진행: 옷 설명이 아니라 '왜 이 형태였는지'를 묻는 방향으로"
       ],
-      "result": null,
+      "result": [
+       "이전 패션쇼 계정에는 없던 매거진 형식으로 디자이너의 의도와 이야기를 담았고, 피드를 본 사람들에게서 '디자이너의 의도를 알 수 있어서 좋았다'는 반응을 받음"
+      ],
       "images": [
        "/images/projects/fashion-show-2024/15.jpg"
       ]
@@ -1172,7 +1174,9 @@ window.PROJECTS = [
        "Laid the Instagram feed out like a magazine",
        "Planned and ran the designer interviews, asking not what the clothes are but why this form"
       ],
-      "result": null,
+      "result": [
+       "Ran the feed as a magazine telling each designer's intent and story, which the show's earlier accounts had never done, and viewers said they liked being able to see what the designers meant"
+      ],
       "images": [
        "/images/projects/fashion-show-2024/15.jpg"
       ]
@@ -3200,7 +3204,7 @@ window.PROJECTS = [
  },
  {
   "slug": "adaptive-textile",
-  "featured": null,
+  "featured": 11,
   "archiveRank": 12,
   "tags": [
    "FASHION",
@@ -3247,8 +3251,11 @@ window.PROJECTS = [
    "ko": "컨셉 기획 · 제작 (4인 팀) / 시장 조사 · 컬러 팔레트 · 러그 터프팅 · 청키 블랭킷 손뜨개(단독)",
    "en": "Concept and making (team of 4) / market research, color palette, rug tufting, chunky blanket hand knit (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "2hitsKa8SthKhRJBXUHbIv",
+  "spotifyNote": {
+   "ko": "커튼부터 담요, 램프 갓까지 팀이 직접 만들어 방 하나를 채운 프로젝트라, 집 안의 평범한 하루를 그린 노래를 골랐다. 난로에 불을 붙이고 꽃병에 꽃을 꽂는 가사 속 장면이 보태니컬 패턴으로 꾸민 이 방과 닮았다.",
+   "en": "Our team made everything in one room, from the curtains to the blanket and the lamp shade, so I chose a song about an ordinary day at home. In the lyrics someone lights a fire and puts flowers in a vase, and that scene looks like this room full of botanical patterns."
+  },
   "cardThumb": "/images/projects/adaptive-textile/ad01.jpg",
   "sections": [
    {
@@ -3479,7 +3486,7 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "인테리어 텍스타일: 방 하나의 기획, 디자인, 제작",
+    "title": "인테리어 텍스타일",
     "cat": "인테리어 텍스타일 · 4인 팀 · 미국 교환학생 · 2026.01~04",
     "headline": "패턴이 가득한 맥시멀리즘 방에는 화려함을 완화할 요소가 필요해 보였다. 그래서 청키 블랭킷을 제안하고 직접 만들었다.",
     "need": "맥시멀리즘 인테리어 텍스타일을 만드는 과제였다. 그냥 많이 넣기만 하면 방이 산만해 보인다. 패턴과 색을 겹겹이 쌓더라도, 일부러 그렇게 고른 것처럼 보여야 했다.",
@@ -3499,7 +3506,7 @@ window.PROJECTS = [
     ]
    },
    "en": {
-    "title": "Interior Textiles: One Room, Planned, Designed and Made",
+    "title": "Interior Textiles",
     "cat": "Interior Textiles · Team of 4 · Exchange in the US · 2026.01~04",
     "headline": "A maximalist room full of pattern seemed to need something to soften it, so I proposed the chunky blanket and made it myself.",
     "need": "The brief was maximalist interior textiles. Just putting a lot in makes a room look messy. Even with pattern and colour layered on, it had to look chosen on purpose.",
@@ -3520,7 +3527,9 @@ window.PROJECTS = [
    }
   },
   "title": "Interior Textiles",
-  "desc": "A team of four planned one room, developed 16 patterns for it and made every textile piece in it."
+  "desc": "A team of four planned one room, developed 16 patterns for it and made every textile piece in it.",
+  "song": "Crosby, Stills, Nash & Young Our House",
+  "songYoutube": "https://www.youtube.com/watch?v=aunVlekXjkE"
  },
  {
   "slug": "korean-costume",
@@ -4546,7 +4555,7 @@ window.PROJECTS = [
      "검토는 리뷰 시트로: 프로젝트, 타임라인, 스킬을 한 페이지에 펼쳐 두고 바꿀 것만 표시해 한 번에 반영. 화면 수정은 같은 각도에서 찍은 전후 화면을 나란히 놓고 비교해 결정"
     ],
     "result": [
-     "인트로 · Selected Work · About · 아카이브 · 연락처와 프로젝트 23개 상세 페이지를 한국어 · 영어로 구현 (2026.10, 계속 다듬는 중)"
+     "인트로부터 연락처까지 섹션 6개와 프로젝트 상세 페이지 23개를 한국어·영어로 구현 (2026.10 업데이트)"
     ],
     "detail": {
      "title": "AI가 발전해도 사람이 하는 일",
@@ -4589,7 +4598,7 @@ window.PROJECTS = [
      "Reviewed on a sheet, not in chat: projects, timeline and skills on one page; I mark only what changes and it is applied in one pass. Layout changes were decided by putting before and after side by side, shot from the same angle"
     ],
     "result": [
-     "Intro, Selected Work, About, Archive and Contact plus 23 project pages, in Korean and English (Oct 2026, still being refined)"
+     "Six sections from the intro to contact, plus 23 project pages, in Korean and English (updated Oct 2026)"
     ],
     "detail": {
      "title": "What people still do as AI improves",

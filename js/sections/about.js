@@ -68,9 +68,10 @@ export function renderAbout(lang) {
         <figure class="about-photo about-photo--stack about-photo--count-${(SITE.profile.photos || [SITE.profile.photo]).length}">${(SITE.profile.photos || [SITE.profile.photo]).map((_, index) => mediaMarkup(`about-photo-frame about-photo-frame--${index + 1}`, SITE.aboutUi.photoSlot)).join('')}<figcaption>${SITE.aboutUi.profile}</figcaption></figure>
       </section>
       <section class="about-stats" aria-label="${SITE.aboutUi.stats}"></section>
+      ${(SITE.profile.experience || []).length ? `<section class="about-awards about-experience" aria-labelledby="about-exp-title"><h2 id="about-exp-title">${SITE.aboutUi.experience || 'EXPERIENCE'}</h2><ol class="about-award-list about-exp-list"></ol></section>` : ''}
       ${(SITE.profile.awards || []).length ? `<section class="about-awards" aria-labelledby="about-awards-title"><h2 id="about-awards-title">${SITE.aboutUi.awards || 'AWARDS'}</h2><ol class="about-award-list"></ol></section>` : ''}
-      <section class="about-timeline" aria-labelledby="about-timeline-title"><div class="timeline-pin"><div class="timeline-topline"><h2 id="about-timeline-title">${SITE.aboutUi.timeline}</h2><span>${String(SITE.timeline[0].segment).slice(0, 4)} <span class="timeline-topline-arrow">→</span> ${String(SITE.timeline[SITE.timeline.length - 1].segment).slice(0, 4)}</span></div><div class="timeline-viewport"><div class="timeline-track"></div></div></div></section>
       <section class="about-skills" aria-labelledby="about-skills-title"><h2 id="about-skills-title">${SITE.aboutUi.skills}</h2><div class="about-skill-groups"></div></section>
+      <section class="about-timeline" aria-labelledby="about-timeline-title"><div class="timeline-pin"><div class="timeline-topline"><h2 id="about-timeline-title">${SITE.aboutUi.timeline}</h2><span>${String(SITE.timeline[0].segment).slice(0, 4)} <span class="timeline-topline-arrow">→</span> ${String(SITE.timeline[SITE.timeline.length - 1].segment).slice(0, 4)}</span></div><div class="timeline-viewport"><div class="timeline-track"></div></div></div></section>
     </div>
     <div class="strength-media-popup" aria-hidden="true">${mediaMarkup('strength-media-frame', SITE.aboutUi.mediaSlot)}</div>
     <aside class="timeline-side-panel" aria-hidden="true"><div class="timeline-panel-inner"></div></aside>`;
@@ -130,9 +131,8 @@ export function renderAbout(lang) {
   photoFrames.forEach((frame, index) => { loadMedia(frame, photoSources[index], SITE.profile.photoAlt[lang] || SITE.profile.photoAlt.ko); });
 
   SITE.profile.stats.forEach((stat) => { const cell = document.createElement('div'); cell.className = 'about-stat'; const value = document.createElement('strong'); value.textContent = stat.v; const label = document.createElement('span'); label.textContent = stat.l; cell.append(value, label); stats.append(cell); });
-  /* AWARDS (2026-10-09): one line each, the line opens its project */
-  const awardList = section.querySelector('.about-award-list');
-  (SITE.profile.awards || []).forEach((award) => {
+  /* EXPERIENCE and AWARDS (2026-10-09): one line each; a line with a project opens it */
+  const fillList = (list, entries) => (entries || []).forEach((award) => {
     const item = document.createElement('li');
     const row = document.createElement(award.link ? 'button' : 'div'); row.className = 'about-award'; if (award.link) { row.type = 'button'; row.addEventListener('click', () => openDetail(award.link, lang)); }
     const year = document.createElement('span'); year.className = 'about-award-year'; year.textContent = award.year;
@@ -140,8 +140,10 @@ export function renderAbout(lang) {
     const title = document.createElement('span'); title.className = 'about-award-title'; title.textContent = T(award.title, lang);
     row.append(year, label, title);
     if (award.link) { const go = document.createElement('span'); go.className = 'about-award-go'; go.setAttribute('aria-hidden', 'true'); go.textContent = '→'; row.append(go); }
-    item.append(row); awardList?.append(item);
+    item.append(row); list?.append(item);
   });
+  fillList(section.querySelector('.about-exp-list'), SITE.profile.experience);
+  fillList(section.querySelector('.about-awards:not(.about-experience) .about-award-list'), SITE.profile.awards);
   buildTimeline(track, lang);
   SITE.profile.skills.forEach((group) => { const block = document.createElement('section'); block.className = 'about-skill-group'; const label = document.createElement('h3'); label.textContent = T(group.group, lang).toUpperCase(); const items = document.createElement('p'); items.textContent = group.items.map((entry) => T(entry, lang)).join(' · '); block.append(label, items); skills.append(block); });
 

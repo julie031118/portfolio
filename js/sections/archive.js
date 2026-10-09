@@ -81,11 +81,11 @@ export function renderArchive(lang) {
   section.className = 'site-section archive-section';
   section.innerHTML = `
     <div class="archive-inner">
+      ${nowMarkup(lang)}
       <div class="section-heading"><span>${SITE.sections.archive.title}</span><span class="section-heading__index">${SITE.sections.archive.index}</span></div>
       <nav class="archive-filters" aria-label="${SITE.archiveUi.filterLabel}"></nav>
       <div class="archive-grid" aria-live="polite"></div>
       ${SITE.archiveUi.aiNowNote ? `<p class="archive-now-note" hidden><a href="#now">${T(SITE.archiveUi.aiNowNote, lang)}</a></p>` : ''}
-      ${nowMarkup(lang)}
     </div>`;
 
   const filtersRoot = section.querySelector('.archive-filters');
@@ -225,7 +225,7 @@ export function renderArchive(lang) {
       const fromHeight = grid.offsetHeight;
       toggleCards();
       grid.style.height = `${Math.max(fromHeight, grid.offsetHeight)}px`;
-      if (nowBlock) gsap.to(nowBlock, { autoAlpha: 0, duration: .15, overwrite: true });
+      /* NOW sits above the grid since 2026-10-09: nothing to step aside */
       flipAnimation = Flip.from(state, {
         duration: .8,
         ease: 'expo.inOut',
@@ -233,7 +233,7 @@ export function renderArchive(lang) {
         stagger: .02,
         onEnter: (elements) => gsap.fromTo(elements, { opacity: 0, scale: .96 }, { opacity: 1, scale: 1, duration: .35, overwrite: true }),
         onLeave: (elements) => gsap.to(elements, { opacity: 0, scale: .96, duration: .25, overwrite: true }),
-        onComplete: () => { flipAnimation = null; grid.style.height = ''; gsap.set(cards, { clearProps: 'all' }); if (nowBlock) gsap.to(nowBlock, { autoAlpha: 1, duration: .4, overwrite: true, onComplete: () => gsap.set(nowBlock, { clearProps: 'opacity,visibility' }) }); },
+        onComplete: () => { flipAnimation = null; grid.style.height = ''; gsap.set(cards, { clearProps: 'all' }); },
       });
     } else toggleCards();
     updateFilterButtons();
@@ -242,8 +242,9 @@ export function renderArchive(lang) {
 
   function scrollToArchive() {
     requestAnimationFrame(() => {
-      if (window.__lenis) window.__lenis.scrollTo(section, { duration: .8, force: true, onComplete: () => { const offset = section.getBoundingClientRect().top; if (Math.abs(offset) > 1) window.__lenis.scrollTo(window.scrollY + offset, { immediate: true, force: true }); } });
-      else section.scrollIntoView({ behavior: reducedQuery.matches ? 'auto' : 'smooth' });
+      /* the filters, not the section top: NOW sits above them since 2026-10-09 */
+      if (window.__lenis) window.__lenis.scrollTo(filtersRoot, { duration: .8, force: true, onComplete: () => { const offset = filtersRoot.getBoundingClientRect().top; if (Math.abs(offset) > 1) window.__lenis.scrollTo(window.scrollY + offset, { immediate: true, force: true }); } });
+      else filtersRoot.scrollIntoView({ behavior: reducedQuery.matches ? 'auto' : 'smooth' });
     });
   }
 

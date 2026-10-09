@@ -7,8 +7,8 @@ window.SITE = {
       { label: 'INTRO', target: '#intro' },
       { label: 'SELECTED', target: '#work' }, /* was WORK (연서, 2026-10-02): SELECTED names the ring, ARCHIVE holds everything */
       { label: 'ABOUT', target: '#about' },
+      { label: 'NOW', target: '#now' }, /* NOW moved above the archive grid (연서, 2026-10-09) */
       { label: 'ARCHIVE', target: '#archive' },
-      { label: 'NOW', target: '#now' },
       { label: 'CONTACT', target: '#contact' },
     ],
     language: { ko: 'KO/EN', en: 'EN/KO' },
@@ -95,6 +95,13 @@ window.SITE = {
       },
     ],
 
+    /* EXPERIENCE above AWARDS (연서, 2026-10-09): the three internships and MiraeN, as the timeline has them */
+    experience: [
+      { year: '2026.05~08', label: { ko: '연구실 인턴', en: 'Research Intern' }, title: { ko: 'The Nonwovens Institute, NC State', en: 'The Nonwovens Institute, NC State' }, link: null },
+      { year: '2026.01', label: { ko: '쇼룸 인턴 (마이애미)', en: 'Showroom Intern (Miami)' }, title: { ko: 'BRIDGE SHOWROOM', en: 'BRIDGE SHOWROOM' }, link: null },
+      { year: '2025.11~2026.05', label: { ko: '마케팅 & 디자인 인턴 (원격, 미국)', en: 'Marketing & Design Intern (remote, US)' }, title: { ko: 'Missions with Monty', en: 'Missions with Monty' }, link: null },
+      { year: '2025.01~08', label: { ko: '디자이너 & 마케터', en: 'Designer & Marketer' }, title: { ko: '미래엔수학 5개 지사', en: 'MiraeN Math (5-district branch)' }, link: 'miraen' },
+    ],
     /* AWARDS under KEY FIGURES (연서, 2026-10-09: these four; the APEC video's award is left out on purpose) */
     awards: [
       { year: '2026', label: { ko: '입선', en: 'Honorable Mention' }, title: { ko: '코리아 데님 디자인 공모전', en: 'Korea Denim Design Contest' }, link: 'denim-2026' },
@@ -112,7 +119,7 @@ window.SITE = {
       { group: { ko: '콘텐츠 · 마케팅', en: 'Content & Marketing' }, items: [{ ko: '숏폼 기획', en: 'Short-form planning' }, { ko: '채널 운영과 유료광고', en: 'Channel ops & paid media' }, { ko: '브랜딩과 캐릭터 IP 확장', en: 'Branding & character IP' }] },
       { group: { ko: 'AI 툴', en: 'AI Tools' }, items: ['Midjourney', 'Kling AI', 'Suno', 'Riffusion', 'ElevenLabs', 'Tripo', 'Manus', 'Claude Code'] },
       { group: { ko: '패션 · 텍스타일', en: 'Fashion & Textile' }, items: ['CLO 3D', 'NedGraphics', { ko: '엔지니어드 프린트', en: 'Engineered print' }, { ko: '텍스타일 제작(프린트, 직조, 니트)', en: 'Textile making (print, weave, knit)' }, { ko: '패턴과 봉제', en: 'Pattern & construction' }] },
-      { group: { ko: '디자인 · 영상', en: 'Design & Video' }, items: ['Photoshop', 'Illustrator', 'After Effects', 'Premiere Pro', 'CapCut'] }, /* video tools moved here from Content (연서, 2026-10-05): tools with tools, the content group keeps what she plans and runs */
+      { group: { ko: '디자인 · 영상', en: 'Design & Video' }, items: ['Photoshop', 'Illustrator', 'Procreate', 'After Effects', 'Premiere Pro', 'CapCut'] } /* Procreate added 2026-10-09 (연서) */, /* video tools moved here from Content (연서, 2026-10-05): tools with tools, the content group keeps what she plans and runs */
     ],
   },
 
@@ -215,7 +222,7 @@ window.SITE = {
       items: [
         { date: '2026.09', major: false, link: '#now', /* jumps to NOW under the archive (연서, 2026-10-04) */
           title: { ko: '서울대 복귀: 졸업 전 마지막 학기', en: 'Back at SNU: final term before graduation' },
-          desc: { ko: '교환 1년을 마치고 복귀. 이번 학기에 배우는 테크니컬 디자인, 인공지능예술실습, 3D 그래픽 디자인은 아카이브 아래 NOW에.', en: 'Back from the exchange year. What I am learning this term (Technical Design, Deep Learning for Artists, 3D Graphic Design) is under NOW, below the archive.' } },
+          desc: { ko: '교환 1년을 마치고 복귀. 이번 학기에 배우는 테크니컬 디자인, 인공지능예술실습, 3D 그래픽 디자인은 아래 NOW에.', en: 'Back from the exchange year. What I am learning this term (Technical Design, Deep Learning for Artists, 3D Graphic Design) is in NOW, further down.' } },
         { date: '2026.09', major: true, link: 'denim-2026',
           title: { ko: '입선: 코리아 데님 디자인 공모전 2026 \'Squeezed Motion\'', en: 'Honorable Mention: Korea Denim Design Contest 2026, \'Squeezed Motion\'' },
           desc: { ko: '물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 여러 방향을 먼저 시뮬레이션한 뒤 실물 한 벌을 제작하고, 스판 데님을 칼·드릴·송곳으로 직접 찢어 레이스로 실루엣을 잡음. 본선을 거쳐 입선. 2026.09.23 발표', en: 'Paint becoming thread, on denim. Directions simulated with AI before one garment was built; the stretch denim torn by hand and held in shape with lace. Finalist, then Honorable Mention. Announced 23 Sep 2026' } },
@@ -247,9 +254,9 @@ window.SITE = {
     /* phones only: a small note once per visit that the full site is on a computer (연서, 2026-10-02) */
     desktopNote: { ko: '컴퓨터로 보면 훨씬 좋아요. 3D 링과 인터랙션까지 모두 보여요', en: 'Best viewed on a computer, with the 3D ring and every interaction' },
     desktopNoteClose: { ko: '닫기', en: 'Close' },
-    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', awards: 'AWARDS', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
+    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', experience: 'EXPERIENCE', awards: 'AWARDS', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
   archiveUi: {
-    aiNowNote: { ko: '지금 배우고 있는 AI 작업은 NOW에 ↓', en: 'The AI work I am learning right now is in NOW ↓' }, /* shown only under AI WORKS (연서, 2026-10-09) */
+    aiNowNote: { ko: '지금 배우고 있는 AI 작업은 NOW에 ↑', en: 'The AI work I am learning right now is in NOW ↑' }, /* shown only under AI WORKS (연서, 2026-10-09) */
     filterLabel: 'ARCHIVE FILTERS', imageSlot: 'IMAGE 3:4', inProgress: 'IN PROGRESS',
     filters: [
       { label: 'ALL', tag: null }, { label: 'FASHION', tag: 'FASHION' }, { label: 'CONTENT', tag: 'CONTENT' },
@@ -257,13 +264,13 @@ window.SITE = {
     ],
     /* each filter can have its own order (연서, 2026-10-02); ALL and any slug left out follow featured, then archiveRank */
     order: {
-      FASHION: ['art2wear', 'fashion-show-2024', 'kaftan', 'denim-2026', 'arts-week-2026', 'senior-fit', 'clo3d', 'korean-costume', 'textile-printed', 'textile-woven', 'textile-knit', 'adaptive-textile', 'engineered-surfaces', 'fashion-illustration'],
+      FASHION: ['art2wear', 'fashion-show-2024', 'kaftan', 'denim-2026', 'arts-week-2026', 'senior-fit', 'clo3d', 'korean-costume', 'adaptive-textile', 'textile-printed', 'textile-woven', 'textile-knit', 'engineered-surfaces', 'fashion-illustration'], /* interior above printed (연서, 2026-10-09) */
       CONTENT: ['ai-short-film', 'miraen', 'campus-festival', 'directing-a-year', 'fashion-show-2024', 'promo-video-ai', 'portfolio-site', 'sub-motion', 'unreal-engine', 'seoul-metro'],
       AI: ['portfolio-site', 'ai-short-film', 'promo-video-ai', 'denim-2026', 'kaftan', 'miraen'], /* denim right after APEC (연서, 2026-10-09) */
       INSIGHT: ['miraen', 'senior-fit', 'campus-festival', 'directing-a-year', 'adaptive-textile'],
     },
   },
-  /* NOW: what I am learning this term. Sits under the archive grid (#now), same weight as the 3 strengths.
+  /* NOW: what I am learning this term. Sits at the top of the archive section, above the filters (#now, moved 2026-10-09), same weight as the 3 strengths.
      Facts from 연서's class notes (Notion, weeks 1 to 5). The class show was cancelled by vote: do not mention it. */
   nowUi: { title: 'NOW', index: 'FALL 2026', lead: { ko: '졸업 전 마지막 학기에 배우는 것들과, 12월 종강까지 해낼 것.', en: 'What I am learning in my final term, and what I will have done by December.' }, next: { ko: '12월까지', en: 'By December' } },
   now: [

@@ -942,3 +942,15 @@ html[lang="ko"] .about-award-title { word-break: keep-all; overflow-wrap: anywhe
   .about-award-label, .about-award-title { grid-column: 2; }
   .about-award-go { display: none; }
 }
+
+/* EXPERIENCE above AWARDS, and NOW moved to the top of the archive section (2026-10-09) */
+.about-awards .about-award { grid-template-columns: 124px 230px minmax(0,1fr) auto; } /* EXPERIENCE and AWARDS share the columns */
+.about-experience + .about-awards { padding-top: 48px; }
+.archive-inner > .now-block:first-child { margin-top: 0; }
+@media (max-width: 600px), (hover: none) {
+  .about-awards .about-award { grid-template-columns: minmax(0,1fr); gap: 2px; }
+  .about-awards .about-award-label, .about-awards .about-award-title { grid-column: 1; }
+}
+
+/* SKILLS under AWARDS, the timeline after them (2026-10-09) */
+.about-awards + .about-skills { padding-top: 48px; }
