@@ -2161,7 +2161,11 @@ window.PROJECTS = [
    "/images/projects/engineered-surfaces/punch-01.jpg",
    "/images/projects/engineered-surfaces/skirt-01.jpg",
    "/images/projects/engineered-surfaces/skirt-02.jpg",
-   "/images/projects/engineered-surfaces/07.jpg",
+   "/images/projects/engineered-surfaces/07-1.jpg",
+   "/images/projects/engineered-surfaces/07-2.jpg",
+   "/images/projects/engineered-surfaces/07-3.jpg",
+   "/images/projects/engineered-surfaces/07-4.jpg",
+   "/images/projects/engineered-surfaces/07-5.jpg",
    "/images/projects/engineered-surfaces/19.jpg",
    "/images/projects/engineered-surfaces/20.jpg",
    "/images/projects/engineered-surfaces/24.jpg",
@@ -2169,23 +2173,30 @@ window.PROJECTS = [
    "/images/projects/engineered-surfaces/01.jpg",
    "/images/projects/engineered-surfaces/46.jpg",
    "/images/projects/engineered-surfaces/23.jpg",
-   "/images/projects/engineered-surfaces/06.jpg",
+   "/images/projects/engineered-surfaces/06-1.jpg",
    "/images/projects/engineered-surfaces/45.jpg",
    "/images/projects/engineered-surfaces/21.jpg",
-   "/images/projects/engineered-surfaces/08.jpg",
+   "/images/projects/engineered-surfaces/08-1.jpg",
+   "/images/projects/engineered-surfaces/08-2.jpg",
    "/images/projects/engineered-surfaces/09.jpg",
-   "/images/projects/engineered-surfaces/10.jpg",
-   "/images/projects/engineered-surfaces/11.jpg",
-   "/images/projects/engineered-surfaces/ad13.jpg",
+   "/images/projects/engineered-surfaces/10-1.jpg",
+   "/images/projects/engineered-surfaces/10-2.jpg",
+   "/images/projects/engineered-surfaces/11-1.jpg",
+   "/images/projects/engineered-surfaces/11-2.jpg",
+   "/images/projects/engineered-surfaces/ad13-1.jpg",
+   "/images/projects/engineered-surfaces/ad13-2.jpg",
+   "/images/projects/engineered-surfaces/ad13-3.jpg",
    "/images/projects/engineered-surfaces/ad14.jpg",
-   "/images/projects/engineered-surfaces/12.jpg",
+   "/images/projects/engineered-surfaces/12-1.jpg",
+   "/images/projects/engineered-surfaces/12-2.jpg",
    "/images/projects/engineered-surfaces/13.jpg",
    "/images/projects/engineered-surfaces/14.jpg",
    "/images/projects/engineered-surfaces/15.jpg",
    "/images/projects/engineered-surfaces/16.jpg",
-   "/images/projects/engineered-surfaces/17.jpg",
+   "/images/projects/engineered-surfaces/17-1.jpg",
+   "/images/projects/engineered-surfaces/17-2.jpg",
    "/images/projects/engineered-surfaces/18.jpg",
-   "/images/projects/engineered-surfaces/36.jpg",
+   "/images/projects/engineered-surfaces/36-2.jpg",
    "/images/projects/engineered-surfaces/22.jpg",
    "/images/projects/engineered-surfaces/25.jpg"
   ],
@@ -2225,11 +2236,23 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/engineered-surfaces/07.jpg",
+      "src": "/images/projects/engineered-surfaces/07-1.jpg",
       "cap": {
        "ko": "직접 만든 팬시 얀",
        "en": "Novelty yarns I spun"
       }
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/07-2.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/07-3.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/07-4.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/07-5.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/19.jpg",
@@ -2297,10 +2320,10 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/engineered-surfaces/06.jpg",
+      "src": "/images/projects/engineered-surfaces/06-1.jpg",
       "cap": {
-       "ko": "직조 샘플과 셔틀",
-       "en": "Woven sample and shuttles"
+       "ko": "직조 샘플",
+       "en": "Woven sample"
       }
      },
      {
@@ -2326,25 +2349,43 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/engineered-surfaces/08.jpg"
+      "src": "/images/projects/engineered-surfaces/08-1.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/08-2.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/09.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/10.jpg"
+      "src": "/images/projects/engineered-surfaces/10-1.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/11.jpg"
+      "src": "/images/projects/engineered-surfaces/10-2.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/ad13.jpg"
+      "src": "/images/projects/engineered-surfaces/11-1.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/11-2.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/ad13-1.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/ad13-2.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/ad13-3.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/ad14.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/12.jpg"
+      "src": "/images/projects/engineered-surfaces/12-1.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/12-2.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/13.jpg"
@@ -2359,13 +2400,16 @@ window.PROJECTS = [
       "src": "/images/projects/engineered-surfaces/16.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/17.jpg"
+      "src": "/images/projects/engineered-surfaces/17-1.jpg"
+     },
+     {
+      "src": "/images/projects/engineered-surfaces/17-2.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/18.jpg"
      },
      {
-      "src": "/images/projects/engineered-surfaces/36.jpg"
+      "src": "/images/projects/engineered-surfaces/36-2.jpg"
      },
      {
       "src": "/images/projects/engineered-surfaces/22.jpg",
@@ -3247,8 +3291,9 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026.01~04",
-  "thumb": "/images/projects/adaptive-textile/ad01.jpg",
+  "thumb": "/images/projects/adaptive-textile/ad01-hero.jpg",
   "images": [
+   "/images/projects/adaptive-textile/ad01-hero.jpg",
    "/images/projects/adaptive-textile/ad01.jpg",
    "/images/projects/adaptive-textile/ad02-1-v2.jpg",
    "/images/projects/adaptive-textile/ad02-2.jpg",
@@ -3286,6 +3331,8 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
+  "cardThumb": "/images/projects/adaptive-textile/ad01.jpg",
+  "heroRatio": 1.262,
   "sections": [
    {
     "title": {
@@ -3293,9 +3340,6 @@ window.PROJECTS = [
      "en": "THE FINISHED ROOM"
     },
     "images": [
-     {
-      "src": "/images/projects/adaptive-textile/ad01.jpg"
-     },
      {
       "src": "/images/projects/adaptive-textile/ad02-1-v2.jpg",
       "cap": {

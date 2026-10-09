@@ -195,6 +195,10 @@ function renderProject(detail, project, lang) {
   }
 
   const hero = createMedia(project.thumb, SITE.detailUi.heroSlot, 'detail-hero', copy.title, true);
+  if (project.heroRatio) { /* a hero that keeps its own shape; on desktop no taller than the usual 16:9 hero (2026-10-09) */
+    hero.style.aspectRatio = String(project.heroRatio);
+    if (project.heroRatio < 16 / 9) { hero.classList.add('detail-hero--shaped'); hero.style.setProperty('--hero-w', `${(project.heroRatio / (16 / 9) * 100).toFixed(2)}%`); }
+  }
   /* the square lens that lived on the cover was removed (2026-10-02): the page-wide glass lens covers it */
   const header = document.createElement('header');
   header.className = 'detail-header';
