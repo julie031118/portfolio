@@ -972,3 +972,9 @@ html[lang="ko"] .about-award-title { word-break: keep-all; overflow-wrap: anywhe
 .detail-loop { position: relative; display: block; }
 .detail-loop img { display: block; }
 .detail-loop video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+
+/* WORK EXPERIENCE and ACTIVITIES on a phone: a tap shows the timeline text under the row (2026-10-10) */
+.about-award-more { padding: 0 0 18px; }
+.about-award-more[hidden] { display: none; }
+.about-award-desc { margin: 0 0 10px; color: var(--ink); font: 13px/1.8 var(--font-mono); }
+html[lang="ko"] .about-award-desc { word-break: keep-all; overflow-wrap: anywhere; }

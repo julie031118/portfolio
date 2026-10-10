@@ -429,8 +429,13 @@ async function createRing(section, projects, lang, onDispose) {
     const rect = canvas.getBoundingClientRect();
     pointer.set(((event.clientX - rect.left) / rect.width) * 2 - 1, -((event.clientY - rect.top) / rect.height) * 2 + 1);
     raycaster.setFromCamera(pointer, camera);
-    const hit = raycaster.intersectObjects(cards.map((c) => c.mesh), false)[0];
-    return hit ? cards[hit.object.userData.index] : null;
+    /* the cards lie in one plane and are drawn far to near by renderOrder (no depth test), so the nearest ray hit
+       was a coin toss between overlapping cards: the tooltip and the click went to a card under the one you see
+       (2026-10-11). The card drawn on top, the highest renderOrder, is the one under the pointer. */
+    const hits = raycaster.intersectObjects(cards.map((c) => c.mesh), false);
+    if (!hits.length) return null;
+    const hit = hits.reduce((top, h) => (h.object.renderOrder > top.object.renderOrder ? h : top));
+    return cards[hit.object.userData.index];
   }
 
   function onMove(event) {

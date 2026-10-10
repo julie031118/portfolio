@@ -132,19 +132,53 @@ export function renderAbout(lang) {
   photoFrames.forEach((frame, index) => { loadMedia(frame, photoSources[index], SITE.profile.photoAlt[lang] || SITE.profile.photoAlt.ko); });
 
   SITE.profile.stats.forEach((stat) => { const cell = document.createElement('div'); cell.className = 'about-stat'; const value = document.createElement('strong'); value.textContent = stat.v; const label = document.createElement('span'); label.textContent = stat.l; cell.append(value, label); stats.append(cell); });
-  /* EXPERIENCE and AWARDS (2026-10-09): one line each; a line with a project opens it */
-  const fillList = (list, entries) => (entries || []).forEach((award) => {
+  const isAnchor = (link) => link.startsWith('#');
+  /* EXPERIENCE and AWARDS (2026-10-09): one line each; a line with a project opens it.
+     WORK EXPERIENCE and ACTIVITIES (2026-10-10, 연서): rows without a project showed nothing, and the festival row only
+     led to the design-team project, so each row now opens the timeline's side panel for the same entry (hover or focus);
+     on a phone a tap shows that text under the row, with the project link if there is one */
+  const timelineFor = (entry) => {
+    const name = T(entry.title, 'ko'); const full = `${name}: ${T(entry.label, 'ko')}`;
+    let exact = null; let near = null;
+    SITE.timeline.forEach((segment) => segment.items.forEach((item) => {
+      const title = T(item.title, 'ko');
+      const found = { item, segment: segment.segment, grade: T(segment.grade, lang) };
+      if (!exact && title === full) exact = found;
+      if (!near && title.startsWith(`${name}:`)) near = found;
+    }));
+    return exact || near;
+  };
+  const fillList = (list, entries, withPanel = false) => (entries || []).forEach((award) => {
     const item = document.createElement('li');
-    const row = document.createElement(award.link ? 'button' : 'div'); row.className = 'about-award'; if (award.link) { row.type = 'button'; row.addEventListener('click', () => openDetail(award.link, lang)); }
+    const hit = withPanel ? timelineFor(award) : null;
+    const row = document.createElement(award.link || hit ? 'button' : 'div'); row.className = 'about-award'; if (row.tagName === 'BUTTON') row.type = 'button';
     const year = document.createElement('span'); year.className = 'about-award-year'; year.textContent = award.year;
     const label = document.createElement('span'); label.className = 'about-award-label'; label.textContent = T(award.label, lang);
     const title = document.createElement('span'); title.className = 'about-award-title'; title.textContent = T(award.title, lang);
     row.append(year, label, title);
     if (award.link) { const go = document.createElement('span'); go.className = 'about-award-go'; go.setAttribute('aria-hidden', 'true'); go.textContent = '→'; row.append(go); }
-    item.append(row); list?.append(item);
+    item.append(row);
+    if (hit && mobileQuery.matches) {
+      const more = document.createElement('div'); more.className = 'about-award-more'; more.hidden = true;
+      if (T(hit.item.desc, lang)) { const desc = document.createElement('p'); desc.className = 'about-award-desc'; desc.textContent = T(hit.item.desc, lang); more.append(desc); }
+      const link = hit.item.link || award.link;
+      if (link) { const open = document.createElement('button'); open.type = 'button'; open.className = 'timeline-panel-open'; open.textContent = isAnchor(link) ? SITE.aboutUi.openNow : SITE.aboutUi.openProject; open.addEventListener('click', () => follow(link)); more.append(open); }
+      row.setAttribute('aria-expanded', 'false');
+      row.addEventListener('click', () => { const show = more.hidden; more.hidden = !show; row.setAttribute('aria-expanded', String(show)); });
+      item.append(more);
+    } else {
+      if (hit) {
+        row.addEventListener('pointerenter', () => openPanel(hit.item, hit.segment, hit.grade));
+        row.addEventListener('pointerleave', closePanel);
+        row.addEventListener('focus', () => openPanel(hit.item, hit.segment, hit.grade));
+        row.addEventListener('blur', closePanel);
+      }
+      if (award.link) row.addEventListener('click', () => openDetail(award.link, lang));
+    }
+    list?.append(item);
   });
-  fillList(section.querySelector('.about-exp-list'), SITE.profile.experience);
-  fillList(section.querySelector('.about-act-list'), SITE.profile.activities);
+  fillList(section.querySelector('.about-exp-list'), SITE.profile.experience, true);
+  fillList(section.querySelector('.about-act-list'), SITE.profile.activities, true);
   fillList(section.querySelector('.about-awards:not(.about-experience):not(.about-activities) .about-award-list'), SITE.profile.awards);
   buildTimeline(track, lang);
   SITE.profile.skills.forEach((group) => { const block = document.createElement('section'); block.className = 'about-skill-group'; const label = document.createElement('h3'); label.textContent = T(group.group, lang).toUpperCase(); const items = document.createElement('p'); items.textContent = group.items.map((entry) => T(entry, lang)).join(' · '); block.append(label, items); skills.append(block); });
@@ -160,8 +194,7 @@ export function renderAbout(lang) {
     if (item.link) { const open = document.createElement('button'); open.type = 'button'; open.className = 'timeline-panel-open'; open.textContent = isAnchor(item.link) ? SITE.aboutUi.openNow : SITE.aboutUi.openProject; open.addEventListener('click', () => follow(item.link)); panelInner.append(open); }
     panel.classList.add('is-open'); panel.setAttribute('aria-hidden', 'false');
   }
-  /* a timeline link is a project slug, or '#id' for a spot on the page (NOW, 2026-10-04) */
-  const isAnchor = (link) => link.startsWith('#');
+  /* a timeline link is a project slug, or '#id' for a spot on the page (NOW, 2026-10-04): isAnchor is defined above the lists */
   function follow(link) {
     if (!isAnchor(link)) { openDetail(link, lang); return; }
     const target = document.querySelector(link); if (!target) return;

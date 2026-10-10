@@ -42,7 +42,8 @@ function photoAt(node) {
   if (frame) {
     const img = frame.querySelector('img');
     if (!img || (node !== img && !frame.classList.contains('detail-hero'))) return null; /* not over a caption */
-    return { img, clip: img, host: null, saturate: 1, contrast: 1 };
+    /* a silent loop (Unreal clips): the pointer lands on its poster, the drop shows the playing video (2026-10-10) */
+    return { img, clip: img, host: null, saturate: 1, contrast: 1, video: frame.querySelector('.detail-loop video') };
   }
   return null;
 }
@@ -218,6 +219,8 @@ export function initCursorLens() {
   };
   let videoSource = null;
   let videoOwner = null; /* the <video> whose frame is in the texture */
+  let loopTexture = null; /* a gallery loop's current frame (2026-10-10) */
+  let loopVideo = null; let loopTime = -1;
 
   /* one texture per photo, uploaded the first time the ball crosses it */
   const textures = new Map();
@@ -249,8 +252,21 @@ export function initCursorLens() {
     if (!pointer.known || document.hidden) { hide(); return; }
     const hit = photoAt(document.elementFromPoint(pointer.x, pointer.y));
     if (!hit) { hide(); return; }
-    const texture = textureFor(hit.img);
+    let texture = textureFor(hit.img);
     if (!texture) { hide(); return; }
+    /* over a playing loop the drop shows the moving picture, even with the pointer still (2026-10-10: it showed the
+       poster, so the inside of the drop stood still while the clip moved) */
+    let srcW = hit.img.naturalWidth; let srcH = hit.img.naturalHeight; let live = false;
+    const clipVideo = hit.video;
+    if (clipVideo && clipVideo.readyState >= 2 && clipVideo.videoWidth) {
+      if (!loopTexture) loopTexture = blankTexture();
+      gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, loopTexture);
+      let ok = true;
+      if (loopVideo !== clipVideo || loopTime !== clipVideo.currentTime) {
+        try { gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, clipVideo); loopVideo = clipVideo; loopTime = clipVideo.currentTime; } catch { ok = false; loopVideo = null; }
+      }
+      if (ok) { texture = loopTexture; srcW = clipVideo.videoWidth; srcH = clipVideo.videoHeight; live = !clipVideo.paused; }
+    }
     if (!current || current.img !== hit.img) { at.x = pointer.x; at.y = pointer.y; } /* a new photo: start right under the pointer */
     if (shown && current && current.clip !== hit.clip) dropPlip(); /* straight from one archive photo to the next (2026-10-06) */
     current = hit;
@@ -287,14 +303,14 @@ export function initCursorLens() {
       } else { gl.uniform1f(U.hasVid, 0); if (video) sceneLive = true; } /* the video or its poster is still loading: keep drawing */
     }
     gl.uniform1f(U.scene, hit.scene ? 1 : 0);
-    if (sceneLive) last = ''; /* a playing video: draw every frame */
+    if (sceneLive || live) last = ''; /* a playing video: draw every frame */
     const left = at.x - ball / 2; const top = at.y - ball / 2;
     const key = `${hit.img.src}|${left.toFixed(1)}|${top.toFixed(1)}|${box.left.toFixed(1)}|${box.top.toFixed(1)}|${box.width.toFixed(1)}|${clip.top.toFixed(1)}`;
     if (key === last) return;
     last = key;
     /* object-fit: cover, centred */
-    const scale = Math.max(box.width / hit.img.naturalWidth, box.height / hit.img.naturalHeight);
-    const dw = hit.img.naturalWidth * scale; const dh = hit.img.naturalHeight * scale;
+    const scale = Math.max(box.width / srcW, box.height / srcH);
+    const dw = srcW * scale; const dh = srcH * scale;
     /* over a project page the canvas floats on the page; on an archive card it goes inside the card */
     const host = hit.host || document.body;
     if (canvas.parentElement !== host) { host.append(canvas); canvas.classList.toggle('is-in-card', !!hit.host); }

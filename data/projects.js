@@ -2,8 +2,8 @@
 window.PROJECTS = [
  {
   "slug": "miraen",
-  "featured": 4,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 13,
   "tags": [
    "CONTENT",
    "INSIGHT",
@@ -226,8 +226,8 @@ window.PROJECTS = [
  },
  {
   "slug": "directing-a-year",
-  "featured": 10,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 14,
   "tags": [
    "CONTENT",
    "INSIGHT"
@@ -337,7 +337,7 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "교환학생 후기 영상: 1년을 10분과 30초로",
-    "cat": "콘텐츠 시스템 기획 · 영상 · 서울대 교환학생 국외수학후기 공모전 출품 · 2026.07~08",
+    "cat": "콘텐츠 시스템 기획 · 영상 · 서울대 교환학생 국외수학후기 공모전 출품 (결과 대기 중) · 2026.07~08",
     "need": "NC State 윌슨 텍스타일 대학 교환 1년치 영상이 있었다. 처음부터 재미뿐 아니라 정보도 주는 영상을 만들고 싶었다. 나도 교환을 가기 전에 정보를 많이 찾아봤던 입장이라, 비자·비용·주거 정보가 필요한 후배들을 돕고 싶었다. 다만 정보를 다 넣으면 끝까지 보기 힘든 영상이 된다.",
     "action": [
      "영상과 문서로 나눔: ‘이게 재미있을까?’를 기준으로 만든 10분 영상(공모전 규정 9~11분, 유튜브)과, 비자 절차·실제 비용·주거를 정리한 7페이지 문서(무료 배포)",
@@ -360,7 +360,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Exchange Year Recap: a year in ten minutes and thirty seconds",
-    "cat": "Content System Design · Film · SNU Exchange Study-Abroad Review Contest entry · Jul to Aug 2026",
+    "cat": "Content System Design · Film · SNU Exchange Study-Abroad Review Contest entry (results pending) · Jul to Aug 2026",
     "need": "I had a year of footage from my exchange at NC State’s Wilson College of Textiles. From the start I wanted the film to give information as well as be fun. I had searched a lot myself before I left, so I wanted to help juniors who need visa, cost and housing information. But put all of it in, and the film gets hard to watch to the end.",
     "action": [
      "Split it into a film and a document: a 10-minute video for YouTube (within the contest’s 9 to 11 minutes) built around one question, “would this be fun to watch?”, and a free 7-page document on visa steps, real costs and housing",
@@ -639,7 +639,7 @@ window.PROJECTS = [
  },
  {
   "slug": "kaftan",
-  "featured": 3,
+  "featured": 7,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -647,7 +647,7 @@ window.PROJECTS = [
   ],
   "year": "2026",
   "period": "2026.01~04",
-  "thumb": "/images/projects/kaftan/21.jpg",
+  "thumb": "/images/projects/kaftan/08.jpg",
   "images": [
    "/images/projects/kaftan/a05.jpg",
    "/images/projects/kaftan/ai01.jpg",
@@ -671,6 +671,7 @@ window.PROJECTS = [
    "ko": "밤을 그린 피아노곡인 쇼팽 녹턴(야상곡)에서 출발한 카프탄이라, 얇게 비치는 실크 위의 꽃이 달빛을 받아 반짝이는 느낌을 내고 싶었다. 이 노래를 들으면 그런 장면이 떠오른다.",
    "en": "The kaftan began with Chopin’s Nocturnes, piano pieces about the night, so I wanted the flowers on sheer silk to look as if they were catching the moonlight. This song brings that scene to mind."
   },
+  "cardThumb": "/images/projects/kaftan/21.jpg",
   "process": [
    "/images/projects/kaftan/01.jpg",
    "/images/projects/kaftan/02.jpg",
@@ -717,13 +718,6 @@ window.PROJECTS = [
       "src": "/images/projects/kaftan/24.jpg"
      },
      {
-      "src": "/images/projects/kaftan/08.jpg",
-      "cap": {
-       "ko": "착용 컷과 프린트 모음",
-       "en": "Worn looks with the prints"
-      }
-     },
-     {
       "src": "/images/projects/kaftan/15.jpg"
      },
      {
@@ -745,13 +739,6 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/kaftan/01.jpg",
-      "cap": {
-       "ko": "접은 첫 안 · 한국 전통 미감",
-       "en": "Dropped first idea · Korean tradition"
-      }
-     },
-     {
       "src": "/images/projects/kaftan/02.jpg",
       "cap": {
        "ko": "녹턴에서 출발한 테마 리서치",
@@ -768,8 +755,8 @@ window.PROJECTS = [
      {
       "src": "/images/projects/kaftan/18.jpg",
       "cap": {
-       "ko": "꽃과 악보 무드 콜라주",
-       "en": "Flower and sheet music collage"
+       "ko": "무드보드",
+       "en": "Moodboard"
       }
      }
     ]
@@ -932,7 +919,8 @@ window.PROJECTS = [
    "/images/projects/fashion-show-2024/a08.jpg",
    "/images/projects/fashion-show-2024/a09.jpg",
    "/images/projects/fashion-show-2024/a10.jpg",
-   "/images/projects/fashion-show-2024/a11.jpg"
+   "/images/projects/fashion-show-2024/a11.jpg",
+   "/images/projects/fashion-show-2024/a03-edit2.jpg"
   ],
   "role": {
    "ko": "디자이너 · 홍보팀",
@@ -966,10 +954,10 @@ window.PROJECTS = [
       "src": "/images/projects/fashion-show-2024/a01.jpg"
      },
      {
-      "src": "/images/projects/fashion-show-2024/a02.jpg"
+      "src": "/images/projects/fashion-show-2024/a03-edit2.jpg"
      },
      {
-      "src": "/images/projects/fashion-show-2024/a03.jpg"
+      "src": "/images/projects/fashion-show-2024/a02.jpg"
      },
      {
       "src": "/images/projects/fashion-show-2024/a04.jpg"
@@ -1177,8 +1165,8 @@ window.PROJECTS = [
  },
  {
   "slug": "campus-festival",
-  "featured": 9,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 16,
   "tags": [
    "CONTENT",
    "INSIGHT"
@@ -1343,7 +1331,7 @@ window.PROJECTS = [
  },
  {
   "slug": "art2wear",
-  "featured": 2,
+  "featured": 4,
   "archiveRank": null,
   "tags": [
    "FASHION"
@@ -1595,8 +1583,8 @@ window.PROJECTS = [
  },
  {
   "slug": "clo3d",
-  "featured": 12,
-  "archiveRank": 13,
+  "featured": 10,
+  "archiveRank": null,
   "tags": [
    "FASHION"
   ],
@@ -1753,7 +1741,7 @@ window.PROJECTS = [
  {
   "slug": "sub-motion",
   "featured": null,
-  "archiveRank": 14,
+  "archiveRank": 19,
   "tags": [
    "CONTENT"
   ],
@@ -1836,7 +1824,7 @@ window.PROJECTS = [
  {
   "slug": "senior-fit",
   "featured": null,
-  "archiveRank": 19,
+  "archiveRank": 20,
   "tags": [
    "FASHION",
    "INSIGHT"
@@ -2048,7 +2036,7 @@ window.PROJECTS = [
  {
   "slug": "engineered-surfaces",
   "featured": null,
-  "archiveRank": 18,
+  "archiveRank": 17,
   "tags": [
    "FASHION"
   ],
@@ -2590,8 +2578,8 @@ window.PROJECTS = [
  },
  {
   "slug": "textile-woven",
-  "featured": null,
-  "archiveRank": 16,
+  "featured": 12,
+  "archiveRank": null,
   "tags": [
    "FASHION"
   ],
@@ -2618,7 +2606,10 @@ window.PROJECTS = [
    "/images/projects/textile-woven/ad14.jpg",
    "/images/projects/textile-woven/ad15.jpg",
    "/images/projects/textile-woven/03.jpg",
-   "/images/projects/textile-woven/04.jpg"
+   "/images/projects/textile-woven/04.jpg",
+   "/images/projects/textile-woven/ad14-bg.jpg",
+   "/images/projects/textile-woven/ad13-bg.jpg",
+   "/images/projects/textile-woven/ad15-bg.jpg"
   ],
   "role": {
    "ko": "직조 디자인 (단독)",
@@ -2666,6 +2657,59 @@ window.PROJECTS = [
      "ko": "모란 위 달토끼, 덩굴 속 구미호, 모란 스트라이프, 원형 문양: 하나의 컬렉션으로 맞춘 네 패턴",
      "en": "Rabbit among peonies, fox in the vines, peony stripe, medallion: four patterns tuned into one collection"
     }
+   },
+   {
+    "title": {
+     "ko": "텍스처 매핑",
+     "en": "TEXTURE MAPPING"
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-woven/ad08.jpg"
+     },
+     {
+      "src": "/images/projects/textile-woven/ad09.jpg"
+     },
+     {
+      "src": "/images/projects/textile-woven/ad10.jpg"
+     },
+     {
+      "src": "/images/projects/textile-woven/ad11.jpg"
+     }
+    ],
+    "note": {
+     "ko": "포토샵으로 영화 속 의상과 파우치에 패턴을 입혀 봄",
+     "en": "The patterns mapped onto film costumes and a pouch in Photoshop"
+    }
+   },
+   {
+    "title": {
+     "ko": "",
+     "en": ""
+    },
+    "images": [
+     {
+      "src": "/images/projects/textile-woven/ad14-bg.jpg",
+      "cap": {
+       "ko": "파우치 앞면",
+       "en": "Pouch, front"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/ad13-bg.jpg",
+      "cap": {
+       "ko": "옆면",
+       "en": "Side"
+      }
+     },
+     {
+      "src": "/images/projects/textile-woven/ad15-bg.jpg",
+      "cap": {
+       "ko": "밑면",
+       "en": "Bottom"
+      }
+     }
+    ]
    },
    {
     "title": {
@@ -2758,54 +2802,6 @@ window.PROJECTS = [
    },
    {
     "title": {
-     "ko": "텍스처 매핑",
-     "en": "TEXTURE MAPPING"
-    },
-    "images": [
-     {
-      "src": "/images/projects/textile-woven/ad08.jpg"
-     },
-     {
-      "src": "/images/projects/textile-woven/ad09.jpg"
-     },
-     {
-      "src": "/images/projects/textile-woven/ad10.jpg"
-     },
-     {
-      "src": "/images/projects/textile-woven/ad11.jpg"
-     },
-     {
-      "src": "/images/projects/textile-woven/ad12.jpg"
-     },
-     {
-      "src": "/images/projects/textile-woven/ad14.jpg",
-      "cap": {
-       "ko": "파우치 앞면",
-       "en": "Pouch, front"
-      }
-     },
-     {
-      "src": "/images/projects/textile-woven/ad13.jpg",
-      "cap": {
-       "ko": "옆면",
-       "en": "Side"
-      }
-     },
-     {
-      "src": "/images/projects/textile-woven/ad15.jpg",
-      "cap": {
-       "ko": "밑면",
-       "en": "Bottom"
-      }
-     }
-    ],
-    "note": {
-     "ko": "포토샵으로 영화 속 의상과 파우치에 패턴을 입혀 봄",
-     "en": "The patterns mapped onto film costumes and a pouch in Photoshop"
-    }
-   },
-   {
-    "title": {
      "ko": "콘셉트와 모티프",
      "en": "CONCEPT AND MOTIFS"
     },
@@ -2871,7 +2867,7 @@ window.PROJECTS = [
  {
   "slug": "textile-knit",
   "featured": null,
-  "archiveRank": 17,
+  "archiveRank": 18,
   "tags": [
    "FASHION"
   ],
@@ -3093,8 +3089,8 @@ window.PROJECTS = [
  },
  {
   "slug": "adaptive-textile",
-  "featured": 11,
-  "archiveRank": 12,
+  "featured": 9,
+  "archiveRank": null,
   "tags": [
    "FASHION",
    "INSIGHT"
@@ -3426,7 +3422,7 @@ window.PROJECTS = [
  {
   "slug": "korean-costume",
   "featured": null,
-  "archiveRank": 22,
+  "archiveRank": 23,
   "tags": [
    "FASHION"
   ],
@@ -3517,7 +3513,7 @@ window.PROJECTS = [
  {
   "slug": "seoul-metro",
   "featured": null,
-  "archiveRank": 20,
+  "archiveRank": 22,
   "tags": [
    "CONTENT"
   ],
@@ -3613,7 +3609,7 @@ window.PROJECTS = [
  },
  {
   "slug": "denim-2026",
-  "featured": 8,
+  "featured": 2,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -3966,7 +3962,7 @@ window.PROJECTS = [
  {
   "slug": "fashion-illustration",
   "featured": null,
-  "archiveRank": 23,
+  "archiveRank": 21,
   "tags": [
    "FASHION"
   ],
@@ -4093,7 +4089,7 @@ window.PROJECTS = [
  },
  {
   "slug": "portfolio-site",
-  "featured": 6,
+  "featured": 3,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -4360,7 +4356,7 @@ window.PROJECTS = [
      "AI를 역할별로 나눠 씀: Manus로 첫 UI 시안, Claude로 구현과 인터랙션, ChatGPT로 이미지, Tripo로 3D. 코드는 직접 치지 않고 AI와 대화하며 만드는 바이브코딩 방식",
      "구조와 첫인상은 직접 기획: 첫 시안 화면 위에 아이패드로 마인드맵을 그려 보내고, 그 선과 글씨를 옮겨 키워드에 마우스를 올리면 나타나게 함. 화려한 효과 대신 타자기 효과와 빈티지한 무드로 시작하고, 나를 전달하는 문장을 맨 앞에 둠",
      "사이트의 비주얼도 내 작업으로: 직접 만든 웨어러블 아트(깨진 도자기 조각으로 만든 꽃)를 3D로 만들어 Selected Work 한가운데에 두고, 실제 프로젝트 사진을 배경에 깔아 채도를 낮춘 부드러운 톤으로 맞춤",
-     "보는 사람의 경험을 설계: 링크 미리보기 카드를 인트로 첫 문장과 맞추고, SELECTED 작품마다 어울리는 곡을 Spotify 플레이어로 넣음. 아카이브는 필터별로 보고, 한국어와 영어로 모두 볼 수 있게 함",
+     "보는 사람의 경험을 설계: 링크 미리보기 카드를 인트로 첫 문장과 맞추고, 주요 작품에 어울리는 곡을 Spotify 플레이어로 넣음. 아카이브는 필터별로 보고, 한국어와 영어로 모두 볼 수 있게 함",
      "검수는 내가: AI가 쓴 초안에서 사실과 다른 문장, 과장, 번역투를 고치고, 리뷰 시트에 바꿀 것만 표시해 한 번에 반영. 화면은 같은 각도의 전후 화면을 나란히 놓고 비교해 결정"
     ],
     "result": [
@@ -4393,7 +4389,7 @@ window.PROJECTS = [
      "Split the work between AIs: Manus for the first UI draft, Claude for the build and interactions, ChatGPT for images, Tripo for 3D. No code typed by hand; built by vibe coding, in conversation with AI",
      "Planned the structure and first impression myself: drew the mind map on an iPad over a screenshot of the first draft, and its lines and handwriting were carried over so they appear when a keyword is hovered. A typewriter effect and a vintage mood instead of flashy effects, with a sentence that introduces me first",
      "Made the site’s visuals out of my own work: my wearable art piece, a flower of broken porcelain, turned into 3D at the centre of Selected Work, and real project photos laid under the page in a soft, low-saturation tone",
-     "Designed the viewer’s path: the link preview card opens with the same line as the intro, each Selected work has a fitting song in a Spotify player, the archive can be filtered, and everything reads in Korean and English",
+     "Designed the viewer’s path: the link preview card opens with the same line as the intro, key works have a fitting song in a Spotify player, the archive can be filtered, and everything reads in Korean and English",
      "Kept the checking in my hands: fixed anything untrue, overstated or stiff in AI drafts, marked only what changes on a review sheet and applied it in one pass, and decided layout changes from before and after shots taken from the same angle"
     ],
     "result": [
@@ -4415,8 +4411,8 @@ window.PROJECTS = [
  },
  {
   "slug": "promo-video-ai",
-  "featured": null,
-  "archiveRank": 11,
+  "featured": 8,
+  "archiveRank": null,
   "tags": [
    "CONTENT",
    "AI"
@@ -4477,8 +4473,8 @@ window.PROJECTS = [
  },
  {
   "slug": "unreal-engine",
-  "featured": null,
-  "archiveRank": 21,
+  "featured": 11,
+  "archiveRank": null,
   "tags": [
    "CONTENT"
   ],
@@ -4491,7 +4487,7 @@ window.PROJECTS = [
    "/images/projects/unreal-engine/ad04.jpg",
    "/images/projects/unreal-engine/ad03.jpg",
    "/images/projects/unreal-engine/ad01.jpg",
-   "/images/projects/unreal-engine/01-crop.jpg",
+   "/images/projects/unreal-engine/01-crop-v2.jpg",
    "/images/projects/unreal-engine/ad02.jpg"
   ],
   "role": {
@@ -4500,8 +4496,7 @@ window.PROJECTS = [
   },
   "spotify": null,
   "spotifyNote": null,
-  "cardThumb": "/images/projects/unreal-engine/ad04-card.jpg",
-  "heroGallery": true,
+  "cardThumb": "/images/projects/unreal-engine/ad06-ad05-card.jpg",
   "sections": [
    {
     "title": {
@@ -4550,22 +4545,23 @@ window.PROJECTS = [
      },
      {
       "src": "/images/projects/unreal-engine/ad01.jpg"
-     }
-    ]
-   },
-   {
-    "title": {
-     "ko": "캐릭터 (MetaHuman)",
-     "en": "THE CHARACTER (METAHUMAN)"
-    },
-    "images": [
-     {
-      "src": "/images/projects/unreal-engine/01-crop.jpg"
      },
      {
       "src": "/images/projects/unreal-engine/ad02.jpg"
      }
     ]
+   },
+   {
+    "title": {
+     "ko": "MetaHuman을 통한 캐릭터 제작",
+     "en": "CHARACTER CREATION WITH METAHUMAN"
+    },
+    "images": [
+     {
+      "src": "/images/projects/unreal-engine/01-crop-v2.jpg"
+     }
+    ],
+    "rowTarget": 200
    }
   ],
   "nar": {
@@ -4579,7 +4575,7 @@ window.PROJECTS = [
      "태양광, 하늘, 구름, 안개, 후처리 설정으로 창밖 빛과 실내 공기감을 조절",
      "시퀀서에서 시네 카메라 3대로 15초 영상을 구성하고 캐릭터에 고개 젓기와 뒤로 쓰러지는 동작을 입힘: 고개를 젓는 인물 → 실습실을 훑다 바닥의 옷 더미에 머무는 시선 → 창가에서 뒤로 쓰러지는 인물",
      "토르소와 의자를 화면 앞에 걸쳐 두고 초점 거리·조리개·초점을 키프레임으로 움직여, 흐린 전경 너머로 시선이 옮겨 가게 함",
-     "MetaHuman Creator로 인물도 만들어 봄"
+     "MetaHuman Creator로 캐릭터 제작"
     ],
     "result": [
      "실습실 공간과 15초 시네마틱 영상을 완성해 수업에 제출"
@@ -4595,7 +4591,7 @@ window.PROJECTS = [
      "Set the sun, sky, clouds, fog and post-process to shape the light from the windows and the air in the room",
      "In Sequencer, built a 15-second film from three cine cameras and gave the figure a head shake and a fall backward: a figure shaking her head → a look across the lab that settles on a pile of clothes on the floor → the figure falling backward by the window",
      "Kept dress forms and chairs in the foreground and keyframed focal length, aperture and focus, so the eye moves past a blurred foreground",
-     "Also made a character in MetaHuman Creator"
+     "Created a character in MetaHuman Creator"
     ],
     "result": [
      "Finished the lab and a 15-second cinematic film inside it, submitted for the class"
@@ -4607,7 +4603,7 @@ window.PROJECTS = [
  },
  {
   "slug": "arts-week-2026",
-  "featured": 7,
+  "featured": 6,
   "archiveRank": null,
   "tags": [
    "FASHION"
