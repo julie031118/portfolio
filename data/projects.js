@@ -2615,8 +2615,11 @@ window.PROJECTS = [
    "ko": "직조 디자인 (단독)",
    "en": "Woven design (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "6CKoWCWAqEVWVjpeoJXyNH",
+  "spotifyNote": {
+   "ko": "모란 같은 전통 꽃무늬를 영화 속 의상에 입혀 본 작업이라, 옛날 영화 같은 빈티지한 기타 곡을 골랐다.",
+   "en": "I put traditional floral patterns like peonies onto film costumes, so I chose a vintage guitar song that feels like an old film."
+  },
   "related": [
    {
     "slug": "textile-printed",
@@ -2862,7 +2865,9 @@ window.PROJECTS = [
    }
   },
   "title": "Woven Textile Design",
-  "desc": "Korean folklore, the nine-tailed fox and the moon rabbit, worked into a four-pattern woven collection, made on exchange in the US."
+  "desc": "Korean folklore, the nine-tailed fox and the moon rabbit, worked into a four-pattern woven collection, made on exchange in the US.",
+  "song": "Sting Shape of My Heart",
+  "songYoutube": "https://www.youtube.com/watch?v=NlwIDxCjL-8"
  },
  {
   "slug": "textile-knit",
@@ -4421,16 +4426,27 @@ window.PROJECTS = [
   "period": "2025",
   "thumb": "/images/projects/promo-video-ai/01-v2.jpg",
   "images": [
+   "/images/projects/promo-video-ai/a03.jpg",
    "/images/projects/promo-video-ai/01-v2.jpg",
+   "/images/projects/promo-video-ai/f041.jpg",
+   "/images/projects/promo-video-ai/f045.jpg",
+   "/images/projects/promo-video-ai/f050.jpg",
+   "/images/projects/promo-video-ai/f052.jpg",
+   "/images/projects/promo-video-ai/f056.jpg",
+   "/images/projects/promo-video-ai/f065.jpg",
    "/images/projects/promo-video-ai/a02.jpg",
-   "/images/projects/promo-video-ai/a03.jpg"
+   "/images/projects/promo-video-ai/f086.jpg",
+   "/images/projects/promo-video-ai/f093.jpg"
   ],
   "role": {
    "ko": "AI 제작 · 편집 (단독)",
    "en": "AI production, editing (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "519ieUWSSFG5AuPCo0dy54",
+  "spotifyNote": {
+   "ko": "국악인 송소희가 현대적인 사운드로 부른 곡이라, 전통 리듬에 현대 안무를 섞은 마지막 장면과 닮았다.",
+   "en": "Korean folk singer Song So-hee over a modern sound, much like the last scene, where traditional rhythm meets modern choreography."
+  },
   "video": "https://www.youtube.com/embed/HZm8j22xs_s",
   "nar": {
    "ko": {
@@ -4469,7 +4485,9 @@ window.PROJECTS = [
    }
   },
   "title": "Gyeongju, A Thousand Years in Motion",
-  "desc": "Promotional film for the 2025 APEC Special Exhibition in Gyeongju, nine traditional Korean dances staged across UNESCO World Heritage sites."
+  "desc": "Promotional film for the 2025 APEC Special Exhibition in Gyeongju, nine traditional Korean dances staged across UNESCO World Heritage sites.",
+  "song": "송소희 Not a Dream",
+  "songYoutube": "https://www.youtube.com/watch?v=Zbo7UY8dxh8"
  },
  {
   "slug": "unreal-engine",
@@ -4494,8 +4512,11 @@ window.PROJECTS = [
    "ko": "레벨 디자인 · 조명 · 카메라 연출 (단독)",
    "en": "Level design, lighting, camera direction (solo)"
   },
-  "spotify": null,
-  "spotifyNote": null,
+  "spotify": "1PtQJZVZIdWIYdARpZRDFO",
+  "spotifyNote": {
+   "ko": "살짝 으스스한 분위기를 내고 싶었던 실습실이라, 〈기묘한 이야기〉로 다시 유명해진 이 곡을 골랐다. 차갑고 긴장감 있는 신스 소리가 그 분위기와 맞는다.",
+   "en": "I wanted the lab to feel a little eerie, so I chose this song, which found a new audience through Stranger Things. Its cold, tense synths fit that mood."
+  },
   "cardThumb": "/images/projects/unreal-engine/ad06-ad05-card.jpg",
   "sections": [
    {
@@ -4599,7 +4620,9 @@ window.PROJECTS = [
    }
   },
   "title": "Clothing Lab in Unreal Engine",
-  "desc": "The clothing lab built in Unreal Engine for a 3D animation class, and a short film cut between three cine cameras inside it."
+  "desc": "The clothing lab built in Unreal Engine for a 3D animation class, and a short film cut between three cine cameras inside it.",
+  "song": "Kate Bush Running Up That Hill",
+  "songYoutube": "https://www.youtube.com/watch?v=wp43OdtAAkM"
  },
  {
   "slug": "arts-week-2026",
