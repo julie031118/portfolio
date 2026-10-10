@@ -73,25 +73,25 @@ window.SITE = {
        hovering it pops `media` (4:5), clicking opens `link`. */
     strengths: [
       {
-        claim: { ko: '제 취향을 고집하지 않고, 보는 사람과 콘셉트에 맞춰 비주얼을 바꿉니다.', en: 'I don’t hold on to my own taste. I shape the visuals around the audience and the concept.' },
-        keyword: { ko: '보는 사람과 콘셉트', en: 'the audience and the concept' },
-        evidence: { ko: '40~50대가 실제로 보는 릴스를 먼저 분석해 세 자리 조회수를 2.8만으로 올렸다(미래엔수학). 어르신 한 분을 여러 번 만나 굽은 등과 어깨 비대칭에 맞춰 코트를 설계했다(인체공학적 의복디자인).', en: 'Studied the Reels women in their 40s and 50s actually watch; views went from three digits to 28K (MiraeN Math). Met one senior model several times and cut his coat around a curved back and uneven shoulders (Ergonomic Clothing Design).' },
+        claim: { ko: 'AI와 새 툴을 빨리 익혀, 머릿속 그림을 바로 눈에 보이는 결과물로 만듭니다.', en: 'I pick up AI and new tools fast, and turn the picture in my head into something you can see.' }, /* AI first (연서, 2026-10-10: companies look for AI, and AI visuals are the work she wants) */
+        keyword: { ko: 'AI와 새 툴', en: 'AI and new tools' },
+        evidence: { ko: '웹, 영상, 옷, 마케팅 작업에 AI를 써 왔다. 웹디자인도 코딩도 전공하지 않았지만, 지금 보고 있는 이 포트폴리오를 AI와 함께 혼자 익혀 만들었다. AI 단편영화는 기획부터 편집까지 혼자 맡아 대상을 받았고, 카프탄은 원단을 자르기 전에 AI로 먼저 입혀 보며 실루엣과 드레이프를 확인했다. 미래엔수학에서는 2D 캐릭터를 AI로 3D화해 릴스에 넣었다. 교환학생 한 학기 동안 NedGraphics, EasyKnit, DesignScope Victor로 프린트·직조·니트 작업을 완성했고, 지금은 인공지능예술실습에서 생성 모델을 직접 학습시키며 원리부터 배우는 중.', en: 'I have used AI across web, film, clothing and marketing work. I majored in neither web design nor coding, yet I taught myself to build this portfolio with AI. I planned, directed and edited an AI short film on my own and won the grand prize, and before cutting the fabric for my kaftan I dressed it on a body with AI to check the silhouette and drape. At MiraeN Math I turned a 2D character into 3D with AI for Reels. In one exchange semester I finished print, woven and knit projects in NedGraphics, EasyKnit and DesignScope Victor, and now I am training generative models myself in Deep Learning for Artists, learning how they work from the inside.' },
+        media: 'images/projects/portfolio-site/thumb-card.jpg', /* the portfolio-site card image (연서, 2026-10-02) */
+        link: 'portfolio-site', /* was ai-short-film (연서, 2026-10-02): the AI film is already Selected 01 */
+      },
+      {
+        claim: { ko: '보는 사람이 실제로 보는 것에서 출발해 비주얼을 정합니다.', en: 'I start from what the audience actually sees, and shape the visuals from there.' }, /* rewritten 2026-10-10: what she does, not what she lets go of */
+        keyword: { ko: '실제로 보는 것', en: 'actually sees' },
+        evidence: { ko: '40~50대 여성 학부모가 실제로 보는 릴스를 먼저 분석해 큰 글씨, 느린 속도로 제작 규칙을 세웠고, 세 자리였던 릴스 조회수가 2.9만까지 올랐다(미래엔수학). 어르신 한 분을 수업에서 정해진 횟수보다 더 자주 만나, 굽은 등과 어깨 비대칭에 맞춰 코트를 설계했다(인체공학적 의복디자인).', en: 'I first studied the Reels that mothers in their 40s and 50s actually watch and set production rules from them: big type, slow pace. Reel views went from three digits to 29K (MiraeN Math). I met one senior model more often than the class required and cut his coat around a curved back and uneven shoulders (Ergonomic Clothing Design).' },
         media: 'img/strength-1-miraen.jpg',
         link: 'miraen',
       },
       {
-        claim: { ko: '머리로 기획하고, 몸으로 끝까지 만듭니다.', en: 'I plan it in my head and build it all the way through with my hands.' },
-        keyword: { ko: '몸으로 끝까지', en: 'all the way through' },
-        evidence: { ko: 'Art2Wear 〈공생〉은 디자인과 제작부터 직접 입고 런웨이에 서기까지, 패션쇼 〈형〉은 디자인부터 무대까지, 데님 공모전은 AI 시뮬레이션부터 실물 한 벌까지 끝까지 해냈다. 교환학생 1년 동안 인턴 3곳과 아르바이트를 병행하면서 전 과목 A(GPA 4.0).', en: 'Art2Wear’s Tensed Symbiosis, from design and construction to walking it on the runway myself; the SNU Fashion Show ‘Hyeong’, from design to the stage; the denim contest, from AI simulation to one finished garment. One exchange year with three internships and a part-time job alongside, and straight A’s (GPA 4.0).' },
+        claim: { ko: '주어진 조건에서 아이디어를 찾고, 손으로 끝까지 완성합니다.', en: 'I find the idea inside the constraints, and finish it by hand.' }, /* rewritten 2026-10-10: constraints into concepts, then made by hand */
+        keyword: { ko: '손으로 끝까지', en: 'finish it by hand' },
+        evidence: { ko: '비 예보가 있던 야외 전시에서는 우산을 작품의 일부로 만들어 덩굴 터널에 철사로 직접 고정했다(예술주간). 한 벌만 만들 수 있는 공모전에서는 AI로 결과를 먼저 확인한 뒤, 스판 데님을 칼과 드릴로 직접 찢었다(데님 공모전). 동물의 공생은 다른 참가자들이 이미 다루고 있어 주제를 \'불안과 집중의 공생\'으로 풀고, 접시를 직접 깨서 꽃을 만들었다(Art2Wear).', en: 'With rain forecast for an outdoor show, I made an umbrella part of the piece and wired it to a vine tunnel myself (Arts Week). With only one garment allowed in a contest, I checked the result with AI first, then tore the stretch denim with a knife and a drill (denim contest). Animal symbiosis was already taken by other entrants, so I turned the theme into the symbiosis of anxiety and focus, and broke plates by hand to make the flowers (Art2Wear).' },
         media: 'img/strength-2-art2wear-making.jpg', /* art2wear/30: making it by hand (연서, 2026-10-02) */
         link: 'art2wear',
-      },
-      {
-        claim: { ko: '머릿속 그림을 AI로 바로 눈에 보이는 결과물로 만듭니다.', en: 'I turn the picture in my head into something you can see, with AI.' },
-        keyword: { ko: '눈에 보이는 결과물', en: 'something you can see' },
-        evidence: { ko: '지금 보고 있는 이 포트폴리오를 코딩 없이 AI와 함께 기획부터 구현까지 직접 만들었다. AI 단편영화는 혼자 연출해 대상을 받았고, 카프탄과 데님은 자르기 전에 AI로 먼저 입혀 봤다. 더 섬세하게 다루고 싶어서, 인공지능예술실습에서 생성 모델을 직접 학습시키며 원리부터 배우는 중.', en: 'This portfolio you are looking at: planned and built with AI from concept to code, with no coding background. I directed an AI short film solo and won the grand prize, and tried the kaftan and the denim on a body with AI before cutting. To get finer control, I am now training generative models myself in Deep Learning for Artists.' },
-        media: 'images/projects/portfolio-site/thumb-card.jpg', /* the portfolio-site card image (연서, 2026-10-02) */
-        link: 'portfolio-site', /* was ai-short-film (연서, 2026-10-02): the AI film is already Selected 01 */
       },
     ],
 
@@ -100,7 +100,16 @@ window.SITE = {
       { year: '2026.05~08', label: { ko: '연구실 인턴', en: 'Research Intern' }, title: { ko: 'The Nonwovens Institute, NC State', en: 'The Nonwovens Institute, NC State' }, link: null },
       { year: '2026.01', label: { ko: '쇼룸 인턴 (마이애미)', en: 'Showroom Intern (Miami)' }, title: { ko: 'BRIDGE SHOWROOM', en: 'BRIDGE SHOWROOM' }, link: null },
       { year: '2025.11~2026.05', label: { ko: '마케팅 & 디자인 인턴 (원격, 미국)', en: 'Marketing & Design Intern (remote, US)' }, title: { ko: 'Missions with Monty', en: 'Missions with Monty' }, link: null },
-      { year: '2025.01~08', label: { ko: '디자이너 & 마케터', en: 'Designer & Marketer' }, title: { ko: '미래엔수학 5개 지사', en: 'MiraeN Math (5-district branch)' }, link: 'miraen' },
+      { year: '2025.01~08', label: { ko: '디자이너 & 마케터', en: 'Designer & Marketer' }, title: { ko: '미래엔수학 지사 (5개 구)', en: 'MiraeN Math (5-district branch)' }, link: 'miraen' },
+    ],
+    /* ACTIVITIES under WORK EXPERIENCE (연서, 2026-10-10): clubs and student groups, newest first, as the timeline has them.
+       senior-fit is left out: it was a class project, not an activity */
+    activities: [
+      { year: '2024.07~2025.06', label: { ko: '기술팀 모션그래픽 디자이너', en: 'Motion Graphics, Technical Team' }, title: { ko: 'SUB 서울대학교 학생방송국', en: 'SUB, SNU Student Broadcasting' }, link: 'sub-motion' },
+      { year: '2024.03~10', label: { ko: '디자이너 · 홍보팀', en: 'Designer & Promotions' }, title: { ko: '2024 의류학과 졸업패션쇼 〈형(形)〉', en: '2024 SNU Graduation Fashion Show ‘Form’' }, link: 'fashion-show-2024' },
+      { year: '2023.07~2024.06', label: { ko: '디자인팀 · 공연팀', en: 'Design & Performance' }, title: { ko: 'SNUFESTIVAL 축제기획단', en: 'SNUFESTIVAL Committee' }, link: 'campus-festival' },
+      { year: '2023.06~2024.03', label: { ko: '예능팀 기획 · 드라마팀 조연출', en: 'Variety planning & Drama AD' }, title: { ko: 'Imageband 영상제작 동아리', en: 'Imageband Film Club' }, link: null },
+      { year: '2023.02~2024.02', label: { ko: '드럼', en: 'Drums' }, title: { ko: "밴드 '단풍' · '용감한 쿠키'", en: 'Bands ‘Danpung’ & ‘Brave Cookie’' }, link: null },
     ],
     /* AWARDS under KEY FIGURES (연서, 2026-10-09: these four; the APEC video's award is left out on purpose) */
     awards: [
@@ -117,7 +126,7 @@ window.SITE = {
 
     skills: [
       { group: { ko: '콘텐츠 · 마케팅', en: 'Content & Marketing' }, items: [{ ko: '숏폼 기획', en: 'Short-form planning' }, { ko: '채널 운영과 유료광고', en: 'Channel ops & paid media' }, { ko: '브랜딩과 캐릭터 IP 확장', en: 'Branding & character IP' }] },
-      { group: { ko: 'AI 툴', en: 'AI Tools' }, items: ['Midjourney', 'Kling AI', 'Suno', 'Riffusion', 'ElevenLabs', 'Tripo', 'Manus', 'Claude Code'] },
+      { group: { ko: 'AI 툴', en: 'AI Tools' }, items: ['Midjourney', 'Kling AI', 'Higgsfield', 'Suno', 'Riffusion', 'ElevenLabs', 'Tripo', 'Manus', 'Claude Code'] }, /* Higgsfield added 2026-10-10 (연서: using it this weekend; deploy after she has) */
       { group: { ko: '패션 · 텍스타일', en: 'Fashion & Textile' }, items: ['CLO 3D', 'NedGraphics', { ko: '엔지니어드 프린트', en: 'Engineered print' }, { ko: '텍스타일 제작(프린트, 직조, 니트)', en: 'Textile making (print, weave, knit)' }, { ko: '패턴과 봉제', en: 'Pattern & construction' }] },
       { group: { ko: '디자인 · 영상', en: 'Design & Video' }, items: ['Photoshop', 'Illustrator', 'Procreate', 'After Effects', 'Premiere Pro', 'CapCut'] } /* Procreate added 2026-10-09 (연서) */, /* video tools moved here from Content (연서, 2026-10-05): tools with tools, the content group keeps what she plans and runs */
     ],
@@ -160,7 +169,7 @@ window.SITE = {
       segment: '2024-1', grade: { ko: '3학년 1학기', en: 'Year 3-1' },
       items: [
         { date: '2024.03', until: '2024.10', major: true, link: 'fashion-show-2024',
-          title: { ko: '2024 의류학과 졸업패션쇼 \'형(形)\': 디자이너 · 홍보팀', en: '2024 SNU Graduation Fashion Show \'Hyeong\': Designer & Promotions' },
+          title: { ko: '2024 의류학과 졸업패션쇼 〈형(形)〉: 디자이너 · 홍보팀', en: '2024 SNU Graduation Fashion Show \'Form\': Designer & Promotions' },
           desc: { ko: '의류학과 졸업패션쇼에 디자이너로 참여해 의상 컬렉션을 제작하고, 홍보팀으로 인스타그램 관리·피드·숏폼 제작·디자이너 인터뷰를 맡음. 2024.03~10', en: 'Made a collection as a designer for the department graduation show, and on the promotion team ran Instagram, feed posts, short-form video and designer interviews. Mar to Oct 2024' } },
       ],
     },
@@ -172,9 +181,9 @@ window.SITE = {
           desc: { ko: 'After Effects로 로제 \'Toxic Till the End\' 뮤직비디오 티저를 3인이 나눠 만들고, 그중 중간 파트의 모션그래픽을 맡음. 2024.07~2025.06', en: 'Made the motion graphics for Rosé\'s \'Toxic Till the End\' music video teaser in After Effects with two others, splitting it in three; I made the middle part. Jul 2024 to Jun 2025' } },
         { date: '2024.09', until: '2024.12', major: true, link: 'senior-fit',
           title: { ko: '관악노인종합복지관 × 서울대 협업 패션쇼: 시니어핏', en: 'Gwanak Senior Welfare Center × SNU Fashion Show: Senior Fit' },
-          desc: { ko: '어르신 한 분을 전담해 수업 밖에서까지 여러 차례 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 코트를 제작. 완성작으로 시니어 런웨이까지 진행했고, 대학신문 인터뷰 대상자로 선정. 2024.09~12', en: 'Paired one-to-one with a senior model, interviewed him repeatedly beyond class hours and built a coat from his taste and body. Shown on the senior runway; interviewed by The SNU Newspaper. Sep to Dec 2024' } },
+          desc: { ko: '어르신 한 분을 전담해 수업에서 정해진 횟수보다 더 자주 만나 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 코트를 제작. 완성작으로 시니어 런웨이까지 진행했고, 대학신문 인터뷰 대상자로 선정. 2024.09~12', en: 'Paired one-to-one with a senior model, interviewed him more often than the class required and built a coat from his taste and body. Shown on the senior runway; interviewed by The SNU Newspaper. Sep to Dec 2024' } },
         { date: '2024.11', major: true, link: 'clo3d',
-          title: { ko: '입선: 제13회 국제 디지털 패션 공모전', en: 'Selected Entry: 13th International Digital Fashion Contest' },
+          title: { ko: '입선: 제13회 국제 디지털 패션 공모전', en: 'Honorable Mention: 13th International Digital Fashion Contest' },
           desc: { ko: '한국의류산업학회 주최, 공모전 주제는 \'Dopamine Dressing\'. 러닝 크루 문화를 즐기는 20대 후반 직장인 페르소나를 WGSN 트렌드 리포트로 설계하고, CLO 3D로 디자인부터 3D 시뮬레이션까지 단독 제작한 액티브웨어 컬렉션으로 입선. 2024.09~11', en: 'Hosted by the Korean Society for Clothing Industry, on the theme \'Dopamine Dressing\'. An activewear collection for a late-20s running-crew persona grounded in WGSN trend reports, designed and simulated solo in CLO 3D. Sep to Nov 2024' } },
       ],
     },
@@ -182,7 +191,7 @@ window.SITE = {
       segment: '2025-1', grade: { ko: '휴학', en: 'Leave of absence' },
       items: [
         { date: '2025.01', until: '2025.08', major: true, link: 'miraen',
-          title: { ko: '미래엔수학 5개 지사: 디자이너 & 마케터', en: 'MiraeN Math (5-district branch): Designer & Marketer' },
+          title: { ko: '미래엔수학 지사 (5개 구): 디자이너 & 마케터', en: 'MiraeN Math (5-district branch): Designer & Marketer' },
           desc: { ko: '지사장 한 명이 새로 연 지사의 SNS 3개 채널을 0에서 개설·운영. 팔로워 0인 계정에서 릴스 최고 조회수 2.9만. 브랜드 콘텐츠 50여 편, 2D 캐릭터를 3D로 리빌드한 숏폼, 유료광고와 네이버 스마트플레이스 SEO 병행. 2025.01~08', en: 'Opened and ran three channels from zero for a branch one director had just opened. Top Reel 29,000 views from a zero-follower account. 50+ pieces of brand content, the 2D character rebuilt in 3D for short-form, paid media alongside Naver SmartPlace SEO. Jan to Aug 2025' } },
         { date: '2025.07', major: true, link: 'ai-short-film',
           title: { ko: '대상: 서울대학교 중앙도서관 〈AI로 만드는 영화클래스〉', en: 'Grand Prize: SNU Central Library ‘AI Filmmaking Class’' },
@@ -228,7 +237,7 @@ window.SITE = {
           desc: { ko: '물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 여러 방향을 먼저 시뮬레이션한 뒤 실물 한 벌을 제작하고, 스판 데님을 칼·드릴·송곳으로 직접 찢어 레이스로 실루엣을 잡음. 본선을 거쳐 입선. 2026.09.23 발표', en: 'Paint becoming thread, on denim. Directions simulated with AI before one garment was built; the stretch denim torn by hand and held in shape with lace. Finalist, then Honorable Mention. Announced 23 Sep 2026' } },
         { date: '2026.09', major: true, link: 'arts-week-2026',
           title: { ko: '2026 서울대 예술주간 〈공생 Tensed Symbiosis〉: 야외 설치', en: 'SNU Arts Week 2026 \'Tensed Symbiosis\': outdoor installation' },
-          desc: { ko: 'Art2Wear 작품을 예술주간 야외 설치로 재구성. 대학 캠퍼스, 야외, 비 예보라는 장소와 조건을 읽고 우산을 더해, 대학생이 느끼는 압박으로 주제를 넓힘. 관정도서관 앞. 2026.09.28~10.02', en: 'The Art2Wear piece rebuilt as an outdoor installation for SNU Arts Week. Reading the site (a university campus, outdoors, rain in the forecast), I added umbrellas and turned it toward the pressure students carry. In front of Kwanjeong Library. 28 Sep to 2 Oct 2026' } },
+          desc: { ko: 'Art2Wear 작품을 예술주간 야외 설치로 재구성. 대학 캠퍼스, 야외, 비 예보라는 장소와 조건을 읽고 우산을 더해, 대학생이 느끼는 압박으로 주제를 넓힘. 관정도서관 앞. 2026.09.28~10.02', en: 'The Art2Wear piece rebuilt as an outdoor installation for SNU Arts Week. Reading the site (a university campus, outdoors, rain in the forecast), I added an umbrella and turned it toward the pressure students carry. In front of Kwanjeong Library. 28 Sep to 2 Oct 2026' } },
       ],
     },
     {
@@ -254,13 +263,14 @@ window.SITE = {
     /* phones only: a small note once per visit that the full site is on a computer (연서, 2026-10-02) */
     desktopNote: { ko: '컴퓨터로 보면 훨씬 좋아요. 3D 링과 인터랙션까지 모두 보여요', en: 'Best viewed on a computer, with the 3D ring and every interaction' },
     desktopNoteClose: { ko: '닫기', en: 'Close' },
-    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', experience: 'EXPERIENCE', awards: 'AWARDS', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
+    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', experience: 'WORK EXPERIENCE', activities: 'ACTIVITIES', awards: 'AWARDS', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
   archiveUi: {
     aiNowNote: { ko: '지금 배우고 있는 AI 작업은 NOW에 ↑', en: 'The AI work I am learning right now is in NOW ↑' }, /* shown only under AI WORKS (연서, 2026-10-09) */
     filterLabel: 'ARCHIVE FILTERS', imageSlot: 'IMAGE 3:4', inProgress: 'IN PROGRESS',
     filters: [
-      { label: 'ALL', tag: null }, { label: 'FASHION', tag: 'FASHION' }, { label: 'CONTENT', tag: 'CONTENT' },
-      { label: 'AI WORKS', tag: 'AI' }, { label: 'INSIGHT', tag: 'INSIGHT' },
+      /* AI WORKS right after ALL (연서, 2026-10-10: AI visual roles first) */
+      { label: 'ALL', tag: null }, { label: 'AI WORKS', tag: 'AI' }, { label: 'FASHION', tag: 'FASHION' },
+      { label: 'CONTENT', tag: 'CONTENT' }, { label: 'INSIGHT', tag: 'INSIGHT' },
     ],
     /* each filter can have its own order (연서, 2026-10-02); ALL and any slug left out follow featured, then archiveRank */
     order: {

@@ -967,3 +967,8 @@ html[lang="ko"] .about-award-title { word-break: keep-all; overflow-wrap: anywhe
 
 /* nav ARCHIVE lands on the filters, below NOW (2026-10-10) */
 #archive-list { scroll-margin-top: calc(var(--nav-height) + 16px); }
+
+/* short silent loops in a gallery (2026-10-10): the poster sets the size, the video sits on it */
+.detail-loop { position: relative; display: block; }
+.detail-loop img { display: block; }
+.detail-loop video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }

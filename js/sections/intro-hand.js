@@ -191,7 +191,8 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     aiTag: draw('aiTag', 'hand-sub hand-tag', NOTES.aiTag || ''), aiList: draw('aiList', 'hand-sub hand-list', NOTES.ai || []),
   };
   groups.insight.append(parts.parenL, parts.parenR, parts.insight, parts.scatter, parts.insightHot);
-  groups.visual.append(parts.boxVisual, parts.fcLine, parts.fcWords, parts.shirt, parts.shirtTail, parts.arrow, parts.screen, parts.fashionHot, parts.contentsHot);
+  /* the line from the shirt down to FASHION is left out (연서, 2026-10-10); shirtTail is still built and placed, just never shown */
+  groups.visual.append(parts.boxVisual, parts.fcLine, parts.fcWords, parts.shirt, parts.arrow, parts.screen, parts.fashionHot, parts.contentsHot);
   groups.design.append(parts.boxDesign, parts.aiLine, parts.aiWord, parts.aiTag, parts.aiList, parts.aiHot);
   Object.values(groups).forEach((group) => layer.append(group));
   let fcSide = 'left';

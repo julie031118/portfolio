@@ -28,7 +28,9 @@ function justifyGallery(gallery, rowTarget = 0) {
     if (!ready.length) return;
     /* rowTarget -1: the whole set in one row (Art2Wear show photos, 2026-10-10); on a phone it falls back to normal rows */
     const oneRow = rowTarget < 0 && width >= 600;
-    const target = oneRow ? 0 : (rowTarget > 0 ? rowTarget : Math.min(620, Math.max(360, width * .46)));
+    /* a gallery in the hero place goes two across on a phone, so the title is not pushed far down (2026-10-10) */
+    const heroPhone = width < 600 && gallery.parentElement?.classList.contains('detail-hero-gallery');
+    const target = oneRow ? 0 : (rowTarget > 0 ? rowTarget * (heroPhone ? .5 : 1) : Math.min(620, Math.max(360, width * .46)));
     const GAP = 28; /* px before a picture marked has-gap-before, when it is not first in its row */
     let row = []; let rowRatio = 0; let rowGap = 0;
     const flush = (last) => {
@@ -64,7 +66,33 @@ function createMedia(source, label, className, alt, eager = false) {
   slot.className = 'detail-media-slot';
   slot.textContent = label;
   figure.append(slot);
-  if (!isPlaceholderPath(source)) {
+  if (!isPlaceholderPath(source) && /\.mp4$/i.test(source)) {
+    /* a short silent loop (Unreal film cuts, 2026-10-10): its poster jpg (same name) keeps the gallery layout,
+       the video plays on top of it, like a GIF but a tenth of the weight */
+    const wrap = document.createElement('span');
+    wrap.className = 'detail-loop';
+    const poster = document.createElement('img');
+    poster.loading = 'eager'; poster.decoding = 'async'; poster.alt = alt;
+    poster.addEventListener('load', () => figure.classList.add('has-image'), { once: true });
+    poster.src = normalizeSource(source).replace(/\.mp4$/i, '.jpg');
+    const video = document.createElement('video');
+    video.muted = true; video.loop = true; video.playsInline = true;
+    video.setAttribute('muted', ''); video.setAttribute('playsinline', ''); video.setAttribute('aria-hidden', 'true');
+    video.poster = poster.src;
+    video.preload = 'metadata';
+    video.src = normalizeSource(source);
+    wrap.append(poster, video);
+    figure.append(wrap);
+    /* plays only while on screen, so six clips on one page cost little; reduced motion keeps the poster */
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver((entries) => {
+          /* the newest entry decides: a gallery moved into the hero place reports twice in one batch */
+          if (entries[entries.length - 1].isIntersecting) video.play().catch(() => {}); else video.pause();
+        }, { rootMargin: '120px 0px' }).observe(wrap);
+      } else video.autoplay = true;
+    }
+  } else if (!isPlaceholderPath(source)) {
     const image = document.createElement('img');
     /* every gallery image loads up front: a lazy image inside a hidden (not-yet-justified) item never
        scrolls into view, so it never loaded — which is why galleries showed one or two photos */
@@ -217,7 +245,8 @@ function renderProject(detail, project, lang) {
   headline.className = 'detail-headline';
   headline.textContent = copy.headline;
   header.append(meta, title, headline);
-  content.append(hero, header);
+  /* heroGallery (Unreal, 2026-10-10): no hero still; the first gallery is moved up into its place once it is built */
+  if (project.heroGallery) content.append(header); else content.append(hero, header);
 
   if (Array.isArray(copy.metrics) && copy.metrics.length) {
     const metrics = document.createElement('div');
@@ -530,6 +559,12 @@ function renderProject(detail, project, lang) {
       const note = translated(section.note, lang) || '';
       if (section.layout === 'stack') addStack(entries, title, note);
       else addGallery(entries, title, index ? 'detail-extra detail-section' : 'detail-section', section.rowTarget || (index ? 340 : 0), note);
+      if (index === 0 && project.heroGallery && section.layout !== 'stack') {
+        const top = content.lastElementChild;
+        top.classList.add('detail-hero-gallery');
+        top.querySelector('h3')?.remove();
+        content.insertBefore(top, header);
+      }
     });
   } else {
     /* the hero picture shows again in the gallery too (연서, 2026-10-09) */

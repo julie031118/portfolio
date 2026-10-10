@@ -69,6 +69,7 @@ export function renderAbout(lang) {
       </section>
       <section class="about-stats" aria-label="${SITE.aboutUi.stats}"></section>
       ${(SITE.profile.experience || []).length ? `<section class="about-awards about-experience" aria-labelledby="about-exp-title"><h2 id="about-exp-title">${SITE.aboutUi.experience || 'EXPERIENCE'}</h2><ol class="about-award-list about-exp-list"></ol></section>` : ''}
+      ${(SITE.profile.activities || []).length ? `<section class="about-awards about-activities" aria-labelledby="about-act-title"><h2 id="about-act-title">${SITE.aboutUi.activities || 'ACTIVITIES'}</h2><ol class="about-award-list about-act-list"></ol></section>` : ''}
       ${(SITE.profile.awards || []).length ? `<section class="about-awards" aria-labelledby="about-awards-title"><h2 id="about-awards-title">${SITE.aboutUi.awards || 'AWARDS'}</h2><ol class="about-award-list"></ol></section>` : ''}
       <section class="about-skills" aria-labelledby="about-skills-title"><h2 id="about-skills-title">${SITE.aboutUi.skills}</h2><div class="about-skill-groups"></div></section>
       <section class="about-timeline" aria-labelledby="about-timeline-title"><div class="timeline-pin"><div class="timeline-topline"><h2 id="about-timeline-title">${SITE.aboutUi.timeline}</h2><span>${String(SITE.timeline[0].segment).slice(0, 4)} <span class="timeline-topline-arrow">→</span> ${String(SITE.timeline[SITE.timeline.length - 1].segment).slice(0, 4)}</span></div><div class="timeline-viewport"><div class="timeline-track"></div></div></div></section>
@@ -143,7 +144,8 @@ export function renderAbout(lang) {
     item.append(row); list?.append(item);
   });
   fillList(section.querySelector('.about-exp-list'), SITE.profile.experience);
-  fillList(section.querySelector('.about-awards:not(.about-experience) .about-award-list'), SITE.profile.awards);
+  fillList(section.querySelector('.about-act-list'), SITE.profile.activities);
+  fillList(section.querySelector('.about-awards:not(.about-experience):not(.about-activities) .about-award-list'), SITE.profile.awards);
   buildTimeline(track, lang);
   SITE.profile.skills.forEach((group) => { const block = document.createElement('section'); block.className = 'about-skill-group'; const label = document.createElement('h3'); label.textContent = T(group.group, lang).toUpperCase(); const items = document.createElement('p'); items.textContent = group.items.map((entry) => T(entry, lang)).join(' · '); block.append(label, items); skills.append(block); });
 

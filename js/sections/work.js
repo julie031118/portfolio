@@ -281,7 +281,10 @@ async function createRing(section, projects, lang, onDispose) {
   });
 
   const paper = new THREE.Color(cssColor('--bg') || '#F1F1F3');
-  let angle = -Math.PI / 2;            /* current rotation of the ring */
+  /* start angle (연서, 2026-10-10): the ring opens with the denim and arts-week cards side by side at the front */
+  const startPair = ['denim-2026', 'arts-week-2026'].map((slug) => projects.findIndex((p) => p.slug === slug)).filter((i) => i >= 0);
+  const START = startPair.length ? -((startPair.reduce((sum, i) => sum + i, 0) / startPair.length) / N) * TAU : 0;
+  let angle = -Math.PI / 2 + START;    /* current rotation of the ring */
   let scrollAngle = 0;                 /* driven by the pinned scroll */
   let offsetAngle = 0;                 /* index clicks */
   let drift = 0;                       /* idle rotation accumulator */
@@ -400,9 +403,10 @@ async function createRing(section, projects, lang, onDispose) {
   function frame(now) {
     if (disposed) return;
     const dt = Math.min(0.05, (now - lastTime) / 1000); lastTime = now;
-    if (!reducedQuery.matches && !hovered) drift += dt * 0.05 * hoverSlow;
+    /* idle drift only once the stage has reached the top, so the ring opens at START however long the intro took */
+    if (!reducedQuery.matches && !hovered && section.getBoundingClientRect().top <= 2) drift += dt * 0.05 * hoverSlow;
     hoverSlow += ((hovered ? 0.25 : 1) - hoverSlow) * 0.1;
-    const target = -Math.PI / 2 + scrollAngle + offsetAngle + drift;
+    const target = -Math.PI / 2 + START + scrollAngle + offsetAngle + drift;
     const before = angle;
     angle += (target - angle) * (1 - Math.pow(0.001, dt)); /* inertial damping */
     ringSpeed = dt > 0 ? (angle - before) / dt : 0;
@@ -412,7 +416,7 @@ async function createRing(section, projects, lang, onDispose) {
     if (object) {
       const t = now / 1000;
       const sway = reducedQuery.matches ? 0 : Math.sin(t * 0.45) * 0.26;
-      pivot.rotation.y += ((sway + parallax.x * 0.5 + (angle + Math.PI / 2) * 0.12) - pivot.rotation.y) * 0.05;
+      pivot.rotation.y += ((sway + parallax.x * 0.5 + (angle + Math.PI / 2 - START) * 0.12) - pivot.rotation.y) * 0.05;
       pivot.rotation.x += ((-0.08 + parallax.y * 0.22) - pivot.rotation.x) * 0.05;
       pivot.position.y = OBJECT_LIFT + (reducedQuery.matches ? 0 : Math.sin(t * 0.7) * 0.06);
     }
@@ -483,7 +487,7 @@ async function createRing(section, projects, lang, onDispose) {
     goTo(index) {
       /* rotate so card `index` sits at the bottom (front) */
       const desired = -Math.PI / 2 - (index / N) * TAU;
-      const current = -Math.PI / 2 + scrollAngle + offsetAngle + drift;
+      const current = -Math.PI / 2 + START + scrollAngle + offsetAngle + drift;
       let delta = desired - current;
       delta = Math.atan2(Math.sin(delta), Math.cos(delta));
       offsetAngle += delta;

@@ -30,10 +30,10 @@ window.PROJECTS = [
   },
   "spotify": "2aSRUHDFrf6202bDqLQIcd",
   "spotifyNote": {
-   "ko": "릴스에 실제로 쓴 곡. 최신곡보다 이런 친근한 음악을 넣었을 때 조회수가 눈에 띄게 늘었다.",
-   "en": "The song I actually used in the Reels. Views rose visibly once I used familiar songs like this instead of new releases."
+   "ko": "오프라인 홍보 시리즈 릴스에 실제로 쓴 곡.",
+   "en": "The song I actually used in the street-promo Reels."
   },
-  "cardThumb": "/images/projects/miraen/a01.jpg",
+  "cardThumb": "/images/projects/miraen/06-card.jpg",
   "small": [
    "/images/projects/miraen/06.jpg",
    "/images/projects/miraen/07.jpg",
@@ -157,19 +157,11 @@ window.PROJECTS = [
    "ko": {
     "title": "미래엔수학 디자이너 & 마케터",
     "cat": "브랜드 콘텐츠 · 실무 · 2025.01~08",
-    "headline": "타깃이 실제로 보는 것을 먼저 분석하고, 내 취향을 버렸다.",
+    "headline": "타깃이 실제로 보는 것을 먼저 분석해, 세련됨보다 잘 보이는 것을 택했다.",
     "metrics": [
      {
-      "v": "2.9만",
-      "l": "릴스 최고 조회수, 팔로워 0에서 시작한 지사 계정"
-     },
-     {
-      "v": "세 자리 → 2.8만",
-      "l": "시리즈 도입 전후"
-     },
-     {
-      "v": "우수지사장상",
-      "l": "채널 0에서 시작, 3개월 만에"
+      "v": "세 자리 → 2.9만",
+      "l": "오프라인 홍보 시리즈 도입 전후 릴스 조회수"
      }
     ],
     "need": "본사 계정이 아니라, 지사장 한 명이 새로 연 가맹 지사의 계정이었다. 인스타그램도 유튜브도 블로그도 없고, 네이버 지도 등록조차 안 된 0의 상태였다. 학원은 보통 검색으로 고르는데, 이 지사는 검색해도 나오지 않았다.",
@@ -182,35 +174,26 @@ window.PROJECTS = [
     "result": [
      "팔로워 0에서 시작한 지사 계정에서 릴스 최고 조회수 2.9만, 그다음 2.8만 (오프라인 홍보 시리즈). 시리즈 전에는 조회수가 세 자리 수였음",
      "사업설명회 릴스 2.2만",
-     "채널이 하나도 없던 상태에서 시작해, 인스타그램 개설 3개월 만에 지사장이 5월 우수지사장상 수상"
+     "인스타그램 개설 3개월 만에 지사장이 5월 우수지사장상 수상"
     ],
     "detail": {
      "title": "어떻게 판단했나",
      "body": [
-      "분석에서 뽑은 규칙: 글씨는 크고 잘 보여야 한다. 속도는 빠르면 안 된다. 음악은 최신 아이돌곡도 반응이 좋지만, 친근한 음악이 더 반응이 좋다. 요즘 릴스는 대부분 최신곡을 쓰니, 둘을 섞되 친근한 음악도 꼭 넣는다. 미감이 세련될 필요는 없고, 잘 보이는 것이 우선이다.",
+      "분석에서 뽑은 규칙: 글씨는 크고 잘 보여야 한다. 속도는 빠르면 안 된다. 음악은 최신곡과 친근한 음악을 섞는다. 미감이 세련될 필요는 없고, 잘 보이는 것이 우선이다.",
       "사람 얼굴이 들어가야 신뢰가 생긴다고 보고 지사장을 최대한 노출시켰다. 동시에 학원은 결국 아이들을 대상으로 하는 사업이므로, 캐릭터 '미래'의 지속 노출을 두 번째 축으로 잡았다.",
       "오프라인 홍보 시리즈에서는 \"미래야 힘들었지~\", \"미래야 수고했어\" 같은 지사장과 캐릭터의 대화를 자막으로 연출해 인간미와 친근함을 같이 만들었다. 아이들이 '미래' 앞에 모여드는 순간에는 싸이 노래를 얹었다. 최신곡 대신 이렇게 친근한 음악을 넣자 조회수가 눈에 띄게 늘었다.",
-      "시리즈는 5탄까지 이어가며 신현초, 장평초처럼 학교별로 회차를 나눴다. 각 회차는 독립 콘텐츠로, 포맷은 고정.",
-      "인체공학적 의복디자인 수업에서는 어르신 한 분을 여러 번 만나 입는 사람을 이해했고, 미래엔에서는 지표를 읽어 보는 사람을 이해했다. 방법은 달랐지만, 내 취향이 아니라 받는 사람에게 맞춘다는 점은 같았다."
+      "시리즈는 5탄까지 이어가며 신현초, 장평초처럼 학교별로 회차를 나눴다. 각 회차는 독립 콘텐츠로, 포맷은 고정."
      ]
     }
    },
    "en": {
     "title": "MiraeN Math: Designer & Marketer",
     "cat": "Brand Content · Professional · Jan to Aug 2025",
-    "headline": "I analysed what the audience actually watches, then set my own taste aside.",
+    "headline": "I analysed what the audience actually watches first, and chose clear over stylish.",
     "metrics": [
      {
-      "v": "29K",
-      "l": "top Reel views, on a branch account started from zero"
-     },
-     {
-      "v": "3 digits → 28K",
-      "l": "before / after the series"
-     },
-     {
-      "v": "Excellence Award",
-      "l": "3 months after starting from zero"
+      "v": "3 digits → 29K",
+      "l": "Reel views before / after the street-promo series"
      }
     ],
     "need": "Not the head office account but a franchise branch one director had just opened, starting from zero: no Instagram, YouTube or blog, not even a Naver Map listing. People usually find an academy by searching, and this branch did not show up.",
@@ -223,16 +206,15 @@ window.PROJECTS = [
     "result": [
      "Top Reel 29,000 views on a branch account that started from zero followers, then 28,000 (the street-promotion series). Before the series, views were in the hundreds",
      "Business-briefing Reel: 22,000 views",
-     "Starting with no channels at all, the branch director won the May Excellence Award three months after the Instagram launch"
+     "Three months after the Instagram launch, the branch director won the May Excellence Award"
     ],
     "detail": {
      "title": "How the calls were made",
      "body": [
-      "The rules that came out of the analysis: type must be large and legible. Pacing must not be fast. New idol tracks get a good response, but familiar songs get a better one. Most Reels now use new releases, so mix the two and always include some familiar songs. The work does not need to look sophisticated; it needs to be readable.",
+      "The rules that came out of the analysis: type must be large and legible. Pacing must not be fast. Mix new releases with familiar songs. The work does not need to look sophisticated; it needs to be readable.",
       "A human face builds trust, so I put the branch director on camera as much as possible. And since an academy ultimately sells to children, continuous exposure of the character Mirae became the second axis.",
       "In the street-promotion series, subtitle dialogue between the director and Mirae (\"Mirae, that was tough, wasn't it?\") brought warmth and familiarity together. When children gathered around Mirae I scored the moment with a PSY track. With this audience a familiar song beat a stylish one by a wide margin.",
-      "The series ran to five parts, one per school, each episode standalone, the format fixed.",
-      "In the ergonomic clothing class I came to understand the wearer by meeting one senior many times; at MiraeN I understood the audience by reading the numbers. Different methods, the same rule: fit the person on the receiving end, not my own taste."
+      "The series ran to five parts, one per school, each episode standalone, the format fixed."
      ]
     }
    }
@@ -275,6 +257,7 @@ window.PROJECTS = [
   },
   "video": "https://www.youtube.com/embed/Vx8FLDGOt90",
   "video2": "https://www.instagram.com/reel/DcFcT-YzNBE/embed/",
+  "cardThumb": "/images/projects/directing-a-year/01-card.jpg",
   "filmSide": [
    null,
    [
@@ -364,18 +347,14 @@ window.PROJECTS = [
      "채널마다 소개 글을 따로 씀: 링크드인에는 1년 동안 만난 사람들을 생각한 글로, 인스타그램과 유튜브에는 짧고 가볍게"
     ],
     "result": [
-     "숏폼 티저: 팔로워 28명인 신규 계정에서 조회수 1,677회, 팔로워 수의 약 60배 (2026.10 기준)",
+     "숏폼 티저: 팔로워 28명인 신규 계정에서 조회수 1,677회 (2026.10 기준)",
      "서울대학교 교환학생 국외수학후기 공모전 출품, 결과 발표 대기 중"
     ],
     "headline": "재미와 정보를 둘 다 담고 싶었다. 그래서 보는 영상과 읽는 문서로 나눴다.",
     "metrics": [
      {
       "v": "1,677",
-      "l": "티저 조회수"
-     },
-     {
-      "v": "×60",
-      "l": "팔로워 수 대비 조회수"
+      "l": "티저 조회수, 팔로워 28명인 신규 계정"
      }
     ]
    },
@@ -391,18 +370,14 @@ window.PROJECTS = [
      "Wrote a separate caption for each channel: on LinkedIn for the people I met over the year, short and light on Instagram and YouTube"
     ],
     "result": [
-     "Short-form teaser: 1,677 views on a new account with 28 followers, about 60 times its follower count (Oct 2026)",
+     "Short-form teaser: 1,677 views on a new account with 28 followers (Oct 2026)",
      "Entered in the SNU Exchange Student Study-Abroad Review Contest, results pending"
     ],
     "headline": "I wanted it to be fun and useful at once, so I split it into a film to watch and a document to read.",
     "metrics": [
      {
       "v": "1,677",
-      "l": "teaser views"
-     },
-     {
-      "v": "×60",
-      "l": "views per follower"
+      "l": "teaser views, on a new account with 28 followers"
      }
     ]
    }
@@ -593,15 +568,15 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "AI 단편영화 〈Happiness is Intelligence?〉",
-    "cat": "AI 영상 · 연출 · 대상",
+    "title": "2025 AI 단편영화 〈Happiness is Intelligence?〉",
+    "cat": "AI 영상 · 연출 · 2025.06",
     "need": "감정을 숫자로 관리하는 사회라는 설정은 현실에서 촬영할 수 없었고, 배우도 없었다. AI로 본격적으로 작품을 만든 건 이 작업이 처음이었다.",
     "action": [
      "메인 컨셉과 주제, 큰 줄거리는 직접 정함: 기분 조절 약으로 늘 같은 행복을 유지하고 감정을 숫자로 관리하는 사회에서, 약이 떨어진 주인공이 지워 둔 감정과 마주하는 이야기",
      "세부 줄거리와 컷 구성, 대사는 ChatGPT와 함께 짜고 여러 번 고침",
      "이미지와 영상은 Midjourney와 Kling AI, 음악은 Suno와 Riffusion, 보이스는 ElevenLabs로 만듦",
      "컷이 바뀌어도 같은 인물, 같은 세계로 보이도록 맞추는 데 가장 공을 들임",
-     "주인공이 무너지는 순간을 가장 인간다운 순간으로 둠: 사람은 원래 감정이 무너질 수 있고, 늘 완벽하게 행복한 게 오히려 이상하다. 약으로 행복을 유지하던 상태가 비인간적인 것이었다",
+     "주인공이 무너지는 순간을 가장 인간다운 장면으로 연출",
      "제목을 ‘HAPPINESS IS INTELLIGENCE’에서 ‘HAPPINESS IS INTELLIGENCE?’로 바꿔, 행복의 진짜 의미가 무엇인지 생각하게 함"
     ],
     "result": [
@@ -625,15 +600,15 @@ window.PROJECTS = [
     }
    },
    "en": {
-    "title": "AI Short Film: “Happiness is Intelligence?”",
-    "cat": "AI Film · Direction · Grand Prize",
+    "title": "2025 AI Short Film: “Happiness is Intelligence?”",
+    "cat": "AI Film · Direction · Jun 2025",
     "need": "A society that manages feelings by numbers could not be filmed for real, and there were no actors. It was the first time I made a full piece with AI.",
     "action": [
      "Set the main concept, theme and story myself: a society where mood-control pills keep everyone at the same level of happiness and feelings are managed by numbers, and a protagonist who runs out of pills and meets the feelings she had erased",
      "Worked out the detailed storyline, shot list and dialogue with ChatGPT, revising them many times",
      "Made the images and video in Midjourney and Kling AI, the music in Suno and Riffusion and the voice in ElevenLabs",
      "Put the most effort into keeping the same person and the same world from cut to cut",
-     "Treated the protagonist’s breakdown as her most human moment: people’s feelings can fall apart, and being perfectly happy all the time is what is strange. Keeping happiness up with pills was the inhuman state",
+     "Staged the moment the protagonist breaks down as her most human scene",
      "Changed the title from ‘HAPPINESS IS INTELLIGENCE’ to ‘HAPPINESS IS INTELLIGENCE?’ to make the audience think about what happiness really means"
     ],
     "result": [
@@ -892,7 +867,7 @@ window.PROJECTS = [
      "프로젝트 평가 96 / 100, 프린트 디자인 항목 만점",
      "교수 평가: 독창적인 패턴 레이어링, 모티프 사이 색의 어우러짐, 엔지니어드 모티프 배치를 높이 평가"
     ],
-    "headline": "패턴 3개, 레이아웃 3개로 배치를 실험했다. 교수 평가에서는 패턴 레이어링과 색의 어우러짐이 꼽혔다.",
+    "headline": "쇼팽 녹턴을 실크 위 프린트로 옮기고, 자르기 전에 AI로 몸 위에 먼저 입혀 봤다.",
     "metrics": [
      {
       "v": "선정",
@@ -920,7 +895,7 @@ window.PROJECTS = [
      "Project grade 96 / 100, full marks for print design",
      "Professor's review praised the inventive pattern layering, the colour interaction between motifs and the engineered motif placement"
     ],
-    "headline": "Three patterns, three layouts, and placement tests between them. The professor singled out the pattern layering and the way the colours interact.",
+    "headline": "I carried Chopin’s Nocturnes onto silk as a print, and tried it on a body with AI before cutting.",
     "metrics": [
      {
       "v": "Selected",
@@ -1104,7 +1079,7 @@ window.PROJECTS = [
     "headline": "디자이너로 컬렉션을 만들고, 홍보팀으로 그 컬렉션을 알렸다.",
     "need": "패션쇼는 몇 달에 걸쳐 준비하지만, 전시처럼 오래 걸어 두는 게 아니라 정해진 날, 정해진 장소에서 한 번 열리는 쇼다. 그래서 그 시간에 사람들을 불러 모으는 홍보가 중요했고, 매년 열리는 학과 패션쇼인 만큼 우리만의 차별점도 필요했다.",
     "action": [
-     "쇼 전체 주제 '형(形)'을 내 룩으로 풀고, 플랫 스케치부터 가봉, 최종 런웨이 룩까지 직접 제작",
+     "쇼 전체 주제 〈형(形)〉을 내 룩으로 풀고, 플랫 스케치부터 가봉, 최종 런웨이 룩까지 직접 제작",
      "단단한 테일러링과 부드러운 쉬폰의 흐르는 실루엣을 대비",
      "크기가 다른 원을 쉬폰에 프린트하고 겹겹이 레이어링해, 선명한 원의 테두리를 일부러 흐리게 만듦",
      "완성된 컬렉션을 알리는 숏폼 영상 제작과 인스타그램 운영을 직접 맡음",
@@ -1115,7 +1090,7 @@ window.PROJECTS = [
     "roles": [
      {
       "label": "디자이너",
-      "need": "쇼의 주제는 '형(形)'이었다. 형태를 가장 잘 보여주려면 색을 줄여야 한다고 생각했다. 한정된 색만으로 형태를 드러내는 것이 과제였다.",
+      "need": "쇼의 주제는 〈형(形)〉이었다. 형태를 가장 잘 보여주려면 색을 줄여야 한다고 생각했다. 한정된 색만으로 형태를 드러내는 것이 과제였다.",
       "action": [
        "색을 한정하고, 대신 실루엣의 대비와 '구' 형태의 레이어링으로 형태를 드러냄",
        "플랫 스케치 → 가봉 → 최종 런웨이 룩까지 제작 전 과정을 직접 진행"
@@ -1148,7 +1123,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "2024 SNU Fashion Show: Form",
-    "cat": "Collection · Runway · Team · 2024.03~10",
+    "cat": "Collection · Runway · Team · Mar to Oct 2024",
     "headline": "As a designer I made the collection; on the promotion team I made sure it was seen.",
     "need": "A fashion show takes months to prepare, but it is not an exhibition left up for weeks: it happens once, at a set time and place. So the promotion that brings people there at that moment mattered, and since the department holds a show every year, ours needed something of its own.",
     "action": [
@@ -1223,13 +1198,13 @@ window.PROJECTS = [
    "/images/projects/campus-festival/09.jpg"
   ],
   "role": {
-   "ko": "브랜딩 · 일러스트 · 굿즈 디자인 (디자인팀 6인 중 팀원)",
-   "en": "Branding, illustration, merchandise design (member of a six-person design team)"
+   "ko": "일러스트 · 굿즈 · 포토부스 디자인 (디자인팀 6인 중 팀원)",
+   "en": "Illustration, merchandise and photo-booth design (member of a six-person design team)"
   },
   "spotify": "53T5mZuqAjvm0pinUfwIXr",
   "spotifyNote": {
-   "ko": "축제가 끝나고 각자의 자리로 돌아가는 대학생들에게 들려주고 싶은 노래. 열심히 해도 안 되는 날이 있다는 걸 인정하면서도, 그 시간이 헛되지 않았다고 말해 준다. 한글로 곱게 쓴 이 가사가 지금의 대학생들에게, 그리고 앞으로의 날들에도 위로와 용기가 될 것 같았다.",
-   "en": "A song I would play for students heading back to their own lives after the festival. It admits that some days hard work is not enough, and says that the time still meant something. I thought these lyrics, written in carefully chosen Korean, could comfort students now and give them courage in the years ahead."
+   "ko": "축제가 끝나고 각자의 자리로 돌아가는 대학생들에게 들려주고 싶은 노래. 열심히 해도 안 되는 날이 있다는 걸 인정하면서도, 그 시간이 헛되지 않았다고 말해 준다.",
+   "en": "A song I would play for students heading back to their own lives after the festival. It admits that some days hard work is not enough, and says that the time still meant something."
   },
   "sections": [
    {
@@ -1241,11 +1216,7 @@ window.PROJECTS = [
      {
       "src": "/images/projects/campus-festival/01.jpg"
      }
-    ],
-    "note": {
-     "ko": "행사 내내 대기줄이 이어진 포토부스",
-     "en": "Queues ran all festival long"
-    }
+    ]
    },
    {
     "title": {
@@ -1274,11 +1245,7 @@ window.PROJECTS = [
        "en": "Patterned version, front and back"
       }
      }
-    ],
-    "note": {
-     "ko": "직접 디자인해 매진된 굿즈",
-     "en": "Designed by me, sold out"
-    }
+    ]
    },
    {
     "title": {
@@ -1327,9 +1294,9 @@ window.PROJECTS = [
   ],
   "nar": {
    "ko": {
-    "title": "SNUFESTIVAL 브랜딩: RIO",
-    "cat": "브랜딩 · 비주얼 아이덴티티",
-    "need": "축제 캐릭터 RIO의 존재감을 더 키우고, RIO를 활용해 포토부스, 스탬프, 굿즈, 카드뉴스 같은 여러 작업을 해야 했다.",
+    "title": "SNUFESTIVAL 굿즈·포토부스 디자인",
+    "cat": "캐릭터 활용 디자인 · 굿즈 · 2023.07~2024.06",
+    "need": "원래 있던 축제 캐릭터 RIO의 존재감을 더 키우고, RIO를 활용해 포토부스, 스탬프, 굿즈, 카드뉴스 같은 여러 작업을 해야 했다.",
     "action": [
      "참가자가 직접 사용하는 접점으로 전개: 포토부스 프레임, 이벤트 스탬프, 에어팟·버즈 케이스 일러스트",
      "인스타그램 카드뉴스를 만들어 온라인에서도 같은 톤을 이어감",
@@ -1339,7 +1306,7 @@ window.PROJECTS = [
      "포토부스: 행사 기간 내내 대기줄이 이어졌고, 참가자들이 프레임 사진을 인스타그램 스토리에 올림",
      "직접 디자인한 에어팟·버즈 케이스 굿즈 매진"
     ],
-    "headline": "RIO를 포토부스와 굿즈로 옮겼다. 포토부스에는 행사 내내 줄이 섰고, 에어팟·버즈 케이스는 매진됐다.",
+    "headline": "원래 있던 축제 캐릭터 RIO를, 사람들이 직접 찍고 쓰는 포토부스와 굿즈로 옮겼다.",
     "metrics": [
      {
       "v": "매진",
@@ -1348,9 +1315,9 @@ window.PROJECTS = [
     ]
    },
    "en": {
-    "title": "SNUFESTIVAL Branding: RIO",
-    "cat": "Branding · Visual Identity",
-    "need": "The job was to give the festival character RIO a bigger presence and use it across many pieces: the photo booth, stamps, merchandise and card news.",
+    "title": "SNUFESTIVAL Merch & Photo Booth Design",
+    "cat": "Character-based Design · Merchandise · Jul 2023 to Jun 2024",
+    "need": "The job was to give RIO, the festival’s existing character, a bigger presence and use it across many pieces: the photo booth, stamps, merchandise and card news.",
     "action": [
      "Built it out into things people actually handle: photo-booth frames, event stamps, AirPods and Buds case illustrations",
      "Made Instagram card news so the same tone carried online",
@@ -1360,7 +1327,7 @@ window.PROJECTS = [
      "Photo booth: queues ran throughout the festival, and attendees posted the framed photos to their Instagram stories",
      "The AirPods and Buds cases I designed sold out"
     ],
-    "headline": "I took RIO into a photo booth and merchandise. The booth had a queue all festival long, and the AirPods and Buds cases sold out.",
+    "headline": "I took RIO, the festival’s existing character, into things people use and take photos with: a photo booth and merchandise.",
     "metrics": [
      {
       "v": "Sold out",
@@ -1565,7 +1532,7 @@ window.PROJECTS = [
    "ko": {
     "title": "Art2Wear 2026: Tensed Symbiosis",
     "cat": "웨어러블 아트 · 런웨이 · 미국 교환학생 · 2026.01~04",
-    "need": "쇼의 주제는 '공생'이었다. 나는 실제 동물의 공생 관계보다 사람의 내면 이야기로 풀어내는 걸 좋아하고, 동물의 공생은 이미 다른 참가자들이 멋지게 표현하고 있었다. 나만의 주제가 필요했고, 그렇게 고른 것이 '불안과 집중의 공생'이다. 나를 움직이는 원동력이기도 하다. 만드는 동안 나도 위로받았고, 불안을 부정적으로만 보지 않게 해서 보는 사람에게도 같은 위로를 건네고 싶었다.",
+    "need": "쇼의 주제는 '공생'이었다. 나는 실제 동물의 공생 관계보다 사람의 내면 이야기로 풀어내는 걸 좋아하고, 동물의 공생은 이미 다른 참가자들이 멋지게 표현하고 있었다. 나만의 주제가 필요했고, 그렇게 고른 것이 '불안과 집중의 공생'이다. 나를 움직이는 원동력이기도 하다. 만들면서 불안을 부정적으로만 보지 않게 됐고, 보는 사람에게도 그 시선을 건네고 싶었다.",
     "action": [
      "쇼 주제 '공생'을 사람의 내면으로 가져와 '불안과 집중의 공생'으로 설정: 불안 없는 집중은 동력을 잃고, 집중 없는 불안은 혼돈이 된다",
      "대비되는 소재를 보여 주면서 그 이질적인 소재들이 조화를 이루게 하는 데 집중: 도자기 접시를 직접 깨뜨려, 깨진 접시와는 정반대 이미지인 꽃을 만듦",
@@ -1579,20 +1546,14 @@ window.PROJECTS = [
      "Art2Wear 작품의 꽃, 가방, 치마를 가져와 2026 서울대 예술주간 야외 설치로 재구성 (2026.09.28~10.02)"
     ],
     "headline": "쇼 주제 '공생'을 평화로운 균형이 아니라, 팽팽한 긴장 속에서 유지되는 관계로 풀었다.",
-    "metrics": [
-     {
-      "v": "런웨이",
-      "l": "Gregg Museum, 2026.04"
-     }
-    ],
+    "metrics": [],
     "detail": {
      "title": "만들며 부딪힌 문제",
      "body": [
       "초기 컨셉은 철가루와 자석이었다. 자석으로 철가루를 끌어당기고 흩뜨려 불안과 집중의 인력과 반발을 직접 보여주려 했다.",
       "그런데 이 방식은 물이 필요했고, 패션쇼장은 물 반입이 불가능했다. 개념을 바꾸는 대신 표현 방식을 바꾸기로 했다. 주제는 그대로 두고, 같은 긴장을 다른 재료로 옮길 방법을 찾았다.",
       "답은 실제로 깨진 것이었다. 도자기 접시를 직접 깨뜨려 꽃을 만들었다.",
-      "다음 문제는 무게였다. 접시 조각을 붙여 만든 꽃은 무거워서 조각을 이어 꽃 모양을 잡는 것부터 쉽지 않았고, 그 꽃을 옷에 고정하는 건 더 어려웠다. 낚싯줄, 섬유 본드, 순간접착제, 강력 본드를 겹쳐 쓰며 여러 번 다시 고정했다. 날카로운 단면과 나뭇가지에 손을 여러 번 다치기도 했다.",
-      "물을 쓸 수 없다는 제약 때문에 고민이 많았지만, 표현 방식을 바꾸면서 주제는 그대로 유지했다."
+      "다음 문제는 무게였다. 접시 조각을 붙여 만든 꽃은 무거워서 조각을 이어 꽃 모양을 잡는 것부터 쉽지 않았고, 그 꽃을 옷에 고정하는 건 더 어려웠다. 낚싯줄, 섬유 본드, 순간접착제, 강력 본드를 겹쳐 쓰며 여러 번 다시 고정했다. 날카로운 단면과 나뭇가지에 손을 여러 번 다치기도 했다."
      ]
     },
     "note": "미국 NC State 교환학생 중, 인턴십과 아르바이트를 병행하며 만든 작품."
@@ -1600,7 +1561,7 @@ window.PROJECTS = [
    "en": {
     "title": "Art2Wear 2026: “Tensed Symbiosis”",
     "cat": "Wearable Art · Runway · Exchange in the US · Jan to Apr 2026",
-    "need": "The show's theme was symbiosis. I prefer to tell stories about people's inner lives rather than real animal symbiosis, and other designers were already handling animal symbiosis beautifully. I wanted a theme of my own, and chose the symbiosis of anxiety and focus: part of what drives me. Making it comforted me, and I wanted to pass that comfort on by letting people see anxiety as more than something negative.",
+    "need": "The show's theme was symbiosis. I prefer to tell stories about people's inner lives rather than real animal symbiosis, and other designers were already handling animal symbiosis beautifully. I wanted a theme of my own, and chose the symbiosis of anxiety and focus: part of what drives me. Making it changed how I saw anxiety, as more than something negative, and I wanted to pass that view on.",
     "action": [
      "Brought the show's theme inward as the symbiosis of anxiety and focus: focus without anxiety loses its drive, anxiety without focus becomes chaos",
      "Focused on showing contrasting materials while making those unlike materials work together: smashed ceramic plates by hand and built flowers from them, the opposite image of a broken plate",
@@ -1614,20 +1575,14 @@ window.PROJECTS = [
      "Its flowers, bag and skirt were reworked into an outdoor installation for SNU Arts Week 2026 (28 Sep to 2 Oct 2026)"
     ],
     "headline": "I read the show’s theme, symbiosis, not as a peaceful balance but as a relationship held together under tension.",
-    "metrics": [
-     {
-      "v": "Runway",
-      "l": "Gregg Museum, April 2026"
-     }
-    ],
+    "metrics": [],
     "detail": {
      "title": "Problems along the way",
      "body": [
       "The first concept used iron filings and magnets, pulling and scattering the filings to stage the attraction and repulsion of anxiety and focus directly.",
       "That method needed water, and the show venue did not allow water on site. Rather than change the concept, I changed the medium: same subject, a different way to carry the same tension.",
       "The answer was something actually broken. I smashed ceramic plates by hand and built the flowers from them.",
-      "The next problem was weight. Flowers made of plate shards are heavy: getting the pieces to hold a flower shape was hard, and fixing the flowers to the garment was harder. I layered fishing line, fabric glue, superglue and strong adhesive, refixing them again and again, and cut my hands more than once on the sharp edges and branches.",
-      "The no-water rule took a lot of thought, but by changing how I expressed it, I kept the theme as it was."
+      "The next problem was weight. Flowers made of plate shards are heavy: getting the pieces to hold a flower shape was hard, and fixing the flowers to the garment was harder. I layered fishing line, fabric glue, superglue and strong adhesive, refixing them again and again, and cut my hands more than once on the sharp edges and branches."
      ]
     },
     "note": "Made during my exchange year at NC State in the US, alongside an internship and a part-time job."
@@ -1670,6 +1625,7 @@ window.PROJECTS = [
    "ko": "WGSN 트렌드 중 'Analog Nostalgia'를 반영한 작업이라, 80년대 시티팝을 샘플링한 곡을 골랐다. 렌더링 속 밤 도시 장면과 이 곡의 분위기가 닮았다.",
    "en": "The collection drew on WGSN's 'Analog Nostalgia', so I chose a song built on an 80s city pop sample. Its mood matches the night city scenes in the renders."
   },
+  "cardThumb": "/images/projects/clo3d/ad06-card.jpg",
   "sections": [
    {
     "title": {
@@ -1705,25 +1661,13 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/clo3d/ad02.jpg",
-      "cap": {
-       "ko": "앞",
-       "en": "Front"
-      }
+      "src": "/images/projects/clo3d/ad02.jpg"
      },
      {
-      "src": "/images/projects/clo3d/ad03.jpg",
-      "cap": {
-       "ko": "옆",
-       "en": "Side"
-      }
+      "src": "/images/projects/clo3d/ad03.jpg"
      },
      {
-      "src": "/images/projects/clo3d/ad01.jpg",
-      "cap": {
-       "ko": "뒤",
-       "en": "Back"
-      }
+      "src": "/images/projects/clo3d/ad01.jpg"
      }
     ]
    },
@@ -1770,10 +1714,9 @@ window.PROJECTS = [
     ],
     "need": "공모전 주제 'Dopamine Dressing'을, MZ세대 사이에서 커지고 있는 러닝 문화의 라이프스타일을 분석하는 데서 출발해 풀었다.",
     "action": [
-     "MZ세대 사이에서 커지는 러닝 문화를 분석해, 대중교통으로 출퇴근하고 퇴근 후 러닝 크루에 나가는 20대 후반 여성 직장인으로 페르소나를 구체화",
-     "이 페르소나에 맞춰 원단 기능성, 색 조화, 체온 조절, 활동성을 핵심 디자인 기준으로 정함",
+     "대중교통으로 출퇴근하는 하루까지 그려 보고, 원단 기능성, 색 조화, 체온 조절, 활동성을 핵심 디자인 기준으로 정함",
      "WGSN F/W 2025 아웃도어·액티브웨어 트렌드 중 'New Optimism'과 'Analog Nostalgia'를 디자인 방향에 반영",
-     "공모전 주제 'Dopamine Dressing'에 맞춰, 이 기준으로 액티브웨어 컬렉션을 설계",
+     "이 기준으로 액티브웨어 컬렉션을 설계",
      "패턴 제작부터 3D 시뮬레이션·렌더링까지 CLO 3D로 단독 진행"
     ],
     "result": [
@@ -1792,10 +1735,9 @@ window.PROJECTS = [
     ],
     "need": "I approached the contest theme, Dopamine Dressing, by analysing the lifestyle of the running culture growing among the MZ generation.",
     "action": [
-     "Studied the running culture growing among the MZ generation and set a detailed persona: a woman in her late twenties who commutes by public transport and joins a running crew after work",
-     "Set the key design criteria for that persona: fabric performance, colour harmony, body temperature, freedom of movement",
+     "Pictured her whole day, down to the commute by public transport, and set the key design criteria from it: fabric performance, colour harmony, body temperature, freedom of movement",
      "Took the direction from WGSN F/W 2025 Outdoor & Activewear trends, especially 'New Optimism' and 'Analog Nostalgia'",
-     "Designed an activewear collection for the contest theme 'Dopamine Dressing' around those criteria",
+     "Designed an activewear collection around those criteria",
      "Built it solo in CLO 3D, from patterning through simulation and rendering"
     ],
     "result": [
@@ -1829,6 +1771,7 @@ window.PROJECTS = [
   "spotify": null,
   "spotifyNote": null,
   "video": "https://www.youtube.com/embed/5P_bMBgHbfE",
+  "cardThumb": "/images/projects/sub-motion/mv01-card.jpg",
   "filmLabels": {
    "ko": [
     "'Toxic Till the End' 뮤직비디오 티저 (3인 협업)"
@@ -1850,48 +1793,40 @@ window.PROJECTS = [
      {
       "src": "/images/projects/sub-motion/mv02.jpg"
      }
-    ],
-    "note": {
-     "ko": "3인 협업 · 중간 파트 담당",
-     "en": "Team of 3 · I made the middle part"
-    }
+    ]
    }
   ],
   "nar": {
    "ko": {
-    "title": "모션그래픽",
-    "cat": "모션그래픽 · After Effects · SUB 학생방송국",
+    "title": "로제 뮤직비디오 티저 모션그래픽",
+    "cat": "모션그래픽 · After Effects · SUB 학생방송국 · 2024.07~2025.06",
     "headline": "셋이 나눠 만든 뮤직비디오 티저를 한 편처럼 보이게.",
     "metrics": [],
     "need": "로제 'Toxic Till the End' 뮤직비디오 티저를 3명이 3등분해 나눠 만들었다. 나눠 만들수록 전체 영상의 일관성이 깨지기 쉬웠다.",
     "action": [
-     "기획은 셋이 함께하고, 영상을 3등분해 그중 중간 부분을 맡음",
      "처음부터 색상 팔레트를 정해 공유하고, 그 팔레트로 각자 장면을 그림",
      "After Effects로 모션을 넣기 전에 서로 그린 그림을 보며 그림체를 맞춤",
      "작업 중간중간 진행 상황을 공유하고 서로 고쳐 줌",
-     "내가 맡은 중간 부분에는 영화 필름이 지나가는 듯한 모션을 넣음"
+     "내 파트에는 영화 필름이 지나가는 듯한 모션을 넣음"
     ],
     "result": [
-     "내가 만든 필름이 지나가는 모션이 티저 속 로제의 목소리 대사와 잘 어울린다는 좋은 평가를 받음",
-     "처음부터 색상 팔레트를 통일하고 중간중간 공유하며 서로 고친 덕분에, 셋이 나눠 만든 영상이 전체적으로 일관성 있게 이어짐"
+     "방송국 합평회에서, 내가 만든 필름이 지나가는 모션이 티저 속 로제의 목소리 대사와 잘 어울린다는 평가를 받음"
     ]
    },
    "en": {
-    "title": "Motion Graphics",
-    "cat": "Motion Graphics · After Effects · SNU Student Broadcasting",
+    "title": "Motion Graphics for a Rosé Music Video Teaser",
+    "cat": "Motion Graphics · After Effects · SNU Student Broadcasting · Jul 2024 to Jun 2025",
     "headline": "A music video teaser split three ways, made to read as one piece.",
     "metrics": [],
     "need": "Three of us split Rosé's 'Toxic Till the End' music video teaser into three parts. The more it is split, the easier the whole loses consistency.",
     "action": [
-     "Planned it together, cut the teaser in three, and took the middle part",
      "Set and shared one colour palette from the start, and each drew our scenes with it",
      "Matched our drawing styles before adding motion in After Effects",
      "Shared progress along the way and revised each other's parts",
-     "In my middle part, added motion that feels like a film strip running past"
+     "In my part, added motion that feels like a film strip running past"
     ],
     "result": [
-     "The film-strip motion I made was well received, as it suited Rosé's spoken lines in the teaser",
-     "With one palette from the start and sharing and revising along the way, the three parts came together as one consistent film"
+     "At the station’s critique session, the film-strip motion I made was praised for suiting Rosé’s spoken lines in the teaser"
     ]
    }
   },
@@ -2054,17 +1989,13 @@ window.PROJECTS = [
     "headline": "처음부터 원하는 옷을 묻지 않았다. 편해지신 뒤에야 나온 말들에 진짜 답이 있었다.",
     "metrics": [
      {
-      "v": "1:1",
-      "l": "어르신 한 분을 전담"
-     },
-     {
       "v": "대학신문",
       "l": "수업 대표로 인터뷰"
      }
     ],
     "need": "시니어를 위한 옷은 보통 '기능'만 남고 '입고 싶은 옷'이 되지 못한다. 무엇이 불편한지 추측으로 설계하면 또 같은 결과가 나온다. 게다가 한 번 물어봐서는 진짜 원하는 것이 나오지 않는다. 처음 만난 사람에게는 대개 무난한 답을 하시기 때문이다.",
     "action": [
-     "어르신 한 분을 전담해, 수업 시간 외에도 여러 차례 따로 만나 인터뷰",
+     "어르신 한 분을 전담해, 수업에서 정해진 횟수보다 더 자주 만나 인터뷰",
      "첫 자리에서 원하는 옷을 묻지 않고 일상과 취향을 먼저 이야기하며 관계를 쌓음. 편해지신 뒤에 나온 말들에서 진짜 원하시는 것이 드러났고, 그 말들을 설계 기준으로 삼음",
      "원단은 직접 고르시게 함, 마음에 드는 것을 고르신 뒤 그 선택을 디자인에 반영",
      "관찰한 몸의 특징을 패턴과 부자재에 반영: 등이 굽으신 점과 걸으실 때 팔이 뒤로 향하는 점에 맞춰 코트 패턴을 잡고, 입었을 때 어깨 비대칭을 보완하는 어깨 패드를 넣음",
@@ -2087,17 +2018,13 @@ window.PROJECTS = [
     "headline": "I never opened by asking what he wanted. The real answers came only once he was comfortable.",
     "metrics": [
      {
-      "v": "1:1",
-      "l": "one model, start to finish"
-     },
-     {
       "v": "Press",
       "l": "chosen to represent the class"
      }
     ],
     "need": "Clothing for seniors usually keeps the function and loses the desire. Design it on assumptions about what is uncomfortable and you get that result again. And one conversation is not enough: people give a safe answer to someone they have just met.",
     "action": [
-     "Took one senior as my model and met him repeatedly, including outside class hours",
+     "Took one senior as my model and met him more often than the class required",
      "Opened not with clothing but with daily life and taste, building the relationship first; the real preferences surfaced only once he was at ease, and those became the design criteria",
      "Let him choose the fabric himself, then built the design around that choice",
      "Built what I observed into the pattern and trims: shaped the coat around his curved back and the way his arms swing back when he walks, and added a shoulder pad to even out his shoulders when worn",
@@ -2116,7 +2043,7 @@ window.PROJECTS = [
    }
   },
   "title": "Ergonomic Clothing Design",
-  "desc": "관악노인종합복지관의 어르신 한 분을 담당해 수업 밖에서까지 여러 차례 만나 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 만든 코트. 완성작으로 시니어 런웨이까지 진행했다."
+  "desc": "관악노인종합복지관의 어르신 한 분을 담당해 수업에서 정해진 횟수보다 더 자주 만나 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 만든 코트. 완성작으로 시니어 런웨이까지 진행했다."
  },
  {
   "slug": "engineered-surfaces",
@@ -2327,15 +2254,15 @@ window.PROJECTS = [
      "펀치니들 작품 위에 홀로그램 오간자를 원형으로 덧대 바느질해, 비눗방울의 무지갯빛 반짝임을 표현"
     ],
     "result": [
-     "다른 사람들은 모두 일반적인 펀치니들 방식으로 작업했는데, 머리카락을 표현하려고 앞머리 부분은 실을 다르게 써서 참신하다는 평을 받음",
+     "앞머리 부분은 실을 다르게 써서 머리카락을 표현한 점이 참신하다는 평을 받음",
      "펀치니들 작품의 실 색 조합도 좋다는 평을 받음",
      "직조 샘플은 여러 굵기의 실로 독특한 표면을 만든 점이 인상적이라는 평을 받음",
-     "특히 직조기로 짠 튤립처럼 보이는 패턴의 샘플은 색 조합과 패턴 구성이 좋다는 칭찬을 받음 (의도한 그대로 나온 샘플)"
+     "특히 직조기로 짠 튤립처럼 보이는 패턴의 샘플은 색 조합과 패턴 구성이 좋다는 칭찬을 받음"
     ]
    },
    "en": {
     "title": "From Handmade Yarn to Fabric",
-    "cat": "Textile Design · Exchange in the US · 2026.01~04",
+    "cat": "Textile Design · Exchange in the US · Jan to Apr 2026",
     "headline": "I spun and plied yarns of my own, wove fabrics mixing them with bought yarn, and made a mini skirt from those fabrics.",
     "need": "The project was to learn how yarn is made (dyeing, spinning, plying) and how yarn becomes cloth (knitting, weaving, punch needle), then put it all to use in my own pieces.",
     "action": [
@@ -2346,10 +2273,10 @@ window.PROJECTS = [
      "Stitched a circle of sheer holographic organza over the punch needle piece to catch the iridescent shimmer of soap bubbles"
     ],
     "result": [
-     "Everyone else used the standard punch needle method; I used the yarn differently on the fringe to suggest hair, which was called fresh",
+     "Using the yarn differently on the fringe to suggest hair was called fresh",
      "The yarn colour combinations in the punch needle piece were also praised",
      "The woven samples were found striking for the unusual surfaces made with yarns of many thicknesses",
-     "The tulip-like sample woven on the loom was singled out for its colour combination and pattern, and it came out just as I intended"
+     "The tulip-like sample woven on the loom was singled out for its colour combination and pattern"
     ]
    }
   },
@@ -2609,7 +2536,7 @@ window.PROJECTS = [
     "title": "Printed Textile Design 〈Urban Botanica〉",
     "cat": "프린트 텍스타일 · 미국 교환학생 · 개인 · 2025.08~12",
     "headline": "전통 모티프에 비보잉의 움직임을 겹쳐, 한국을 잘 모르는 사람에게도 낯설지 않은 한국을 프린트로 풀었다.",
-    "need": "미국 교환학생 때 들은 텍스타일 수업의 첫 프로젝트. 반에서 한국 학생은 나 혼자였고, 수업은 서로의 작업에 대한 피드백이 아주 활발했다. 한국을 잘 모르는 노스캐롤라이나의 교수님과 친구들 앞에서, 한국을 담아 차별성을 가지면서도 어렵거나 낯설지 않고 끌리는 작업이어야 했다.",
+    "need": "미국 교환학생 때 들은 텍스타일 수업의 첫 프로젝트. 반에서 한국 학생은 나 혼자였고, 수업은 서로의 작업에 대한 피드백이 아주 활발했다. 노스캐롤라이나의 교수님과 친구들 앞에서, 한국을 담아 차별성을 가지면서도 어렵지 않고 끌리는 작업이어야 했다.",
     "action": [
      "iPad Procreate로 모티프를 직접 그리고 포토샵으로 다듬음: 비보잉 실루엣과 기와, 호랑이, 무궁화와 꽃, 상모돌리기와 강강술래",
      "NedGraphics로 가져와 리피트를 설계하고, 스케일과 배색을 실험하며 네 가지 패턴이 하나의 컬렉션으로 어울리도록 조율",
@@ -2620,7 +2547,7 @@ window.PROJECTS = [
     "detail": {
      "title": "왜 비보잉이었나",
      "body": [
-      "한국을 잘 모르는 사람들이 한국 모티프를 어떻게 읽는지 직접 확인할 수 있는 기회였고, 처음 보는 사람들 앞에 한국의 미감을 꺼내 놓는 자리이기도 했다.",
+      "한국 모티프가 처음 보는 사람들에게 어떻게 읽히는지 직접 확인할 수 있는 기회였다.",
       "하지만 전통 모티프만 늘어놓으면 재미가 없을 것 같았다. 한국의 전통과 지금의 서울을 함께 담고 싶었고, 도시의 역동적인 스트리트 댄스를 떠올렸다. 그래서 비보잉 실루엣을 기와, 호랑이, 무궁화, 전통춤 모티프와 한 화면에 놓았다."
      ]
     },
@@ -2633,9 +2560,9 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Printed Textile Design (Urban Botanica)",
-    "cat": "Print Design · Exchange in the US · Solo · 2025.08~12",
+    "cat": "Print Design · Exchange in the US · Solo · Aug to Dec 2025",
     "headline": "I set the movement of breakdance against traditional Korean motifs, to print a Korea that reads easily even to people who barely know it.",
-    "need": "The first project of my textile class on exchange in the US. I was the only Korean student, and the class ran on lively feedback. In front of professors and classmates in North Carolina who knew little about Korea, the work had to carry Korea and stand apart, without feeling difficult, foreign or unappealing.",
+    "need": "The first project of my textile class on exchange in the US. I was the only Korean student, and the class ran on lively feedback. In front of professors and classmates in North Carolina, the work had to carry Korea and stand apart, without feeling difficult or unappealing.",
     "action": [
      "Drew the motifs myself in Procreate on iPad and refined them in Photoshop: breakdancer silhouettes with roof tiles, tigers, mugunghwa and flowers, sangmo and ganggangsullae dancers",
      "Brought them into NedGraphics to build the repeats, testing scale and color until the four patterns worked as one collection",
@@ -2646,7 +2573,7 @@ window.PROJECTS = [
     "detail": {
      "title": "Why breakdance",
      "body": [
-      "It was a chance to see first hand how people who barely know Korea read Korean motifs, and to put Korean aesthetics in front of people meeting them for the first time.",
+      "It was a chance to see first hand how Korean motifs read to people meeting them for the first time.",
       "Traditional motifs on their own felt flat, though. I wanted Korean tradition and today’s Seoul in the same frame, and thought of the energy of street dance. So I put breakdancer silhouettes in the same prints as roof tiles, tigers, mugunghwa and traditional dance."
      ]
     },
@@ -2905,7 +2832,7 @@ window.PROJECTS = [
     "title": "Woven Textile Design 〈Moonlit Thread〉",
     "cat": "직조 텍스타일 · 미국 교환학생 · 개인 · 2025.08~12",
     "headline": "구미호와 달토끼, 두 한국 설화를 하나의 직물 컬렉션으로 엮었다.",
-    "need": "프린트 텍스타일과 같은 학기에 진행한 프로젝트로, 같은 이유로 한국 모티프를 골랐다. 한국을 잘 모르는 미국 교실에서 한국 설화를 낯설지 않고 끌리는 직물로 풀어야 했다.",
+    "need": "프린트 텍스타일과 같은 학기에 진행한 프로젝트로, 같은 이유로 한국 모티프를 골랐다. 이번에는 한국 설화를 낯설지 않고 끌리는 직물로 풀어야 했다.",
     "action": [
      "한국 설화의 구미호와 달토끼를 주 모티프로, 모란과 잎을 배경으로 잡고 'Moonlit Thread'라는 이름으로 묶음",
      "Procreate로 모티프를 그리고 포토샵으로 다듬은 뒤, NedGraphics로 가져와 네 가지 패턴으로 전개 (하나는 엔지니어드 패턴)",
@@ -2914,18 +2841,16 @@ window.PROJECTS = [
     ],
     "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
     "result": [
-     "엔지니어드 패턴이 구조를 잘 반영해 디자인됐고, 모티프 크기가 다양하면서도 균형 있게 어우러진다는 평을 받음",
      "구미호 꼬리에서 잎이 퍼져 나가는 패턴이 참신하다는 평을 받았고, 구미호라는 한국 설화 속 동물을 이 작업으로 처음 알게 됐다며 재미있고 잘 표현됐다는 반응을 얻음",
-     "텍스처 매핑 아이디어가 참신하다는 평을 받음",
-     "자카드 직물이 텍스처 매핑에서 잘 안 보인다는 피드백을 받고, 더 두꺼운 소재로 바꿔 다시 매핑",
-     "선과 외곽선을 두껍게 하고 모티프 크기를 키워 더 잘 보이게 수정"
+     "엔지니어드 패턴이 구조를 잘 반영해 디자인됐고, 모티프 크기가 다양하면서도 균형 있게 어우러진다는 평을 받음",
+     "자카드 직물이 텍스처 매핑에서 잘 안 보인다는 피드백을 받고, 더 두꺼운 소재로 다시 매핑하고 선을 두껍게, 모티프를 크게 바꿔 더 잘 보이게 수정"
     ]
    },
    "en": {
     "title": "Woven Textile Design (Moonlit Thread)",
-    "cat": "Woven Design · Exchange in the US · Solo · 2025.08~12",
+    "cat": "Woven Design · Exchange in the US · Solo · Aug to Dec 2025",
     "headline": "Two Korean folk tales, the nine-tailed fox and the moon rabbit, woven into one textile collection.",
-    "need": "Made in the same exchange semester as the printed textiles, with Korean motifs for the same reason: in a US classroom that knew little about Korea, Korean folklore had to become cloth that felt familiar and appealing, not foreign.",
+    "need": "Made in the same exchange semester as the printed textiles, with Korean motifs for the same reason. This time Korean folklore had to become cloth that felt familiar and appealing.",
     "action": [
      "Took the fox and the moon rabbit from Korean folk tales as the motifs, with peonies and leaves behind them, and tied them together as 'Moonlit Thread'",
      "Drew the motifs in Procreate, refined them in Photoshop, then brought them into NedGraphics and built four patterns (one of them engineered)",
@@ -2934,11 +2859,9 @@ window.PROJECTS = [
     ],
     "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
     "result": [
-     "The engineered pattern was said to reflect the structure well, with motifs in varied sizes that stayed balanced",
      "The leaves spreading from the gumiho's tail were called fresh, and people meeting the gumiho of Korean folklore for the first time found it fun and well drawn",
-     "The texture mapping ideas were called fresh",
-     "After feedback that the jacquard fabric did not read clearly in the texture mapping, switched to a thicker fabric and mapped it again",
-     "Thickened lines and outlines and enlarged the motifs so they read better"
+     "The engineered pattern was said to reflect the structure well, with motifs in varied sizes that stayed balanced",
+     "After feedback that the jacquard did not read clearly in the texture mapping, remapped it on a thicker fabric and thickened the lines and enlarged the motifs so they read better"
     ]
    }
   },
@@ -3097,11 +3020,7 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/textile-knit/ad03.jpg",
-      "cap": {
-       "ko": "NedGraphics에서 색을 조합해 만든 모티프",
-       "en": "Colour mixes made into motifs in NedGraphics"
-      }
+      "src": "/images/projects/textile-knit/ad03.jpg"
      },
      {
       "src": "/images/projects/textile-knit/ad04.jpg"
@@ -3147,13 +3066,12 @@ window.PROJECTS = [
     "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
     "result": [
      "4가지 색 제한 안에서 색을 조합해 새 모티프로 만든 방식이 좋고, 그 덕에 학의 날개가 잘 표현됐다는 평을 받음",
-     "네 가지 편성 패턴 중 두 번째 패턴의 배경이 고려청자와 컬렉션의 분위기를 잘 살린다는 평을 받음",
-     "피드백을 받고 디자인끼리 통일감을 맞춤: 붉은색과 아이보리 비율 조정, 두 디자인이 겹쳐 보이게 하던 학 다리를 빼고 청자 모티프 추가, 붉은색이 과한 스트라이프는 원·학·청자 모티프로 다시 구성"
+     "피드백을 받고 디자인끼리 통일감을 맞춤: 붉은색과 아이보리 비율을 조정하고, 붉은색이 과한 스트라이프는 원·학·청자 모티프로 다시 구성"
     ]
    },
    "en": {
     "title": "Knit Textile Design (Celadon Reverie)",
-    "cat": "Knit Design · Exchange in the US · Solo · 2025.08~12",
+    "cat": "Knit Design · Exchange in the US · Solo · Aug to Dec 2025",
     "headline": "The cranes, round motifs and shape of Goryeo celadon, redrawn as knit patterns.",
     "need": "A knit project in an exchange class in the US, where everyone had to use the same four set colours. I had brought Korean motifs into the printed and woven projects that semester, and while thinking about how to carry that into knit, I came up with Goryeo celadon.",
     "action": [
@@ -3166,8 +3084,7 @@ window.PROJECTS = [
     "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
     "result": [
      "Combining the four set colours into new motifs was praised, and with it the crane wings came out well",
-     "The background of the second of the four knit patterns was said to bring out the mood of Goryeo celadon and of the collection",
-     "After feedback, pulled the designs together: rebalanced red and ivory, removed the crane legs that made two designs overlap and added a celadon motif, and rebuilt the red-heavy stripe with circles, cranes and celadon motifs"
+     "After feedback, pulled the designs together: rebalanced red and ivory, and rebuilt the red-heavy stripe with circles, cranes and celadon motifs"
     ]
    }
   },
@@ -3220,8 +3137,8 @@ window.PROJECTS = [
    "/images/projects/adaptive-textile/ad22.jpg"
   ],
   "role": {
-   "ko": "컨셉 기획 · 제작 (4인 팀) / 시장 조사 · 컬러 팔레트 · 러그 터프팅 · 청키 블랭킷 손뜨개(단독)",
-   "en": "Concept and making (team of 4) / market research, color palette, rug tufting, chunky blanket hand knit (solo)"
+   "ko": "컨셉 기획 · 제작 (4인 팀) / 시장 조사 · 청키 블랭킷 손뜨개 (단독) · 컬러 팔레트 · 러그 터프팅 (2인)",
+   "en": "Concept and making (team of 4) / market research and chunky blanket hand knit (solo), color palette and rug tufting (with one teammate)"
   },
   "spotify": "2hitsKa8SthKhRJBXUHbIv",
   "spotifyNote": {
@@ -3482,7 +3399,7 @@ window.PROJECTS = [
    },
    "en": {
     "title": "Interior Textiles",
-    "cat": "Interior Textiles · Team of 4 · Exchange in the US · 2026.01~04",
+    "cat": "Interior Textiles · Team of 4 · Exchange in the US · Jan to Apr 2026",
     "headline": "A maximalist room full of pattern seemed to need something to soften it, so I proposed the chunky blanket and made it myself.",
     "need": "The brief was maximalist interior textiles. Just putting a lot in makes a room look messy. Even with pattern and colour layered on, it had to look chosen on purpose.",
     "action": [
@@ -3538,8 +3455,8 @@ window.PROJECTS = [
      {
       "src": "/images/projects/korean-costume/hb02.jpg",
       "cap": {
-       "ko": "제작 과정 중 마네킹 피팅. 오른쪽 마네킹의 빨간 허리띠 부분은 마무리 전",
-       "en": "A fitting on the mannequins while making. The red waistband on the right one is not finished yet"
+       "ko": "제작 중 마네킹 피팅",
+       "en": "A fitting on the mannequins while making"
       }
      },
      {
@@ -3575,19 +3492,13 @@ window.PROJECTS = [
      "전통 손바느질 기법을 익혀 가며 직접 제작",
      "비치면서도 형태가 잡히는 오간자의 특성을 살려 소재로 사용"
     ],
-    "detail": {
-     "title": "사진 참고",
-     "body": [
-      "마네킹 사진이 착용 사진보다 부해 보이는 건, 내 사이즈에 맞춰 디자인해 옷이 마네킹보다 작기 때문이다."
-     ]
-    },
     "result": [
      "한복의 실루엣과 비치는 오간자의 아름다움을 살리고, 연분홍 오간자 치마와 붉은 치마허리, 꽃무늬 저고리로 색까지 맞춘 한복을 완성"
     ]
    },
    "en": {
     "title": "Hanbok Design and Making",
-    "cat": "Hanbok · Traditional Construction · Solo · 2024.03~06",
+    "cat": "Hanbok · Traditional Construction · Solo · Mar to Jun 2024",
     "headline": "A hanbok that keeps the beauty of the traditional form, designed to my own size and made myself.",
     "need": "Learning how hanbok is constructed, I was drawn to its pattern-making and cutting, which differ from Western garment-making. I wanted a hanbok that keeps the traditional elements, with only a subtle contemporary touch.",
     "action": [
@@ -3595,12 +3506,6 @@ window.PROJECTS = [
      "Made it myself, learning traditional hand-sewing as I went",
      "Used organza for the way it is sheer yet holds its shape"
     ],
-    "detail": {
-     "title": "About the photos",
-     "body": [
-      "It looks fuller on the mannequin than when I wear it: I designed it to my own size, so it is smaller than the mannequin."
-     ]
-    },
     "result": [
      "Finished a hanbok that brings out its silhouette and the sheer beauty of organza, with a pale pink organza skirt, a red waistband and a floral jeogori chosen to go together"
     ]
@@ -3678,15 +3583,13 @@ window.PROJECTS = [
     "headline": "노선도 위에 모든 호선을 지나는 글자 ‘구석구석’을 쓰고, 그 장면을 영상의 마지막으로 정했다.",
     "need": "서울 지하철을 홍보하는 영상 공모전이었다. 지하철로 서울 구석구석을 다니는 사람으로서, 지하철이 서울 구석구석을 잇는다는 걸 뻔하지 않고 재미있게 보여주고 싶었다. 노선을 하나씩 다 보여주면 길고 지루할 것 같았다.",
     "action": [
-     "노선도 위에 모든 호선을 지나는 글자 ‘구석구석’을 적어 보고, 이 장면을 영상의 마지막 완성 장면으로 정함",
      "흰 화면에서 노선 하나가 그려지기 시작해 한 역으로 들어가 서울을 대표하는 역의 모습을 보여주고, 다시 역으로 들어가 환승하면 다른 노선이 이어서 그려지는 흐름으로 구성",
      "이 흐름이 이어져 모든 노선이 그려지면 노선도가 완성되도록 모션그래픽으로 표현",
-     "모션그래픽, 촬영, 편집 담당 (2인 협업)"
+     "유동인구와 관광객이 많은 환승역을 골라 담아, 지하철과 함께 서울의 풍경도 보여줌"
     ],
     "note": "2025 서울교통공사 유튜브 영상 공모전 출품작. 2인 협업.",
     "result": [
-     "모든 역을 다 보여주지 않고도, 노선이 하나씩 그려지며 노선도가 완성되는 흐름으로 지하철이 서울 구석구석을 잇는다는 걸 보여줌",
-     "유동인구와 관광객이 많은 환승역을 골라 담아, 지하철과 함께 서울의 풍경도 보여줌"
+     "서울 지하철 홍보영상 공모전 출품 (2025)"
     ]
    },
    "en": {
@@ -3695,15 +3598,13 @@ window.PROJECTS = [
     "headline": "I wrote the word ‘구석구석’ (every corner) across the map so it runs through every line, and made that the last shot of the film.",
     "need": "It was a contest for a film promoting the Seoul subway. As someone who gets to every corner of Seoul by subway, I wanted to show that it connects every corner of the city, in a way that was fun and not obvious. Showing every line one by one felt too long and dull.",
     "action": [
-     "Wrote the word ‘구석구석’ across the map through every line and made it the finished last shot",
      "Built the flow from a blank page: one line is drawn, enters a station, shows a station that stands for Seoul, goes back in, transfers, and the next line is drawn",
      "Carried that flow on in motion graphics until every line is drawn and the map is complete",
-     "Motion graphics, filming and editing (two-person collaboration)"
+     "Picked busy transfer stations full of commuters and tourists, so the film shows Seoul itself along with the subway"
     ],
     "note": "Entry for the 2025 Seoul Metro YouTube Video Contest. Two-person collaboration.",
     "result": [
-     "Without showing every station, the film shows the subway linking every corner of Seoul, as the lines are drawn one by one until the map is complete",
-     "By choosing busy transfer stations full of commuters and tourists, it shows Seoul itself along with the subway"
+     "Entered in a Seoul subway promo film contest (2025)"
     ]
    }
   },
@@ -4001,14 +3902,11 @@ window.PROJECTS = [
     "need": "본선 작품은 한 벌만 만들 수 있고 원단은 되돌릴 수 없다. 프린트한 그래픽이 실제 데님 위에서 어떻게 보일지, 데미지를 어디까지 내야 물감이 흘러내리는 것처럼 읽힐지, 이걸 원단을 자르기 전에 알아야 했다.",
     "action": [
      "'물감 튜브에서 흘러나온 물감이 데님의 풀린 실로 변한다'는 하나의 서사를 축으로 잡고, 프린트(그래픽)와 리얼 데미지(실)가 옆선에서 이어지도록 설계",
-     "원단을 자르기 전에 AI로 실제 사진처럼 만들어 미리 확인: 디자인 디테일과 실루엣, 전체 디자인, 그리고 포토샵으로 만든 그래픽이 실제로 프린트되면 어떻게 보일지(소재에 따라 느낌이 달라지기 때문)",
-     "예선 이미지, 디자인 보드, 룩북, 패치 컬러웨이, 백패치 클로즈업도 AI로 만들어 비교",
+     "원단을 자르기 전에 AI로 실제 사진처럼 만들어 미리 확인: 디자인 디테일과 실루엣, 포토샵으로 만든 그래픽이 실제로 프린트되면 어떻게 보일지(소재마다 느낌이 다르기 때문). 예선 이미지, 디자인 보드, 룩북, 패치 컬러웨이도 AI로 만들어 비교",
      "기존 브랜드 디자인과 겹쳐 보이는 결과물은 표절 위험으로 따로 걸러내고 진행",
      "물감이 점점 흩어지는 그래디언트를 만들고, 그 그래디언트가 끝나는 지점에서 실제 프린지가 시작되도록 앞뒤를 연결",
-     "물감 튜브 그래픽을 ASCII, 레트로, 애시드, 그레인, 찢어진 종이, 잉크 브러시 등 여러 스타일로 만들어, 표현 방식에 따라 얼마나 달라지는지 비교",
      "인디고 생지 데님과 아이보리 옥스퍼드 20수 백패치로 소재를 정하고, 원단을 받아 실물 한 벌을 제작",
-     "상의 디스트로이드: 스판 데님이라 찢기도 올을 풀기도 쉽지 않아, 칼·드릴·송곳으로 직접 찢고 올을 풀어냄",
-     "디스트로이드를 많이 넣어도 상의 실루엣이 무너지지 않도록 레이스를 덧대 고정하고, 찢긴 질감과 레이스의 대비로 디자인에 재미를 더함. 같은 레이스를 바지에도 써서 상하의를 하나로 묶음"
+     "스판 데님이라 잘 찢기지 않아 칼·드릴·송곳으로 직접 찢고 올을 풀었고, 실루엣이 무너지지 않도록 레이스를 덧대 고정. 같은 레이스를 바지에도 써서 상하의를 하나로 묶음"
     ],
     "result": [
      "입선 (Honorable Mention): 코리아 데님 디자인 공모전 2026 (D&J DenimsandJeans Korea, COEX Seoul)",
@@ -4040,14 +3938,11 @@ window.PROJECTS = [
     "need": "A finals entry is one garment, and fabric does not undo. How a printed graphic would sit on real denim, and how far the damage had to go before it read as paint bleeding into thread: all of it had to be known before the first cut.",
     "action": [
      "Built everything on one narrative: paint squeezed from a tube becomes the frayed threads of the denim, with print and real damage meeting at the side seam",
-     "Had AI render it like real photos before any fabric was cut: design details and silhouette, the whole design, and how the graphic I made in Photoshop would look once printed (it can feel different depending on the fabric)",
-     "Also made the preliminary image, design boards, lookbook, patch colourways and back-patch close-ups with AI to compare",
+     "Had AI render it like real photos before any fabric was cut: design details and silhouette, and how the graphic I made in Photoshop would look once printed (it feels different on each fabric). Also made the preliminary image, design boards, lookbook and patch colourways with AI to compare",
      "Set aside any output that looked too close to an existing brand’s design",
      "Scattered the paint into a gradient, and started the real fringe exactly where the gradient ends, connecting front to back",
-     "Made the paint-tube graphic in several styles (ASCII, retro, acid, grain, torn paper, ink brush) to compare how much it changes with each",
      "Chose raw indigo denim with an ivory 20s oxford back patch, then made the one garment from the delivered fabric",
-     "Distressing the top: stretch denim does not tear or unravel easily, so I opened it by hand with a knife, a drill and an awl, then pulled the threads loose",
-     "Backed the heavy distressing with lace so the top kept its silhouette, and let the torn texture play against the lace. The same lace runs into the trousers to tie top and bottom together"
+     "Stretch denim does not tear easily, so I opened it by hand with a knife, a drill and an awl and pulled the threads loose, then backed it with lace so the silhouette held. The same lace runs into the trousers to tie top and bottom together"
     ],
     "result": [
      "Honorable Mention: Korea Denim Design Contest 2026 (D&J DenimsandJeans Korea, COEX Seoul)",
@@ -4106,11 +4001,7 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/fashion-illustration/ad01.jpg",
-      "cap": {
-       "ko": "일러스트레이션 세 컷",
-       "en": "Three illustrations"
-      }
+      "src": "/images/projects/fashion-illustration/ad01.jpg"
      }
     ]
    },
@@ -4128,25 +4019,13 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/fashion-illustration/ad03.jpg",
-      "cap": {
-       "ko": "일러스트레이션",
-       "en": "Illustration"
-      }
+      "src": "/images/projects/fashion-illustration/ad03.jpg"
      },
      {
-      "src": "/images/projects/fashion-illustration/ad04.jpg",
-      "cap": {
-       "ko": "일러스트레이션",
-       "en": "Illustration"
-      }
+      "src": "/images/projects/fashion-illustration/ad04.jpg"
      },
      {
-      "src": "/images/projects/fashion-illustration/ad05.jpg",
-      "cap": {
-       "ko": "일러스트레이션",
-       "en": "Illustration"
-      }
+      "src": "/images/projects/fashion-illustration/ad05.jpg"
      }
     ]
    },
@@ -4179,8 +4058,8 @@ window.PROJECTS = [
    "ko": {
     "title": "패션 일러스트레이션 & 도식화",
     "cat": "일러스트레이션 · 3인 협업 · 2024",
-    "headline": "취향이 다 다른 세 사람이 모였다. 컨셉과 무드보드를 기준으로 두고, 각자 원하는 방향을 한 작업의 다른 부분에 나눠 담았다.",
-    "need": "패션 일러스트레이션은 개인의 취향이 잘 드러나는 작업이다. 두 작업 모두 취향이 다른 세 사람이 함께해서, 처음에는 의견을 하나로 합치기가 쉽지 않았다.",
+    "headline": "취향이 다 다른 세 사람이 모였다. 각자 원하는 방향을 한 작업의 다른 부분에 나눠 담았다.",
+    "need": "패션 일러스트레이션은 개인의 취향이 잘 드러나는 작업이다. 두 작업 모두 세 사람이 함께해서, 처음에는 의견을 하나로 합치기가 쉽지 않았다.",
     "action": [
      "우리가 정한 컨셉과 무드보드를 객관적인 기준으로 가운데 두고, 서로의 장점을 합치는 방법을 고민",
      "〈고려청자의 우아함과 금속 나무〉: 우아하고 세련된 느낌, 금속의 날카롭고 반사되는 질감, 전통적인 느낌으로 의견이 갈리자 실루엣은 우아하게, 텍스처는 메탈릭하게, 배경에는 전통 모티프를 넣고 각자 한 부분씩 맡자고 제안. 역할이 나뉘어 효율적으로 진행됨",
@@ -4189,14 +4068,14 @@ window.PROJECTS = [
     ],
     "note": "두 작업 모두 3인 협업이다.",
     "result": [
-     "두 작업 모두 주제와 컨셉에 맞으면서도 세 사람의 취향이 고루 반영돼, 모두가 만족하는 결과가 나옴"
+     "취향이 아주 다른 세 사람이 한 팀이 돼 결과를 걱정하셨던 교수님께, 세 사람의 취향이 모두 녹아든 좋은 결과가 나왔다는 평을 받음"
     ]
    },
    "en": {
     "title": "Fashion Illustration & Flat Drawing",
     "cat": "Illustration · Team of 3 · 2024",
-    "headline": "Three people with very different tastes. With the concept and mood board as the common standard, each person’s direction went into a different part of the work.",
-    "need": "Fashion illustration shows personal taste clearly. Both works were made by three people with different tastes, so bringing the ideas together was not easy at first.",
+    "headline": "Three people with very different tastes. Each person’s direction went into a different part of the work.",
+    "need": "Fashion illustration shows personal taste clearly. Both works were made by three people, so bringing the ideas together was not easy at first.",
     "action": [
      "Put the concept and mood board we had agreed on in the middle as the objective standard, and worked out how to combine each person’s strengths",
      "‘The Grace of Goryeo Celadon and the Metal Tree’: when we split between elegance, the sharp reflective texture of metal and a traditional feel, I proposed elegance in the silhouette, metal in the texture and traditional motifs in the background, one part each. Splitting the roles made the work efficient",
@@ -4205,7 +4084,7 @@ window.PROJECTS = [
     ],
     "note": "Both works were three-person collaborations.",
     "result": [
-     "Both works fit the theme and concept while carrying all three people's tastes, and everyone was happy with the result"
+     "The professor, who had worried how three people with such different tastes would work as one team, said the result brought all three tastes together well"
     ]
    }
   },
@@ -4225,15 +4104,15 @@ window.PROJECTS = [
   "thumb": "/images/projects/portfolio-site/thumb.jpg",
   "images": [],
   "role": {
-   "ko": "기획 · 웹디자인 · AI 워크플로우 · 콘텐츠 (단독, 독학)",
-   "en": "Planning, web design, AI workflow, content (solo, self-taught)"
+   "ko": "기획 · 웹디자인 · AI 워크플로우 · 콘텐츠 (단독)",
+   "en": "Planning, web design, AI workflow, content (solo)"
   },
   "spotify": "4m0bcPhfZSmAuH8zzkV1T5",
   "spotifyNote": {
    "ko": "이 포트폴리오를 시작할 때 만든 무드보드와 가장 어울리는 곡. 힘을 뺀 부드러운 보컬과 사운드가, 대비 없이 부드러운 이 사이트의 톤과 닮았다.",
    "en": "The song closest to the moodboard this portfolio started from: soft, unforced vocals and sound, like the site’s gentle, low-contrast tone."
   },
-  "cardThumb": "/images/projects/portfolio-site/thumb-card-v3.jpg",
+  "cardThumb": "/images/projects/portfolio-site/mm12-card.jpg",
   "process": [
    "/images/projects/portfolio-site/05.jpg",
    "/images/projects/portfolio-site/08.jpg",
@@ -4303,7 +4182,7 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/portfolio-site/wf.jpg"
+      "src": "/images/projects/portfolio-site/wf-v2.jpg"
      }
     ],
     "rowTarget": 2000
@@ -4328,13 +4207,6 @@ window.PROJECTS = [
      },
      {
       "src": "/images/projects/portfolio-site/pr05.jpg"
-     },
-     {
-      "src": "/images/projects/portfolio-site/04.jpg",
-      "cap": {
-       "ko": "인트로를 글로 정리해 보낸 지시",
-       "en": "The intro, written out as a brief"
-      }
      }
     ],
     "rowTarget": 440
@@ -4349,34 +4221,16 @@ window.PROJECTS = [
       "src": "/images/projects/portfolio-site/mm01.jpg"
      },
      {
-      "src": "/images/projects/portfolio-site/mm02.jpg"
-     },
-     {
-      "src": "/images/projects/portfolio-site/mm03.jpg"
-     },
-     {
       "src": "/images/projects/portfolio-site/mm04.jpg"
      },
      {
       "src": "/images/projects/portfolio-site/mm05.jpg"
      },
      {
-      "src": "/images/projects/portfolio-site/mm06.jpg"
-     },
-     {
-      "src": "/images/projects/portfolio-site/mm07.jpg"
-     },
-     {
       "src": "/images/projects/portfolio-site/mm08.jpg"
      },
      {
       "src": "/images/projects/portfolio-site/mm09.jpg"
-     },
-     {
-      "src": "/images/projects/portfolio-site/mm10.jpg"
-     },
-     {
-      "src": "/images/projects/portfolio-site/mm11.jpg"
      },
      {
       "src": "/images/projects/portfolio-site/mm12.jpg"
@@ -4470,20 +4324,6 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/portfolio-site/cd01.jpg",
-      "cap": {
-       "ko": "렌즈 효과 코드, 핵심은 가림",
-       "en": "Lens effect code, key parts hidden"
-      }
-     },
-     {
-      "src": "/images/projects/portfolio-site/cd02.jpg",
-      "cap": {
-       "ko": "손글씨 마인드맵 코드",
-       "en": "Handwritten mind map code"
-      }
-     },
-     {
       "src": "/images/projects/portfolio-site/22.jpg",
       "cap": {
        "ko": "프로젝트 정보를 고치던 편집 화면",
@@ -4503,34 +4343,25 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "독학 바이브코딩으로 만든 포트폴리오",
-    "cat": "웹사이트 기획·디자인 · 바이브코딩 · 독학 · 2026",
+    "cat": "웹사이트 기획·디자인 · 바이브코딩 · 2026",
     "headline": "프롬프트 몇 줄이면 나오는 AI 포트폴리오는 다 비슷해 보인다. 그래서 구조부터 하나하나 직접 기획하고 지시했다.",
     "metrics": [
      {
-      "v": "독학",
-      "l": "디자인·코딩 비전공"
+      "v": "23",
+      "l": "프로젝트 상세 페이지 (한국어 · 영어)"
      },
      {
       "v": "4",
-      "l": "교차로 쓴 AI 도구"
-     },
-     {
-      "v": "2",
-      "l": "언어 (한국어 · 영어)"
+      "l": "나눠 쓴 AI 도구"
      }
     ],
-    "need": "요즘은 AI에 프롬프트 몇 줄만 넣어도 포트폴리오 사이트가 금방 나온다. 하지만 그렇게 나온 사이트는 AI가 만든 티가 나고 서로 비슷해서, 내 강점을 살리지 못한다고 생각했다. 나는 한 분야만 공부하지 않았기 때문에, 여러 역량을 섹션별로 나눠 보여줄 수 있는 나만의 구조와 레이아웃이 필요했다. 디자인도 코딩도 전공하지 않아서, 이 기획을 AI에게 정확히 전달하는 방법부터 혼자 익혔다.",
+    "need": "나는 한 분야만 공부하지 않았기 때문에, 여러 역량을 섹션별로 나눠 보여줄 수 있는 나만의 구조와 레이아웃이 필요했다. 웹디자인도 코딩도 전공하지 않아서, 이 기획을 AI에게 정확히 전달하는 방법부터 혼자 익혔다.",
     "action": [
-     "디자인·코딩 비전공으로, 강의 없이 혼자 익힘: 코드를 직접 치지 않고 AI와 대화하며 만드는 바이브코딩 방식으로 설계하고 고침. 판단과 지시는 끝까지 내가 함",
-     "AI를 하나만 쓰지 않고 교차 활용: Manus로 첫 UI 시안, Claude로 실제 구현과 인터랙션, ChatGPT로 이미지, Tripo로 3D",
-     "직접 만든 웨어러블 아트(깨진 도자기 조각으로 만든 꽃)를 3D로 구현: ChatGPT로 여러 각도의 이미지를 먼저 만든 뒤 Tripo에 넣어 3D 모델로 만들고, Selected Work 한가운데에 배치",
-     "마인드맵은 아이패드로 직접 그려서 지시: 화면 캡처 위에 손으로 그린 스케치를 그대로 보내고, 그 선과 글씨를 옮겨 키워드에 마우스를 올리면 나타나게 함",
-     "첫인상은 일부러 반대로: 세련되고 번쩍이는 대신 타자기 효과와 빈티지한 무드로 시작. 나를 전달하는 문장을 맨 앞에 두고, 작업의 방향성은 마인드맵으로 보여줌",
-     "사이트의 이미지도 내 작업으로: 실제 프로젝트 사진 중 색감이 예쁘고 무드보드에 맞는 것을 골라 배경에 깔고, 그 위에 트레이싱지를 덮은 느낌을 줌. 대비가 튀는 곳 없이 채도를 낮춰 전체를 부드럽고 힘을 뺀 톤으로 맞춤. 곳곳에 마우스 인터랙션을 넣음",
-     "보는 사람의 경험까지 설계: 링크를 받는 순간 뜨는 미리보기 카드부터 인트로의 첫 문장과 같게 맞춤. 프로젝트마다 Spotify 플레이어로 곡을 넣어, 그 분위기 속에서 작업을 보게 함. 곡은 내가 좋아하는 음악보다 프로젝트와 어울리는지에 집중해 고름. 아카이브는 필터별로 볼 수 있게 함",
-     "한국어와 영어 두 버전을 모두 제작",
-     "문장도 하나하나 직접 확인: AI가 쓴 초안을 그대로 두지 않고, 사실과 다른 문장, 과장, 번역투를 고침",
-     "검토는 리뷰 시트로: 프로젝트, 타임라인, 스킬을 한 페이지에 펼쳐 두고 바꿀 것만 표시해 한 번에 반영. 화면 수정은 같은 각도에서 찍은 전후 화면을 나란히 놓고 비교해 결정"
+     "AI를 역할별로 나눠 씀: Manus로 첫 UI 시안, Claude로 구현과 인터랙션, ChatGPT로 이미지, Tripo로 3D. 코드는 직접 치지 않고 AI와 대화하며 만드는 바이브코딩 방식",
+     "구조와 첫인상은 직접 기획: 첫 시안 화면 위에 아이패드로 마인드맵을 그려 보내고, 그 선과 글씨를 옮겨 키워드에 마우스를 올리면 나타나게 함. 화려한 효과 대신 타자기 효과와 빈티지한 무드로 시작하고, 나를 전달하는 문장을 맨 앞에 둠",
+     "사이트의 비주얼도 내 작업으로: 직접 만든 웨어러블 아트(깨진 도자기 조각으로 만든 꽃)를 3D로 만들어 Selected Work 한가운데에 두고, 실제 프로젝트 사진을 배경에 깔아 채도를 낮춘 부드러운 톤으로 맞춤",
+     "보는 사람의 경험을 설계: 링크 미리보기 카드를 인트로 첫 문장과 맞추고, SELECTED 작품마다 어울리는 곡을 Spotify 플레이어로 넣음. 아카이브는 필터별로 보고, 한국어와 영어로 모두 볼 수 있게 함",
+     "검수는 내가: AI가 쓴 초안에서 사실과 다른 문장, 과장, 번역투를 고치고, 리뷰 시트에 바꿀 것만 표시해 한 번에 반영. 화면은 같은 각도의 전후 화면을 나란히 놓고 비교해 결정"
     ],
     "result": [
      "인트로부터 연락처까지 섹션 6개와 프로젝트 상세 페이지 23개를 한국어·영어로 구현 (2026.10 업데이트)"
@@ -4539,41 +4370,31 @@ window.PROJECTS = [
      "title": "AI가 발전해도 사람이 하는 일",
      "body": [
       "\"예쁘게 해줘\", \"멋지게 해줘\"로는 좋은 결과가 나오지 않았다. 원하는 결과가 나온 건 늘 내가 먼저 자세히 기획하고, 선 하나와 글씨 크기 하나까지 세세하게 지시했을 때였다.",
-      "그래서 AI가 발전할수록 사람의 역할은 더 분명해진다고 생각한다. 무엇을 왜 만들지 정하고, 결과를 보고 판단하고, 다시 지시하는 일이다.",
-      "아래 이미지: 전체 워크플로우와 실제로 보낸 지시 → 마인드맵이 손 스케치에서 지금의 모습이 되기까지 → 작업 과정 (첫 시안, 3D, 전후 비교, 코드, 리뷰 시트)."
+      "그래서 AI가 발전할수록 사람의 역할은 더 분명해진다고 생각한다. 무엇을 왜 만들지 정하고, 결과를 보고 판단하고, 다시 지시하는 일이다."
      ]
     }
    },
    "en": {
     "title": "A Self-Taught, Vibe-Coded Portfolio",
-    "cat": "Website Planning & Design · Vibe Coding · Self-taught · 2026",
+    "cat": "Website Planning & Design · Vibe Coding · 2026",
     "headline": "A portfolio made from a few lines of prompt looks like every other one. So I planned the structure myself and directed every detail.",
     "metrics": [
      {
-      "v": "Self-taught",
-      "l": "No design or coding degree"
+      "v": "23",
+      "l": "Project pages (Korean, English)"
      },
      {
       "v": "4",
-      "l": "AI tools used together"
-     },
-     {
-      "v": "2",
-      "l": "Languages (Korean, English)"
+      "l": "AI tools, each for its own job"
      }
     ],
-    "need": "These days a few lines of prompt are enough for AI to produce a portfolio site. But those sites look AI-made and alike, and I did not think one could show my strengths. I have not studied just one field, so I needed my own structure and layout that could show different skills section by section. With no background in design or coding, I first taught myself how to get that plan across to AI precisely.",
+    "need": "I have not studied just one field, so I needed my own structure and layout that could show different skills section by section. With no background in web design or coding, I first taught myself how to get that plan across to AI precisely.",
     "action": [
-     "No design or coding degree, and no course: I taught myself and built it by vibe coding, typing no code by hand and designing and fixing everything in conversation with AI, while every judgement and instruction stayed mine",
-     "Used several AIs together rather than one: Manus for the first UI draft, Claude for the real build and interactions, ChatGPT for images, Tripo for 3D",
-     "Brought my own wearable art piece, a flower made of broken porcelain, into 3D: generated views from several angles in ChatGPT, fed them to Tripo for a 3D model, and set it at the centre of Selected Work",
-     "Drew the mind map by hand on an iPad and sent the sketch over a screenshot; its lines and handwriting were carried over so they appear when a keyword is hovered",
-     "Opened against the grain: instead of sleek and shiny, a typewriter effect and a vintage mood. A sentence that introduces me comes first, and the mind map shows where my work is heading",
-     "Made the site’s imagery out of my own work: project photos picked for their colour and fit with the moodboard, laid under what feels like tracing paper. Nothing jumps out in contrast; saturation stays low so the whole site reads soft and relaxed. Mouse interactions throughout",
-     "Designed the viewer’s experience too: even the preview card that appears when the link is shared opens with the same line as the intro. Each project has a song in a Spotify player, so the work is seen inside a mood. I picked each song for how well it fits the project, not because it is a favourite of mine. The archive can be filtered",
-     "Built in both Korean and English",
-     "Checked every sentence myself: instead of keeping AI drafts as they were, I fixed anything untrue, overstated or stiff",
-     "Reviewed on a sheet, not in chat: projects, timeline and skills on one page; I mark only what changes and it is applied in one pass. Layout changes were decided by putting before and after side by side, shot from the same angle"
+     "Split the work between AIs: Manus for the first UI draft, Claude for the build and interactions, ChatGPT for images, Tripo for 3D. No code typed by hand; built by vibe coding, in conversation with AI",
+     "Planned the structure and first impression myself: drew the mind map on an iPad over a screenshot of the first draft, and its lines and handwriting were carried over so they appear when a keyword is hovered. A typewriter effect and a vintage mood instead of flashy effects, with a sentence that introduces me first",
+     "Made the site’s visuals out of my own work: my wearable art piece, a flower of broken porcelain, turned into 3D at the centre of Selected Work, and real project photos laid under the page in a soft, low-saturation tone",
+     "Designed the viewer’s path: the link preview card opens with the same line as the intro, each Selected work has a fitting song in a Spotify player, the archive can be filtered, and everything reads in Korean and English",
+     "Kept the checking in my hands: fixed anything untrue, overstated or stiff in AI drafts, marked only what changes on a review sheet and applied it in one pass, and decided layout changes from before and after shots taken from the same angle"
     ],
     "result": [
      "Six sections from the intro to contact, plus 23 project pages, in Korean and English (updated Oct 2026)"
@@ -4582,8 +4403,7 @@ window.PROJECTS = [
      "title": "What people still do as AI improves",
      "body": [
       "\"Make it pretty\" and \"make it cool\" never produced anything good. The results I wanted came every time I had planned in detail first and directed down to a single line or a font size.",
-      "So the better AI gets, the clearer the human part becomes: deciding what to make and why, judging what comes back, and directing again.",
-      "Below: the whole workflow and prompts I actually sent → how the mind map grew from a hand sketch → the making (first draft, 3D, before and after, code, review sheet)."
+      "So the better AI gets, the clearer the human part becomes: deciding what to make and why, judging what comes back, and directing again."
      ]
     }
    }
@@ -4618,7 +4438,7 @@ window.PROJECTS = [
   "video": "https://www.youtube.com/embed/HZm8j22xs_s",
   "nar": {
    "ko": {
-    "title": "경주 APEC 홍보 영상",
+    "title": "2025 경주 APEC AI 홍보 영상",
     "cat": "AI 영상 · 공모전 출품 · 2025",
     "need": "2025 APEC 경주 특별전시를 주제로 한 공모전 출품작이다. 유네스코 세계유산에서 아홉 개의 전통 무용을 실제로 촬영하는 건 혼자서는 불가능했다.",
     "action": [
@@ -4628,20 +4448,14 @@ window.PROJECTS = [
      "마지막 장면은 황리단길에서 전통 리듬에 현대 안무를 섞어 마무리"
     ],
     "result": [
-     "실제로는 혼자 촬영할 수 없는 세계유산 아홉 곳과 전통 무용 아홉 가지를 AI로 장면마다 구현",
-     "노래부터 영상까지 AI 툴 세 가지를 오가며, 기획부터 완성까지 혼자 한 편을 만듦"
+     "ChatGPT, Midjourney, Kling AI, Suno 네 가지 AI 툴을 오가며, 노래부터 영상까지 혼자 한 편을 완성"
     ],
     "note": "2025 APEC AI 영상 콘텐츠 공모전(한국콘텐츠진흥원) 출품작. 노래와 영상 모두 AI(Suno, Midjourney, Kling AI)로 만들었다. 2025년 여름 당시의 AI라, 지금 보면 어색한 장면이 있다.",
     "headline": "경주의 세계유산 아홉 곳에서 전통 무용 아홉 가지를 보여주는 영상. 혼자서는 촬영할 수 없는 장면이라 AI로 만들었다.",
-    "metrics": [
-     {
-      "v": "9",
-      "l": "전통 무용 · 유네스코 세계유산"
-     }
-    ]
+    "metrics": []
    },
    "en": {
-    "title": "Gyeongju APEC Promo Film",
+    "title": "2025 Gyeongju APEC AI Promo Film",
     "cat": "AI Film · Contest Entry · 2025",
     "need": "An entry on the theme of the 2025 APEC Special Exhibition in Gyeongju. Filming nine traditional dances at UNESCO World Heritage sites was impossible for one person.",
     "action": [
@@ -4651,17 +4465,11 @@ window.PROJECTS = [
      "Ended in Hwangnidan-gil, mixing modern choreography into traditional rhythm"
     ],
     "result": [
-     "Brought to life, scene by scene with AI, nine World Heritage sites and nine traditional dances that I could never have filmed alone",
-     "Moved between three AI tools from the song to the film, and made the whole piece alone from plan to finish"
+     "Moved between four AI tools, ChatGPT, Midjourney, Kling AI and Suno, and made the whole piece alone, from the song to the film"
     ],
     "note": "Entry to the 2025 APEC AI Video Content Contest (Korea Creative Content Agency). Song and film were both made with AI (Suno, Midjourney, Kling AI), as it was in summer 2025, so some shots look awkward now.",
     "headline": "A film showing nine traditional dances at nine World Heritage sites in Gyeongju. I could not film that alone, so I made it with AI.",
-    "metrics": [
-     {
-      "v": "9",
-      "l": "dances, nine World Heritage sites"
-     }
-    ]
+    "metrics": []
    }
   },
   "title": "Gyeongju, A Thousand Years in Motion",
@@ -4676,7 +4484,7 @@ window.PROJECTS = [
   ],
   "year": "2025",
   "period": "2024.09~12",
-  "thumb": "/images/projects/unreal-engine/ad06.jpg",
+  "thumb": "/images/projects/unreal-engine/ad04.jpg",
   "images": [
    "/images/projects/unreal-engine/ad06.jpg",
    "/images/projects/unreal-engine/ad05.jpg",
@@ -4687,12 +4495,41 @@ window.PROJECTS = [
    "/images/projects/unreal-engine/ad02.jpg"
   ],
   "role": {
-   "ko": "3D 환경 · 캐릭터 셋업 (단독)",
-   "en": "3D environment, character setup (solo)"
+   "ko": "레벨 디자인 · 조명 · 카메라 연출 (단독)",
+   "en": "Level design, lighting, camera direction (solo)"
   },
   "spotify": null,
   "spotifyNote": null,
+  "cardThumb": "/images/projects/unreal-engine/ad04-card.jpg",
+  "heroGallery": true,
   "sections": [
+   {
+    "title": {
+     "ko": "영상 장면",
+     "en": "FROM THE FILM"
+    },
+    "images": [
+     {
+      "src": "/images/projects/unreal-engine/loop-a.mp4"
+     },
+     {
+      "src": "/images/projects/unreal-engine/loop-b.mp4"
+     },
+     {
+      "src": "/images/projects/unreal-engine/loop-c.mp4"
+     },
+     {
+      "src": "/images/projects/unreal-engine/loop-d.mp4"
+     },
+     {
+      "src": "/images/projects/unreal-engine/loop-e.mp4"
+     },
+     {
+      "src": "/images/projects/unreal-engine/loop-f.mp4"
+     }
+    ],
+    "rowTarget": 270
+   },
    {
     "title": {
      "ko": "실습실",
@@ -4700,61 +4537,33 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/unreal-engine/ad06.jpg",
-      "cap": {
-       "ko": "벽면 포스터와 선반 위 빨간 구두",
-       "en": "Posters on the wall, red shoes on the shelf"
-      }
+      "src": "/images/projects/unreal-engine/ad06.jpg"
      },
      {
-      "src": "/images/projects/unreal-engine/ad05.jpg",
-      "cap": {
-       "ko": "실습실 전경",
-       "en": "The whole lab"
-      }
+      "src": "/images/projects/unreal-engine/ad05.jpg"
      },
      {
-      "src": "/images/projects/unreal-engine/ad04.jpg",
-      "cap": {
-       "ko": "재봉틀과 마네킹이 놓인 작업대",
-       "en": "Work tables with sewing machines and dress forms"
-      }
+      "src": "/images/projects/unreal-engine/ad04.jpg"
      },
      {
-      "src": "/images/projects/unreal-engine/ad03.jpg",
-      "cap": {
-       "ko": "위에서 내려다본 배치",
-       "en": "The layout from above"
-      }
+      "src": "/images/projects/unreal-engine/ad03.jpg"
      },
      {
-      "src": "/images/projects/unreal-engine/ad01.jpg",
-      "cap": {
-       "ko": "창가와 사물함",
-       "en": "Windows and lockers"
-      }
+      "src": "/images/projects/unreal-engine/ad01.jpg"
      }
     ]
    },
    {
     "title": {
-     "ko": "캐릭터",
-     "en": "THE CHARACTER"
+     "ko": "캐릭터 (MetaHuman)",
+     "en": "THE CHARACTER (METAHUMAN)"
     },
     "images": [
      {
-      "src": "/images/projects/unreal-engine/01-crop.jpg",
-      "cap": {
-       "ko": "MetaHuman으로 캐릭터 만드는 화면",
-       "en": "Making a character in MetaHuman"
-      }
+      "src": "/images/projects/unreal-engine/01-crop.jpg"
      },
      {
-      "src": "/images/projects/unreal-engine/ad02.jpg",
-      "cap": {
-       "ko": "실습실 안의 캐릭터",
-       "en": "The character in the lab"
-      }
+      "src": "/images/projects/unreal-engine/ad02.jpg"
      }
     ]
    }
@@ -4762,33 +4571,39 @@ window.PROJECTS = [
   "nar": {
    "ko": {
     "title": "Unreal Engine 의류실습실 구현",
-    "cat": "실시간 3D · 개인",
+    "cat": "실시간 3D · 시네마틱 · 개인 · 2024.09~12",
     "headline": "내가 가장 잘 아는 공간, 의류학과 실습실을 언리얼 엔진 안에 지었다.",
-    "need": "수업에서 언리얼 엔진으로 공간 만드는 법을 배운 뒤, 살짝 무서운 분위기의 의류학과 실습실을 만들어 보고 싶었다.",
+    "need": "미술대학 〈3D 애니메이션〉 수업에서 언리얼 엔진으로 가상 공간을 짓고, 그 안에서 시네마틱 영상을 만드는 개인 과제였다. 공간은 내가 가장 잘 아는 의류학과 실습실로 정했고, 살짝 으스스한 분위기를 내고 싶었다.",
     "action": [
-     "Unreal Engine으로 재봉틀, 작업대, 마네킹, 사물함이 놓인 의류학과 실습실 공간을 구현",
-     "MetaHuman으로 캐릭터를 만들고 공간 안에서 이동·상호작용하도록 세팅"
+     "Sketchfab에서 재봉틀, 토르소, 마네킹, 행거, 하이힐, 옷 더미 같은 에셋을 골라 실습실처럼 배치하고, 벽·작업대·사물함은 작업장 에셋으로 공간을 짬",
+     "태양광, 하늘, 구름, 안개, 후처리 설정으로 창밖 빛과 실내 공기감을 조절",
+     "시퀀서에서 시네 카메라 3대로 15초 영상을 구성하고 캐릭터에 고개 젓기와 뒤로 쓰러지는 동작을 입힘: 고개를 젓는 인물 → 실습실을 훑다 바닥의 옷 더미에 머무는 시선 → 창가에서 뒤로 쓰러지는 인물",
+     "토르소와 의자를 화면 앞에 걸쳐 두고 초점 거리·조리개·초점을 키프레임으로 움직여, 흐린 전경 너머로 시선이 옮겨 가게 함",
+     "MetaHuman Creator로 인물도 만들어 봄"
     ],
     "result": [
-     "의류학과 실습실을 완성하고, 실습실 내부를 촬영한 영상까지 만들어 제출"
+     "실습실 공간과 15초 시네마틱 영상을 완성해 수업에 제출"
     ]
    },
    "en": {
     "title": "Building the Clothing Lab in Unreal Engine",
-    "cat": "Real-time 3D · Solo",
+    "cat": "Real-time 3D · Cinematic · Solo · Sep to Dec 2024",
     "headline": "I built the space I know best, our clothing lab, inside Unreal Engine.",
-    "need": "After learning to build spaces in Unreal Engine in class, I wanted to make our clothing lab with a slightly scary mood.",
+    "need": "An individual assignment for the 3D Animation class at the College of Fine Arts: build a virtual space in Unreal Engine and make a cinematic film inside it. I chose the space I know best, our clothing lab, and wanted it slightly eerie.",
     "action": [
-     "Built the clothing lab in Unreal Engine, with sewing machines, work tables, dress forms and lockers",
-     "Created the character with MetaHuman and set it up to move and interact within the space"
+     "Picked assets on Sketchfab (sewing machines, dress forms, mannequins, hangers, heels, a pile of clothes) and arranged them as a clothing lab, with walls, workbenches and lockers from a workshop set",
+     "Set the sun, sky, clouds, fog and post-process to shape the light from the windows and the air in the room",
+     "In Sequencer, built a 15-second film from three cine cameras and gave the figure a head shake and a fall backward: a figure shaking her head → a look across the lab that settles on a pile of clothes on the floor → the figure falling backward by the window",
+     "Kept dress forms and chairs in the foreground and keyframed focal length, aperture and focus, so the eye moves past a blurred foreground",
+     "Also made a character in MetaHuman Creator"
     ],
     "result": [
-     "Finished the clothing lab and made a film shot inside it, which I submitted for the class"
+     "Finished the lab and a 15-second cinematic film inside it, submitted for the class"
     ]
    }
   },
   "title": "Clothing Lab in Unreal Engine",
-  "desc": "The clothing department lab built in Unreal Engine for a class, with a MetaHuman character set up to move through it."
+  "desc": "The clothing lab built in Unreal Engine for a 3D animation class, and a short film cut between three cine cameras inside it."
  },
  {
   "slug": "arts-week-2026",
@@ -4936,24 +4751,20 @@ window.PROJECTS = [
     "need": "Art2Wear에서 입고 걸었던 옷은 움직이는 사람이 전제였다. 예술주간은 관객이 다가와서 보는 야외 설치다. 같은 긴장을 몸 없이 세워 두어야 했고, 전시 기간 예보에는 비 소식까지 있었다. 작품을 비로부터 지킬 장치가 필요했지만, 그 장치가 주제를 가리지 않고 오히려 살리기를 바랐다.",
     "action": [
      "Art2Wear 작품에서 깨진 접시로 만든 꽃, 뜨개 가방, 치마를 가져와 일부는 바꾸고 새 오브제를 더해 마네킹 위에 재구성",
-     "장소는 세 가지 기준으로 선정: 유동인구가 많은 관정도서관 앞, 치마의 나뭇가지와 어우러질 진짜 덩굴이 있는 곳, 자연을 훼손하지 않고 우산을 고정할 수 있는 곳. 덩굴이 감긴 아치 터널을 지지대로 삼아, 무거워진 우산을 철사로 고정",
+     "장소는 세 가지 기준으로 선정: 유동인구가 많은 관정도서관 앞, 치마의 나뭇가지와 어우러질 진짜 덩굴이 있는 곳, 자연을 훼손하지 않고 우산을 고정할 수 있는 곳",
      "비 예보를 작품 안으로 끌어들임: 작품을 비로부터 지키면서 주제도 살리는 오브제로 우산을 더함",
-     "원래 주제인 '불안과 집중의 공생'을 전시 장소인 대학교와 연결: 대학생의 불안을 압박으로 보고, 우산 위에 구두, 벨트, 시곗바늘을 올림. 시곗바늘은 시간의 압박, 검은 구두 두 짝은 누군가 우산 위에 서 있는 모습",
-     "압박을 '레드 퀸 가설'(제자리에 머물려면 쉬지 않고 달려야 한다)과도 연결해, 구두와 앨리스 이야기의 트럼프 카드를 오브제로 사용",
-     "시곗바늘은 직접 제작: 폼보드를 바늘 모양으로 두 장 잘라, 사이에 나무 꼬치를 넣고 붙인 샌드위치 구조",
-     "구두와 대비되는 흰 쉬폰을 우산 위에 함께 올려 살짝 흘러내리게 함: 압박(불안)이 만들어 내는 집중, 즉 불안과 집중의 공생을 한 번 더 표현"
+     "원래 주제인 ‘불안과 집중의 공생’을 대학교와 연결: 대학생의 불안을 압박으로 보고 우산 위에 구두, 벨트, 시곗바늘, 트럼프 카드를 올림. 검은 구두 두 짝은 우산 위에 서 있는 누군가, 시곗바늘은 시간의 압박. 구두와 트럼프 카드는 ‘제자리에 머물려면 쉬지 않고 달려야 한다’는 앨리스 속 레드 퀸과도 이어짐",
+     "구두와 대비되는 흰 쉬폰을 우산 위에 함께 올려 살짝 흘러내리게 함: 압박이 만들어 내는 집중"
     ],
     "result": [
      "2026 서울대 예술주간 야외 전시, 관정도서관 앞 (2026.09.28~10.02)"
     ],
     "detail": {
-     "title": "우산을 더한 이유, 그리고 설치",
+     "title": "우산, 그리고 설치",
      "body": [
-      "전시 기간 예보에 비가 있었다. 야외 전시라 작품을 비로부터 지켜야 했는데, 덮개를 씌우는 대신 그 조건을 주제를 살리는 데 쓰고 싶었다. 그래서 우산이라는 오브제를 더했다.",
-      "그다음 질문은 '불안과 집중의 공생'이 서울대학교라는 장소에서 어떤 모습일까였다. 대학생의 불안은 압박으로 이어진다고 봤고, 그 압박을 우산 위에 올렸다.",
       "결국 전시 기간에 비는 오지 않았다. 우산은 비를 막는 장치보다, 압박을 올려 두는 자리로 작품의 중심이 됐다.",
       "가장 어려웠던 건 그 우산을 설치하는 일이었다. 구두, 벨트, 시곗바늘, 쉬폰을 올리자 우산이 굉장히 무거워졌고, 무게중심도 고르지 않았다. 게다가 높은 곳에 고정해야 했다.",
-      "그래서 철사를 쓰고, 전시 장소의 이점을 적극 활용했다. 덩굴이 감긴 아치 터널을 지지대로 삼아 철사로 우산을 고정했다. 자연을 훼손하지 않고 우산을 고정할 수 있는 곳이라는, 장소를 고른 세 번째 이유가 그대로 해결책이 됐다."
+      "그래서 덩굴이 감긴 아치 터널을 지지대로 삼아 철사로 고정했다. 장소를 고른 세 번째 이유가 그대로 해결책이 됐다."
      ]
     }
    },
@@ -4965,24 +4776,20 @@ window.PROJECTS = [
     "need": "The Art2Wear garment assumed a moving body. Arts Week is an outdoor installation people walk up to: the same tension had to stand without a body, and the forecast for the week called for rain. The piece needed protecting from the rain, and I wanted that protection to strengthen the theme rather than hide it.",
     "action": [
      "Took the broken-plate flowers, the knitted bag and the skirt from the Art2Wear piece, changed some parts, added new objects and rebuilt them on a mannequin",
-     "Chose the site on three counts: heavy foot traffic in front of Kwanjeong Library, real vines for the branches on the skirt to blend into, and a place to hold an umbrella without harming any plants. The vine-covered arch tunnel became the support, and the heavy umbrella is wired to it",
+     "Chose the site on three counts: heavy foot traffic in front of Kwanjeong Library, real vines for the branches on the skirt to blend into, and a place to hold an umbrella without harming any plants",
      "Brought the rain forecast into the work: added an umbrella, an object that protects the piece and carries the theme at once",
-     "Connected the original theme, the symbiosis of anxiety and focus, to the venue, a university: read students' anxiety as pressure and set heels, a belt and clock hands on top of the umbrella. The clock hands are time pressure; the two black heels suggest someone standing on it",
-     "Tied that pressure to the Red Queen hypothesis (you have to keep running just to stay in place), using the heels and playing cards from the Alice stories as objects",
-     "Made the clock hands myself: two pieces of foam board cut to the shape of a hand, glued together with a wooden skewer sandwiched between them",
-     "Laid white chiffon over the umbrella beside the heels so it slips gently down: the focus that pressure (anxiety) produces, the symbiosis of anxiety and focus stated once more"
+     "Connected the original theme, the symbiosis of anxiety and focus, to a university: read students’ anxiety as pressure and set heels, a belt, clock hands and playing cards on top of the umbrella. The two black heels are someone standing on it, the clock hands are time pressure, and the heels and cards also point to the Red Queen in the Alice stories, who has to keep running just to stay in place",
+     "Laid white chiffon over the umbrella beside the heels so it slips gently down: the focus that pressure produces"
     ],
     "result": [
      "Shown outdoors at SNU Arts Week 2026, in front of Kwanjeong Library (28 Sep to 2 Oct 2026)"
     ],
     "detail": {
-     "title": "Why the umbrella, and how it went up",
+     "title": "The umbrella, and putting it up",
      "body": [
-      "The forecast for the exhibition week called for rain. Outdoors, the piece had to be protected, and instead of throwing a cover over it I wanted to use that condition to strengthen the theme. So I added an umbrella.",
-      "The next question was what the symbiosis of anxiety and focus looks like at a university. I read students' anxiety as pressure, and put that pressure on top of the umbrella.",
       "In the end it never rained. The umbrella became the centre of the piece less as shelter than as the place where the pressure sits.",
       "The hardest part was installing that umbrella. With the heels, belt, clock hands and chiffon on top it became very heavy, its centre of gravity was uneven, and it had to be fixed high up.",
-      "So I used wire and made the most of the site. The vine-covered arch tunnel became the support, and the umbrella was wired to it. The third reason for choosing the site, a place to hold an umbrella without harming any plants, turned out to be the solution."
+      "So I used the vine-covered arch tunnel as the support and wired the umbrella to it. The third reason for choosing the site became the solution."
      ]
     }
    }
