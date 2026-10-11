@@ -164,7 +164,7 @@ window.PROJECTS = [
       "l": "오프라인 홍보 시리즈 도입 전후 릴스 조회수"
      }
     ],
-    "need": "본사 계정이 아니라, 지사장 한 명이 새로 연 가맹 지사의 계정이었다. 인스타그램도 유튜브도 블로그도 없고, 네이버 지도 등록조차 안 된 0의 상태였다. 학원은 보통 검색으로 고르는데, 이 지사는 검색해도 나오지 않았다.",
+    "need": "본사 계정이 아니라, 지사장 한 명이 새로 연 가맹 지사의 채널을 맡았다. 인스타그램도 유튜브도 블로그도 없고, 네이버 지도 등록조차 안 된 0의 상태였다. 학원은 보통 검색으로 고르는데, 이 지사는 검색해도 나오지 않았다.",
     "action": [
      "주 타깃인 40~50대 여성 학부모가 실제로 보는 릴스와, 잘 되는 학원 계정·동종업계 브랜드를 먼저 분석해 제작 규칙을 세움: 큰 글씨, 느린 속도, 세련된 미감보다 \"잘 보이는 것\"",
      "브랜드 캐릭터 '미래'를 실존 인물처럼 연출하고, 2D 캐릭터를 AI로 3D화해 움직이는 형태로 릴스에 투입",
@@ -197,7 +197,7 @@ window.PROJECTS = [
       "l": "Reel views before / after the street-promo series"
      }
     ],
-    "need": "Not the head office account but a franchise branch one director had just opened, starting from zero: no Instagram, YouTube or blog, not even a Naver Map listing. People usually find an academy by searching, and this branch did not show up.",
+    "need": "Not the head office's account but the channels of a newly opened franchise branch, starting from zero: no Instagram, YouTube or blog, not even a Naver Map listing. People usually find an academy by searching, and this branch did not show up.",
     "action": [
      "Started by analysing the Reels that the core audience, mothers in their 40s to 50s, actually watch, plus the best-performing academy accounts and brands in the category, and turned that into production rules: large type, slower pacing, \"clearly visible\" over \"beautifully designed\"",
      "Treated the brand character Mirae as a real personality, and used AI to turn the 2D character into a moving 3D one for Reels",
@@ -281,7 +281,7 @@ window.PROJECTS = [
    {
     "title": {
      "ko": "10분 본편",
-     "en": "THE 10 MINUTE FILM"
+     "en": "THE 10-MINUTE FILM"
     },
     "images": [
      {
@@ -332,7 +332,7 @@ window.PROJECTS = [
     ],
     "note": {
      "ko": "유튜브에 올린 10분 내러티브 영상",
-     "en": "Stills from the 10 minute YouTube film"
+     "en": "Stills from the 10-minute YouTube film"
     }
    }
   ],
@@ -615,7 +615,7 @@ window.PROJECTS = [
      "title": "무엇을 말하고 싶었나",
      "body": [
       "감정은 무너질 수 있고, 그것도 받아들여야 한다. 약으로 억제하고 숫자로 관리한다고 해서 감정이 지워지지는 않는다.",
-      "그런 메시지로, 보는 사람에게 위로를 건네고 싶었다."
+      "이 메시지로 보는 사람에게 위로를 건네고 싶었다."
      ]
     }
    },
@@ -2006,7 +2006,7 @@ window.PROJECTS = [
     "action": [
      "어르신 한 분을 전담해, 수업에서 정해진 횟수보다 더 자주 만나 인터뷰",
      "첫 자리에서 원하는 옷을 묻지 않고 일상과 취향을 먼저 이야기하며 관계를 쌓음. 편해지신 뒤에 나온 말들에서 진짜 원하시는 것이 드러났고, 그 말들을 설계 기준으로 삼음",
-     "원단은 직접 고르시게 함, 마음에 드는 것을 고르신 뒤 그 선택을 디자인에 반영",
+     "원단은 직접 고르시게 하고, 고르신 원단을 디자인에 반영",
      "관찰한 몸의 특징을 패턴과 부자재에 반영: 등이 굽으신 점과 걸으실 때 팔이 뒤로 향하는 점에 맞춰 코트 패턴을 잡고, 입었을 때 어깨 비대칭을 보완하는 어깨 패드를 넣음",
      "완성한 옷을 어르신이 직접 입고 시니어 런웨이에 오름"
     ],
@@ -2560,7 +2560,7 @@ window.PROJECTS = [
       "하지만 전통 모티프만 늘어놓으면 재미가 없을 것 같았다. 한국의 전통과 지금의 서울을 함께 담고 싶었고, 도시의 역동적인 스트리트 댄스를 떠올렸다. 그래서 비보잉 실루엣을 기와, 호랑이, 무궁화, 전통춤 모티프와 한 화면에 놓았다."
      ]
     },
-    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
+    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 기법(프린트, 직조, 니트)가 달라진다.",
     "result": [
      "교수님과 동기들에게서 비보잉 실루엣이 들어간 패턴이 역동적이면서도 전통 모티프가 잘 드러난다는 평을 받음",
      "텍스처 매핑 아이디어가 참신하다는 평을 받음",
@@ -2586,7 +2586,7 @@ window.PROJECTS = [
       "Traditional motifs on their own felt flat, though. I wanted Korean tradition and today’s Seoul in the same frame, and thought of the energy of street dance. So I put breakdancer silhouettes in the same prints as roof tiles, tigers, mugunghwa and traditional dance."
      ]
     },
-    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
+    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and technique (print, weave, knit) change from project to project.",
     "result": [
      "Professors and classmates said the patterns with breakdancer silhouettes felt dynamic while the traditional motifs still came through clearly",
      "The texture mapping ideas were called fresh",
@@ -2852,14 +2852,14 @@ window.PROJECTS = [
     "title": "Woven Textile Design 〈Moonlit Thread〉",
     "cat": "직조 텍스타일 · 미국 교환학생 · 개인 · 2025.08~12",
     "headline": "구미호와 달토끼, 두 한국 설화를 하나의 직물 컬렉션으로 엮었다.",
-    "need": "프린트 텍스타일과 같은 학기에 진행한 프로젝트로, 같은 이유로 한국 모티프를 골랐다. 이번에는 한국 설화를 낯설지 않고 끌리는 직물로 풀어야 했다.",
+    "need": "프린트 텍스타일과 같은 학기 프로젝트라, 미국인 교수님과 동기들 앞에서 한국을 담아 차별성을 가지려고 한국 모티프를 골랐고, 그중에서도 한국 설화를 낯설지 않고 끌리는 직물로 풀어야 했다.",
     "action": [
      "한국 설화의 구미호와 달토끼를 주 모티프로, 모란과 잎을 배경으로 잡고 'Moonlit Thread'라는 이름으로 묶음",
      "Procreate로 모티프를 그리고 포토샵으로 다듬은 뒤, NedGraphics로 가져와 네 가지 패턴으로 전개 (하나는 엔지니어드 패턴)",
      "DesignScope Victor에 적용해 직물로 짰을 때의 모습을 확인하고, 다른 컬러웨이도 전개",
      "포토샵 텍스처 매핑으로 영화 속 의상과 파우치에 입혀 봄"
     ],
-    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
+    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 기법(프린트, 직조, 니트)가 달라진다.",
     "result": [
      "구미호 꼬리에서 잎이 퍼져 나가는 패턴이 참신하다는 평을 받았고, 구미호라는 한국 설화 속 동물을 이 작업으로 처음 알게 됐다며 재미있고 잘 표현됐다는 반응을 얻음",
      "엔지니어드 패턴이 구조를 잘 반영해 디자인됐고, 모티프 크기가 다양하면서도 균형 있게 어우러진다는 평을 받음",
@@ -2870,14 +2870,14 @@ window.PROJECTS = [
     "title": "Woven Textile Design (Moonlit Thread)",
     "cat": "Woven Design · Exchange in the US · Solo · Aug to Dec 2025",
     "headline": "Two Korean folk tales, the nine-tailed fox and the moon rabbit, woven into one textile collection.",
-    "need": "Made in the same exchange semester as the printed textiles, with Korean motifs for the same reason. This time Korean folklore had to become cloth that felt familiar and appealing.",
+    "need": "Made in the same exchange semester as the printed textiles: to stand out in front of my American professors and classmates by bringing Korea in, I chose Korean motifs again, and this time Korean folklore had to become cloth that felt familiar and appealing.",
     "action": [
      "Took the fox and the moon rabbit from Korean folk tales as the motifs, with peonies and leaves behind them, and tied them together as 'Moonlit Thread'",
      "Drew the motifs in Procreate, refined them in Photoshop, then brought them into NedGraphics and built four patterns (one of them engineered)",
      "Ran them through DesignScope Victor to see them as woven cloth, and added another colourway",
      "Mapped the patterns onto film costumes and a pouch in Photoshop"
     ],
-    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
+    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and technique (print, weave, knit) change from project to project.",
     "result": [
      "The leaves spreading from the gumiho's tail were called fresh, and people meeting the gumiho of Korean folklore for the first time found it fun and well drawn",
      "The engineered pattern was said to reflect the structure well, with motifs in varied sizes that stayed balanced",
@@ -3085,7 +3085,7 @@ window.PROJECTS = [
      "4가지 색만으로도 학의 날개가 아이보리색에서 점점 진해지는 그라데이션처럼 보이고 색이 더 섞여 보이도록, NedGraphics에서 여러 색을 조합해 하나의 모티프로 만들어 사용",
      "가디건 도식화 이미지는 포토샵과 일러스트레이터로, 대표 이미지는 AI로 제작"
     ],
-    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 소재(프린트, 직조, 니트)가 달라진다.",
+    "relatedNote": "프린트, 직조, 니트 세 프로젝트 모두 NedGraphics 같은 디지털 툴로 작업하면서 한국의 전통 모티프를 가져온 시리즈다. 미국 교환학생 수업에서 미국인 교수님과 동기들 앞에 발표했다. 프로젝트마다 모티프, 색감, 기법(프린트, 직조, 니트)가 달라진다.",
     "result": [
      "4가지 색 제한 안에서 색을 조합해 새 모티프로 만든 방식이 좋고, 그 덕에 학의 날개가 잘 표현됐다는 평을 받음",
      "피드백을 받고 디자인끼리 통일감을 맞춤: 붉은색과 아이보리 비율을 조정하고, 붉은색이 과한 스트라이프는 원·학·청자 모티프로 다시 구성"
@@ -3103,7 +3103,7 @@ window.PROJECTS = [
      "With only four colours, combined several of them into single motifs in NedGraphics, so the crane wings could shade from ivory to darker like a gradient and the colours would blend more",
      "Made the cardigan flats in Photoshop and Illustrator, and the cover image with AI"
     ],
-    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and material (print, weave, knit) change from project to project.",
+    "relatedNote": "All three, printed, woven and knit, were made with digital tools like NedGraphics and bring in traditional Korean motifs. I presented them in exchange classes in the US, to American professors and classmates. The motifs, colours and technique (print, weave, knit) change from project to project.",
     "result": [
      "Combining the four set colours into new motifs was praised, and with it the crane wings came out well",
      "After feedback, pulled the designs together: rebalanced red and ivory, and rebuilt the red-heavy stripe with circles, cranes and celadon motifs"
@@ -3406,7 +3406,7 @@ window.PROJECTS = [
     "need": "맥시멀리즘 인테리어 텍스타일을 만드는 과제였다. 그냥 많이 넣기만 하면 방이 산만해 보인다. 패턴과 색을 겹겹이 쌓더라도, 일부러 그렇게 고른 것처럼 보여야 했다.",
     "action": [
      "시장 조사를 맡아 뉴 맥시멀리즘 인테리어 트렌드를 조사",
-     "브랜드 3곳을 조사해, 빈티지 식물 그림을 모아 갤러리처럼 꾸미는 방식에서 여러 보태니컬 패턴을 한 테마로 묶을 근거를, 진한 바탕색으로 식물 모티프를 살리는 방식에서 네이비·테라코타·그린 팔레트의 근거를 얻음",
+     "브랜드 3곳을 조사해, 그중 빈티지 식물 그림을 모아 갤러리처럼 꾸미는 방식에서 여러 보태니컬 패턴을 한 테마로 묶을 근거를, 진한 바탕색으로 식물 모티프를 살리는 방식에서 네이비·테라코타·그린 팔레트의 근거를 얻음",
      "팀원 각자 무드보드를 만든 뒤, 하나로 합치는 방법을 찾아 방향을 맞춤",
      "팀 4명이 함께 보태니컬과 기하학 모티프를 하나의 컬러 스토리로 묶어 컨셉에 맞는 패턴 후보 16종을 개발",
      "컬러 팔레트는 팀원 한 명과 함께 최종 확정하고, Procreate 텍스처 매핑으로 패턴 선정과 배치를 바꾼 방 시안을 여러 개 만들어 비교",
@@ -3511,7 +3511,7 @@ window.PROJECTS = [
     "need": "한복 구성을 배우며, 서양 의복과 다른 한복만의 패턴 제작과 재단 방식에 끌렸다. 전통 요소는 그대로 두고 아주 살짝만 현대적인 느낌을 더한 한복을 만들고 싶었다.",
     "action": [
      "전통 한복의 형태를 기본으로, 내 사이즈에 맞춰 저고리와 치마를 디자인",
-     "치마 기장을 전통 한복보다 짧게 하고, 저고리는 회색 꽃과 잎 무늬가 들어간 비치는 흰 원단으로 만들어 현대적인 느낌을 살짝 더함",
+     "현대적인 느낌을 살짝 더함: 치마 기장을 전통 한복보다 짧게 하고, 색은 흰색·회색·연분홍으로 줄여 붉은 치마허리 하나만 포인트로 둠. 저고리는 끝동 같은 다른 색 장식 없이, 회색 꽃과 잎 무늬가 들어간 흰 원단 하나로 만듦",
      "전통 손바느질 기법을 익혀 가며 직접 제작",
      "비치면서도 형태가 잡히는 오간자의 특성을 살려 소재로 사용"
     ],
@@ -3526,7 +3526,7 @@ window.PROJECTS = [
     "need": "Learning how hanbok is constructed, I was drawn to its pattern-making and cutting, which differ from Western garment-making. I wanted a hanbok that keeps the traditional elements, with only a subtle contemporary touch.",
     "action": [
      "Designed the jeogori and skirt to my own size, starting from the traditional hanbok form",
-     "Made the skirt shorter than a traditional one and made the jeogori in a sheer white fabric with a grey flower-and-leaf print, for a light contemporary touch",
+     "For a light contemporary touch: made the skirt shorter than a traditional one, kept the colours to white, grey and pale pink with the red waistband as the only accent, and made the jeogori from one white fabric with a grey flower-and-leaf print, without contrasting cuffs or trims",
      "Made it myself, learning traditional hand-sewing as I went",
      "Used organza for the way it is sheer yet holds its shape"
     ],
@@ -3613,7 +3613,7 @@ window.PROJECTS = [
     ],
     "note": "2025 서울교통공사 유튜브 영상 공모전 출품작. 2인 협업.",
     "result": [
-     "서울 지하철 홍보영상 공모전 출품 (2025)"
+     "2025 서울교통공사 유튜브 영상 공모전 출품"
     ]
    },
    "en": {
@@ -3628,7 +3628,7 @@ window.PROJECTS = [
     ],
     "note": "Entry for the 2025 Seoul Metro YouTube Video Contest. Two-person collaboration.",
     "result": [
-     "Entered in a Seoul subway promo film contest (2025)"
+     "Entered in the 2025 Seoul Metro YouTube Video Contest"
     ]
    }
   },
@@ -4085,7 +4085,7 @@ window.PROJECTS = [
     "headline": "취향이 다 다른 세 사람이 모였다. 각자 원하는 방향을 한 작업의 다른 부분에 나눠 담았다.",
     "need": "패션 일러스트레이션은 개인의 취향이 잘 드러나는 작업이다. 두 작업 모두 세 사람이 함께해서, 처음에는 의견을 하나로 합치기가 쉽지 않았다.",
     "action": [
-     "우리가 정한 컨셉과 무드보드를 객관적인 기준으로 가운데 두고, 서로의 장점을 합치는 방법을 고민",
+     "우리가 정한 컨셉과 무드보드를 공동의 기준으로 가운데 두고, 서로의 장점을 합치는 방법을 고민",
      "〈고려청자의 우아함과 금속 나무〉: 우아하고 세련된 느낌, 금속의 날카롭고 반사되는 질감, 전통적인 느낌으로 의견이 갈리자 실루엣은 우아하게, 텍스처는 메탈릭하게, 배경에는 전통 모티프를 넣고 각자 한 부분씩 맡자고 제안. 역할이 나뉘어 효율적으로 진행됨",
      "두 번째 작업(Peggy Gou와 해파리, 바다거북, 조개 질감 같은 바다 요소에서 출발): 15개 룩을 전개할 수 있어서 직선적인 느낌, 우아한 곡선 같은 각자의 방향을 패턴과 소재에 나눠 적용하고, 그 조합을 룩마다 조금씩 바꿔 컬렉션을 완성",
      "두 번째 작업은 일러스트와 함께 도식화까지 그림"
@@ -4101,7 +4101,7 @@ window.PROJECTS = [
     "headline": "Three people with very different tastes. Each person’s direction went into a different part of the work.",
     "need": "Fashion illustration shows personal taste clearly. Both works were made by three people, so bringing the ideas together was not easy at first.",
     "action": [
-     "Put the concept and mood board we had agreed on in the middle as the objective standard, and worked out how to combine each person’s strengths",
+     "Put the concept and mood board we had agreed on in the middle as our shared standard, and worked out how to combine each person’s strengths",
      "‘The Grace of Goryeo Celadon and the Metal Tree’: when we split between elegance, the sharp reflective texture of metal and a traditional feel, I proposed elegance in the silhouette, metal in the texture and traditional motifs in the background, one part each. Splitting the roles made the work efficient",
      "The second work (starting from Peggy Gou and the sea: jellyfish, sea turtles, shell textures): with 15 looks to develop, each person’s direction, from straight lines to elegant curves, went into pattern or material, and the combination shifted a little from look to look",
      "For the second work we drew flat drawings as well as the illustrations"
@@ -4790,7 +4790,7 @@ window.PROJECTS = [
     "cat": "야외 설치 · 예술주간 · 2026.09.28~10.02",
     "headline": "Art2Wear에서 입었던 꽃, 가방, 치마를 가져와, 캠퍼스 한가운데 우산 아래 다시 세웠다.",
     "metrics": [],
-    "need": "Art2Wear에서 입고 걸었던 옷은 움직이는 사람이 전제였다. 예술주간은 관객이 다가와서 보는 야외 설치다. 같은 긴장을 몸 없이 세워 두어야 했고, 전시 기간 예보에는 비 소식까지 있었다. 작품을 비로부터 지킬 장치가 필요했지만, 그 장치가 주제를 가리지 않고 오히려 살리기를 바랐다.",
+    "need": "Art2Wear에서 입고 걸었던 옷은 움직이는 사람이 전제였다. 예술주간은 관객이 다가와서 보는 야외 설치다. 같은 긴장을 입은 사람 없이 세워 두어야 했고, 전시 기간 예보에는 비 소식까지 있었다. 작품을 비로부터 지킬 장치가 필요했지만, 그 장치가 주제를 가리지 않고 오히려 살리기를 바랐다.",
     "action": [
      "Art2Wear 작품에서 깨진 접시로 만든 꽃, 뜨개 가방, 치마를 가져와 일부는 바꾸고 새 오브제를 더해 마네킹 위에 재구성",
      "장소는 세 가지 기준으로 선정: 유동인구가 많은 관정도서관 앞, 치마의 나뭇가지와 어우러질 진짜 덩굴이 있는 곳, 자연을 훼손하지 않고 우산을 고정할 수 있는 곳",
@@ -4815,7 +4815,7 @@ window.PROJECTS = [
     "cat": "Outdoor Installation · Arts Week · 28 Sep to 2 Oct 2026",
     "headline": "I brought the flowers, bag and skirt over from my Art2Wear piece and stood them up again under an umbrella, in the middle of campus.",
     "metrics": [],
-    "need": "The Art2Wear garment assumed a moving body. Arts Week is an outdoor installation people walk up to: the same tension had to stand without a body, and the forecast for the week called for rain. The piece needed protecting from the rain, and I wanted that protection to strengthen the theme rather than hide it.",
+    "need": "The Art2Wear garment assumed a moving body. Arts Week is an outdoor installation people walk up to: the same tension had to stand without anyone wearing it, and the forecast for the week called for rain. The piece needed protecting from the rain, and I wanted that protection to strengthen the theme rather than hide it.",
     "action": [
      "Took the broken-plate flowers, the knitted bag and the skirt from the Art2Wear piece, changed some parts, added new objects and rebuilt them on a mannequin",
      "Chose the site on three counts: heavy foot traffic in front of Kwanjeong Library, real vines for the branches on the skirt to blend into, and a place to hold an umbrella without harming any plants",

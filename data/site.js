@@ -34,16 +34,16 @@ window.SITE = {
     defaultLang: 'en',
     lines: {
       ko: ['안녕하세요', '이연서입니다.', '저는 사람들의 눈길이 어디에 머무르는지', '마음이 어디서 움직이는지 읽고', '이를 비주얼 언어로 설계하여', '벅차오르는 순간을 만들고자 합니다.'],
-      en: ['Hello,', "I'm Yeonseo Lee.", 'I read where eyes linger,', 'where hearts move,', 'and design it into visual language', 'to make moments that stay.'],
+      en: ['Hello,', "I'm Yeonseo Lee.", 'I read where eyes linger,', 'where hearts move,', 'and design it into visual language', 'to make moments that move people.'],
     },
     /* the full paragraph at the end — same lines, with the commas the typed version leaves out */
     finalLines: {
       ko: ['안녕하세요', '이연서입니다.', '저는 사람들의 눈길이 어디에 머무르는지,', '마음이 어디서 움직이는지 읽고,', '이를 비주얼 언어로 설계하여', '벅차오르는 순간을 만들고자 합니다.'],
-      en: ['Hello,', "I'm Yeonseo Lee.", 'I read where eyes linger,', 'where hearts move,', 'and design it into visual language', 'to make moments that stay.'],
+      en: ['Hello,', "I'm Yeonseo Lee.", 'I read where eyes linger,', 'where hearts move,', 'and design it into visual language', 'to make moments that move people.'],
     },
     paragraph: {
       ko: '안녕하세요, 이연서입니다. 저는 사람들의 눈길이 어디에 머무르는지, 사람들의 마음이 어디서 움직이는지 읽고, 이를 비주얼 언어로 설계하여 벅차오르는 순간을 만들고자 합니다.',
-      en: "Hello, I'm Yeonseo Lee. I read where eyes linger and where hearts move, and design it into visual language to make moments that stay.",
+      en: "Hello, I'm Yeonseo Lee. I read where eyes linger and where hearts move, and design it into visual language to make moments that move people.",
     },
     keywords: [
       { key: 'insight', text: { ko: '사람들의 눈길이 어디에 머무르는지, 사람들의 마음이 어디서 움직이는지 읽고', en: 'read where eyes linger and where hearts move' }, fragments: { ko: ['저는 사람들의 눈길이 어디에 머무르는지,', '마음이 어디서 움직이는지 읽고,'], en: ['I read where eyes linger,', 'where hearts move,'] }, branch: 'INSIGHT', tag: 'INSIGHT' },
@@ -82,7 +82,7 @@ window.SITE = {
       {
         claim: { ko: '주어진 조건 안에서 방법을 찾고, 결과물까지 직접 만듭니다.', en: 'I find a way inside the constraints, and make the result myself.' },
         keyword: { ko: '결과물까지 직접', en: 'make the result myself' },
-        evidence: { ko: '예술주간 야외 전시는 비 예보가 있어, 우산을 작품의 일부로 넣었다. 데님과 카프탄은 원단에 여유가 없어 봉제를 한 번밖에 할 수 없었다. 데님은 AI로 여러 디자인 시안을 먼저 만들어 방향을 정했고, 공모전에서 입선했다. 카프탄은 완성한 디자인을 AI로 모델에게 입혀 본 뒤 재단했고, 윌슨 컬리지 컬렉션 영구 소장작으로 선정됐다. Art2Wear는 다른 참가자와 주제가 겹쳐 \'불안과 집중의 공생\'으로 주제를 바꾸고, 직접 깨뜨린 도자기 접시로 꽃을 만들어 의상에 더했다.', en: 'With rain forecast for an outdoor show, I worked an umbrella into the piece (Arts Week). For the denim and the kaftan there was no spare fabric, so each could be sewn only once. For the denim I made several design drafts with AI first and chose a direction, and it won an Honorable Mention. For the kaftan I used AI to see the finished design on a model before cutting, and it was selected for the Wilson College Collection. At Art2Wear my theme overlapped with other entrants, so I changed it to the symbiosis of anxiety and focus, and made flowers from plates I broke myself to add to the garment.' },
+        evidence: { ko: '예술주간 야외 전시는 비 예보가 있어, 우산을 작품의 일부로 넣었다. 데님과 카프탄은 원단에 여유가 없어 봉제를 한 번밖에 할 수 없었다. 데님은 AI로 여러 디자인 시안을 먼저 만들어 방향을 정했고, 공모전에서 입선했다. 카프탄은 완성한 디자인을 AI로 모델에게 입혀 본 뒤 재단했고, 윌슨 컬리지 컬렉션 영구 소장작으로 선정됐다. Art2Wear는 다른 참가자와 주제가 겹쳐 \'불안과 집중의 공생\'으로 주제를 바꾸고, 직접 깨뜨린 도자기 접시로 꽃을 만들어 의상에 더했다.', en: 'With rain forecast for the outdoor Arts Week show, I worked an umbrella into the piece. For the denim and the kaftan there was no spare fabric, so each could be sewn only once. For the denim I made several design drafts with AI first and chose a direction, and it won an Honorable Mention. For the kaftan I used AI to see the finished design on a model before cutting, and it was selected for the Wilson College Collection. At Art2Wear my theme overlapped with other entrants, so I changed it to the symbiosis of anxiety and focus, and made flowers from plates I broke myself to add to the garment.' },
         media: 'img/strength-2-art2wear-making.jpg', /* art2wear/30: making it by hand (연서, 2026-10-02) */
         link: 'art2wear',
       },
@@ -97,7 +97,7 @@ window.SITE = {
 
     /* EXPERIENCE above AWARDS (연서, 2026-10-09): the three internships and MiraeN, as the timeline has them */
     experience: [
-      { year: '2026.05~08', label: { ko: '연구실 인턴', en: 'Research Intern' }, title: { ko: 'The Nonwovens Institute, NC State', en: 'The Nonwovens Institute, NC State' }, link: null },
+      { year: '2026.05~08', label: { ko: '연구소 인턴', en: 'Research Intern' }, title: { ko: 'The Nonwovens Institute, NC State', en: 'The Nonwovens Institute, NC State' }, link: null },
       { year: '2026.01', label: { ko: '쇼룸 인턴 (마이애미)', en: 'Showroom Intern (Miami)' }, title: { ko: 'BRIDGE SHOWROOM', en: 'BRIDGE SHOWROOM' }, link: null },
       { year: '2025.11~2026.05', label: { ko: '마케팅 & 디자인 인턴 (원격, 미국)', en: 'Marketing & Design Intern (remote, US)' }, title: { ko: 'Missions with Monty', en: 'Missions with Monty' }, link: null },
       { year: '2025.01~08', label: { ko: '디자이너 & 마케터', en: 'Designer & Marketer' }, title: { ko: '미래엔수학 지사 (5개 구)', en: 'MiraeN Math (5-district branch)' }, link: 'miraen' },
@@ -151,7 +151,7 @@ window.SITE = {
       items: [
         { date: '2023.02', until: '2024.02', major: false, link: null,
           title: { ko: '밴드 \'단풍\' · \'용감한 쿠키\': 드럼', en: 'Bands \'Danpung\' & \'Brave Cookie\': Drums' },
-          desc: { ko: '두 밴드에서 드럼을 맡아 다섯 번 무대에 올랐다. 한 번은 2000년대 드라마 OST 메들리로 무대 전체를 구성했다. 곡 사이에 드라마 대사를 넣고 다 같이 교복을 입어, 연주가 아니라 하나의 콘셉트로 보이게 만들었다. 2023.02~2024.02', en: 'Five stages across two bands. For one I built the whole set as a 2000s drama-OST medley (dialogue between songs, the band in school uniforms) so it read as a concept, not a performance. Feb 2023 to Feb 2024' } },
+          desc: { ko: '두 밴드에서 드럼을 맡아 다섯 번 무대에 올랐다. 한 번은 2000년대 드라마 OST 메들리로 무대 전체를 구성했다. 곡 사이에 드라마 대사를 넣고 다 같이 교복을 입어, 단순한 연주가 아니라 하나의 콘셉트로 보이게 만들었다. 2023.02~2024.02', en: 'Five stages across two bands. For one I built the whole set as a 2000s drama-OST medley (dialogue between songs, the band in school uniforms) so it read as one concept, not just a set of songs. Feb 2023 to Feb 2024' } },
         { date: '2023.06', until: '2024.03', major: false, link: null,
           title: { ko: 'Imageband 영상제작 동아리: 예능팀 기획 · 드라마팀 조연출', en: 'Imageband Film Club: Variety planning & Drama AD' },
           desc: { ko: '예능팀에서 서바이벌 두뇌게임 쇼 콘셉트를 개발하고 게임 시뮬레이션·세트 디자인·초벌 편집에 참여. 드라마팀에서는 조연출로 배우 오디션과 현장 촬영을 지원. 2023.06~2024.03', en: 'Developed a survival brain-game show concept and worked on game simulation, set design and first-pass editing. As AD on the drama team, supported actor auditions and shoots. Jun 2023 to Mar 2024' } },
@@ -181,10 +181,10 @@ window.SITE = {
           desc: { ko: 'After Effects로 로제 \'Toxic Till the End\' 뮤직비디오 티저를 3인이 나눠 만들고, 그중 중간 파트의 모션그래픽을 맡음. 2024.07~2025.06', en: 'Made the motion graphics for Rosé\'s \'Toxic Till the End\' music video teaser in After Effects with two others, splitting it in three; I made the middle part. Jul 2024 to Jun 2025' } },
         { date: '2024.09', until: '2024.12', major: true, link: 'senior-fit',
           title: { ko: '관악노인종합복지관 × 서울대 협업 패션쇼: 시니어핏', en: 'Gwanak Senior Welfare Center × SNU Fashion Show: Senior Fit' },
-          desc: { ko: '어르신 한 분을 전담해 수업에서 정해진 횟수보다 더 자주 만나 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 코트를 제작. 완성작으로 시니어 런웨이까지 진행했고, 대학신문 인터뷰 대상자로 선정. 2024.09~12', en: 'Paired one-to-one with a senior model, interviewed him more often than the class required and built a coat from his taste and body. Shown on the senior runway; interviewed by The SNU Newspaper. Sep to Dec 2024' } },
+          desc: { ko: '어르신 한 분을 전담해 수업에서 정해진 횟수보다 더 자주 만나 인터뷰하고, 취향과 신체적 특징을 그대로 설계 기준으로 삼아 코트를 제작. 어르신은 그 코트를 입고 시니어 런웨이에 오르셨다. 대학신문 인터뷰 대상자로 선정. 2024.09~12', en: 'Paired one-to-one with a senior model, interviewed him more often than the class required and built a coat from his taste and body. Shown on the senior runway; interviewed by The SNU Newspaper. Sep to Dec 2024' } },
         { date: '2024.11', major: true, link: 'clo3d',
           title: { ko: '입선: 제13회 국제 디지털 패션 공모전', en: 'Honorable Mention: 13th International Digital Fashion Contest' },
-          desc: { ko: '한국의류산업학회 주최, 공모전 주제는 \'Dopamine Dressing\'. 러닝 크루 문화를 즐기는 20대 후반 직장인 페르소나를 WGSN 트렌드 리포트로 설계하고, CLO 3D로 디자인부터 3D 시뮬레이션까지 단독 제작한 액티브웨어 컬렉션으로 입선. 2024.09~11', en: 'Hosted by the Korean Society for Clothing Industry, on the theme \'Dopamine Dressing\'. An activewear collection for a late-20s running-crew persona grounded in WGSN trend reports, designed and simulated solo in CLO 3D. Sep to Nov 2024' } },
+          desc: { ko: '한국의류산업학회 주최, 공모전 주제는 \'Dopamine Dressing\'. 러닝 크루 문화를 즐기는 20대 후반 직장인 페르소나를 정하고, WGSN 트렌드 리포트를 디자인 방향에 반영해 CLO 3D로 디자인부터 3D 시뮬레이션까지 단독 제작한 액티브웨어 컬렉션으로 입선. 2024.09~11', en: 'Hosted by the Korean Society for Clothing Industry, on the theme \'Dopamine Dressing\'. An activewear collection for a late-20s running-crew persona, with WGSN trend reports feeding the design direction, designed and simulated solo in CLO 3D. Sep to Nov 2024' } },
       ],
     },
     {
@@ -214,7 +214,7 @@ window.SITE = {
       items: [
         { date: '2026.01', major: false, link: null,
           title: { ko: 'BRIDGE SHOWROOM: 쇼룸 인턴 (마이애미)', en: 'BRIDGE SHOWROOM: Showroom Intern (Miami)' },
-          desc: { ko: '미국 하이엔드 패션 트레이드쇼에서 3일간 부스 운영과 상품 준비를 담당하고 현지 바이어·방문객을 영어로 응대. 완성된 제품과 비주얼이 바이어 앞에서 어떻게 소비되는지 현장에서 관찰. 2026.01.29~31', en: 'Three days running a booth at a US high-end fashion trade show, preparing product and handling buyers in English. Saw first-hand how finished product and visuals land in front of a buyer. 29 to 31 Jan 2026' } },
+          desc: { ko: '미국 하이엔드 패션 트레이드쇼에서 3일간 부스 운영과 상품 준비를 담당하고 현지 바이어·방문객을 영어로 응대. 완성된 제품과 비주얼이 바이어에게 어떻게 보이는지 현장에서 관찰. 2026.01.29~31', en: 'Three days running a booth at a US high-end fashion trade show, preparing product and handling buyers in English. Saw first-hand how finished product and visuals look to buyers. 29 to 31 Jan 2026' } },
         { date: '2026.01', until: '2026.04', major: true, link: 'art2wear',
           title: { ko: 'Art2Wear 2026 \'Tensed Symbiosis\': 웨어러블 아트 디자이너 & 런웨이 모델', en: 'Art2Wear 2026 \'Tensed Symbiosis\': Wearable Art Designer & Runway Model' },
           desc: { ko: '미국 교환 중 만든 작품. 접시를 직접 깨뜨려 꽃을 만들고 나뭇가지·청키한 실·인조진주·철사를 대비시킨 웨어러블 아트. NC State의 Gregg Museum of Art & Design 런웨이에 직접 입고 올랐다. 2026.01~04', en: 'Made during my exchange in the US: wearable art built from hand-broken ceramic flowers set against branches, chunky yarn, faux pearls and wire, worn on the runway at NC State’s Gregg Museum of Art & Design. Jan to Apr 2026' } },
@@ -222,7 +222,7 @@ window.SITE = {
           title: { ko: 'Engineered Kaftan: Wilson College Collection 영구 소장', en: 'Engineered Kaftan: Wilson College Collection (permanent)' },
           desc: { ko: '쇼팽 녹턴에서 출발한 엔지니어드 프린트 실크 카프탄. 패턴 3개와 레이아웃 3개로 배치를 실험해, 프린트가 옷 전체에서 하나의 구성으로 읽히도록 설계. 교수 추천으로 수업 대표로 출품돼 NC State Wilson College of Textiles Collection 영구 소장작으로 선정. 2026.01~04', en: 'An engineered-print silk kaftan that began with Chopin\'s Nocturnes. Three patterns and three layouts were tested in different placements so the print reads as one composition across the garment. Entered as the class representative on faculty recommendation and selected for permanent inclusion in the NC State Wilson College of Textiles Collection. Jan to Apr 2026' } },
         { date: '2026.05', until: '2026.08', major: true, link: null,
-          title: { ko: 'The Nonwovens Institute, NC State: 연구실 인턴', en: 'The Nonwovens Institute, NC State: Research Intern' },
+          title: { ko: 'The Nonwovens Institute, NC State: 연구소 인턴', en: 'The Nonwovens Institute, NC State: Research Intern' },
           desc: { ko: '언더아머(Under Armour)와 협력한 스판덱스 원사 샘플 테스트를 담당해 인장시험기로 신축성을 측정하고 무게도 재서 영어로 결과 보고. 크리스마스트리 농가용 부직포 보호 커버의 재단 패턴을 설계하고 열접합으로 샘플 제작. 2026.05.11~08.04', en: 'Ran spandex yarn tests for a project with Under Armour (stretch on a tensile tester, plus weight), reported in English. Designed the cutting pattern for nonwoven tree-farm covers and produced heat-bonded samples. 11 May to 4 Aug 2026' } },
       ],
     },
@@ -288,7 +288,7 @@ window.SITE = {
     {
       label: { ko: '인공지능예술실습 · 2026 가을학기', en: 'Deep Learning for Artists · Fall 2026' },
       claim: { ko: '이미지 AI의 작동 원리를 배우고, 그 과정 자체를 작업의 재료로 쓰는 법을 익히고 있습니다.', en: 'Learning how image AI works inside, and how to use that process itself as material for my work.' },
-      evidence: { ko: '툴 사용법이 아니라 작동 원리를 배우고, 배운 원리는 그날 수업 안에 직접 실험으로 옮겨 영상과 이미지로 만든다. 미드저니로 만든 얼굴 이미지로 PyTorch에서 GAN을 처음부터 학습시켜 latent travel 영상을 만들었고, 클라우드 GPU를 빌려 사람 얼굴을 학습한 StyleGAN3를 내가 직접 짜고 촬영한 직조 원단 사진 23장으로 파인튜닝했다. 15분 남짓한 학습 동안 얼굴이 실의 결에 덮이며 원단이 되어 간다. 완성된 결과보다 얼굴도 원단도 아닌 그 중간 상태가 더 흥미로운 이미지였다.', en: 'The class teaches how image AI works rather than how to use the tools, and whatever we learn, I turn into an experiment in the same class and make it into video and images. I trained a GAN from scratch in PyTorch on face images I made in Midjourney and made a latent travel video. Then I rented a cloud GPU and fine-tuned StyleGAN3, pretrained on human faces, on 23 photos of fabric I wove and shot myself. Over about fifteen minutes of training, the faces are covered by the grain of the thread and turn into cloth. More interesting than the finished result was the state in between, neither face nor fabric.' },
+      evidence: { ko: '툴 사용법이 아니라 작동 원리를 배우고, 배운 원리는 그날 수업 안에 직접 실험으로 옮겨 영상과 이미지로 만든다. 미드저니로 만든 얼굴 이미지로 PyTorch에서 GAN을 처음부터 학습시켜 latent travel 영상을 만들었고, 클라우드 GPU를 빌려 사람 얼굴을 학습한 StyleGAN3를 내가 직접 짜고 촬영한 직조 원단 사진 23장으로 파인튜닝했다. 15분 남짓한 학습 동안 얼굴이 실의 결에 덮이며 원단이 되어 간다. 완성된 결과보다, 얼굴도 원단도 아닌 그 중간 상태의 이미지가 더 흥미로웠다.', en: 'The class teaches how image AI works rather than how to use the tools, and whatever we learn, I turn into an experiment in the same class and make it into video and images. I trained a GAN from scratch in PyTorch on face images I made in Midjourney and made a latent travel video. Then I rented a cloud GPU and fine-tuned StyleGAN3, pretrained on human faces, on 23 photos of fabric I wove and shot myself. Over about fifteen minutes of training, the faces are covered by the grain of the thread and turn into cloth. More interesting than the finished result was the state in between, neither face nor fabric.' },
       /* 연서's own run (week 4): every training image was made in Midjourney, so no real faces */
       media: [ /* 연서's order (2026-10-07): the two latent travel videos first (fabric, then face GAN), the StyleGAN3 grid last */
         { video: 'images/now/weave-travel.mp4', poster: 'images/now/weave-travel.jpg', caption: { ko: 'latent travel · 파인튜닝 중간 단계 모델', en: 'latent travel · a model midway through fine-tuning' } },

@@ -59,6 +59,33 @@ function justifyGallery(gallery, rowTarget = 0) {
   layout();
 }
 
+/* 2026-10-11 (연서: project photos appear slowly): a page asked for every photo at once, so they all shared the
+   connection and arrived in random order, the first rows often last. Photos now go out in page order, a few at a
+   time; the hero still goes at once. A photo whose page was replaced before its turn is skipped. */
+const IMAGE_SLOTS = 4;
+const imageQueue = [];
+let imageActive = 0;
+let imagePumpQueued = false;
+function pumpImages() {
+  imagePumpQueued = false;
+  while (imageActive < IMAGE_SLOTS && imageQueue.length) {
+    const { image, src } = imageQueue.shift();
+    if (!image.isConnected) continue;
+    imageActive += 1;
+    let released = false;
+    const release = () => { if (released) return; released = true; imageActive -= 1; pumpImages(); };
+    image.addEventListener('load', release, { once: true });
+    image.addEventListener('error', release, { once: true });
+    window.setTimeout(release, 12000); /* a stalled photo never holds a slot for long */
+    image.src = src;
+  }
+}
+function queueImage(image, src) {
+  imageQueue.push({ image, src });
+  /* after the page has been put together, so the photos are in the document when their turn comes */
+  if (!imagePumpQueued) { imagePumpQueued = true; window.setTimeout(pumpImages, 0); }
+}
+
 function createMedia(source, label, className, alt, eager = false) {
   const figure = document.createElement('figure');
   figure.className = className;
@@ -102,7 +129,7 @@ function createMedia(source, label, className, alt, eager = false) {
     image.alt = alt;
     image.addEventListener('load', () => figure.classList.add('has-image'), { once: true });
     image.addEventListener('error', () => figure.classList.remove('has-image'), { once: true });
-    image.src = normalizeSource(source);
+    if (eager) image.src = normalizeSource(source); else queueImage(image, normalizeSource(source));
     figure.append(image);
     if (window.REVIEW_LABELS) {
       /* review builds only: show the file id so images can be named for removal */

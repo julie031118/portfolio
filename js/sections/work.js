@@ -343,7 +343,10 @@ async function createRing(section, projects, lang, onDispose) {
        The fit is asymmetric now: the ring's real top and bottom are fitted into the band between the nav and
        the bottom edge, and the view is shifted to centre it (2026-10-02: everything reads larger). */
     const topInset = (Number.parseFloat(cssColor('--nav-height')) || 56) + 12;
-    const bottomInset = 14;
+    /* 2026-10-11 (연서: the note under the ring overlapped it): the fit now stops above the sound note */
+    const note = section.querySelector('.work-sound-note');
+    const noteTop = note && getComputedStyle(note).position === 'absolute' ? note.getBoundingClientRect().top - rect.top : Infinity;
+    const bottomInset = Number.isFinite(noteTop) && noteTop > 0 && noteTop < height ? Math.max(14, Math.round(height - noteTop + 10)) : 14;
     const band = Math.max(120, height - topInset - bottomInset);
     const halfBand = (h) => ((h.top - h.bottom) / 2) * (height / band); /* the half-height the band needs, in tan units */
     /* stretch the ellipse sideways until the ring is as wide as the stage allows (the height sets the scale) */
@@ -689,6 +692,35 @@ export function renderWork(lang) {
     setupObserver();
   }
   mount();
+
+  /* 2026-10-11 (연서: the 3D object and the card photos show up late): the ring only began fetching three.js,
+     the object and the card photos when SELECTED came near, after the intro. They are now fetched while the
+     intro is being read, in idle moments, so the ring is ready when it is reached. */
+  let warmed = false;
+  function warmUp() {
+    if (warmed) return; warmed = true;
+    const idle = (fn) => (window.requestIdleCallback ? window.requestIdleCallback(fn, { timeout: 3000 }) : window.setTimeout(fn, 200));
+    idle(() => {
+      Promise.all([import('../vendor/three.module.min.js'), import('../vendor/RoomEnvironment.js')])
+        .then(() => new Promise((resolve) => idle(resolve)))
+        .then(() => loadModel())
+        .catch(() => {});
+      if (mobileQuery.matches) return; /* a phone shows the cards as a lazy list */
+      const sources = projects.map((project) => project.cardThumb || project.thumb).filter((source) => !isPlaceholderPath(source));
+      const next = () => {
+        const source = sources.shift();
+        if (!source) return;
+        const image = new Image();
+        image.crossOrigin = 'anonymous'; /* the ring's texture loader asks the same way, so it reuses this */
+        image.fetchPriority = 'low';
+        image.onload = image.onerror = () => idle(next);
+        image.src = normalizeSource(source);
+      };
+      next(); next();
+    });
+  }
+  const warmSoon = () => window.setTimeout(warmUp, 1200);
+  if (window.__introReady) warmSoon(); else window.addEventListener('portfolio:intro-ready', warmSoon, { once: true });
 
   instance = {
     section,

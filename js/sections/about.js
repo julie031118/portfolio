@@ -139,14 +139,17 @@ export function renderAbout(lang) {
      on a phone a tap shows that text under the row, with the project link if there is one */
   const timelineFor = (entry) => {
     const name = T(entry.title, 'ko'); const full = `${name}: ${T(entry.label, 'ko')}`;
-    let exact = null; let near = null;
+    let exact = null; let near = null; let byLink = null;
     SITE.timeline.forEach((segment) => segment.items.forEach((item) => {
       const title = T(item.title, 'ko');
       const found = { item, segment: segment.segment, grade: T(segment.grade, lang) };
       if (!exact && title === full) exact = found;
       if (!near && title.startsWith(`${name}:`)) near = found;
+      /* AWARDS (2026-10-11, 연서: hover should open the side panel like the rows above): award titles differ
+         from the timeline's, so an award finds its entry through the project it links to */
+      if (!byLink && entry.link && item.link === entry.link) byLink = found;
     }));
-    return exact || near;
+    return exact || near || byLink;
   };
   const fillList = (list, entries, withPanel = false) => (entries || []).forEach((award) => {
     const item = document.createElement('li');
@@ -179,7 +182,7 @@ export function renderAbout(lang) {
   });
   fillList(section.querySelector('.about-exp-list'), SITE.profile.experience, true);
   fillList(section.querySelector('.about-act-list'), SITE.profile.activities, true);
-  fillList(section.querySelector('.about-awards:not(.about-experience):not(.about-activities) .about-award-list'), SITE.profile.awards);
+  fillList(section.querySelector('.about-awards:not(.about-experience):not(.about-activities) .about-award-list'), SITE.profile.awards, true);
   buildTimeline(track, lang);
   SITE.profile.skills.forEach((group) => { const block = document.createElement('section'); block.className = 'about-skill-group'; const label = document.createElement('h3'); label.textContent = T(group.group, lang).toUpperCase(); const items = document.createElement('p'); items.textContent = group.items.map((entry) => T(entry, lang)).join(' · '); block.append(label, items); skills.append(block); });
 
