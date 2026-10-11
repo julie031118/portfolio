@@ -722,8 +722,8 @@ window.PROJECTS = [
      {
       "src": "/images/projects/kaftan/ai01.jpg",
       "cap": {
-       "ko": "자르기 전 AI로 입혀 본 모습",
-       "en": "Tried on with AI before cutting"
+       "ko": "프린트하기 전 AI로 입혀 본 모습",
+       "en": "Tried on with AI before printing"
       }
      },
      {
@@ -867,7 +867,7 @@ window.PROJECTS = [
      "레이아웃 구성 3개를 짜고, 패턴마다 배치를 바꿔 가며 실험한 뒤 최종안을 고름",
      "밤의 톤으로 팔레트 구성: 깊이를 주는 딥 블루와 바이올렛, 가벼움을 주는 연한 청록색, 대비를 주는 골드. 골드는 의도한 노랑보다 주황빛으로 출력됐지만, 바이올렛과의 대비가 더 풍부해져 그대로 살림",
      "샘플 출력이 예상보다 탁하게 나와 최종 파일의 밝기와 채도를 올리고, 모티프를 약 3분의 1 크기로 줄여 더 촘촘한 표면을 만듦",
-     "디자인을 마친 뒤 재단에 들어가기 전에, 모델이 입은 모습을 AI 이미지로 만들어 실제로 어떻게 보일지 미리 봄",
+     "디자인을 마친 뒤 원단에 프린트하기 전에, 모델이 입은 모습을 AI 이미지로 만들어 실제로 어떻게 보일지 미리 봄",
      "앞단 3인치, 뒷단 1.5인치를 줄이고 허벅지 중간까지 오는 앞트임을 더해, 걸을 때 실크가 움직이도록 함"
     ],
     "result": [
@@ -875,7 +875,7 @@ window.PROJECTS = [
      "프로젝트 평가 96 / 100, 프린트 디자인 항목 만점",
      "교수 평가: 독창적인 패턴 레이어링, 모티프 사이 색의 어우러짐, 엔지니어드 모티프 배치를 높이 평가"
     ],
-    "headline": "쇼팽 녹턴을 실크 위 프린트로 옮기고, 자르기 전에 AI로 몸 위에 먼저 입혀 봤다.",
+    "headline": "쇼팽 녹턴을 실크 위 프린트로 옮기고, 원단에 프린트하기 전에 AI로 몸 위에 먼저 입혀 봤다.",
     "metrics": [
      {
       "v": "선정",
@@ -895,7 +895,7 @@ window.PROJECTS = [
      "Drew three layout compositions and tested each pattern in different placements before choosing the final design",
      "Built the palette from night tones: deep blue and violet for depth, seafoam for lightness, gold for contrast. The gold printed more orange than the intended yellow, and was kept because it gave a richer contrast against the violet",
      "The first sample printed duller than expected, so brightness and saturation went up in the final file and the motifs shrank to about a third of their size for a denser surface",
-     "Once the design was finished and before any cutting, used AI to picture a model wearing it and preview how it would really look",
+     "Once the design was finished and before the fabric was printed, used AI to picture a model wearing it and preview how it would really look",
      "Shortened the front hem by 3\" and the back by 1.5\", and added a front slit to mid-thigh so the silk moves with each step"
     ],
     "result": [
@@ -903,7 +903,7 @@ window.PROJECTS = [
      "Project grade 96 / 100, full marks for print design",
      "Professor's review praised the inventive pattern layering, the colour interaction between motifs and the engineered motif placement"
     ],
-    "headline": "I carried Chopin’s Nocturnes onto silk as a print, and tried it on a body with AI before cutting.",
+    "headline": "I carried Chopin’s Nocturnes onto silk as a print, and tried it on a body with AI before the fabric was printed.",
     "metrics": [
      {
       "v": "Selected",
