@@ -3656,12 +3656,11 @@ window.PROJECTS = [
    "/images/projects/denim-2026/07.jpg",
    "/images/projects/denim-2026/aw01.jpg",
    "/images/projects/denim-2026/aw02.jpg",
-   "/images/projects/denim-2026/aw03.jpg",
    "/images/projects/denim-2026/aw04.jpg"
   ],
   "role": {
-   "ko": "디자인 · 그래픽 · 소재 실험 · 제작 (단독)",
-   "en": "Design, graphics, material experiments, construction (solo)"
+   "ko": "디자인 · 그래픽 · 원단 가공 · 제작 (단독)",
+   "en": "Design, graphics, fabric treatment, construction (solo)"
   },
   "spotify": "3nts3JEnWM8CIhcsKahCvC",
   "spotifyNote": {
@@ -3722,7 +3721,13 @@ window.PROJECTS = [
    "/images/projects/denim-2026/ai25.jpg",
    "/images/projects/denim-2026/ai26.jpg",
    "/images/projects/denim-2026/ai27.jpg",
-   "/images/projects/denim-2026/ai28.jpg"
+   "/images/projects/denim-2026/ai28.jpg",
+   "/images/projects/denim-2026/gr-final.jpg",
+   "/images/projects/denim-2026/gr-sheet.jpg",
+   "/images/projects/denim-2026/gr01.jpg",
+   "/images/projects/denim-2026/gr03.jpg",
+   "/images/projects/denim-2026/gr06.jpg",
+   "/images/projects/denim-2026/gr08.jpg"
   ],
   "sections": [
    {
@@ -3749,7 +3754,11 @@ window.PROJECTS = [
      {
       "src": "/images/projects/denim-2026/07.jpg"
      }
-    ]
+    ],
+    "note": {
+     "ko": "민소매 데님 상의와 생지 데님 바지: 상의 뒷면에 물감 튜브 프린트와 찢김, 바지 허리 뒤에 DOMOSO 라벨 패치",
+     "en": "A sleeveless denim top and raw denim trousers: the paint tube print and the tear on the back of the top, the DOMOSO label patch at the back waist"
+    }
    },
    {
     "title": {
@@ -3758,18 +3767,19 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/denim-2026/ai02.jpg"
+      "src": "/images/projects/denim-2026/ai27.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai03.jpg"
+      "src": "/images/projects/denim-2026/ai29.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai04.jpg"
-     },
-     {
-      "src": "/images/projects/denim-2026/ai05.jpg"
+      "src": "/images/projects/denim-2026/ai28.jpg"
      }
-    ]
+    ],
+    "note": {
+     "ko": "AI 시안은 방향을 고르는 데 쓴 것으로, 완성 작품과는 다르다",
+     "en": "These AI drafts were for choosing a direction; the finished piece is different"
+    }
    },
    {
     "title": {
@@ -3778,22 +3788,19 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/denim-2026/ai06.jpg"
+      "src": "/images/projects/denim-2026/ai18.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai07.jpg"
+      "src": "/images/projects/denim-2026/ai19.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai08.jpg"
+      "src": "/images/projects/denim-2026/ai20.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai09.jpg"
+      "src": "/images/projects/denim-2026/ai21.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai10.jpg"
-     },
-     {
-      "src": "/images/projects/denim-2026/ai11.jpg"
+      "src": "/images/projects/denim-2026/ai22.jpg"
      }
     ]
    },
@@ -3830,19 +3837,22 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/denim-2026/ai18.jpg"
+      "src": "/images/projects/denim-2026/ai06.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai19.jpg"
+      "src": "/images/projects/denim-2026/ai07.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai20.jpg"
+      "src": "/images/projects/denim-2026/ai08.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai21.jpg"
+      "src": "/images/projects/denim-2026/ai09.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai22.jpg"
+      "src": "/images/projects/denim-2026/ai10.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai11.jpg"
      }
     ]
    },
@@ -3853,20 +3863,63 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/denim-2026/ai27.jpg"
+      "src": "/images/projects/denim-2026/ai02.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai29.jpg"
+      "src": "/images/projects/denim-2026/ai03.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/ai28.jpg"
+      "src": "/images/projects/denim-2026/ai04.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/ai05.jpg"
      }
     ]
    },
    {
     "title": {
-     "ko": "AI 백패치 텍스타일",
-     "en": "AI BACK PATCH TEXTILE"
+     "ko": "물감 튜브 그래픽",
+     "en": "PAINT TUBE GRAPHICS"
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/gr-final.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/gr-sheet.jpg"
+     }
+    ],
+    "note": {
+     "ko": "왼쪽은 상의 뒷면에 넣은 35×40cm 피스 프린트 파일, 오른쪽은 여러 스타일을 한 장에 놓고 비교한 시트",
+     "en": "Left: the 35×40cm piece print file for the back of the top. Right: the styles compared on one sheet"
+    },
+    "rowTarget": 520
+   },
+   {
+    "title": {
+     "ko": "",
+     "en": ""
+    },
+    "images": [
+     {
+      "src": "/images/projects/denim-2026/gr01.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/gr03.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/gr06.jpg"
+     },
+     {
+      "src": "/images/projects/denim-2026/gr08.jpg"
+     }
+    ],
+    "rowTarget": 280
+   },
+   {
+    "title": {
+     "ko": "라벨 패치 프린트 미리 보기 (AI)",
+     "en": "LABEL PATCH PRINT PREVIEWS (AI)"
     },
     "images": [
      {
@@ -3883,8 +3936,8 @@ window.PROJECTS = [
      }
     ],
     "note": {
-     "ko": "직접 만든 그래픽을 옥스퍼드 원단에 디지털 프린트하면 어떤 느낌일지 미리 보려고 AI 이미지를 여러 장 만들어 봄",
-     "en": "Several AI images made to preview how my graphic would look digitally printed on oxford cloth"
+     "ko": "직접 만든 라벨 패치 그래픽을 옥스퍼드 원단에 디지털 프린트하면 어떤 느낌일지 미리 보려고 AI 이미지를 여러 장 만들어 봄",
+     "en": "Several AI images made to preview how my label patch graphic would look digitally printed on oxford cloth"
     }
    },
    {
@@ -3900,9 +3953,6 @@ window.PROJECTS = [
       "src": "/images/projects/denim-2026/aw02.jpg"
      },
      {
-      "src": "/images/projects/denim-2026/aw03.jpg"
-     },
-     {
       "src": "/images/projects/denim-2026/aw04.jpg"
      }
     ]
@@ -3912,7 +3962,7 @@ window.PROJECTS = [
    "ko": {
     "title": "D&J 코리아 데님 디자인 공모전",
     "cat": "데님 디자인 · 공모전 입선 · 2026",
-    "headline": "원단을 자르기 전에, 여러 디자인 시안과 프린트 결과를 AI로 먼저 만들어 봤다.",
+    "headline": "원단과 시간이 빠듯해, 자르기 전에 여러 시안과 프린트 결과를 AI로 먼저 만들어 봤다.",
     "metrics": [
      {
       "v": "입선",
@@ -3923,32 +3973,34 @@ window.PROJECTS = [
       "l": "2027년 방갈로르 전시 예정"
      }
     ],
-    "need": "본선 작품은 한 벌만 만들 수 있고 원단은 되돌릴 수 없다. 프린트한 그래픽이 실제 데님 위에서 어떻게 보일지, 데미지를 어디까지 내야 물감이 흘러내리는 것처럼 읽힐지, 이걸 원단을 자르기 전에 알아야 했다.",
+    "need": "본선(약 20팀)에 오른 뒤 실물 제출까지 약 4주였다. 심사는 창의성 50%, 상품성 50%였고, 주최 측이 준 원단은 넉넉하지 않았다. 다시 만들 여유가 없어서, 자르기 전에 방향을 정해야 했다.",
     "action": [
-     "'물감 튜브에서 흘러나온 물감이 데님의 풀린 실로 변한다'는 하나의 서사를 축으로 잡고, 프린트(그래픽)와 리얼 데미지(실)가 옆선에서 이어지도록 설계",
-     "원단을 자르기 전에 AI로 여러 방향의 디자인 시안을 만들어 디테일과 실루엣을 비교함(예선 이미지, 디자인 보드, 룩북, 패치 컬러웨이). 포토샵으로 만든 그래픽은 원단 위에 실제로 어떻게 인쇄될지 예상하려고, 프린트한 모습을 AI로 만들어 미리 봄(소재마다 느낌이 다르기 때문)",
-     "기존 브랜드 디자인과 겹쳐 보이는 결과물은 표절 위험으로 따로 걸러내고 진행",
-     "물감이 점점 흩어지는 그래디언트를 만들고, 그 그래디언트가 끝나는 지점에서 실제 프린지가 시작되도록 앞뒤를 연결",
-     "인디고 생지 데님과 아이보리 옥스퍼드 20수 백패치로 소재를 정하고, 원단을 받아 실물 한 벌을 제작",
-     "스판 데님이라 잘 찢기지 않아 칼·드릴·송곳으로 직접 찢고 올을 풀었고, 실루엣이 무너지지 않도록 레이스를 덧대 고정. 같은 레이스를 바지에도 써서 상하의를 하나로 묶음"
+     "'Denim in Motion'이라는 주제를 물감이 튜브에서 짜여 나오는 움직임으로 풀어, '튜브에서 나온 물감이 데님의 풀린 실이 된다'는 서사를 잡음. 상의 뒷면에 물감 튜브를 프린트하고, 물감 줄기가 끝나는 곳에서 실제 찢김이 시작되게 함",
+     "심사의 절반이 상품성이고 심사위원이 패션 기업 디자이너들이라, 처음 구상한 극단적인 벨보텀을 접고 바지 실루엣을 일자에 가깝게 절제함",
+     "자르기 전에 AI로 여러 방향의 시안을 만들어 디테일과 실루엣을 비교하고(디자인 보드, 룩북, 패치 컬러웨이), 기존 브랜드 디자인과 비슷해 보이는 시안은 표절 위험이 있어 뺌. 직접 만든 라벨 패치 그래픽은 원단에 인쇄했을 때 어떻게 보일지 AI 이미지로 미리 봄",
+     "주최 측이 준 인디고 데님으로 민소매 상의와 바지를 직접 만듦. 원단이 넉넉하지 않아 롤 프린트는 할 수 없어, 물감 튜브 그래픽은 최대 35×40cm인 피스 프린트로 상의 뒷면에 넣고, 허리 뒤 라벨 패치는 아이보리 옥스퍼드 20수에 프린트함. 상의는 앞 가운데를 따라 작은 금속 단추를 촘촘히 박음",
+     "워싱할 시간이 없어 생지 데님 그대로 두고, 대신 밝은 색 실로 스티치를 넣어 진한 생지 색이 살아나게 함",
+     "스판이 섞인 데님이라 생각보다 예쁘게 찢어지지 않아, 칼·드릴·송곳으로 조금씩 찢고 올을 풀며 신중하게 작업함. 찢은 부분 안쪽에는 레이스를 대고, 위에는 밝은 실로 지그재그 스티치를 넣음",
+     "상의와 바지가 한 벌로 보이도록, 같은 지그재그 스티치를 바지 한쪽 뒷주머니에, 같은 레이스를 다른 쪽 뒷주머니에 씀"
     ],
     "result": [
      "입선 (Honorable Mention): D&J 코리아 데님 디자인 공모전 2026 (DenimsandJeans Korea, COEX Seoul)",
-     "시상작은 2027년 인도 방갈로르에서 열리는 9차 D&J INDIA에서 한국 학생 작품으로 전시될 예정"
+     "시상식 날 코엑스 D&J KOREA 전시회장에 전시",
+     "입선작은 2027년 인도 방갈로르에서 열리는 제9회 D&J INDIA에서 한국 학생 작품으로 전시될 예정"
     ],
     "detail": {
      "title": "AI를 어떻게 썼나",
      "body": [
       "AI로 최종 결과물을 만든 게 아니라, 원단을 자르기 전에 여러 방향을 눈으로 비교하는 데 썼다.",
-      "특히 물감 그래픽을 AI로 고동색, 인디고, 다크 인디고, 베이지, 아이보리 등 여러 바탕 위에 올려 보며, 실제 원단 위에서 어떻게 보일지 미리 비교한 것이 컸다.",
-      "물감 튜브 그래픽을 여러 스타일로 한 장에 늘어놓고 비교했다. 같은 그래픽도 표현 방식에 따라 얼마나 달라지는지 먼저 봐야 방향을 정할 수 있다고 봤다."
+      "물감 그래픽은 고동색, 인디고, 다크 인디고, 베이지, 아이보리 등 여러 바탕색 위에 올려, 실제 원단 위에서 어떻게 보일지 AI로 미리 비교했다.",
+      "물감 튜브 그래픽도 여러 스타일로 한 장에 늘어놓고 비교한 뒤 방향을 정했다."
      ]
     }
    },
    "en": {
     "title": "D&J Korea Denim Design Challenge",
     "cat": "Denim Design · Competition · Honorable Mention · 2026",
-    "headline": "Before cutting any fabric, I made several design drafts with AI and previewed how the print would turn out.",
+    "headline": "With little fabric and little time, I made drafts and print previews with AI before cutting anything.",
     "metrics": [
      {
       "v": "Honorable Mention",
@@ -3959,25 +4011,27 @@ window.PROJECTS = [
       "l": "To be exhibited in Bengaluru, 2027"
      }
     ],
-    "need": "A finals entry is one garment, and fabric does not undo. How a printed graphic would sit on real denim, and how far the damage had to go before it read as paint bleeding into thread: all of it had to be known before the first cut.",
+    "need": "From reaching the finals (about 20 teams) to handing in the piece took about four weeks. Judging was 50% creativity and 50% marketability, and the fabric the organisers gave us was limited. There was no room to make it twice, so the direction had to be settled before cutting.",
     "action": [
-     "Built everything on one narrative: paint squeezed from a tube becomes the frayed threads of the denim, with print and real damage meeting at the side seam",
-     "Before any fabric was cut, made several design drafts with AI to compare details and silhouettes (the preliminary image, design boards, lookbook and patch colourways). To predict how the graphic I made in Photoshop would actually print on the fabric, made AI images of it printed and previewed them (each fabric takes a print differently)",
-     "Set aside any output that looked too close to an existing brand’s design",
-     "Scattered the paint into a gradient, and started the real fringe exactly where the gradient ends, connecting front to back",
-     "Chose raw indigo denim with an ivory 20s oxford back patch, then made the one garment from the delivered fabric",
-     "Stretch denim does not tear easily, so I opened it by hand with a knife, a drill and an awl and pulled the threads loose, then backed it with lace so the silhouette held. The same lace runs into the trousers to tie top and bottom together"
+     "Read the theme 'Denim in Motion' as paint being squeezed from a tube, and built the piece on one story: paint from the tube becomes the frayed threads of the denim. The tube is printed on the back of the top, and the real tear starts where the paint ends",
+     "Half the score was marketability and the judges were designers from fashion companies, so I dropped the extreme bell bottoms I first planned and kept the trousers close to straight",
+     "Before cutting, made drafts in several directions with AI to compare details and silhouettes (design boards, lookbook, patch colourways), and dropped any that looked too close to an existing brand's design. For the label patch graphic I made, AI images previewed how it would look printed on fabric",
+     "Made the sleeveless top and the trousers myself from the indigo denim the organisers provided. There was not enough fabric for roll printing, so the paint tube graphic went onto the back of the top as a piece print of up to 35×40cm, and the back label patch was printed on ivory 20s oxford. A close row of small metal buttons runs down the centre front of the top",
+     "With no time to wash the denim, I left it raw and used light thread for the stitching instead, so the deep raw indigo stands out",
+     "The denim had stretch in it and did not tear as cleanly as I expected, so I tore it bit by bit with a knife, a drill and an awl and pulled the threads loose. The torn area is backed with lace inside and stitched over in a zigzag with light thread",
+     "To tie the top and trousers together, the same zigzag stitch went onto one back pocket of the trousers and the same lace onto the other"
     ],
     "result": [
      "Honorable Mention: D&J Korea Denim Design Challenge 2026 (DenimsandJeans Korea, COEX Seoul)",
-     "Awarded works are scheduled to be shown as Korean student work at the 9th D&J INDIA, Bengaluru, 2027"
+     "Shown at the D&J KOREA show at COEX on the day of the awards",
+     "Honorable Mention works will be shown as Korean student work at the 9th D&J INDIA in Bengaluru, 2027"
     ],
     "detail": {
      "title": "How AI was used",
      "body": [
       "AI did not make the final piece. I used it to compare directions by eye before cutting any fabric.",
-      "The biggest gain was trying the paint graphic on many grounds with AI, brown, indigo, dark indigo, beige and ivory, to see how it would look on real fabric before printing.",
-      "I laid the paint-tube graphic out in many styles on one sheet. I needed to see how much the same graphic changes with the style before I could choose a direction."
+      "I put the paint graphic on many ground colours, brown, indigo, dark indigo, beige and ivory, and compared with AI how each would look on real fabric.",
+      "I also laid the paint tube graphic out in several styles on one sheet and compared them before choosing."
      ]
     }
    }
