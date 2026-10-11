@@ -277,7 +277,7 @@ window.SITE = {
                 CONTENT puts the films she planned and directed first; INSIGHT follows strength 2 (audience first, then research) */
       FASHION: ['art2wear', 'denim-2026', 'fashion-show-2024', 'arts-week-2026', 'kaftan', 'adaptive-textile', 'clo3d', 'textile-woven', 'textile-printed', 'engineered-surfaces', 'textile-knit', 'senior-fit', 'fashion-illustration', 'korean-costume'],
       CONTENT: ['ai-short-film', 'promo-video-ai', 'directing-a-year', 'unreal-engine', 'sub-motion', 'portfolio-site', 'miraen', 'fashion-show-2024', 'campus-festival', 'seoul-metro'],
-      AI: ['ai-short-film', 'portfolio-site', 'promo-video-ai', 'denim-2026', 'kaftan', 'miraen'],
+      AI: ['ai-short-film', 'portfolio-site', 'denim-2026', 'promo-video-ai', 'kaftan', 'miraen'], /* denim above the 2025 APEC film (2026-10-12, 연서 OK) */
       INSIGHT: ['miraen', 'senior-fit', 'adaptive-textile', 'directing-a-year', 'campus-festival'],
     },
   },
