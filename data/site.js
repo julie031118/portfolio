@@ -82,14 +82,14 @@ window.SITE = {
       {
         claim: { ko: '주어진 조건 안에서 방법을 찾고, 결과물까지 직접 만듭니다.', en: 'I find a way inside the constraints, and make the result myself.' },
         keyword: { ko: '결과물까지 직접', en: 'make the result myself' },
-        evidence: { ko: '예술주간 야외 전시는 비 예보가 있어, 우산을 작품의 일부로 넣었다. 데님과 카프탄은 원단에 여유가 없어 봉제를 한 번밖에 할 수 없었다. 그래서 AI로 완성된 모습을 먼저 만들어 보고 방향을 정했다. 데님은 공모전에서 입선했고, 카프탄은 윌슨 컬리지 컬렉션 영구 소장작으로 선정됐다. Art2Wear는 다른 참가자와 주제가 겹쳐 \'불안과 집중의 공생\'으로 주제를 바꾸고, 직접 깨뜨린 도자기 접시로 꽃을 만들어 의상에 더했다.', en: 'With rain forecast for an outdoor show, I worked an umbrella into the piece (Arts Week). For the denim and the kaftan there was no spare fabric, so each could be sewn only once. I made images of the finished pieces with AI first and set the direction from them. The denim won an Honorable Mention, and the kaftan was selected for the Wilson College Collection. At Art2Wear my theme overlapped with other entrants, so I changed it to the symbiosis of anxiety and focus, and made flowers from plates I broke myself to add to the garment.' },
+        evidence: { ko: '예술주간 야외 전시는 비 예보가 있어, 우산을 작품의 일부로 넣었다. 데님과 카프탄은 원단에 여유가 없어 봉제를 한 번밖에 할 수 없었다. 데님은 AI로 여러 디자인 시안을 먼저 만들어 방향을 정했고, 공모전에서 입선했다. 카프탄은 완성한 디자인을 AI로 모델에게 입혀 본 뒤 재단했고, 윌슨 컬리지 컬렉션 영구 소장작으로 선정됐다. Art2Wear는 다른 참가자와 주제가 겹쳐 \'불안과 집중의 공생\'으로 주제를 바꾸고, 직접 깨뜨린 도자기 접시로 꽃을 만들어 의상에 더했다.', en: 'With rain forecast for an outdoor show, I worked an umbrella into the piece (Arts Week). For the denim and the kaftan there was no spare fabric, so each could be sewn only once. For the denim I made several design drafts with AI first and chose a direction, and it won an Honorable Mention. For the kaftan I used AI to see the finished design on a model before cutting, and it was selected for the Wilson College Collection. At Art2Wear my theme overlapped with other entrants, so I changed it to the symbiosis of anxiety and focus, and made flowers from plates I broke myself to add to the garment.' },
         media: 'img/strength-2-art2wear-making.jpg', /* art2wear/30: making it by hand (연서, 2026-10-02) */
         link: 'art2wear',
       },
       {
         claim: { ko: '옷과 공간, 오브제를 3D로 옮깁니다.', en: 'I bring clothes, spaces and objects into 3D.' },
         keyword: { ko: '3D로 옮깁니다', en: 'into 3D' },
-        evidence: { ko: '옷은 CLO 3D로 디자인해 국제 디지털 패션 공모전에서 입선했다. 공간은 Unreal Engine에서 에셋을 배치해 의류학과 실습실을 만들고, 짧은 영상으로 완성했다. 미래엔수학 캐릭터와 이 사이트의 도자기 꽃 오브제는 AI를 써서 3D 모델로 만들었다. 지금은 3D그래픽디자인 수업에서 Tripo와 Blender로 3D 포스터를 준비하고 있다.', en: 'Clothes I designed in CLO 3D won an Honorable Mention at the International Digital Fashion Contest. For space, I placed assets in Unreal Engine to build the clothing lab and finished it as a short film. The MiraeN Math character and the ceramic flower object on this site were made into 3D models with AI. Now I am preparing a 3D poster with Tripo and Blender in 3D Graphic Design.' },
+        evidence: { ko: '옷은 CLO 3D로 디자인해 국제 디지털 패션 공모전에서 입선했다. 공간은 Unreal Engine에서 에셋을 배치해 의류학과 실습실을 만들고, 짧은 영상으로 완성했다. 미래엔수학 캐릭터와 이 사이트의 도자기 꽃 오브제는 AI를 써서 3D 모델로 만들었다. 지금은 3D그래픽디자인 수업에서 Tripo와 Blender로 3D 포스터를 작업하고 있다.', en: 'Clothes I designed in CLO 3D won an Honorable Mention at the International Digital Fashion Contest. For space, I placed assets in Unreal Engine to build the clothing lab and finished it as a short film. The MiraeN Math character and the ceramic flower object on this site were made into 3D models with AI. Now I am working on a 3D poster with Tripo and Blender in 3D Graphic Design.' },
         media: 'images/projects/clo3d/ad06-card.jpg', /* the CLO 3D card image (2026-10-11) */
         link: 'clo3d',
       },
@@ -113,10 +113,10 @@ window.SITE = {
     ],
     /* AWARDS under KEY FIGURES (연서, 2026-10-09: these four; the APEC video's award is left out on purpose) */
     awards: [
-      { year: '2026', label: { ko: '입선', en: 'Honorable Mention' }, title: { ko: '코리아 데님 디자인 공모전', en: 'Korea Denim Design Contest' }, link: 'denim-2026' },
+      { year: '2026', label: { ko: '입선', en: 'Honorable Mention' }, title: { ko: 'D&J 코리아 데님 디자인 공모전', en: 'D&J Korea Denim Design Challenge' }, link: 'denim-2026' },
       { year: '2026', label: { ko: '영구 소장작 선정', en: 'Permanent collection' }, title: { ko: 'NC State 윌슨 컬리지 컬렉션 (카프탄)', en: 'Wilson College Collection, NC State (kaftan)' }, link: 'kaftan' },
       { year: '2025', label: { ko: '대상', en: 'Grand Prize' }, title: { ko: '서울대학교 중앙도서관 주관 〈AI로 만든 융합 영화상영회〉', en: 'AI Convergence Film Screening, Seoul National University Library' }, link: 'ai-short-film' },
-      { year: '2024', label: { ko: '입선', en: 'Honorable Mention' }, title: { ko: '제13회 국제 디지털 패션 공모전 (한국의류산업학회)', en: '13th International Digital Fashion Contest (KSCT)' }, link: 'clo3d' },
+      { year: '2024', label: { ko: '입선', en: 'Honorable Mention' }, title: { ko: '제13회 국제 디지털 패션 공모전 (한국의류산업학회)', en: '13th International Digital Fashion Contest (Korean Society for Clothing Industry)' }, link: 'clo3d' },
     ],
     stats: [
       { v: '3.9 / 4.3', l: 'GPA · Seoul National University' },
@@ -154,7 +154,7 @@ window.SITE = {
           desc: { ko: '두 밴드에서 드럼을 맡아 다섯 번 무대에 올랐다. 한 번은 2000년대 드라마 OST 메들리로 무대 전체를 구성했다. 곡 사이에 드라마 대사를 넣고 다 같이 교복을 입어, 연주가 아니라 하나의 콘셉트로 보이게 만들었다. 2023.02~2024.02', en: 'Five stages across two bands. For one I built the whole set as a 2000s drama-OST medley (dialogue between songs, the band in school uniforms) so it read as a concept, not a performance. Feb 2023 to Feb 2024' } },
         { date: '2023.06', until: '2024.03', major: false, link: null,
           title: { ko: 'Imageband 영상제작 동아리: 예능팀 기획 · 드라마팀 조연출', en: 'Imageband Film Club: Variety planning & Drama AD' },
-          desc: { ko: '예능팀에서 서바이벌 두뇌게임 쇼 콘셉트를 개발하고 게임 시뮬레이션·세트 디자인·초벌 편집에 참여. 드라마팀에서는 조연출로 배우 오디션과 현장 촬영을 지원. 2023.06~2024.03', en: 'Developed a survival brain-game show concept and worked on game simulation, set design and first-pass editing. As AD on the drama team, ran actor auditions and supported shoots. Jun 2023 to Mar 2024' } },
+          desc: { ko: '예능팀에서 서바이벌 두뇌게임 쇼 콘셉트를 개발하고 게임 시뮬레이션·세트 디자인·초벌 편집에 참여. 드라마팀에서는 조연출로 배우 오디션과 현장 촬영을 지원. 2023.06~2024.03', en: 'Developed a survival brain-game show concept and worked on game simulation, set design and first-pass editing. As AD on the drama team, supported actor auditions and shoots. Jun 2023 to Mar 2024' } },
       ],
     },
     {
@@ -162,7 +162,7 @@ window.SITE = {
       items: [
         { date: '2023.07', until: '2024.06', major: true, link: 'campus-festival',
           title: { ko: 'SNUFESTIVAL 축제기획단: 디자인팀 · 공연팀', en: 'SNUFESTIVAL Committee: Design & Performance' },
-          desc: { ko: '디자인팀(6인) 팀원으로 공식 캐릭터 RIO의 굿즈를 디자인해 한정판 에어팟 케이스를 완판. 공연팀(6인)에서는 버스킹·폐막식 진행과 출연자 리허설 조율. 2023.07~2024.06', en: 'In the design team (6), designed RIO merchandise and sold out the limited-edition AirPods cases. In the performance team (6) ran busking and the closing ceremony. Jul 2023 to Jun 2024' } },
+          desc: { ko: '디자인팀(6인) 팀원으로 공식 캐릭터 RIO의 굿즈를 디자인했고, 에어팟·버즈 케이스는 매진. 공연팀(6인)에서는 버스킹·폐막식 진행과 출연자 리허설 조율. 2023.07~2024.06', en: 'In the design team (6), designed RIO merchandise; the AirPods and Buds cases sold out. In the performance team (6) ran busking and the closing ceremony. Jul 2023 to Jun 2024' } },
       ],
     },
     {
@@ -170,7 +170,7 @@ window.SITE = {
       items: [
         { date: '2024.03', until: '2024.10', major: true, link: 'fashion-show-2024',
           title: { ko: '2024 의류학과 졸업패션쇼 〈형(形)〉: 디자이너 · 홍보팀', en: '2024 SNU Graduation Fashion Show \'Form\': Designer & Promotions' },
-          desc: { ko: '의류학과 졸업패션쇼에 디자이너로 참여해 의상 컬렉션을 제작하고, 홍보팀으로 인스타그램 관리·피드·숏폼 제작·디자이너 인터뷰를 맡음. 2024.03~10', en: 'Made a collection as a designer for the department graduation show, and on the promotion team ran Instagram, feed posts, short-form video and designer interviews. Mar to Oct 2024' } },
+          desc: { ko: '의류학과 졸업패션쇼에 디자이너로 참여해 룩 3벌을 제작하고, 홍보팀으로 인스타그램 관리·피드·숏폼 제작·디자이너 인터뷰를 맡음. 2024.03~10', en: 'Made three looks as a designer for the department graduation show, and on the promotion team ran Instagram, feed posts, short-form video and designer interviews. Mar to Oct 2024' } },
       ],
     },
     {
@@ -192,7 +192,7 @@ window.SITE = {
       items: [
         { date: '2025.01', until: '2025.08', major: true, link: 'miraen',
           title: { ko: '미래엔수학 지사 (5개 구): 디자이너 & 마케터', en: 'MiraeN Math (5-district branch): Designer & Marketer' },
-          desc: { ko: '지사장 한 명이 새로 연 지사의 SNS 3개 채널을 0에서 개설·운영. 팔로워 0인 계정에서 릴스 최고 조회수 2.9만. 브랜드 콘텐츠 50여 편, 2D 캐릭터를 3D로 리빌드한 숏폼, 유료광고와 네이버 스마트플레이스 SEO 병행. 2025.01~08', en: 'Opened and ran three channels from zero for a branch one director had just opened. Top Reel 29,000 views from a zero-follower account. 50+ pieces of brand content, the 2D character rebuilt in 3D for short-form, paid media alongside Naver SmartPlace SEO. Jan to Aug 2025' } },
+          desc: { ko: '지사장 한 명이 새로 연 지사의 SNS 3개 채널을 0에서 개설·운영. 팔로워 0인 계정에서 릴스 최고 조회수 2.9만. 브랜드 콘텐츠 50여 편, 2D 캐릭터를 AI로 3D화한 숏폼, 유료광고와 네이버 스마트플레이스 SEO 병행. 2025.01~08', en: 'Opened and ran three channels from zero for a branch one director had just opened. Top Reel 29,000 views from a zero-follower account. 50+ pieces of brand content, the 2D character turned into 3D with AI for short-form, paid media alongside Naver SmartPlace SEO. Jan to Aug 2025' } },
         { date: '2025.07', major: true, link: 'ai-short-film',
           title: { ko: '대상: 서울대학교 중앙도서관 주관 〈AI로 만든 융합 영화상영회〉', en: 'Grand Prize: Seoul National University Library ‘AI Convergence Film Screening’' },
           desc: { ko: '디지털 리터러시 아카데미 〈AI로 만드는 영화클래스〉(2025.06) 수료 후, 단편영화 \'Happiness is Intelligence?\'를 기획·연출·프롬프트 디렉팅·편집까지 단독 제작. 2025.07.10', en: 'After completing the Digital Literacy Academy ‘AI Filmmaking Class’ (Jun 2025), made the short film \'Happiness is Intelligence?\' solo: concept, direction, prompt direction and editing. 10 Jul 2025' } },
@@ -223,7 +223,7 @@ window.SITE = {
           desc: { ko: '쇼팽 녹턴에서 출발한 엔지니어드 프린트 실크 카프탄. 패턴 3개와 레이아웃 3개로 배치를 실험해, 프린트가 옷 전체에서 하나의 구성으로 읽히도록 설계. 교수 추천으로 수업 대표로 출품돼 NC State Wilson College of Textiles Collection 영구 소장작으로 선정. 2026.01~04', en: 'An engineered-print silk kaftan that began with Chopin\'s Nocturnes. Three patterns and three layouts were tested in different placements so the print reads as one composition across the garment. Entered as the class representative on faculty recommendation and selected for permanent inclusion in the NC State Wilson College of Textiles Collection. Jan to Apr 2026' } },
         { date: '2026.05', until: '2026.08', major: true, link: null,
           title: { ko: 'The Nonwovens Institute, NC State: 연구실 인턴', en: 'The Nonwovens Institute, NC State: Research Intern' },
-          desc: { ko: '언더아머(Under Armour)와 협력한 스판덱스 원사 샘플 테스트를 담당해 인장시험기로 신축성과 무게를 측정하고 영어로 결과 보고. 크리스마스트리 농가용 부직포 보호 커버의 재단 패턴을 설계하고 열접합으로 샘플 제작. 2026.05.11~08.04', en: 'Ran spandex yarn tests for a project with Under Armour (stretch and weight on a tensile tester), reported in English. Designed the cutting pattern for nonwoven tree-farm covers and produced heat-bonded samples. 11 May to 4 Aug 2026' } },
+          desc: { ko: '언더아머(Under Armour)와 협력한 스판덱스 원사 샘플 테스트를 담당해 인장시험기로 신축성을 측정하고 무게도 재서 영어로 결과 보고. 크리스마스트리 농가용 부직포 보호 커버의 재단 패턴을 설계하고 열접합으로 샘플 제작. 2026.05.11~08.04', en: 'Ran spandex yarn tests for a project with Under Armour (stretch on a tensile tester, plus weight), reported in English. Designed the cutting pattern for nonwoven tree-farm covers and produced heat-bonded samples. 11 May to 4 Aug 2026' } },
       ],
     },
     {
@@ -233,7 +233,7 @@ window.SITE = {
           title: { ko: '서울대 복귀: 졸업 전 마지막 학기', en: 'Back at SNU: final term before graduation' },
           desc: { ko: '교환 1년을 마치고 복귀. 이번 학기에 배우는 테크니컬 디자인, 인공지능예술실습, 3D 그래픽 디자인은 아래 NOW에.', en: 'Back from the exchange year. What I am learning this term (Technical Design, Deep Learning for Artists, 3D Graphic Design) is in NOW, further down.' } },
         { date: '2026.09', major: true, link: 'denim-2026',
-          title: { ko: '입선: 코리아 데님 디자인 공모전 2026 \'Squeezed Motion\'', en: 'Honorable Mention: Korea Denim Design Contest 2026, \'Squeezed Motion\'' },
+          title: { ko: '입선: D&J 코리아 데님 디자인 공모전 2026 \'Squeezed Motion\'', en: 'Honorable Mention: D&J Korea Denim Design Challenge 2026, \'Squeezed Motion\'' },
           desc: { ko: '물감이 실이 되는 순간을 데님 위에 옮긴 작업. AI로 여러 방향을 먼저 시뮬레이션한 뒤 실물 한 벌을 제작하고, 스판 데님을 칼·드릴·송곳으로 직접 찢어 레이스로 실루엣을 잡음. 본선을 거쳐 입선. 2026.09.23 발표', en: 'Paint becoming thread, on denim. Directions simulated with AI before one garment was built; the stretch denim torn by hand and held in shape with lace. Finalist, then Honorable Mention. Announced 23 Sep 2026' } },
         { date: '2026.09', major: true, link: 'arts-week-2026',
           title: { ko: '2026 서울대 예술주간 〈공생 Tensed Symbiosis〉: 야외 설치', en: 'SNU Arts Week 2026 \'Tensed Symbiosis\': outdoor installation' },
@@ -288,7 +288,7 @@ window.SITE = {
     {
       label: { ko: '인공지능예술실습 · 2026 가을학기', en: 'Deep Learning for Artists · Fall 2026' },
       claim: { ko: '이미지 AI의 작동 원리를 배우고, 그 과정 자체를 작업의 재료로 쓰는 법을 익히고 있습니다.', en: 'Learning how image AI works inside, and how to use that process itself as material for my work.' },
-      evidence: { ko: '생성 모델로 내 작품을 직접 만들고 싶어 들은 수업. 툴 사용법이 아니라 작동 원리를 배우고, 배운 원리는 그날 수업 안에 직접 실험으로 옮겨 영상과 이미지로 만든다. 미드저니로 만든 얼굴 이미지로 PyTorch에서 GAN을 처음부터 학습시켜 latent travel 영상을 만들었고, 클라우드 GPU를 빌려 사람 얼굴을 학습한 StyleGAN3에 내가 직접 짜고 촬영한 직조 원단 사진 23장을 파인튜닝했다. 15분 남짓한 학습 동안 얼굴이 실의 결에 덮이며 원단이 되어 간다. 완성된 결과보다 얼굴도 원단도 아닌 그 중간 상태가 더 흥미로운 이미지였다.', en: 'I took this class to make my own work with generative models. It teaches how they work rather than how to use the tools, and whatever we learn, I turn into an experiment in the same class and make it into video and images. I trained a GAN from scratch in PyTorch on face images I made in Midjourney and made a latent travel video. Then I rented a cloud GPU and fine-tuned StyleGAN3, pretrained on human faces, on 23 photos of fabric I wove and shot myself. Over about fifteen minutes of training, the faces are covered by the grain of the thread and turn into cloth. More interesting than the finished result was the state in between, neither face nor fabric.' },
+      evidence: { ko: '툴 사용법이 아니라 작동 원리를 배우고, 배운 원리는 그날 수업 안에 직접 실험으로 옮겨 영상과 이미지로 만든다. 미드저니로 만든 얼굴 이미지로 PyTorch에서 GAN을 처음부터 학습시켜 latent travel 영상을 만들었고, 클라우드 GPU를 빌려 사람 얼굴을 학습한 StyleGAN3를 내가 직접 짜고 촬영한 직조 원단 사진 23장으로 파인튜닝했다. 15분 남짓한 학습 동안 얼굴이 실의 결에 덮이며 원단이 되어 간다. 완성된 결과보다 얼굴도 원단도 아닌 그 중간 상태가 더 흥미로운 이미지였다.', en: 'The class teaches how image AI works rather than how to use the tools, and whatever we learn, I turn into an experiment in the same class and make it into video and images. I trained a GAN from scratch in PyTorch on face images I made in Midjourney and made a latent travel video. Then I rented a cloud GPU and fine-tuned StyleGAN3, pretrained on human faces, on 23 photos of fabric I wove and shot myself. Over about fifteen minutes of training, the faces are covered by the grain of the thread and turn into cloth. More interesting than the finished result was the state in between, neither face nor fabric.' },
       /* 연서's own run (week 4): every training image was made in Midjourney, so no real faces */
       media: [ /* 연서's order (2026-10-07): the two latent travel videos first (fabric, then face GAN), the StyleGAN3 grid last */
         { video: 'images/now/weave-travel.mp4', poster: 'images/now/weave-travel.jpg', caption: { ko: 'latent travel · 파인튜닝 중간 단계 모델', en: 'latent travel · a model midway through fine-tuning' } },
@@ -301,7 +301,7 @@ window.SITE = {
       label: { ko: '테크니컬 디자인 · 2026 가을학기', en: 'Technical Design · Fall 2026' },
       claim: { ko: '디자인을 공장이 읽을 수 있는 언어로 옮기는 법을 배우고 있습니다.', en: 'Learning to translate a design into the language a factory can read.' },
       evidence: { ko: '디자이너는 실루엣으로, 공장은 치수와 봉제 사양으로 말한다. 그 사이를 잇는 테크니컬 패키지(작업지시서)를 매주 과제로 쌓는 중.', en: 'A designer talks in silhouettes; a factory, in measurements and construction specs. Building the tech pack that connects the two, one weekly assignment at a time.' },
-      next: { ko: '치수와 그레이딩, 원단, 부자재, 라벨, 샘플 평가까지 마치고 최종 발표. 같은 범위인 테크니컬디자이너 3급 응시도 검토 중입니다.', en: 'Grading, fabric, trims, labels and prototype evaluation, then the final presentation. Considering the Technical Designer Level 3 exam, which covers the same ground.' },
+      next: { ko: '치수와 그레이딩, 원단, 부자재, 라벨, 샘플 평가까지 마치고 최종 발표. 범위가 겹치는 테크니컬디자이너 3급 응시도 검토 중입니다.', en: 'Measurements and grading, fabric, trims, labels and prototype evaluation, then the final presentation. Considering the Technical Designer Level 3 exam, which overlaps with the class.' },
     },
     {
       label: { ko: '3D 그래픽 디자인 · 2026 가을학기', en: '3D Graphic Design · Fall 2026' },
