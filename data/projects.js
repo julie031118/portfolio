@@ -1331,7 +1331,7 @@ window.PROJECTS = [
  },
  {
   "slug": "art2wear",
-  "featured": 4,
+  "featured": 3,
   "archiveRank": null,
   "tags": [
    "FASHION"
@@ -3614,7 +3614,7 @@ window.PROJECTS = [
  },
  {
   "slug": "denim-2026",
-  "featured": 2,
+  "featured": 4,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -4094,7 +4094,7 @@ window.PROJECTS = [
  },
  {
   "slug": "portfolio-site",
-  "featured": 3,
+  "featured": 2,
   "archiveRank": null,
   "tags": [
    "CONTENT",

@@ -275,7 +275,7 @@ window.SITE = {
     /* each filter can have its own order (연서, 2026-10-02); ALL and any slug left out follow featured, then archiveRank */
     order: { /* 2026-10-11 (연서: ALL is hers, the four filters left to Claude). FASHION follows ALL; AI keeps denim right after APEC;
                 CONTENT puts the films she planned and directed first; INSIGHT follows strength 2 (audience first, then research) */
-      FASHION: ['denim-2026', 'art2wear', 'fashion-show-2024', 'arts-week-2026', 'kaftan', 'adaptive-textile', 'clo3d', 'textile-woven', 'textile-printed', 'engineered-surfaces', 'textile-knit', 'senior-fit', 'fashion-illustration', 'korean-costume'],
+      FASHION: ['art2wear', 'denim-2026', 'fashion-show-2024', 'arts-week-2026', 'kaftan', 'adaptive-textile', 'clo3d', 'textile-woven', 'textile-printed', 'engineered-surfaces', 'textile-knit', 'senior-fit', 'fashion-illustration', 'korean-costume'],
       CONTENT: ['ai-short-film', 'promo-video-ai', 'directing-a-year', 'unreal-engine', 'sub-motion', 'portfolio-site', 'miraen', 'fashion-show-2024', 'campus-festival', 'seoul-metro'],
       AI: ['ai-short-film', 'portfolio-site', 'promo-video-ai', 'denim-2026', 'kaftan', 'miraen'],
       INSIGHT: ['miraen', 'senior-fit', 'adaptive-textile', 'directing-a-year', 'campus-festival'],
