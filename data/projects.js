@@ -418,7 +418,8 @@ window.PROJECTS = [
    "/images/projects/ai-short-film/17.jpg",
    "/images/projects/ai-short-film/18.jpg",
    "/images/projects/ai-short-film/19.jpg",
-   "/images/projects/ai-short-film/20.jpg"
+   "/images/projects/ai-short-film/20.jpg",
+   "/images/projects/ai-short-film/exhibit-poster.jpg"
   ],
   "role": {
    "ko": "기획 · 연출 · 프롬프트 디렉팅 · 편집 (단독, AI 활용)",
@@ -564,6 +565,22 @@ window.PROJECTS = [
      "en": "The last scenes, set to music I made with Suno. The ad slogan comes back as the title, with a question mark"
     },
     "rowTarget": -1
+   },
+   {
+    "title": {
+     "ko": "전시",
+     "en": "EXHIBITION"
+    },
+    "images": [
+     {
+      "src": "/images/projects/ai-short-film/exhibit-poster.jpg"
+     }
+    ],
+    "note": {
+     "ko": "〈AI insight〉 전시 포스터. 왼쪽 위가 이 영화의 장면",
+     "en": "The ‘AI insight’ exhibition poster. Top left: a still from this film"
+    },
+    "rowTarget": 520
    }
   ],
   "nar": {
@@ -580,14 +597,15 @@ window.PROJECTS = [
      "제목을 ‘HAPPINESS IS INTELLIGENCE’에서 ‘HAPPINESS IS INTELLIGENCE?’로 바꿔, 행복의 진짜 의미가 무엇인지 생각하게 함"
     ],
     "result": [
-     "서울대학교 중앙도서관 디지털 리터러시 아카데미 〈AI로 만드는 영화클래스〉 대상 (2025, 중앙도서관장 표창)",
+     "서울대학교 중앙도서관 주관 〈AI로 만든 융합 영화상영회〉 대상 (2025, 중앙도서관장 표창)",
+     "서울대학교 중앙도서관과 관악문화재단 미디어센터관악의 협업 전시 〈AI insight〉에 전시, 전시 포스터에 영화 속 장면이 실림 (2025.12)",
      "이 작업 이후 내 작업에 AI를 본격적으로 더하기 시작함"
     ],
     "headline": "배우도 촬영도 없이 AI로 만든 단편영화.",
     "metrics": [
      {
       "v": "대상",
-      "l": "서울대 중앙도서관 〈AI로 만드는 영화클래스〉 2025"
+      "l": "서울대 중앙도서관 〈AI로 만든 융합 영화상영회〉 2025"
      }
     ],
     "note": "2025년 여름 당시의 Midjourney와 Kling AI로 만든 영상이다. AI가 워낙 빠르게 발전해서, 지금 보면 AI 티가 나는 장면이 있다.",
@@ -612,14 +630,15 @@ window.PROJECTS = [
      "Changed the title from ‘HAPPINESS IS INTELLIGENCE’ to ‘HAPPINESS IS INTELLIGENCE?’ to make the audience think about what happiness really means"
     ],
     "result": [
-     "Grand Prize, SNU Central Library Digital Literacy Academy ‘AI Filmmaking Class’ (2025, awarded by the Director of the Central Library)",
+     "Grand Prize, ‘AI Convergence Film Screening’ hosted by Seoul National University Library (2025, awarded by the Director of the Library)",
+     "Shown at ‘AI insight’, an exhibition by Seoul National University Library and Gwanak Cultural Foundation’s Media Center Gwanak, with a still from the film on the exhibition poster (Dec 2025)",
      "The point from which I started building AI into my work in earnest"
     ],
     "headline": "A short film made with AI, with no actors and no shoot.",
     "metrics": [
      {
       "v": "Grand Prize",
-      "l": "SNU Central Library AI Filmmaking Class 2025"
+      "l": "Seoul National University Library AI Convergence Film Screening 2025"
      }
     ],
     "note": "Made with Midjourney and Kling AI as they were in summer 2025. AI has moved so fast that some shots now read as AI.",
@@ -633,7 +652,7 @@ window.PROJECTS = [
    }
   },
   "title": "AI Short Film",
-  "desc": "A speculative short about emotion regulated by numbers and mood-control pills. Grand Prize, SNU Central Library ‘AI Filmmaking Class’ 2025.",
+  "desc": "A speculative short about emotion regulated by numbers and mood-control pills. Grand Prize, Seoul National University Library ‘AI Convergence Film Screening’ 2025.",
   "song": "keshi drunk",
   "songYoutube": "https://www.youtube.com/watch?v=4HLumkaPcCI"
  },
@@ -4594,12 +4613,12 @@ window.PROJECTS = [
     "action": [
      "Sketchfab에서 재봉틀, 토르소, 마네킹, 행거, 하이힐, 옷 더미 같은 에셋을 골라 실습실처럼 배치하고, 벽·작업대·사물함은 작업장 에셋으로 공간을 짬",
      "태양광, 하늘, 구름, 안개, 후처리 설정으로 창밖 빛과 실내 공기감을 조절",
-     "시퀀서에서 시네 카메라 3대로 15초 영상을 구성하고 캐릭터에 고개 젓기와 뒤로 쓰러지는 동작을 입힘: 고개를 젓는 인물 → 실습실을 훑다 바닥의 옷 더미에 머무는 시선 → 창가에서 뒤로 쓰러지는 인물",
+     "시퀀서에서 시네 카메라 3대로 짧은 영상을 구성하고 캐릭터에 고개 젓기와 뒤로 쓰러지는 동작을 입힘: 고개를 젓는 인물 → 실습실을 훑다 바닥의 옷 더미에 머무는 시선 → 창가에서 뒤로 쓰러지는 인물",
      "토르소와 의자를 화면 앞에 걸쳐 두고 초점 거리·조리개·초점을 키프레임으로 움직여, 흐린 전경 너머로 시선이 옮겨 가게 함",
      "MetaHuman Creator로 캐릭터 제작"
     ],
     "result": [
-     "실습실 공간과 15초 시네마틱 영상을 완성해 수업에 제출"
+     "실습실 공간과 짧은 시네마틱 영상을 완성해 수업에 제출"
     ]
    },
    "en": {
@@ -4610,12 +4629,12 @@ window.PROJECTS = [
     "action": [
      "Picked assets on Sketchfab (sewing machines, dress forms, mannequins, hangers, heels, a pile of clothes) and arranged them as a clothing lab, with walls, workbenches and lockers from a workshop set",
      "Set the sun, sky, clouds, fog and post-process to shape the light from the windows and the air in the room",
-     "In Sequencer, built a 15-second film from three cine cameras and gave the figure a head shake and a fall backward: a figure shaking her head → a look across the lab that settles on a pile of clothes on the floor → the figure falling backward by the window",
+     "In Sequencer, built a short film from three cine cameras and gave the figure a head shake and a fall backward: a figure shaking her head → a look across the lab that settles on a pile of clothes on the floor → the figure falling backward by the window",
      "Kept dress forms and chairs in the foreground and keyframed focal length, aperture and focus, so the eye moves past a blurred foreground",
      "Created a character in MetaHuman Creator"
     ],
     "result": [
-     "Finished the lab and a 15-second cinematic film inside it, submitted for the class"
+     "Finished the lab and a short cinematic film inside it, submitted for the class"
     ]
    }
   },

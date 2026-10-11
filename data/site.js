@@ -71,27 +71,27 @@ window.SITE = {
 
     /* 3 strengths — claim (serif) + evidence (mono). `keyword` must appear verbatim inside `claim`;
        hovering it pops `media` (4:5), clicking opens `link`. */
-    strengths: [
+    strengths: [ /* 2026-10-11 (연서): the three strengths written for the job applications, in the site's 다체 */
       {
-        claim: { ko: 'AI와 새 툴을 빨리 익혀, 머릿속 그림을 바로 눈에 보이는 결과물로 만듭니다.', en: 'I pick up AI and new tools fast, and turn the picture in my head into something you can see.' }, /* AI first (연서, 2026-10-10: companies look for AI, and AI visuals are the work she wants) */
-        keyword: { ko: 'AI와 새 툴', en: 'AI and new tools' },
-        evidence: { ko: '웹, 영상, 옷, 마케팅 작업에 AI를 써 왔다. 웹디자인도 코딩도 전공하지 않았지만, 지금 보고 있는 이 포트폴리오를 AI와 함께 혼자 익혀 만들었다. AI 단편영화는 기획부터 편집까지 혼자 맡아 대상을 받았고, 카프탄은 원단을 자르기 전에 AI로 먼저 입혀 보며 실루엣과 드레이프를 확인했다. 미래엔수학에서는 2D 캐릭터를 AI로 3D화해 릴스에 넣었다. 교환학생 한 학기 동안 NedGraphics, EasyKnit, DesignScope Victor로 프린트·직조·니트 작업을 완성했고, 지금은 인공지능예술실습에서 생성 모델을 직접 학습시키며 원리부터 배우는 중.', en: 'I have used AI across web, film, clothing and marketing work. I majored in neither web design nor coding, yet I taught myself to build this portfolio with AI. I planned, directed and edited an AI short film on my own and won the grand prize, and before cutting the fabric for my kaftan I dressed it on a body with AI to check the silhouette and drape. At MiraeN Math I turned a 2D character into 3D with AI for Reels. In one exchange semester I finished print, woven and knit projects in NedGraphics, EasyKnit and DesignScope Victor, and now I am training generative models myself in Deep Learning for Artists, learning how they work from the inside.' },
+        claim: { ko: 'AI 툴 여러 개를 엮어 쓰되, 기획과 판단은 제가 합니다.', en: 'I combine many AI tools, but the planning and the judgment are mine.' },
+        keyword: { ko: '기획과 판단', en: 'the planning and the judgment' },
+        evidence: { ko: '웹디자인도 웹 코딩도 배운 적 없이 Manus, Claude, ChatGPT, Tripo로 지금 보고 있는 이 포트폴리오를 만들었다. 구조와 첫인상은 내가 기획했고, AI가 만든 결과는 직접 확인하며 고쳤다. AI 단편영화도 컨셉과 큰 줄거리는 내가 정하고 여섯 가지 AI 툴로 만들어, 서울대학교 중앙도서관에서 대상을 받았다. 지금은 툴을 쓰는 데서 나아가, 인공지능예술실습 수업에서 직접 짠 원단 사진으로 이미지 생성 모델을 학습시켜 영상과 이미지를 만들고 있다.', en: 'Having never studied web design or web coding, I built this portfolio with Manus, Claude, ChatGPT and Tripo. I planned the structure and the first impression myself, and checked and fixed what the AI made. For my AI short film I set the concept and the main story, made it with six AI tools, and won the grand prize at Seoul National University Library. Now I am going beyond using tools: in Deep Learning for Artists I train image generation models on photos of fabric I wove myself, and make video and images with them.' },
         media: 'images/projects/portfolio-site/thumb-card.jpg', /* the portfolio-site card image (연서, 2026-10-02) */
-        link: 'portfolio-site', /* was ai-short-film (연서, 2026-10-02): the AI film is already Selected 01 */
+        link: 'portfolio-site',
       },
       {
-        claim: { ko: '보는 사람이 실제로 보는 것에서 출발해 비주얼을 정합니다.', en: 'I start from what the audience actually sees, and shape the visuals from there.' }, /* rewritten 2026-10-10: what she does, not what she lets go of */
-        keyword: { ko: '실제로 보는 것', en: 'actually sees' },
-        evidence: { ko: '40~50대 여성 학부모가 실제로 보는 릴스를 먼저 분석해 큰 글씨, 느린 속도로 제작 규칙을 세웠고, 세 자리였던 릴스 조회수가 2.9만까지 올랐다(미래엔수학). 어르신 한 분을 수업에서 정해진 횟수보다 더 자주 만나, 굽은 등과 어깨 비대칭에 맞춰 코트를 설계했다(인체공학적 의복디자인).', en: 'I first studied the Reels that mothers in their 40s and 50s actually watch and set production rules from them: big type, slow pace. Reel views went from three digits to 29K (MiraeN Math). I met one senior model more often than the class required and cut his coat around a curved back and uneven shoulders (Ergonomic Clothing Design).' },
-        media: 'img/strength-1-miraen.jpg',
-        link: 'miraen',
-      },
-      {
-        claim: { ko: '주어진 조건에서 아이디어를 찾고, 손으로 끝까지 완성합니다.', en: 'I find the idea inside the constraints, and finish it by hand.' }, /* rewritten 2026-10-10: constraints into concepts, then made by hand */
-        keyword: { ko: '손으로 끝까지', en: 'finish it by hand' },
-        evidence: { ko: '비 예보가 있던 야외 전시에서는 우산을 작품의 일부로 만들어 덩굴 터널에 철사로 직접 고정했다(예술주간). 한 벌만 만들 수 있는 공모전에서는 AI로 결과를 먼저 확인한 뒤, 스판 데님을 칼과 드릴로 직접 찢었다(데님 공모전). 동물의 공생은 다른 참가자들이 이미 다루고 있어 주제를 \'불안과 집중의 공생\'으로 풀고, 접시를 직접 깨서 꽃을 만들었다(Art2Wear).', en: 'With rain forecast for an outdoor show, I made an umbrella part of the piece and wired it to a vine tunnel myself (Arts Week). With only one garment allowed in a contest, I checked the result with AI first, then tore the stretch denim with a knife and a drill (denim contest). Animal symbiosis was already taken by other entrants, so I turned the theme into the symbiosis of anxiety and focus, and broke plates by hand to make the flowers (Art2Wear).' },
+        claim: { ko: '주어진 조건 안에서 방법을 찾고, 결과물까지 직접 만듭니다.', en: 'I find a way inside the constraints, and make the result myself.' },
+        keyword: { ko: '결과물까지 직접', en: 'make the result myself' },
+        evidence: { ko: '예술주간 야외 전시는 비 예보가 있어, 우산을 작품의 일부로 넣었다. 데님과 카프탄은 원단에 여유가 없어 봉제를 한 번밖에 할 수 없었다. 그래서 AI로 완성된 모습을 먼저 만들어 보고 방향을 정했다. 데님은 공모전에서 입선했고, 카프탄은 윌슨 컬리지 컬렉션 영구 소장작으로 선정됐다. Art2Wear는 다른 참가자와 주제가 겹쳐 \'불안과 집중의 공생\'으로 주제를 바꾸고, 직접 깨뜨린 도자기 접시로 꽃을 만들어 의상에 더했다.', en: 'With rain forecast for an outdoor show, I worked an umbrella into the piece (Arts Week). For the denim and the kaftan there was no spare fabric, so each could be sewn only once. I made images of the finished pieces with AI first and set the direction from them. The denim won an Honorable Mention, and the kaftan was selected for the Wilson College Collection. At Art2Wear my theme overlapped with other entrants, so I changed it to the symbiosis of anxiety and focus, and made flowers from plates I broke myself to add to the garment.' },
         media: 'img/strength-2-art2wear-making.jpg', /* art2wear/30: making it by hand (연서, 2026-10-02) */
         link: 'art2wear',
+      },
+      {
+        claim: { ko: '옷과 공간, 오브제를 3D로 옮깁니다.', en: 'I bring clothes, spaces and objects into 3D.' },
+        keyword: { ko: '3D로 옮깁니다', en: 'into 3D' },
+        evidence: { ko: '옷은 CLO 3D로 디자인해 국제 디지털 패션 공모전에서 입선했다. 공간은 Unreal Engine에서 에셋을 배치해 의류학과 실습실을 만들고, 짧은 영상으로 완성했다. 미래엔수학 캐릭터와 이 사이트의 도자기 꽃 오브제는 AI를 써서 3D 모델로 만들었다. 지금은 3D그래픽디자인 수업에서 Tripo와 Blender로 3D 포스터를 준비하고 있다.', en: 'Clothes I designed in CLO 3D won an Honorable Mention at the International Digital Fashion Contest. For space, I placed assets in Unreal Engine to build the clothing lab and finished it as a short film. The MiraeN Math character and the ceramic flower object on this site were made into 3D models with AI. Now I am preparing a 3D poster with Tripo and Blender in 3D Graphic Design.' },
+        media: 'images/projects/clo3d/ad06-card.jpg', /* the CLO 3D card image (2026-10-11) */
+        link: 'clo3d',
       },
     ],
 
@@ -115,7 +115,7 @@ window.SITE = {
     awards: [
       { year: '2026', label: { ko: '입선', en: 'Honorable Mention' }, title: { ko: '코리아 데님 디자인 공모전', en: 'Korea Denim Design Contest' }, link: 'denim-2026' },
       { year: '2026', label: { ko: '영구 소장작 선정', en: 'Permanent collection' }, title: { ko: 'NC State 윌슨 컬리지 컬렉션 (카프탄)', en: 'Wilson College Collection, NC State (kaftan)' }, link: 'kaftan' },
-      { year: '2025', label: { ko: '대상', en: 'Grand Prize' }, title: { ko: '서울대학교 중앙도서관 〈AI로 만드는 영화클래스〉', en: 'SNU Central Library ‘AI Filmmaking Class’' }, link: 'ai-short-film' },
+      { year: '2025', label: { ko: '대상', en: 'Grand Prize' }, title: { ko: '서울대학교 중앙도서관 주관 〈AI로 만든 융합 영화상영회〉', en: 'AI Convergence Film Screening, Seoul National University Library' }, link: 'ai-short-film' },
       { year: '2024', label: { ko: '입선', en: 'Honorable Mention' }, title: { ko: '제13회 국제 디지털 패션 공모전 (한국의류산업학회)', en: '13th International Digital Fashion Contest (KSCT)' }, link: 'clo3d' },
     ],
     stats: [
@@ -194,7 +194,7 @@ window.SITE = {
           title: { ko: '미래엔수학 지사 (5개 구): 디자이너 & 마케터', en: 'MiraeN Math (5-district branch): Designer & Marketer' },
           desc: { ko: '지사장 한 명이 새로 연 지사의 SNS 3개 채널을 0에서 개설·운영. 팔로워 0인 계정에서 릴스 최고 조회수 2.9만. 브랜드 콘텐츠 50여 편, 2D 캐릭터를 3D로 리빌드한 숏폼, 유료광고와 네이버 스마트플레이스 SEO 병행. 2025.01~08', en: 'Opened and ran three channels from zero for a branch one director had just opened. Top Reel 29,000 views from a zero-follower account. 50+ pieces of brand content, the 2D character rebuilt in 3D for short-form, paid media alongside Naver SmartPlace SEO. Jan to Aug 2025' } },
         { date: '2025.07', major: true, link: 'ai-short-film',
-          title: { ko: '대상: 서울대학교 중앙도서관 〈AI로 만드는 영화클래스〉', en: 'Grand Prize: SNU Central Library ‘AI Filmmaking Class’' },
+          title: { ko: '대상: 서울대학교 중앙도서관 주관 〈AI로 만든 융합 영화상영회〉', en: 'Grand Prize: Seoul National University Library ‘AI Convergence Film Screening’' },
           desc: { ko: '디지털 리터러시 아카데미 〈AI로 만드는 영화클래스〉(2025.06) 수료 후, 단편영화 \'Happiness is Intelligence?\'를 기획·연출·프롬프트 디렉팅·편집까지 단독 제작. 2025.07.10', en: 'After completing the Digital Literacy Academy ‘AI Filmmaking Class’ (Jun 2025), made the short film \'Happiness is Intelligence?\' solo: concept, direction, prompt direction and editing. 10 Jul 2025' } },
       ],
     },
