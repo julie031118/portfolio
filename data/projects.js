@@ -3,7 +3,7 @@ window.PROJECTS = [
  {
   "slug": "miraen",
   "featured": null,
-  "archiveRank": 13,
+  "archiveRank": 12,
   "tags": [
    "CONTENT",
    "INSIGHT",
@@ -11,7 +11,7 @@ window.PROJECTS = [
   ],
   "year": "2025",
   "period": "2025.01~08",
-  "thumb": "/images/projects/miraen/hero-blog-insta.jpg",
+  "thumb": "/images/projects/miraen/a02-hero.jpg",
   "images": [
    "/images/projects/miraen/a01.jpg",
    "/images/projects/miraen/a02.jpg",
@@ -22,7 +22,9 @@ window.PROJECTS = [
    "/images/projects/miraen/07.jpg",
    "/images/projects/miraen/08.jpg",
    "/images/projects/miraen/09.jpg",
-   "/images/projects/miraen/10.jpg"
+   "/images/projects/miraen/10.jpg",
+   "/images/projects/miraen/a02-hero.jpg",
+   "/images/projects/miraen/a02-card.jpg"
   ],
   "role": {
    "ko": "디자인 · 콘텐츠 기획 · 채널 운영 · 유료광고 (단독)",
@@ -33,7 +35,7 @@ window.PROJECTS = [
    "ko": "오프라인 홍보 시리즈 릴스에 실제로 쓴 곡.",
    "en": "The song I actually used in the street-promo Reels."
   },
-  "cardThumb": "/images/projects/miraen/06-card.jpg",
+  "cardThumb": "/images/projects/miraen/a02-card.jpg",
   "small": [
    "/images/projects/miraen/06.jpg",
    "/images/projects/miraen/07.jpg",
@@ -229,7 +231,7 @@ window.PROJECTS = [
  {
   "slug": "directing-a-year",
   "featured": null,
-  "archiveRank": 14,
+  "archiveRank": 15,
   "tags": [
    "CONTENT",
    "INSIGHT"
@@ -391,7 +393,7 @@ window.PROJECTS = [
  },
  {
   "slug": "ai-short-film",
-  "featured": 1,
+  "featured": 3,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -660,7 +662,7 @@ window.PROJECTS = [
  },
  {
   "slug": "kaftan",
-  "featured": 7,
+  "featured": 6,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -681,7 +683,8 @@ window.PROJECTS = [
    "/images/projects/kaftan/15.jpg",
    "/images/projects/kaftan/16.jpg",
    "/images/projects/kaftan/17.jpg",
-   "/images/projects/kaftan/09.jpg"
+   "/images/projects/kaftan/09.jpg",
+   "/images/projects/kaftan/21-v2.jpg"
   ],
   "role": {
    "ko": "텍스타일 디자인 · 엔지니어드 프린트 설계 · AI 시착 이미지 · 제작",
@@ -692,7 +695,7 @@ window.PROJECTS = [
    "ko": "밤을 그린 피아노곡인 쇼팽 녹턴(야상곡)에서 출발한 카프탄이라, 얇게 비치는 실크 위의 꽃이 달빛을 받아 반짝이는 느낌을 내고 싶었다. 이 노래를 들으면 그런 장면이 떠오른다.",
    "en": "The kaftan began with Chopin’s Nocturnes, piano pieces about the night, so I wanted the flowers on sheer silk to look as if they were catching the moonlight. This song brings that scene to mind."
   },
-  "cardThumb": "/images/projects/kaftan/21.jpg",
+  "cardThumb": "/images/projects/kaftan/21-v2.jpg",
   "process": [
    "/images/projects/kaftan/01.jpg",
    "/images/projects/kaftan/02.jpg",
@@ -727,7 +730,7 @@ window.PROJECTS = [
       }
      },
      {
-      "src": "/images/projects/kaftan/21.jpg"
+      "src": "/images/projects/kaftan/21-v2.jpg"
      },
      {
       "src": "/images/projects/kaftan/22.jpg"
@@ -920,7 +923,7 @@ window.PROJECTS = [
  },
  {
   "slug": "fashion-show-2024",
-  "featured": 5,
+  "featured": 7,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -1187,7 +1190,7 @@ window.PROJECTS = [
  {
   "slug": "campus-festival",
   "featured": null,
-  "archiveRank": 16,
+  "archiveRank": 17,
   "tags": [
    "CONTENT",
    "INSIGHT"
@@ -1352,7 +1355,7 @@ window.PROJECTS = [
  },
  {
   "slug": "art2wear",
-  "featured": 3,
+  "featured": 2,
   "archiveRank": null,
   "tags": [
    "FASHION"
@@ -1604,8 +1607,8 @@ window.PROJECTS = [
  },
  {
   "slug": "clo3d",
-  "featured": 10,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 10,
   "tags": [
    "FASHION"
   ],
@@ -1762,7 +1765,7 @@ window.PROJECTS = [
  {
   "slug": "sub-motion",
   "featured": null,
-  "archiveRank": 19,
+  "archiveRank": 20,
   "tags": [
    "CONTENT"
   ],
@@ -1845,7 +1848,7 @@ window.PROJECTS = [
  {
   "slug": "senior-fit",
   "featured": null,
-  "archiveRank": 20,
+  "archiveRank": 21,
   "tags": [
    "FASHION",
    "INSIGHT"
@@ -2057,7 +2060,7 @@ window.PROJECTS = [
  {
   "slug": "engineered-surfaces",
   "featured": null,
-  "archiveRank": 17,
+  "archiveRank": 18,
   "tags": [
    "FASHION"
   ],
@@ -2295,7 +2298,7 @@ window.PROJECTS = [
  {
   "slug": "textile-printed",
   "featured": null,
-  "archiveRank": 15,
+  "archiveRank": 16,
   "tags": [
    "FASHION"
   ],
@@ -2599,8 +2602,8 @@ window.PROJECTS = [
  },
  {
   "slug": "textile-woven",
-  "featured": 12,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 14,
   "tags": [
    "FASHION"
   ],
@@ -2893,7 +2896,7 @@ window.PROJECTS = [
  {
   "slug": "textile-knit",
   "featured": null,
-  "archiveRank": 18,
+  "archiveRank": 19,
   "tags": [
    "FASHION"
   ],
@@ -3115,8 +3118,8 @@ window.PROJECTS = [
  },
  {
   "slug": "adaptive-textile",
-  "featured": 9,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 13,
   "tags": [
    "FASHION",
    "INSIGHT"
@@ -3448,7 +3451,7 @@ window.PROJECTS = [
  {
   "slug": "korean-costume",
   "featured": null,
-  "archiveRank": 23,
+  "archiveRank": 24,
   "tags": [
    "FASHION"
   ],
@@ -3541,7 +3544,7 @@ window.PROJECTS = [
  {
   "slug": "seoul-metro",
   "featured": null,
-  "archiveRank": 22,
+  "archiveRank": 23,
   "tags": [
    "CONTENT"
   ],
@@ -4048,7 +4051,7 @@ window.PROJECTS = [
  {
   "slug": "fashion-illustration",
   "featured": null,
-  "archiveRank": 21,
+  "archiveRank": 22,
   "tags": [
    "FASHION"
   ],
@@ -4175,8 +4178,8 @@ window.PROJECTS = [
  },
  {
   "slug": "portfolio-site",
-  "featured": 2,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 8,
   "tags": [
    "CONTENT",
    "AI"
@@ -4446,7 +4449,7 @@ window.PROJECTS = [
      "검수는 내가: AI가 쓴 초안에서 사실과 다른 문장, 과장, 번역투를 고치고, 리뷰 시트에 바꿀 것만 표시해 한 번에 반영. 화면은 같은 각도의 전후 화면을 나란히 놓고 비교해 결정"
     ],
     "result": [
-     "인트로부터 연락처까지 섹션 6개와 프로젝트 상세 페이지 23개를 한국어·영어로 구현 (2026.10 업데이트)"
+     "인트로부터 연락처까지 섹션 6개와 프로젝트별 상세 페이지를 한국어·영어로 구현 (2026.10 업데이트)"
     ],
     "detail": {
      "title": "AI가 발전해도 사람이 하는 일",
@@ -4479,7 +4482,7 @@ window.PROJECTS = [
      "Kept the checking in my hands: fixed anything untrue, overstated or stiff in AI drafts, marked only what changes on a review sheet and applied it in one pass, and decided layout changes from before and after shots taken from the same angle"
     ],
     "result": [
-     "Six sections from the intro to contact, plus 23 project pages, in Korean and English (updated Oct 2026)"
+     "Six sections from the intro to contact, plus a page for each project, in Korean and English (updated Oct 2026)"
     ],
     "detail": {
      "title": "What people still do as AI improves",
@@ -4497,7 +4500,7 @@ window.PROJECTS = [
  },
  {
   "slug": "promo-video-ai",
-  "featured": 8,
+  "featured": 5,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -4572,8 +4575,8 @@ window.PROJECTS = [
  },
  {
   "slug": "unreal-engine",
-  "featured": 11,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 11,
   "tags": [
    "CONTENT"
   ],
@@ -4607,22 +4610,13 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/unreal-engine/loop-a.mp4"
+      "src": "/images/projects/unreal-engine/loop-s1.mp4"
      },
      {
-      "src": "/images/projects/unreal-engine/loop-b.mp4"
+      "src": "/images/projects/unreal-engine/loop-s2.mp4"
      },
      {
-      "src": "/images/projects/unreal-engine/loop-c.mp4"
-     },
-     {
-      "src": "/images/projects/unreal-engine/loop-d.mp4"
-     },
-     {
-      "src": "/images/projects/unreal-engine/loop-e.mp4"
-     },
-     {
-      "src": "/images/projects/unreal-engine/loop-f.mp4"
+      "src": "/images/projects/unreal-engine/loop-s3.mp4"
      }
     ],
     "rowTarget": 270
@@ -4707,8 +4701,8 @@ window.PROJECTS = [
  },
  {
   "slug": "arts-week-2026",
-  "featured": 6,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 9,
   "tags": [
    "FASHION"
   ],
@@ -4735,7 +4729,8 @@ window.PROJECTS = [
    "/images/projects/arts-week-2026/17.jpg",
    "/images/projects/arts-week-2026/18.jpg",
    "/images/projects/arts-week-2026/19.jpg",
-   "/images/projects/arts-week-2026/20.jpg"
+   "/images/projects/arts-week-2026/20.jpg",
+   "/images/projects/arts-week-2026/01-card.jpg"
   ],
   "role": {
    "ko": "설치 재구성 · 제작 · 현장 설치 (단독)",
@@ -4746,6 +4741,7 @@ window.PROJECTS = [
    "ko": "세상과 삶에서 밀려드는 압박과 불안을 노래한 곡. 대학생이 짊어진 압박을 우산 위에 올려 보인 이 설치와 같은 이야기를 하고 있어서 골랐다.",
    "en": "A song about the pressure and anxiety that pour in from the world and from life. It tells the same story as this installation, which put the pressure students carry on top of an umbrella."
   },
+  "cardThumb": "/images/projects/arts-week-2026/01-card.jpg",
   "related": [
    {
     "slug": "art2wear",
@@ -4898,5 +4894,396 @@ window.PROJECTS = [
   "desc": "Flowers, bag and skirt from the Art2Wear piece, reworked with new objects into an outdoor installation for SNU Arts Week 2026.",
   "song": "리도어 세상:소음",
   "songYoutube": "https://www.youtube.com/watch?v=l3AmjZ7ZQGM"
+ },
+ {
+  "slug": "scorpio-poster",
+  "featured": 1,
+  "archiveRank": null,
+  "tags": [
+   "AI",
+   "CONTENT",
+   "FASHION"
+  ],
+  "year": "2026",
+  "period": "2026.10.07~10.14",
+  "thumb": "/images/projects/scorpio-poster/hero.jpg",
+  "images": [
+   "/images/projects/scorpio-poster/poster.jpg",
+   "/images/projects/scorpio-poster/01.jpg",
+   "/images/projects/scorpio-poster/02.jpg",
+   "/images/projects/scorpio-poster/03.jpg",
+   "/images/projects/scorpio-poster/04.jpg",
+   "/images/projects/scorpio-poster/05.jpg",
+   "/images/projects/scorpio-poster/06.jpg",
+   "/images/projects/scorpio-poster/07.jpg",
+   "/images/projects/scorpio-poster/08.jpg",
+   "/images/projects/scorpio-poster/09.jpg",
+   "/images/projects/scorpio-poster/10.jpg",
+   "/images/projects/scorpio-poster/11.jpg",
+   "/images/projects/scorpio-poster/12.jpg",
+   "/images/projects/scorpio-poster/13.jpg",
+   "/images/projects/scorpio-poster/14.jpg",
+   "/images/projects/scorpio-poster/15.jpg",
+   "/images/projects/scorpio-poster/16.jpg",
+   "/images/projects/scorpio-poster/17.jpg",
+   "/images/projects/scorpio-poster/20.jpg",
+   "/images/projects/scorpio-poster/21.jpg",
+   "/images/projects/scorpio-poster/22.jpg",
+   "/images/projects/scorpio-poster/23.jpg",
+   "/images/projects/scorpio-poster/24.jpg",
+   "/images/projects/scorpio-poster/25.jpg",
+   "/images/projects/scorpio-poster/26.jpg",
+   "/images/projects/scorpio-poster/cl-1.jpg",
+   "/images/projects/scorpio-poster/cl-2.jpg"
+  ],
+  "role": {
+   "ko": "브랜드 기획 · AI 이미지 생성 · 3D 제작(Blender, AI 에이전트 활용) · 합성(Photoshop) (단독)",
+   "en": "Brand concept, AI image generation, 3D in Blender (with an AI agent), compositing in Photoshop (solo)"
+  },
+  "spotify": "7ub14NqqyR1MDUTXyFBTzO",
+  "spotifyNote": {
+   "ko": "몸이 정체성을 정하지 않는다는 노래. 하나의 안경이 빛에 따라 SEEN도 되고 SEES도 되는 이 포스터와 닮았다.",
+   "en": "A song about identity not being fixed by the body. It feels close to this poster, where one pair of glasses becomes SEEN or SEES depending on the light."
+  },
+  "cardThumb": "/images/projects/scorpio-poster/poster-card.jpg",
+  "sections": [
+   {
+    "title": {
+     "ko": "완성 포스터",
+     "en": "FINAL POSTER"
+    },
+    "images": [
+     {
+      "src": "/images/projects/scorpio-poster/poster.jpg"
+     },
+     {
+      "src": "/images/projects/scorpio-poster/cl-1.jpg",
+      "cap": {
+       "ko": "어깨와 팔 위의 SEES 그림자",
+       "en": "SEES across the shoulder and arm"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/cl-2.jpg",
+      "cap": {
+       "ko": "어깨와 팔 위의 SEEN 그림자",
+       "en": "SEEN across the shoulder and arm"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "처음 기획과 방향 전환",
+     "en": "FIRST CONCEPT AND A CHANGE OF DIRECTION"
+    },
+    "images": [
+     {
+      "src": "/images/projects/scorpio-poster/01.jpg",
+      "cap": {
+       "ko": "1차 기획 LENS의 글자 시안 (ChatGPT 이미지). LENS는 렌즈를 지난 빛이 글자가 되는 안에서 시작해, 렌즈 안의 장면만 렌더링되는 구도로 이어졌다. 안경은 얼굴에 쓰는 패션이라 안경 쓴 인물을 넣고 싶었는데, LENS로는 안경 쓴 인물과 렌즈 속 장면을 한 화면에 담는 구도가 잘 잡히지 않았다. 논리도 약했다. \"AI 안경은 바깥을 읽는다\"는 생각을 렌더링된 장면으로 그렸지만, 바깥을 읽는 것과 장면을 다시 그려 보여 주는 것은 다른 일이다. 화면 없이 카메라·마이크·스피커로만 작동하는 AI 안경도 있는데, 이 안은 화면 있는 안경을 전제했다. 꼭 3D로만 가능한 작업인지도 확신이 없어서 처음부터 다시 기획했다.",
+       "en": "Letter draft for the first concept, LENS (ChatGPT image). LENS began with light through a lens becoming letters and moved to a view where only the scene inside the lens is rendered. Glasses are fashion worn on the face, so I wanted a person wearing them, but with LENS I could not find a composition that held both the wearer and the scene in the lens. The logic was weak as well. I drew \"AI glasses read the world outside\" as a rendered scene, but reading the world and redrawing it for the wearer are different things. Some AI glasses work with only a camera, microphones and speakers and no display, yet this concept assumed a display. I was also not sure it truly needed 3D, so I started over."
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/02.jpg",
+      "cap": {
+       "ko": "REAL 어깨 너머 구도 시안 (ChatGPT 이미지). 안경 쓴 인물과 렌즈 속 장면을 함께 담아 본 구도",
+       "en": "REAL, an over-the-shoulder draft (ChatGPT image): the wearer and the scene in the lens in one frame"
+      }
+     }
+    ],
+    "rowTarget": -1
+   },
+   {
+    "title": {
+     "ko": "왜 3D인가 (2D AI 테스트)",
+     "en": "WHY 3D (2D AI TESTS)"
+    },
+    "images": [
+     {
+      "src": "/images/projects/scorpio-poster/03.jpg",
+      "cap": {
+       "ko": "T1. 판 자체가 뒤집힌 글자로 읽힘",
+       "en": "T1: the plates themselves read as flipped letters"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/04.jpg",
+      "cap": {
+       "ko": "T2. ChatGPT 답 \"실제 빛의 투영을 검증한 구조도는 아닌 콘셉트 이미지\"",
+       "en": "T2: ChatGPT said it was a concept image, not a verified light projection"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/05.jpg",
+      "cap": {
+       "ko": "T3. 방향마다 다른 단어를 요청, 물체가 글자 블록으로 읽힘 (FACE / DATA는 테스트용 단어)",
+       "en": "T3: a different word per direction, the object reads as letter blocks (FACE / DATA were test words)"
+      }
+     }
+    ],
+    "rowTarget": -1
+   },
+   {
+    "title": {
+     "ko": "브랜드와 제품",
+     "en": "BRAND AND PRODUCT"
+    },
+    "images": [
+     {
+      "src": "/images/projects/scorpio-poster/06.jpg",
+      "cap": {
+       "ko": "가상 브랜드 SCORPIO 로고",
+       "en": "Logo of the fictional brand SCORPIO"
+      },
+      "wide": true
+     },
+     {
+      "src": "/images/projects/scorpio-poster/07.jpg",
+      "cap": {
+       "ko": "안경 시안 A, 다리 끝이 뾰족해 버림",
+       "en": "Glasses A, dropped because the temple tips were sharp"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/08.jpg",
+      "cap": {
+       "ko": "안경 시안 B 선택, 렌즈 모서리 카메라와 청록 촬영 표시등",
+       "en": "Glasses B selected, camera and cyan recording light at the lens corner"
+      }
+     }
+    ],
+    "rowTarget": 450
+   },
+   {
+    "title": {
+     "ko": "고정 인물",
+     "en": "A RECURRING VIRTUAL MODEL"
+    },
+    "images": [
+     {
+      "src": "/images/projects/scorpio-poster/09.jpg",
+      "cap": {
+       "ko": "인물 1단계. 옷과 표정을 보고 고름, 머리는 단발로",
+       "en": "Step 1: chosen by outfit and expression, hair changed to a bob"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/10.jpg",
+      "cap": {
+       "ko": "인물 최종. 안경 B로 교체하고 배경 그림자 제거, 앞으로 다른 프로젝트에도 쓸 고정 인물",
+       "en": "Final model: glasses swapped to B, background shadow removed, a recurring virtual model for future work"
+      }
+     }
+    ]
+   },
+   {
+    "title": {
+     "ko": "3D 제작 (Blender)",
+     "en": "BUILDING IN 3D (BLENDER)"
+    },
+    "images": [
+     {
+      "src": "/images/projects/scorpio-poster/11.jpg",
+      "cap": {
+       "ko": "교차 입체를 빛 두 개로 비춰 SEES / SEEN이 읽히는지 먼저 확인",
+       "en": "Testing the intersected solid with two lights: SEES and SEEN read on two planes"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/12.jpg",
+      "cap": {
+       "ko": "사진 한 장으로 만든 3D 대역, 렌더에는 안 보이고 그림자만 받음",
+       "en": "A 3D stand-in from one photo, invisible in the render, receiving only shadows"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/13.jpg",
+      "cap": {
+       "ko": "ChatGPT 에이전트의 초기 배치. 오브제가 작음",
+       "en": "Initial layout by a ChatGPT agent, the object too small"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/20.jpg",
+      "cap": {
+       "ko": "포토샵 배치 v1, 스케치대로 서로 마주 봄",
+       "en": "Photoshop layout v1, facing each other as sketched"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/14.jpg",
+      "cap": {
+       "ko": "정사영 카메라에서 사진에 맞춘 대역",
+       "en": "Stand-ins aligned to the photos in the orthographic camera"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/15.jpg",
+      "cap": {
+       "ko": "각도를 직접 고치고, 글자 대신 대역을 줄여 그림자 글자를 키움",
+       "en": "Angles adjusted by hand, stand-ins scaled down so the shadow letters grow"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/16.jpg",
+      "cap": {
+       "ko": "UV를 만들고 텍스처 연결, 형태를 바꾸는 맵은 빼서 그림자를 지킴",
+       "en": "UV and texture, leaving out maps that change the shape to keep the shadows"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/17.jpg",
+      "cap": {
+       "ko": "Bevel로 모서리를 둥글게",
+       "en": "Rounded edges with Bevel"
+      }
+     }
+    ],
+    "rowTarget": 330
+   },
+   {
+    "title": {
+     "ko": "중간 제출과 다시 맞추기",
+     "en": "SUBMITTED, THEN REFINED"
+    },
+    "images": [
+     {
+      "src": "/images/projects/scorpio-poster/21.jpg",
+      "cap": {
+       "ko": "중간 제출본 (10/14 마감 제출)",
+       "en": "Version submitted at the deadline"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/22.jpg",
+      "cap": {
+       "ko": "조정 전. 그림자가 어깨와 팔에만 있고 오브제가 평평함",
+       "en": "Before: shadows only on shoulder and arm, the object looks flat"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/23.jpg",
+      "cap": {
+       "ko": "글자를 키워 그림자가 얼굴까지, 글자에만 닿는 보조 빛 추가 (ChatGPT 에이전트)",
+       "en": "Letters enlarged so shadows reach the face, a light only for the letters (ChatGPT agent)"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/24.jpg",
+      "cap": {
+       "ko": "SEEN을 다듬고 짙은 초록 텍스처로 (ChatGPT 에이전트)",
+       "en": "SEEN refined, deep green texture (ChatGPT agent)"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/25.jpg",
+      "cap": {
+       "ko": "새 렌더 1",
+       "en": "New render 1"
+      }
+     },
+     {
+      "src": "/images/projects/scorpio-poster/26.jpg",
+      "cap": {
+       "ko": "새 렌더 2",
+       "en": "New render 2"
+      }
+     }
+    ],
+    "rowTarget": -1
+   }
+  ],
+  "nar": {
+   "ko": {
+    "title": "AI 아이웨어 브랜드 3D 포스터 (Blender · AI)",
+    "cat": "3D 그래픽 · 브랜드 비주얼 · 2026.10.07~10.14",
+    "headline": "물체 하나가 빛의 방향에 따라 두 단어의 그림자를 만든다. 2D 생성 이미지로는 검증할 수 없는 그림자를 블렌더에서 빛을 계산해 만들었다.",
+    "metrics": [
+     {
+      "v": "1 → 2",
+      "l": "오브제 하나, 빛 방향에 따라 그림자 단어 둘"
+     },
+     {
+      "v": "3",
+      "l": "그림자 타이포 2D AI 생성 테스트 (ChatGPT)"
+     }
+    ],
+    "need": "AI가 그럴듯한 이미지를 바로 만들어 주는 상황에서, 실제 3D 오브제와 빛이 있어야만 성립하는 광고 비주얼을 만들고 싶었다. 주제는 AI 디바이스인 AI 아이웨어. AI 안경도 결국 안경이라, 얼굴에 쓰는 만큼 누군가에게 보이는 패션이다(SEEN). 동시에 바깥을 인식해 쓰는 사람에게 음악이나 정보를 건네는 기기이기도 하다(SEES). 보이기도 하고 보기도 하는 물건이라는 점을, 빛 방향에 따라 SEEN과 SEES로 갈리는 그림자로 보여 주려 했다. 실제 브랜드 대신 가상 브랜드 SCORPIO를 처음부터 기획했고, 핵심 메시지는 \"특정한 빛 아래서만 드러나는 정체\"다.",
+    "action": [
+     "전갈이 자외선을 받으면 청록색으로 빛난다는 데서 브랜드 이름을 SCORPIO로 정함. 같은 인물을 좌우 대칭으로 두고, 한쪽 몸에는 SEES, 다른 쪽에는 SEEN 그림자가 비치게 구성함",
+     "ChatGPT(GPT-6 Astra)로 그림자 타이포 이미지를 세 번 만들어 봄. 그럴듯해 보여도 빛을 계산한 그림자가 아니라서, 물체와 맞는 그림자인지 확인할 수 없었고 ChatGPT도 그렇다고 답함. 그래서 그림자는 블렌더에서 빛으로 계산하기로 함",
+     "두 단어를 교차시킨 글자 오브제(Text Flip 3D Generator로 생성)를 앞쪽 양옆에서 빛 두 개로 비춤. 인물 사진 한 장을 Tripo로 3D 대역으로 만들어, 그림자가 평평한 면이 아니라 어깨·팔·얼굴의 굴곡을 따라 휘게 함",
+     "그림자 글자를 키울 때는 포토샵에서 글자를 키우지 않고 블렌더에서 인물 대역을 줄임. 포토샵에서 키우면 빛과 그림자가 맞지 않게 되기 때문. 텍스처를 입히고 모서리를 둥글게 다듬은 뒤, 글자에만 닿는 빛을 하나 더 두어 정면에서도 입체감이 보이게 함 (ChatGPT 에이전트와 함께)",
+     "렌더에 맞춰 인물 사진을 배치하고, 대역과 사진의 비율 차이로 어긋난 귀 주변 그림자는 포토샵에서 지우거나 맞춤"
+    ],
+    "result": [
+     "최종 포스터는 교수님께 아이디어와 기획이 좋고, 디자인한 이유가 납득되며 재미있다는 평가를 받음",
+     "글자 오브제를 만든 방식(Text Flip 3D Generator)은 교수님이 수업 시간에 직접 써 볼 만큼 관심을 받음",
+     "1차 기획을 접고 처음부터 다시 기획해, 다음 날 마감에 맞춰 완성함"
+    ],
+    "note": "AI 사용: 안경·인물 이미지(힉스필드 GPT Image 2, Soul 2.0, Nano Banana 2), 로고(힉스필드), 인물 3D 대역(Tripo), 잘린 인물 머리 위·팔 확장(포토샵 생성형 확장), 블렌더 장면 초기 세팅과 글자 확대·보조 빛·SEEN 다듬기·초록 텍스처(ChatGPT 에이전트), 일부 프롬프트 작성(Claude). 구조·단어·브랜드명·색·빛 방향 결정, 그림자 테스트와 판정, 합성은 직접 했고, 블렌더 조정은 ChatGPT 에이전트와 나눠서 했다.",
+    "detail": {
+     "title": "왜 3D였나",
+     "body": [
+      "3D 수업 과제였지만, 2D AI 이미지로도 되는 주제라면 굳이 3D로 할 이유가 없다고 봤다. 그래서 실제 3D 오브제 없이는 불가능하다는 게 느껴지는 주제를 골랐다.",
+      "AI가 블렌더를 직접 조작할 수도 있다. 실제로 이번 작업의 장면 세팅 일부도 ChatGPT 에이전트가 했다. 그래서 3D를 쓴 이유를 \"사람이 손으로 해야 해서\"가 아니라 \"빛을 계산해야 정확해서\"로 잡았다. 테스트가 보여 준 범위도 그만큼이다. 2D 이미지 생성은 빛을 계산하지 않고 그럴듯하게 그린다.",
+      "몸 위 그림자도 같은 이유로 3D가 필요했다. 평면에 받으면 그림자가 평평하게 비친다. 몸의 형태는 Tripo로 근사하고, 정확해야 하는 글자 오브제는 계산된 입체로 나눴다.",
+      "정면에서 보면 오브제 자체도 S, E, E로 읽히고, 맨 아래에서는 S와 N이 겹친다.",
+      "참고. 물체 하나가 방향마다 다른 글자의 그림자를 만드는 구조는 『괴델, 에셔, 바흐』 표지를 참고했다.",
+      "한계. Tripo 대역은 사진 한 장으로 추정한 형태라 사진과 비율이 조금씩 다르다. 귀 주변처럼 굴곡이 복잡한 곳은 그림자를 합성 단계에서 직접 지우거나 맞췄다.",
+      "버린 안. 안경 시안 A는 다리 끝이 뾰족해 착용감을 기준으로 버렸고, 전갈 꼬리처럼 말린 다리 끝은 과해서 인물이 쓴 안경에서는 없앴다.",
+      "인물은 앞으로 다른 프로젝트에도 쓸 고정 가상 인물로 정했다."
+     ]
+    }
+   },
+   "en": {
+    "title": "AI Eyewear Brand 3D Poster (Blender · AI)",
+    "cat": "3D Graphics · Brand Visual · 7 to 14 Oct 2026",
+    "headline": "One object casts two different words as shadows, depending on the direction of light. A 2D generated image cannot verify its shadows, so I calculated them with light in Blender.",
+    "metrics": [
+     {
+      "v": "1 → 2",
+      "l": "one object, two shadow words by light direction"
+     },
+     {
+      "v": "3",
+      "l": "2D AI generation tests of shadow typography (ChatGPT)"
+     }
+    ],
+    "need": "With AI producing convincing images instantly, I wanted an ad visual that only works with a real 3D object and light. The subject is AI eyewear, an AI device. AI glasses are still glasses: worn on the face, they are fashion that other people see (SEEN). They are also a device that reads the world around the wearer and gives them music or information (SEES). I wanted shadows that split into SEEN and SEES by light direction to show an object that is both seen and seeing. Instead of a real brand, I built a fictional brand, SCORPIO, from scratch. The key message: an identity that appears only under a certain light.",
+    "action": [
+     "Named the brand SCORPIO because scorpions glow blue green under ultraviolet light. Placed the same model in mirror symmetry, with the SEES shadow falling on one body and SEEN on the other",
+     "Asked ChatGPT (GPT-6 Astra) for shadow typography images three times. They looked convincing, but the shadows were not calculated from light, so there was no way to check that they matched the object, and ChatGPT said so too. So I decided to calculate the shadows with light in Blender",
+     "Lit the letter object, two words crossed into one solid (generated with Text Flip 3D Generator), with two lights from the front left and front right. Turned one photo of the model into a 3D stand-in with Tripo, so the shadows bend along the shoulders, arms and face instead of lying on a flat surface",
+     "To enlarge the shadow letters, scaled the stand-in down in Blender instead of enlarging the letters in Photoshop, because enlarging them in Photoshop would make the light and shadows stop matching. After adding a texture and rounding the edges, added one more light that reaches only the letters, so the object looks three-dimensional from the front too (with a ChatGPT agent)",
+     "Placed the model photos to match the render, and in Photoshop removed or matched the shadows around the ears that were off because the stand-in's proportions differ from the photo"
+    ],
+    "result": [
+     "The professor said the final poster had a strong idea and plan, that the reasons behind the design made sense, and that it was fun",
+     "The way the letter object was made (Text Flip 3D Generator) interested the professor enough to try it in class",
+     "Dropped the first concept, planned again from scratch, and finished by the deadline the next day"
+    ],
+    "note": "AI was used for the glasses and model images (Higgsfield GPT Image 2, Soul 2.0, Nano Banana 2), the logo (Higgsfield), the 3D stand-in (Tripo), extending the cropped top of the model's head and her arm (Photoshop Generative Expand), the initial Blender scene setup plus letter scaling, the extra light, refining SEEN and the green texture (ChatGPT agent), and some of the prompts (Claude). I decided the structure, words, brand name, colors and light directions, ran and judged the shadow tests, and did the compositing myself; the Blender adjustments were shared between me and the ChatGPT agent.",
+    "detail": {
+     "title": "Why 3D",
+     "body": [
+      "It was a 3D class assignment, but if a 2D AI image could do the job, I saw no reason to use 3D. So I chose a subject that clearly could not work without a real 3D object.",
+      "AI can operate Blender directly; part of this scene setup was in fact done by a ChatGPT agent. So the reason for 3D is not \"a person has to do it by hand\" but \"light has to be calculated to be accurate.\" That is also the limit of what the tests showed: 2D image generation draws plausible shadows without calculating light.",
+      "The shadows on the body needed 3D for the same reason. On a flat card they would fall flat. The body is approximated with Tripo, while the letter object, which has to be exact, is a calculated solid.",
+      "Seen from the front, the object itself reads S, E, E, and at the bottom S and N overlap.",
+      "Reference. The structure, one object casting a different letter's shadow in each direction, follows the cover of Gödel, Escher, Bach.",
+      "Limitation. The Tripo stand-in is a shape estimated from one photo, so its proportions differ slightly from the photo. Where the form is complex, like around the ears, the shadows were removed or matched by hand during compositing.",
+      "Rejected directions. Glasses option A was dropped for comfort because its temple tips were sharp, and the scorpion tail curl was removed from the worn glasses as too much.",
+      "The model is a recurring virtual model I will use in future projects."
+     ]
+    }
+   }
+  },
+  "title": "AI Eyewear Brand 3D Poster (Blender · AI)",
+  "desc": "One object casts two different words as shadows, depending on the direction of light.",
+  "song": "SOPHIE Immaterial",
+  "songYoutube": "https://www.youtube.com/watch?v=PB5tnokRFS0"
  }
 ];

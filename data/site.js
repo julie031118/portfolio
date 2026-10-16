@@ -89,9 +89,9 @@ window.SITE = {
       {
         claim: { ko: '옷과 공간, 오브제를 3D로 옮깁니다.', en: 'I bring clothes, spaces and objects into 3D.' },
         keyword: { ko: '3D로 옮깁니다', en: 'into 3D' },
-        evidence: { ko: '옷은 CLO 3D로 디자인해 국제 디지털 패션 공모전에서 입선했다. 공간은 Unreal Engine에서 에셋을 배치해 의류학과 실습실을 만들고, 짧은 영상으로 완성했다. 미래엔수학 캐릭터와 이 사이트의 도자기 꽃 오브제는 AI를 써서 3D 모델로 만들었다. 지금은 3D그래픽디자인 수업에서 Tripo와 Blender로 3D 포스터를 작업하고 있다.', en: 'Clothes I designed in CLO 3D won an Honorable Mention at the International Digital Fashion Contest. For space, I placed assets in Unreal Engine to build the clothing lab and finished it as a short film. The MiraeN Math character and the ceramic flower object on this site were made into 3D models with AI. Now I am working on a 3D poster with Tripo and Blender in 3D Graphic Design.' },
-        media: 'images/projects/clo3d/ad06-card.jpg', /* the CLO 3D card image (2026-10-11) */
-        link: 'clo3d',
+        evidence: { ko: '옷은 CLO 3D로 디자인해 국제 디지털 패션 공모전에서 입선했다. 공간은 Unreal Engine에서 에셋을 배치해 의류학과 실습실을 만들고, 짧은 영상으로 완성했다. 미래엔수학 캐릭터와 이 사이트의 도자기 꽃 오브제는 AI를 써서 3D 모델로 만들었다. 3D그래픽디자인 수업에서는 Tripo와 Blender로 가상 AI 아이웨어 브랜드의 3D 포스터를 만들었고, 지금은 같은 수업에서 AI와 3D를 함께 쓰는 법을 더 배우며 기말 프로젝트를 준비하고 있다.', en: 'Clothes I designed in CLO 3D won an Honorable Mention at the International Digital Fashion Contest. For space, I placed assets in Unreal Engine to build the clothing lab and finished it as a short film. The MiraeN Math character and the ceramic flower object on this site were made into 3D models with AI. In 3D Graphic Design I made a 3D poster for a fictional AI eyewear brand with Tripo and Blender, and I am now learning more about using AI and 3D together in the same class as I prepare the final project.' },
+        media: 'images/projects/scorpio-poster/poster-card.jpg', /* the AI eyewear poster (2026-10-15; CLO card until then) */
+        link: 'scorpio-poster',
       },
     ],
 
@@ -263,7 +263,7 @@ window.SITE = {
     /* phones only: a small note once per visit that the full site is on a computer (연서, 2026-10-02) */
     desktopNote: { ko: '컴퓨터로 보면 훨씬 좋아요. 3D 링과 인터랙션까지 모두 보여요', en: 'Best viewed on a computer, with the 3D ring and every interaction' },
     desktopNoteClose: { ko: '닫기', en: 'Close' },
-    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', experience: 'WORK EXPERIENCE', activities: 'ACTIVITIES', awards: 'AWARDS', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
+    strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', experience: 'WORK EXPERIENCE', activities: 'ACTIVITIES', awards: 'AWARDS', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', /* timeline fold (2026-10-16) */ timelineOpen: 'OPEN <span class="timeline-topline-arrow">↓</span>', timelineClose: 'CLOSE <span class="timeline-topline-arrow">↑</span>', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
   archiveUi: {
     aiNowNote: { ko: '지금 배우고 있는 AI 작업은 NOW에 ↑', en: 'The AI work I am learning right now is in NOW ↑' }, /* shown only under AI WORKS (연서, 2026-10-09) */
     filterLabel: 'ARCHIVE FILTERS', imageSlot: 'IMAGE 3:4', inProgress: 'IN PROGRESS',
@@ -275,9 +275,9 @@ window.SITE = {
     /* each filter can have its own order (연서, 2026-10-02); ALL and any slug left out follow featured, then archiveRank */
     order: { /* 2026-10-11 (연서: ALL is hers, the four filters left to Claude). FASHION follows ALL; AI keeps denim right after APEC;
                 CONTENT puts the films she planned and directed first; INSIGHT follows strength 2 (audience first, then research) */
-      FASHION: ['art2wear', 'denim-2026', 'fashion-show-2024', 'arts-week-2026', 'kaftan', 'adaptive-textile', 'clo3d', 'textile-woven', 'textile-printed', 'engineered-surfaces', 'textile-knit', 'senior-fit', 'fashion-illustration', 'korean-costume'],
-      CONTENT: ['ai-short-film', 'promo-video-ai', 'directing-a-year', 'unreal-engine', 'sub-motion', 'portfolio-site', 'miraen', 'fashion-show-2024', 'campus-festival', 'seoul-metro'],
-      AI: ['ai-short-film', 'portfolio-site', 'denim-2026', 'promo-video-ai', 'kaftan', 'miraen'], /* denim above the 2025 APEC film (2026-10-12, 연서 OK) */
+      FASHION: ['art2wear', 'denim-2026', 'scorpio-poster', 'fashion-show-2024', 'arts-week-2026', 'kaftan', 'adaptive-textile', 'clo3d', 'textile-woven', 'textile-printed', 'engineered-surfaces', 'textile-knit', 'senior-fit', 'fashion-illustration', 'korean-costume'],
+      CONTENT: ['ai-short-film', 'promo-video-ai', 'directing-a-year', 'unreal-engine', 'sub-motion', 'portfolio-site', 'scorpio-poster', 'miraen', 'fashion-show-2024', 'campus-festival', 'seoul-metro'],
+      AI: ['ai-short-film', 'portfolio-site', 'scorpio-poster', 'denim-2026', 'promo-video-ai', 'kaftan', 'miraen'], /* denim above the 2025 APEC film (2026-10-12, 연서 OK) */
       INSIGHT: ['miraen', 'senior-fit', 'adaptive-textile', 'directing-a-year', 'campus-festival'],
     },
   },
@@ -307,39 +307,40 @@ window.SITE = {
       label: { ko: '3D 그래픽 디자인 · 2026 가을학기', en: '3D Graphic Design · Fall 2026' },
       claim: { ko: 'Blender와 AI를 함께 쓰는 3D 그래픽디자인을 배우고 있습니다.', en: 'Learning 3D graphic design with Blender and AI together.' },
       evidence: { ko: 'AI가 만든 3D를 디자이너의 눈으로 가려내고 완성하는 법을 배우는 수업. Blender로 조형, 라이팅과 렌더링, 질감을 익히는 중.', en: 'A class on judging the 3D that AI makes and finishing it with a designer’s eye. Working through form, lighting, rendering and materials in Blender.' },
-      next: { ko: '3D 타이포 포스터와 아이콘 세트를 거쳐, 톤앤매너가 통일된 3D 그래픽 시리즈를 완성합니다.', en: 'A 3D type poster and an icon set, then a 3D graphic series in one tone and manner.' },
+      next: { ko: '중간 과제인 3D 타이포 포스터는 완성해 아카이브에 올렸습니다. 다음은 아이콘 세트, 그리고 톤앤매너가 통일된 3D 그래픽 시리즈입니다.', en: 'The midterm 3D type poster is done and in the archive. Next, an icon set, then a 3D graphic series in one tone and manner.' },
     },
   ],
 
   /* moodboard ground behind each project's detail page (photo under vellum). Keys are project slugs;
      a project without an entry falls back to the pool below, picked by its position. */
   detailGround: {
-    miraen: 'images/ground/d06-dog-ai.jpg',
+    miraen: 'images/projects/miraen/hero-blog-insta.jpg',
     kaftan: 'images/ground/01-intro.jpg',
     'ai-short-film': 'images/ground/d14-ai-film-face.jpg',
-    'campus-festival': 'images/ground/04-about.jpg',
+    'campus-festival': 'images/projects/campus-festival/05.jpg',
     art2wear: 'images/ground/03-name.jpg',
-    'denim-2026': 'images/ground/02-work.jpg',
+    'denim-2026': 'images/projects/denim-2026/01.jpg',
     'fashion-show-2024': 'images/ground/d10-runway-wide.jpg',
     'directing-a-year': 'images/ground/d16-wilson-collage.jpg',
     'sub-motion': 'images/ground/d01-filmstrip.jpg',
-    'senior-fit': 'images/ground/d11-sewing-ruffles.jpg',
-    'promo-video-ai': 'images/ground/d15-bad-day-still.jpg',
+    'senior-fit': 'images/04_senior_fit_ergonomic.jpg',
+    'promo-video-ai': 'images/projects/promo-video-ai/01-v2.jpg',
     'portfolio-site': 'images/projects/portfolio-site/14.jpg',
+    'scorpio-poster': 'images/projects/scorpio-poster/poster.jpg', /* its own poster, blurred (2026-10-14) */
     '3d-graphic-design': 'images/ground/05-archive.jpg',
-    'adaptive-textile': 'images/ground/d07-tufted-portrait.jpg',
+    'adaptive-textile': 'images/projects/adaptive-textile/ad01-hero-wide-v3.jpg',
     'ai-art-practice': 'images/ground/d06-dog-ai.jpg',
     'arts-week-2026': 'images/projects/arts-week-2026/06.jpg',
-    clo3d: 'images/ground/d09-runway-blur.jpg',
-    'engineered-surfaces': 'images/ground/d05-green-repeat.jpg',
-    'fashion-illustration': 'images/ground/d12-popart-face.jpg',
-    'korean-costume': 'images/ground/d04-rabbit-floral.jpg',
-    'seoul-metro': 'images/ground/d01-filmstrip.jpg',
+    clo3d: 'images/projects/clo3d/01.jpg',
+    'engineered-surfaces': 'images/projects/engineered-surfaces/01-v2-hero.jpg',
+    'fashion-illustration': 'images/projects/fashion-illustration/01.jpg',
+    'korean-costume': 'images/projects/korean-costume/hb02-hero.jpg',
+    'seoul-metro': 'images/19_seoul_metro_promo_video.jpg',
     'technical-design': 'images/ground/d11-sewing-ruffles.jpg',
-    'textile-knit': 'images/ground/02-work.jpg',
-    'textile-printed': 'images/ground/d02-fox-floral.jpg',
-    'textile-woven': 'images/ground/d13-woven-pink.jpg',
-    'unreal-engine': 'images/ground/d03-stripe-floral.jpg',
+    'textile-knit': 'images/projects/textile-knit/cardigans.jpg',
+    'textile-printed': 'images/09_textile_design_printed.jpg',
+    'textile-woven': 'images/projects/textile-woven/ad11.jpg',
+    'unreal-engine': 'images/projects/unreal-engine/ad04.jpg',
   },
   detailGroundPool: ['images/ground/d08-runway-stripes.jpg', 'images/ground/06-contact.jpg', 'images/ground/d03-stripe-floral.jpg', 'images/ground/d13-woven-pink.jpg'],
 

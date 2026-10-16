@@ -72,7 +72,7 @@ export function renderAbout(lang) {
       ${(SITE.profile.activities || []).length ? `<section class="about-awards about-activities" aria-labelledby="about-act-title"><h2 id="about-act-title">${SITE.aboutUi.activities || 'ACTIVITIES'}</h2><ol class="about-award-list about-act-list"></ol></section>` : ''}
       ${(SITE.profile.awards || []).length ? `<section class="about-awards" aria-labelledby="about-awards-title"><h2 id="about-awards-title">${SITE.aboutUi.awards || 'AWARDS'}</h2><ol class="about-award-list"></ol></section>` : ''}
       <section class="about-skills" aria-labelledby="about-skills-title"><h2 id="about-skills-title">${SITE.aboutUi.skills}</h2><div class="about-skill-groups"></div></section>
-      <section class="about-timeline" aria-labelledby="about-timeline-title"><div class="timeline-pin"><div class="timeline-topline"><h2 id="about-timeline-title">${SITE.aboutUi.timeline}</h2><span>${String(SITE.timeline[0].segment).slice(0, 4)} <span class="timeline-topline-arrow">→</span> ${String(SITE.timeline[SITE.timeline.length - 1].segment).slice(0, 4)}</span></div><div class="timeline-viewport"><div class="timeline-track"></div></div></div></section>
+      <section class="about-timeline is-collapsed" aria-labelledby="about-timeline-title"><div class="timeline-pin"><div class="timeline-topline"><h2 id="about-timeline-title">${SITE.aboutUi.timeline}</h2><span class="timeline-topline-end"><span>${String(SITE.timeline[0].segment).slice(0, 4)} <span class="timeline-topline-arrow">→</span> ${String(SITE.timeline[SITE.timeline.length - 1].segment).slice(0, 4)}</span><button class="timeline-toggle" type="button" aria-expanded="false" aria-controls="about-timeline-viewport"></button></span></div><div class="timeline-viewport" id="about-timeline-viewport"><div class="timeline-track"></div></div></div></section>
     </div>
     <div class="strength-media-popup" aria-hidden="true">${mediaMarkup('strength-media-frame', SITE.aboutUi.mediaSlot)}</div>
     <aside class="timeline-side-panel" aria-hidden="true"><div class="timeline-panel-inner"></div></aside>`;
@@ -269,18 +269,58 @@ export function renderAbout(lang) {
     });
   }
   let spanTimer = 0;
-  const onSpanResize = () => { clearTimeout(spanTimer); spanTimer = window.setTimeout(drawSpans, 150); };
+  const onSpanResize = () => { clearTimeout(spanTimer); spanTimer = window.setTimeout(() => { if (timelineOpen) drawSpans(); }, 150); };
+
+  /* folded by default (연서, 2026-10-16: the pinned timeline took too long every time she scrolled past it). OPEN builds the
+     pinned horizontal scroll, CLOSE removes it, so a closed timeline is one line on the page. */
+  const toggle = section.querySelector('.timeline-toggle');
+  let timelineOpen = false;
+  let interactionsReady = false;
+  const toggleLabel = () => { toggle.innerHTML = timelineOpen ? SITE.aboutUi.timelineClose : SITE.aboutUi.timelineOpen; toggle.setAttribute('aria-expanded', String(timelineOpen)); };
+  toggleLabel();
+  const scrollToY = (y, immediate) => { if (window.__lenis) window.__lenis.scrollTo(y, immediate ? { immediate: true, force: true } : { duration: .9, force: true }); else window.scrollTo({ top: y, behavior: immediate ? 'auto' : 'smooth' }); };
+  function buildTimelineMotion() {
+    if (horizontalTween || mobileQuery.matches || reducedQuery.matches) return;
+    const distance = () => Math.max(0, track.scrollWidth - window.innerWidth);
+    horizontalTween = gsap.to(track, { x: () => -distance(), ease: 'none', scrollTrigger: { trigger: timeline, start: 'top top', end: () => `+=${Math.round(distance() * .6)}` /* scroll 0.6px per px of travel (was 0.6 screen per column, too long) */, pin: timelinePin, scrub: true, invalidateOnRefresh: true, onUpdate: () => { updateDepth(); tickTimeline(); }, onRefresh: updateDepth } });
+  }
+  function killTimelineMotion() {
+    if (!horizontalTween) return;
+    horizontalTween.scrollTrigger?.kill(true); horizontalTween.kill(); horizontalTween = null;
+    gsap.set(track, { x: 0 }); middleIndex = -1;
+  }
+  function setTimeline(open) {
+    if (open === timelineOpen) return;
+    const navOffset = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 64) + 28;
+    const wasTop = timeline.getBoundingClientRect().top + window.scrollY;
+    timelineOpen = open;
+    timeline.classList.toggle('is-collapsed', !open);
+    toggleLabel();
+    if (open) {
+      if (interactionsReady) { drawSpans(); buildTimelineMotion(); }
+      window.ScrollTrigger?.refresh();
+      /* desktop: bring the top of the timeline up so the pinned scroll starts from its first year */
+      if (horizontalTween) scrollToY(horizontalTween.scrollTrigger.start, false);
+    } else {
+      killTimelineMotion();
+      window.ScrollTrigger?.refresh();
+      /* closing from the middle of the pinned scroll: land on the folded line instead of far below it */
+      if (window.scrollY > wasTop - navOffset) scrollToY(Math.max(0, wasTop - navOffset), true);
+    }
+  }
+  toggle.addEventListener('click', () => setTimeline(!timelineOpen));
+  section.querySelector('.timeline-viewport').addEventListener('click', () => { if (!timelineOpen) setTimeline(true); }); /* the drifting strip opens it too */
 
   function setupInteractions() {
-    drawSpans(); window.addEventListener('resize', onSpanResize);
+    interactionsReady = true;
+    window.addEventListener('resize', onSpanResize);
     if (mobileQuery.matches) {
       mobileObserver = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('is-in-view'); }), { threshold: .12 });
       section.querySelectorAll('.timeline-item').forEach((item) => mobileObserver.observe(item));
       return;
     }
     if (reducedQuery.matches) { section.classList.add('about-reduced'); return; }
-    const distance = () => Math.max(0, track.scrollWidth - window.innerWidth);
-    horizontalTween = gsap.to(track, { x: () => -distance(), ease: 'none', scrollTrigger: { trigger: timeline, start: 'top top', end: () => `+=${Math.round(distance() * .6)}` /* scroll 0.6px per px of travel (was 0.6 screen per column, too long) */, pin: timelinePin, scrub: true, invalidateOnRefresh: true, onUpdate: () => { updateDepth(); tickTimeline(); }, onRefresh: updateDepth } });
+    if (timelineOpen) { drawSpans(); buildTimelineMotion(); }
     window.ScrollTrigger?.refresh();
   }
 

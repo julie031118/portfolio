@@ -125,7 +125,10 @@ export function renderIntro(siteLang) {
     /* it stays for good; a phone has no notes to open, so no hint there */
     if (compactQuery.matches) return;
     const source = SITE.intro.ui.hint;
-    const copy = typeof source === 'string' ? source : (source[currentLang] || source.en);
+    /* 2026-10-16: a visitor on the Korean site reads the English paragraph but missed the English hint, so the hint
+       follows the site language when that is Korean */
+    const hintLang = siteLang === 'ko' ? 'ko' : currentLang;
+    const copy = typeof source === 'string' ? source : (source[hintLang] || source.en);
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { hintText.textContent = copy; hintEl.classList.add('is-typing'); return; }
     let count = 0;
     const step = () => {
@@ -134,7 +137,7 @@ export function renderIntro(siteLang) {
       hintText.textContent = copy.slice(0, count);
       if (count < copy.length) hintTimer = window.setTimeout(step, 42);
     };
-    hintTimer = window.setTimeout(() => { hintEl.classList.add('is-typing'); hintTimer = window.setTimeout(step, 700); }, 900);
+    hintTimer = window.setTimeout(() => { hintEl.classList.add('is-typing'); hintTimer = window.setTimeout(step, 350); }, 450); /* sooner (was 900 + 700 ms) */
   }
 
   function bindKeyword(word, keyword) { hand.bind(word, keyword); }

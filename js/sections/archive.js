@@ -6,7 +6,8 @@ const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 let instance = null;
 
 function sortedProjects() {
-  return PROJECTS.map((project, index) => ({ project, index })).sort((a, b) => {
+  /* hidden (2026-10-16, 미래엔): left out of the grid and the filter counts; its page still opens by link */
+  return PROJECTS.filter((project) => !project.hidden).map((project, index) => ({ project, index })).sort((a, b) => {
     const featuredA = Number.isFinite(a.project.featured) ? a.project.featured : Number.POSITIVE_INFINITY;
     const featuredB = Number.isFinite(b.project.featured) ? b.project.featured : Number.POSITIVE_INFINITY;
     if (featuredA !== featuredB) return featuredA - featuredB;

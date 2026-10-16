@@ -257,6 +257,8 @@ function renderProject(detail, project, lang) {
   if (project.heroRatio) { /* a hero that keeps its own shape; on desktop no taller than the usual 16:9 hero (2026-10-09) */
     hero.style.aspectRatio = String(project.heroRatio);
     if (project.heroRatio < 16 / 9) { hero.classList.add('detail-hero--shaped'); hero.style.setProperty('--hero-w', `${(project.heroRatio / (16 / 9) * 100).toFixed(2)}%`); }
+    /* heroTall (SCORPIO poster, 2026-10-14): a portrait poster sized to the window height instead of the 16:9 height */
+    if (project.heroTall) { hero.classList.add('detail-hero--tall'); hero.style.setProperty('--hero-r', String(project.heroRatio)); }
   }
   /* the square lens that lived on the cover was removed (2026-10-02): the page-wide glass lens covers it */
   const header = document.createElement('header');

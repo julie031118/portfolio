@@ -281,8 +281,9 @@ async function createRing(section, projects, lang, onDispose) {
   });
 
   const paper = new THREE.Color(cssColor('--bg') || '#F1F1F3');
-  /* start angle (연서, 2026-10-10): the ring opens with the denim and arts-week cards side by side at the front */
-  const startPair = ['denim-2026', 'arts-week-2026'].map((slug) => projects.findIndex((p) => p.slug === slug)).filter((i) => i >= 0);
+  /* start angle (연서, 2026-10-10): the ring opens with two cards side by side at the front. 2026-10-16: the ring is 7
+     cards and arts-week left it, so SCORPIO and Art2Wear open it (was denim + arts-week) */
+  const startPair = ['scorpio-poster', 'art2wear'].map((slug) => projects.findIndex((p) => p.slug === slug)).filter((i) => i >= 0);
   const START = startPair.length ? -((startPair.reduce((sum, i) => sum + i, 0) / startPair.length) / N) * TAU : 0;
   let angle = -Math.PI / 2 + START;    /* current rotation of the ring */
   let scrollAngle = 0;                 /* driven by the pinned scroll */
