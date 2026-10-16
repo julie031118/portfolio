@@ -662,7 +662,7 @@ window.PROJECTS = [
  },
  {
   "slug": "kaftan",
-  "featured": 6,
+  "featured": 5,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -923,7 +923,7 @@ window.PROJECTS = [
  },
  {
   "slug": "fashion-show-2024",
-  "featured": 7,
+  "featured": 6,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -4500,8 +4500,8 @@ window.PROJECTS = [
  },
  {
   "slug": "promo-video-ai",
-  "featured": 5,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 7,
   "tags": [
    "CONTENT",
    "AI"
