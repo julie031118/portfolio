@@ -1,7 +1,8 @@
 import { contactBrush } from '../audio.js';
 import { GROUND } from '../ground.js';
+import { reducedMotion } from '../motion.js';
 
-const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const reducedQuery = reducedMotion;
 const touchQuery = window.matchMedia('(hover: none), (pointer: coarse)');
 let instance = null;
 

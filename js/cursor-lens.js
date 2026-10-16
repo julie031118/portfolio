@@ -1,4 +1,5 @@
 import { dropPlip } from './audio.js';
+import { reducedMotion } from './motion.js';
 /* A round glass ball under the pointer, after Codrops' "Progressively Enhanced WebGL Lens Refraction" (2023),
    on photographs only (2026-10-03): the cover and the pictures of a project page, and the archive cards
    (under every filter). Like the original it is drawn in WebGL, so Chrome and Safari show the same thing:
@@ -11,7 +12,7 @@ import { dropPlip } from './audio.js';
    Phones and reduced motion get nothing. */
 
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const reducedQuery = reducedMotion;
 
 const LENS = {
   zoom: .56,      /* the middle shows the photo at 1 / .56 ≈ 1.8× */

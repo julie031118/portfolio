@@ -1,12 +1,13 @@
 import { releaseWebGL } from './render-shell.js';
 import { waterSwish } from '../audio.js';
+import { reducedMotion } from '../motion.js';
 const GRID_SIZE = 128;
 /* phones (2026-10-17, 연서: a white box sat over the name on a phone): the box was the still "frosted glass" that phones
    got instead of the water. Phones now run the water too, lighter: a 64-cell field, a lower pixel ratio, and the
    current that keeps it moving on its own wanders over the name (a finger dragged across it stirs it as well). */
 const PHONE_GRID = 64;
 const mobileQuery = window.matchMedia('(max-width: 600px), (hover: none)');
-const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const reducedQuery = reducedMotion;
 let instance = null;
 
 function cssColor(token) {

@@ -3,13 +3,14 @@ import { openDetail } from './detail.js';
 import { releaseWebGL } from './render-shell.js';
 import { ringTick } from '../audio.js';
 import { phoneSrc } from '../phone-images.js';
+import { reducedMotion } from '../motion.js';
 
 /* SELECTED WORK — ring of the 12 featured projects (vanilla Three.js).
    Motion reference: Codrops "Scroll-Driven 3D Image Tube" (MIT) — scroll adds
    rotation with inertial damping, hover slows, DOM tooltip, object slot in the middle. */
 
 const mobileQuery = window.matchMedia('(max-width: 600px), (hover: none)');
-const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const reducedQuery = reducedMotion;
 const TAU = Math.PI * 2;
 /* Phones (2026-10-17, 연서: bring the ring back to phones, light, moving by itself): the same ring, not pinned. It
    turns slowly on its own and a little more as the page scrolls past; a sideways swipe turns it (and lets it coast),
@@ -294,10 +295,13 @@ async function createRing(section, projects, lang, onDispose) {
     /* The far cards are drawn smaller, so a fit centred on the object left an empty band above the ring.
        The fit is asymmetric now: the ring's real top and bottom are fitted into the band between the nav and
        the bottom edge, and the view is shifted to centre it (2026-10-02: everything reads larger). */
-    const topInset = phone ? 8 : (Number.parseFloat(cssColor('--nav-height')) || 56) + 12; /* a phone's canvas already starts under the nav */
+    const topInset = phone ? 22 : (Number.parseFloat(cssColor('--nav-height')) || 56) + 12; /* a phone's canvas already starts under the nav */
     /* 2026-10-11 (연서: the note under the ring overlapped it): the fit now stops above the sound note (and, on a
        phone, above the front card's title) */
-    const notes = [...section.querySelectorAll('.work-sound-note, .work-caption')].filter((el) => getComputedStyle(el).position === 'absolute' && getComputedStyle(el).display !== 'none');
+    /* phones (2026-10-17, 연서: the text floated far under the ring): the ring is fitted to the top and the title and the
+       note are then placed right under it (placeCaption), so they are not part of the fit */
+    const placeUnder = phone && !!caption;
+    const notes = placeUnder ? [] : [...section.querySelectorAll('.work-sound-note, .work-caption')].filter((el) => getComputedStyle(el).position === 'absolute' && getComputedStyle(el).display !== 'none');
     const noteTop = notes.length ? Math.min(...notes.map((el) => el.getBoundingClientRect().top - rect.top)) : Infinity;
     const bottomInset = Number.isFinite(noteTop) && noteTop > 0 && noteTop < height ? Math.max(14, Math.round(height - noteTop + 10)) : 14;
     const band = Math.max(120, height - topInset - bottomInset);
@@ -313,14 +317,39 @@ async function createRing(section, projects, lang, onDispose) {
     }
     const tanHalf = Math.max(halfBand(half) * 1.01, (half.x * 1.01) / camera.aspect);
     camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(tanHalf));
-    /* shift the view so the ring's middle sits in the middle of the band */
+    /* shift the view so the ring's middle sits in the middle of the band (a phone whose ring is as wide as the screen:
+       its top at the top of the band, the text goes under it) */
+    const widthLimited = (half.x * 1.01) / camera.aspect >= halfBand(half) * 1.01;
     const middle = (half.top + half.bottom) / 2;
     const middlePx = height / 2 - (middle / tanHalf) * (height / 2);
-    const shiftPx = Math.round(topInset + band / 2 - middlePx); /* > 0: the ring moves down */
+    const shiftPx = placeUnder && widthLimited
+      ? Math.round(topInset - (height / 2 - (half.top / tanHalf) * (height / 2)))
+      : Math.round(topInset + band / 2 - middlePx); /* > 0: the ring moves down */
     if (reserved > 0) camera.setViewOffset(region, height, -reserved, -shiftPx, width, height);
     else camera.setViewOffset(width, height, 0, -shiftPx, width, height);
     if (slot) slot.style.top = `${height / 2 + shiftPx}px`;
     camera.updateProjectionMatrix();
+    if (placeUnder) placeCaption(widthLimited, height / 2 - (half.bottom / tanHalf) * (height / 2) + shiftPx);
+  }
+
+  /* phones: the front card's title just under the ring, the song note under it, and the stage as tall as that */
+  let sizing = false;
+  function placeCaption(fits, ringBottom) {
+    const stage = section.querySelector('.work-stage');
+    const note = section.querySelector('.work-sound-note');
+    if (!fits) { [caption, note].forEach((el) => { if (el) { el.style.top = ''; el.style.bottom = ''; } }); return; }
+    const base = wrap.getBoundingClientRect().top - stage.getBoundingClientRect().top;
+    const top = Math.round(base + ringBottom + 12);
+    caption.style.top = `${top}px`; caption.style.bottom = 'auto';
+    const noteTop = top + caption.offsetHeight + 8;
+    if (note) { note.style.top = `${noteTop}px`; note.style.bottom = 'auto'; }
+    const want = Math.round(noteTop + (note ? note.offsetHeight : 0) + 40);
+    if (sizing || Math.abs(stage.offsetHeight - want) <= 2) return;
+    sizing = true;
+    stage.style.height = `${want}px`;
+    resize();
+    sizing = false;
+    requestAnimationFrame(() => window.ScrollTrigger?.refresh());
   }
 
   function layout() {

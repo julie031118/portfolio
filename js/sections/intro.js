@@ -3,6 +3,7 @@ import { typeClick, getSoundEnabled } from '../audio.js';
 import { openDetail } from './detail.js';
 
 import { createHandNotes } from './intro-hand.js';
+import { reducedMotion } from '../motion.js';
 let controller = null;
 const compactQuery = window.matchMedia('(max-width: 760px), (hover: none)'); /* hand-drawn notes need room; the rest of the desktop site runs down to 601px (2026-10-03) */
 
@@ -129,7 +130,7 @@ export function renderIntro(siteLang) {
        follows the site language when that is Korean */
     const hintLang = siteLang === 'ko' ? 'ko' : currentLang;
     const copy = typeof source === 'string' ? source : (source[hintLang] || source.en);
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { hintText.textContent = copy; hintEl.classList.add('is-typing'); return; }
+    if (reducedMotion.matches) { hintText.textContent = copy; hintEl.classList.add('is-typing'); return; }
     let count = 0;
     const step = () => {
       if (mode !== 'final') return;
@@ -145,6 +146,7 @@ export function renderIntro(siteLang) {
   function renderFinal() {
     if (mode === 'final') return;
     mode = 'final';
+    soundHint.classList.add('is-hidden'); /* the sound line sits where the paragraph is: never both (2026-10-17, they overlapped on a phone) */
     activeStep = 6;
     const lines = SITE.intro.finalLines?.[currentLang] || SITE.intro.lines[currentLang];
     solo.textContent = '';
@@ -221,7 +223,7 @@ export function renderIntro(siteLang) {
   }
 
   function start() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { renderFinal(); return; }
+    if (reducedMotion.matches) { renderFinal(); return; }
     trigger?.kill();
     trigger = ScrollTrigger.create({
       trigger: section,

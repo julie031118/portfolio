@@ -2,9 +2,10 @@ import { ringTick } from '../audio.js';
 import { phoneSrc } from '../phone-images.js';
 import { T, releaseWebGL } from './render-shell.js';
 import { openDetail } from './detail.js';
+import { reducedMotion } from '../motion.js';
 
 const mobileQuery = window.matchMedia('(max-width: 600px), (hover: none)');
-const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const reducedQuery = reducedMotion;
 let instance = null;
 
 function appendMarkedClaim(container, claim, keyword, onBind) {
@@ -191,6 +192,8 @@ export function renderAbout(lang) {
   function closePanel() { clearTimeout(panelTimer); panelTimer = window.setTimeout(() => { panel.classList.remove('is-open'); panel.setAttribute('aria-hidden', 'true'); }, 250); }
   function openPanel(item, segment, grade) {
     clearTimeout(panelTimer); panelInner.innerHTML = '';
+    /* phones: the panel is a sheet from the bottom, with a close button (a tap anywhere else closes it too) */
+    if (mobileQuery.matches) { const close = document.createElement('button'); close.type = 'button'; close.className = 'timeline-panel-close'; close.textContent = 'CLOSE ×'; close.addEventListener('click', closePanel); panelInner.append(close); }
     const date = document.createElement('p'); date.className = 'timeline-panel-date'; date.textContent = dateRange(item);
     const title = document.createElement('h3'); title.className = 'timeline-panel-title'; title.textContent = T(item.title, lang);
     const meta = document.createElement('p'); meta.className = 'timeline-panel-grade'; meta.textContent = [segment, grade].filter(Boolean).join(' · ');
@@ -207,17 +210,30 @@ export function renderAbout(lang) {
     if (window.__lenis) window.__lenis.scrollTo(target, { offset: -40 }); else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   panel.addEventListener('pointerenter', () => clearTimeout(panelTimer));
-  panel.addEventListener('pointerleave', closePanel);
+  panel.addEventListener('pointerleave', (event) => { if (event.pointerType !== 'touch') closePanel(); });
+  document.addEventListener('pointerdown', (event) => {
+    if (!mobileQuery.matches || !panel.classList.contains('is-open')) return;
+    if (panel.contains(event.target) || event.target.closest?.('.timeline-item')) return;
+    closePanel();
+  }, { passive: true });
 
   section.querySelectorAll('.timeline-segment').forEach((segmentElement, segmentIndex) => {
     const segment = SITE.timeline[segmentIndex]; const grade = T(segment.grade, lang);
     segmentElement.querySelectorAll('.timeline-item').forEach((button, itemIndex) => {
       const item = segment.items[itemIndex];
+      /* phones (2026-10-17): the same horizontal timeline as the computer; a tap opens the item in the bottom sheet */
+      if (mobileQuery.matches) {
+        button.addEventListener('click', () => {
+          section.querySelectorAll('.timeline-span.is-hot').forEach((node) => node.classList.remove('is-hot'));
+          button.timelineSpan?.classList.add('is-hot');
+          openPanel(item, segment.segment, grade);
+        });
+        return;
+      }
       button.addEventListener('pointerenter', () => { openPanel(item, segment.segment, grade); button.timelineSpan?.classList.add('is-hot'); });
       button.addEventListener('pointerleave', () => { closePanel(); button.timelineSpan?.classList.remove('is-hot'); });
       button.addEventListener('focus', () => openPanel(item, segment.segment, grade));
       button.addEventListener('blur', closePanel);
-      if (mobileQuery.matches) { if (T(item.desc, lang)) { const desc = document.createElement('span'); desc.className = 'timeline-item-desc'; desc.textContent = T(item.desc, lang); button.append(desc); } if (item.link) button.addEventListener('click', () => follow(item.link)); }
     });
   });
 
@@ -231,7 +247,7 @@ export function renderAbout(lang) {
   }
 
   function updateDepth() {
-    if (mobileQuery.matches || reducedQuery.matches) return;
+    if (reducedQuery.matches) return;
     section.querySelectorAll('.timeline-item').forEach((item) => {
       const rect = item.getBoundingClientRect(); const ratio = (rect.left + rect.width / 2) / window.innerWidth;
       if (ratio >= .2 && ratio <= .8) gsap.set(item, { rotationY: 0, z: 0, opacity: 1 });
@@ -241,7 +257,7 @@ export function renderAbout(lang) {
 
   function drawSpans() {
     track.querySelectorAll('.timeline-span').forEach((node) => node.remove());
-    if (!SITE.timelineSpans || mobileQuery.matches) return;
+    if (!SITE.timelineSpans) return;
     const segments = [...track.querySelectorAll('.timeline-segment')];
     const spans = [];
     segments.forEach((segmentElement, segmentIndex) => {
@@ -282,7 +298,7 @@ export function renderAbout(lang) {
   toggleLabel();
   const scrollToY = (y, immediate) => { if (window.__lenis) window.__lenis.scrollTo(y, immediate ? { immediate: true, force: true } : { duration: .9, force: true }); else window.scrollTo({ top: y, behavior: immediate ? 'auto' : 'smooth' }); };
   function buildTimelineMotion() {
-    if (horizontalTween || mobileQuery.matches || reducedQuery.matches) return;
+    if (horizontalTween || reducedQuery.matches) return;
     const distance = () => Math.max(0, track.scrollWidth - window.innerWidth);
     horizontalTween = gsap.to(track, { x: () => -distance(), ease: 'none', scrollTrigger: { trigger: timeline, start: 'top top', end: () => `+=${Math.round(distance() * .6)}` /* scroll 0.6px per px of travel (was 0.6 screen per column, too long) */, pin: timelinePin, scrub: true, invalidateOnRefresh: true, onUpdate: () => { updateDepth(); tickTimeline(); }, onRefresh: updateDepth } });
   }
@@ -316,11 +332,6 @@ export function renderAbout(lang) {
   function setupInteractions() {
     interactionsReady = true;
     window.addEventListener('resize', onSpanResize);
-    if (mobileQuery.matches) {
-      mobileObserver = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('is-in-view'); }), { threshold: .12 });
-      section.querySelectorAll('.timeline-item').forEach((item) => mobileObserver.observe(item));
-      return;
-    }
     if (reducedQuery.matches) { section.classList.add('about-reduced'); return; }
     if (timelineOpen) { drawSpans(); buildTimelineMotion(); }
     window.ScrollTrigger?.refresh();

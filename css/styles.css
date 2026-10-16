@@ -256,11 +256,6 @@ main { overflow: clip; }
   .detail-overlay { padding: calc(var(--nav-height) + 16px) 16px 32px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms; transition-duration: .001ms; scroll-behavior: auto; }
-  .intro-stage { min-height: 100vh; }
-  .intro-scroll-hint { display: none; }
-}
 
 
 /* Stage 2 — SELECTED WORK (ring) */
@@ -295,9 +290,9 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .work-caption { display: none; }
 @media (max-width: 600px), (hover: none) {
   .work-section { padding: 0; min-height: 0; }
-  .work-stage { height: min(150vw, 88vh); height: min(150vw, 88svh); min-height: 470px; padding: 0; }
+  .work-stage { height: min(150vw, 88vh); height: min(150vw, 88svh); min-height: 0; padding: 0; } /* the ring sets its own height once it is built (work.js placeCaption) */
   .work-hint, .work-tooltip { display: none !important; }
-  .work-caption { position: absolute; left: 16px; right: 16px; bottom: 46px; z-index: 2; height: 92px; margin: 0; display: grid; align-content: end; justify-items: center; gap: 4px; text-align: center; pointer-events: none; text-shadow: 0 0 6px rgba(250, 250, 251, .9), 0 0 2px rgba(250, 250, 251, .9); }
+  .work-caption { position: absolute; left: 16px; right: 16px; bottom: 46px; z-index: 2; height: 96px; margin: 0; display: grid; align-content: start; justify-items: center; gap: 4px; text-align: center; pointer-events: none; text-shadow: 0 0 6px rgba(250, 250, 251, .9), 0 0 2px rgba(250, 250, 251, .9); }
   .work-caption strong { max-width: 30ch; font: 400 16px/1.35 var(--font-serif-ko); text-wrap: balance; }
   html[lang="en"] .work-caption strong { font-family: var(--font-serif-en); }
   html[lang="ko"] .work-caption strong { word-break: keep-all; overflow-wrap: anywhere; }
@@ -352,9 +347,6 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
   .name-glass-layer, .name-static .name-glass-layer { display: none; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .name-static .name-glass-layer::after { animation: none; opacity: .35; transform: translateX(120%) skewX(-12deg); }
-}
 
 /* Stage 4 — ABOUT */
 .about-section { min-height: 100vh; padding: calc(var(--nav-height) + 24px) 28px 56px; background: transparent; }
@@ -454,6 +446,7 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .about-skill-groups { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
 .about-skill-group h3 { margin: 0 0 10px; color: var(--ink-2); font: 11px/1.3 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
 .about-skill-group p { margin: 0; font: 13px/1.7 var(--font-body-ko); }
+.timeline-panel-close { display: none; }
 /* folded timeline (2026-10-16): one line with OPEN until she or a visitor asks for it */
 .timeline-topline-end { display: flex; align-items: center; gap: 28px; }
 .timeline-toggle { border: 0; border-bottom: 1px solid var(--ink-2); padding: 4px 0 3px; background: transparent; color: var(--ink); font: 11px/1.4 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
@@ -469,7 +462,6 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .about-timeline.is-collapsed .timeline-viewport:hover .timeline-track { animation-duration: 20s; }
 .about-timeline.is-collapsed .timeline-item-title { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } /* one line each in the strip */
 @keyframes timeline-peek { from { transform: translateX(0); } to { transform: translateX(calc(-100% + 100vw)); } }
-@media (prefers-reduced-motion: reduce) { .about-timeline.is-collapsed .timeline-track { animation: none; } }
 .about-reduced .timeline-pin { height: auto; min-height: 680px; overflow-x: auto; }
 .about-reduced .timeline-viewport { position: relative; inset: auto; height: 620px; overflow-x: auto; }
 .about-reduced .timeline-topline { position: relative; top: auto; left: auto; right: auto; padding: 24px 28px; }
@@ -487,38 +479,27 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
   .about-stat { min-height: 106px; padding: 20px 0; }
   .about-stat + .about-stat { border-left: 0; border-top: 1px solid var(--hairline); }
   .about-stat strong { font-size: 40px; }
-  .strength-media-popup, .timeline-side-panel { display: none; }
-  .about-timeline { width: 100%; margin: 84px 0 0; }
-  .timeline-pin { height: auto; min-height: 0; overflow: visible; }
-  .timeline-topline { position: relative; top: auto; left: auto; right: auto; padding: 0 0 28px; }
+  .strength-media-popup { display: none; }
+  /* the timeline on a phone is the computer's (2026-10-17, 연서: "like the PC, sideways, flowing by itself"): folded, the
+     strip drifts sideways; OPEN pins it and the page scroll moves it sideways. A tapped item opens its text in a sheet
+     from the bottom (the computer's side panel). */
+  .about-timeline { margin-top: 84px; }
   .about-timeline.is-collapsed { margin-top: 64px; }
-  .about-timeline.is-collapsed .timeline-pin { border: 0; }
-  .about-timeline.is-collapsed .timeline-topline { padding: 18px 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
-  .about-timeline.is-collapsed .timeline-viewport { display: none; }
+  .timeline-pin { min-height: 560px; }
+  .timeline-topline { left: 16px; right: 16px; }
+  .about-timeline.is-collapsed .timeline-topline { padding: 18px 16px 0; }
+  .about-timeline.is-collapsed .timeline-track { animation-duration: 80s; } /* the same distance on a narrow screen: slower, so it can be read */
   .timeline-topline-end { gap: 18px; }
-  .timeline-viewport { position: relative; inset: auto; overflow: visible; perspective: none; }
-  .timeline-track { display: block; width: 100%; height: auto; padding: 0 0 0 24px; transform: none; }
-  .timeline-track::before { top: 0; bottom: 0; left: 24px; right: auto; border-top: 0; border-left: 1px solid var(--ink-2); }
-  .timeline-segment { position: relative; width: 100%; height: auto; padding: 0 0 46px 28px; }
-  .timeline-segment-marker { position: sticky; top: var(--nav-height); z-index: 2; display: block; padding: 10px 0; background: var(--vellum); backdrop-filter: blur(6px); }
-  .timeline-segment-marker::before { top: 50%; left: -28px; width: 12px; height: 0; border-left: 0; border-top: 1px solid var(--ink-2); }
-  .timeline-year { margin-right: 12px; }
-  .timeline-grade { display: inline; }
-  .timeline-items { position: relative; inset: auto; }
-  .timeline-item, .timeline-item:nth-child(n) { position: relative; top: auto; left: auto; width: 100%; display: block; padding: 18px 0 18px 12px; border-bottom: 1px solid var(--hairline); opacity: 0; transform: translateY(16px); text-align: left; }
-  .timeline-item.is-in-view { opacity: 1; transform: translateY(0); transition: opacity .45s ease, transform .45s ease; }
-  .timeline-item::before, .timeline-item:nth-child(n)::before { left: -28px; bottom: auto; top: 26px; width: 16px; height: 0; border-left: 0; border-top: 1px solid var(--hairline); }
-  .timeline-item-date { font-size: 10px; }
-  .timeline-item-title { color: var(--ink-2); font-size: 12px; }
-  .timeline-item.is-major .timeline-item-title { color: var(--ink); font-size: 16px; }
-  .timeline-item-desc { display: block; margin-top: 9px; color: #4A4D55; font: 12px/1.7 var(--font-mono); }
+  .timeline-side-panel { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 62vh; overflow-y: auto; border-left: 0; border-top: 1px solid var(--hairline); box-shadow: 0 -12px 32px rgba(29,29,31,.12); transform: translateY(105%); }
+  .timeline-side-panel.is-open { transform: translateY(0); }
+  .timeline-panel-inner { padding: 22px 20px calc(30px + env(safe-area-inset-bottom)); }
+  .timeline-panel-close { display: block; margin: 0 0 6px auto; border: 0; padding: 4px 0; background: transparent; color: var(--ink-2); font: 11px/1 var(--font-mono); letter-spacing: .1em; cursor: pointer; }
+  .timeline-panel-title { margin: 12px 0 8px; font-size: 18px; }
+  .timeline-panel-desc { margin: 18px 0 22px; }
   .about-skills { grid-template-columns: 1fr; gap: 20px; padding-top: 48px; }
   .about-skill-groups { grid-template-columns: 1fr 1fr; gap: 24px 18px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .timeline-item { opacity: 1; transform: none; }
-}
 
 /* Stage 5 — ARCHIVE */
 .archive-section { min-height: 100vh; padding: calc(var(--nav-height) + 24px) 28px 64px; background: transparent; }
@@ -625,9 +606,6 @@ html[lang="ko"] .now-next, html[lang="ko"] .now-lead { word-break: keep-all; ove
   .now-claim { font-size: 16px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .archive-image-slot, .archive-filter::after { transition: none; }
-}
 
 /* Stage 6 — CONTACT */
 .contact-section { position: relative; height: 100vh; min-height: 680px; padding: 0; overflow: hidden; background: transparent; }
@@ -658,9 +636,6 @@ html[lang="ko"] .now-next, html[lang="ko"] .now-lead { word-break: keep-all; ove
   .site-footer span:last-child { max-width: 19ch; text-align: right; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .contact-links a::after { transition: none; }
-}
 
 /* Fix pass — graph, timeline, vintage type, contact, Stage 2 detail */
 :root { --font-mono: "Special Elite", "Nanum Gothic Coding", "Courier New", monospace; }
@@ -688,7 +663,8 @@ html[lang="ko"] .now-next, html[lang="ko"] .now-lead { word-break: keep-all; ove
 /* Chrome on a Mac drew the spine only part way (2026-10-06): it sat in a 6000px-wide layer inside a 3D context
    (preserve-3d + perspective). The items never showed perspective (their segments flatten them), so the 3D context
    goes, and the spine is drawn across the viewport instead of along the whole moving track: it looks the same. */
-@media (min-width: 601px) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+/* (2026-10-17: phones run the same horizontal timeline, so this applies everywhere) */
+@media all {
   .timeline-viewport { perspective: none; }
   .timeline-track { transform-style: flat; }
   .timeline-track::before { display: none; }
@@ -889,9 +865,7 @@ html[lang="ko"] .detail-track-text { word-break: keep-all; overflow-wrap: anywhe
 
 @media (max-width: 600px), (hover: none) {
   .mindmap-graph { display: none; }
-  .timeline-segment, .timeline-segment--count-2, .timeline-segment--count-3, .timeline-segment--count-4, .timeline-segment--count-5, .timeline-segment--count-6, .timeline-segment--count-7 { width: 100%; min-width: 0; }
   .timeline-segment-marker .timeline-year { font-size: 13px; }
-  .timeline-item, .timeline-item:nth-child(n) { width: 100%; min-width: 0; left: auto; top: auto; bottom: auto; } /* the desktop 100/320/540px slots pushed phone items off screen */
   .detail-close { top: 12px; right: 16px; }
   .detail-content { width: calc(100% - 32px); padding: calc(var(--nav-height) + 48px) 0 80px; }
   .detail-header { grid-template-columns: 1fr; gap: 26px; padding: 40px 0 54px; }
@@ -913,15 +887,7 @@ html[lang="ko"] .detail-track-text { word-break: keep-all; overflow-wrap: anywhe
   .site-footer { right: auto; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .mindmap-node, .mindmap-line { transition: none; }
-  .intro-line, .section-heading > span { filter: none; text-shadow: none; }
-}
 
-@media (max-width: 600px), (hover: none) {
-  .timeline-item:nth-child(even) { bottom: auto; }
-  .timeline-item:nth-child(even)::before { top: 26px; height: 0; }
-}
 
 /* Korean line breaking: keep words whole in headings. */
 html[lang="ko"] .detail-title, html[lang="ko"] .detail-headline, html[lang="ko"] .archive-card-title, html[lang="ko"] .timeline-item-title, html[lang="ko"] .timeline-panel-title, html[lang="ko"] .about-strength-claim, html[lang="ko"] .work-tooltip, html[lang="ko"] .work-card-title { word-break: keep-all; overflow-wrap: anywhere; }

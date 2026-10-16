@@ -2,8 +2,9 @@ import { T } from './render-shell.js';
 import { openDetail } from './detail.js';
 import { ringTick } from '../audio.js';
 import { phoneSrc } from '../phone-images.js';
+import { reducedMotion } from '../motion.js';
 
-const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const reducedQuery = reducedMotion;
 let instance = null;
 
 function sortedProjects() {

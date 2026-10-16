@@ -1,3 +1,4 @@
+import { reducedMotion } from '../motion.js';
 /* Hand-drawn notes over the intro paragraph — clean vector strokes traced from 연서's Procreate sketch,
    plus the small handwritten sub-notes she drew around them (set in a handwriting face).
    Three groups, each shown while its keyword is hovered, or pinned with a click:
@@ -530,7 +531,7 @@ export function createHandNotes({ frame, linesRoot }) {
     Object.entries(groups).forEach(([key, group]) => { group.classList.remove('is-ghost'); if (key !== active) group.classList.remove('is-on'); });
   }
   function preview(tries = 6) {
-    if (notesOff() || isAuto() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (notesOff() || isAuto() || reducedMotion.matches) return;
     /* a note is open under the pointer right now: wait for it to close, then play */
     if (active || pinned) { if (tries > 0) previewTimer = window.setTimeout(() => preview(tries - 1), 900); return; }
     layout();
@@ -562,7 +563,7 @@ export function createHandNotes({ frame, linesRoot }) {
 
   /* phones: the notes open by themselves, one after another, while the sentence is on screen */
   const auto = { on: false, timer: 0, index: 0, holdUntil: 0, visible: true };
-  const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reducedQuery = reducedMotion;
   function autoStep() {
     clearTimeout(auto.timer);
     if (!auto.on) return;

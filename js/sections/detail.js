@@ -1,3 +1,4 @@
+import { reducedMotion } from '../motion.js';
 let lastFocus = null;
 let currentSlug = null;
 let openedViaPush = false;
@@ -111,7 +112,7 @@ function createMedia(source, label, className, alt, eager = false) {
     wrap.append(poster, video);
     figure.append(wrap);
     /* plays only while on screen, so six clips on one page cost little; reduced motion keeps the poster */
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (!reducedMotion.matches) {
       if ('IntersectionObserver' in window) {
         new IntersectionObserver((entries) => {
           /* the newest entry decides: a gallery moved into the hero place reports twice in one batch */

@@ -10,13 +10,14 @@ import { initGround } from './ground.js';
 import { initCursorLens } from './cursor-lens.js';
 import { getSoundEnabled, setSoundEnabled, toggleSound } from './audio.js';
 import { storageGet, storageSet } from './sections/render-shell.js';
+import { reducedMotion } from './motion.js';
 
 const LANG_KEY = 'yeonseo-lang';
 /* the site follows the visitor's browser language until they pick one (the intro paragraph opens in English either way) */
 const browserLang = /^ko\b/i.test(navigator.language || '') || (navigator.languages || []).slice(0, 1).some((l) => /^ko\b/i.test(l)) ? 'ko' : 'en';
 let LANG = storageGet('localStorage', LANG_KEY) || browserLang;
 let introController = null;
-const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduced = reducedMotion.matches;
 /* The ring, the name's water and the timeline are built once for desktop or once for phones. A window resized
    across that line (split screen, then full screen) rebuilds the page so the right version runs (2026-10-03). */
 {
