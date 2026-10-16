@@ -2,6 +2,8 @@
    One blurred photo per section sits under a frosted, grainy paper layer and crossfades as you scroll.
    Sections themselves are transparent so the colour bleeds through everywhere. */
 
+import { phoneSrc } from './phone-images.js';
+
 export const GROUND = {
   intro: 'images/ground/01-intro.jpg',     /* lavender flowers on sheet music */
   work: 'images/ground/02-work.jpg',       /* white wool, denim, red leaves */
@@ -28,6 +30,7 @@ export function initGround() {
   restack();
 
   function show(source) {
+    source = phoneSrc(source); /* phones: a 560px copy, it is blurred anyway */
     if (source === current) return;
     current = source;
     const next = order[0]; /* the oldest layer is reused */

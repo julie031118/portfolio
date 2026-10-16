@@ -41,8 +41,8 @@ async function toggleSiteSound() {
 }
 
 /* phones (2026-10-09, 연서: "the list at the top is hard to see, put it behind a ≡ button"): the bar is the name and
-   a ≡ button, the links and the two toggles open in a panel under it. SELECTED is left out on phones, which have no
-   ring; the section itself is hidden there too (styles.css). */
+   a ≡ button, the links and the two toggles open in a panel under it. (SELECTED came back on phones with the ring,
+   2026-10-17.) */
 const compactNavQuery = window.matchMedia('(max-width: 600px), (hover: none)');
 let menuOpen = false;
 function setMenu(open) {
@@ -57,7 +57,7 @@ function renderNav() {
   const nav = document.querySelector('#nav');
   nav.innerHTML = '';
   const compact = compactNavQuery.matches;
-  const links = compact ? SITE.nav.links.filter((item) => item.target !== '#work') : SITE.nav.links;
+  const links = SITE.nav.links;
   const wordmark = document.createElement('a'); wordmark.className = 'nav-wordmark'; wordmark.href = '#intro'; wordmark.textContent = SITE.nav.wordmark;
   const actions = document.createElement('div'); actions.className = 'nav-actions';
   links.forEach((item, index) => {

@@ -1,6 +1,7 @@
 import { T } from './render-shell.js';
 import { openDetail } from './detail.js';
 import { ringTick } from '../audio.js';
+import { phoneSrc } from '../phone-images.js';
 
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 let instance = null;
@@ -40,7 +41,7 @@ function projectMatches(project, filter) {
 const nowMediaList = (item) => (Array.isArray(item.media) ? item.media : item.media ? [item.media] : []);
 function nowMediaMarkup(media, lang) {
   const caption = T(media.caption, lang) || '';
-  if (media.image) return `<figure class="now-media now-media--image"><img src="${media.image}" alt="${caption}" loading="lazy" decoding="async"><figcaption>${caption}</figcaption></figure>`;
+  if (media.image) return `<figure class="now-media now-media--image"><img src="${phoneSrc(media.image)}" alt="${caption}" loading="lazy" decoding="async"><figcaption>${caption}</figcaption></figure>`;
   if (media.video) return `<figure class="now-media"><video poster="${media.poster || ''}" muted loop playsinline preload="none" aria-label="${caption}">${media.webm ? `<source src="${media.webm}" type="video/webm">` : ''}<source src="${media.video}" type="video/mp4"></video><figcaption>${caption}</figcaption></figure>`;
   return '';
 }
@@ -130,7 +131,7 @@ export function renderArchive(lang) {
       picture.alt = '';
       picture.addEventListener('load', () => image.classList.add('has-image'), { once: true });
       picture.addEventListener('error', () => image.classList.remove('has-image'), { once: true });
-      picture.src = cardSource.replace(/^\//, '');
+      picture.src = phoneSrc(cardSource).replace(/^\//, ''); /* phones get the 600px copy */
       image.append(picture);
     }
     if (project.tags.includes('NOW')) {
@@ -190,7 +191,7 @@ export function renderArchive(lang) {
       if (!project.filterThumbs) return;
       const picture = card.querySelector('.card-img img');
       if (!picture) return;
-      const next = ((tag && project.filterThumbs[tag]) || project.cardThumb || project.thumb).replace(/^\//, '');
+      const next = phoneSrc((tag && project.filterThumbs[tag]) || project.cardThumb || project.thumb).replace(/^\//, '');
       if (picture.getAttribute('src') !== next) picture.src = next;
     });
   }

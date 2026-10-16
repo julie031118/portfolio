@@ -1,6 +1,10 @@
 import { releaseWebGL } from './render-shell.js';
 import { waterSwish } from '../audio.js';
 const GRID_SIZE = 128;
+/* phones (2026-10-17, 연서: a white box sat over the name on a phone): the box was the still "frosted glass" that phones
+   got instead of the water. Phones now run the water too, lighter: a 64-cell field, a lower pixel ratio, and the
+   current that keeps it moving on its own wanders over the name (a finger dragged across it stirs it as well). */
+const PHONE_GRID = 64;
 const mobileQuery = window.matchMedia('(max-width: 600px), (hover: none)');
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 let instance = null;
@@ -13,7 +17,8 @@ function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value));
 }
 
-function makeTextCanvas(width, height, data) {
+function makeTextCanvas(width, height, data, phone = false) {
+  if (phone) return makePhoneTextCanvas(width, height, data);
   const scale = Math.min(2, 2048 / Math.max(width, 1));
   const canvas = document.createElement('canvas');
   canvas.width = Math.max(1, Math.round(width * scale));
@@ -33,11 +38,40 @@ function makeTextCanvas(width, height, data) {
   return canvas;
 }
 
-function createFluid(THREE) {
+/* the phone page sets the name on two lines (YEONSEO / LEE) and the fields under it in 10px: the water draws the same */
+function makePhoneTextCanvas(width, height, data) {
+  const scale = Math.min(2.5, window.devicePixelRatio || 2, 2048 / Math.max(width, height, 1));
+  const canvas = document.createElement('canvas');
+  canvas.width = Math.max(1, Math.round(width * scale));
+  canvas.height = Math.max(1, Math.round(height * scale));
+  const context = canvas.getContext('2d');
+  context.scale(scale, scale);
+  context.textAlign = 'center';
+  context.textBaseline = 'middle';
+  context.fillStyle = cssColor('--ink');
+  const titleEl = document.querySelector('.name-title');
+  let size = titleEl ? parseFloat(getComputedStyle(titleEl).fontSize) || 78 : 78;
+  const family = 'Gelasio, Georgia, serif';
+  const words = data.title.split(' ');
+  context.font = `400 ${size}px ${family}`;
+  const widest = Math.max(...words.map((w) => context.measureText(w).width));
+  size = Math.min(size, size * (width - 40) / Math.max(1, widest)); /* the page tightens the letters; the canvas has no letter-spacing, so it fits by size */
+  context.font = `400 ${size}px ${family}`;
+  const lineH = size * .92;
+  const subSize = 10; const subGap = 20;
+  const block = lineH * words.length + subGap + subSize * 1.7;
+  let y = height / 2 - block / 2 + lineH / 2;
+  words.forEach((w) => { context.fillText(w, width / 2, y); y += lineH; });
+  context.font = `${subSize}px "Nanum Gothic Coding", "Courier New", monospace`;
+  if ('letterSpacing' in context) context.letterSpacing = '.1em';
+  context.fillText(data.disciplines, width / 2, y - lineH / 2 + subGap + subSize * .85);
+  return canvas;
+}
+
+function createFluid(THREE, size = GRID_SIZE) {
   /* A small velocity field, fully re-simulated every frame (128² cells ≈ 1 ms). The old version
      only advanced 16 rows per frame and damped each row by ~80 % on every visit, so a stroke had
      faded to nothing by the time its rows reached the texture — the glass looked static. */
-  const size = GRID_SIZE;
   let velocityX = new Float32Array(size * size);
   let velocityY = new Float32Array(size * size);
   let scratchX = new Float32Array(size * size);
@@ -59,6 +93,7 @@ function createFluid(THREE) {
 
   function inject(u, v, dx, dy, radius = 12, gain = 1.6) {
     if (!velocityX) return;
+    radius = Math.max(3, Math.round(radius * size / GRID_SIZE)); /* radii are given for the 128-cell field */
     const centerX = clamp(Math.round(u * (size - 1)), 0, size - 1);
     const centerY = clamp(Math.round(v * (size - 1)), 0, size - 1);
     const minX = Math.max(1, centerX - radius);
@@ -128,21 +163,22 @@ function createFluid(THREE) {
     scratchY = null;
   }
 
-  return { texture, inject, step, dispose };
+  return { texture, inject, step, dispose, size };
 }
 
 async function createRenderer(section, data) {
-  if (mobileQuery.matches || reducedQuery.matches) return null;
+  if (reducedQuery.matches) return null;
   const THREE = await import('../vendor/three.module.min.js');
   await document.fonts.ready;
-  if (!section.isConnected || mobileQuery.matches || reducedQuery.matches) return null;
+  if (!section.isConnected || reducedQuery.matches) return null;
+  const phone = mobileQuery.matches;
 
   const wrap = section.querySelector('.name-canvas-wrap');
   const canvas = document.createElement('canvas');
   canvas.className = 'name-canvas';
   canvas.setAttribute('aria-hidden', 'true');
   wrap.replaceChildren(canvas);
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, premultipliedAlpha: false, antialias: true, powerPreference: 'high-performance' });
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, premultipliedAlpha: false, antialias: !phone, powerPreference: phone ? 'default' : 'high-performance' });
   renderer.setClearColor(0x000000, 0);
   window.__webglLog?.push({ section: 'NAME', action: 'create', time: performance.now() });
   const gl = renderer.getContext();
@@ -158,15 +194,16 @@ async function createRenderer(section, data) {
     releaseWebGL(instance); /* give the context back (the Work ring was disposed to make room) */
     return null;
   }
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, phone ? 1.5 : 2));
   const scene = new THREE.Scene();
   const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   const geometry = new THREE.PlaneGeometry(2, 2);
-  const fluid = createFluid(THREE);
+  const fluid = createFluid(THREE, phone ? PHONE_GRID : GRID_SIZE);
   const uniforms = {
     uText: { value: null },
     uFluid: { value: fluid.texture },
-    uTexel: { value: new THREE.Vector2(1 / GRID_SIZE, 1 / GRID_SIZE) },
+    uTexel: { value: new THREE.Vector2(1 / fluid.size, 1 / fluid.size) },
+    uAmp: { value: phone ? 26 : 34 }, /* how far the water bends the letters, in px (a phone screen is small) */
     uResolution: { value: new THREE.Vector2(1, 1) },
     uPaper: { value: new THREE.Color(cssColor('--paper')) },
     uInk2: { value: new THREE.Color('#7C808A') }, /* the old --ink-2: the glass shading keeps its tone after the grey text was darkened (2026-10-02) */
@@ -188,6 +225,7 @@ async function createRenderer(section, data) {
       uniform vec2 uResolution;
       uniform vec3 uPaper;
       uniform vec3 uInk2;
+      uniform float uAmp;
       varying vec2 vUv;
       vec2 flowAt(vec2 uv){ return (texture2D(uFluid, uv).rg - .50196) * 2.0; }
       void main(){
@@ -200,7 +238,7 @@ async function createRenderer(section, data) {
         vec2 direction = flow * .7 + gradient;
         float directionLength = max(length(direction), .0001);
         direction /= max(1.0, directionLength);
-        float amplitude = mix(0.0, 34.0, activity);
+        float amplitude = mix(0.0, uAmp, activity);
         vec2 offset = direction * amplitude / uResolution;
         vec4 base = texture2D(uText, clamp(vUv + offset, vec2(0.0), vec2(1.0)));
         vec3 normal = normalize(vec3(-gradient * 2.2, 1.0));
@@ -242,7 +280,7 @@ async function createRenderer(section, data) {
     renderer.setSize(width, height, false);
     uniforms.uResolution.value.set(width, height);
     textTexture?.dispose();
-    textTexture = new THREE.CanvasTexture(makeTextCanvas(width, height, data));
+    textTexture = new THREE.CanvasTexture(makeTextCanvas(width, height, data, phone));
     textTexture.colorSpace = THREE.SRGBColorSpace;
     textTexture.minFilter = THREE.LinearFilter;
     textTexture.magFilter = THREE.LinearFilter;
@@ -266,6 +304,11 @@ async function createRenderer(section, data) {
     lastPointerX = null;
     lastPointerY = null;
   }
+  /* a finger: touchmove keeps coming while the page scrolls under it, pointermove stops there */
+  function touchMove(event) {
+    const touch = event.touches[0];
+    if (touch) pointerMove({ clientX: touch.clientX, clientY: touch.clientY });
+  }
 
   /* idle drift: when nobody is stirring, a slow current keeps the glass alive (so it never reads as a static image) */
   let idleAt = 0;
@@ -273,6 +316,19 @@ async function createRenderer(section, data) {
   function idleStir(now) {
     if (now < activeUntil || now - idleAt < 90) return;
     idleAt = now;
+    if (phone) {
+      /* a phone has no pointer, so this is the whole show: a slow current that drifts freely over both lines of the
+         name (two waves at odd ratios never quite repeat), stronger than the desktop's background drift */
+      idlePhase += .03;
+      const u = .5 + Math.cos(idlePhase) * .3 + Math.sin(idlePhase * 2.31) * .08;
+      const v = .5 + Math.sin(idlePhase * .73) * .2 + Math.cos(idlePhase * 1.9) * .05;
+      const du = -Math.sin(idlePhase) * .3 + Math.cos(idlePhase * 2.31) * .18;
+      const dv = Math.cos(idlePhase * .73) * .15 - Math.sin(idlePhase * 1.9) * .1;
+      const length = Math.hypot(du, dv) || 1;
+      fluid.inject(u, v, (du / length) * 7, -(dv / length) * 7, 20, 1.5);
+      needsRender = true;
+      return;
+    }
     idlePhase += .035;
     const u = .5 + Math.cos(idlePhase) * .34;
     const v = .5 + Math.sin(idlePhase * 1.37) * .22;
@@ -316,6 +372,7 @@ async function createRenderer(section, data) {
   resizeObserver.observe(section);
   section.addEventListener('pointermove', pointerMove, { passive: true });
   section.addEventListener('pointerleave', pointerLeave, { passive: true });
+  if (phone) { section.addEventListener('touchmove', touchMove, { passive: true }); section.addEventListener('touchend', pointerLeave, { passive: true }); }
   resize();
   section.classList.add('is-webgl');
   section.dataset.gl = `glass on · ${rendererName || 'gpu'}`;
@@ -332,6 +389,8 @@ async function createRenderer(section, data) {
       resizeObserver.disconnect();
       section.removeEventListener('pointermove', pointerMove);
       section.removeEventListener('pointerleave', pointerLeave);
+      section.removeEventListener('touchmove', touchMove);
+      section.removeEventListener('touchend', pointerLeave);
       fluid.dispose();
       textTexture?.dispose();
       geometry.dispose();
@@ -391,7 +450,7 @@ export function renderName(lang) {
   window.__nameStage = instance;
   setLanguage(lang);
 
-  if (mobileQuery.matches || reducedQuery.matches) {
+  if (reducedQuery.matches) {
     section.classList.add('name-static');
     return instance;
   }

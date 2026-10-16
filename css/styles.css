@@ -156,7 +156,15 @@ main { overflow: clip; }
 
 .hand-hot:hover { outline: 0; }
 .intro-frame.is-hand-insight .intro-keyword[data-keyword="insight"] { color: transparent; text-shadow: none; }
-@media (max-width: 760px), (hover: none) { .hand-layer { display: none; } }
+/* a narrow desktop window has no notes; phones and tablets get them, opening by themselves (2026-10-17) */
+@media (max-width: 760px) and (hover: hover) {
+  .hand-layer { display: none; }
+  .intro-lines.is-final .intro-keyword { text-decoration: none; animation: none; cursor: default; }
+}
+.hand-layer.is-phone .hand-desk, .hand-layer:not(.is-phone) .hand-phone { display: none; }
+.hand-layer.is-auto .hand-group { transition: opacity .55s ease, visibility 0s linear .55s; }
+.hand-layer.is-auto .hand-group.is-on { transition: opacity .55s ease; }
+.hand-svg.hand-phone { overflow: visible; }
 .intro-line.is-visible { opacity: 1; }
 .intro-line.is-active::after { content: '_'; display: inline-block; margin-left: .08em; animation: cursor-blink .72s steps(1,end) infinite; }
 .intro-keyword { display: inline; border: 0; padding: 0; background: transparent; color: var(--ink); font: inherit; letter-spacing: inherit; text-align: left; cursor: pointer; }
@@ -236,14 +244,13 @@ main { overflow: clip; }
   .section-empty { padding: 9vh 0; }
   .section-empty__mark { width: min(82vw,320px); }
   .intro-frame { padding: calc(var(--nav-height) + 28px) 16px 36px; }
-  .intro-copy { left: 16px; right: 16px; top: 31%; min-height: 330px; font-size: clamp(11px, 3.35vw, 13px); line-height: 1.55; letter-spacing: .03em; }
+  .intro-copy { left: 16px; right: 16px; top: 44%; min-height: 0; transform: translateY(-50%); font-size: clamp(11px, 3.35vw, 13px); line-height: 1.55; letter-spacing: .03em; } /* centred (was top 31%, under the nav on a phone), room above and below for the notes */
   .intro-lines { width: 100%; padding: 12px 10px; }
   .intro-line { height: 1.65em; }
   .intro-line--solo { left: 10px; right: 10px; }
   .mindmap-panel { width: 100%; max-height: 30vh; margin: 16px 0 0; gap: 14px 16px; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
   .intro-map-svg { display: none; }
   .intro-hint { display: none; }
-  .intro-lines.is-final .intro-keyword { text-decoration: none; animation: none; cursor: default; }
   .intro-lang { width: 100%; }
   .intro-scroll-hint { bottom: 18px; }
   .detail-overlay { padding: calc(var(--nav-height) + 16px) 16px 32px; }
@@ -282,17 +289,24 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 /* soundtrack note under the ring (2026-10-04): quiet, above the canvas so it can be read, never clickable */
 .work-sound-note { position: absolute; left: 50%; bottom: 22px; z-index: 2; margin: 0; transform: translateX(-50%); white-space: nowrap; color: var(--ink-2); font: 11px/1.4 var(--font-mono); letter-spacing: .06em; pointer-events: none; text-shadow: 0 0 6px rgba(250, 250, 251, .9), 0 0 2px rgba(250, 250, 251, .9); } /* no pill behind it (연서, 2026-10-06) */
 .work-list { display: none; }
-.work-mobile-object { display: none; }
 
+/* phones (2026-10-17): the ring is back, not pinned, with the front card's title and the song note under it. If a
+   phone cannot draw it (no WebGL), .is-list shows the cards as a list instead. */
+.work-caption { display: none; }
 @media (max-width: 600px), (hover: none) {
-  .work-section { padding: calc(var(--nav-height) + 28px) 16px 72px; }
-  .work-stage { height: auto; min-height: 0; padding: 0; }
-  .work-body, .work-hint { display: none; }
-  .work-sound-note { position: static; transform: none; white-space: normal; margin: 4px 0 0; padding: 0; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; font-size: 10.5px; text-wrap: balance; }
-  .work-mobile-object { display: block; position: relative; width: 100%; height: min(92vw, 420px); margin: 8px 0 0; }
-  .work-mobile-canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: pan-y; opacity: 0; transition: opacity .6s ease; }
-  .work-mobile-object.is-loaded .work-mobile-canvas { opacity: 1; }
-  .work-list { display: grid; grid-template-columns: 1fr; gap: 34px; padding-top: 28px; }
+  .work-section { padding: 0; min-height: 0; }
+  .work-stage { height: min(150vw, 88vh); height: min(150vw, 88svh); min-height: 470px; padding: 0; }
+  .work-hint, .work-tooltip { display: none !important; }
+  .work-caption { position: absolute; left: 16px; right: 16px; bottom: 46px; z-index: 2; height: 92px; margin: 0; display: grid; align-content: end; justify-items: center; gap: 4px; text-align: center; pointer-events: none; text-shadow: 0 0 6px rgba(250, 250, 251, .9), 0 0 2px rgba(250, 250, 251, .9); }
+  .work-caption strong { max-width: 30ch; font: 400 16px/1.35 var(--font-serif-ko); text-wrap: balance; }
+  html[lang="en"] .work-caption strong { font-family: var(--font-serif-en); }
+  html[lang="ko"] .work-caption strong { word-break: keep-all; overflow-wrap: anywhere; }
+  .work-caption span { color: var(--ink-2); font: 10px/1.4 var(--font-mono); letter-spacing: .06em; }
+  .work-caption em { margin-top: 6px; color: var(--ink-2); font: normal 9.5px/1.4 var(--font-mono); letter-spacing: .14em; }
+  .work-sound-note { left: 16px; right: 16px; bottom: 16px; transform: none; white-space: normal; text-align: center; font-size: 10.5px; text-wrap: balance; }
+  .work-section.is-list { padding: calc(var(--nav-height) + 28px) 16px 72px; }
+  .work-section.is-list .work-stage { display: none; }
+  .work-section.is-list .work-list { display: grid; grid-template-columns: 1fr; gap: 34px; padding-top: 28px; }
   .work-card-button { width: 100%; border: 0; padding: 0; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
   .work-card .card-img { aspect-ratio: 3/4; }
   .work-card .card-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .4s ease; }
@@ -334,6 +348,8 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
   .name-title { font-size: clamp(64px, 20vw, 108px); }
   .name-disciplines { max-width: 34ch; margin-top: 20px; font-size: 10px; line-height: 1.7; }
   .name-caption { left: 16px; bottom: 16px; }
+  /* no frosted box over the name on a phone (연서, 2026-10-17): the water runs there now, and if it cannot, the name is plain */
+  .name-glass-layer, .name-static .name-glass-layer { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -924,11 +940,10 @@ html[lang="ko"] .timeline-item.is-major .timeline-item-title {
 .cursor-lens-canvas { position: fixed; left: 0; top: 0; z-index: 9999; display: none; pointer-events: none; will-change: transform; }
 .cursor-lens-canvas.is-in-card { position: absolute; z-index: 2; } /* between the card's vellum veil (1) and its title (3) */
 
-/* phones (2026-10-09, 연서): no SELECTED section (no ring there, ARCHIVE holds every project), and the nav is the
-   name and a ≡ button whose panel holds the links and the two toggles */
+/* phones (2026-10-09, 연서): the nav is the name and a ≡ button whose panel holds the links and the two toggles.
+   (SELECTED was hidden on phones from 10-09 to 10-17; it is back with the ring.) */
 .nav-menu-button, .nav-menu-toggles { display: none; }
 @media (max-width: 600px), (hover: none) {
-  #work { display: none; }
   :root { --nav-height: 54px; }
   .site-nav { align-items: center; flex-wrap: nowrap; padding: 0 8px 0 16px; gap: 12px; font-size: 11px; letter-spacing: .08em; }
   .site-nav.is-menu-open { background: var(--vellum); backdrop-filter: blur(14px) saturate(.9); -webkit-backdrop-filter: blur(14px) saturate(.9); }

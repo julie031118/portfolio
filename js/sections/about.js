@@ -1,4 +1,5 @@
 import { ringTick } from '../audio.js';
+import { phoneSrc } from '../phone-images.js';
 import { T, releaseWebGL } from './render-shell.js';
 import { openDetail } from './detail.js';
 
@@ -21,6 +22,7 @@ function mediaMarkup(className, label) {
 }
 
 function loadMedia(frame, source, alt) {
+  source = phoneSrc(source); /* phones get the lighter copy, if there is one */
   const image = frame.querySelector('img');
   image.alt = alt;
   const shown = () => frame.classList.add('has-image');

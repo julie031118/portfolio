@@ -151,12 +151,30 @@ function elbow(rise) {
 
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
-export function createHandNotes({ frame, linesRoot, isCompact }) {
+/* Phones and tablets (2026-10-17, 연서: "no cursor there, so let it move by itself, slowly"): there is no hover, so the
+   three notes open by themselves one after another (INSIGHT, then FASHION / CONTENT, then USING AI), and a tap on an
+   underlined word opens its note. A phone is too narrow for the notes at the sides of the sentence, so there they are
+   drawn above and below it instead, in the same pen: the INSIGHT words in a cloud above, the labels below with their
+   words hanging under them like the USING AI list. A narrow desktop window (601 to 760px, with a mouse) still has none. */
+const touchQuery = window.matchMedia('(hover: none)');
+const noNotesQuery = window.matchMedia('(max-width: 760px) and (hover: hover)');
+const AUTO_ORDER = ['insight', 'visual', 'design'];
+const AUTO_SHOW = { insight: 3800, visual: 4600, design: 4600 }; /* ms each note stays open */
+const AUTO_GAP = 650;    /* between two notes */
+const AUTO_REST = 1500;  /* after the third, before it starts again */
+const AUTO_HOLD = 7000;  /* a tapped note stays this long before the round goes on */
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+export function createHandNotes({ frame, linesRoot }) {
   const layer = document.createElement('div');
   layer.className = 'hand-layer';
   layer.setAttribute('aria-hidden', 'false');
   frame.append(layer);
   const NOTES = window.SITE?.intro?.notes || {};
+  const notesOff = () => noNotesQuery.matches;
+  const isAuto = () => touchQuery.matches;
+  /* the phone arrangement: by width, so a tablet held sideways keeps the desktop one */
+  const isPhoneLayout = () => frame.getBoundingClientRect().width < 700;
 
   const make = (tag, className, attrs = {}) => { const el = document.createElement(tag); el.className = className; Object.assign(el, attrs); return el; };
   const draw = (name, className, ...args) => {
@@ -194,6 +212,25 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
   /* the line from the shirt down to FASHION is left out (연서, 2026-10-10); shirtTail is still built and placed, just never shown */
   groups.visual.append(parts.boxVisual, parts.fcLine, parts.fcWords, parts.shirt, parts.arrow, parts.screen, parts.fashionHot, parts.contentsHot);
   groups.design.append(parts.boxDesign, parts.aiLine, parts.aiWord, parts.aiTag, parts.aiList, parts.aiHot);
+  /* the side drawings are desktop only; on a phone their place is taken by the sheets below */
+  [parts.scatter, parts.fcLine, parts.fcWords, parts.shirt, parts.shirtTail, parts.arrow, parts.screen, parts.aiLine, parts.aiWord, parts.aiTag, parts.aiList]
+    .forEach((el) => el.classList.add('hand-desk'));
+  /* phone sheets: one drawing the size of the frame per group, in frame pixels, redrawn by layoutPhone() */
+  const sheet = (className) => {
+    const svg = document.createElementNS(SVG_NS, 'svg');
+    svg.setAttribute('class', `hand-img hand-svg hand-phone ${className}`);
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('aria-hidden', 'true');
+    return svg;
+  };
+  const phone = {
+    insightSub: sheet('hand-sub'),
+    visualSub: sheet('hand-sub'), visualLabel: sheet('hand-fc'),
+    designSub: sheet('hand-sub'), designLabel: sheet('hand-ai'),
+  };
+  groups.insight.prepend(phone.insightSub);
+  groups.visual.prepend(phone.visualSub, phone.visualLabel);
+  groups.design.prepend(phone.designSub, phone.designLabel);
   Object.values(groups).forEach((group) => layer.append(group));
   let fcSide = 'left';
   let tailDir = 'down';
@@ -222,8 +259,166 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     place(el, Math.min(x1, x2), y1, Math.max(2, Math.abs(x2 - x1)), Math.max(2, y2 - y1));
   }
 
+  /* ---- phone arrangement ---- */
+  const text = (str, x, y, size, i = 0, tilt = 0, anchor = 'start', cls = '') =>
+    `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" font-size="${size}" text-anchor="${anchor}" style="--i:${i}"${tilt ? ` transform="rotate(${tilt} ${x.toFixed(1)} ${y.toFixed(1)})"` : ''}${cls ? ` class="${cls}"` : ''}>${esc(str)}</text>`;
+  const line = (pts) => stroke(`M${pts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join(' L')}`);
+  const dots = (x, y, i) => `<g class="hand-dots" style="--i:${i}">${[0, 1, 2].map((n) => `<circle cx="${(x + n * .5).toFixed(1)}" cy="${(y + n * 8).toFixed(1)}" r="1.3"/>`).join('')}</g>`;
+  /* the width of a block-letter word drawn by word() */
+  const wordWidth = (str, height, gap) => [...str].reduce((sum, ch) => sum + (ch === ' ' ? height / GLYPH_H * 6 : height / GLYPH_H * GLYPH_W + gap), 0) - gap;
+  /* the text boxes of the sentence's rows (a row element is full width, its text is centred in it) */
+  function rowTexts() {
+    return [...linesRoot.querySelectorAll('.intro-line.is-visible')].map((row) => {
+      const range = document.createRange(); range.selectNodeContents(row);
+      const boxes = [...range.getClientRects()].filter((q) => q.width > 0);
+      if (!boxes.length) return null;
+      const f = frame.getBoundingClientRect();
+      return { row, left: Math.min(...boxes.map((q) => q.left)) - f.left, right: Math.max(...boxes.map((q) => q.right)) - f.left, top: Math.min(...boxes.map((q) => q.top)) - f.top, bottom: Math.max(...boxes.map((q) => q.bottom)) - f.top };
+    }).filter(Boolean);
+  }
+
+  function layoutPhone() {
+    const F = frame.getBoundingClientRect();
+    const W = F.width; const H = F.height;
+    const SIDE = 18;
+    const navBottom = (document.querySelector('#nav')?.getBoundingClientRect().bottom || 54) - F.top;
+    const topLimit = Math.max(0, navBottom) + 14;
+    const bottomLimit = Math.min(H, window.innerHeight - F.top) - 16;
+    const rows = rowTexts();
+    if (!rows.length) return;
+    const P = { top: Math.min(...rows.map((r) => r.top)), bottom: Math.max(...rows.map((r) => r.bottom)) };
+    Object.values(phone).forEach((svg) => { svg.setAttribute('viewBox', `0 0 ${W.toFixed(1)} ${H.toFixed(1)}`); place(svg, 0, 0, W, H); });
+    const words = (key) => [...linesRoot.querySelectorAll(`.intro-keyword[data-keyword="${key}"]`)];
+    const union = (els) => els.map(rectOf).reduce((a, r) => ({ left: Math.min(a.left, r.left), top: Math.min(a.top, r.top), right: Math.max(a.right, r.right), bottom: Math.max(a.bottom, r.bottom) }), { left: 1e9, top: 1e9, right: -1e9, bottom: -1e9 });
+    /* the rows under a keyword's row: a line going down at the side must clear their text */
+    const below = (R) => rows.filter((r) => r.top > R.top + 2);
+    const sideX = (R, box, toRight) => {
+      const under = below(R);
+      return toRight
+        ? clamp(Math.max(box.x + box.w + 14, ...under.map((r) => r.right + 10)), 0, W - 8)
+        : clamp(Math.min(box.x - 14, ...under.map((r) => r.left - 10)), 8, W);
+    };
+
+    /* INSIGHT: the two lines give way to ( INSIGHT ), its words float in the empty space above the sentence */
+    const ins = words('insight');
+    if (ins.length) {
+      const R = union(ins);
+      const hh = R.bottom - R.top; const ww = R.right - R.left;
+      const ph = hh * 1.02; const pw = ph * (SIZE.parenL.w / SIZE.parenL.h);
+      place(parts.parenL, R.left - pw * .82, R.top - hh * .01, pw, ph);
+      const prw = ph * (SIZE.parenR.w / SIZE.parenR.h);
+      place(parts.parenR, R.right - prw * 1.05, R.top - hh * .01, prw, ph);
+      const iw = Math.min(ww * .72, 150); const ih = iw * (SIZE.insight.h / SIZE.insight.w);
+      const ix = R.left + (ww - iw) / 2; const iy = R.top + (hh - ih) / 2;
+      place(parts.insight, ix, iy, iw, ih);
+      place(parts.insightHot, ix, iy, iw, ih);
+      /* the cloud stops above the paragraph's small en / ko switch */
+      const langEl = frame.querySelector('.intro-lang button');
+      const langTop = langEl ? rectOf(langEl).top : P.top;
+      const cloud = { x: SIDE, y: topLimit, w: W - SIDE * 2, h: Math.max(60, Math.min(P.top, langTop) - 12 - topLimit) };
+      const size = cloud.h < 110 ? 15 : 17;
+      /* research · interview · targeting · marketing · trend · audience: fractions of the cloud, baseline y */
+      const SPOTS = [[.02, .30, -2], [.40, .14, 1], [.70, .42, 2], [.10, .76, 1], [.44, .62, -1], [.68, .95, -1]];
+      const list = NOTES.insight || [];
+      const cloudText = list.map((w, i) => {
+        const s = SPOTS[i] || [.1 + (i % 3) * .3, .3 + Math.floor(i / 3) * .4, 0];
+        const x = clamp(cloud.x + s[0] * cloud.w, cloud.x, cloud.x + cloud.w - w.length * size * .45);
+        return text(w, x, cloud.y + s[1] * cloud.h, size, i, s[2]);
+      }).join('');
+      /* the pen leaves INSIGHT to the right, turns up between the word and the bracket, into the cloud */
+      const x0 = ix + iw + 3; const y0 = iy + ih * .55;
+      const xr = (x0 + (R.right - prw * 1.05)) / 2;
+      const yTop = cloud.y + cloud.h * (SPOTS[5]?.[1] || .95) + 7; /* stops just under the last word */
+      phone.insightSub.innerHTML = line([[x0, y0], [xr, y0], [xr, yTop]]) + cloudText;
+    }
+
+    /* visual language: a box, a line down the side, then FASHION and CONTENT side by side under the sentence,
+       each with its words hanging under it */
+    const vis = words('visual');
+    if (vis.length) {
+      const R = rectOf(vis[0]);
+      const box = { w: R.width + 14, h: R.height + 10 };
+      box.x = R.left + R.width / 2 - box.w / 2; box.y = R.top + R.height / 2 - box.h / 2;
+      place(parts.boxVisual, box.x, box.y, box.w, box.h);
+      const toRight = R.left + R.width / 2 >= W / 2;
+      const xm = sideX(R, box, toRight);
+      const ym = box.y + box.h / 2;
+      const capH = 17; const gap = 3;
+      const yBar = P.bottom + 14;
+      const yLabel = P.bottom + 32;
+      const colW = (W - SIDE * 2) / 2;
+      const cols = [
+        { label: 'FASHION', cx: SIDE + colW / 2, words: NOTES.fashion || [], hot: parts.fashionHot },
+        { label: 'CONTENT', cx: SIDE + colW * 1.5, words: NOTES.contents || [], hot: parts.contentsHot },
+      ];
+      const n = Math.max(...cols.map((c) => c.words.length), 1);
+      const first = yLabel + capH + 22;
+      const step = clamp((bottomLimit - first) / Math.max(1, n - 1), 13, 18);
+      const size = Math.min(14, step - 3);
+      let labels = ''; let subs = '';
+      const far = toRight ? cols[0].cx : cols[1].cx;
+      subs += line([[toRight ? box.x + box.w : box.x, ym], [xm, ym], [xm, yBar], [far, yBar]]);
+      cols.forEach((col, c) => {
+        const lw = wordWidth(col.label, capH, gap);
+        const lx = col.cx - lw / 2;
+        labels += word(col.label, lx, yLabel, capH, gap, c ? 17 : 11);
+        place(col.hot, lx - 6, yLabel - 6, lw + 12, capH + 12);
+        subs += line([[col.cx, yBar], [col.cx, yLabel - 6]]);
+        col.words.forEach((w, i) => { subs += text(w, col.cx, first + i * step, size, i, 0, 'middle'); });
+      });
+      phone.visualLabel.innerHTML = labels;
+      phone.visualSub.innerHTML = subs;
+    }
+
+    /* design: a box, a line down the side, USING AI under the sentence with its list (in two columns if the
+       screen is short) */
+    const des = words('design');
+    if (des.length) {
+      const R = rectOf(des[0]);
+      const box = { w: R.width + 14, h: R.height + 10 };
+      box.x = R.left + R.width / 2 - box.w / 2; box.y = R.top + R.height / 2 - box.h / 2;
+      place(parts.boxDesign, box.x, box.y, box.w, box.h);
+      const toRight = R.left + R.width / 2 >= W / 2;
+      const xm = sideX(R, box, toRight);
+      const ym = box.y + box.h / 2;
+      const capH = 19; const gap = 4;
+      const yLabel = P.bottom + 30;
+      const lw = wordWidth('USING AI', capH, gap);
+      const lx = clamp(toRight ? xm - lw + 2 : xm - 2, SIDE, W - SIDE - lw);
+      let subs = line([[toRight ? box.x + box.w : box.x, ym], [xm, ym], [xm, yLabel - 7]]);
+      const tagSize = 13; const tag = NOTES.aiTag || '';
+      const tagW = tag.length * tagSize * .45;
+      if (tag) {
+        const tx = toRight ? lx - 10 - tagW : lx + lw + 10;
+        if (tx >= SIDE - 2 && tx + tagW <= W - SIDE + 2) subs += text(tag, tx, yLabel + capH * .8, tagSize, 0, -1.5, 'start', 'hand-faint');
+        else subs += text(tag, clamp(lx, SIDE, W - SIDE - tagW), yLabel - 10, tagSize, 0, -1.5, 'start', 'hand-faint');
+      }
+      const tickX = lx + lw / 2;
+      subs += line([[tickX, yLabel + capH + 4], [tickX, yLabel + capH + 16]]);
+      const list = NOTES.ai || [];
+      const first = yLabel + capH + 36;
+      const step = 18;
+      const oneColumn = first + (list.length - 1) * step + 26 <= bottomLimit;
+      const per = oneColumn ? list.length : Math.ceil(list.length / 2);
+      const colX = [lx + 6, lx + 6 + Math.min(130, (W - SIDE - lx) / 2)];
+      list.forEach((w, i) => {
+        const c = Math.floor(i / per);
+        subs += text(w, colX[c], first + (i % per) * step, 14, i);
+      });
+      const last = oneColumn ? list.length - 1 : per - 1;
+      subs += dots(colX[oneColumn ? 0 : 1] + 4, first + (oneColumn ? last : (list.length - per - 1)) * step + 10, list.length);
+      phone.designLabel.innerHTML = word('USING AI', lx, yLabel, capH, gap, 23);
+      phone.designSub.innerHTML = subs;
+      place(parts.aiHot, lx - 6, yLabel - 6, lw + 12, capH + 12);
+    }
+  }
+
   /* lays every piece out from the current keyword rects */
   function layout() {
+    const phoneLayout = isPhoneLayout();
+    layer.classList.toggle('is-phone', phoneLayout);
+    layer.classList.toggle('is-auto', isAuto());
+    if (phoneLayout) { layoutPhone(); return; }
     const k = scale();
     const F = frame.getBoundingClientRect();
     const mid = F.width / 2;
@@ -335,7 +530,7 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     Object.entries(groups).forEach(([key, group]) => { group.classList.remove('is-ghost'); if (key !== active) group.classList.remove('is-on'); });
   }
   function preview(tries = 6) {
-    if (isCompact() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (notesOff() || isAuto() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     /* a note is open under the pointer right now: wait for it to close, then play */
     if (active || pinned) { if (tries > 0) previewTimer = window.setTimeout(() => preview(tries - 1), 900); return; }
     layout();
@@ -355,11 +550,53 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     layout();
     groups[key].classList.add('is-on');
     frame.classList.toggle('is-hand-insight', key === 'insight');
+    /* with no pointer to light it, the word whose note is open glows (phones) */
+    if (isAuto()) linesRoot.querySelectorAll('.intro-keyword').forEach((w) => w.classList.toggle('is-lit', w.dataset.keyword === key && key !== 'insight'));
   }
   function hideNow() {
     if (active) groups[active].classList.remove('is-on');
     active = null;
     frame.classList.remove('is-hand-insight');
+    linesRoot.querySelectorAll('.intro-keyword.is-lit').forEach((w) => w.classList.remove('is-lit'));
+  }
+
+  /* phones: the notes open by themselves, one after another, while the sentence is on screen */
+  const auto = { on: false, timer: 0, index: 0, holdUntil: 0, visible: true };
+  const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function autoStep() {
+    clearTimeout(auto.timer);
+    if (!auto.on) return;
+    if (!auto.visible || document.hidden) { auto.timer = window.setTimeout(autoStep, 700); return; }
+    const now = performance.now();
+    if (now < auto.holdUntil) { auto.timer = window.setTimeout(autoStep, auto.holdUntil - now + 20); return; }
+    if (active) {
+      pinned = null; hideNow();
+      auto.timer = window.setTimeout(autoStep, auto.index % AUTO_ORDER.length === 0 ? AUTO_REST : AUTO_GAP);
+      return;
+    }
+    const key = AUTO_ORDER[auto.index % AUTO_ORDER.length];
+    auto.index += 1;
+    show(key);
+    auto.timer = window.setTimeout(autoStep, AUTO_SHOW[key] || 4000);
+  }
+  function autoplay(on) {
+    clearTimeout(auto.timer);
+    auto.on = !!on && isAuto() && !notesOff() && !reducedQuery.matches;
+    if (!auto.on) return;
+    auto.index = 0; auto.holdUntil = 0;
+    auto.timer = window.setTimeout(autoStep, 900); /* the sentence fades in first */
+  }
+  /* a tapped word: its note stays a while, then the round goes on from the next one */
+  function tapKeyword(key) {
+    if (pinned === key && active === key) { pinned = null; hideNow(); auto.holdUntil = performance.now() + 900; auto.index = AUTO_ORDER.indexOf(key) + 1; if (auto.on) autoStep(); return; }
+    pinned = key; show(key);
+    auto.holdUntil = performance.now() + AUTO_HOLD;
+    auto.index = AUTO_ORDER.indexOf(key) + 1;
+    if (auto.on) autoStep();
+  }
+  /* the round stops while the intro is off screen */
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => { auto.visible = entry.isIntersecting && entry.intersectionRatio > .35; }, { threshold: [0, .35, .6] }).observe(frame);
   }
   /* the pointer left a word: fall back to the pinned note if there is one, otherwise fade */
   function hide() {
@@ -392,13 +629,19 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     });
   });
   /* a click anywhere else on the paper lets a pinned note go */
-  frame.addEventListener('click', (event) => { if (event.target.closest?.('.intro-keyword, .hand-hot, .intro-lang')) return; unpin(); });
+  frame.addEventListener('click', (event) => {
+    if (event.target.closest?.('.intro-keyword, .hand-hot, .intro-lang')) return;
+    if (isAuto()) { if (pinned) { pinned = null; auto.holdUntil = 0; if (auto.on) autoStep(); } return; }
+    unpin();
+  });
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') unpin(); });
 
   function bind(word, keyword) {
     const key = keyword.key;
     if (!groups[key]) return;
-    if (isCompact()) return; /* no room for the drawing on a phone: the words stay plain text */
+    if (notesOff()) return; /* a narrow desktop window has no room for the drawings: the words stay plain text */
+    /* touch: a tap opens the note (a tap on INSIGHT or USING AI itself then opens the archive) */
+    if (isAuto()) { word.addEventListener('click', () => tapKeyword(key)); return; }
     word.addEventListener('pointerenter', () => show(key));
     word.addEventListener('focus', () => show(key));
     word.addEventListener('pointerleave', hide);
@@ -406,7 +649,7 @@ export function createHandNotes({ frame, linesRoot, isCompact }) {
     word.addEventListener('click', () => { if (SINGLE[key]) openFilter(SINGLE[key]); else pin(key); });
   }
 
-  function reset() { clearTimeout(hideTimer); endPreview(); pinned = null; hideNow(); }
+  function reset() { clearTimeout(hideTimer); endPreview(); autoplay(false); pinned = null; hideNow(); }
 
-  return { layer, bind, show, hide: hideNow, toggle, layout, reset, preview, get active() { return active; }, get pinned() { return pinned; } };
+  return { layer, bind, show, hide: hideNow, toggle, layout, reset, preview, autoplay, get active() { return active; }, get pinned() { return pinned; } };
 }

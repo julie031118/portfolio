@@ -102,11 +102,13 @@ export function renderContact() {
       if (presence < .01) presence = 0;
     }
     if (touchQuery.matches && idle && !reducedQuery.matches) {
-      const phase = (now % 8000) / 8000 * Math.PI * 2;
-      target.x = .5 + Math.sin(phase) * .25 + Math.sin(phase * 2.13) * .06;
-      target.y = .5 + Math.cos(phase * .83) * .2 + Math.sin(phase * 1.71) * .05;
-      pointer.x += (target.x - pointer.x) * .022;
-      pointer.y += (target.y - pointer.y) * .022;
+      /* no cursor on a phone: the window wanders by itself, slowly and never on the same loop, over the whole section
+         (2026-10-17, 연서: was a small 8-second loop around the middle that read as standing still) */
+      const t = now / 1000;
+      target.x = .5 + Math.sin(t * .43) * .3 + Math.sin(t * 1.07 + 1) * .08;
+      target.y = .5 + Math.sin(t * .29 + 2) * .27 + Math.cos(t * .77) * .07;
+      pointer.x += (target.x - pointer.x) * .03;
+      pointer.y += (target.y - pointer.y) * .03;
     } else if (!quickX) {
       pointer.x += (target.x - pointer.x) * .16;
       pointer.y += (target.y - pointer.y) * .16;
@@ -115,7 +117,7 @@ export function renderContact() {
     const px = pointer.x * width;
     const py = pointer.y * height;
     const cell = 22;
-    const revealRadius = Math.min(width, height) * (touchQuery.matches ? .26 : .22) * presence;
+    const revealRadius = Math.min(width, height) * (touchQuery.matches ? .3 : .22) * presence;
     /* The section itself is the page's vellum ground. The pointer opens a grid of little windows in the paper,
        each showing the sharp photograph that lies (blurred) under the whole section. */
     context.globalCompositeOperation = 'source-over';

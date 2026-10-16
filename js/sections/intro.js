@@ -89,7 +89,7 @@ export function renderIntro(siteLang) {
   const linesRoot = section.querySelector('.intro-lines');
   const hintEl = section.querySelector('.intro-hint');
   const hintText = section.querySelector('.intro-hint-text');
-  const hand = createHandNotes({ frame, linesRoot, isCompact: () => compactQuery.matches });
+  const hand = createHandNotes({ frame, linesRoot });
   const rows = Array.from({ length: 6 }, (_, index) => {
     const row = document.createElement('div');
     row.className = 'intro-line';
@@ -164,6 +164,7 @@ export function renderIntro(siteLang) {
       previewed = true;
       window.setTimeout(() => { if (mode === 'final') hand.preview(); }, 600); /* 1500 until 2026-10-02: too slow to arrive */
     }
+    hand.autoplay(true); /* phones: the notes open by themselves (does nothing with a mouse) */
   }
 
   /* the dotted underlines pulse until the reader has tried one word; the hint under the paragraph stays */

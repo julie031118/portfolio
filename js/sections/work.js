@@ -2,6 +2,7 @@ import { T } from './render-shell.js';
 import { openDetail } from './detail.js';
 import { releaseWebGL } from './render-shell.js';
 import { ringTick } from '../audio.js';
+import { phoneSrc } from '../phone-images.js';
 
 /* SELECTED WORK — ring of the 12 featured projects (vanilla Three.js).
    Motion reference: Codrops "Scroll-Driven 3D Image Tube" (MIT) — scroll adds
@@ -10,6 +11,17 @@ import { ringTick } from '../audio.js';
 const mobileQuery = window.matchMedia('(max-width: 600px), (hover: none)');
 const reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const TAU = Math.PI * 2;
+/* Phones (2026-10-17, 연서: bring the ring back to phones, light, moving by itself): the same ring, not pinned. It
+   turns slowly on its own and a little more as the page scrolls past; a sideways swipe turns it (and lets it coast),
+   a tap opens the card. The cards are 512px textures from the 600px phone copies, the object is a lighter copy of the
+   plate flower (models/plate-flower-m.glb), and the front card's title is written under the ring. */
+const PHONE = {
+  rx: 1.25, ry: .95,   /* × RADIUS: rounder than the desktop's wide ellipse (1.5 to 3.2 × .8), so the cards read larger on a tall screen */
+  object: 5.8, lift: .55,
+  drift: .085,         /* rad/s, about 74 s a turn (the desktop drifts at .035 while pinned) */
+  drag: .011,          /* rad per px of a swipe */
+  texture: 512,
+};
 let instance = null;
 
 function featuredProjects() {
@@ -36,10 +48,9 @@ function placeholderCanvas(label) {
 }
 
 /* Same cool, low-saturation register as the archive cards (CSS filter there; baked into the texture here). */
-function tonedTexture(THREE, source, saturation = .72) {
+function tonedTexture(THREE, source, saturation = .72, max = 1024) {
   const image = source.image;
   if (!image || !image.width) return source;
-  const max = 1024;
   const scale = Math.min(1, max / Math.max(image.width, image.height));
   const canvas = document.createElement('canvas');
   canvas.width = Math.max(1, Math.round(image.width * scale));
@@ -73,96 +84,33 @@ function coverTexture(THREE, texture, aspect) {
 }
 
 let modelPromise = null;
-/* parsed once per page; every view clones it */
+/* parsed once per page; every view clones it. Phones load the lighter copy (smaller textures, packed geometry) and
+   fall back to the full one if it is missing. */
 function loadModel() {
-  const url = window.REVIEW_MODEL || SITE.workUi?.objectModel || 'models/plate-flower.glb';
+  const full = window.REVIEW_MODEL || SITE.workUi?.objectModel || 'models/plate-flower.glb';
+  const url = mobileQuery.matches && !window.REVIEW_MODEL ? (SITE.workUi?.objectModelPhone || 'models/plate-flower-m.glb') : full;
   modelPromise ||= (async () => {
     const { GLTFLoader } = await import('../vendor/GLTFLoader.js');
-    const gltf = await new GLTFLoader().loadAsync(url);
-    return gltf.scene;
+    const loader = new GLTFLoader();
+    if (url !== full) {
+      /* the phone copy's geometry is meshopt-packed (283 KB instead of 788 KB) */
+      const { MeshoptDecoder } = await import('../vendor/meshopt_decoder.module.js');
+      await MeshoptDecoder.ready;
+      loader.setMeshoptDecoder(MeshoptDecoder);
+    }
+    try { return (await loader.loadAsync(url)).scene; } catch (error) {
+      if (url === full) throw error;
+      return (await loader.loadAsync(full)).scene;
+    }
   })();
   return modelPromise;
-}
-
-/* Phone: no ring and no motion, but the object stays. One still render, redrawn only while a finger turns it. */
-async function createMobileObject(host) {
-  const THREE = await import('../vendor/three.module.min.js');
-  if (!host.isConnected) return null;
-  const canvas = document.createElement('canvas');
-  canvas.className = 'work-mobile-canvas';
-  host.append(canvas);
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'low-power' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  renderer.setClearColor(0x000000, 0);
-  renderer.toneMapping = THREE.NoToneMapping;
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
-  camera.position.set(0, 0, 13);
-  const pivot = new THREE.Group();
-  pivot.rotation.set(-0.08, 0.35, 0);
-  scene.add(pivot);
-  let disposed = false;
-  let queued = 0;
-  let pmrem = null;
-  let object = null;
-  const render = () => { queued = 0; if (!disposed) renderer.render(scene, camera); };
-  const requestRender = () => { if (!queued) queued = requestAnimationFrame(render); };
-  function resize() {
-    const width = Math.max(1, Math.round(host.clientWidth));
-    const height = Math.max(1, Math.round(host.clientHeight));
-    renderer.setSize(width, height, false);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-    requestRender();
-  }
-  const [source, { RoomEnvironment }] = await Promise.all([loadModel(), import('../vendor/RoomEnvironment.js')]);
-  if (!host.isConnected) { renderer.dispose(); renderer.forceContextLoss(); return null; }
-  pmrem = new THREE.PMREMGenerator(renderer);
-  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-  scene.add(new THREE.HemisphereLight(0xffffff, 0xd8d6e0, 0.45));
-  object = source.clone();
-  object.traverse((node) => { if (node.isMesh) { node.material = node.material.clone(); node.material.envMapIntensity = 0.8; } });
-  const box = new THREE.Box3().setFromObject(object);
-  const size = box.getSize(new THREE.Vector3());
-  const k = 6.0 / Math.max(size.x, size.y, size.z);
-  object.position.copy(box.getCenter(new THREE.Vector3())).multiplyScalar(-k);
-  object.scale.setScalar(k);
-  pivot.add(object);
-  host.classList.add('is-loaded');
-  /* a sideways drag turns it; vertical swipes still scroll the page (touch-action: pan-y) */
-  let dragX = null;
-  const onDown = (event) => { dragX = event.clientX; };
-  const onMove = (event) => { if (dragX === null) return; pivot.rotation.y += (event.clientX - dragX) * 0.012; dragX = event.clientX; requestRender(); };
-  const onUp = () => { dragX = null; };
-  canvas.addEventListener('pointerdown', onDown);
-  canvas.addEventListener('pointermove', onMove);
-  window.addEventListener('pointerup', onUp);
-  window.addEventListener('pointercancel', onUp);
-  window.addEventListener('resize', resize);
-  resize();
-  return {
-    dispose() {
-      if (disposed) return;
-      disposed = true;
-      cancelAnimationFrame(queued);
-      canvas.removeEventListener('pointerdown', onDown);
-      canvas.removeEventListener('pointermove', onMove);
-      window.removeEventListener('pointerup', onUp);
-      window.removeEventListener('pointercancel', onUp);
-      window.removeEventListener('resize', resize);
-      object?.traverse((node) => { if (node.isMesh) node.material.dispose(); });
-      scene.environment?.dispose(); pmrem?.dispose();
-      renderer.dispose(); renderer.forceContextLoss();
-      canvas.remove();
-      host.classList.remove('is-loaded');
-    },
-  };
 }
 
 async function createRing(section, projects, lang, onDispose) {
   /* contexts coexist now — the ring, the NAME glass and the photo lens each own their own; disposing one another caused ping-pong */
   const THREE = await import('../vendor/three.module.min.js');
-  if (!section.isConnected || mobileQuery.matches) return null;
+  if (!section.isConnected) return null;
+  const phone = mobileQuery.matches;
 
   const wrap = section.querySelector('.work-canvas-wrap');
   /* a context that was force-lost cannot be reused: always start from a fresh canvas */
@@ -171,8 +119,9 @@ async function createRing(section, projects, lang, onDispose) {
   canvas.setAttribute('aria-hidden', 'true');
   wrap.querySelector('.work-canvas')?.replaceWith(canvas);
   const tooltip = section.querySelector('.work-tooltip');
+  const caption = section.querySelector('.work-caption');
   const indexButtons = [...section.querySelectorAll('.work-index button')];
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: phone ? 'default' : 'high-performance' });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.setClearColor(0x000000, 0);
   /* no tone mapping: the porcelain keeps the texture's own blue; the room light is dialled down instead */
@@ -192,8 +141,8 @@ async function createRing(section, projects, lang, onDispose) {
   /* the object in the middle of the ring — 연서's broken-plate flower (Tripo GLB). It sits at the
      ring's centre, lit by a room environment, turning gently with the pointer; the ring's near cards
      pass in front of it and the far cards behind (painter's order by depth, like the cards). */
-  const OBJECT_SIZE = 6.9; /* world units, longest side — the centrepiece, larger than a card (6.0 until 2026-10-02) */
-  const OBJECT_LIFT = 0.75; /* raised a little above the ring's centre so the near cards cover less of it */
+  const OBJECT_SIZE = phone ? PHONE.object : 6.9; /* world units, longest side — the centrepiece, larger than a card (6.0 until 2026-10-02) */
+  const OBJECT_LIFT = phone ? PHONE.lift : 0.75; /* raised a little above the ring's centre so the near cards cover less of it */
   const pivot = new THREE.Group();
   scene.add(pivot);
   let object = null;
@@ -243,8 +192,9 @@ async function createRing(section, projects, lang, onDispose) {
   const OVERLAP = 0.7;
   const RADIUS = Math.max(3.4, (N * (CARD_W - OVERLAP)) / TAU);
   /* RX grows to use whatever width the stage has (see resize); RY stays flat so the cards read large */
-  let RX = RADIUS * 1.5;
-  const RY = RADIUS * 0.8; /* 0.72 until 2026-10-02: a touch taller, the near row sits lower and shows more of the object */
+  const RX_MIN = RADIUS * (phone ? PHONE.rx : 1.5);
+  let RX = RX_MIN;
+  const RY = RADIUS * (phone ? PHONE.ry : 0.8); /* 0.72 until 2026-10-02: a touch taller, the near row sits lower and shows more of the object */
   const TILT = -0.5, PARALLAX_X = 0.05, PARALLAX_Y = 0.10; /* 0.07 / 0.16 until 2026-10-02: a smaller swing leaves less margin to reserve */
   const geometry = new THREE.PlaneGeometry(CARD_W, CARD_H);
   const frameGeometry = new THREE.PlaneGeometry(CARD_W + 0.04, CARD_H + 0.04);
@@ -268,10 +218,10 @@ async function createRing(section, projects, lang, onDispose) {
     cards.push({ holder, mesh, frame, material, project, texture: placeholder });
     const cardSource = project.cardThumb || project.thumb; /* the card crop, if there is one */
     if (!isPlaceholderPath(cardSource)) {
-      loader.load(normalizeSource(cardSource), (loaded) => {
+      loader.load(normalizeSource(phoneSrc(cardSource)), (loaded) => {
         loaded.colorSpace = THREE.SRGBColorSpace;
         loaded.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
-        const texture = tonedTexture(THREE, loaded);
+        const texture = tonedTexture(THREE, loaded, .72, phone ? PHONE.texture : 1024);
         coverTexture(THREE, texture, CARD_W / CARD_H);
         material.map = texture; material.needsUpdate = true;
         placeholder.dispose();
@@ -296,6 +246,7 @@ async function createRing(section, projects, lang, onDispose) {
   let lastTime = performance.now();
   let activeIndex = -1;
   let ringSpeed = 0;
+  let fling = 0; /* a swipe's speed, coasting down after the finger lifts (phones) */
   const raycaster = new THREE.Raycaster();
   const pointer = new THREE.Vector2(-2, -2);
   const worldPos = new THREE.Vector3();
@@ -343,20 +294,21 @@ async function createRing(section, projects, lang, onDispose) {
     /* The far cards are drawn smaller, so a fit centred on the object left an empty band above the ring.
        The fit is asymmetric now: the ring's real top and bottom are fitted into the band between the nav and
        the bottom edge, and the view is shifted to centre it (2026-10-02: everything reads larger). */
-    const topInset = (Number.parseFloat(cssColor('--nav-height')) || 56) + 12;
-    /* 2026-10-11 (연서: the note under the ring overlapped it): the fit now stops above the sound note */
-    const note = section.querySelector('.work-sound-note');
-    const noteTop = note && getComputedStyle(note).position === 'absolute' ? note.getBoundingClientRect().top - rect.top : Infinity;
+    const topInset = phone ? 8 : (Number.parseFloat(cssColor('--nav-height')) || 56) + 12; /* a phone's canvas already starts under the nav */
+    /* 2026-10-11 (연서: the note under the ring overlapped it): the fit now stops above the sound note (and, on a
+       phone, above the front card's title) */
+    const notes = [...section.querySelectorAll('.work-sound-note, .work-caption')].filter((el) => getComputedStyle(el).position === 'absolute' && getComputedStyle(el).display !== 'none');
+    const noteTop = notes.length ? Math.min(...notes.map((el) => el.getBoundingClientRect().top - rect.top)) : Infinity;
     const bottomInset = Number.isFinite(noteTop) && noteTop > 0 && noteTop < height ? Math.max(14, Math.round(height - noteTop + 10)) : 14;
     const band = Math.max(120, height - topInset - bottomInset);
     const halfBand = (h) => ((h.top - h.bottom) / 2) * (height / band); /* the half-height the band needs, in tan units */
     /* stretch the ellipse sideways until the ring is as wide as the stage allows (the height sets the scale) */
-    RX = RADIUS * 1.5;
+    RX = RX_MIN;
     let half = extents();
     for (let pass = 0; pass < 4; pass += 1) {
       const room = (halfBand(half) * camera.aspect) / half.x; /* > 1: width to spare */
       if (Math.abs(room - 1) < .01) break;
-      RX = THREE.MathUtils.clamp(RX * (1 + (room - 1) * .85), RADIUS * 1.5, RADIUS * 3.2);
+      RX = THREE.MathUtils.clamp(RX * (1 + (room - 1) * .85), RX_MIN, RADIUS * 3.2);
       half = extents();
     }
     const tanHalf = Math.max(halfBand(half) * 1.01, (half.x * 1.01) / camera.aspect);
@@ -401,14 +353,32 @@ async function createRing(section, projects, lang, onDispose) {
       if (activeIndex !== -1 && Math.abs(ringSpeed) > 0.12) ringTick();
       activeIndex = nearest;
       indexButtons.forEach((button, i) => button.classList.toggle('is-active', i === nearest));
+      writeCaption();
     }
+  }
+
+  /* phones: the title of the card at the front, under the ring */
+  function writeCaption() {
+    if (!caption || activeIndex < 0) return;
+    const copy = cards[activeIndex].project.nar[document.documentElement.lang] || cards[activeIndex].project.nar.ko;
+    caption.querySelector('strong').textContent = copy.title;
+    caption.querySelector('span').textContent = copy.cat || '';
   }
 
   function frame(now) {
     if (disposed) return;
     const dt = Math.min(0.05, (now - lastTime) / 1000); lastTime = now;
-    /* idle drift only once the stage has reached the top, so the ring opens at START however long the intro took */
-    if (!reducedQuery.matches && !hovered && section.getBoundingClientRect().top <= 2) drift += dt * 0.035 * hoverSlow; /* 0.05 until 2026-10-17 */
+    /* idle drift only once the stage has reached the top, so the ring opens at START however long the intro took
+       (a phone's ring is not pinned: it drifts while it crosses the middle of the screen) */
+    const box = section.getBoundingClientRect();
+    const inView = phone ? box.top < window.innerHeight * .5 && box.bottom > window.innerHeight * .5 : box.top <= 2;
+    if (!reducedQuery.matches && !hovered && inView) drift += dt * (phone ? PHONE.drift : 0.035) * hoverSlow; /* 0.05 until 2026-10-17 */
+    if (phone && !dragging && Math.abs(fling) > 0.0002) { offsetAngle += fling * dt * 60; fling *= Math.pow(0.92, dt * 60); }
+    if (phone && !reducedQuery.matches) {
+      /* no pointer to lean the ring: it sways a little by itself */
+      const t = now / 1000;
+      parallax.tx = Math.sin(t * 0.31) * 0.6; parallax.ty = Math.sin(t * 0.23 + 1) * 0.5;
+    }
     hoverSlow += ((hovered ? 0.25 : 1) - hoverSlow) * 0.1;
     const target = -Math.PI / 2 + START + scrollAngle + offsetAngle + drift;
     const before = angle;
@@ -443,6 +413,7 @@ async function createRing(section, projects, lang, onDispose) {
   }
 
   function onMove(event) {
+    if (event.pointerType === 'touch') return; /* no hover on a finger */
     const rect = canvas.getBoundingClientRect();
     parallax.tx = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
     parallax.ty = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
@@ -474,11 +445,13 @@ async function createRing(section, projects, lang, onDispose) {
   }
   /* drag to rotate */
   let dragging = false, dragX = 0, dragMoved = 0;
-  function onDown(event) { dragging = true; dragX = event.clientX; dragMoved = 0; }
+  function onDown(event) { dragging = true; dragX = event.clientX; dragMoved = 0; fling = 0; }
   function onDrag(event) {
     if (!dragging) return;
     const dx = event.clientX - dragX; dragX = event.clientX; dragMoved += Math.abs(dx);
-    offsetAngle += dx * 0.004;
+    const turn = dx * (phone ? PHONE.drag : 0.004);
+    offsetAngle += turn;
+    if (phone) fling = fling * 0.5 + turn * 0.5;
   }
   function onUp(event) { if (dragging && dragMoved > 6) event.stopPropagation?.(); dragging = false; }
 
@@ -488,6 +461,7 @@ async function createRing(section, projects, lang, onDispose) {
   canvas.addEventListener('pointerdown', onDown);
   window.addEventListener('pointermove', onDrag);
   window.addEventListener('pointerup', onUp);
+  window.addEventListener('pointercancel', onUp);
   window.addEventListener('resize', resize);
   resize();
 
@@ -501,7 +475,7 @@ async function createRing(section, projects, lang, onDispose) {
       delta = Math.atan2(Math.sin(delta), Math.cos(delta));
       offsetAngle += delta;
     },
-    setLanguage() { if (hovered) { const copy = hovered.project.nar[document.documentElement.lang] || hovered.project.nar.ko; tooltip.querySelector('strong').textContent = copy.title; tooltip.querySelector('span').textContent = copy.cat || ''; } },
+    setLanguage() { writeCaption(); if (hovered) { const copy = hovered.project.nar[document.documentElement.lang] || hovered.project.nar.ko; tooltip.querySelector('strong').textContent = copy.title; tooltip.querySelector('span').textContent = copy.cat || ''; } },
     dispose() {
       if (disposed) return;
       disposed = true;
@@ -511,6 +485,7 @@ async function createRing(section, projects, lang, onDispose) {
       canvas.removeEventListener('pointerdown', onDown);
       window.removeEventListener('pointermove', onDrag);
       window.removeEventListener('pointerup', onUp);
+      window.removeEventListener('pointercancel', onUp);
       window.removeEventListener('resize', resize);
       cards.forEach(({ texture, material, frame }) => { texture.dispose(); material.dispose(); frame.material.dispose(); });
       geometry.dispose(); frameGeometry.dispose(); frameMaterial.dispose();
@@ -542,7 +517,7 @@ function renderMobileList(root, projects, lang) {
     img.innerHTML = `<span class="archive-image-slot">${SITE.workUi?.imageSlot || 'IMAGE 3:4'}</span>`;
     const cardSource = project.cardThumb || project.thumb;
     if (!isPlaceholderPath(cardSource)) {
-      const image = document.createElement('img'); image.loading = 'lazy'; image.decoding = 'async'; image.alt = copy.title; image.src = normalizeSource(cardSource);
+      const image = document.createElement('img'); image.loading = 'lazy'; image.decoding = 'async'; image.alt = copy.title; image.src = normalizeSource(phoneSrc(cardSource));
       image.addEventListener('load', () => img.classList.add('has-image'), { once: true });
       img.append(image);
     }
@@ -577,9 +552,9 @@ export function renderWork(lang) {
           </div>
         </div>
         <div class="work-hint">${SITE.workUi?.hint || 'SCROLL TO ROTATE · CLICK TO OPEN'}</div>
+        <p class="work-caption" aria-live="polite"><strong></strong><span></span><em>${SITE.workUi?.hintTouch || 'SWIPE TO TURN · TAP TO OPEN'}</em></p>
         ${SITE.workUi?.soundNote ? `<p class="work-sound-note">${SITE.workUi.soundNote}</p>` : ''}
       </div>
-      <div class="work-mobile-object" aria-hidden="true"></div>
       <div class="work-list"></div>
     </div>`;
 
@@ -611,8 +586,16 @@ export function renderWork(lang) {
   window.__workNote = note;
 
   let visible = false;
+  /* a phone that cannot draw the ring (no WebGL) gets the cards as a list instead */
+  let failed = false;
+  function showList() {
+    if (failed) return;
+    failed = true;
+    renderMobileList(listRoot, projects, document.documentElement.lang);
+    section.classList.add('is-list');
+  }
   async function ensureRing() {
-    if (ring || creating || mobileQuery.matches || !visible) return;
+    if (ring || creating || failed || !visible) return;
     creating = true;
     let created = null;
     try {
@@ -621,13 +604,14 @@ export function renderWork(lang) {
       console.warn('work ring failed', error);
       window.__webglLog?.push({ section: 'WORK', action: 'error', time: performance.now(), reason: String(error?.message || error) });
       note(`ring error: ${String(error?.message || error).slice(0, 80)}`);
+      if (mobileQuery.matches) showList();
     } finally {
       creating = false;
     }
     if (!created) return;
     if (!visible) { created.dispose(); return; }
     ring = created;
-    if (trigger) ring.setScroll(trigger.progress);
+    if (trigger) ring.setScroll(scrollValue(trigger.progress));
   }
   function dropRing() { ring?.dispose(); ring = null; }
   /* another section (NAME glass, the photo lens) may have taken the context — take it back when it is freed */
@@ -650,6 +634,22 @@ export function renderWork(lang) {
     ScrollTrigger.refresh();
   }
 
+  /* phones: no pin, the ring turns half a turn while the section scrolls past */
+  function setupPhoneScroll() {
+    if (!window.gsap || !window.ScrollTrigger || trigger || reducedQuery.matches) return;
+    if (!window.__introReady) { window.addEventListener('portfolio:intro-ready', setupPhoneScroll, { once: true }); return; }
+    trigger = ScrollTrigger.create({
+      trigger: section,
+      start: 'top bottom',
+      end: 'bottom top',
+      invalidateOnRefresh: true,
+      onUpdate: (self) => ring?.setScroll(scrollValue(self.progress)),
+    });
+  }
+  /* a phone's trigger runs from the section entering to leaving: its middle (section centred on screen) is the
+     start angle, so SCORPIO and Art2Wear are at the front when the ring is in view */
+  function scrollValue(progress) { return mobileQuery.matches ? progress - .5 : progress; }
+
   /* The section flickers out of the observer's view for a frame when ScrollTrigger re-pins (font load,
      refresh, hash jumps). Disposing on that flicker left the stage empty, so a drop waits a moment and
      a slow heartbeat rebuilds the ring whenever it is on screen without one. */
@@ -668,28 +668,9 @@ export function renderWork(lang) {
     heartbeat = window.setInterval(() => { if (visible && !ring && !creating) ensureRing(); }, 1200);
   }
 
-  /* phone: the object is built once it comes near the screen and let go when it is far away */
-  let mobileObject = null;
-  let mobileCreating = false;
-  let mobileObserver = null;
-  function setupMobileObject() {
-    const host = section.querySelector('.work-mobile-object');
-    mobileObserver = new IntersectionObserver((entries) => {
-      entries.forEach(async (entry) => {
-        if (entry.isIntersecting && !mobileObject && !mobileCreating) {
-          mobileCreating = true;
-          try { mobileObject = await createMobileObject(host); } catch (error) { console.warn('work object failed', error); }
-          mobileCreating = false;
-        } else if (!entry.isIntersecting && mobileObject) { mobileObject.dispose(); mobileObject = null; }
-      });
-    }, { rootMargin: '60% 0px 60% 0px' });
-    mobileObserver.observe(host);
-  }
-
   function mount() {
     renderIndex(lang);
-    if (mobileQuery.matches) { renderMobileList(listRoot, projects, lang); setupMobileObject(); return; }
-    setupScroll();
+    if (mobileQuery.matches) setupPhoneScroll(); else setupScroll();
     setupObserver();
   }
   mount();
@@ -706,8 +687,7 @@ export function renderWork(lang) {
         .then(() => new Promise((resolve) => idle(resolve)))
         .then(() => loadModel())
         .catch(() => {});
-      if (mobileQuery.matches) return; /* a phone shows the cards as a lazy list */
-      const sources = projects.map((project) => project.cardThumb || project.thumb).filter((source) => !isPlaceholderPath(source));
+      const sources = projects.map((project) => phoneSrc(project.cardThumb || project.thumb)).filter((source) => !isPlaceholderPath(source));
       const next = () => {
         const source = sources.shift();
         if (!source) return;
@@ -725,8 +705,8 @@ export function renderWork(lang) {
 
   instance = {
     section,
-    setLanguage(nextLang) { renderIndex(nextLang); if (mobileQuery.matches) renderMobileList(listRoot, projects, nextLang); ring?.setLanguage(nextLang); },
-    destroy() { window.removeEventListener('portfolio:webgl-free', onWebGLFree); observer?.disconnect(); mobileObserver?.disconnect(); mobileObject?.dispose(); clearTimeout(dropTimer); clearInterval(heartbeat); trigger?.kill(); dropRing(); instance = null; },
+    setLanguage(nextLang) { renderIndex(nextLang); if (failed) renderMobileList(listRoot, projects, nextLang); ring?.setLanguage(nextLang); },
+    destroy() { window.removeEventListener('portfolio:webgl-free', onWebGLFree); observer?.disconnect(); clearTimeout(dropTimer); clearInterval(heartbeat); trigger?.kill(); dropRing(); instance = null; },
   };
   return instance;
 }
