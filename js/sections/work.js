@@ -408,7 +408,7 @@ async function createRing(section, projects, lang, onDispose) {
     if (disposed) return;
     const dt = Math.min(0.05, (now - lastTime) / 1000); lastTime = now;
     /* idle drift only once the stage has reached the top, so the ring opens at START however long the intro took */
-    if (!reducedQuery.matches && !hovered && section.getBoundingClientRect().top <= 2) drift += dt * 0.05 * hoverSlow;
+    if (!reducedQuery.matches && !hovered && section.getBoundingClientRect().top <= 2) drift += dt * 0.035 * hoverSlow; /* 0.05 until 2026-10-17 */
     hoverSlow += ((hovered ? 0.25 : 1) - hoverSlow) * 0.1;
     const target = -Math.PI / 2 + START + scrollAngle + offsetAngle + drift;
     const before = angle;
@@ -492,7 +492,7 @@ async function createRing(section, projects, lang, onDispose) {
   resize();
 
   const controller = {
-    setScroll(progress) { scrollAngle = progress * TAU; },
+    setScroll(progress) { scrollAngle = progress * TAU * 0.5; }, /* half a turn over the pinned scroll (a full turn until 2026-10-17: too much spin with 6 cards, 연서) */
     goTo(index) {
       /* rotate so card `index` sits at the bottom (front) */
       const desired = -Math.PI / 2 - (index / N) * TAU;

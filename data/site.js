@@ -63,8 +63,8 @@ window.SITE = {
 
   profile: {
     name: { ko: '이연서', en: 'Yeonseo Lee' },
-    photo: 'img/profile-3.jpg',
-    photos: ['img/profile-3.jpg', 'img/profile-2.jpg'], /* stacked collage: big portrait, café (the landscape selfie came out, 2026-10-02) */
+    photo: 'img/profile-5.jpg',
+    photos: ['img/profile-5.jpg'], /* one photo-booth portrait, 630x840, no retouching (연서, 2026-10-17; profile-3 + café profile-2 until then) */
     photoAlt: { ko: '이연서 프로필 사진', en: 'Portrait of Yeonseo Lee' },
     email: 'julie031118@gmail.com',
     linkedin: 'https://www.linkedin.com/in/yeonseo-lee-64b970388/',

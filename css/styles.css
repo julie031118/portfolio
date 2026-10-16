@@ -1000,3 +1000,17 @@ html[lang="ko"] .about-award-title { word-break: keep-all; overflow-wrap: anywhe
 .about-award-more[hidden] { display: none; }
 .about-award-desc { margin: 0 0 10px; color: var(--ink); font: 13px/1.8 var(--font-mono); }
 html[lang="ko"] .about-award-desc { word-break: keep-all; overflow-wrap: anywhere; }
+
+/* About, one profile photo (연서, 2026-10-17): text column up to 700px + photo 270px, centred together */
+.about-strengths-grid { grid-template-columns: minmax(0, 700px) 270px; gap: 96px; justify-content: center; }
+.about-photo--single { width: 270px; margin: 42px 0 0 0; } /* the photo's top meets the first strength line */
+.about-photo--single .about-photo-frame { aspect-ratio: 3 / 4; border: 0; box-shadow: 0 10px 28px rgba(29, 29, 31, .14); }
+.about-photo--single figcaption { display: block; margin-top: 12px; text-align: right; }
+/* strength text: size and colour only, the words stay */
+.about-strength-item { padding: 28px 0; }
+.about-strength-evidence { margin-top: 12px; font-size: 13px; line-height: 1.8; color: #3a3d44; }
+@media (max-width: 600px), (hover: none) {
+  .about-strengths-grid { grid-template-columns: 1fr; gap: 48px; }
+  .about-photo--single { width: min(62vw, 240px); margin: 0; }
+  .about-photo--single figcaption { text-align: left; }
+}

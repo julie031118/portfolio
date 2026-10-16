@@ -65,7 +65,7 @@ export function renderAbout(lang) {
       <div class="section-heading"><span>${SITE.sections.about.title}</span><span class="section-heading__index">${SITE.sections.about.index}</span></div>
       <section class="about-strengths-grid" aria-labelledby="about-strengths-title">
         <div class="about-strengths-copy"><p id="about-strengths-title" class="about-kicker">${SITE.aboutUi.strengths}</p><ol class="about-strength-list"></ol><p class="about-strength-hint">${T(mobileQuery.matches ? SITE.aboutUi.strengthHintTouch : SITE.aboutUi.strengthHint, lang)}</p></div>
-        <figure class="about-photo about-photo--stack about-photo--count-${(SITE.profile.photos || [SITE.profile.photo]).length}">${(SITE.profile.photos || [SITE.profile.photo]).map((_, index) => mediaMarkup(`about-photo-frame about-photo-frame--${index + 1}`, SITE.aboutUi.photoSlot)).join('')}<figcaption>${SITE.aboutUi.profile}</figcaption></figure>
+        <figure class="about-photo ${(SITE.profile.photos || [SITE.profile.photo]).length === 1 ? 'about-photo--single' : `about-photo--stack about-photo--count-${(SITE.profile.photos || [SITE.profile.photo]).length}`}">${(SITE.profile.photos || [SITE.profile.photo]).map((_, index) => mediaMarkup(`about-photo-frame about-photo-frame--${index + 1}`, SITE.aboutUi.photoSlot)).join('')}<figcaption>${SITE.aboutUi.profile}</figcaption></figure>
       </section>
       <section class="about-stats" aria-label="${SITE.aboutUi.stats}"></section>
       ${(SITE.profile.experience || []).length ? `<section class="about-awards about-experience" aria-labelledby="about-exp-title"><h2 id="about-exp-title">${SITE.aboutUi.experience || 'EXPERIENCE'}</h2><ol class="about-award-list about-exp-list"></ol></section>` : ''}
