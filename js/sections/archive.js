@@ -145,14 +145,22 @@ export function renderArchive(lang) {
     meta.className = 'archive-card-meta';
     const title = document.createElement('h2');
     title.className = 'archive-card-title';
-    title.textContent = copy.title;
+    /* what I did first, the work's title small under it (2026-10-17, 연서): SITE.archiveUi.hover, or the ring's role line */
+    const hoverCopy = SITE.archiveUi.hover?.[project.slug];
+    const roleLine = T(hoverCopy, lang) || (project.ringRole ? (project.ringRole[lang] || project.ringRole.ko) : '');
+    title.textContent = roleLine || copy.title;
     const details = document.createElement('div');
     details.className = 'archive-card-details';
-    const category = document.createElement('span');
-    category.textContent = copy.cat;
-    const year = document.createElement('span');
-    year.textContent = project.year;
-    details.append(category, year);
+    if (roleLine) {
+      details.classList.add('archive-card-details--title');
+      if (!hoverCopy?.noTitle) { const workTitle = document.createElement('span'); workTitle.textContent = copy.title; details.append(workTitle); }
+    } else {
+      const category = document.createElement('span');
+      category.textContent = copy.cat;
+      const year = document.createElement('span');
+      year.textContent = project.year;
+      details.append(category, year);
+    }
     /* phones: one short word instead of the title and details (styles.css shows one or the other) */
     const keyword = document.createElement('span');
     keyword.className = 'archive-card-key';

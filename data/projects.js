@@ -3,7 +3,7 @@ window.PROJECTS = [
  {
   "slug": "miraen",
   "featured": null,
-  "archiveRank": 12,
+  "archiveRank": 20,
   "tags": [
    "CONTENT",
    "INSIGHT",
@@ -231,7 +231,7 @@ window.PROJECTS = [
  {
   "slug": "directing-a-year",
   "featured": null,
-  "archiveRank": 15,
+  "archiveRank": 16,
   "tags": [
    "CONTENT",
    "INSIGHT"
@@ -393,7 +393,7 @@ window.PROJECTS = [
  },
  {
   "slug": "ai-short-film",
-  "featured": 3,
+  "featured": 4,
   "archiveRank": null,
   "tags": [
    "CONTENT",
@@ -666,7 +666,7 @@ window.PROJECTS = [
  },
  {
   "slug": "kaftan",
-  "featured": 5,
+  "featured": 6,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -931,8 +931,8 @@ window.PROJECTS = [
  },
  {
   "slug": "fashion-show-2024",
-  "featured": 6,
-  "archiveRank": null,
+  "featured": null,
+  "archiveRank": 7,
   "tags": [
    "FASHION",
    "CONTENT"
@@ -1202,7 +1202,7 @@ window.PROJECTS = [
  {
   "slug": "campus-festival",
   "featured": null,
-  "archiveRank": 17,
+  "archiveRank": 18,
   "tags": [
    "CONTENT",
    "INSIGHT"
@@ -1367,7 +1367,7 @@ window.PROJECTS = [
  },
  {
   "slug": "art2wear",
-  "featured": 2,
+  "featured": 3,
   "archiveRank": null,
   "tags": [
    "FASHION"
@@ -1624,7 +1624,7 @@ window.PROJECTS = [
  {
   "slug": "clo3d",
   "featured": null,
-  "archiveRank": 10,
+  "archiveRank": 14,
   "tags": [
    "FASHION"
   ],
@@ -1781,7 +1781,7 @@ window.PROJECTS = [
  {
   "slug": "sub-motion",
   "featured": null,
-  "archiveRank": 20,
+  "archiveRank": 19,
   "tags": [
    "CONTENT"
   ],
@@ -1864,7 +1864,7 @@ window.PROJECTS = [
  {
   "slug": "senior-fit",
   "featured": null,
-  "archiveRank": 21,
+  "archiveRank": 22,
   "tags": [
    "FASHION",
    "INSIGHT"
@@ -2076,7 +2076,7 @@ window.PROJECTS = [
  {
   "slug": "engineered-surfaces",
   "featured": null,
-  "archiveRank": 18,
+  "archiveRank": 17,
   "tags": [
    "FASHION"
   ],
@@ -2314,7 +2314,7 @@ window.PROJECTS = [
  {
   "slug": "textile-printed",
   "featured": null,
-  "archiveRank": 16,
+  "archiveRank": 11,
   "tags": [
    "FASHION"
   ],
@@ -2619,13 +2619,13 @@ window.PROJECTS = [
  {
   "slug": "textile-woven",
   "featured": null,
-  "archiveRank": 14,
+  "archiveRank": 10,
   "tags": [
    "FASHION"
   ],
   "year": "2025",
   "period": "2025.08~12",
-  "thumb": "/images/projects/textile-woven/ad11.jpg",
+  "thumb": "/images/projects/textile-woven/ad01.jpg",
   "images": [
    "/images/projects/textile-woven/ad01.jpg",
    "/images/projects/textile-woven/ad02.jpg",
@@ -2649,7 +2649,8 @@ window.PROJECTS = [
    "/images/projects/textile-woven/04.jpg",
    "/images/projects/textile-woven/ad14-bg.jpg",
    "/images/projects/textile-woven/ad13-bg.jpg",
-   "/images/projects/textile-woven/ad15-bg.jpg"
+   "/images/projects/textile-woven/ad15-bg.jpg",
+   "/images/projects/textile-woven/card-1017.jpg"
   ],
   "role": {
    "ko": "직조 디자인 (단독)",
@@ -2660,6 +2661,8 @@ window.PROJECTS = [
    "ko": "모란 같은 전통 꽃무늬를 영화 속 의상에 입혀 본 작업이라, 옛날 영화 같은 빈티지한 기타 곡을 골랐다.",
    "en": "I put traditional floral patterns like peonies onto film costumes, so I chose a vintage guitar song that feels like an old film."
   },
+  "cardThumb": "/images/projects/textile-woven/card-1017.jpg",
+  "heroRatio": 2.1248339973439574,
   "related": [
    {
     "slug": "textile-printed",
@@ -2912,7 +2915,7 @@ window.PROJECTS = [
  {
   "slug": "textile-knit",
   "featured": null,
-  "archiveRank": 19,
+  "archiveRank": 12,
   "tags": [
    "FASHION"
   ],
@@ -3560,7 +3563,7 @@ window.PROJECTS = [
  {
   "slug": "seoul-metro",
   "featured": null,
-  "archiveRank": 23,
+  "archiveRank": 21,
   "tags": [
    "CONTENT"
   ],
@@ -3656,7 +3659,7 @@ window.PROJECTS = [
  },
  {
   "slug": "denim-2026",
-  "featured": 4,
+  "featured": 5,
   "archiveRank": null,
   "tags": [
    "FASHION",
@@ -4071,7 +4074,7 @@ window.PROJECTS = [
  {
   "slug": "fashion-illustration",
   "featured": null,
-  "archiveRank": 22,
+  "archiveRank": 23,
   "tags": [
    "FASHION"
   ],
@@ -4198,8 +4201,8 @@ window.PROJECTS = [
  },
  {
   "slug": "portfolio-site",
-  "featured": null,
-  "archiveRank": 8,
+  "featured": 1,
+  "archiveRank": null,
   "tags": [
    "CONTENT",
    "AI"
@@ -4208,7 +4211,8 @@ window.PROJECTS = [
   "period": "2026",
   "thumb": "/images/projects/portfolio-site/thumb.jpg",
   "images": [
-   "/images/projects/portfolio-site/wf-v3.jpg"
+   "/images/projects/portfolio-site/wf-v3.jpg",
+   "/images/projects/portfolio-site/card-1017.jpg"
   ],
   "role": {
    "ko": "기획 · 웹디자인 · AI 워크플로우 · 콘텐츠 (단독)",
@@ -4219,7 +4223,11 @@ window.PROJECTS = [
    "ko": "이 포트폴리오를 시작할 때 만든 무드보드와 가장 어울리는 곡. 힘을 뺀 부드러운 보컬과 사운드가, 대비 없이 부드러운 이 사이트의 톤과 닮았다.",
    "en": "The song closest to the moodboard this portfolio started from: soft, unforced vocals and sound, like the site’s gentle, low-contrast tone."
   },
-  "cardThumb": "/images/projects/portfolio-site/mm12-card.jpg",
+  "cardThumb": "/images/projects/portfolio-site/card-1017.jpg",
+  "ringRole": {
+   "ko": "웹사이트 기획 · 디자인 · 바이브코딩",
+   "en": "Web planning · Design · Vibe coding"
+  },
   "process": [
    "/images/projects/portfolio-site/05.jpg",
    "/images/projects/portfolio-site/08.jpg",
@@ -4515,7 +4523,7 @@ window.PROJECTS = [
  {
   "slug": "promo-video-ai",
   "featured": null,
-  "archiveRank": 7,
+  "archiveRank": 8,
   "tags": [
    "CONTENT",
    "AI"
@@ -4590,7 +4598,7 @@ window.PROJECTS = [
  {
   "slug": "unreal-engine",
   "featured": null,
-  "archiveRank": 11,
+  "archiveRank": 15,
   "tags": [
    "CONTENT"
   ],
@@ -4911,7 +4919,7 @@ window.PROJECTS = [
  },
  {
   "slug": "scorpio-poster",
-  "featured": 1,
+  "featured": 2,
   "archiveRank": null,
   "tags": [
    "AI",

@@ -25,7 +25,7 @@ const SIZE = {
   shirt: { w: 330, h: 300 },
   arrow: { w: 20, h: 60 },
   screen: { w: 390, h: 190 },
-  aiList: { w: 260, h: 330 },      /* tick 0–34, words from y 66 every 34, the ⋮ under them */
+  aiList: { w: 260, h: 364 },      /* tick 0–34, words from y 66 every 34, the ⋮ under them (330 until 2026-10-17: 8 words with music) */
   aiTag: { w: 320, h: 40 },
   scatter: { w: 800, h: 410 },    /* origin (300, 330) sits on the right end of INSIGHT */
   tail: { w: 100, h: 100 },
@@ -89,7 +89,7 @@ const SLOTS = {
   /* 6 words; everything below the armholes (y > 122) starts right of x 92 so it stays inside the body */
   shirt: [[70, 62, -3], [150, 97, 2], [98, 136, -1], [160, 174, 3], [100, 214, -2], [124, 256, 1]],
   screen: [[28, 44, -1], [232, 42, 2], [92, 100, -2], [268, 98, 1], [42, 156, 1], [168, 156, -2]],
-  aiList: [[62, 66], [66, 100], [60, 134], [64, 168], [62, 202], [66, 236], [62, 270]],
+  aiList: [[62, 66], [66, 100], [60, 134], [64, 168], [62, 202], [66, 236], [62, 270], [65, 304]],
   /* research · interview · targeting · marketing · trend · audience — the elbow stops short of marketing */
   scatter: [[19, 76, -2], [412, 33, 1], [678, 101, 2], [572, 232, 1], [696, 331, -1], [560, 404, -1]],
 };
@@ -133,7 +133,7 @@ const DRAW = {
     stroke('M121 0 C120 12 119.6 24 119 34'),
     slotted(words, SLOTS.aiList, 20, (i) => [62, 66 + i * 34, 0]),
     ['<g class="hand-dots" style="--i:' + words.length + '">',
-      ...[0, 1, 2].map((n) => `<circle cx="${68 + n * .6}" cy="${Math.min(66 + words.length * 34 - 12, 300) + n * 9}" r="1.3"/>`), '</g>'].join(''),
+      ...[0, 1, 2].map((n) => `<circle cx="${68 + n * .6}" cy="${Math.min(66 + words.length * 34 - 12, SIZE.aiList.h - 38) + n * 9}" r="1.3"/>`), '</g>'].join(''),
   ].join(''),
   aiTag: (str) => note(str, 4, 28, 20, 0, -1.5, 'hand-faint'),
   /* the cloud above INSIGHT — the elbow line runs to the 4th word (marketing) */
@@ -514,7 +514,7 @@ export function createHandNotes({ frame, linesRoot }) {
       /* "also this portfolio!" above, the list below */
       const tw = SIZE.aiTag.w * k, th = SIZE.aiTag.h * k;
       place(parts.aiTag, clamp(ax + 12 * k, PAD, F.width - PAD - tw), ay - th - 2 * k, tw, th);
-      const lfit = clamp((F.height - 12 - (ay + ah)) / (330 * k), .5, 1);
+      const lfit = clamp((F.height - 12 - (ay + ah)) / (SIZE.aiList.h * k), .5, 1);
       const lw = SIZE.aiList.w * k * lfit, lh = SIZE.aiList.h * k * lfit;
       place(parts.aiList, clamp(ax + 40 * k, PAD, F.width - PAD - lw), ay + ah - 4 * k, lw, lh);
     }

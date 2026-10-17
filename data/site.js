@@ -56,7 +56,7 @@ window.SITE = {
       insight: ['research', 'interview', 'targeting', 'marketing', 'trend', 'audience'], /* the elbow line runs toward the 4th */
       fashion: ['fashion design', 'textile design', 'digital fashion', 'wearable art', 'fashion show', 'adaptive design'],
       contents: ['short film', 'design', 'motion graphics', 'website', 'video', 'promo'],
-      ai: ['moodboards', 'ideation', 'prototype', 'vibe coding', '3D assets', 'graphics', 'video'], /* in working order */
+      ai: ['moodboards', 'ideation', 'prototype', 'vibe coding', '3D assets', 'graphics', 'video', 'music'], /* in working order; music = the site's background music, made with Gemini (2026-10-17) */
       aiTag: 'also this portfolio!',
     },
   },
@@ -76,7 +76,7 @@ window.SITE = {
         claim: { ko: 'AI 툴 여러 개를 엮어 쓰되, 기획과 판단은 제가 합니다.', en: 'I combine many AI tools, but the planning and the judgment are mine.' },
         keyword: { ko: '기획과 판단', en: 'the planning and the judgment' },
         evidence: { ko: '웹디자인도 웹 코딩도 배운 적 없이 Manus, Claude, ChatGPT, Tripo, Gemini로 지금 보고 있는 이 포트폴리오를 만들었다. 구조와 첫인상은 내가 기획했고, AI가 만든 결과는 직접 확인하며 고쳤다. AI 단편영화도 컨셉과 큰 줄거리는 내가 정하고 여섯 가지 AI 툴로 만들어, 서울대학교 중앙도서관에서 대상을 받았다. 지금은 툴을 쓰는 데서 나아가, 인공지능예술실습 수업에서 직접 짠 원단 사진으로 이미지 생성 모델을 학습시켜 영상과 이미지를 만들고 있다.', en: 'Having never studied web design or web coding, I built this portfolio with Manus, Claude, ChatGPT, Tripo and Gemini. I planned the structure and the first impression myself, and checked and fixed what the AI made. For my AI short film I set the concept and the main story, made it with six AI tools, and won the grand prize at Seoul National University Library. Now I am going beyond using tools: in Deep Learning for Artists I train image generation models on photos of fabric I wove myself, and make video and images with them.' },
-        media: 'images/projects/portfolio-site/thumb-card.jpg', /* the portfolio-site card image (연서, 2026-10-02) */
+        media: 'images/projects/portfolio-site/strength-1-card-1017.jpg', /* the new portfolio-site card as a 4:5 (sketch above, the built ring below; 연서, 2026-10-17; thumb-card.jpg until then) */
         link: 'portfolio-site',
       },
       {
@@ -292,6 +292,28 @@ window.SITE = {
       'fashion-illustration': { ko: '패션 일러스트', en: 'Fashion Illustration' },
       'seoul-metro': { ko: '홍보영상', en: 'Promo Film' },
       'korean-costume': { ko: '한복 제작', en: 'Hanbok Making' },
+    },
+    /* computers, on hover (2026-10-17, 연서: what I did matters more than the work's title): this line big, the title small
+       under it (noTitle: the title says the same thing). The six ring works use their ring role line (projects.js ringRole). */
+    hover: {
+      'promo-video-ai': { ko: 'AI 홍보영상 제작 · 편집', en: 'AI promo film · Editing' },
+      'portfolio-site': { ko: '웹사이트 기획 · 디자인 · 바이브코딩', en: 'Web planning · Design · Vibe coding' },
+      'arts-week-2026': { ko: '야외 설치 · 작품 재구성', en: 'Outdoor installation · Reworked piece' },
+      'clo3d': { ko: '3D 디지털 패션 · 입선', en: '3D digital fashion · Honorable mention' },
+      'unreal-engine': { ko: '3D 공간 구현 · 시네마틱 영상', en: '3D space · Cinematic film' },
+      'miraen': { ko: '브랜드 콘텐츠 · 채널 운영 · 광고', en: 'Brand content · Channels · Ads' },
+      'adaptive-textile': { ko: '인테리어 텍스타일 · 손뜨개 · 터프팅', en: 'Interior textiles · Hand knitting · Tufting', noTitle: true },
+      'textile-woven': { ko: '직조 텍스타일 디자인 · 텍스처 매핑', en: 'Woven textile design · Texture mapping' },
+      'directing-a-year': { ko: '영상 기획 · 연출 · 채널별 배포', en: 'Film planning · Directing · Channel rollout' },
+      'textile-printed': { ko: '프린트 텍스타일 디자인 · 텍스처 매핑', en: 'Printed textile design · Texture mapping' },
+      'campus-festival': { ko: '일러스트 · 굿즈 · 포토부스 디자인', en: 'Illustration · Merch · Photo booth' },
+      'engineered-surfaces': { ko: '실 만들기 · 직조 · 펀치니들', en: 'Spinning yarn · Weaving · Punch needle' },
+      'textile-knit': { ko: '니트 텍스타일 디자인', en: 'Knit textile design' },
+      'sub-motion': { ko: '모션그래픽 · After Effects', en: 'Motion graphics · After Effects' },
+      'senior-fit': { ko: '적응형 의복 · 사용자 인터뷰 · 패턴', en: 'Adaptive clothing · User interviews · Patterns' },
+      'fashion-illustration': { ko: '패션 일러스트 · 도식화', en: 'Fashion illustration · Flat drawings', noTitle: true },
+      'seoul-metro': { ko: '홍보영상 · 모션그래픽 · 촬영', en: 'Promo film · Motion graphics · Filming' },
+      'korean-costume': { ko: '한복 디자인 · 제작', en: 'Hanbok design · Making', noTitle: true },
     },
     aiNowNote: { ko: '지금 배우고 있는 AI 작업은 NOW에 ↑', en: 'The AI work I am learning right now is in NOW ↑' }, /* shown only under AI WORKS (연서, 2026-10-09) */
     filterLabel: 'ARCHIVE FILTERS', imageSlot: 'IMAGE 3:4', inProgress: 'IN PROGRESS',
