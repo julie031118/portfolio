@@ -313,6 +313,7 @@ export function renderAbout(lang) {
     const wasTop = timeline.getBoundingClientRect().top + window.scrollY;
     timelineOpen = open;
     timeline.classList.toggle('is-collapsed', !open);
+    if (stripRaf) { track.style.transform = ''; window.gsap?.set(track, { x: 0 }); if (open) { stripX = 0; stripDir = -1; } } /* the open timeline starts from its first year */
     toggleLabel();
     if (open) {
       if (interactionsReady) { drawSpans(); buildTimelineMotion(); }
@@ -325,6 +326,23 @@ export function renderAbout(lang) {
       /* closing from the middle of the pinned scroll: land on the folded line instead of far below it */
       if (window.scrollY > wasTop - navOffset) scrollToY(Math.max(0, wasTop - navOffset), true);
     }
+  }
+  /* phones (2026-10-17, 연서: the folded strip looked still on an iPhone): the strip is moved by script at a set speed in
+     pixels per second, back and forth, instead of the CSS animation (styles.css turns that off on phones) */
+  const STRIP_SPEED = 160; /* px per second */
+  let stripRaf = 0; let stripX = 0; let stripDir = -1; let stripLast = 0; let stripVisible = false;
+  function stripFrame(now) {
+    stripRaf = requestAnimationFrame(stripFrame);
+    const dt = stripLast ? Math.min(.05, (now - stripLast) / 1000) : 0; stripLast = now;
+    if (timelineOpen || !stripVisible) return;
+    const max = Math.max(0, track.scrollWidth - track.parentElement.clientWidth);
+    stripX += stripDir * STRIP_SPEED * dt;
+    if (stripX <= -max) { stripX = -max; stripDir = 1; } else if (stripX >= 0) { stripX = 0; stripDir = -1; }
+    track.style.transform = `translate3d(${stripX.toFixed(1)}px, 0, 0)`;
+  }
+  if (mobileQuery.matches && !reducedQuery.matches) {
+    new IntersectionObserver(([entry]) => { stripVisible = entry.isIntersecting; }).observe(section.querySelector('.timeline-viewport'));
+    stripRaf = requestAnimationFrame(stripFrame);
   }
   toggle.addEventListener('click', () => setTimeline(!timelineOpen));
   section.querySelector('.timeline-viewport').addEventListener('click', () => { if (!timelineOpen) setTimeline(true); }); /* the drifting strip opens it too */
@@ -340,6 +358,6 @@ export function renderAbout(lang) {
   if (window.__introReady) setupInteractions();
   else { pendingLoadHandler = () => requestAnimationFrame(setupInteractions); window.addEventListener('portfolio:intro-ready', pendingLoadHandler, { once: true }); }
 
-  instance = { destroy() { if (pendingLoadHandler) window.removeEventListener('portfolio:intro-ready', pendingLoadHandler); horizontalTween?.scrollTrigger?.kill(); horizontalTween?.kill(); mobileObserver?.disconnect(); clearTimeout(panelTimer); clearTimeout(spanTimer); window.removeEventListener('resize', onSpanResize); } };
+  instance = { destroy() { cancelAnimationFrame(stripRaf); if (pendingLoadHandler) window.removeEventListener('portfolio:intro-ready', pendingLoadHandler); horizontalTween?.scrollTrigger?.kill(); horizontalTween?.kill(); mobileObserver?.disconnect(); clearTimeout(panelTimer); clearTimeout(spanTimer); window.removeEventListener('resize', onSpanResize); } };
   return instance;
 }

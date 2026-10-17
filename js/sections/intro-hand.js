@@ -562,12 +562,12 @@ export function createHandNotes({ frame, linesRoot }) {
   }
 
   /* phones: the notes open by themselves, one after another, while the sentence is on screen */
-  const auto = { on: false, timer: 0, index: 0, holdUntil: 0, visible: true };
+  const auto = { on: false, timer: 0, index: 0, holdUntil: 0 };
   const reducedQuery = reducedMotion;
   function autoStep() {
     clearTimeout(auto.timer);
     if (!auto.on) return;
-    if (!auto.visible || document.hidden) { auto.timer = window.setTimeout(autoStep, 700); return; }
+    if (!onScreen() || document.hidden) { auto.timer = window.setTimeout(autoStep, 700); return; }
     const now = performance.now();
     if (now < auto.holdUntil) { auto.timer = window.setTimeout(autoStep, auto.holdUntil - now + 20); return; }
     if (active) {
@@ -595,9 +595,11 @@ export function createHandNotes({ frame, linesRoot }) {
     auto.index = AUTO_ORDER.indexOf(key) + 1;
     if (auto.on) autoStep();
   }
-  /* the round stops while the intro is off screen */
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(([entry]) => { auto.visible = entry.isIntersecting && entry.intersectionRatio > .35; }, { threshold: [0, .35, .6] }).observe(frame);
+  /* the round stops while the intro is off screen. Measured each time: an IntersectionObserver on the pinned frame lost
+     track of it when ScrollTrigger re-pinned it (it stayed 'off screen' and the notes stopped, 2026-10-17) */
+  function onScreen() {
+    const r = frame.getBoundingClientRect();
+    return r.bottom > window.innerHeight * .4 && r.top < window.innerHeight * .6;
   }
   /* the pointer left a word: fall back to the pinned note if there is one, otherwise fade */
   function hide() {
@@ -626,7 +628,14 @@ export function createHandNotes({ frame, linesRoot }) {
     group.querySelectorAll('.hand-hot').forEach((link) => {
       link.addEventListener('pointerenter', () => { clearTimeout(hideTimer); if (active !== key) show(key); });
       link.addEventListener('pointerleave', hide);
-      link.addEventListener('click', (event) => { event.stopPropagation(); openFilter(link.dataset.label); });
+      link.addEventListener('click', (event) => {
+        event.stopPropagation();
+        /* phones (2026-10-17, 연서: the intro jumped to the archive by itself): a note that opened by itself lays its
+           labels over the sentence, so a tap meant for the words landed on a label and opened the archive. On a phone the
+           first tap only holds the note open; a tap on a label of a note held open goes to the archive. */
+        if (isAuto() && pinned !== key) { tapKeyword(key); return; }
+        openFilter(link.dataset.label);
+      });
     });
   });
   /* a click anywhere else on the paper lets a pinned note go */

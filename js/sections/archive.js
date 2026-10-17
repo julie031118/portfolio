@@ -153,7 +153,11 @@ export function renderArchive(lang) {
     const year = document.createElement('span');
     year.textContent = project.year;
     details.append(category, year);
-    meta.append(title, details);
+    /* phones: one short word instead of the title and details (styles.css shows one or the other) */
+    const keyword = document.createElement('span');
+    keyword.className = 'archive-card-key';
+    keyword.textContent = T(SITE.archiveUi.keywords?.[project.slug], lang) || copy.cat?.split(' · ')[0] || copy.title;
+    meta.append(title, details, keyword);
     button.append(image, meta);
     button.addEventListener('click', () => openDetail(project.slug, lang));
     card.append(button);

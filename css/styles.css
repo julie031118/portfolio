@@ -489,7 +489,7 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
   .timeline-pin { min-height: 560px; }
   .timeline-topline { left: 16px; right: 16px; }
   .about-timeline.is-collapsed .timeline-topline { padding: 18px 16px 0; }
-  .about-timeline.is-collapsed .timeline-track { animation-duration: 40s; } /* 80s until 2026-10-17 09:00 (연서: too slow) */
+  .about-timeline.is-collapsed .timeline-track { animation: none; } /* phones: about.js moves the strip at 160px a second (the CSS animation looked still on an iPhone, 2026-10-17) */
   .timeline-topline-end { gap: 18px; }
   .timeline-side-panel { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 62vh; overflow-y: auto; border-left: 0; border-top: 1px solid var(--hairline); box-shadow: 0 -12px 32px rgba(29,29,31,.12); transform: translateY(105%); }
   .timeline-side-panel.is-open { transform: translateY(0); }
@@ -532,6 +532,7 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 .archive-card-button:hover::after, .archive-card-button:focus-visible::after { opacity: 1; }
 .archive-card-button:hover .archive-card-meta, .archive-card-button:focus-visible .archive-card-meta { opacity: 1; transform: none; }
 .archive-card-button:hover .card-img img, .archive-card-button:focus-visible .card-img img { filter: saturate(.35) contrast(.95); }
+.archive-card-key { display: none; }
 .archive-card-title { margin: 0; font: 400 15px/1.35 var(--font-serif-ko); }
 html[lang="en"] .archive-card-title { font-family: var(--font-serif-en); }
 .archive-card-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; margin-top: 8px; color: var(--ink-2); font: 11px/1.45 var(--font-mono); }
@@ -597,11 +598,13 @@ html[lang="ko"] .now-next, html[lang="ko"] .now-lead { word-break: keep-all; ove
   .archive-filters { flex-wrap: nowrap; gap: 20px; overflow-x: auto; padding: 48px 0 24px; scrollbar-width: none; }
   .archive-filters::-webkit-scrollbar { display: none; }
   .archive-filter { font-size: 11px; }
-  .archive-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0; padding-top: 24px; }
-  .archive-card-meta { position: static; opacity: 1; transform: none; padding: 10px 8px 16px 0; }
+  /* three a row with one short word each (연서, 2026-10-17; two a row with title and details until then) */
+  .archive-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; padding-top: 24px; }
+  .archive-card-meta { position: static; opacity: 1; transform: none; padding: 8px 6px 16px 0; }
   .archive-card-button::after { display: none; }
-  .archive-card-title { font-size: 15px; }
-  .archive-card-details { gap: 2px 8px; font-size: 10px; }
+  .archive-card-title, .archive-card-details { display: none; }
+  .archive-card-key { display: block; overflow: hidden; color: var(--ink); font: 400 12.5px/1.35 var(--font-serif-ko); white-space: nowrap; text-overflow: ellipsis; }
+  html[lang="en"] .archive-card-key { font-family: var(--font-serif-en); font-size: 12px; }
   .now-block { margin-top: 64px; padding: 22px 18px 10px; }
   .now-head { font-size: 11px; }
   .now-claim { font-size: 16px; }

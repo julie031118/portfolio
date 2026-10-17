@@ -235,8 +235,8 @@ export function renderIntro(siteLang) {
       anticipatePin: 1,
       onUpdate: (self) => update(self.progress),
       onRefresh: (self) => update(self.progress),
-      onLeave: () => { if (locked) window.requestAnimationFrame(shrink); },
-      onLeaveBack: () => { if (locked) window.requestAnimationFrame(shrink); },
+      onLeave: () => { if (locked) requestShrink(); },
+      onLeaveBack: () => { if (locked) requestShrink(); },
     });
     update(0); /* nothing on the paper until the first scroll */
   }
@@ -244,6 +244,32 @@ export function renderIntro(siteLang) {
   /* After the paragraph has been read, scrolling back up should not walk through five screens of a still
      page. The pin is cut to a short hold once the reader is out of it, and the scroll position moves by the
      same amount so nothing on screen jumps. */
+  /* Phones (2026-10-17, 연서: reading the intro, the page suddenly jumped to the archive): a finger flick keeps the page
+     gliding after it lets go, and a scroll position set during that glide is dropped, so the page landed where the
+     glide was going, now several screens lower because the intro had just got shorter. On a touch screen the intro is
+     shortened only once the page has come to rest with no finger on it, and only if the reader is still below it. */
+  const touchScreen = window.matchMedia('(hover: none)').matches;
+  let shrinkTimer = 0;
+  let lastScrollAt = 0;
+  let touching = false;
+  if (touchScreen) {
+    window.addEventListener('scroll', () => { lastScrollAt = performance.now(); }, { passive: true });
+    window.addEventListener('touchstart', () => { touching = true; }, { passive: true });
+    window.addEventListener('touchend', () => { touching = false; lastScrollAt = performance.now(); }, { passive: true });
+    window.addEventListener('touchcancel', () => { touching = false; }, { passive: true });
+  }
+  function requestShrink() {
+    if (!touchScreen) { window.requestAnimationFrame(shrink); return; }
+    clearTimeout(shrinkTimer);
+    const check = () => {
+      if (shrunk || !trigger) return;
+      if (touching || performance.now() - lastScrollAt < 600) { shrinkTimer = window.setTimeout(check, 300); return; }
+      if (window.scrollY < trigger.end - 1) return; /* back inside or above the intro: wait for the next time it is left */
+      shrink();
+    };
+    shrinkTimer = window.setTimeout(check, 600);
+  }
+
   function shrink() {
     if (shrunk || !trigger) return;
     const before = trigger.end - trigger.start;

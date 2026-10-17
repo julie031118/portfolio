@@ -265,6 +265,34 @@ window.SITE = {
     desktopNoteClose: { ko: '닫기', en: 'Close' },
     strengths: 'STRENGTHS', profile: 'PROFILE', stats: 'KEY FIGURES', experience: 'WORK EXPERIENCE', activities: 'ACTIVITIES', awards: 'AWARDS', timeline: 'TIMELINE', segments: 'SEGMENTS', skills: 'SKILLS', openProject: 'OPEN PROJECT →', openNow: 'GO TO NOW ↓', /* timeline fold (2026-10-16) */ timelineOpen: 'OPEN <span class="timeline-topline-arrow">↓</span>', timelineClose: 'CLOSE <span class="timeline-topline-arrow">↑</span>', photoSlot: 'IMAGE 3:4', mediaSlot: 'MEDIA 4:5' },
   archiveUi: {
+    /* phones (2026-10-17, 연서): three cards a row, and under each only a short word for what was done, so the skills read
+       at a glance (no title, no details). Edit the words here. */
+    keywords: {
+      'scorpio-poster': { ko: '3D 포스터', en: '3D Poster' },
+      'art2wear': { ko: '웨어러블 아트', en: 'Wearable Art' },
+      'ai-short-film': { ko: 'AI 단편영화', en: 'AI Short Film' },
+      'denim-2026': { ko: '데님 디자인', en: 'Denim Design' },
+      'kaftan': { ko: '디지털 텍스타일', en: 'Digital Textile' },
+      'fashion-show-2024': { ko: '패션쇼', en: 'Fashion Show' },
+      'promo-video-ai': { ko: 'AI 홍보영상', en: 'AI Promo Film' },
+      'portfolio-site': { ko: '웹사이트 디자인', en: 'Web Design' },
+      'arts-week-2026': { ko: '야외 설치', en: 'Installation' },
+      'clo3d': { ko: '3D 디지털 패션', en: '3D Digital Fashion' },
+      'unreal-engine': { ko: '3D 시네마틱', en: '3D Cinematic' },
+      'miraen': { ko: '브랜드 콘텐츠', en: 'Brand Content' },
+      'adaptive-textile': { ko: '인테리어 텍스타일', en: 'Interior Textiles' },
+      'textile-woven': { ko: '직조 텍스타일', en: 'Woven Textile' },
+      'directing-a-year': { ko: '콘텐츠 기획', en: 'Content Planning' },
+      'textile-printed': { ko: '프린트 텍스타일', en: 'Print Textile' },
+      'campus-festival': { ko: '굿즈 디자인', en: 'Merch Design' },
+      'engineered-surfaces': { ko: '실·원단 제작', en: 'Yarn to Fabric' },
+      'textile-knit': { ko: '니트 텍스타일', en: 'Knit Textile' },
+      'sub-motion': { ko: '모션그래픽', en: 'Motion Graphics' },
+      'senior-fit': { ko: '적응형 디자인', en: 'Adaptive Design' },
+      'fashion-illustration': { ko: '패션 일러스트', en: 'Fashion Illustration' },
+      'seoul-metro': { ko: '홍보영상', en: 'Promo Film' },
+      'korean-costume': { ko: '한복 제작', en: 'Hanbok Making' },
+    },
     aiNowNote: { ko: '지금 배우고 있는 AI 작업은 NOW에 ↑', en: 'The AI work I am learning right now is in NOW ↑' }, /* shown only under AI WORKS (연서, 2026-10-09) */
     filterLabel: 'ARCHIVE FILTERS', imageSlot: 'IMAGE 3:4', inProgress: 'IN PROGRESS',
     filters: [
