@@ -50,7 +50,7 @@ window.SITE = {
       { key: 'visual', text: { ko: '비주얼 언어', en: 'visual language' }, branch: ['FASHION', 'CONTENT'], tag: ['FASHION', 'CONTENT'] },
       { key: 'design', text: { ko: '설계', en: 'design' }, branch: 'AI WORKS', tag: 'AI' },
     ],
-    ui: { scroll: 'SCROLL', more: 'MORE →', hint: { en: 'hover over the underlined words', ko: '밑줄 친 단어에 마우스를 올려 보세요' }, langAria: 'intro language' },
+    ui: { scroll: 'SCROLL', more: 'MORE →', hint: { en: 'hover over the underlined words', ko: '밑줄 친 단어에 마우스를 올려 보세요' }, hintTouch: { en: 'tap the underlined words', ko: '밑줄 친 단어를 눌러 보세요' } /* phones (2026-10-17) */, langAria: 'intro language' },
     /* the handwritten sub-notes around the hand-drawn labels (연서's mind map, 2026-10) */
     notes: {
       insight: ['research', 'interview', 'targeting', 'marketing', 'trend', 'audience'], /* the elbow line runs toward the 4th */

@@ -19,7 +19,8 @@ const TAU = Math.PI * 2;
 const PHONE = {
   rx: 1.25, ry: .95,   /* × RADIUS: rounder than the desktop's wide ellipse (1.5 to 3.2 × .8), so the cards read larger on a tall screen */
   object: 5.8, lift: .55,
-  drift: .085,         /* rad/s, about 74 s a turn (the desktop drifts at .035 while pinned) */
+  drift: .15,          /* rad/s, about 42 s a turn (.085 until 2026-10-17 09:00, 연서: turns too little; the desktop drifts at .035 while pinned) */
+  scrollTurns: 1.5,    /* turns while the section scrolls past, so a full turn is seen on screen (the desktop's pinned scroll: half a turn) */
   drag: .011,          /* rad per px of a swipe */
   texture: 512,
 };
@@ -495,7 +496,7 @@ async function createRing(section, projects, lang, onDispose) {
   resize();
 
   const controller = {
-    setScroll(progress) { scrollAngle = progress * TAU * 0.5; }, /* half a turn over the pinned scroll (a full turn until 2026-10-17: too much spin with 6 cards, 연서) */
+    setScroll(progress) { scrollAngle = progress * TAU * (phone ? PHONE.scrollTurns : 0.5); }, /* desktop: half a turn over the pinned scroll (a full turn until 2026-10-17: too much spin with 6 cards, 연서); phone: more than a full turn as it passes (연서, 2026-10-17) */
     goTo(index) {
       /* rotate so card `index` sits at the bottom (front) */
       const desired = -Math.PI / 2 - (index / N) * TAU;

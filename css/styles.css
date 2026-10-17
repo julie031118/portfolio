@@ -250,7 +250,8 @@ main { overflow: clip; }
   .intro-line--solo { left: 10px; right: 10px; }
   .mindmap-panel { width: 100%; max-height: 30vh; margin: 16px 0 0; gap: 14px 16px; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
   .intro-map-svg { display: none; }
-  .intro-hint { display: none; }
+  .intro-hint { top: -7px; left: 10px; right: auto; margin: 0; text-align: left; } /* phones: on the en / ko row, above the paragraph (below it the notes open) */
+  .intro-hint-pill { font-size: 10px; letter-spacing: .08em; }
   .intro-lang { width: 100%; }
   .intro-scroll-hint { bottom: 18px; }
   .detail-overlay { padding: calc(var(--nav-height) + 16px) 16px 32px; }
@@ -488,7 +489,7 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
   .timeline-pin { min-height: 560px; }
   .timeline-topline { left: 16px; right: 16px; }
   .about-timeline.is-collapsed .timeline-topline { padding: 18px 16px 0; }
-  .about-timeline.is-collapsed .timeline-track { animation-duration: 80s; } /* the same distance on a narrow screen: slower, so it can be read */
+  .about-timeline.is-collapsed .timeline-track { animation-duration: 40s; } /* 80s until 2026-10-17 09:00 (연서: too slow) */
   .timeline-topline-end { gap: 18px; }
   .timeline-side-panel { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 62vh; overflow-y: auto; border-left: 0; border-top: 1px solid var(--hairline); box-shadow: 0 -12px 32px rgba(29,29,31,.12); transform: translateY(105%); }
   .timeline-side-panel.is-open { transform: translateY(0); }

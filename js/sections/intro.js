@@ -123,9 +123,10 @@ export function renderIntro(siteLang) {
   }
   function typeHint() {
     resetHint();
-    /* it stays for good; a phone has no notes to open, so no hint there */
-    if (compactQuery.matches) return;
-    const source = SITE.intro.ui.hint;
+    /* it stays for good. A narrow desktop window has no notes, so no hint there; phones have notes that open by
+       themselves and on a tap (2026-10-17), so they get the hint in tap words, on the row of the en / ko switch */
+    if (window.matchMedia('(max-width: 760px) and (hover: hover)').matches) return;
+    const source = window.matchMedia('(hover: none)').matches ? (SITE.intro.ui.hintTouch || SITE.intro.ui.hint) : SITE.intro.ui.hint;
     /* 2026-10-16: a visitor on the Korean site reads the English paragraph but missed the English hint, so the hint
        follows the site language when that is Korean */
     const hintLang = siteLang === 'ko' ? 'ko' : currentLang;
