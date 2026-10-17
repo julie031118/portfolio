@@ -16,7 +16,7 @@ window.SITE = {
     soundOn: 'SOUND ON',
     soundOff: 'SOUND OFF',
     languageAria: 'Toggle language',
-    soundAria: 'Toggle typewriter sound',
+    soundAria: 'Toggle sound and music',
     detailClose: 'CLOSE',
   },
 
@@ -372,9 +372,10 @@ window.SITE = {
   },
   detailGroundPool: ['images/ground/d08-runway-stripes.jpg', 'images/ground/06-contact.jpg', 'images/ground/d03-stripe-floral.jpg', 'images/ground/d13-woven-pink.jpg'],
 
-  /* sound: the typewriter click is synthesised; an ambient track plays on loop once SOUND is on
-     (drop an mp3 at audio/ambient.mp3 — leave the path empty for no music) */
-  sound: { ambient: '', hint: { mouse: '♪ Click anywhere to turn on the sound', touch: '♪ Tap anywhere for sound' } },
+  /* sound: the typewriter click is synthesised; the ambient track (연서 + Gemini, 2026-10-17) plays once SOUND is on.
+     loop = [start, end] in seconds of the file: the file's last 8 s already hold its first 8 s crossfaded in, so after
+     the first pass it loops 8 s to 158 s with no seam. volume = 0 to 1 (ambient: '' for no music) */
+  sound: { ambient: { src: 'audio/ambient.mp3', loop: [8, 158], volume: 0.3 }, hint: { mouse: '♪ Click anywhere to turn on the sound', touch: '♪ Tap anywhere for sound' } },
 
   contactUi: { title: "LET'S TALK.", linkedin: 'LINKEDIN ↗', imageSlot: 'IMAGE 16:9', caption: '05 / 06', footerLeft: '© 2026 YEONSEO LEE' },
   detail: { resultTbc: 'RESULT: TO BE CONFIRMED' },

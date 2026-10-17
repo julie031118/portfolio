@@ -23,6 +23,9 @@ function createContext() {
   const announce = () => { if (context.state === 'running') window.dispatchEvent(new Event('portfolio:audioready')); };
   context.addEventListener?.('statechange', announce);
   window.setTimeout(announce, 0);
+  /* the ambient music starts the moment sound can actually play (the first click or tap) */
+  context.addEventListener?.('statechange', syncAmbient);
+  window.setTimeout(syncAmbient, 0);
   noiseBuffer = context.createBuffer(1, Math.ceil(context.sampleRate * 0.4), context.sampleRate);
   const channel = noiseBuffer.getChannelData(0);
   for (let i = 0; i < channel.length; i += 1) channel[i] = Math.random() * 2 - 1;
@@ -48,25 +51,103 @@ export async function unlockAudio() {
   return true;
 }
 
-/* ambient music: an mp3 named in SITE.sound.ambient, looped quietly while sound is on */
-let ambient = null;
-function ambientTrack() {
-  const source = window.SITE?.sound?.ambient;
-  if (!source) return null;
-  if (!ambient) {
-    ambient = new Audio(source);
-    ambient.loop = true;
-    ambient.preload = 'none';
-    ambient.volume = 0.35;
-  }
-  return ambient;
+/* Ambient music (2026-10-17, 연서: a bedroom-pop instrumental she made with Gemini, under the whole site).
+   audio/ambient.mp3 is the whole song with its last 8 s already crossfaded into its first 8 s, so it plays once from
+   the top and then loops from SITE.sound.ambient.loop[0] to loop[1] forever with no seam: the soft outro hands over to
+   the soft intro. Web Audio, not <audio loop>: a media element leaves a small gap at every loop, and iPhones ignore
+   its volume, so there would be no fades there. Fetched only once sound can play (nothing downloads for visitors
+   who never click), faded in, faded out when SOUND goes off, and faded to silence while a project page is open
+   (each project has its own song and films). */
+const AMBIENT_FADE_IN = 2.5;
+const AMBIENT_FADE_OUT = 0.9;
+let ambientGain = null;
+let ambientBuffer = null;
+let ambientLoading = null;
+let ambientFailed = false;
+let ambientSource = null;
+let ambientStartedAt = 0;
+let ambientOffset = 0; /* where the music was when it last stopped, in seconds of the file */
+let ambientStopTimer = 0;
+let detailOpen = false;
+
+function ambientConfig() {
+  const config = window.SITE?.sound?.ambient;
+  if (!config) return null;
+  return typeof config === 'string' ? { src: config } : config;
+}
+function ambientLoop() {
+  const loop = ambientConfig()?.loop;
+  return loop ? [loop[0], Math.min(loop[1], ambientBuffer.duration)] : [0, ambientBuffer.duration];
+}
+function ambientWanted() {
+  return enabled && !detailOpen;
+}
+function loadAmbient() {
+  if (ambientLoading || ambientFailed) return;
+  ambientLoading = fetch(ambientConfig().src)
+    .then((response) => { if (!response.ok) throw new Error(`ambient ${response.status}`); return response.arrayBuffer(); })
+    /* the callback form, because older Safari has no promise form */
+    .then((data) => new Promise((resolve, reject) => { context.decodeAudioData(data, resolve, reject)?.catch?.(() => {}); }))
+    .then((buffer) => { ambientBuffer = buffer; syncAmbient(); })
+    .catch(() => { ambientFailed = true; /* no music, everything else still works */ });
+}
+/* the playhead in seconds of the file: once through to loop[1], then round the loop */
+function ambientPosition() {
+  if (!ambientSource) return ambientOffset;
+  const [start, end] = ambientLoop();
+  const t = ambientOffset + (context.currentTime - ambientStartedAt);
+  return t < end ? t : start + ((t - start) % (end - start));
+}
+function rampAmbient(to, seconds) {
+  const gain = ambientGain.gain;
+  const now = context.currentTime;
+  if (gain.cancelAndHoldAtTime) gain.cancelAndHoldAtTime(now);
+  else { gain.cancelScheduledValues(now); gain.setValueAtTime(gain.value, now); }
+  gain.linearRampToValueAtTime(to, now + seconds);
+}
+function stopAmbient() {
+  if (!ambientSource || ambientWanted()) return;
+  ambientOffset = ambientPosition();
+  ambientSource.stop();
+  ambientSource.disconnect();
+  ambientSource = null;
 }
 function syncAmbient() {
-  const track = ambientTrack();
-  if (!track) return;
-  if (enabled && !document.hidden) track.play().catch(() => { /* needs a gesture first — the SOUND button gives one */ });
-  else track.pause();
+  const config = ambientConfig();
+  if (!config || !context || context.state !== 'running') return; /* waits for the first click or tap */
+  if (!ambientGain) {
+    ambientGain = context.createGain();
+    ambientGain.gain.value = 0;
+    ambientGain.connect(context.destination);
+  }
+  if (ambientWanted()) {
+    if (!ambientBuffer) { loadAmbient(); return; }
+    window.clearTimeout(ambientStopTimer);
+    if (!ambientSource) {
+      const [start, end] = ambientLoop();
+      ambientSource = context.createBufferSource();
+      ambientSource.buffer = ambientBuffer;
+      ambientSource.loop = true;
+      ambientSource.loopStart = start;
+      ambientSource.loopEnd = end;
+      ambientSource.connect(ambientGain);
+      ambientStartedAt = context.currentTime;
+      ambientSource.start(ambientStartedAt, ambientOffset);
+    }
+    rampAmbient(config.volume ?? 0.3, AMBIENT_FADE_IN);
+  } else if (ambientSource) {
+    rampAmbient(0, AMBIENT_FADE_OUT);
+    window.clearTimeout(ambientStopTimer);
+    ambientStopTimer = window.setTimeout(stopAmbient, AMBIENT_FADE_OUT * 1000 + 150);
+  }
 }
+/* a project page open (body.detail-open, set by detail.js) fades the music out; closing it brings the music back */
+new MutationObserver(() => {
+  const open = document.body.classList.contains('detail-open');
+  if (open === detailOpen) return;
+  detailOpen = open;
+  syncAmbient();
+}).observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
 export function setSoundEnabled(next) {
   enabled = Boolean(next);
@@ -181,8 +262,12 @@ export function contactBrush(speed = 10) {
 }
 
 document.addEventListener('visibilitychange', () => {
-  syncAmbient();
   if (!context) return;
+  /* the music pauses with the tab; coming back it fades in again (the restart in syncAmbient, on statechange) */
+  if (!document.hidden && ambientSource && context.state === 'suspended') {
+    ambientGain.gain.cancelScheduledValues(context.currentTime);
+    ambientGain.gain.setValueAtTime(0, context.currentTime);
+  }
   if (document.hidden && context.state === 'running') context.suspend();
   if (!document.hidden && enabled && context.state === 'suspended') context.resume();
 });

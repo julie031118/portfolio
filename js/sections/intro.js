@@ -24,7 +24,8 @@ function appendText(target, text) {
 
 /* how far the pinned intro scrolls per sentence, in viewport heights */
 const STEP_VH = .7;
-const STEPS = 7; /* six typed lines + the full paragraph */
+const PER_STEP = 2; /* lines typed per scroll step (one until 2026-10-17: too long a scroll, 연서) */
+const STEPS = 4; /* three typed pairs + the full paragraph (7 until 2026-10-17) */
 /* once the paragraph has been read in full it stays: the pin then only holds it this long */
 const HOLD_VH = .5;
 
@@ -191,7 +192,8 @@ export function renderIntro(siteLang) {
     const chars = Math.max(0, Math.min(1, (local - .08) / .72));
     rows.forEach((row) => { row.classList.remove('is-visible', 'is-active'); });
     solo.classList.add('is-visible', 'is-active');
-    const typed = lines[step].slice(0, Math.round(lines[step].length * chars));
+    const text = lines.slice(step * PER_STEP, step * PER_STEP + PER_STEP).join('\n');
+    const typed = text.slice(0, Math.round(text.length * chars));
     if (typed !== solo.textContent) { solo.textContent = ''; appendText(solo, typed); }
     const count = typed.length;
     if (count > previousCount) typeClick(); /* one click per step, throttled in audio.js (was up to 3) */
@@ -205,7 +207,7 @@ export function renderIntro(siteLang) {
     if (locked) { renderFinal(); return; }
     const scaled = Math.min(progress * STEPS, STEPS - .001);
     const step = Math.floor(scaled);
-    if (step >= 6) renderFinal();
+    if (step >= STEPS - 1) renderFinal();
     else renderStep(step, scaled - step);
   }
 

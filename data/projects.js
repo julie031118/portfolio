@@ -435,6 +435,10 @@ window.PROJECTS = [
    "en": "It is really a breakup song about acting fine until old feelings break through. But each time 'All my friends are drunk again' comes back, I hear this film's protagonist: awake alone in a society kept happy on pills, facing the feelings that were erased."
   },
   "video": "https://www.youtube.com/embed/utCOOrnRLZk",
+  "ringRole": {
+   "ko": "AI 영화 연출 · 대상",
+   "en": "AI film direction · Grand prize"
+  },
   "sections": [
    {
     "title": {
@@ -696,6 +700,10 @@ window.PROJECTS = [
    "en": "The kaftan began with Chopin’s Nocturnes, piano pieces about the night, so I wanted the flowers on sheer silk to look as if they were catching the moonlight. This song brings that scene to mind."
   },
   "cardThumb": "/images/projects/kaftan/21-v2.jpg",
+  "ringRole": {
+   "ko": "텍스타일 프린트 · AI 시착 · 영구 소장",
+   "en": "Textile print · AI try-on · Permanent collection"
+  },
   "process": [
    "/images/projects/kaftan/01.jpg",
    "/images/projects/kaftan/02.jpg",
@@ -954,6 +962,10 @@ window.PROJECTS = [
   "spotifyNote": {
    "ko": "로파이 하우스가 또렷한 소리를 일부러 뭉개 흐릿한 질감을 만들듯, 이 룩에서는 선명한 테두리의 원을 쉬폰에 프린트하고 겹겹이 레이어링해 일부러 흐리게 만들었다.",
    "en": "Lo-fi house muddies clean sound on purpose into a hazy texture. I did the same here: circles with sharp edges, printed on chiffon and layered until they blur."
+  },
+  "ringRole": {
+   "ko": "컬렉션 디자인 · 쇼 홍보",
+   "en": "Collection design · Show promotion"
   },
   "repeatThumb": true,
   "filterThumbs": {
@@ -1385,6 +1397,10 @@ window.PROJECTS = [
   "spotifyNote": {
    "ko": "이 작품을 만들며 가장 많이 고민한 건 따뜻하면서도 차가운 느낌이었다. 새하얀 자이언트 얀과 철사, 깨진 접시와 꽃처럼 상반된 소재가 부딪히면서도 어우러져야 했다. 분위기도 가사도, 내가 아는 가장 따뜻하면서도 차가운 노래.",
    "en": "What I worked through most here was how to make something feel warm and cold at once. Opposite materials, white giant yarn and wire, broken plates and flowers, had to clash and still belong together. In sound and in words, the warmest and coldest song I know."
+  },
+  "ringRole": {
+   "ko": "웨어러블 아트 · 런웨이",
+   "en": "Wearable art · Runway"
   },
   "related": [
    {
@@ -3670,6 +3686,10 @@ window.PROJECTS = [
    "ko": "패션 매장에서 흘러나올 법한, 몸이 저절로 리듬을 타는 하우스. 이 옷을 입은 모델이 격하지 않게, 어깨와 고개만 가볍게 흔들며 걸어 나오는 장면을 떠올리며 골랐다.",
    "en": "A house track you might hear in a fashion store, the kind your body moves to on its own. I pictured a model in this outfit walking out to it, not dancing hard, just shoulders and head catching the groove."
   },
+  "ringRole": {
+   "ko": "데님 디자인 · AI 시안 · 입선",
+   "en": "Denim design · AI drafts · Honorable mention"
+  },
   "press": [
    {
     "outlet": {
@@ -4946,6 +4966,10 @@ window.PROJECTS = [
    "en": "A song about identity not being fixed by the body. It feels close to this poster, where one pair of glasses becomes SEEN or SEES depending on the light."
   },
   "cardThumb": "/images/projects/scorpio-poster/poster-card.jpg",
+  "ringRole": {
+   "ko": "브랜드 키비주얼 · Blender · AI",
+   "en": "Brand key visual · Blender · AI"
+  },
   "sections": [
    {
     "title": {

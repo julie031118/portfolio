@@ -19,8 +19,8 @@ const TAU = Math.PI * 2;
 const PHONE = {
   rx: 1.25, ry: .95,   /* × RADIUS: rounder than the desktop's wide ellipse (1.5 to 3.2 × .8), so the cards read larger on a tall screen */
   object: 5.8, lift: .55,
-  drift: .15,          /* rad/s, about 42 s a turn (.085 until 2026-10-17 09:00, 연서: turns too little; the desktop drifts at .035 while pinned) */
-  scrollTurns: 1.5,    /* turns while the section scrolls past, so a full turn is seen on screen (the desktop's pinned scroll: half a turn) */
+  drift: .3,           /* rad/s, about 21 s a turn (.15 until 2026-10-17 15:30 and .085 before that, 연서: turn more; the desktop drifts at .035 while pinned) */
+  scrollTurns: 3,      /* turns while the section scrolls past, about two of them while the ring is on screen (1.5 until 2026-10-17 15:30, 연서: turn more) */
   drag: .011,          /* rad per px of a swipe */
   texture: 512,
 };
@@ -204,6 +204,15 @@ async function createRing(section, projects, lang, onDispose) {
   const frameMaterial = new THREE.MeshBasicMaterial({ color: new THREE.Color('#7C808A') /* the old --ink-2: the card outlines keep their tone */, transparent: true, opacity: 0.35, depthTest: false, depthWrite: false, toneMapped: false });
   const loader = new THREE.TextureLoader();
   const cards = [];
+  /* a role line under each card, always on (연서, 2026-10-17: what each work shows should read without hovering).
+     DOM text over the canvas, placed under the card's bottom edge every frame; only the front cards show theirs.
+     Not on phones: the phone ring already prints the front card's title and category under the ring. */
+  const labelLayer = document.createElement('div');
+  labelLayer.className = 'work-card-labels';
+  labelLayer.setAttribute('aria-hidden', 'true');
+  wrap.append(labelLayer);
+  const roleText = (project) => (!mobileQuery.matches && project.ringRole ? (project.ringRole[document.documentElement.lang] || project.ringRole.ko) : '');
+  const labelPos = new THREE.Vector3();
 
   projects.forEach((project, i) => {
     const holder = new THREE.Group(); /* sits on the ring, keeps cards upright */
@@ -217,7 +226,11 @@ async function createRing(section, projects, lang, onDispose) {
     holder.userData = { index: i, slug: project.slug, baseScale: 1 };
     mesh.userData = holder.userData;
     ring.add(holder);
-    cards.push({ holder, mesh, frame, material, project, texture: placeholder });
+    const label = document.createElement('span');
+    label.className = 'work-card-label';
+    label.textContent = roleText(project);
+    if (label.textContent) labelLayer.append(label);
+    cards.push({ label: label.textContent ? label : null, t: 0, holder, mesh, frame, material, project, texture: placeholder });
     const cardSource = project.cardThumb || project.thumb; /* the card crop, if there is one */
     if (!isPlaceholderPath(cardSource)) {
       loader.load(normalizeSource(phoneSrc(cardSource)), (loaded) => {
@@ -367,6 +380,7 @@ async function createRing(section, projects, lang, onDispose) {
       holder.getWorldPosition(worldPos);
       const depth = worldPos.z; /* roughly -1.2 … 1.2 */
       const t = THREE.MathUtils.clamp((depth + 2.4) / 4.8, 0, 1);
+      cards[i].t = t;
       const target = holder.userData.hoverScale || 1;
       holder.userData.baseScale += (target - holder.userData.baseScale) * 0.12;
       holder.scale.setScalar(holder.userData.baseScale);
@@ -378,9 +392,22 @@ async function createRing(section, projects, lang, onDispose) {
       holder.children[1].renderOrder = order + 1;
       if (depth > nearestZ) { nearestZ = depth; nearest = i; }
     });
+    /* role lines: just under each card's bottom edge, fading in toward the front */
+    const cw = canvas.clientWidth, ch = canvas.clientHeight, ox = canvas.offsetLeft, oy = canvas.offsetTop;
+    cards.forEach((card) => {
+      if (!card.label) return;
+      labelPos.set(0, -CARD_H / 2 - 0.1, 0);
+      card.holder.localToWorld(labelPos);
+      labelPos.project(camera);
+      const x = ox + (labelPos.x + 1) / 2 * cw, y = oy + (1 - labelPos.y) / 2 * ch;
+      const vis = THREE.MathUtils.clamp((card.t - 0.45) / 0.2, 0, 1);
+      card.label.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0) translateX(-50%)`;
+      card.label.style.opacity = vis.toFixed(2);
+      card.label.style.zIndex = String(Math.round(card.t * 100));
+    });
     if (nearest !== activeIndex) {
       /* a tick when the user turns the ring (scroll, drag, index), not during the slow idle drift */
-      if (activeIndex !== -1 && Math.abs(ringSpeed) > 0.12) ringTick();
+      if (activeIndex !== -1 && Math.abs(ringSpeed) > (phone ? PHONE.drift + 0.15 : 0.12)) ringTick(); /* a phone's drift alone stays silent */
       activeIndex = nearest;
       indexButtons.forEach((button, i) => button.classList.toggle('is-active', i === nearest));
       writeCaption();
@@ -401,7 +428,7 @@ async function createRing(section, projects, lang, onDispose) {
     /* idle drift only once the stage has reached the top, so the ring opens at START however long the intro took
        (a phone's ring is not pinned: it drifts while it crosses the middle of the screen) */
     const box = section.getBoundingClientRect();
-    const inView = phone ? box.top < window.innerHeight * .5 && box.bottom > window.innerHeight * .5 : box.top <= 2;
+    const inView = phone ? box.top < window.innerHeight * .85 && box.bottom > window.innerHeight * .15 : box.top <= 2; /* phone: whenever the ring is on screen (only while crossing the middle until 2026-10-17 15:30) */
     if (!reducedQuery.matches && !hovered && inView) drift += dt * (phone ? PHONE.drift : 0.035) * hoverSlow; /* 0.05 until 2026-10-17 */
     if (phone && !dragging && Math.abs(fling) > 0.0002) { offsetAngle += fling * dt * 60; fling *= Math.pow(0.92, dt * 60); }
     if (phone && !reducedQuery.matches) {
@@ -505,13 +532,14 @@ async function createRing(section, projects, lang, onDispose) {
       delta = Math.atan2(Math.sin(delta), Math.cos(delta));
       offsetAngle += delta;
     },
-    setLanguage() { writeCaption(); if (hovered) { const copy = hovered.project.nar[document.documentElement.lang] || hovered.project.nar.ko; tooltip.querySelector('strong').textContent = copy.title; tooltip.querySelector('span').textContent = copy.cat || ''; } },
+    setLanguage() { cards.forEach((card) => { if (card.label) card.label.textContent = roleText(card.project); }); writeCaption(); if (hovered) { const copy = hovered.project.nar[document.documentElement.lang] || hovered.project.nar.ko; tooltip.querySelector('strong').textContent = copy.title; tooltip.querySelector('span').textContent = copy.cat || ''; } },
     dispose() {
       if (disposed) return;
       disposed = true;
       cancelAnimationFrame(raf);
       canvas.removeEventListener('pointermove', onMove);
       canvas.removeEventListener('pointerleave', onLeave);
+      labelLayer.remove();
       canvas.removeEventListener('pointerdown', onDown);
       window.removeEventListener('pointermove', onDrag);
       window.removeEventListener('pointerup', onUp);
