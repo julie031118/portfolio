@@ -1,6 +1,7 @@
 import { contactBrush } from '../audio.js';
 import { GROUND } from '../ground.js';
 import { reducedMotion } from '../motion.js';
+import { openDetail } from './detail.js';
 
 const reducedQuery = reducedMotion;
 const touchQuery = window.matchMedia('(hover: none), (pointer: coarse)');
@@ -35,10 +36,12 @@ export function renderContact() {
           <a href="mailto:${SITE.profile.email}">${SITE.profile.email}</a>
           <a href="${SITE.profile.linkedin}" target="_blank" rel="noopener noreferrer">${SITE.contactUi.linkedin}</a>
         </div>
+        ${SITE.contactUi.madeLink ? `<button class="contact-made" type="button">${SITE.contactUi.madeLink[document.documentElement.lang] || SITE.contactUi.madeLink.ko}</button>` : ''}
       </div>
       <footer class="site-footer"><span>${SITE.contactUi.footerLeft}</span></footer>
     </div>`;
 
+  section.querySelector('.contact-made')?.addEventListener('click', () => openDetail('portfolio-site', document.documentElement.lang === 'en' ? 'en' : 'ko'));
   const reveal = section.querySelector('.contact-reveal-media img');
   const canvas = section.querySelector('.contact-grid-canvas');
   const context = canvas.getContext('2d');

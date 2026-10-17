@@ -4207,7 +4207,9 @@ window.PROJECTS = [
   "year": "2026",
   "period": "2026",
   "thumb": "/images/projects/portfolio-site/thumb.jpg",
-  "images": [],
+  "images": [
+   "/images/projects/portfolio-site/wf-v3.jpg"
+  ],
   "role": {
    "ko": "기획 · 웹디자인 · AI 워크플로우 · 콘텐츠 (단독)",
    "en": "Planning, web design, AI workflow, content (solo)"
@@ -4287,7 +4289,7 @@ window.PROJECTS = [
     },
     "images": [
      {
-      "src": "/images/projects/portfolio-site/wf-v2.jpg"
+      "src": "/images/projects/portfolio-site/wf-v3.jpg"
      }
     ],
     "rowTarget": 2000
@@ -4452,20 +4454,16 @@ window.PROJECTS = [
     "headline": "프롬프트 몇 줄로 만든 AI 포트폴리오는 서로 비슷해 보이기 쉽다. 그래서 구조부터 직접 기획하고 세세하게 지시했다.",
     "metrics": [
      {
-      "v": "23",
-      "l": "프로젝트 상세 페이지 (한국어 · 영어)"
-     },
-     {
-      "v": "4",
+      "v": "5",
       "l": "나눠 쓴 AI 도구"
      }
     ],
     "need": "나는 한 가지 작업만 해 온 게 아니라서, 여러 역량을 섹션별로 나눠 보여줄 수 있는 나만의 구조와 레이아웃이 필요했다. 웹디자인도 코딩도 배운 적이 없어서, 이 기획을 AI에게 정확히 전달하는 방법부터 혼자 익혔다.",
     "action": [
-     "AI를 역할별로 나눠 씀: Manus로 첫 UI 시안, Claude로 구현과 인터랙션, ChatGPT로 이미지, Tripo로 3D. 코드는 직접 치지 않고 AI와 대화하며 만드는 바이브코딩 방식",
+     "AI를 역할별로 나눠 씀: Manus로 첫 UI 시안, Claude로 구현과 인터랙션, ChatGPT로 이미지, Tripo로 3D, Gemini로 배경음악. 코드는 직접 치지 않고 AI와 대화하며 만드는 바이브코딩 방식",
      "구조와 첫인상은 직접 기획: 첫 시안 화면 위에 아이패드로 마인드맵을 그려 보내고, 그 선과 글씨를 옮겨 키워드에 마우스를 올리면 나타나게 함. 화려한 효과 대신 타자기 효과와 빈티지한 무드로 시작하고, 나를 전달하는 문장을 맨 앞에 둠",
      "사이트의 비주얼도 내 작업으로: 직접 만든 웨어러블 아트(깨진 도자기 조각으로 만든 꽃)를 3D로 만들어 Selected Work 한가운데에 두고, 실제 프로젝트 사진을 배경에 깔아 채도를 낮춘 부드러운 톤으로 맞춤",
-     "보는 사람의 경험을 설계: 링크 미리보기 카드를 인트로 첫 문장과 맞추고, 주요 작품에 어울리는 곡을 Spotify 플레이어로 넣음. 아카이브는 필터별로 보고, 한국어와 영어로 모두 볼 수 있게 함",
+     "보는 사람의 경험을 설계: 링크 미리보기 카드를 인트로 첫 문장과 맞추고, 주요 작품에 어울리는 곡을 Spotify 플레이어로 넣음. 아카이브는 필터별로 보고, 한국어와 영어로 모두 볼 수 있게 함. 사이트 배경음악은 무드를 내가 정하고, Claude가 쓴 프롬프트로 Gemini에서 만듦. 끊김 없이 반복되게 이어 붙이는 처리는 Claude가 함",
      "검수는 내가: AI가 쓴 초안에서 사실과 다른 문장, 과장, 번역투를 고치고, 리뷰 시트에 바꿀 것만 표시해 한 번에 반영. 화면은 같은 각도의 전후 화면을 나란히 놓고 비교해 결정"
     ],
     "result": [
@@ -4485,20 +4483,16 @@ window.PROJECTS = [
     "headline": "Portfolios made from a few lines of prompt tend to look alike. So I planned the structure myself and gave detailed directions.",
     "metrics": [
      {
-      "v": "23",
-      "l": "Project pages (Korean, English)"
-     },
-     {
-      "v": "4",
+      "v": "5",
       "l": "AI tools, each for its own job"
      }
     ],
     "need": "I have not done just one kind of work, so I needed my own structure and layout that could show different skills section by section. Never having learned web design or coding, I first taught myself how to get that plan across to AI precisely.",
     "action": [
-     "Split the work between AIs: Manus for the first UI draft, Claude for the build and interactions, ChatGPT for images, Tripo for 3D. No code typed by hand; built by vibe coding, in conversation with AI",
+     "Split the work between AIs: Manus for the first UI draft, Claude for the build and interactions, ChatGPT for images, Tripo for 3D, Gemini for the background music. No code typed by hand; built by vibe coding, in conversation with AI",
      "Planned the structure and first impression myself: drew the mind map on an iPad over a screenshot of the first draft, and its lines and handwriting were carried over so they appear when a keyword is hovered. A typewriter effect and a vintage mood instead of flashy effects, with a sentence that introduces me first",
      "Made the site’s visuals out of my own work: my wearable art piece, a flower of broken porcelain, turned into 3D at the centre of Selected Work, and real project photos laid under the page in a soft, low-saturation tone",
-     "Designed the viewer’s path: the link preview card opens with the same line as the intro, key works have a fitting song in a Spotify player, the archive can be filtered, and everything reads in Korean and English",
+     "Designed the viewer’s path: the link preview card opens with the same line as the intro, key works have a fitting song in a Spotify player, the archive can be filtered, and everything reads in Korean and English. I set the mood for the site’s background music; Gemini made it from a prompt Claude wrote, and Claude joined its end to its start so it loops without a seam",
      "Kept the checking in my hands: fixed anything untrue, overstated or stiff in AI drafts, marked only what changes on a review sheet and applied it in one pass, and decided layout changes from before and after shots taken from the same angle"
     ],
     "result": [

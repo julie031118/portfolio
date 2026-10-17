@@ -458,9 +458,8 @@ html[lang="en"] .work-tooltip strong { font-family: var(--font-serif-en); }
 /* closed, a strip of the year line and the first row of items keeps drifting sideways so it reads as something that moves
    (2026-10-16, 연서: folded, nobody knows there is an interaction). Clicking the strip opens it. */
 .about-timeline.is-collapsed .timeline-viewport { position: relative; inset: auto; height: 230px; overflow: hidden; perspective: none; cursor: pointer; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
-.about-timeline.is-collapsed .timeline-track { animation: timeline-peek 46s linear infinite alternate; }
+.about-timeline.is-collapsed .timeline-track { animation: none; } /* about.js moves the strip on every screen (2026-10-17: the CSS animation ran back and forth and looked still in Safari) */
 .about-timeline.is-collapsed .timeline-items { pointer-events: none; }
-.about-timeline.is-collapsed .timeline-viewport:hover .timeline-track { animation-duration: 20s; }
 .about-timeline.is-collapsed .timeline-item-title { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } /* one line each in the strip */
 @keyframes timeline-peek { from { transform: translateX(0); } to { transform: translateX(calc(-100% + 100vw)); } }
 .about-reduced .timeline-pin { height: auto; min-height: 680px; overflow-x: auto; }
@@ -1002,7 +1001,16 @@ html[lang="ko"] .about-award-desc { word-break: keep-all; overflow-wrap: anywher
 
 /* ring role lines (2026-10-17): under the front cards, always on (desktop) */
 .work-card-labels { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
-.work-card-label { position: absolute; left: 0; top: 0; padding: 4px 9px; white-space: nowrap; color: var(--ink); background: rgba(246, 245, 242, .74); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); font: 11px/1.3 var(--font-mono); letter-spacing: .04em; opacity: 0; will-change: transform, opacity; }
+.work-card-label { position: absolute; left: 0; top: 0; padding: 4px 9px; white-space: nowrap; color: var(--ink); text-shadow: 0 0 6px rgba(246, 245, 242, .9), 0 0 2px rgba(246, 245, 242, .9); font: 11px/1.3 var(--font-mono); /* no box behind the role line (연서, 2026-10-17) */ letter-spacing: .04em; opacity: 0; will-change: transform, opacity; }
 
 /* the typed intro shows two lines at a time (2026-10-17) */
 .intro-line--solo { white-space: pre-line; line-height: 1.55; }
+
+/* archive hover (2026-10-17, 연서: what I did matters more than the work's title): the role line big, the title small under it.
+   Korean breaks at spaces only (a long line used to split '대기 / 중'). */
+.archive-card-title, .archive-card-details { word-break: keep-all; overflow-wrap: anywhere; }
+.archive-card-details--title { margin-top: 10px; letter-spacing: .02em; }
+
+/* 'How I made this site →' under the e-mail and LinkedIn (2026-10-17): a little apart and quieter, it is not a way to reach me */
+.contact-made { margin-top: 30px; border: 0; padding: 0; background: none; color: var(--ink-2); font: 12px/1.35 var(--font-mono); letter-spacing: .04em; cursor: pointer; text-decoration: underline; text-decoration-color: var(--hairline); text-underline-offset: .35em; transition: color .2s ease, text-decoration-color .2s ease; }
+.contact-made:hover, .contact-made:focus-visible { color: var(--ink); text-decoration-color: currentColor; }

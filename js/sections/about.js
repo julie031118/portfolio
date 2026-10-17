@@ -313,7 +313,7 @@ export function renderAbout(lang) {
     const wasTop = timeline.getBoundingClientRect().top + window.scrollY;
     timelineOpen = open;
     timeline.classList.toggle('is-collapsed', !open);
-    if (stripRaf) { track.style.transform = ''; window.gsap?.set(track, { x: 0 }); if (open) { stripX = 0; stripDir = -1; } } /* the open timeline starts from its first year */
+    if (stripRaf) { track.style.transform = ''; window.gsap?.set(track, { x: 0 }); track.style.opacity = ''; stripReset = -1; if (open) { stripX = 0; stripDir = -1; } } /* the open timeline starts from its first year */
     toggleLabel();
     if (open) {
       if (interactionsReady) { drawSpans(); buildTimelineMotion(); }
@@ -330,18 +330,38 @@ export function renderAbout(lang) {
   /* phones (2026-10-17, 연서: the folded strip looked still on an iPhone): the strip is moved by script at a set speed in
      pixels per second, back and forth, instead of the CSS animation (styles.css turns that off on phones) */
   const STRIP_SPEED = 160; /* px per second */
+  /* computers (2026-10-17, 연서: the folded strip seemed to move without moving, and ran the wrong way): the CSS animation went
+     back and forth and did not move in Safari, so the script moves it here too. One way only, from the first year to the last,
+     slower under the mouse so a line can be read; at the end it fades out and starts again from the first year. */
+  const STRIP_SPEED_DESKTOP = 80; /* px per second */
+  const STRIP_FADE = .6; /* seconds out, then the same in */
   let stripRaf = 0; let stripX = 0; let stripDir = -1; let stripLast = 0; let stripVisible = false;
+  let stripHover = false; let stripSpeed = STRIP_SPEED_DESKTOP; let stripReset = -1;
   function stripFrame(now) {
     stripRaf = requestAnimationFrame(stripFrame);
     const dt = stripLast ? Math.min(.05, (now - stripLast) / 1000) : 0; stripLast = now;
     if (timelineOpen || !stripVisible) return;
     const max = Math.max(0, track.scrollWidth - track.parentElement.clientWidth);
-    stripX += stripDir * STRIP_SPEED * dt;
-    if (stripX <= -max) { stripX = -max; stripDir = 1; } else if (stripX >= 0) { stripX = 0; stripDir = -1; }
+    if (mobileQuery.matches) {
+      stripX += stripDir * STRIP_SPEED * dt;
+      if (stripX <= -max) { stripX = -max; stripDir = 1; } else if (stripX >= 0) { stripX = 0; stripDir = -1; }
+    } else if (stripReset >= 0) {
+      stripReset += dt;
+      if (stripReset >= STRIP_FADE) stripX = 0;
+      track.style.opacity = Math.min(1, Math.abs(stripReset - STRIP_FADE) / STRIP_FADE).toFixed(3);
+      if (stripReset >= STRIP_FADE * 2) { stripReset = -1; track.style.opacity = ''; }
+    } else {
+      stripSpeed += ((stripHover ? STRIP_SPEED_DESKTOP / 4 : STRIP_SPEED_DESKTOP) - stripSpeed) * Math.min(1, dt * 3);
+      stripX -= stripSpeed * dt;
+      if (stripX <= -max) { stripX = -max; stripReset = 0; }
+    }
     track.style.transform = `translate3d(${stripX.toFixed(1)}px, 0, 0)`;
   }
-  if (mobileQuery.matches && !reducedQuery.matches) {
-    new IntersectionObserver(([entry]) => { stripVisible = entry.isIntersecting; }).observe(section.querySelector('.timeline-viewport'));
+  if (!reducedQuery.matches) {
+    const stripViewport = section.querySelector('.timeline-viewport');
+    new IntersectionObserver(([entry]) => { stripVisible = entry.isIntersecting; }).observe(stripViewport);
+    stripViewport.addEventListener('pointerenter', (event) => { if (event.pointerType === 'mouse') stripHover = true; });
+    stripViewport.addEventListener('pointerleave', () => { stripHover = false; });
     stripRaf = requestAnimationFrame(stripFrame);
   }
   toggle.addEventListener('click', () => setTimeline(!timelineOpen));

@@ -75,7 +75,7 @@ window.SITE = {
       {
         claim: { ko: 'AI 툴 여러 개를 엮어 쓰되, 기획과 판단은 제가 합니다.', en: 'I combine many AI tools, but the planning and the judgment are mine.' },
         keyword: { ko: '기획과 판단', en: 'the planning and the judgment' },
-        evidence: { ko: '웹디자인도 웹 코딩도 배운 적 없이 Manus, Claude, ChatGPT, Tripo로 지금 보고 있는 이 포트폴리오를 만들었다. 구조와 첫인상은 내가 기획했고, AI가 만든 결과는 직접 확인하며 고쳤다. AI 단편영화도 컨셉과 큰 줄거리는 내가 정하고 여섯 가지 AI 툴로 만들어, 서울대학교 중앙도서관에서 대상을 받았다. 지금은 툴을 쓰는 데서 나아가, 인공지능예술실습 수업에서 직접 짠 원단 사진으로 이미지 생성 모델을 학습시켜 영상과 이미지를 만들고 있다.', en: 'Having never studied web design or web coding, I built this portfolio with Manus, Claude, ChatGPT and Tripo. I planned the structure and the first impression myself, and checked and fixed what the AI made. For my AI short film I set the concept and the main story, made it with six AI tools, and won the grand prize at Seoul National University Library. Now I am going beyond using tools: in Deep Learning for Artists I train image generation models on photos of fabric I wove myself, and make video and images with them.' },
+        evidence: { ko: '웹디자인도 웹 코딩도 배운 적 없이 Manus, Claude, ChatGPT, Tripo, Gemini로 지금 보고 있는 이 포트폴리오를 만들었다. 구조와 첫인상은 내가 기획했고, AI가 만든 결과는 직접 확인하며 고쳤다. AI 단편영화도 컨셉과 큰 줄거리는 내가 정하고 여섯 가지 AI 툴로 만들어, 서울대학교 중앙도서관에서 대상을 받았다. 지금은 툴을 쓰는 데서 나아가, 인공지능예술실습 수업에서 직접 짠 원단 사진으로 이미지 생성 모델을 학습시켜 영상과 이미지를 만들고 있다.', en: 'Having never studied web design or web coding, I built this portfolio with Manus, Claude, ChatGPT, Tripo and Gemini. I planned the structure and the first impression myself, and checked and fixed what the AI made. For my AI short film I set the concept and the main story, made it with six AI tools, and won the grand prize at Seoul National University Library. Now I am going beyond using tools: in Deep Learning for Artists I train image generation models on photos of fabric I wove myself, and make video and images with them.' },
         media: 'images/projects/portfolio-site/thumb-card.jpg', /* the portfolio-site card image (연서, 2026-10-02) */
         link: 'portfolio-site',
       },
@@ -377,7 +377,7 @@ window.SITE = {
      the first pass it loops 8 s to 158 s with no seam. volume = 0 to 1 (ambient: '' for no music) */
   sound: { ambient: { src: 'audio/ambient.mp3', loop: [8, 158], volume: 0.3 }, hint: { mouse: '♪ Click anywhere to turn on the sound', touch: '♪ Tap anywhere for sound' } },
 
-  contactUi: { title: "LET'S TALK.", linkedin: 'LINKEDIN ↗', imageSlot: 'IMAGE 16:9', caption: '05 / 06', footerLeft: '© 2026 YEONSEO LEE' },
+  contactUi: { title: "LET'S TALK.", linkedin: 'LINKEDIN ↗', imageSlot: 'IMAGE 16:9', caption: '05 / 06', footerLeft: '© 2026 YEONSEO LEE', /* the last thing on the page opens how the site was made (연서, 2026-10-17) */ madeLink: { ko: '이 사이트를 만든 과정 →', en: 'How I made this site →' } },
   detail: { resultTbc: 'RESULT: TO BE CONFIRMED' },
   detailUi: { heroSlot: 'IMAGE 16:9', gallerySlot: 'IMAGE', period: 'PERIOD', role: 'ROLE', need: 'NEED', action: 'ACTION', result: 'RESULT', gallery: 'GALLERY', process: { ko: '작업과정', en: 'PROCESS' }, film: 'FILM', watch: { ko: 'YouTube에서 보기 ↗', en: 'Watch on YouTube ↗' }, watchDrive: { ko: 'Google Drive에서 보기 ↗', en: 'Watch on Google Drive ↗' }, watchInstagram: { ko: 'Instagram에서 보기 ↗', en: 'Watch on Instagram ↗' }, fullSong: { ko: 'YouTube에서 전곡 ↗', en: 'Full song on YouTube ↗' }, press: 'PRESS', soundtrack: 'SOUNDTRACK', close: 'CLOSE', closeExpanded: 'CLOSE −' },
 };
